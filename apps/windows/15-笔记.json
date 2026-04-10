@@ -351,5 +351,36 @@
     "process_name": "AppFlowy.exe",
     "kill_before_install": true,
     "run_installer": true
+  },
+  {
+    "id": "rowboat",
+    "简介": "Rowboat 本地优先 AI 协作 / 知识图谱，Obsidian 兼容 Markdown 库",
+    "分类": "笔记",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/rowboatlabs/rowboat/releases",
+    "repo_path": "rowboatlabs/rowboat",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Rowboat-win32-x64-",
+      "-setup.exe"
+    ],
+    "href_exclude_substrings": [
+      "darwin",
+      "linux",
+      ".nupkg",
+      ".zip",
+      "arm64",
+      "blockmap"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Rowboat-win32-x64-{ver}-setup.exe"
+    ],
+    "save_name": "Rowboat-win32-x64-{ver}-setup.exe",
+    "process_name": "Rowboat.exe",
+    "kill_before_install": true,
+    "run_installer": true
   }
 ]

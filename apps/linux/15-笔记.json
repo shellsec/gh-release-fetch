@@ -46,5 +46,11 @@
     "enabled": false,
     "releases_url": "https://bgithub.xyz/standardnotes/app/releases",
     "repo_path": "standardnotes/app"
+  },
+  {
+    "id": "rowboat",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/rowboatlabs/rowboat/releases",
+    "repo_path": "rowboatlabs/rowboat"
   }
 ]
