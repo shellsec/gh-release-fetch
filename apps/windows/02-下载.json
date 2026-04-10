@@ -1,0 +1,65 @@
+[
+  {
+    "id": "motrix",
+    "简介": "Motrix（全能下载工具：HTTP/FTP/BT/磁力链）",
+    "分类": "下载",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/agalwood/Motrix/releases",
+    "repo_path": "agalwood/Motrix",
+    "prefer_api_assets": true,
+    "installer_markers": [
+      "Motrix-Setup-",
+      ".exe"
+    ],
+    "installer_markers_match_all": true,
+    "href_exclude_substrings": [
+      "ia32",
+      "arm64",
+      "portable",
+      ".blockmap",
+      ".sha256",
+      ".sha1"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Motrix-Setup-{ver}.exe"
+    ],
+    "save_name": "Motrix-Setup-{ver}.exe",
+    "process_name": "Motrix.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "gopeed",
+    "简介": "Gopeed（HTTP/BT 等，现代下载器）",
+    "分类": "下载",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/GopeedLab/gopeed/releases",
+    "repo_path": "GopeedLab/gopeed",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Gopeed-v",
+      "windows-amd64.exe"
+    ],
+    "href_exclude_substrings": [
+      "portable",
+      ".zip",
+      "linux",
+      "macos",
+      "qnap",
+      "arm64",
+      "ia32",
+      "blockmap"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Gopeed-v{ver}-windows-amd64.exe"
+    ],
+    "save_name": "Gopeed-v{ver}-windows-amd64.exe",
+    "process_name": "Gopeed.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  }
+]

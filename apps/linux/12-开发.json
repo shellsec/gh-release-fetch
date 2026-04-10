@@ -1,0 +1,98 @@
+[
+  {
+    "id": "github_cli",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/cli/cli/releases",
+    "repo_path": "cli/cli"
+  },
+  {
+    "id": "github_desktop",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/desktop/desktop/releases",
+    "repo_path": "desktop/desktop"
+  },
+  {
+    "id": "lazygit",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/jesseduffield/lazygit/releases",
+    "repo_path": "jesseduffield/lazygit"
+  },
+  {
+    "id": "insomnia",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/Kong/insomnia/releases",
+    "repo_path": "Kong/insomnia"
+  },
+  {
+    "id": "bruno",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/usebruno/bruno/releases",
+    "repo_path": "usebruno/bruno"
+  },
+  {
+    "id": "nodejs",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/nodejs/node/releases",
+    "repo_path": "nodejs/node"
+  },
+  {
+    "id": "deno",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/denoland/deno/releases",
+    "repo_path": "denoland/deno"
+  },
+  {
+    "id": "bun",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/oven-sh/bun/releases",
+    "repo_path": "oven-sh/bun"
+  },
+  {
+    "id": "chezmoi",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/twpayne/chezmoi/releases",
+    "repo_path": "twpayne/chezmoi"
+  },
+  {
+    "id": "uv",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/astral-sh/uv/releases",
+    "repo_path": "astral-sh/uv"
+  },
+  {
+    "id": "git_lfs",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/git-lfs/git-lfs/releases",
+    "repo_path": "git-lfs/git-lfs"
+  },
+  {
+    "id": "mise",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/jdx/mise/releases",
+    "repo_path": "jdx/mise"
+  },
+  {
+    "id": "ty",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/astral-sh/ty/releases",
+    "repo_path": "astral-sh/ty"
+  },
+  {
+    "id": "httpie_desktop",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/httpie/desktop/releases",
+    "repo_path": "httpie/desktop"
+  },
+  {
+    "id": "shfmt",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/mvdan/sh/releases",
+    "repo_path": "mvdan/sh"
+  },
+  {
+    "id": "just",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/casey/just/releases",
+    "repo_path": "casey/just"
+  }
+]

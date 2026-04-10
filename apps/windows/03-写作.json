@@ -1,0 +1,66 @@
+[
+  {
+    "id": "vale",
+    "简介": "Vale（Markdown/文档风格与语法检查 CLI）",
+    "分类": "写作",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/errata-ai/vale/releases",
+    "repo_path": "errata-ai/vale",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "vale_",
+      "Windows_64-bit.zip"
+    ],
+    "href_exclude_substrings": [
+      "32-bit",
+      "macOS",
+      "Linux",
+      ".sbom"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "vale_{ver}_Windows_64-bit.zip"
+    ],
+    "save_name": "vale_{ver}_Windows_64-bit.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "pandoc",
+    "简介": "Pandoc（文档格式转换，Windows MSI）",
+    "分类": "写作",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/jgm/pandoc/releases",
+    "repo_path": "jgm/pandoc",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "pandoc-",
+      "windows-x86_64.msi"
+    ],
+    "href_exclude_substrings": [
+      "deb",
+      "tar.gz",
+      "linux",
+      "zip",
+      "arm"
+    ],
+    "windows_installer": true,
+    "installer_extensions": [
+      ".msi"
+    ],
+    "download_names": [
+      "pandoc-{ver}-windows-x86_64.msi"
+    ],
+    "save_name": "pandoc-{ver}-windows-x86_64.msi",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
+  }
+]

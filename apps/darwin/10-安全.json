@@ -1,0 +1,50 @@
+[
+  {
+    "id": "cryptomator",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/cryptomator/cryptomator/releases",
+    "repo_path": "cryptomator/cryptomator"
+  },
+  {
+    "id": "bitwarden_desktop",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/bitwarden/clients/releases",
+    "repo_path": "bitwarden/clients"
+  },
+  {
+    "id": "duplicati",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/duplicati/duplicati/releases",
+    "repo_path": "duplicati/duplicati"
+  },
+  {
+    "id": "keepassxc",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/keepassxreboot/keepassxc/releases",
+    "repo_path": "keepassxreboot/keepassxc"
+  },
+  {
+    "id": "age_cli",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/FiloSottile/age/releases",
+    "repo_path": "FiloSottile/age"
+  },
+  {
+    "id": "sops",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/getsops/sops/releases",
+    "repo_path": "getsops/sops"
+  },
+  {
+    "id": "trufflehog",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/trufflesecurity/trufflehog/releases",
+    "repo_path": "trufflesecurity/trufflehog"
+  },
+  {
+    "id": "gitleaks",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/gitleaks/gitleaks/releases",
+    "repo_path": "gitleaks/gitleaks"
+  }
+]
