@@ -3,6 +3,10 @@
 """
 将所有应用配置 JSON 里的 enabled 一律写为 false（改磁盘文件）。
 
+重置前默认把当前所有 enabled=true 的条目写入
+  tools/last_enabled_before_reset.json
+便于重置/更新后按路径与 id 回到对应 JSON 里手动改回 true。
+
 支持布局：
   - apps/windows/*.json（数组）
   - apps/darwin/*.json、apps/linux/*.json（数组分片）；若无分片则仍支持 apps/darwin.json、apps/linux.json
@@ -11,12 +15,17 @@
 用法：
   python tools/reset_enabled_json.py
   python tools/reset_enabled_json.py --dry-run
+  python tools/reset_enabled_json.py --no-snapshot
+  python tools/reset_enabled_json.py --snapshot-path my_enabled.json
+
+恢复开启状态：python tools/apply_enabled_snapshot.py（读取默认同名快照）
 """
 
 import argparse
 import json
 import os
 import sys
+from datetime import datetime, timezone
 
 SCRIPT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -25,6 +34,123 @@ def _dump(path, data):
     with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
         f.write("\n")
+
+
+def _discover_split_json_files(apps_dir):
+    """与 process_apps_dir 相同的分片 JSON 列表（绝对路径）。"""
+    files = []
+    win = os.path.join(apps_dir, "windows")
+    if os.path.isdir(win):
+        for name in sorted(os.listdir(win)):
+            if name.endswith(".json"):
+                files.append(os.path.join(win, name))
+    for plat in ("darwin", "linux"):
+        sub = os.path.join(apps_dir, plat)
+        used_dir = False
+        if os.path.isdir(sub):
+            names = [n for n in sorted(os.listdir(sub)) if n.endswith(".json")]
+            if names:
+                for name in names:
+                    files.append(os.path.join(sub, name))
+                used_dir = True
+        if not used_dir:
+            p = os.path.join(apps_dir, "%s.json" % plat)
+            if os.path.isfile(p):
+                files.append(p)
+    return files
+
+
+def _append_enabled_from_app_list(items, rel_path, bucket, platform=None):
+    if not isinstance(items, list):
+        return
+    for app in items:
+        if not isinstance(app, dict):
+            continue
+        if app.get("enabled") is not True:
+            continue
+        row = {
+            "path": rel_path,
+            "id": app.get("id", ""),
+            "分类": app.get("分类", ""),
+            "简介": app.get("简介", ""),
+        }
+        if platform is not None:
+            row["platform"] = platform
+        bucket.append(row)
+
+
+def collect_enabled_from_file(abspath, rel_path, bucket):
+    """从单个 JSON 文件收集 enabled=true 的条目，rel_path 使用正斜杠。"""
+    rel_path = rel_path.replace("\\", "/")
+    with open(abspath, encoding="utf-8") as f:
+        data = json.load(f)
+    if isinstance(data, dict) and "apps" in data:
+        inner = data["apps"]
+        if isinstance(inner, list):
+            _append_enabled_from_app_list(inner, rel_path, bucket)
+    elif isinstance(data, list):
+        _append_enabled_from_app_list(data, rel_path, bucket)
+    elif isinstance(data, dict):
+        platforms = data.get("platforms")
+        if isinstance(platforms, dict):
+            for plat in ("windows", "darwin", "linux"):
+                block = platforms.get(plat)
+                if isinstance(block, list):
+                    _append_enabled_from_app_list(
+                        block, rel_path, bucket, platform=plat
+                    )
+        legacy = data.get("apps")
+        if isinstance(legacy, list):
+            _append_enabled_from_app_list(
+                legacy, rel_path, bucket, platform="legacy"
+            )
+
+
+def build_snapshot_payload(root, items):
+    by_category = {}
+    for row in items:
+        cat = row.get("分类") or "(未填分类)"
+        by_category.setdefault(cat, []).append(row.get("id", ""))
+    for cat in by_category:
+        by_category[cat] = sorted(
+            [x for x in by_category[cat] if x],
+            key=lambda s: s.lower(),
+        )
+    return {
+        "generated_at": datetime.now(timezone.utc)
+        .replace(microsecond=0)
+        .isoformat()
+        .replace("+00:00", "Z"),
+        "root": root.replace("\\", "/"),
+        "count": len(items),
+        "items": sorted(items, key=lambda r: (r["path"], r.get("id") or "")),
+        "by_category": dict(sorted(by_category.items(), key=lambda kv: kv[0])),
+    }
+
+
+def write_enabled_snapshot(root, snapshot_path, dry_run):
+    """扫描并写入快照；dry_run 时仍会写入（记录执行 dry-run 当时的开启状态）。"""
+    apps_dir = os.path.join(root, "apps")
+    monolith = os.path.join(root, "apps.json")
+    bucket = []
+
+    if os.path.isfile(os.path.join(apps_dir, "root.json")):
+        for abspath in _discover_split_json_files(apps_dir):
+            collect_enabled_from_file(
+                abspath, os.path.relpath(abspath, root), bucket
+            )
+
+    if os.path.isfile(monolith):
+        collect_enabled_from_file(monolith, os.path.relpath(monolith, root), bucket)
+
+    payload = build_snapshot_payload(root, bucket)
+    payload["dry_run"] = dry_run
+
+    _dump(snapshot_path, payload)
+    print(
+        "已写入开启项快照 (%s 条): %s"
+        % (payload["count"], os.path.relpath(snapshot_path, root))
+    )
 
 
 def reset_app_list(items):
@@ -41,26 +167,7 @@ def reset_app_list(items):
 
 def process_apps_dir(apps_dir, dry_run):
     total = 0
-    files = []
-    win = os.path.join(apps_dir, "windows")
-    if os.path.isdir(win):
-        for name in sorted(os.listdir(win)):
-            if not name.endswith(".json"):
-                continue
-            files.append(os.path.join(win, name))
-    for plat in ("darwin", "linux"):
-        sub = os.path.join(apps_dir, plat)
-        used_dir = False
-        if os.path.isdir(sub):
-            names = [n for n in sorted(os.listdir(sub)) if n.endswith(".json")]
-            if names:
-                for name in names:
-                    files.append(os.path.join(sub, name))
-                used_dir = True
-        if not used_dir:
-            p = os.path.join(apps_dir, "%s.json" % plat)
-            if os.path.isfile(p):
-                files.append(p)
+    files = _discover_split_json_files(apps_dir)
 
     for path in files:
         with open(path, encoding="utf-8") as f:
@@ -113,10 +220,31 @@ def main():
         help="仓库根目录（默认：本脚本上级目录）",
     )
     ap.add_argument("--dry-run", action="store_true", help="只统计，不写文件")
+    ap.add_argument(
+        "--no-snapshot",
+        action="store_true",
+        help="不写入开启项快照（默认写入 tools/last_enabled_before_reset.json）",
+    )
+    ap.add_argument(
+        "--snapshot-path",
+        default="",
+        help="快照 JSON 路径（相对 --root 或绝对路径；默认 tools/last_enabled_before_reset.json）",
+    )
     args = ap.parse_args()
     root = os.path.abspath(args.root)
     apps_dir = os.path.join(root, "apps")
     monolith = os.path.join(root, "apps.json")
+
+    if args.snapshot_path:
+        sp = args.snapshot_path
+        snapshot_path = sp if os.path.isabs(sp) else os.path.join(root, sp)
+    else:
+        snapshot_path = os.path.join(root, "tools", "last_enabled_before_reset.json")
+
+    if not args.no_snapshot:
+        if not os.path.isdir(os.path.dirname(snapshot_path)):
+            os.makedirs(os.path.dirname(snapshot_path), exist_ok=True)
+        write_enabled_snapshot(root, snapshot_path, args.dry_run)
 
     grand = 0
     if os.path.isfile(os.path.join(apps_dir, "root.json")):
@@ -124,7 +252,9 @@ def main():
     if os.path.isfile(monolith):
         grand += process_monolith(monolith, args.dry_run)
 
-    if grand == 0 and not os.path.isfile(os.path.join(apps_dir, "root.json")) and not os.path.isfile(monolith):
+    if grand == 0 and not os.path.isfile(
+        os.path.join(apps_dir, "root.json")
+    ) and not os.path.isfile(monolith):
         print("未找到 apps/ 或 apps.json", file=sys.stderr)
         sys.exit(1)
 
