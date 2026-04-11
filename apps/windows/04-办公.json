@@ -213,5 +213,35 @@
       ".msi"
     ],
     "version_tag_as_on_github": true
+  },
+  {
+    "id": "affine",
+    "简介": "AFFiNE（知识库 / 文档 / 白板一体化，本地与同步）",
+    "分类": "办公",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/toeverything/AFFiNE/releases",
+    "repo_path": "toeverything/AFFiNE",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "affine-",
+      "stable-windows-x64.exe"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "nsis",
+      ".blockmap",
+      "darwin",
+      "linux"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "affine-{ver}-stable-windows-x64.exe"
+    ],
+    "save_name": "affine-{ver}-stable-windows-x64.exe",
+    "process_name": "AFFiNE.exe",
+    "kill_before_install": true,
+    "run_installer": true
   }
 ]

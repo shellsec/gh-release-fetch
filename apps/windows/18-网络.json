@@ -422,5 +422,69 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "zen_browser",
+    "简介": "Zen Browser（基于 Firefox 的隐私向浏览器）",
+    "分类": "网络",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/zen-browser/desktop/releases",
+    "repo_path": "zen-browser/desktop",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "zen.installer.exe"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      ".mar",
+      "AppImage",
+      "linux",
+      "macos",
+      "source"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "zen.installer.exe"
+    ],
+    "save_name": "zen.installer.exe",
+    "process_name": "zen.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "netbird",
+    "简介": "NetBird（WireGuard 组网与零信任访问，含桌面 UI）",
+    "分类": "网络",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/netbirdio/netbird/releases",
+    "repo_path": "netbirdio/netbird",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "netbird-ui-windows_",
+      "windows_amd64.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "windows_arm64",
+      "darwin",
+      "linux",
+      "install.sh",
+      "checksums",
+      "migrate"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "download_names": [
+      "netbird-ui-windows_{ver}_windows_amd64.tar.gz"
+    ],
+    "save_name": "netbird-ui-windows_{ver}_windows_amd64.tar.gz",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

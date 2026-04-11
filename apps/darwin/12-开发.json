@@ -94,5 +94,11 @@
     "enabled": false,
     "releases_url": "https://bgithub.xyz/casey/just/releases",
     "repo_path": "casey/just"
+  },
+  {
+    "id": "actionlint",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/rhysd/actionlint/releases",
+    "repo_path": "rhysd/actionlint"
   }
 ]

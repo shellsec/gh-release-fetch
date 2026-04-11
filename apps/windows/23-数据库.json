@@ -204,6 +204,39 @@
     "run_installer": false
   },
   {
+    "id": "dolt",
+    "简介": "Dolt（Git 语义的关系型数据库 / 数据版本控制 CLI）",
+    "分类": "数据库",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/dolthub/dolt/releases",
+    "repo_path": "dolthub/dolt",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "dolt-windows-amd64.zip"
+    ],
+    "href_exclude_substrings": [
+      "linux",
+      "darwin",
+      "arm64",
+      "musl",
+      "deb",
+      "rpm"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "dolt-windows-amd64.zip"
+    ],
+    "save_name": "dolt-windows-amd64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
     "id": "sqlc",
     "简介": "sqlc（从 SQL 生成类型安全 Go 代码）",
     "分类": "数据库",

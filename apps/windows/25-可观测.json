@@ -178,5 +178,38 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "grafana_alloy",
+    "简介": "Grafana Alloy（OpenTelemetry Collector 发行版，可观测数据管道）",
+    "分类": "可观测",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/grafana/alloy/releases",
+    "repo_path": "grafana/alloy",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "alloy-installer-windows-amd64.exe"
+    ],
+    "href_exclude_substrings": [
+      ".zip",
+      "linux",
+      "darwin",
+      "freebsd",
+      "checksums",
+      ".sig",
+      ".pem",
+      ".sbom",
+      "src"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "alloy-installer-windows-amd64.exe"
+    ],
+    "save_name": "alloy-installer-windows-amd64.exe",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
   }
 ]

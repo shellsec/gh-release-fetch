@@ -372,5 +372,40 @@
     "process_name": "imhex.exe",
     "kill_before_install": true,
     "run_installer": true
+  },
+  {
+    "id": "helix",
+    "简介": "Helix（模态终端文本编辑器，Rust）",
+    "分类": "编辑器",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/helix-editor/helix/releases",
+    "repo_path": "helix-editor/helix",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "helix-",
+      "x86_64-windows.zip"
+    ],
+    "href_exclude_substrings": [
+      "source",
+      "linux",
+      "macos",
+      "aarch64",
+      "AppImage",
+      ".deb",
+      ".zsync"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "helix-{ver}-x86_64-windows.zip"
+    ],
+    "save_name": "helix-{ver}-x86_64-windows.zip",
+    "process_name": "hx.exe",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

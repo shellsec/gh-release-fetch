@@ -213,5 +213,38 @@
     "run_installer": true,
     "version_tag_as_on_github": true,
     "url_hint": "gimp"
+  },
+  {
+    "id": "ente_photos",
+    "简介": "Ente Photos（端到端加密相册桌面端）",
+    "分类": "多媒体与设计",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/ente-io/photos-desktop/releases",
+    "repo_path": "ente-io/photos-desktop",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "ente-",
+      "-x64.exe"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "blockmap",
+      "AppImage",
+      "deb",
+      "rpm",
+      "pacman",
+      "dmg",
+      ".zip"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "ente-{ver}-x64.exe"
+    ],
+    "save_name": "ente-{ver}-x64.exe",
+    "process_name": "ente.exe",
+    "kill_before_install": true,
+    "run_installer": true
   }
 ]

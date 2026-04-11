@@ -55,5 +55,39 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "rustic",
+    "简介": "rustic（Rust 实现的 restic 兼容备份 CLI）",
+    "分类": "备份",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/rustic-rs/rustic/releases",
+    "repo_path": "rustic-rs/rustic",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "rustic-v",
+      "x86_64-pc-windows-msvc.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "windows-gnu",
+      "darwin",
+      "linux",
+      ".asc",
+      ".sha256",
+      ".sig"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "download_names": [
+      "rustic-v{ver}-x86_64-pc-windows-msvc.tar.gz"
+    ],
+    "save_name": "rustic-v{ver}-x86_64-pc-windows-msvc.tar.gz",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

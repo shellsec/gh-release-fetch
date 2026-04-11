@@ -1133,5 +1133,70 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "actionlint",
+    "简介": "actionlint（GitHub Actions 工作流静态检查）",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/rhysd/actionlint/releases",
+    "repo_path": "rhysd/actionlint",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "actionlint_",
+      "windows_amd64.zip"
+    ],
+    "href_exclude_substrings": [
+      "windows_386",
+      "windows_arm64",
+      "darwin",
+      "linux"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "actionlint_{ver}_windows_amd64.zip"
+    ],
+    "save_name": "actionlint_{ver}_windows_amd64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "dprint",
+    "简介": "dprint（多语言格式化，带插件生态）",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/dprint/dprint/releases",
+    "repo_path": "dprint/dprint",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "dprint-x86_64-pc-windows-msvc",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "installer",
+      "darwin",
+      "linux",
+      "aarch64",
+      "apple"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "dprint-x86_64-pc-windows-msvc.zip"
+    ],
+    "save_name": "dprint-x86_64-pc-windows-msvc.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

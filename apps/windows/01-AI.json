@@ -162,5 +162,36 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "lobe_chat",
+    "简介": "Lobe Chat Hub（多模型 AI 桌面客户端，LobeHub）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/lobehub/lobe-chat/releases",
+    "repo_path": "lobehub/lobe-chat",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "LobeHub-",
+      "-setup.exe"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      ".blockmap",
+      ".dmg",
+      ".zip",
+      "linux",
+      "mac"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "LobeHub-{ver}-setup.exe"
+    ],
+    "save_name": "LobeHub-{ver}-setup.exe",
+    "process_name": "LobeHub.exe",
+    "kill_before_install": true,
+    "run_installer": true
   }
 ]

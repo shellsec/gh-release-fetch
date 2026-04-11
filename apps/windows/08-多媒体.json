@@ -480,5 +480,37 @@
     "run_installer": true,
     "version_tag_as_on_github": true,
     "url_hint": "jellyfin-media-player"
+  },
+  {
+    "id": "spotube",
+    "简介": "Spotube（开源 Spotify 客户端，无 Premium 也可用）",
+    "分类": "多媒体",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/KRTirtho/spotube/releases",
+    "repo_path": "KRTirtho/spotube",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Spotube-windows-x86_64-setup.exe"
+    ],
+    "href_exclude_substrings": [
+      ".nupkg",
+      "android",
+      "linux",
+      "macos",
+      "ipa",
+      "AppImage",
+      ".md5",
+      "sha256"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Spotube-windows-x86_64-setup.exe"
+    ],
+    "save_name": "Spotube-windows-x86_64-setup.exe",
+    "process_name": "spotube.exe",
+    "kill_before_install": true,
+    "run_installer": true
   }
 ]

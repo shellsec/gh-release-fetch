@@ -84,5 +84,35 @@
     "process_name": "barrier.exe",
     "kill_before_install": true,
     "run_installer": true
+  },
+  {
+    "id": "deskreen",
+    "简介": "Deskreen（将本机屏幕无线投到浏览器，第二屏/演示）",
+    "分类": "远程与协作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/pavlobu/deskreen/releases",
+    "repo_path": "pavlobu/deskreen",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "deskreen-ce-",
+      "-x64.exe"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "ia32",
+      ".blockmap",
+      "linux",
+      "darwin"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "deskreen-ce-{ver}-x64.exe"
+    ],
+    "save_name": "deskreen-ce-{ver}-x64.exe",
+    "process_name": "Deskreen.exe",
+    "kill_before_install": true,
+    "run_installer": true
   }
 ]

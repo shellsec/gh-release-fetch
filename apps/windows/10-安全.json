@@ -888,5 +888,242 @@
     "kill_before_install": false,
     "run_installer": false,
     "windows_installer": false
+  },
+  {
+    "id": "vscanplus",
+    "简介": "VscanPlus 网站漏洞扫描（基于 vscan 二次开发，端口/指纹/目录 fuzz/POC）",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/youki992/VscanPlus/releases",
+    "repo_path": "youki992/VscanPlus",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "VscanPlus-windows-amd64.exe"
+    ],
+    "href_exclude_substrings": [
+      "darwin",
+      "linux"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "VscanPlus-windows-amd64.exe"
+    ],
+    "save_name": "VscanPlus-windows-amd64.exe",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "opensca_cli",
+    "简介": "OpenSCA-cli 软件成分分析 SCA / 供应链漏洞检测",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/XmirrorSecurity/OpenSCA-cli/releases",
+    "repo_path": "XmirrorSecurity/OpenSCA-cli",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "opensca-cli-v",
+      "windows-amd64.zip"
+    ],
+    "href_exclude_substrings": [
+      "darwin",
+      "linux",
+      "sha256",
+      "linux-386",
+      "linux-amd64",
+      "linux-arm64",
+      "darwin-amd64",
+      "darwin-arm64"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "opensca-cli-v{ver}-windows-amd64.zip"
+    ],
+    "save_name": "opensca-cli-v{ver}-windows-amd64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "mitmproxy",
+    "简介": "mitmproxy 交互式 TLS HTTP 代理（安装包在 downloads.mitmproxy.org，非 GitHub 资产）",
+    "分类": "安全",
+    "enabled": false,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/mitmproxy/mitmproxy/releases",
+    "repo_path": "mitmproxy/mitmproxy",
+    "download_url_templates": [
+      "https://downloads.mitmproxy.org/{ver_plain}/mitmproxy-{ver_plain}-windows-x86_64-installer.exe"
+    ],
+    "windows_installer": true,
+    "download_names": [],
+    "save_name": "mitmproxy-{ver}-windows-x86_64-installer.exe",
+    "process_name": "mitmproxy.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "subfinder",
+    "简介": "subfinder（ProjectDiscovery 子域发现）",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/projectdiscovery/subfinder/releases",
+    "repo_path": "projectdiscovery/subfinder",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "subfinder_",
+      "windows_amd64.zip"
+    ],
+    "href_exclude_substrings": [
+      "windows_386",
+      "linux",
+      "macOS"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "subfinder_{ver}_windows_amd64.zip"
+    ],
+    "save_name": "subfinder_{ver}_windows_amd64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "naabu",
+    "简介": "naabu（ProjectDiscovery 快速端口扫描）",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/projectdiscovery/naabu/releases",
+    "repo_path": "projectdiscovery/naabu",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "naabu_",
+      "windows_amd64.zip"
+    ],
+    "href_exclude_substrings": [
+      "windows_386",
+      "checksums",
+      "linux",
+      "macOS"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "naabu_{ver}_windows_amd64.zip"
+    ],
+    "save_name": "naabu_{ver}_windows_amd64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "katana",
+    "简介": "katana（ProjectDiscovery 爬虫/URL 抓取）",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/projectdiscovery/katana/releases",
+    "repo_path": "projectdiscovery/katana",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "katana_",
+      "windows_amd64.zip"
+    ],
+    "href_exclude_substrings": [
+      "windows_386",
+      "checksums",
+      "linux",
+      "macOS"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "katana_{ver}_windows_amd64.zip"
+    ],
+    "save_name": "katana_{ver}_windows_amd64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "dnsx",
+    "简介": "dnsx（ProjectDiscovery DNS 探测与枚举）",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/projectdiscovery/dnsx/releases",
+    "repo_path": "projectdiscovery/dnsx",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "dnsx_",
+      "windows_amd64.zip"
+    ],
+    "href_exclude_substrings": [
+      "windows_386",
+      "linux",
+      "macOS"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "dnsx_{ver}_windows_amd64.zip"
+    ],
+    "save_name": "dnsx_{ver}_windows_amd64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "uncover",
+    "简介": "uncover（ProjectDiscovery 搜索引擎暴露面查询）",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/projectdiscovery/uncover/releases",
+    "repo_path": "projectdiscovery/uncover",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "uncover_",
+      "windows_amd64.zip"
+    ],
+    "href_exclude_substrings": [
+      "windows_386",
+      "linux",
+      "macOS"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "uncover_{ver}_windows_amd64.zip"
+    ],
+    "save_name": "uncover_{ver}_windows_amd64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

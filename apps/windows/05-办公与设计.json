@@ -52,5 +52,36 @@
     "process_name": "rnote.exe",
     "kill_before_install": true,
     "run_installer": true
+  },
+  {
+    "id": "stirling_pdf",
+    "简介": "Stirling-PDF（本地 PDF 合并/拆分/旋转/压缩等工具箱）",
+    "分类": "办公与设计",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/stirling-tools/Stirling-PDF/releases",
+    "repo_path": "stirling-tools/Stirling-PDF",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Stirling-PDF-windows-x86_64.msi"
+    ],
+    "href_exclude_substrings": [
+      "linux",
+      "macos",
+      ".jar",
+      "darwin"
+    ],
+    "windows_installer": true,
+    "installer_extensions": [
+      ".msi"
+    ],
+    "download_names": [
+      "Stirling-PDF-windows-x86_64.msi"
+    ],
+    "save_name": "Stirling-PDF-windows-x86_64.msi",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
   }
 ]

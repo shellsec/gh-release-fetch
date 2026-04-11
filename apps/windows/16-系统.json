@@ -357,5 +357,38 @@
     "process_name": "UniGetUI.exe",
     "kill_before_install": true,
     "run_installer": true
+  },
+  {
+    "id": "trafficmonitor",
+    "简介": "TrafficMonitor（任务栏/悬浮窗网速与硬件监控）",
+    "分类": "系统",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/zhongyang219/TrafficMonitor/releases",
+    "repo_path": "zhongyang219/TrafficMonitor",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "TrafficMonitor_",
+      "_x64.zip"
+    ],
+    "href_exclude_substrings": [
+      "SSE",
+      "Lite",
+      "arm64",
+      "Source",
+      ".7z"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "TrafficMonitor_{ver}_x64.zip"
+    ],
+    "save_name": "TrafficMonitor_{ver}_x64.zip",
+    "process_name": "TrafficMonitor.exe",
+    "kill_before_install": true,
+    "run_installer": false
   }
 ]

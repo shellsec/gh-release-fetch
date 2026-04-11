@@ -46,5 +46,11 @@
     "enabled": false,
     "releases_url": "https://bgithub.xyz/jesseduffield/lazydocker/releases",
     "repo_path": "jesseduffield/lazydocker"
+  },
+  {
+    "id": "caddy",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/caddyserver/caddy/releases",
+    "repo_path": "caddyserver/caddy"
   }
 ]

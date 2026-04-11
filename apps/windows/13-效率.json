@@ -242,5 +242,32 @@
     "process_name": "copyq.exe",
     "kill_before_install": true,
     "run_installer": true
+  },
+  {
+    "id": "flow_launcher",
+    "简介": "Flow Launcher（Windows 启动器 / 全局搜索与插件）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "releases_url": "https://bgithub.xyz/Flow-Launcher/Flow.Launcher/releases",
+    "repo_path": "Flow-Launcher/Flow.Launcher",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Flow-Launcher-Setup.exe"
+    ],
+    "href_exclude_substrings": [
+      ".blockmap",
+      "portable",
+      "zip",
+      "arm64"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Flow-Launcher-Setup.exe"
+    ],
+    "save_name": "Flow-Launcher-Setup.exe",
+    "process_name": "Flow.Launcher.exe",
+    "kill_before_install": true,
+    "run_installer": true
   }
 ]

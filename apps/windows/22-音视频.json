@@ -45,5 +45,35 @@
     "process_name": "vidcutter.exe",
     "kill_before_install": true,
     "run_installer": true
+  },
+  {
+    "id": "syncplay",
+    "简介": "Syncplay（异地同步播放本地视频，连麦追剧）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/Syncplay/syncplay/releases",
+    "repo_path": "Syncplay/syncplay",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Syncplay-",
+      "-Setup.exe"
+    ],
+    "href_exclude_substrings": [
+      "Portable",
+      "deb",
+      "dmg",
+      "server",
+      "zip"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Syncplay-{ver}-Setup.exe"
+    ],
+    "save_name": "Syncplay-{ver}-Setup.exe",
+    "process_name": "syncplay.exe",
+    "kill_before_install": true,
+    "run_installer": true
   }
 ]

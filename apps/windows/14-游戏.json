@@ -542,5 +542,36 @@
     "process_name": "sunshine.exe",
     "kill_before_install": true,
     "run_installer": true
+  },
+  {
+    "id": "moonlight_qt",
+    "简介": "Moonlight（开源 GameStream 客户端，配合 Sunshine / GeForce Experience）",
+    "分类": "游戏",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/moonlight-stream/moonlight-qt/releases",
+    "repo_path": "moonlight-stream/moonlight-qt",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "MoonlightSetup-",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      "Portable",
+      "SteamLink",
+      "AppImage",
+      "dmg",
+      "Src",
+      "arm64"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "MoonlightSetup-{ver}.exe"
+    ],
+    "save_name": "MoonlightSetup-{ver}.exe",
+    "process_name": "moonlight.exe",
+    "kill_before_install": true,
+    "run_installer": true
   }
 ]

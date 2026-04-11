@@ -62,5 +62,73 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": true
+  },
+  {
+    "id": "mdbook",
+    "简介": "mdBook（Rust 官方 Markdown 电子书/文档站点生成器）",
+    "分类": "写作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/rust-lang/mdBook/releases",
+    "repo_path": "rust-lang/mdBook",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "mdbook-v",
+      "pc-windows-msvc.zip"
+    ],
+    "href_exclude_substrings": [
+      "apple-darwin",
+      "unknown-linux",
+      "aarch64",
+      "i686",
+      ".sha256",
+      ".asc"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "mdbook-v{ver}-x86_64-pc-windows-msvc.zip"
+    ],
+    "save_name": "mdbook-v{ver}-x86_64-pc-windows-msvc.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "zola",
+    "简介": "Zola（静态站点生成器，Markdown 内容）",
+    "分类": "写作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/getzola/zola/releases",
+    "repo_path": "getzola/zola",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "zola-v",
+      "pc-windows-msvc.zip"
+    ],
+    "href_exclude_substrings": [
+      "apple-darwin",
+      "unknown-linux",
+      "aarch64",
+      "musl",
+      ".sha256",
+      ".asc"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "zola-v{ver}-x86_64-pc-windows-msvc.zip"
+    ],
+    "save_name": "zola-v{ver}-x86_64-pc-windows-msvc.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

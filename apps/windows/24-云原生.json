@@ -469,5 +469,44 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "caddy",
+    "简介": "Caddy HTTP/1-3 服务器与反向代理（自动 HTTPS，单二进制 zip）",
+    "分类": "云原生",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/caddyserver/caddy/releases",
+    "repo_path": "caddyserver/caddy",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "caddy_",
+      "windows_amd64.zip"
+    ],
+    "href_exclude_substrings": [
+      "windows_arm64",
+      "linux_",
+      "mac_",
+      "freebsd",
+      ".deb",
+      ".pem",
+      ".sig",
+      ".sbom",
+      "checksums",
+      "buildable",
+      "_src"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "caddy_{ver}_windows_amd64.zip"
+    ],
+    "save_name": "caddy_{ver}_windows_amd64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

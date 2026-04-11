@@ -61,5 +61,64 @@
     "process_name": "Gopeed.exe",
     "kill_before_install": true,
     "run_installer": true
+  },
+  {
+    "id": "gallery_dl",
+    "简介": "gallery-dl 图站/相册批量下载（官方单文件 gallery-dl.exe）",
+    "分类": "下载",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/mikf/gallery-dl/releases",
+    "repo_path": "mikf/gallery-dl",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "gallery-dl.exe"
+    ],
+    "href_exclude_substrings": [
+      "gallery-dl_x86",
+      ".sig"
+    ],
+    "windows_installer": false,
+    "download_names": [
+      "gallery-dl.exe"
+    ],
+    "save_name": "gallery-dl.exe",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "lux",
+    "简介": "lux（原 annie，命令行抓取流媒体/站点视频）",
+    "分类": "下载",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/iawia002/lux/releases",
+    "repo_path": "iawia002/lux",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "lux_",
+      "Windows_x86_64.zip"
+    ],
+    "href_exclude_substrings": [
+      "Darwin",
+      "Linux",
+      "arm64",
+      "i386",
+      "armv6"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "lux_{ver}_Windows_x86_64.zip"
+    ],
+    "save_name": "lux_{ver}_Windows_x86_64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

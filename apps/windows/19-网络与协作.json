@@ -82,5 +82,36 @@
     "process_name": "Rocket.Chat.exe",
     "kill_before_install": true,
     "run_installer": true
+  },
+  {
+    "id": "ferdium",
+    "简介": "Ferdium（聚合 Slack/Discord/Matrix 等服务的桌面端，原 Ferdi 分支）",
+    "分类": "网络与协作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/ferdium/ferdium-app/releases",
+    "repo_path": "ferdium/ferdium-app",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Ferdium-win-AutoSetup-",
+      "-x64.exe"
+    ],
+    "href_exclude_substrings": [
+      "ia32",
+      "arm64",
+      "Portable",
+      ".blockmap",
+      "linux",
+      "mac"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Ferdium-win-AutoSetup-{ver}-x64.exe"
+    ],
+    "save_name": "Ferdium-win-AutoSetup-{ver}-x64.exe",
+    "process_name": "Ferdium.exe",
+    "kill_before_install": true,
+    "run_installer": true
   }
 ]
