@@ -339,33 +339,6 @@
     "version_tag_as_on_github": true
   },
   {
-    "id": "zen_browser",
-    "简介": "Zen 浏览器（Firefox 分支）",
-    "分类": "网络",
-    "enabled": false,
-    "releases_url": "https://bgithub.xyz/zen-browser/desktop/releases",
-    "repo_path": "zen-browser/desktop",
-    "installer_markers": [
-      "zen.installer",
-      ".exe"
-    ],
-    "href_exclude_substrings": [
-      "mac",
-      "linux",
-      "portable"
-    ],
-    "windows_installer": true,
-    "download_names": [
-      "zen.installer.exe"
-    ],
-    "save_name": "zen.installer.exe",
-    "process_name": "zen.exe",
-    "kill_before_install": true,
-    "run_installer": true,
-    "version_tag_as_on_github": true,
-    "url_hint": "zen"
-  },
-  {
     "id": "thorium",
     "简介": "Thorium 浏览器（Chromium 优化版）",
     "分类": "网络",
@@ -425,7 +398,7 @@
   },
   {
     "id": "zen_browser",
-    "简介": "Zen Browser（基于 Firefox 的隐私向浏览器）",
+    "简介": "Zen 浏览器（Firefox 分支，隐私向，Windows x64 安装包）",
     "分类": "网络",
     "enabled": false,
     "prefer_api_assets": true,
@@ -449,6 +422,35 @@
       "zen.installer.exe"
     ],
     "save_name": "zen.installer.exe",
+    "process_name": "zen.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "zen_browser_arm64",
+    "简介": "Zen 浏览器（Firefox 分支，Windows ARM64 安装包）",
+    "分类": "网络",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/zen-browser/desktop/releases",
+    "repo_path": "zen-browser/desktop",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "zen.installer-arm64.exe"
+    ],
+    "href_exclude_substrings": [
+      ".mar",
+      "AppImage",
+      "linux",
+      "macos",
+      "source"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "zen.installer-arm64.exe"
+    ],
+    "save_name": "zen.installer-arm64.exe",
     "process_name": "zen.exe",
     "kill_before_install": true,
     "run_installer": true

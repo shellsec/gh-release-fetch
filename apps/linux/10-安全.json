@@ -94,5 +94,51 @@
     "enabled": false,
     "releases_url": "https://bgithub.xyz/projectdiscovery/uncover/releases",
     "repo_path": "projectdiscovery/uncover"
+  },
+  {
+    "id": "zen_desktop",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/ZenPrivacy/zen-desktop/releases",
+    "repo_path": "ZenPrivacy/zen-desktop",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Zen_linux_amd64.tar.gz"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "download_names": [
+      "Zen_linux_amd64.tar.gz"
+    ],
+    "save_name": "Zen_linux_amd64.tar.gz",
+    "windows_installer": false,
+    "run_installer": false,
+    "kill_before_install": false,
+    "process_name": ""
+  },
+  {
+    "id": "zen_desktop_arm64",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/ZenPrivacy/zen-desktop/releases",
+    "repo_path": "ZenPrivacy/zen-desktop",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Zen_linux_arm64.tar.gz"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "download_names": [
+      "Zen_linux_arm64.tar.gz"
+    ],
+    "save_name": "Zen_linux_arm64.tar.gz",
+    "windows_installer": false,
+    "run_installer": false,
+    "kill_before_install": false,
+    "process_name": ""
   }
 ]
