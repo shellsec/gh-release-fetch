@@ -11,6 +11,7 @@
   python tools/apply_enabled_snapshot.py
   python tools/apply_enabled_snapshot.py --dry-run
   python tools/apply_enabled_snapshot.py --snapshot-path my_enabled.json
+  python tools/apply_enabled_snapshot.py --snapshot-path VibeCodingToolsDown/tools/last_enabled_before_reset.json
   python tools/apply_enabled_snapshot.py --strict
 """
 

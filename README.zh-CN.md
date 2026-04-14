@@ -22,6 +22,15 @@
 - `apps/`：推荐布局——[`apps/root.json`](apps/root.json)（全局）+ [`apps/windows/*.json`](apps/windows/) + [`apps/darwin/*.json`](apps/darwin/) + [`apps/linux/*.json`](apps/linux/)（均按分类拆成多个数组文件，与 windows 命名风格一致）；若无分片目录则回退单文件 `apps/darwin.json`、`apps/linux.json`。历史单文件备份见 `apps.json.monolith.bak`；darwin/linux 由单文件迁出后的备份见 `apps/darwin.json.bak`、`apps/linux.json.bak`
 - `run_update.bat`：Windows 下一键检查 Python、安装依赖并执行 `python auto_update.py`
 
+### VibeCodingToolsDown（可选独立清单）
+
+与主 [`apps/`](apps/) **完全分离** 的第二套配置，目录为 [`VibeCodingToolsDown/`](VibeCodingToolsDown/)：面向 AI 编程相关 IDE 等条目；各产品下载直链由 [`VibeCodingToolsDown/scripts/build_manifest.py`](VibeCodingToolsDown/scripts/build_manifest.py) 聚合写入 **`dist/vibecoding/manifest.json`**，[`auto_update.py`](auto_update.py) 通过条目中的 `resolve_via=github_pages_manifest` 与 [`VibeCodingToolsDown/root.json`](VibeCodingToolsDown/root.json) 里的 `vibecoding_manifest_url` 读取（支持本地相对路径或 **HTTPS**，例如 **`raw.githubusercontent.com`** 上的 manifest）。
+
+- **Windows 一键**：[`VibeCodingToolsDown/run_update_VibeCodingToolsDown.bat`](VibeCodingToolsDown/run_update_VibeCodingToolsDown.bat)（在本目录内执行：装依赖 → 生成 manifest → 调用 `vibe_update.py`）
+- **命令行**：`python auto_update.py --apps-dir VibeCodingToolsDown`；或在 [`VibeCodingToolsDown/`](VibeCodingToolsDown/) 下执行 `python vibe_update.py`（内部仍调用仓库根的 `auto_update.py`，仅固定 `--apps-dir`）
+- **批量关闭/恢复 `enabled`**：[`VibeCodingToolsDown/tools/reset_enabled_json.bat`](VibeCodingToolsDown/tools/reset_enabled_json.bat) / [`apply_enabled_snapshot.bat`](VibeCodingToolsDown/tools/apply_enabled_snapshot.bat)（调用仓库根 `tools/*.py`，快照在 `VibeCodingToolsDown/tools/`，与主 `apps/` 互不覆盖）
+- **GitHub Actions**：[`.github/workflows/vibecodingtoolsdown-pages.yml`](.github/workflows/vibecodingtoolsdown-pages.yml) 定时或手动构建 manifest，**提交回默认分支**（便于 raw 直链拉索引）并推送 **gh-pages**（可选 GitHub Pages）；细节与远程 manifest 写法见 [`VibeCodingToolsDown/README.md`](VibeCodingToolsDown/README.md)
+
 ### 仓库现状与收录范围（约略）
 
 合并配置后规模约为：**Windows 277 条**（[`apps/windows/`](apps/windows/) 下 **26** 个分类分片）、**darwin / linux 各 170 条**（[`apps/darwin/`](apps/darwin/)、[`apps/linux/`](apps/linux/) 与 Windows 同风格分片）。数量会随你增删 JSON 变化，以运行 `python auto_update.py` 时日志里「已从 apps/ 目录合并配置」为准。

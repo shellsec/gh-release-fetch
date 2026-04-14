@@ -1,0 +1,162 @@
+{
+  "schema": 1,
+  "generated_at": "2026-04-14T04:23:27Z",
+  "items": [
+    {
+      "id": "cursor",
+      "version": "3.1.10",
+      "version_tag": "v3.1.10",
+      "downloads": {
+        "windows": {
+          "url": "https://downloads.cursor.com/production/dacbe9b31599a253763e4910eb6ab3870465332c/win32/x64/user-setup/CursorUserSetup-x64-3.1.10.exe",
+          "filename": "CursorUserSetup-x64-3.1.10.exe"
+        },
+        "darwin": {
+          "url": "https://downloads.cursor.com/production/dacbe9b31599a253763e4910eb6ab3870465332c/darwin/universal/Cursor-darwin-universal.zip",
+          "filename": "Cursor-darwin-universal.zip"
+        },
+        "linux": null
+      },
+      "notes": "索引自 accesstechnology-mike/cursor-downloads Release 正文中的官方 CDN 链。"
+    },
+    {
+      "id": "vscode",
+      "version": "1.115.0",
+      "version_tag": "v1.115.0",
+      "downloads": {
+        "windows": {
+          "url": "https://vscode.download.prss.microsoft.com/dbazure/download/stable/41dd792b5e652393e7787322889ed5fdc58bd75b/VSCodeSetup-x64-1.115.0.exe",
+          "filename": "VSCodeSetup-x64-1.115.0.exe"
+        },
+        "darwin": {
+          "url": "https://vscode.download.prss.microsoft.com/dbazure/download/stable/41dd792b5e652393e7787322889ed5fdc58bd75b/VSCode-darwin-arm64.zip",
+          "filename": "VSCode-darwin-arm64.zip"
+        },
+        "linux": {
+          "url": "https://vscode.download.prss.microsoft.com/dbazure/download/stable/41dd792b5e652393e7787322889ed5fdc58bd75b/code-stable-x64-1775600256.tar.gz",
+          "filename": "code-stable-x64-1775600256.tar.gz"
+        }
+      },
+      "notes": "版本 tag 来自 GitHub API；安装包 URL 来自 update.code.visualstudio.com 重定向（微软官方）。"
+    },
+    {
+      "id": "vscodium",
+      "version": "1.112.01907",
+      "version_tag": "v1.112.01907",
+      "downloads": {
+        "windows": {
+          "url": "https://github.com/VSCodium/vscodium/releases/download/1.112.01907/VSCodiumUserSetup-x64-1.112.01907.exe",
+          "filename": "VSCodiumUserSetup-x64-1.112.01907.exe"
+        },
+        "darwin": {
+          "url": "https://github.com/VSCodium/vscodium/releases/download/1.112.01907/VSCodium-darwin-arm64-1.112.01907.zip",
+          "filename": "VSCodium-darwin-arm64-1.112.01907.zip"
+        },
+        "linux": {
+          "url": "https://github.com/VSCodium/vscodium/releases/download/1.112.01907/VSCodium-linux-x64-1.112.01907.tar.gz",
+          "filename": "VSCodium-linux-x64-1.112.01907.tar.gz"
+        }
+      },
+      "notes": "GitHub API latest assets。"
+    },
+    {
+      "id": "trae",
+      "version": "1.0.10282",
+      "version_tag": "v1.0.10282",
+      "downloads": {
+        "windows": {
+          "url": "https://lf-trae.toscdn.com/obj/trae-ai-cn/pkg/app/releases/stable/1.0.10283/win32/Trae-Setup-x64.exe",
+          "filename": "Trae-Setup-x64.exe"
+        },
+        "darwin": {
+          "url": "https://lf-trae.toscdn.com/obj/trae-ai-cn/pkg/app/releases/stable/1.0.10282/darwin/Trae-darwin-arm64.dmg",
+          "filename": "Trae-darwin-arm64.dmg"
+        },
+        "linux": null
+      },
+      "notes": "来自 traeide.com/download 静态页；国内 trae.cn 为 SPA，版本以字节 CDN 为准。"
+    },
+    {
+      "id": "trae_cn",
+      "version": "1.0.10282",
+      "version_tag": "v1.0.10282",
+      "downloads": {
+        "windows": {
+          "url": "https://lf-trae.toscdn.com/obj/trae-ai-cn/pkg/app/releases/stable/1.0.10283/win32/Trae-Setup-x64.exe",
+          "filename": "Trae-Setup-x64.exe"
+        },
+        "darwin": {
+          "url": "https://lf-trae.toscdn.com/obj/trae-ai-cn/pkg/app/releases/stable/1.0.10282/darwin/Trae-darwin-arm64.dmg",
+          "filename": "Trae-darwin-arm64.dmg"
+        },
+        "linux": null
+      },
+      "notes": "与 Trae 同源 CDN（traeide 文档页解析）。若需严格国内渠道请以 www.trae.cn 应用内/商店为准。"
+    },
+    {
+      "id": "qoder",
+      "version": "0",
+      "version_tag": "v0",
+      "downloads": {
+        "windows": null,
+        "darwin": null,
+        "linux": null
+      },
+      "notes": "未能从官网静态资源解析 Qoder 安装包，请从 https://qoder.com/download 手动下载。"
+    },
+    {
+      "id": "codebuddy",
+      "version": "0",
+      "version_tag": "v0",
+      "downloads": {
+        "windows": null,
+        "darwin": null,
+        "linux": null
+      },
+      "notes": "国际版 CodeBuddy 下载多为动态加载，请从 https://www.codebuddy.ai/ 或文档安装页获取。"
+    },
+    {
+      "id": "codebuddy_cn",
+      "version": "0",
+      "version_tag": "v0",
+      "downloads": {
+        "windows": null,
+        "darwin": null,
+        "linux": null
+      },
+      "notes": "国内版请从 https://copilot.tencent.com/ide/ 选择对应芯片安装包（页面为 SPA，未在此脚本硬编码直链）。"
+    },
+    {
+      "id": "antigravity",
+      "version": "0",
+      "version_tag": "v0",
+      "downloads": {
+        "windows": null,
+        "darwin": null,
+        "linux": null
+      },
+      "notes": "请从 https://antigravity.google/download 手动下载；自动化需可执行 JS 的环境。"
+    },
+    {
+      "id": "kiro",
+      "version": "2.0.0",
+      "version_tag": "v2.0.0",
+      "downloads": {
+        "windows": {
+          "url": "https://prod.download.cli.kiro.dev/stable/latest/kiro-cli-x86_64-pc-windows-msvc.msi",
+          "filename": "kiro-cli-x86_64-pc-windows-msvc.msi"
+        },
+        "darwin": {
+          "url": "https://prod.download.cli.kiro.dev/stable/latest/Kiro%20CLI.dmg",
+          "filename": "Kiro CLI.dmg"
+        },
+        "linux": {
+          "url": "https://prod.download.cli.kiro.dev/stable/latest/kiro-cli.appimage",
+          "filename": "kiro-cli.appimage"
+        }
+      },
+      "notes": "Kiro CLI 官方 manifest（含 Windows MSI / macOS dmg / Linux AppImage 等）。"
+    }
+  ],
+  "errors": []
+}

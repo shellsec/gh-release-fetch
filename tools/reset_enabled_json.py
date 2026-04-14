@@ -17,6 +17,9 @@
   python tools/reset_enabled_json.py --dry-run
   python tools/reset_enabled_json.py --no-snapshot
   python tools/reset_enabled_json.py --snapshot-path my_enabled.json
+  python tools/reset_enabled_json.py --apps-dir VibeCodingToolsDown
+  （--apps-dir 为相对 --root 的配置根；非默认 apps 时不再处理根目录 apps.json，
+  快照默认写到 <该目录>/tools/last_enabled_before_reset.json，避免覆盖主清单快照）
 
 恢复开启状态：python tools/apply_enabled_snapshot.py（读取默认同名快照）
 """
@@ -128,9 +131,8 @@ def build_snapshot_payload(root, items):
     }
 
 
-def write_enabled_snapshot(root, snapshot_path, dry_run):
+def write_enabled_snapshot(root, snapshot_path, dry_run, apps_dir, scan_monolith):
     """扫描并写入快照；dry_run 时仍会写入（记录执行 dry-run 当时的开启状态）。"""
-    apps_dir = os.path.join(root, "apps")
     monolith = os.path.join(root, "apps.json")
     bucket = []
 
@@ -140,7 +142,7 @@ def write_enabled_snapshot(root, snapshot_path, dry_run):
                 abspath, os.path.relpath(abspath, root), bucket
             )
 
-    if os.path.isfile(monolith):
+    if scan_monolith and os.path.isfile(monolith):
         collect_enabled_from_file(monolith, os.path.relpath(monolith, root), bucket)
 
     payload = build_snapshot_payload(root, bucket)
@@ -217,7 +219,13 @@ def main():
     ap.add_argument(
         "--root",
         default=SCRIPT_DIR,
-        help="仓库根目录（默认：本脚本上级目录）",
+        help="仓库根目录（默认：本脚本所在仓库根，即 tools 的上级的上级）",
+    )
+    ap.add_argument(
+        "--apps-dir",
+        default="apps",
+        metavar="REL",
+        help="配置根相对 --root（默认 apps）；如 VibeCodingToolsDown。仅当该路径为默认 apps 时才同时处理根目录 apps.json",
     )
     ap.add_argument("--dry-run", action="store_true", help="只统计，不写文件")
     ap.add_argument(
@@ -232,30 +240,43 @@ def main():
     )
     args = ap.parse_args()
     root = os.path.abspath(args.root)
-    apps_dir = os.path.join(root, "apps")
+    apps_rel = args.apps_dir.strip().replace("\\", "/").strip("/")
+    if not apps_rel:
+        print("--apps-dir 不能为空", file=sys.stderr)
+        sys.exit(1)
+    apps_dir = os.path.join(root, apps_rel.replace("/", os.sep))
     monolith = os.path.join(root, "apps.json")
+    scan_monolith = os.path.normpath(apps_dir) == os.path.normpath(
+        os.path.join(root, "apps")
+    )
 
     if args.snapshot_path:
         sp = args.snapshot_path
         snapshot_path = sp if os.path.isabs(sp) else os.path.join(root, sp)
-    else:
+    elif scan_monolith:
         snapshot_path = os.path.join(root, "tools", "last_enabled_before_reset.json")
+    else:
+        snapshot_path = os.path.join(
+            apps_dir, "tools", "last_enabled_before_reset.json"
+        )
 
     if not args.no_snapshot:
-        if not os.path.isdir(os.path.dirname(snapshot_path)):
-            os.makedirs(os.path.dirname(snapshot_path), exist_ok=True)
-        write_enabled_snapshot(root, snapshot_path, args.dry_run)
+        snap_dir = os.path.dirname(snapshot_path)
+        if snap_dir and not os.path.isdir(snap_dir):
+            os.makedirs(snap_dir, exist_ok=True)
+        write_enabled_snapshot(
+            root, snapshot_path, args.dry_run, apps_dir, scan_monolith
+        )
 
     grand = 0
-    if os.path.isfile(os.path.join(apps_dir, "root.json")):
+    has_split = os.path.isfile(os.path.join(apps_dir, "root.json"))
+    if has_split:
         grand += process_apps_dir(apps_dir, args.dry_run)
-    if os.path.isfile(monolith):
+    if scan_monolith and os.path.isfile(monolith):
         grand += process_monolith(monolith, args.dry_run)
 
-    if grand == 0 and not os.path.isfile(
-        os.path.join(apps_dir, "root.json")
-    ) and not os.path.isfile(monolith):
-        print("未找到 apps/ 或 apps.json", file=sys.stderr)
+    if grand == 0 and not has_split and not (scan_monolith and os.path.isfile(monolith)):
+        print("未找到可处理配置（%s 下无 root.json，且未处理 apps.json）" % apps_rel, file=sys.stderr)
         sys.exit(1)
 
     print("共计处理条目数:", grand)

@@ -1,0 +1,31 @@
+2026-04-14 11:33:50,618 - INFO - 已从 apps/ 目录合并配置：windows 3 项，darwin 3 项，linux 3 项
+2026-04-14 11:34:00,336 - INFO - 已从配置目录合并：E:\GITHUB\已经发布\gh-release-fetch\VibeCoding — windows 3 项，darwin 3 项，linux 3 项
+2026-04-14 11:34:00,337 - INFO - 创建下载目录: E:\GITHUB\已经发布\gh-release-fetch\downloads\VibeCoding
+2026-04-14 11:34:00,337 - INFO - 使用 platforms.windows（共 3 项）
+2026-04-14 11:34:00,337 - ERROR - 没有可处理的应用：请检查 apps.json 中的 enabled，或命令行指定的 id
+2026-04-14 11:36:58,593 - INFO - 已从配置目录合并：E:\GITHUB\已经发布\gh-release-fetch\VibeCoding — windows 3 项，darwin 3 项，linux 3 项
+2026-04-14 11:36:58,597 - INFO - 使用 platforms.windows（共 3 项）
+2026-04-14 11:36:58,598 - WARNING - 已关闭 TLS 证书校验（--insecure 或 apps.json ssl_verify=false）
+2026-04-14 11:36:59,965 - INFO - === [cursor] 开始 === [平台: windows] [下载目录: E:\GITHUB\已经发布\gh-release-fetch\downloads\VibeCoding\windows]
+2026-04-14 11:36:59,966 - INFO - [cursor] 正在检查最新版本: https://bgithub.xyz/accesstechnology-mike/cursor-downloads/releases
+2026-04-14 11:37:00,628 - WARNING - [cursor] 发布页获取失败: https://bgithub.xyz/accesstechnology-mike/cursor-downloads/releases -> 403 Client Error: Forbidden for url: https://bgithub.xyz/accesstechnology-mike/cursor-downloads/releases
+2026-04-14 11:37:00,628 - INFO - [cursor] 正在检查最新版本: https://github.com/accesstechnology-mike/cursor-downloads/releases
+2026-04-14 11:37:02,422 - INFO - [cursor] 已保存发布页 HTML: E:\GITHUB\已经发布\gh-release-fetch\github_page_windows_cursor.html
+2026-04-14 11:37:02,672 - INFO - [cursor] 尝试从页面中查找下载链接...
+2026-04-14 11:37:02,684 - INFO - [cursor] 从页面中找到下载链接: https://downloads.cursor.com/production/dacbe9b31599a253763e4910eb6ab3870465332c/win32/x64/user-setup/CursorUserSetup-x64-3.1.10.exe
+2026-04-14 11:37:02,696 - INFO - [cursor] 找到最新版本: v3.1.10
+2026-04-14 11:37:02,697 - INFO - [cursor] 成功使用发布页来源: https://github.com/accesstechnology-mike/cursor-downloads/releases
+2026-04-14 11:37:02,697 - INFO - [cursor] 同时找到下载链接: https://downloads.cursor.com/production/dacbe9b31599a253763e4910eb6ab3870465332c/win32/x64/user-setup/CursorUserSetup-x64-3.1.10.exe
+2026-04-14 11:37:02,697 - INFO - 使用从页面解析的下载链接: https://downloads.cursor.com/production/dacbe9b31599a253763e4910eb6ab3870465332c/win32/x64/user-setup/CursorUserSetup-x64-3.1.10.exe
+2026-04-14 11:37:02,698 - INFO - 开始下载安装程序到: E:\GITHUB\已经发布\gh-release-fetch\downloads\VibeCoding\windows\CursorUserSetup-x64-3.1.10.exe [平台: windows]
+2026-04-14 11:37:02,698 - INFO - 尝试下载源 1/5: https://downloads.cursor.com/production/dacbe9b31599a253763e4910eb6ab3870465332c/win32/x64/user-setup/CursorUserSetup-x64-3.1.10.exe
+2026-04-14 12:01:09,053 - INFO - 已从配置目录合并：E:\GITHUB\已经发布\gh-release-fetch\VibeCoding — windows 10 项，darwin 10 项，linux 10 项
+2026-04-14 12:06:48,628 - INFO - 已从配置目录合并：E:\GITHUB\已经发布\gh-release-fetch\VibeCoding — windows 10 项，darwin 10 项，linux 10 项
+2026-04-14 12:23:28,322 - INFO - 已从配置目录合并：E:\GITHUB\已经发布\gh-release-fetch\VibeCodingToolsDown — windows 10 项，darwin 10 项，linux 10 项
+2026-04-14 12:23:28,323 - INFO - 创建下载目录: E:\GITHUB\已经发布\gh-release-fetch\downloads\VibeCodingToolsDown
+2026-04-14 12:23:28,323 - INFO - 使用 platforms.windows（共 10 项）
+2026-04-14 12:23:28,324 - WARNING - 已关闭 TLS 证书校验（--insecure 或 apps.json ssl_verify=false）
+2026-04-14 12:23:29,647 - INFO - === [trae_cn] 开始 === [平台: windows] [下载目录: E:\GITHUB\已经发布\gh-release-fetch\downloads\VibeCodingToolsDown\windows]
+2026-04-14 12:23:29,648 - INFO - 使用从页面解析的下载链接: https://lf-trae.toscdn.com/obj/trae-ai-cn/pkg/app/releases/stable/1.0.10283/win32/Trae-Setup-x64.exe
+2026-04-14 12:23:29,650 - INFO - 开始下载安装程序到: E:\GITHUB\已经发布\gh-release-fetch\downloads\VibeCodingToolsDown\windows\Trae-Setup-x64.exe [平台: windows]
+2026-04-14 12:23:29,650 - INFO - 尝试下载源 1/1: https://lf-trae.toscdn.com/obj/trae-ai-cn/pkg/app/releases/stable/1.0.10283/win32/Trae-Setup-x64.exe

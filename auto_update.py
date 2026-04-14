@@ -4,6 +4,8 @@
 """
 GH Release Fetch（GitHub 发行版拉取工具）：按 GitHub Releases 解析版本并下载资产。
 配置可为单文件 apps.json，或 apps/ 目录（root.json + windows|darwin|linux 分片目录）。
+也可用 --apps-dir 指向另一套同级目录（如 VibeCodingToolsDown/，内含 root.json 与分片），与 apps/ 互不合并。
+resolve_via=github_pages_manifest：从 root.json 的 vibecoding_manifest_url（本地路径或 https raw）读取 manifest.json，可与 CI 提交到 main 的 manifest 或 gh-pages 配套。
 合并后仍使用 platforms.windows / darwin / linux；可用 --platform 覆盖当前系统。
 条目的「简介」「分类」仅供人阅读，脚本不解析。
 """
@@ -123,15 +125,29 @@ def load_config_from_apps_dir(apps_dir):
     for key in ("windows", "darwin", "linux"):
         cfg["platforms"][key] = _load_platform_apps(apps_dir, key)
     logger.info(
-        "已从 apps/ 目录合并配置：windows %s 项，darwin %s 项，linux %s 项",
+        "已从配置目录合并：%s — windows %s 项，darwin %s 项，linux %s 项",
+        apps_dir,
         len(cfg["platforms"].get("windows") or []),
         len(cfg["platforms"].get("darwin") or []),
         len(cfg["platforms"].get("linux") or []),
     )
+    cfg["_apps_config_root"] = os.path.abspath(apps_dir)
     return cfg
 
 
-def load_config():
+def load_config(apps_dir=None):
+    """
+    apps_dir: 可选，为含 root.json 的配置根目录（相对路径时相对本脚本所在目录）。
+    默认使用 apps/（存在 apps/root.json 时）或 apps.json。
+    """
+    if apps_dir:
+        path = apps_dir
+        if not os.path.isabs(path):
+            path = os.path.normpath(os.path.join(SCRIPT_DIR, path))
+        root_path = os.path.join(path, "root.json")
+        if not os.path.isfile(root_path):
+            raise FileNotFoundError("缺少 %s（--apps-dir 须指向含 root.json 的目录）" % root_path)
+        return load_config_from_apps_dir(path)
     if os.path.isfile(APPS_ROOT_FRAGMENT):
         return load_config_from_apps_dir(APPS_DIR)
     if os.path.isfile(CONFIG_PATH):
@@ -149,6 +165,59 @@ def github_headers():
             "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
         )
     }
+
+
+def uses_github_pages_manifest(app):
+    return (app.get("resolve_via") or "").strip().lower() == "github_pages_manifest"
+
+
+def _load_vibecoding_manifest(url_or_path, verify=True, apps_config_root=None):
+    """加载 manifest.json（HTTPS URL；本地路径相对 --apps-dir 配置根，见 cfg _apps_config_root）。"""
+    raw = (url_or_path or "").strip()
+    if not raw:
+        raise ValueError("manifest URL 为空")
+    if raw.startswith("http://") or raw.startswith("https://"):
+        response = requests.get(raw, headers=github_headers(), timeout=45, verify=verify)
+        response.raise_for_status()
+        return response.json()
+    path = raw
+    if not os.path.isabs(path):
+        rel = path.lstrip("./\\")
+        if apps_config_root:
+            path = os.path.normpath(os.path.join(apps_config_root, rel))
+        else:
+            path = os.path.normpath(os.path.join(SCRIPT_DIR, rel))
+    with open(path, encoding="utf-8") as f:
+        return json.load(f)
+
+
+def resolve_github_pages_manifest(app, verify, cfg, platform_key):
+    raw = (app.get("manifest_url") or "").strip() or (cfg.get("vibecoding_manifest_url") or "").strip()
+    data = _load_vibecoding_manifest(
+        raw, verify=verify, apps_config_root=cfg.get("_apps_config_root")
+    )
+    mid = (app.get("manifest_item_id") or app["id"]).strip()
+    item = None
+    for it in data.get("items") or []:
+        if (it.get("id") or "").strip() == mid:
+            item = it
+            break
+    if not item:
+        raise RuntimeError("manifest 中找不到 id=%r" % mid)
+    plat = platform_key or detect_platform_key()
+    blk = (item.get("downloads") or {}).get(plat)
+    if not blk or not (blk.get("url") or "").strip():
+        raise RuntimeError("manifest 中 %s / %s 无可用下载地址（参见 manifest notes）" % (mid, plat))
+    url = blk["url"].strip()
+    vtag = (item.get("version_tag") or "").strip()
+    vplain = (item.get("version") or "").strip()
+    if app.get("version_tag_as_on_github") and vtag:
+        version = vtag
+    elif vplain and not str(vplain).startswith("v"):
+        version = "v" + vplain.lstrip("v")
+    else:
+        version = vplain or "v0"
+    return version, url
 
 
 def canonical_releases_url(repo_path, base_url="https://github.com"):
@@ -189,9 +258,11 @@ def release_page_candidates(app, cfg=None):
     return urls
 
 
-def request_release_page(app, verify=True):
+def request_release_page(app, verify=True, cfg=None):
     errors = []
-    for url in release_page_candidates(app, load_config()):
+    if cfg is None:
+        cfg = load_config()
+    for url in release_page_candidates(app, cfg):
         try:
             logger.info("[%s] 正在检查最新版本: %s", app["id"], url)
             response = requests.get(url, headers=github_headers(), timeout=30, verify=verify)
@@ -405,12 +476,16 @@ def link_targets_app(href, text, app):
     return True
 
 
-def check_latest_version(app, debug_html_path, verify=True):
+def check_latest_version(app, debug_html_path, verify=True, cfg=None, platform_key=None):
+    if uses_github_pages_manifest(app):
+        plat = platform_key or detect_platform_key()
+        return resolve_github_pages_manifest(app, verify, cfg, plat)
+
     try:
         if app.get("prefer_api_assets"):
             return fetch_release_via_api(app, verify=verify)
 
-        used_url, page_html = request_release_page(app, verify=verify)
+        used_url, page_html = request_release_page(app, verify=verify, cfg=cfg)
         with open(debug_html_path, "w", encoding="utf-8") as f:
             f.write(page_html)
         logger.info("[%s] 已保存发布页 HTML: %s", app["id"], debug_html_path)
@@ -543,8 +618,12 @@ def check_latest_version(app, debug_html_path, verify=True):
 
 
 def build_fallback_urls(version, app):
+    if uses_github_pages_manifest(app):
+        return []
     version_plain = version.lstrip("v")
-    repo = app["repo_path"].strip("/")
+    repo = (app.get("repo_path") or "").strip("/")
+    if not repo:
+        return []
     names = app.get("download_names") or []
     out = []
     for tpl in (app.get("download_url_templates") or []):
@@ -595,8 +674,17 @@ def download_installer(
     fallback = build_fallback_urls(version, app)
     download_urls = normalize_download_url_list(parsed_url, fallback)
 
-    tpl = app.get("save_name") or (app.get("download_names") or ["setup-{ver}.exe"])[0]
-    expected_name = tpl.replace("{ver}", version_plain)
+    if app.get("use_download_filename") and parsed_url:
+        parsed = urllib.parse.urlparse(parsed_url)
+        bn = urllib.parse.unquote(os.path.basename(parsed.path))
+        if bn and "." in bn:
+            expected_name = bn
+        else:
+            tpl = app.get("save_name") or (app.get("download_names") or ["setup-{ver}.exe"])[0]
+            expected_name = tpl.replace("{ver}", version_plain)
+    else:
+        tpl = app.get("save_name") or (app.get("download_names") or ["setup-{ver}.exe"])[0]
+        expected_name = tpl.replace("{ver}", version_plain)
     if os.path.basename(local_filename) != expected_name:
         local_filename = os.path.join(os.path.dirname(local_filename), expected_name)
 
@@ -795,10 +883,17 @@ def update_one(app, download_root, verify=True, platform_key=None, cfg=None):
     target_dir = app_target_dir(root, app)
 
     logger.info("=== [%s] 开始 === [平台: %s] [下载目录: %s]", aid, plat, target_dir)
-    version, dl_url = check_latest_version(app, debug_html, verify=verify)
+    version, dl_url = check_latest_version(
+        app, debug_html, verify=verify, cfg=cfg, platform_key=plat
+    )
     version_plain = version.lstrip("v")
     tpl_save = app.get("save_name") or (app.get("download_names") or ["setup-{ver}.exe"])[0]
     local_filename = os.path.join(target_dir, tpl_save.replace("{ver}", version_plain))
+    if app.get("use_download_filename") and dl_url:
+        pu = urllib.parse.urlparse(dl_url)
+        base = urllib.parse.unquote(os.path.basename(pu.path))
+        if base and "." in base:
+            local_filename = os.path.join(target_dir, base)
 
     installer_path = download_installer(
         version, dl_url, app, local_filename, verify=verify, platform_key=plat
@@ -835,10 +930,15 @@ def main():
         action="store_true",
         help="跳过 HTTPS 证书校验（镜像站点证书过期/自签时使用，存在中间人风险）",
     )
+    parser.add_argument(
+        "--apps-dir",
+        metavar="DIR",
+        help="替代默认 apps/：指定含 root.json 的目录（如 VibeCodingToolsDown，相对项目根目录）",
+    )
     args = parser.parse_args()
 
     try:
-        cfg = load_config()
+        cfg = load_config(apps_dir=args.apps_dir)
     except Exception as e:
         logger.error("%s", e)
         return 1
@@ -863,7 +963,10 @@ def main():
 
     exit_code = 0
     for app in apps:
-        missing = [k for k in ("id", "releases_url", "repo_path") if k not in app]
+        if uses_github_pages_manifest(app):
+            missing = [k for k in ("id",) if not app.get(k)]
+        else:
+            missing = [k for k in ("id", "releases_url", "repo_path") if k not in app]
         if missing:
             logger.error("应用配置缺少字段 %s: %s", missing, app)
             exit_code = 1
