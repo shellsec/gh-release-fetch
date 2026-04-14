@@ -29,7 +29,7 @@
 - **Windows 一键**：[`VibeCodingToolsDown/run_update_VibeCodingToolsDown.bat`](VibeCodingToolsDown/run_update_VibeCodingToolsDown.bat)（在本目录内执行：装依赖 → 生成 manifest → 调用 `vibe_update.py`）
 - **命令行**：`python auto_update.py --apps-dir VibeCodingToolsDown`；或在 [`VibeCodingToolsDown/`](VibeCodingToolsDown/) 下执行 `python vibe_update.py`（内部仍调用仓库根的 `auto_update.py`，仅固定 `--apps-dir`）
 - **批量关闭/恢复 `enabled`**：[`VibeCodingToolsDown/tools/reset_enabled_json.bat`](VibeCodingToolsDown/tools/reset_enabled_json.bat) / [`apply_enabled_snapshot.bat`](VibeCodingToolsDown/tools/apply_enabled_snapshot.bat)（调用仓库根 `tools/*.py`，快照在 `VibeCodingToolsDown/tools/`，与主 `apps/` 互不覆盖）
-- **GitHub Actions**：[`.github/workflows/vibecodingtoolsdown-pages.yml`](.github/workflows/vibecodingtoolsdown-pages.yml) 定时或手动构建 manifest，**提交回默认分支**（便于 raw 直链拉索引）并推送 **gh-pages**（可选 GitHub Pages）；细节与远程 manifest 写法见 [`VibeCodingToolsDown/README.md`](VibeCodingToolsDown/README.md)
+- **GitHub Actions**：仓库根未内置 workflow 文件（HTTPS PAT 无 `workflow` 权限时无法推送）。将 [`VibeCodingToolsDown/ci/vibecodingtoolsdown-pages.monorepo.example.yml`](VibeCodingToolsDown/ci/vibecodingtoolsdown-pages.monorepo.example.yml) 复制为 `.github/workflows/vibecodingtoolsdown-pages.yml` 后，即可定时/手动构建 manifest、提交默认分支并推 **gh-pages**；细节见 [`VibeCodingToolsDown/README.md`](VibeCodingToolsDown/README.md)
 
 ### 仓库现状与收录范围（约略）
 
