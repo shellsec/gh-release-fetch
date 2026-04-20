@@ -45,7 +45,7 @@
   },
   {
     "id": "trae",
-    "简介": "Trae Linux（manifest 暂无）",
+    "简介": "Trae Linux（manifest：api.trae.ai icube，当前为 x64.tar.gz；版本口径同 Windows）",
     "分类": "VibeCodingToolsDown",
     "enabled": false,
     "resolve_via": "github_pages_manifest",
@@ -59,7 +59,7 @@
   },
   {
     "id": "trae_cn",
-    "简介": "Trae CN Linux（manifest 暂无）",
+    "简介": "Trae CN Linux（api.trae.cn 当前响应无 linux 段，manifest 常为 null）",
     "分类": "VibeCodingToolsDown",
     "enabled": false,
     "resolve_via": "github_pages_manifest",
@@ -72,8 +72,50 @@
     "run_installer": false
   },
   {
+    "id": "trae_solo",
+    "简介": "TRAE SOLO（icube solo 常为 null；见 https://solo.trae.cn/ ）",
+    "分类": "VibeCodingToolsDown",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "trae_solo",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "save_name": "TRAE_SOLO.AppImage",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "qoderwork",
+    "简介": "QoderWork Linux（manifest 常为 null；见 https://qoder.com/zh/qoderwork ）",
+    "分类": "VibeCodingToolsDown",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "qoderwork",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "save_name": "QoderWork.AppImage",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "workbuddy",
+    "简介": "WorkBuddy（官方无 Linux 包，manifest linux 为 null；https://copilot.tencent.com/work/ ）",
+    "分类": "VibeCodingToolsDown",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "workbuddy",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "save_name": "WorkBuddy.AppImage",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
     "id": "qoder",
-    "简介": "Qoder（占位）",
+    "简介": "Qoder IDE（manifest：官网 chunks）",
     "分类": "VibeCodingToolsDown",
     "enabled": false,
     "resolve_via": "github_pages_manifest",
@@ -87,7 +129,7 @@
   },
   {
     "id": "codebuddy",
-    "简介": "CodeBuddy（占位）",
+    "简介": "CodeBuddy 国际（manifest；Linux 包暂无接口）",
     "分类": "VibeCodingToolsDown",
     "enabled": false,
     "resolve_via": "github_pages_manifest",
@@ -101,7 +143,7 @@
   },
   {
     "id": "codebuddy_cn",
-    "简介": "CodeBuddy CN（占位）",
+    "简介": "CodeBuddy 国内（manifest；Linux 包暂无接口）",
     "分类": "VibeCodingToolsDown",
     "enabled": false,
     "resolve_via": "github_pages_manifest",
@@ -115,7 +157,7 @@
   },
   {
     "id": "antigravity",
-    "简介": "Antigravity（占位）",
+    "简介": "Antigravity（manifest：linux tar.gz）",
     "分类": "VibeCodingToolsDown",
     "enabled": false,
     "resolve_via": "github_pages_manifest",

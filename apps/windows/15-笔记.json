@@ -382,5 +382,48 @@
     "process_name": "Rowboat.exe",
     "kill_before_install": true,
     "run_installer": true
+  },
+  {
+    "id": "anytype",
+    "简介": "Anytype（开源本地优先 / P2P 对象笔记；Windows 安装包）",
+    "分类": "笔记",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/anyproto/anytype-ts/releases",
+    "repo_path": "anyproto/anytype-ts",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Anytype.Setup.",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      ".dmg",
+      ".zip",
+      "mac-",
+      "mac.",
+      "AppImage",
+      ".deb",
+      ".rpm",
+      ".tar.gz",
+      ".asc",
+      "blockmap"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Anytype.Setup.{ver}.exe"
+    ],
+    "save_name": "Anytype.Setup.{ver}.exe",
+    "process_name": "Anytype.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "tangent",
+    "简介": "Tangent（开源本地 Markdown PKM；官方安装包见 https://www.tangentnotes.com/Download 。GitHub suchnsuch/Tangent 无 Release 资产，启用自动下载前请改规则或用手动安装）",
+    "分类": "笔记",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/suchnsuch/Tangent/releases",
+    "repo_path": "suchnsuch/Tangent"
   }
 ]

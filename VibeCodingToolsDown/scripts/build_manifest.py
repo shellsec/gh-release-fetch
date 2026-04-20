@@ -14,7 +14,6 @@ import json
 import os
 import re
 import sys
-import copy
 from datetime import datetime, timezone
 from typing import Any
 from urllib.parse import quote
@@ -29,6 +28,14 @@ UA = {
     "Accept": "application/json, text/html;q=0.9,*/*;q=0.8",
 }
 GH_ACCEPT = {"Accept": "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28"}
+
+
+def _github_api_headers() -> dict[str, str]:
+    h = dict(GH_ACCEPT)
+    tok = (os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN") or "").strip()
+    if tok:
+        h["Authorization"] = f"Bearer {tok}"
+    return h
 
 
 def _session():
@@ -55,7 +62,7 @@ def _item(
 def fetch_cursor(s: requests.Session) -> dict[str, Any]:
     r = s.get(
         "https://api.github.com/repos/accesstechnology-mike/cursor-downloads/releases/latest",
-        headers=GH_ACCEPT,
+        headers=_github_api_headers(),
         timeout=40,
     )
     r.raise_for_status()
@@ -91,17 +98,17 @@ def fetch_cursor(s: requests.Session) -> dict[str, Any]:
 
 
 def _vscode_redirect(s: requests.Session, path_suffix: str) -> str:
-    """使用微软官方 update 通道解析最终下载 URL（HEAD 跟随重定向）。"""
+    """使用微软官方 update 通道解析最终下载 URL（GET + stream，避免部分网络/代理对 HEAD 不跟随）。"""
     u = "https://update.code.visualstudio.com/" + path_suffix.lstrip("/")
-    r = s.head(u, allow_redirects=True, timeout=40)
-    r.raise_for_status()
-    return r.url
+    with s.get(u, allow_redirects=True, timeout=40, stream=True) as r:
+        r.raise_for_status()
+        return r.url
 
 
 def fetch_vscode(s: requests.Session) -> dict[str, Any]:
     r = s.get(
         "https://api.github.com/repos/microsoft/vscode/releases/latest",
-        headers=GH_ACCEPT,
+        headers=_github_api_headers(),
         timeout=40,
     )
     r.raise_for_status()
@@ -120,14 +127,32 @@ def fetch_vscode(s: requests.Session) -> dict[str, Any]:
         "vscode",
         ver,
         downloads,
-        notes="版本 tag 来自 GitHub API；安装包 URL 来自 update.code.visualstudio.com 重定向（微软官方）。",
+        notes="版本 tag 来自 GitHub API；安装包 URL 来自 update.code.visualstudio.com GET 重定向链末端（微软官方 CDN）。",
     )
+
+
+def _collect_trae_install_urls(s: requests.Session, page_urls: tuple[str, ...]) -> list[str]:
+    """从官网 HTML 中提取 Trae 稳定包直链（历史页为 lf-trae.toscdn.com；新 CDN 为 lf-cdn.trae.*）。"""
+    pat = re.compile(
+        r"https://lf-(?:trae\.toscdn\.com|cdn\.trae\.(?:ai|com\.cn))[^\s\"'<>)]*?\.(?:exe|dmg|zip|AppImage)\b",
+        re.I,
+    )
+    seen: set[str] = set()
+    for page in page_urls:
+        try:
+            r = s.get(page, timeout=40)
+            r.raise_for_status()
+            for u in pat.findall(r.text):
+                seen.add(u.split("?", 1)[0])
+        except Exception:
+            continue
+    return sorted(seen)
 
 
 def fetch_vscodium(s: requests.Session) -> dict[str, Any]:
     r = s.get(
         "https://api.github.com/repos/VSCodium/vscodium/releases/latest",
-        headers=GH_ACCEPT,
+        headers=_github_api_headers(),
         timeout=40,
     )
     r.raise_for_status()
@@ -148,56 +173,242 @@ def fetch_vscodium(s: requests.Session) -> dict[str, Any]:
     return _item("vscodium", ver, {"windows": win, "darwin": mac, "linux": lin}, notes="GitHub API latest assets。")
 
 
-def fetch_trae(s: requests.Session) -> dict[str, Any]:
-    r = s.get("https://traeide.com/download", timeout=40)
-    r.raise_for_status()
-    urls = sorted(set(re.findall(r"https://lf-trae\.toscdn\.com[^\s\"'<>]+", r.text)))
+def _trae_item_from_urls(item_id: str, urls: list[str], notes: str) -> dict[str, Any]:
     if not urls:
-        raise RuntimeError("traeide.com/download 未找到 lf-trae 直链")
-    ver = "unknown"
-    m = re.search(r"/releases/stable/([^/]+)/", urls[0])
-    if m:
-        ver = m.group(1)
+        raise RuntimeError("未解析到 Trae 安装包直链")
+    # 多页合并时各平台 stable 段可能不一致，取 URL 中出现的最大稳定段，避免 win/mac 错配旧包。
+    segs = [m.group(1) for u in urls for m in [re.search(r"/releases/stable/([^/]+)/", u)] if m]
 
-    def pick(sub):
-        for u in urls:
-            if sub in u:
-                return {"url": u, "filename": os.path.basename(u.split("?", 1)[0])}
+    def _seg_key(seg: str) -> tuple[int, ...]:
+        parts = []
+        for p in seg.split("."):
+            if p.isdigit():
+                parts.append(int(p))
+            else:
+                parts.append(0)
+        return tuple(parts)
+
+    ver = max(segs, key=_seg_key) if segs else "unknown"
+
+    def pick(sub: str):
+        cand = [u for u in urls if sub in u and f"/releases/stable/{ver}/" in u]
+        pool = cand if cand else [u for u in urls if sub in u]
+        for u in pool:
+            return {"url": u, "filename": os.path.basename(u.split("?", 1)[0])}
         return None
 
     win = pick("Trae-Setup-x64") or pick("win32")
     mac = pick("darwin-universal") or pick("darwin-arm64") or pick("darwin-x64")
+    lin = pick("linux-x64") or pick("linux")
     return _item(
-        "trae",
+        item_id,
         ver,
-        {
-            "windows": win,
-            "darwin": mac,
-            "linux": None,
-        },
-        notes="来自 traeide.com/download 静态页；国内 trae.cn 为 SPA，版本以字节 CDN 为准。",
+        {"windows": win, "darwin": mac, "linux": lin},
+        notes=notes,
+    )
+
+
+def _trae_icube_pick_region(entries: list[Any], region_order: tuple[str, ...]) -> dict[str, Any] | None:
+    if not isinstance(entries, list):
+        return None
+    by_reg: dict[str, dict[str, Any]] = {}
+    for e in entries:
+        if not isinstance(e, dict):
+            continue
+        reg = (e.get("region") or "").strip()
+        if reg:
+            by_reg[reg] = e
+    for reg in region_order:
+        if reg in by_reg:
+            return by_reg[reg]
+    for e in entries:
+        if isinstance(e, dict):
+            return e
+    return None
+
+
+def _fetch_trae_from_icube_api(
+    s: requests.Session,
+    *,
+    item_id: str,
+    api_url: str,
+    region_order: tuple[str, ...],
+    notes: str,
+    data_key: str = "manifest",
+) -> dict[str, Any] | None:
+    """官方 icube native 接口：data.manifest 为 Trae IDE；data.solo 为 TRAE_SOLO（与 https://solo.trae.cn/ 对应）。"""
+    try:
+        r = s.get(api_url, timeout=40)
+        r.raise_for_status()
+        j = r.json()
+    except Exception:
+        return None
+    if not isinstance(j, dict) or not j.get("success"):
+        return None
+    data = j.get("data")
+    if not isinstance(data, dict):
+        return None
+    branch = data.get(data_key)
+    if not isinstance(branch, dict):
+        return None
+
+    win_blk = branch.get("win32")
+    dar_blk = branch.get("darwin")
+    lin_blk = branch.get("linux")
+    ver = "unknown"
+    if isinstance(win_blk, dict) and (win_blk.get("version") or "").strip():
+        ver = str(win_blk["version"]).strip()
+    elif isinstance(dar_blk, dict) and (dar_blk.get("version") or "").strip():
+        ver = str(dar_blk["version"]).strip()
+    elif isinstance(lin_blk, dict) and (lin_blk.get("version") or "").strip():
+        ver = str(lin_blk["version"]).strip()
+
+    win = mac = lin = None
+    if isinstance(win_blk, dict):
+        ent = _trae_icube_pick_region(win_blk.get("download") or [], region_order)
+        if ent:
+            u = ent.get("x64") or ent.get("x86")
+            if isinstance(u, str) and u.startswith("http"):
+                win = {"url": u.split("?", 1)[0], "filename": os.path.basename(u.split("?", 1)[0])}
+    if isinstance(dar_blk, dict):
+        ent = _trae_icube_pick_region(dar_blk.get("download") or [], region_order)
+        if ent:
+            u = ent.get("apple") or ent.get("arm64") or ent.get("intel") or ent.get("x64")
+            if isinstance(u, str) and u.startswith("http"):
+                mac = {"url": u.split("?", 1)[0], "filename": os.path.basename(u.split("?", 1)[0])}
+    if isinstance(lin_blk, dict):
+        ent = _trae_icube_pick_region(lin_blk.get("download") or [], region_order)
+        if ent:
+            u = (
+                ent.get("x64.tar.gz")
+                or ent.get("x64.tar")
+                or ent.get("amd64.tar.gz")
+                or ent.get("x64.AppImage")
+            )
+            if isinstance(u, str) and u.startswith("http"):
+                lin = {"url": u.split("?", 1)[0], "filename": os.path.basename(u.split("?", 1)[0])}
+
+    if not win and not mac and not lin:
+        return None
+    return _item(item_id, ver, {"windows": win, "darwin": mac, "linux": lin}, notes=notes)
+
+
+def fetch_trae(s: requests.Session) -> dict[str, Any]:
+    item = _fetch_trae_from_icube_api(
+        s,
+        item_id="trae",
+        api_url="https://api.trae.ai/icube/api/v1/native/version/trae/latest",
+        region_order=("va", "sg", "usttp", "cn"),
+        data_key="manifest",
+        notes=(
+            "优先 api.trae.ai/icube/.../trae/latest（manifest）；下载链优先 region=va，失败则 sg/usttp/cn。"
+            " version 为接口返回的稳定构建号（与 URL 路径一致）；应用内「关于」若显示 3.x 等为另一口径，以本构建号为准。"
+        ),
+    )
+    if item is not None:
+        return item
+    pages = (
+        "https://www.trae.ai/download",
+        "https://traeide.com/download",
+    )
+    urls = _collect_trae_install_urls(s, pages)
+    return _trae_item_from_urls(
+        "trae",
+        urls,
+        notes="API 不可用时回退：扫描下载页 HTML 中的 lf-trae / lf-cdn 直链（多源合并，按 stable 段取较新）。",
     )
 
 
 def fetch_trae_cn(s: requests.Session) -> dict[str, Any]:
-    base = copy.deepcopy(fetch_trae(s))
-    base["id"] = "trae_cn"
-    base["notes"] = (
-        "与 Trae 同源 CDN（traeide 文档页解析）。若需严格国内渠道请以 www.trae.cn 应用内/商店为准。"
+    item = _fetch_trae_from_icube_api(
+        s,
+        item_id="trae_cn",
+        api_url="https://api.trae.cn/icube/api/v1/native/version/trae/latest",
+        region_order=("cn", "va", "sg", "usttp"),
+        data_key="manifest",
+        notes=(
+            "优先 api.trae.cn/icube/.../trae/latest；下载链优先 region=cn。"
+            " version 为接口稳定构建号；与海外 manifest 分支可能不同步。"
+        ),
     )
-    return base
+    if item is not None:
+        return item
+    pages = (
+        "https://www.trae.cn/ide/download",
+        "https://www.trae.ai/download",
+        "https://traeide.com/download",
+    )
+    urls = _collect_trae_install_urls(s, pages)
+    return _trae_item_from_urls(
+        "trae_cn",
+        urls,
+        notes="API 不可用时回退：扫描 trae.cn / trae.ai / traeide 下载页 HTML 直链。",
+    )
+
+
+def fetch_trae_solo(s: requests.Session) -> dict[str, Any]:
+    """TRAE_SOLO：与 https://solo.trae.cn/ 对应；icube 的 data.solo 当前多为 darwin dmg，Windows 安装包见官网。"""
+    item = _fetch_trae_from_icube_api(
+        s,
+        item_id="trae_solo",
+        api_url="https://api.trae.ai/icube/api/v1/native/version/trae/latest",
+        region_order=("va", "sg", "usttp", "cn"),
+        data_key="solo",
+        notes=(
+            "api.trae.ai icube latest 的 data.solo（与 TRAE SOLO 安装包一致）。"
+            " 官网：https://solo.trae.cn/ 、https://www.trae.cn/solo 。"
+            " 当前接口多为 macOS dmg；windows/linux 常为 null 时请从官网获取。"
+        ),
+    )
+    if item is not None:
+        return item
+    return _item(
+        "trae_solo",
+        "0",
+        {"windows": None, "darwin": None, "linux": None},
+        notes="未能从 icube 解析 TRAE_SOLO；请打开 https://solo.trae.cn/ 或 https://www.trae.cn/solo 手动下载。",
+    )
 
 
 def fetch_antigravity(s: requests.Session) -> dict[str, Any]:
-    """
-    Antigravity 下载页为前端渲染，服务端抓取 HTML 通常不含直链。
-    此处返回占位；可在后续接入官方 JSON 或 Playwright 再填充。
-    """
+    """从 antigravity.google/download 引用 main-*.js，再在 bundle 内提取 edgedl.me.gvt1.com 直链。"""
+    r = s.get("https://antigravity.google/download", timeout=40)
+    r.raise_for_status()
+    html = r.text
+    m = re.search(r'src="(main-[A-Z0-9]+\.js)"', html)
+    if not m:
+        raise RuntimeError("Antigravity 下载页未找到 main-*.js")
+    bundle_url = "https://antigravity.google/" + m.group(1)
+    br = s.get(bundle_url, timeout=60)
+    br.raise_for_status()
+    body = br.text
+    pat = re.compile(
+        r"https://edgedl\.me\.gvt1\.com/edgedl/release2/[a-z0-9]+/antigravity/stable/"
+        r"\d+\.\d+\.\d+-\d+/[^\"'\\\s<>)]+\.(?:exe|dmg|tar\.gz)\b",
+        re.I,
+    )
+    urls = sorted(set(pat.findall(body)))
+    if not urls:
+        raise RuntimeError("Antigravity main bundle 中未匹配到 edgedl 安装包 URL")
+
+    def pick(pred):
+        for u in urls:
+            if pred(u):
+                return {"url": u, "filename": os.path.basename(u.split("?", 1)[0])}
+        return None
+
+    win = pick(lambda u: "windows-x64" in u and u.lower().endswith(".exe"))
+    mac = pick(lambda u: "darwin-arm" in u and u.lower().endswith(".dmg")) or pick(
+        lambda u: "darwin-x64" in u and u.lower().endswith(".dmg")
+    )
+    lin = pick(lambda u: "linux-x64" in u and u.lower().endswith(".tar.gz"))
+    ver_m = re.search(r"/stable/(\d+\.\d+\.\d+)-\d+/", urls[0])
+    ver = ver_m.group(1) if ver_m else "unknown"
     return _item(
         "antigravity",
-        "0",
-        {"windows": None, "darwin": None, "linux": None},
-        notes="请从 https://antigravity.google/download 手动下载；自动化需可执行 JS 的环境。",
+        ver,
+        {"windows": win, "darwin": mac, "linux": lin},
+        notes=f"自 {bundle_url} 解析 Google CDN（edgedl.me.gvt1.com）。",
     )
 
 
@@ -240,49 +451,107 @@ def fetch_kiro(s: requests.Session) -> dict[str, Any]:
     )
 
 
+def _qoder_alicdn_version_sort_key(v: str) -> tuple[int, ...]:
+    out: list[int] = []
+    for p in v.split("."):
+        if p.isdigit():
+            out.append(int(p))
+        else:
+            nums = "".join(c for c in p if c.isdigit())
+            out.append(int(nums) if nums else 0)
+    return tuple(out)
+
+
+def _qoder_install_urls_from_chunks(s: requests.Session, html: str) -> tuple[str, list[str]]:
+    """从 qoder.com 下载页 HTML 解析 alicdn 版本号并扫描 _next/static/chunks 下的 JS 直链。"""
+    vers = sorted(
+        set(re.findall(r"g\.alicdn\.com/Qoder/qoder-web/([\d.]+)/", html)),
+        key=_qoder_alicdn_version_sort_key,
+    )
+    if not vers:
+        return "unknown", []
+    ver = vers[-1]
+    base = f"https://g.alicdn.com/Qoder/qoder-web/{ver}/"
+    js_paths = sorted(
+        set(
+            re.findall(
+                rf"https://g\.alicdn\.com/Qoder/qoder-web/{re.escape(ver)}/_next/static/chunks/[^\"']+\.js",
+                html,
+            )
+        )
+    )
+    if not js_paths:
+        # 协议相对 URL
+        rel = sorted(
+            set(
+                re.findall(
+                    rf"//g\.alicdn\.com/Qoder/qoder-web/{re.escape(ver)}/_next/static/chunks/[^\"']+\.js",
+                    html,
+                )
+            )
+        )
+        js_paths = ["https:" + u if u.startswith("//") else u for u in rel]
+
+    inst_pat = re.compile(
+        r"https://[a-zA-Z0-9./_?=&%-]{12,500}\.(?:exe|dmg|deb|rpm|AppImage)\b",
+        re.I,
+    )
+    found: set[str] = set()
+    for ju in js_paths[:45]:
+        try:
+            jr = s.get(ju, timeout=40)
+            jr.raise_for_status()
+            body = jr.text.replace("\\/", "/")
+            for u in inst_pat.findall(body):
+                if "${" in u or "{" in u:
+                    continue
+                found.add(u.split("?", 1)[0])
+        except Exception:
+            continue
+    return ver, sorted(found)
+
+
+def _pick_qoder_installers(hits: list[str]) -> tuple[str | None, str | None, str | None]:
+    """优先选 Qoder IDE 包，避免误选 QoderWork 独立应用（若仅有 Work 包则回退）。"""
+
+    def is_work(u: str) -> bool:
+        x = u.lower()
+        return "qoderwork" in x or "qoder-work" in x or "qoder_work" in x
+
+    win = next((h for h in hits if h.lower().endswith(".exe") and not is_work(h)), None) or next(
+        (h for h in hits if h.lower().endswith(".exe")), None
+    )
+    mac = next((h for h in hits if h.lower().endswith(".dmg") and not is_work(h)), None) or next(
+        (h for h in hits if h.lower().endswith(".dmg")), None
+    )
+    lin = next((h for h in hits if h.lower().endswith((".deb", ".rpm", ".appimage"))), None)
+    return win, mac, lin
+
+
+def _pick_qoderwork_installers(hits: list[str]) -> tuple[str | None, str | None, str | None]:
+    """仅选 QoderWork 独立桌面包（与 Qoder IDE 区分）。"""
+
+    def is_work(u: str) -> bool:
+        x = u.lower()
+        return "qoderwork" in x or "qoder-work" in x or "qoder_work" in x
+
+    win = next((h for h in hits if h.lower().endswith(".exe") and is_work(h)), None)
+    mac = next((h for h in hits if h.lower().endswith(".dmg") and is_work(h)), None)
+    lin = next((h for h in hits if is_work(h) and h.lower().endswith((".deb", ".rpm", ".appimage"))), None)
+    return win, mac, lin
+
+
 def fetch_qoder(s: requests.Session) -> dict[str, Any]:
-    """尽力从 Next 分片 JS 中提取直链；失败则返回占位版本。"""
-    notes = []
+    """新版官网为 Next.js：扫描 alicdn chunks；仍兼容旧版 download/page-*.js 分片。"""
+    notes: list[str] = []
     try:
         for page in ("https://qoder.com/zh/download", "https://qoder.com/en/download"):
             r = s.get(page, timeout=40)
             r.raise_for_status()
             html = r.text
-            chunks = re.findall(
-                r"https://g\.alicdn\.com/Qoder/qoder-web/[^\"']+/download/page-[a-z0-9]+\.js",
-                html,
-            )
-            if not chunks:
-                chunks = re.findall(
-                    r"https://g\.alicdn\.com/Qoder/qoder-web/[^\"']+/%5Blang%5D/download/page-[a-z0-9]+\.js",
-                    html,
-                )
-            if not chunks:
-                continue
-            ju = chunks[0].replace("\\u002F", "/")
-            jr = s.get(ju, timeout=40)
-            jr.raise_for_status()
-            body = jr.text
-            hits = sorted(
-                set(
-                    re.findall(
-                        r"https://[a-zA-Z0-9./_?=&%-]{12,400}\.(?:exe|dmg|deb|rpm|AppImage)",
-                        body,
-                        flags=re.I,
-                    )
-                )
-            )
-            win = next((h for h in hits if h.lower().endswith(".exe")), None)
-            mac = next((h for h in hits if h.lower().endswith(".dmg")), None)
-            lin = next(
-                (h for h in hits if h.lower().endswith((".deb", ".rpm", ".appimage"))),
-                None,
-            )
+            ver, hits = _qoder_install_urls_from_chunks(s, html)
+            win, mac, lin = _pick_qoder_installers(hits)
             if win or mac or lin:
-                ver = "unknown"
-                vm = re.search(r"Qoder[-_]?(\d+\.\d+\.\d+)", body, re.I)
-                if vm:
-                    ver = vm.group(1)
                 return _item(
                     "qoder",
                     ver,
@@ -297,34 +566,226 @@ def fetch_qoder(s: requests.Session) -> dict[str, Any]:
                         if lin
                         else None,
                     },
-                    notes=f"自 {page} 关联的 CDN JS 分片启发式解析。",
+                    notes=f"自 {page} 的 g.alicdn.com Qoder Next chunks 解析。",
                 )
+            # 旧版 page 分片
+            chunks = re.findall(
+                r"https://g\.alicdn\.com/Qoder/qoder-web/[^\"']+/download/page-[a-z0-9]+\.js",
+                html,
+            ) or re.findall(
+                r"https://g\.alicdn\.com/Qoder/qoder-web/[^\"']+/%5Blang%5D/download/page-[a-z0-9]+\.js",
+                html,
+            )
+            if chunks:
+                ju = chunks[0].replace("\\u002F", "/")
+                jr = s.get(ju, timeout=40)
+                jr.raise_for_status()
+                body = jr.text.replace("\\/", "/")
+                hits2 = sorted(
+                    set(
+                        re.findall(
+                            r"https://[a-zA-Z0-9./_?=&%-]{12,400}\.(?:exe|dmg|deb|rpm|AppImage)\b",
+                            body,
+                            flags=re.I,
+                        )
+                    )
+                )
+                win, mac, lin = _pick_qoder_installers(hits2)
+                if win or mac or lin:
+                    vm = re.search(r"Qoder[-_]?(\d+\.\d+\.\d+)", body, re.I)
+                    ver2 = vm.group(1) if vm else ver
+                    return _item(
+                        "qoder",
+                        ver2,
+                        {
+                            "windows": {"url": win, "filename": os.path.basename(win.split("?", 1)[0])}
+                            if win
+                            else None,
+                            "darwin": {"url": mac, "filename": os.path.basename(mac.split("?", 1)[0])}
+                            if mac
+                            else None,
+                            "linux": {"url": lin, "filename": os.path.basename(lin.split("?", 1)[0])}
+                            if lin
+                            else None,
+                        },
+                        notes=f"自 {page} 旧版 download/page JS 解析。",
+                    )
     except Exception as e:
-        notes.append(f"qoder 解析失败: {e}")
+        notes.append(str(e))
     return _item(
         "qoder",
         "0",
         {"windows": None, "darwin": None, "linux": None},
-        notes="; ".join(notes) or "未能从官网静态资源解析 Qoder 安装包，请从 https://qoder.com/download 手动下载。",
+        notes="; ".join(notes) or "未能解析 Qoder 安装包，请从 https://qoder.com/download 手动下载。",
     )
 
 
-def fetch_codebuddy(s: requests.Session) -> dict[str, Any]:
+def fetch_qoderwork(s: requests.Session) -> dict[str, Any]:
+    """QoderWork 桌面应用：官网 https://qoder.com/zh/qoderwork ；与 Qoder IDE 分包名不同（qoder-work / QoderWork）。"""
+    notes: list[str] = []
+    pages = (
+        "https://qoder.com/zh/qoderwork",
+        "https://qoder.com/en/qoderwork",
+        "https://qoder.com/zh/download",
+        "https://qoder.com/en/download",
+    )
+    try:
+        for page in pages:
+            r = s.get(page, timeout=40)
+            if r.status_code == 404:
+                continue
+            r.raise_for_status()
+            html = r.text
+            ver, hits = _qoder_install_urls_from_chunks(s, html)
+            win, mac, lin = _pick_qoderwork_installers(hits)
+            if win or mac or lin:
+                return _item(
+                    "qoderwork",
+                    ver,
+                    {
+                        "windows": {"url": win, "filename": os.path.basename(win.split("?", 1)[0])}
+                        if win
+                        else None,
+                        "darwin": {"url": mac, "filename": os.path.basename(mac.split("?", 1)[0])}
+                        if mac
+                        else None,
+                        "linux": {"url": lin, "filename": os.path.basename(lin.split("?", 1)[0])}
+                        if lin
+                        else None,
+                    },
+                    notes=(
+                        f"自 {page} 的 g.alicdn.com Qoder Next chunks 解析（仅 QoderWork 包名）。"
+                        " 产品页 https://qoder.com/zh/qoderwork ；亦可能出现在 qoder.com/*/download 与 IDE 同源 chunks。"
+                    ),
+                )
+    except Exception as e:
+        notes.append(str(e))
     return _item(
-        "codebuddy",
+        "qoderwork",
         "0",
         {"windows": None, "darwin": None, "linux": None},
-        notes="国际版 CodeBuddy 下载多为动态加载，请从 https://www.codebuddy.ai/ 或文档安装页获取。",
+        notes="; ".join(notes)
+        or "未能解析 QoderWork 安装包，请从 https://qoder.com/zh/qoderwork 手动下载。",
+    )
+
+
+def _codebuddy_from_update_api(
+    s: requests.Session,
+    api_origin: str,
+    referer: str,
+) -> tuple[str, dict[str, dict[str, str] | None]]:
+    """调用 CodeBuddy 官方 /v2/update?platform=ide-* 返回各端安装包 URL。"""
+    headers = {"Referer": referer, "Accept": "application/json"}
+    base = api_origin.rstrip("/")
+
+    def one(platform: str) -> dict[str, Any]:
+        r = s.get(
+            f"{base}/v2/update",
+            params={"platform": platform},
+            headers=headers,
+            timeout=40,
+        )
+        r.raise_for_status()
+        return r.json()
+
+    win_j = one("ide-win32-x64-user")
+    ver = str(win_j.get("productVersion") or win_j.get("version") or "unknown")
+    win_url = (win_j.get("url") or "").strip()
+    mac_arm = (one("ide-darwin-arm64").get("url") or "").strip()
+    mac_x64 = (one("ide-darwin-x64").get("url") or "").strip()
+    mac_url = mac_arm or mac_x64
+    downloads: dict[str, dict[str, str] | None] = {
+        "windows": {"url": win_url, "filename": os.path.basename(win_url.split("?", 1)[0])}
+        if win_url
+        else None,
+        "darwin": {"url": mac_url, "filename": os.path.basename(mac_url.split("?", 1)[0])}
+        if mac_url
+        else None,
+        "linux": None,
+    }
+    return ver, downloads
+
+
+def _workbuddy_from_update_api(
+    s: requests.Session,
+) -> tuple[str, dict[str, dict[str, str] | None]]:
+    """WorkBuddy：https://copilot.tencent.com/work/ 对应 copilot.tencent.com/v2/update?platform=workbuddy-* 。"""
+    headers = {"Referer": "https://copilot.tencent.com/work/", "Accept": "application/json"}
+    base = "https://copilot.tencent.com"
+
+    def one(platform: str) -> dict[str, Any]:
+        r = s.get(
+            f"{base}/v2/update",
+            params={"platform": platform},
+            headers=headers,
+            timeout=40,
+        )
+        r.raise_for_status()
+        return r.json()
+
+    win_j = one("workbuddy-win32-x64-user")
+    ver = str(win_j.get("productVersion") or win_j.get("version") or "unknown")
+    win_url = (win_j.get("url") or "").strip()
+    mac_arm = (one("workbuddy-darwin-arm64").get("url") or "").strip()
+    mac_x64 = (one("workbuddy-darwin-x64").get("url") or "").strip()
+    mac_url = mac_arm or mac_x64
+    downloads: dict[str, dict[str, str] | None] = {
+        "windows": {"url": win_url, "filename": os.path.basename(win_url.split("?", 1)[0])}
+        if win_url
+        else None,
+        "darwin": {"url": mac_url, "filename": os.path.basename(mac_url.split("?", 1)[0])}
+        if mac_url
+        else None,
+        "linux": None,
+    }
+    return ver, downloads
+
+
+def fetch_codebuddy(s: requests.Session) -> dict[str, Any]:
+    ver, dl = _codebuddy_from_update_api(
+        s, "https://www.codebuddy.ai", "https://www.codebuddy.ai/ide"
+    )
+    return _item(
+        "codebuddy",
+        ver,
+        dl,
+        notes="官方 https://www.codebuddy.ai/v2/update?platform=ide-win32-x64-user / ide-darwin-arm64 等。",
     )
 
 
 def fetch_codebuddy_cn(s: requests.Session) -> dict[str, Any]:
+    ver, dl = _codebuddy_from_update_api(
+        s, "https://copilot.tencent.com", "https://copilot.tencent.com/ide/"
+    )
     return _item(
         "codebuddy_cn",
-        "0",
-        {"windows": None, "darwin": None, "linux": None},
-        notes="国内版请从 https://copilot.tencent.com/ide/ 选择对应芯片安装包（页面为 SPA，未在此脚本硬编码直链）。",
+        ver,
+        dl,
+        notes="官方 https://copilot.tencent.com/v2/update（国内 IDE 下载接口）。",
     )
+
+
+def fetch_workbuddy(s: requests.Session) -> dict[str, Any]:
+    """WorkBuddy 办公智能体：官网 https://copilot.tencent.com/work/ ，安装包走 v2/update workbuddy-* 通道。"""
+    try:
+        ver, dl = _workbuddy_from_update_api(s)
+        return _item(
+            "workbuddy",
+            ver,
+            dl,
+            notes=(
+                "与 https://copilot.tencent.com/work/ 一致：GET copilot.tencent.com/v2/update "
+                "?platform=workbuddy-win32-x64-user | workbuddy-darwin-arm64 | workbuddy-darwin-x64 ，"
+                " CDN 为 download.codebuddy.cn/workbuddy/… ；mac 当前分发 zip；无 Linux 平台 id。"
+            ),
+        )
+    except Exception as e:
+        return _item(
+            "workbuddy",
+            "0",
+            {"windows": None, "darwin": None, "linux": None},
+            notes=f"解析失败 ({e})；请从 https://copilot.tencent.com/work/ 手动下载。",
+        )
 
 
 def main():
@@ -351,9 +812,12 @@ def main():
         fetch_vscodium,
         fetch_trae,
         fetch_trae_cn,
+        fetch_trae_solo,
         fetch_qoder,
+        fetch_qoderwork,
         fetch_codebuddy,
         fetch_codebuddy_cn,
+        fetch_workbuddy,
         fetch_antigravity,
         fetch_kiro,
     ]

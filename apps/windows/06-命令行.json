@@ -528,5 +528,100 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "atuin",
+    "简介": "Atuin（Shell 历史同步/检索，跨会话搜索极快）",
+    "分类": "命令行",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/atuinsh/atuin/releases",
+    "repo_path": "atuinsh/atuin",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "atuin-x86_64-pc-windows-msvc.zip"
+    ],
+    "href_exclude_substrings": [
+      "atuin-server",
+      "aarch64",
+      ".sha256",
+      "darwin",
+      "linux"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "atuin-x86_64-pc-windows-msvc.zip"
+    ],
+    "save_name": "atuin-x86_64-pc-windows-msvc.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "yazi",
+    "简介": "Yazi（终端文件管理器，异步预览，Rust 实现）",
+    "分类": "命令行",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/sxyazi/yazi/releases",
+    "repo_path": "sxyazi/yazi",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "yazi-x86_64-pc-windows-msvc.zip"
+    ],
+    "href_exclude_substrings": [
+      "aarch64",
+      "darwin",
+      "linux"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "yazi-x86_64-pc-windows-msvc.zip"
+    ],
+    "save_name": "yazi-x86_64-pc-windows-msvc.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "zellij",
+    "简介": "Zellij（终端多窗格/会话与工作区，tmux 的现代替代之一）",
+    "分类": "命令行",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/zellij-org/zellij/releases",
+    "repo_path": "zellij-org/zellij",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "zellij-x86_64-pc-windows-msvc.zip"
+    ],
+    "href_exclude_substrings": [
+      "no-web",
+      "aarch64",
+      ".msi",
+      ".sha256",
+      "darwin",
+      "linux"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "zellij-x86_64-pc-windows-msvc.zip"
+    ],
+    "save_name": "zellij-x86_64-pc-windows-msvc.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

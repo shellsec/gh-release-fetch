@@ -1,19 +1,8 @@
 {
-  "generated_at": "2026-04-13T07:19:43Z",
+  "generated_at": "2026-04-20T07:43:30Z",
   "root": "E:/GITHUB/已经发布/gh-release-fetch",
-  "count": 1,
-  "items": [
-    {
-      "path": "apps/windows/10-安全.json",
-      "id": "zen_desktop",
-      "分类": "安全",
-      "简介": "Zen 系统级广告拦截与隐私守护（Windows x64 安装包）"
-    }
-  ],
-  "by_category": {
-    "安全": [
-      "zen_desktop"
-    ]
-  },
+  "count": 0,
+  "items": [],
+  "by_category": {},
   "dry_run": false
 }

@@ -48,12 +48,6 @@
     "repo_path": "nushell/nushell"
   },
   {
-    "id": "zellij",
-    "enabled": false,
-    "releases_url": "https://bgithub.xyz/zellij-org/zellij/releases",
-    "repo_path": "zellij-org/zellij"
-  },
-  {
     "id": "fish_shell",
     "enabled": false,
     "releases_url": "https://bgithub.xyz/fish-shell/fish-shell/releases",
@@ -70,12 +64,6 @@
     "enabled": false,
     "releases_url": "https://bgithub.xyz/JanDeDobbeleer/oh-my-posh/releases",
     "repo_path": "JanDeDobbeleer/oh-my-posh"
-  },
-  {
-    "id": "atuin",
-    "enabled": false,
-    "releases_url": "https://bgithub.xyz/atuinsh/atuin/releases",
-    "repo_path": "atuinsh/atuin"
   },
   {
     "id": "pastel",
@@ -174,12 +162,6 @@
     "repo_path": "jellyfin/jellyfin"
   },
   {
-    "id": "anytype",
-    "enabled": false,
-    "releases_url": "https://bgithub.xyz/anyproto/anytype-ts/releases",
-    "repo_path": "anyproto/anytype-ts"
-  },
-  {
     "id": "affine",
     "enabled": false,
     "releases_url": "https://bgithub.xyz/toeverything/AFFiNE/releases",
@@ -190,12 +172,6 @@
     "enabled": false,
     "releases_url": "https://bgithub.xyz/flxzt/rnote/releases",
     "repo_path": "flxzt/rnote"
-  },
-  {
-    "id": "yazi",
-    "enabled": false,
-    "releases_url": "https://bgithub.xyz/sxyazi/yazi/releases",
-    "repo_path": "sxyazi/yazi"
   },
   {
     "id": "btop",

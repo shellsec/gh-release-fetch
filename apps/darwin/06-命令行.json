@@ -88,5 +88,23 @@
     "enabled": false,
     "releases_url": "https://bgithub.xyz/ajeetdsouza/zoxide/releases",
     "repo_path": "ajeetdsouza/zoxide"
+  },
+  {
+    "id": "atuin",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/atuinsh/atuin/releases",
+    "repo_path": "atuinsh/atuin"
+  },
+  {
+    "id": "yazi",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/sxyazi/yazi/releases",
+    "repo_path": "sxyazi/yazi"
+  },
+  {
+    "id": "zellij",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/zellij-org/zellij/releases",
+    "repo_path": "zellij-org/zellij"
   }
 ]

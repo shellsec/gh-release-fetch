@@ -52,5 +52,17 @@
     "enabled": false,
     "releases_url": "https://bgithub.xyz/rowboatlabs/rowboat/releases",
     "repo_path": "rowboatlabs/rowboat"
+  },
+  {
+    "id": "anytype",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/anyproto/anytype-ts/releases",
+    "repo_path": "anyproto/anytype-ts"
+  },
+  {
+    "id": "tangent",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/suchnsuch/Tangent/releases",
+    "repo_path": "suchnsuch/Tangent"
   }
 ]

@@ -31,9 +31,13 @@
 - **批量关闭/恢复 `enabled`**：[`VibeCodingToolsDown/tools/reset_enabled_json.bat`](VibeCodingToolsDown/tools/reset_enabled_json.bat) / [`apply_enabled_snapshot.bat`](VibeCodingToolsDown/tools/apply_enabled_snapshot.bat)（调用仓库根 `tools/*.py`，快照在 `VibeCodingToolsDown/tools/`，与主 `apps/` 互不覆盖）
 - **GitHub Actions**：仓库根未内置 workflow 文件（HTTPS PAT 无 `workflow` 权限时无法推送）。将 [`VibeCodingToolsDown/ci/vibecodingtoolsdown-pages.monorepo.example.yml`](VibeCodingToolsDown/ci/vibecodingtoolsdown-pages.monorepo.example.yml) 复制为 `.github/workflows/vibecodingtoolsdown-pages.yml` 后，即可定时/手动构建 manifest、提交默认分支并推 **gh-pages**；细节见 [`VibeCodingToolsDown/README.md`](VibeCodingToolsDown/README.md)
 
+### GiteeExploreHot（可选 Gitee 分类 + 下载）
+
+与 [`apps/`](apps/)（面向 **GitHub Releases**）**独立**：[`GiteeExploreHot/catalog/`](GiteeExploreHot/catalog/) 按主题维护 `owner/repo`；[`GiteeExploreHot/scripts/fetch_explore_hot.py`](GiteeExploreHot/scripts/fetch_explore_hot.py) 生成 **`data/gitee_downloads.json`**（从 Gitee `releases/latest` 解析附件并归类 **windows / darwin / linux**），[`GiteeExploreHot/scripts/gitee_download.py`](GiteeExploreHot/scripts/gitee_download.py) 可按平台拉取到本包 `downloads/`。**Windows 一键**：[`GiteeExploreHot/run_sync_gitee.bat`](GiteeExploreHot/run_sync_gitee.bat)（可选参数 `windows` / `darwin` / `linux` 表示同步后再下载）。**未接入** `auto_update.py`。详见 [`GiteeExploreHot/README.md`](GiteeExploreHot/README.md)。
+
 ### 仓库现状与收录范围（约略）
 
-合并配置后规模约为：**Windows 277 条**（[`apps/windows/`](apps/windows/) 下 **26** 个分类分片）、**darwin / linux 各 170 条**（[`apps/darwin/`](apps/darwin/)、[`apps/linux/`](apps/linux/) 与 Windows 同风格分片）。数量会随你增删 JSON 变化，以运行 `python auto_update.py` 时日志里「已从 apps/ 目录合并配置」为准。
+合并配置后规模约为：**Windows 约 345 条**（[`apps/windows/`](apps/windows/) 下 **29** 个分类分片）、**darwin 约 215 条**、**linux 约 213 条**（[`apps/darwin/`](apps/darwin/)、[`apps/linux/`](apps/linux/) 与 Windows 同风格分片）。数量会随你增删 JSON 变化，以运行 `python auto_update.py` 时日志里「已从 apps/ 目录合并配置」为准。
 
 收录以 **GitHub（及镜像）上可解析的 Releases 资产** 为主，涵盖编辑器、笔记、安全、云原生、可观测、下载、办公与设计等常见分类。**不包含**破解、盗版或绕过授权的软件分发；个别条目仅含基础字段时需自行补全规则后才能稳定自动下载。
 
