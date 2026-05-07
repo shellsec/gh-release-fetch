@@ -1,2 +1,0 @@
-2026-05-06 10:37:43,944 - INFO - 已从配置目录合并：E:\GITHUB\已经发布\gh-release-fetch\apps — windows 368 项，darwin 243 项，linux 242 项
-2026-05-06 11:14:35,038 - INFO - 已从配置目录合并：E:\GITHUB\已经发布\gh-release-fetch\apps — windows 369 项，darwin 244 项，linux 243 项
