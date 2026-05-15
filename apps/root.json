@@ -34,6 +34,7 @@
     },
     "备份与恢复": "拆分前的完整单文件为仓库根目录 apps.json.monolith.bak。若需恢复单文件模式：删除整个 apps/ 目录（或至少删除 apps/root.json），将 apps.json.monolith.bak 改名为 apps.json。重新拆分可运行：python tools/split_apps_to_apps_dir.py（需先准备好根目录 apps.json）。",
     "重置 enabled": "将所有应用 JSON 里的 enabled 写回 false（改磁盘）：在项目根执行 python tools/reset_enabled_json.py；加 --dry-run 可只预览数量不写文件。独立清单包执行 python tools/reset_enabled_json.py --apps-dir VibeCodingToolsDown（快照默认在该包 tools/ 下）；也可用 VibeCodingToolsDown/tools/reset_enabled_json.bat。",
+    "查找应用": "项目根 lookup_app.bat <关键词> 或 python lookup_app.py <关键词>：模糊检索 apps 分片中的 id/简介/repo 等，显示平台、分片路径与分类，并交互询问是否 enabled=true。",
     "download_subdir_by_platform": "根级若为 true，下载保存路径为 download_dir/<windows|darwin|linux>/...，便于区分系统类型；日志与「开始下载」也会标注平台名。"
   },
   "download_dir": ".",
