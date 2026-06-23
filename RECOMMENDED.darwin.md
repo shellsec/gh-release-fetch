@@ -1,6 +1,6 @@
 # Recommended apps (macOS · full catalog guide)
 
-> Auto-generated from [`apps/darwin/`](apps/darwin/) on **2026-06-22**. **407** entries.
+> Auto-generated from [`apps/darwin/`](apps/darwin/) on **2026-06-23**. **411** entries.
 > Chinese guide: [`RECOMMENDED.darwin.zh-CN.md`](RECOMMENDED.darwin.zh-CN.md). Other platforms: [Windows](RECOMMENDED.zh-CN.md) · [Linux](RECOMMENDED.linux.zh-CN.md). Index: [`CATALOG.md`](CATALOG.md).
 
 ## AI (39)
@@ -155,7 +155,7 @@
 | `tempo` | Grafana Tempo 追踪后端 | `grafana/tempo` |
 | `vector` | Vector 日志/指标采集 | `vectordotdev/vector` |
 
-## 命令行 (19)
+## 命令行 (21)
 
 | id | Intro | repo |
 |----|-------|------|
@@ -174,6 +174,8 @@
 | `ripgrep` | - | `BurntSushi/ripgrep` |
 | `sd` | - | `chmln/sd` |
 | `starship` | - | `starship/starship` |
+| `uniclipboard_cli` | UniClipboard CLI（macOS Apple Silicon tar.gz） | `UniClipboard/UniClipboard` |
+| `uniclipboard_cli_x64` | UniClipboard CLI（macOS Intel x64 tar.gz） | `UniClipboard/UniClipboard` |
 | `yazi` | - | `sxyazi/yazi` |
 | `yq` | - | `mikefarah/yq` |
 | `zellij` | - | `zellij-org/zellij` |
@@ -297,7 +299,7 @@
 | `pineapple_picture` | 免费开源菠萝看图 Pineapple Picture 1.4.1 中文多语免费版 | `BLumia/pineapple-pictures` |
 | `quick_picture_viewer` | 开源免费轻量级 Windows 图像查看器 Quick Picture Viewer 3.1.4 中文免费版 | `ModuleArt/quick-picture-viewer` |
 
-## 开发 (37)
+## 开发 (38)
 
 | id | Intro | repo |
 |----|-------|------|
@@ -316,6 +318,7 @@
 | `etcd` | etcd 分布式键值 | `etcd-io/etcd` |
 | `fastfetch` | - | `fastfetch-cli/fastfetch` |
 | `forgejo` | Forgejo（macOS amd64） | `forgejo/forgejo` |
+| `geolibre` | GeoLibre Desktop（macOS Apple Silicon dmg） | `opengeos/GeoLibre` |
 | `git_lfs` | - | `git-lfs/git-lfs` |
 | `github_cli` | - | `cli/cli` |
 | `github_desktop` | - | `desktop/desktop` |
@@ -339,7 +342,7 @@
 | `ultimate_packer_for_executables` | 开源 EXE/Dll 资源压缩工具 UPX 5.1.1 + x64 发布！ | `upx/upx` |
 | `uv` | - | `astral-sh/uv` |
 
-## 效率 (13)
+## 效率 (15)
 
 | id | Intro | repo |
 |----|-------|------|
@@ -354,6 +357,8 @@
 | `quickclipboard` | 这款开源免费的 QuickClipboard 0.1.1 正在重新定义你的复制粘贴体验 | `mosheng1/QuickClipboard` |
 | `screenote` | 开源免费全快捷键截图/贴图工具 Screenote 2020-07-02 中文免费版 | `poerin/Screenote` |
 | `stretchly` | - | `hovancik/stretchly` |
+| `uniclipboard` | UniClipboard（跨平台剪贴板同步与管理；macOS Apple Silicon dmg） | `UniClipboard/UniClipboard` |
+| `uniclipboard_x64_dmg` | UniClipboard（macOS Intel x64 dmg） | `UniClipboard/UniClipboard` |
 | `vhs` | - | `charmbracelet/vhs` |
 | `vocotype` | VocoType（本地端侧语音转文字输入工具，内置 Paraformer 中文 ASR 模型；macOS Universal dmg，兼容 Apple S... | `233stone/vocotype-cli` |
 
@@ -417,7 +422,7 @@
 | `trilium_notes` | 免费开源笔记应用程序 Trilium Notes 0.103.0 x64 官方中文免费版 | `zadam/trilium` |
 | `zettlr` | - | `Zettlr/Zettlr` |
 
-## 系统 (22)
+## 系统 (21)
 
 | id | Intro | repo |
 |----|-------|------|
@@ -433,7 +438,6 @@
 | `nsudo` | 开源免费系统管理软件 NSudo 8.2.0 中文免费版 | `Thdub/NSudo_Installer` |
 | `nwinfo` | 开源电脑硬件信息检测工具 NWinfo 1.6.4 绿色中文便携版 | `a1ive/nwinfo` |
 | `optimizer` | 开源 Windows 10/11 系统优化工具 Optimizer 16.7 中文多语免费版 | `hellzerg/optimizer` |
-| `optimizerduck` | 开源免费 Windows 系统优化利器 optimizerDuck v2.20.0 更新发布 | `itsfatduck/optimizerDuck` |
 | `pid_key_checker` | Windows 密钥激活次数查询工具 PID Key Checker 4.0.0.0 中文免费版 | `Ja7ad/PIDChecker` |
 | `qemu` | - | `qemu/qemu` |
 | `sophiapp` | 开源 Windows 系统优化调整工具 SophiApp 1.0.0.97 中文多语免费版 | `Sophia-Community/SophiApp` |

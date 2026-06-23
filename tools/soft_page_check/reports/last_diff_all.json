@@ -1,0 +1,401 @@
+{
+  "compared_at": "2026-06-23 11:03:47",
+  "scope": "all",
+  "snapshot": "titles_ALL_2026-06-23_110347.json",
+  "new_urls": [],
+  "removed_urls": [],
+  "title_changed": [
+    {
+      "url": "https://folivora.ai/",
+      "old": "folivora.ai - Great Tools for your Mac!",
+      "new": "BetterTouchTool — Great Tools for your Mac",
+      "tier": "B",
+      "software": [],
+      "domain": "folivora.ai"
+    },
+    {
+      "url": "https://github.com/anfragment/zen",
+      "old": "GitHub - irbis-sh/zen-desktop: Simple, free and efficient ad-blocker and privacy guard for Windows, macOS and Linux. · GitHub",
+      "new": "GitHub - irbis-sh/zen-desktop: Ad-blocker and privacy guard for Windows, macOS and Linux. · GitHub",
+      "tier": "B",
+      "software": [],
+      "domain": "github"
+    },
+    {
+      "url": "https://github.com/huanfeng/WindInput",
+      "old": "GitHub - huanfeng/WindInput: 清风输入法 | 轻量、快速、可定制的开源中文输入法 · GitHub",
+      "new": "GitHub - huanfeng/WindInput: 清风输入法 | 轻量、快速、可定制的开源中文输入法（支持Windows/macOS） · GitHub",
+      "tier": "B",
+      "software": [],
+      "domain": "github"
+    },
+    {
+      "url": "https://www.7xiazai.com/bitcomet",
+      "old": "比特彗星 BitComet v2.21.4 解锁全功能豪华版 – 小兵下载站",
+      "new": "比特彗星 BitComet v2.21.6 解锁全功能豪华版 – 小兵下载站",
+      "tier": "B",
+      "software": [],
+      "domain": "7xiazai"
+    },
+    {
+      "url": "https://www.7xiazai.com/xunlei12",
+      "old": "迅雷 Thunder v12.4.9.3918 去广告绿色精简版 – 小兵下载站",
+      "new": "迅雷 Thunder v12.4.11.3980 去广告绿色精简版 – 小兵下载站",
+      "tier": "B",
+      "software": [],
+      "domain": "7xiazai"
+    },
+    {
+      "url": "https://www.dayanzai.me/ssd-fresh.html",
+      "old": "SSD 固态硬盘优化工具 Abelssoft SSD Fresh 2026 15.04.71721 中文多语免费版 - 大眼仔旭",
+      "new": "SSD 固态硬盘优化工具 Abelssoft SSD Fresh 2026 v15.05.735821 中文版 - 大眼仔旭",
+      "tier": "B",
+      "software": [],
+      "domain": "www.dayanzai.me"
+    },
+    {
+      "url": "https://www.ghxi.com/dotnet.html",
+      "old": "Microsoft .net Framework运行库离线版合集 v1.1-v8.0.27 - 果核剥壳",
+      "new": "Microsoft .net Framework运行库离线版合集 v1.1-v8.0.28 - 果核剥壳",
+      "tier": "B",
+      "software": [],
+      "domain": "ghxi"
+    },
+    {
+      "url": "https://www.ghxi.com/iobitdriverbooster.html",
+      "old": "IObit Driver Booster Pro(驱动管理) v13.4.0.234 便携修改版 - 果核剥壳",
+      "new": "IObit Driver Booster Pro(驱动管理) v13.5.0.359 便携修改版 - 果核剥壳",
+      "tier": "B",
+      "software": [],
+      "domain": "ghxi"
+    },
+    {
+      "url": "https://www.ghxi.com/iobitsmartdefrag.html",
+      "old": "IObit SmartDefrag(智能磁盘整理) v11.3.0.476 特别版 - 果核剥壳",
+      "new": "IObit SmartDefrag(智能磁盘整理) v11.4.0.508 特别版 - 果核剥壳",
+      "tier": "A",
+      "software": [
+        "system_good"
+      ],
+      "domain": "ghxi"
+    },
+    {
+      "url": "https://www.ghxi.com/purecodec.html",
+      "old": "PureCodec (完美解码) v2026.05.08 - 果核剥壳",
+      "new": "PureCodec (完美解码) v2026.06.06 - 果核剥壳",
+      "tier": "A",
+      "software": [
+        "PotPlayer"
+      ],
+      "domain": "ghxi"
+    },
+    {
+      "url": "https://www.ghxi.com/visualcppredist.html",
+      "old": "VisualCppRedist(运行库合集) v104 - 果核剥壳",
+      "new": "VisualCppRedist(运行库合集) v105 - 果核剥壳",
+      "tier": "B",
+      "software": [],
+      "domain": "ghxi"
+    },
+    {
+      "url": "https://www.lanzout.com/iSlcx4p6mli",
+      "old": "Microsoft .NET Framework V4.8.0.zip - 蓝奏云",
+      "new": "(无 title 标签)",
+      "tier": "B",
+      "software": [],
+      "domain": "lanzou"
+    },
+    {
+      "url": "https://www.videohelp.com/software/PotPlayer",
+      "old": "PotPlayer 260422 / 260521 Beta Download Free - VideoHelp",
+      "new": "PotPlayer 260622 Download Free - VideoHelp",
+      "tier": "A",
+      "software": [
+        "PotPlayer"
+      ],
+      "domain": "www.videohelp.com"
+    }
+  ],
+  "recovered": [
+    {
+      "url": "https://github.com/shellsec/WindowsBatchScriptManager",
+      "old": "HTTP Error 404: Not Found",
+      "new": "shellsec/WindowsBatchScriptManager · GitHub",
+      "tier": "A",
+      "software": [
+        "system_good"
+      ],
+      "domain": "github"
+    },
+    {
+      "url": "https://www.423down.com/10421.html",
+      "old": "timed out",
+      "new": "安全验证...",
+      "tier": "B",
+      "software": [],
+      "domain": "423down"
+    },
+    {
+      "url": "https://www.423down.com/10540.html",
+      "old": "timed out",
+      "new": "安全验证...",
+      "tier": "A",
+      "software": [
+        "system_good"
+      ],
+      "domain": "423down"
+    },
+    {
+      "url": "https://www.423down.com/1202.html",
+      "old": "timed out",
+      "new": "安全验证...",
+      "tier": "A",
+      "software": [
+        "system_good"
+      ],
+      "domain": "423down"
+    },
+    {
+      "url": "https://www.423down.com/12420.html",
+      "old": "timed out",
+      "new": "安全验证...",
+      "tier": "A",
+      "software": [
+        "system_good"
+      ],
+      "domain": "423down"
+    },
+    {
+      "url": "https://www.423down.com/16774.html",
+      "old": "timed out",
+      "new": "安全验证...",
+      "tier": "A",
+      "software": [
+        "system_good"
+      ],
+      "domain": "423down"
+    },
+    {
+      "url": "https://www.423down.com/3471.html",
+      "old": "timed out",
+      "new": "安全验证...",
+      "tier": "A",
+      "software": [
+        "WiseCare365"
+      ],
+      "domain": "423down"
+    },
+    {
+      "url": "https://www.423down.com/4522.html",
+      "old": "timed out",
+      "new": "安全验证...",
+      "tier": "B",
+      "software": [],
+      "domain": "423down"
+    },
+    {
+      "url": "https://www.423down.com/9655.html",
+      "old": "timed out",
+      "new": "安全验证...",
+      "tier": "A",
+      "software": [
+        "system_good"
+      ],
+      "domain": "423down"
+    }
+  ],
+  "unchanged_count": 79,
+  "failed": [
+    {
+      "url": "https://masuit.org/1924?t=0HNIV93LNR9TK",
+      "title": "",
+      "status": "http_error",
+      "error": "HTTP Error 403: Forbidden",
+      "tier": "B",
+      "software": [],
+      "domain": "masuit.org"
+    },
+    {
+      "url": "https://www.423down.com/13777.html",
+      "title": "",
+      "status": "http_error",
+      "error": "HTTP Error 429: Too Many Requests",
+      "tier": "B",
+      "software": [],
+      "domain": "423down"
+    },
+    {
+      "url": "https://www.423down.com/14557.html",
+      "title": "",
+      "status": "http_error",
+      "error": "HTTP Error 429: Too Many Requests",
+      "tier": "B",
+      "software": [],
+      "domain": "423down"
+    },
+    {
+      "url": "https://www.423down.com/15527.html",
+      "title": "",
+      "status": "http_error",
+      "error": "HTTP Error 429: Too Many Requests",
+      "tier": "A",
+      "software": [
+        "typora"
+      ],
+      "domain": "423down"
+    },
+    {
+      "url": "https://www.423down.com/16859.html",
+      "title": "",
+      "status": "http_error",
+      "error": "HTTP Error 429: Too Many Requests",
+      "tier": "A",
+      "software": [
+        "system_good"
+      ],
+      "domain": "423down"
+    },
+    {
+      "url": "https://www.423down.com/3050.html",
+      "title": "",
+      "status": "http_error",
+      "error": "HTTP Error 429: Too Many Requests",
+      "tier": "A",
+      "software": [
+        "PotPlayer"
+      ],
+      "domain": "423down"
+    },
+    {
+      "url": "https://www.423down.com/4966.html",
+      "title": "",
+      "status": "http_error",
+      "error": "HTTP Error 429: Too Many Requests",
+      "tier": "A",
+      "software": [
+        "notepad++"
+      ],
+      "domain": "423down"
+    },
+    {
+      "url": "https://www.423down.com/5432.html",
+      "title": "",
+      "status": "http_error",
+      "error": "HTTP Error 429: Too Many Requests",
+      "tier": "A",
+      "software": [
+        "CrystalDiskInfo"
+      ],
+      "domain": "423down"
+    },
+    {
+      "url": "https://www.423down.com/5573.html",
+      "title": "",
+      "status": "http_error",
+      "error": "HTTP Error 429: Too Many Requests",
+      "tier": "A",
+      "software": [
+        "system_good"
+      ],
+      "domain": "423down"
+    },
+    {
+      "url": "https://www.423down.com/6666.html",
+      "title": "",
+      "status": "http_error",
+      "error": "HTTP Error 429: Too Many Requests",
+      "tier": "B",
+      "software": [],
+      "domain": "423down"
+    },
+    {
+      "url": "https://www.423down.com/7569.html",
+      "title": "",
+      "status": "http_error",
+      "error": "HTTP Error 429: Too Many Requests",
+      "tier": "A",
+      "software": [
+        "EmEditor"
+      ],
+      "domain": "423down"
+    },
+    {
+      "url": "https://www.423down.com/778.html",
+      "title": "",
+      "status": "http_error",
+      "error": "HTTP Error 429: Too Many Requests",
+      "tier": "A",
+      "software": [
+        "WinRAR"
+      ],
+      "domain": "423down"
+    },
+    {
+      "url": "https://www.autohotkey.com/",
+      "title": "",
+      "status": "http_error",
+      "error": "HTTP Error 403: Forbidden",
+      "tier": "B",
+      "software": [],
+      "domain": "www.autohotkey.com"
+    },
+    {
+      "url": "https://www.cnblogs.com/zanxj/p/19103238",
+      "title": "",
+      "status": "http_error",
+      "error": "HTTP Error 404: Not Found",
+      "tier": "B",
+      "software": [],
+      "domain": "www.cnblogs.com"
+    },
+    {
+      "url": "https://www.hybase.com/pc/windows/2845.html",
+      "title": "",
+      "status": "url_error",
+      "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1017)",
+      "tier": "B",
+      "software": [],
+      "domain": "hybase"
+    },
+    {
+      "url": "https://www.hybase.com/pc/windows/3471.html",
+      "title": "",
+      "status": "url_error",
+      "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1017)",
+      "tier": "A",
+      "software": [
+        "WiseCare365"
+      ],
+      "domain": "hybase"
+    },
+    {
+      "url": "https://www.hybase.com/pc/windows/468.html",
+      "title": "",
+      "status": "url_error",
+      "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1017)",
+      "tier": "B",
+      "software": [],
+      "domain": "hybase"
+    }
+  ],
+  "open_candidates": [
+    "https://folivora.ai/",
+    "https://github.com/anfragment/zen",
+    "https://github.com/huanfeng/WindInput",
+    "https://www.7xiazai.com/bitcomet",
+    "https://www.7xiazai.com/xunlei12",
+    "https://www.dayanzai.me/ssd-fresh.html",
+    "https://www.ghxi.com/dotnet.html",
+    "https://www.ghxi.com/iobitdriverbooster.html",
+    "https://www.ghxi.com/iobitsmartdefrag.html",
+    "https://www.ghxi.com/purecodec.html",
+    "https://www.ghxi.com/visualcppredist.html",
+    "https://www.lanzout.com/iSlcx4p6mli",
+    "https://www.videohelp.com/software/PotPlayer"
+  ],
+  "tier_a_candidates": [
+    "https://www.ghxi.com/iobitsmartdefrag.html",
+    "https://www.ghxi.com/purecodec.html",
+    "https://www.videohelp.com/software/PotPlayer"
+  ]
+}

@@ -1,6 +1,6 @@
 # Recommended apps (Linux · full catalog guide)
 
-> Auto-generated from [`apps/linux/`](apps/linux/) on **2026-06-22**. **405** entries.
+> Auto-generated from [`apps/linux/`](apps/linux/) on **2026-06-23**. **407** entries.
 > Chinese guide: [`RECOMMENDED.linux.zh-CN.md`](RECOMMENDED.linux.zh-CN.md). Other platforms: [Windows](RECOMMENDED.zh-CN.md) · [macOS](RECOMMENDED.darwin.zh-CN.md). Index: [`CATALOG.md`](CATALOG.md).
 
 ## AI (39)
@@ -39,7 +39,7 @@
 | `nextchat` | NextChat：Release 多为源码；部署见项目说明。 | `ChatGPTNextWeb/NextChat` |
 | `ollama` | - | `ollama/ollama` |
 | `open_claude_cowork` | Open Claude Cowork：仓库无 Release 二进制。 | `ComposioHQ/open-claude-cowork` |
-| `open_webui_desktop` | Open WebUI Desktop（Linux AppImage；Release 以 yml 为主，试跑前核对资产） | `open-webui/desktop` |
+| `open_webui_desktop` | Open WebUI Desktop（Linux x86_64 AppImage） | `open-webui/desktop` |
 | `opencat` | OpenCat：以 App Store 等为主；repo_path 仅满足配置校验，勿启用。 | `octocat/Hello-World` |
 | `openclaw` | OpenClaw（Linux 用 Release 中 OpenClaw-*.zip） | `openclaw/openclaw` |
 | `opencode` | - | `sst/opencode` |
@@ -152,7 +152,7 @@
 | `tempo` | Grafana Tempo 追踪后端 | `grafana/tempo` |
 | `vector` | Vector 日志/指标采集 | `vectordotdev/vector` |
 
-## 命令行 (19)
+## 命令行 (20)
 
 | id | Intro | repo |
 |----|-------|------|
@@ -171,6 +171,7 @@
 | `ripgrep` | - | `BurntSushi/ripgrep` |
 | `sd` | - | `chmln/sd` |
 | `starship` | - | `starship/starship` |
+| `uniclipboard_cli` | UniClipboard CLI（Linux x86_64 musl tar.gz） | `UniClipboard/UniClipboard` |
 | `yazi` | - | `sxyazi/yazi` |
 | `yq` | - | `mikefarah/yq` |
 | `zellij` | - | `zellij-org/zellij` |
@@ -294,7 +295,7 @@
 | `pineapple_picture` | 免费开源菠萝看图 Pineapple Picture 1.4.1 中文多语免费版 | `BLumia/pineapple-pictures` |
 | `quick_picture_viewer` | 开源免费轻量级 Windows 图像查看器 Quick Picture Viewer 3.1.4 中文免费版 | `ModuleArt/quick-picture-viewer` |
 
-## 开发 (37)
+## 开发 (38)
 
 | id | Intro | repo |
 |----|-------|------|
@@ -313,6 +314,7 @@
 | `etcd` | etcd 分布式键值 | `etcd-io/etcd` |
 | `fastfetch` | - | `fastfetch-cli/fastfetch` |
 | `forgejo` | Forgejo（Linux amd64） | `forgejo/forgejo` |
+| `geolibre` | GeoLibre Desktop（Linux amd64 AppImage） | `opengeos/GeoLibre` |
 | `git_lfs` | - | `git-lfs/git-lfs` |
 | `github_cli` | - | `cli/cli` |
 | `github_desktop` | - | `desktop/desktop` |
@@ -336,7 +338,7 @@
 | `ultimate_packer_for_executables` | 开源 EXE/Dll 资源压缩工具 UPX 5.1.1 + x64 发布！ | `upx/upx` |
 | `uv` | - | `astral-sh/uv` |
 
-## 效率 (12)
+## 效率 (13)
 
 | id | Intro | repo |
 |----|-------|------|
@@ -351,6 +353,7 @@
 | `quickclipboard` | 这款开源免费的 QuickClipboard 0.1.1 正在重新定义你的复制粘贴体验 | `mosheng1/QuickClipboard` |
 | `screenote` | 开源免费全快捷键截图/贴图工具 Screenote 2020-07-02 中文免费版 | `poerin/Screenote` |
 | `stretchly` | - | `hovancik/stretchly` |
+| `uniclipboard` | UniClipboard（跨平台剪贴板同步与管理；Linux amd64 AppImage） | `UniClipboard/UniClipboard` |
 | `vhs` | - | `charmbracelet/vhs` |
 
 ## 数据库 (8)
@@ -413,7 +416,7 @@
 | `trilium_notes` | 免费开源笔记应用程序 Trilium Notes 0.103.0 x64 官方中文免费版 | `zadam/trilium` |
 | `zettlr` | - | `Zettlr/Zettlr` |
 
-## 系统 (22)
+## 系统 (21)
 
 | id | Intro | repo |
 |----|-------|------|
@@ -429,7 +432,6 @@
 | `nsudo` | 开源免费系统管理软件 NSudo 8.2.0 中文免费版 | `Thdub/NSudo_Installer` |
 | `nwinfo` | 开源电脑硬件信息检测工具 NWinfo 1.6.4 绿色中文便携版 | `a1ive/nwinfo` |
 | `optimizer` | 开源 Windows 10/11 系统优化工具 Optimizer 16.7 中文多语免费版 | `hellzerg/optimizer` |
-| `optimizerduck` | 开源免费 Windows 系统优化利器 optimizerDuck v2.20.0 更新发布 | `itsfatduck/optimizerDuck` |
 | `pid_key_checker` | Windows 密钥激活次数查询工具 PID Key Checker 4.0.0.0 中文免费版 | `Ja7ad/PIDChecker` |
 | `qemu` | - | `qemu/qemu` |
 | `sophiapp` | 开源 Windows 系统优化调整工具 SophiApp 1.0.0.97 中文多语免费版 | `Sophia-Community/SophiApp` |
