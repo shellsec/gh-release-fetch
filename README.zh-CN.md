@@ -73,12 +73,15 @@
 | **按标题搜介绍页并打开** | 仓库根 **`search_soft_pages.bat <关键词>`**（索引约 5500+ URL，见 `history/titles_latest_*.json`） |
 | 月度快检 SOP | `tools\soft_page_check\monthly_sop.bat` |
 | **每月 · A 类**（~42 页，~15 秒） | `tools\soft_page_check\monthly_check.bat` |
-| **每季 · 频道全量**（~2300+ 页，~20–35 分钟，**只比标题、不下载软件**） | `tools\soft_page_check\monthly_check_full.bat` |
-| 仅 list 三站（hybase + dayanzai + down66） | `tools\soft_page_check\monthly_check_list.bat` |
+| **每季 · 频道全量**（~2300+ 页，~20–35 分钟，**只比标题、不下载**） | `tools\soft_page_check\monthly_check_full.bat` |
+| 单站快检 / 打开变化页 | `monthly_check_site.bat <站点>` / `open_changed_site.bat <站点>`（`423down` `7xiazai` `hybase` `dayanzai` `down66`） |
+| list 四站连跑 | `tools\soft_page_check\monthly_check_list.bat`（7xiazai + hybase + dayanzai + down66） |
+| 刷新 URL 清单 | `tools\soft_page_check\refresh_urls.bat`（`core` / `all` / `423down` / `7xiazai` …） |
+| 清理历史快照 | `tools\soft_page_check\prune_artifacts.bat` |
 | HTML 报告 | `tools\soft_page_check\open_report.bat` → `reports/index.html` |
-| GitHub 页标题变化后拉 Release | `tools\soft_page_check\fetch_github_on_changes.bat` |
+| A 类 GitHub 页变化后拉 Release | `tools\soft_page_check\fetch_github_on_changes.bat`（只读引用本仓库 `apps/` + `auto_update.py`） |
 
-**与 `lookup_app` 的分工**：`lookup_app` → **GitHub Releases 清单**（查 id、下载、更新）；`search_soft_pages` → **各站介绍页**（按标题打开网页）。首次使用快检需连跑两次才建立「标题变化」基线，详见 [`tools/soft_page_check/README.md`](tools/soft_page_check/README.md)。
+**与 `lookup_app` 的分工**：`lookup_app` → **GitHub Releases 清单**；`search_soft_pages` → **各站介绍页标题**。本仓库通常**无** `Lastb_soft_version.txt`，快检会沿用 `soft_page_check` 内已有 URL 缓存；装机发布流程（`generate_and_push.bat` / `software/`）属可选的 SoftGitUp 侧，**gh-release-fetch 主流程用 `run_saved_apps.bat` 等**。首次快检需连跑两次才建立「标题变化」基线，详见 [`tools/soft_page_check/README.md`](tools/soft_page_check/README.md)。
 
 ```bat
 search_soft_pages.bat 7zip
@@ -518,4 +521,4 @@ search_soft_pages.bat 7zip
 
 ### 介绍页监控（soft_page_check）
 
-详见 [`tools/soft_page_check/README.md`](tools/soft_page_check/README.md)：`monthly_check.bat`、`monthly_sop.bat`、`fetch_github_on_changes.bat`、`search_pages.py`（由根目录 `search_soft_pages.bat` 调用）。
+详见 [`tools/soft_page_check/README.md`](tools/soft_page_check/README.md)。常用：`monthly_check.bat`、`monthly_check_site.bat`、`open_changed_site.bat`、`refresh_urls.bat`、`search_soft_pages.bat`（根目录）、`fetch_github_on_changes.bat`。

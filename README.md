@@ -65,14 +65,18 @@ Separate from the GitHub **`apps/`** catalog: tracks **page titles** on dayanzai
 
 | Task | Entry |
 |------|--------|
-| Search titles / open URLs | **`search_soft_pages.bat <keyword>`** |
+| Search titles / open URLs | **`search_soft_pages.bat <keyword>`** (repo root) |
 | Monthly SOP | `tools\soft_page_check\monthly_sop.bat` |
-| **Monthly · tier A** (~42 pages, ~15s) | `monthly_check.bat` |
-| **Quarterly · all channels** (~2300+ pages, ~20–35 min; **title diff only, no downloads**) | `monthly_check_full.bat` |
-| List sites only (hybase + dayanzai + down66) | `monthly_check_list.bat` |
-| HTML report | `open_report.bat` |
+| **Monthly · tier A** (~42 pages, ~15s) | `tools\soft_page_check\monthly_check.bat` |
+| **Quarterly · all channels** (~2300+ pages, ~20–35 min; title diff only) | `tools\soft_page_check\monthly_check_full.bat` |
+| Per-site check / open changed URLs | `monthly_check_site.bat <site>` / `open_changed_site.bat <site>` |
+| List four sites batch | `tools\soft_page_check\monthly_check_list.bat` (7xiazai + hybase + dayanzai + down66) |
+| Refresh URL lists | `tools\soft_page_check\refresh_urls.bat` |
+| Prune dated snapshots | `tools\soft_page_check\prune_artifacts.bat` |
+| HTML report | `tools\soft_page_check\open_report.bat` |
+| GitHub title change → Release fetch | `tools\soft_page_check\fetch_github_on_changes.bat` (read-only `apps/` + `auto_update.py`) |
 
-Details: [`tools/soft_page_check/README.md`](tools/soft_page_check/README.md).
+**vs `lookup_app`:** GitHub Releases catalog vs intro-page titles. This repo often has **no** `Lastb_soft_version.txt`; checks reuse cached URL lists under `soft_page_check/`. SoftGitUp-style `generate_and_push.bat` / `software/` sync is optional; the main gh-release-fetch flow uses `run_saved_apps.bat`, etc. Run tier-A check **twice** on first use for a diff baseline. Details: [`tools/soft_page_check/README.md`](tools/soft_page_check/README.md).
 
 **Approximate catalog size** (changes when you edit JSON): **536** Windows, **407** darwin, **405** linux entries across **30** shard files each (**excluding** `99-未匹配-windows分片.json` placeholders). See [`CATALOG.md`](CATALOG.md) for a per-shard table (`python tools/generate_catalog_index.py` to refresh). Confirm totals with the merge log line when you run the script.
 
@@ -374,7 +378,7 @@ search_soft_pages.bat 7zip
 
 ### Intro-page monitoring
 
-See [`tools/soft_page_check/README.md`](tools/soft_page_check/README.md): `monthly_check.bat`, `monthly_sop.bat`, `fetch_github_on_changes.bat`, `search_pages.py` (via root `search_soft_pages.bat`).
+See [`tools/soft_page_check/README.md`](tools/soft_page_check/README.md). Common entry points: `monthly_check.bat`, `monthly_check_site.bat`, `open_changed_site.bat`, `refresh_urls.bat`, root `search_soft_pages.bat`, `fetch_github_on_changes.bat`.
 
 ---
 
