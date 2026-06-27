@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 import sys
 import webbrowser
@@ -27,7 +28,16 @@ if sys.platform == "win32":
     except (AttributeError, OSError):
         pass
 
-HERE = Path(__file__).resolve().parent
+if getattr(sys, "frozen", False):
+    _REPO = Path(sys.executable).resolve().parent
+else:
+    _REPO = Path(__file__).resolve().parents[2]
+if str(_REPO) not in sys.path:
+    sys.path.insert(0, str(_REPO))
+
+from tools.ghrf_runtime import argv_from_prompt, soft_page_check_dir  # noqa: E402
+
+HERE = Path(soft_page_check_dir(__file__))
 HISTORY = HERE / "history"
 LIST_DIR = HERE / "list"
 
@@ -274,6 +284,20 @@ def pick_and_open(hits: list[dict], auto_open: bool) -> int:
 
 
 def main() -> int:
+    if not argv_from_prompt(
+        [
+            "用法: search_soft_pages [选项与关键词...]",
+            "示例: search_soft_pages 7zip",
+            "      search_soft_pages --scope dayanzai 优化",
+            "      search_soft_pages --stats",
+            "",
+            "搜索 soft_page_check 介绍页标题并打开链接（不自动下载）。",
+            "GitHub 清单请用 lookup_app。",
+        ],
+        "请输入关键词（可含 --scope a 等）: ",
+    ):
+        return 0
+
     ap = argparse.ArgumentParser(description="在 soft_page_check 标题快照中搜索并打开链接")
     ap.add_argument("queries", nargs="*", help="搜索关键词（标题 / URL / 软件名）")
     ap.add_argument("--scope", default="", help="限定来源，如 dayanzai、a、hybase_system")
@@ -288,10 +312,17 @@ def main() -> int:
         if not args.queries:
             return 0
 
-    if not args.queries:
+    if not args.queries and not args.stats:
+        from tools.ghrf_runtime import prompt_cli_line
+
+        text = prompt_cli_line([], "请输入搜索关键词: ")
+        if not text:
+            return 0
+        import shlex
+
+        args.queries = shlex.split(text, posix=(os.name != "nt"))
+    if not args.queries and not args.stats:
         ap.print_help()
-        print("\n示例: search_soft_pages.bat 7zip")
-        print("      search_soft_pages.bat --scope dayanzai 优化")
         print_stats(index)
         return 0
 

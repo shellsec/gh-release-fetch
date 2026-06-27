@@ -199,13 +199,14 @@ Windows 可从 [大眼仔旭 Windows 专区](https://www.dayanzai.me/windows) �
 
 ### 无 Python（Windows · 可选 exe）
 
-可将主流程打成 **3 个 exe**，与 [`apps/`](apps/) 放在**同一仓库根目录**；对应 bat **优先调用 exe**，没有 exe 再 fallback `python`。
+可将日常流程打成 **4 个 exe**，与 [`apps/`](apps/) 放在**同一仓库根目录**。对应 bat：**有 Python 时走 `.py`**，**无 Python 时用 exe**（双击 exe 也会提示输入关键词）。
 
 | exe | bat | 作用 |
 |-----|-----|------|
-| `lookup_app.exe` | [`lookup_app.bat`](lookup_app.bat) | 模糊搜索 → 1/2/3/4 操作 |
-| `auto_update.exe` | [`run_update.bat`](run_update.bat) | 下载/更新（批量或指定 id） |
-| `run_saved_apps.exe` | [`run_saved_apps.bat`](run_saved_apps.bat) | 按 `saved_apps_*.json` 批量更新 |
+| `lookup_app.exe` | [`lookup_app.bat`](lookup_app.bat) | 模糊搜索 → 1/2/3/4 |
+| `run_saved_apps.exe` | [`run_saved_apps.bat`](run_saved_apps.bat) | 按列表批量更新 |
+| `search_soft_pages.exe` | [`search_soft_pages.bat`](search_soft_pages.bat) | 搜介绍页标题（打开链接） |
+| `auto_update.exe` | [`run_update.bat`](run_update.bat) / lookup 选 1 调用 | 下载引擎 |
 
 打包（本机需 Python **一次**）：
 
@@ -213,7 +214,15 @@ Windows 可从 [大眼仔旭 Windows 专区](https://www.dayanzai.me/windows) �
 powershell -ExecutionPolicy Bypass -File tools\build_exe.ps1
 ```
 
-产物在 `dist/exe/`，复制上述 3 个 exe 到仓库根即可。`search_soft_pages.bat`、维护脚本仍依赖 Python。
+产物在 `dist/exe/`，复制上述 **4 个 exe** 到仓库根即可。维护脚本（`monthly_check` 等）仍依赖 Python。
+
+**打 Release 附件 zip**（含 exe + 清单 + 索引，解压即用）：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File tools\pack_windows_release.ps1 -Version 1.0.0
+```
+
+输出 `dist/release/gh-release-fetch-windows-<版本>.zip`，说明见 [`release/windows/PACKAGING.md`](release/windows/PACKAGING.md)。
 
 ### Python 依赖（requirements.txt）
 

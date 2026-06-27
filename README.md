@@ -175,13 +175,14 @@ The script handles **version resolution and asset matching**; you search by name
 
 ### No Python (Windows · optional exe)
 
-Pack the main workflow into **3 exe files** beside [`apps/`](apps/); matching bats **prefer exe**, then fall back to `python`.
+Pack **4 exe files** beside [`apps/`](apps/). Bats use **Python when installed**, otherwise **exe**. Double-clicking an exe also prompts for keywords when run with no args.
 
 | exe | bat | Role |
 |-----|-----|------|
-| `lookup_app.exe` | [`lookup_app.bat`](lookup_app.bat) | Fuzzy search → actions 1/2/3/4 |
-| `auto_update.exe` | [`run_update.bat`](run_update.bat) | Download/update (batch or by id) |
-| `run_saved_apps.exe` | [`run_saved_apps.bat`](run_saved_apps.bat) | Update from `saved_apps_*.json` |
+| `lookup_app.exe` | [`lookup_app.bat`](lookup_app.bat) | Search → actions 1/2/3/4 |
+| `run_saved_apps.exe` | [`run_saved_apps.bat`](run_saved_apps.bat) | Batch update from saved list |
+| `search_soft_pages.exe` | [`search_soft_pages.bat`](search_soft_pages.bat) | Search intro-page titles |
+| `auto_update.exe` | [`run_update.bat`](run_update.bat) / lookup download | Download engine |
 
 Build (needs Python **once** on the build machine):
 
@@ -189,7 +190,7 @@ Build (needs Python **once** on the build machine):
 powershell -ExecutionPolicy Bypass -File tools\build_exe.ps1
 ```
 
-Output: `dist/exe/` — copy the three exe files to the repo root. `search_soft_pages.bat` and maintainer scripts still need Python.
+Output: `dist/exe/` — copy all **4 exe** files to the repo root. Maintainer scripts still need Python.
 
 ### Dependencies (`requirements.txt`)
 
