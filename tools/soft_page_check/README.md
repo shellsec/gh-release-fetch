@@ -113,7 +113,7 @@ flowchart TD
 | 打开某站变化页 | `open_changed_site.bat <站点>` | 快检后有变化时 |
 | 清理历史快照 | `prune_artifacts.bat` | 磁盘紧 / 提交前 |
 | 打开 HTML 报告页 | `open_report.bat` | 随时查看 / 快检后自动打开 |
-| **按标题搜介绍页并打开** | 仓库根目录 `search_soft_pages.bat <关键词>` | 随时（索引来自 `history/titles_latest_*.json`） |
+| **按标题搜介绍页并打开** | 仓库根目录 `search_soft_pages.bat`（无参数时提示输入关键词） | 随时（索引来自 `history/titles_latest_*.json`） |
 | **GitHub 有变化时拉 Release** | `fetch_github_on_changes.bat` | A 类快检后、变化 URL 为 github.com 且 gh 配置已 enabled |
 | 全量打开（兜底） | `open_soft_pages.bat` | 很少需要 |
 
@@ -257,7 +257,9 @@ soft_page_check/
 快检发现 **github.com** 标题变化后，在 **`soft_page_check`** 里下载对应 Release。  
 **只读引用**本仓库 [`apps/`](../../apps/) 与 [`auto_update.py`](../../auto_update.py)（亦兼容旧布局 `software/gh-release-fetch/`），**不修改** gh-release-fetch 工具代码。
 
-**前提**：在 `apps/` 对应 JSON 里把应用设为 `"enabled": true`（改配置，不是改脚本）。
+**前提（`fetch_github_on_changes` 批量路径）**：在 `apps/` 对应 JSON 里把应用设为 `"enabled": true` 时，才会被该脚本下载。
+
+与主流程 **`lookup_app` 选 1/2 立刻下载** 或 **`auto_update.py <id>`** 不同：后者**指定 id 时不要求** `enabled=true`。
 
 **用法**（A 类快检有变化后，在 soft_page_check 目录）：
 
@@ -267,7 +269,7 @@ python github_fetch_on_changes.py --dry-run   rem 预览
 ```
 
 - 只处理变化 URL 为 `github.com/owner/repo` 且在 `apps/` 中有 `repo_path` 的项  
-- 仅下载 **enabled=true** 的应用  
+- **`fetch_github_on_changes` 路径**：仅下载 **`enabled=true`** 的应用（与 lookup 指定 id 下载无关）  
 - 423down / 7xiazai / list 四站仍浏览器手工  
 - 下载目录由 `auto_update.py` 配置（`resolve_download_root`）
 
