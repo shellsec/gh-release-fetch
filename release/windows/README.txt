@@ -6,8 +6,9 @@ GH Release Fetch — Windows 便携版（含 exe，无需安装 Python）
 日常用法（双击 bat，无参数时会提示输入关键词）
 ------------------------------------------------
   lookup_app.bat          搜 GitHub 清单 → 1立刻下载 2加入并下载 3加入列表 4启用
+  search_soft_pages.bat   搜工具/频道介绍页标题（只打开网页）
+  search_games.bat        搜 gamer520 游戏页标题（只打开网页）
   run_saved_apps.bat      按 saved_apps_windows.json 批量更新
-  search_soft_pages.bat   搜各站介绍页标题（只打开网页，不自动下载）
 
 也可直接双击同名 .exe（效果相同；无 Python 时 bat 会自动用 exe）。
 

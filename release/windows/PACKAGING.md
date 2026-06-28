@@ -4,22 +4,30 @@
 
 ## 生成
 
-在仓库根目录：
+在仓库根目录 **一键**（编译 exe → 复制到根目录 → 打 zip）：
+
+```bat
+pack_windows_release.bat
+```
+
+指定版本号（传给打包脚本，写入 `VERSION.txt` 与 zip 文件名）：
+
+```bat
+pack_windows_release.bat -Version 1.0.0
+```
+
+或分步 / 仅用 PowerShell：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File tools\build_exe.ps1
+Copy-Item dist\exe\*.exe .
+powershell -ExecutionPolicy Bypass -File tools\pack_windows_release.ps1 -SkipBuild
+```
+
+完整打包（脚本内会先编译 exe，再复制、再打 zip）：
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File tools\pack_windows_release.ps1
-```
-
-指定版本号（写入 `VERSION.txt` 与 zip 文件名）：
-
-```powershell
-powershell -ExecutionPolicy Bypass -File tools\pack_windows_release.ps1 -Version 1.0.0
-```
-
-已打过 exe、只重新打包目录：
-
-```powershell
-powershell -ExecutionPolicy Bypass -File tools\pack_windows_release.ps1 -SkipBuild
 ```
 
 ## 输出
@@ -33,9 +41,9 @@ powershell -ExecutionPolicy Bypass -File tools\pack_windows_release.ps1 -SkipBui
 
 ## zip 内容
 
-- 4 个 exe + 4 个 bat（lookup / saved / search / update）
+- 5 个 exe + 5 个 bat（lookup / saved / search_soft / search_games / update）
 - `apps/`、`apps-mobile/`
-- `tools/soft_page_check/`（`history`、`list` 等，供 search_soft_pages）
+- `tools/soft_page_check/`（`history`、`list` 等，供 search_soft_pages / search_games）
 - `README.txt`、`VERSION.txt`、`saved_apps_windows.example.json`
 - `CATALOG.md`、`RECOMMENDED.zh-CN.md` 等导读（可选阅读）
 

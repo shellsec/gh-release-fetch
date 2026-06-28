@@ -33,7 +33,7 @@ if (-not $SkipBuild) {
 }
 
 $ExeDir = Join-Path $Root "dist\exe"
-$exes = @("lookup_app.exe", "run_saved_apps.exe", "search_soft_pages.exe", "auto_update.exe")
+$exes = @("lookup_app.exe", "run_saved_apps.exe", "search_soft_pages.exe", "search_games.exe", "auto_update.exe")
 foreach ($name in $exes) {
     $p = Join-Path $ExeDir $name
     if (-not (Test-Path $p)) {
@@ -48,7 +48,7 @@ Write-Host "Copy exes and bats..."
 foreach ($name in $exes) {
     Copy-Item (Join-Path $ExeDir $name) (Join-Path $Stage $name) -Force
 }
-$bats = @("lookup_app.bat", "run_saved_apps.bat", "search_soft_pages.bat", "run_update.bat")
+$bats = @("lookup_app.bat", "run_saved_apps.bat", "search_soft_pages.bat", "search_games.bat", "run_update.bat")
 foreach ($name in $bats) {
     Copy-Item (Join-Path $Root $name) (Join-Path $Stage $name) -Force
 }
@@ -63,7 +63,7 @@ Write-Host "Copy soft_page_check index (search_soft_pages)..."
 $spcSrc = Join-Path $Root "tools\soft_page_check"
 $spcDst = Join-Path $Stage "tools\soft_page_check"
 New-Item -ItemType Directory -Force -Path $spcDst | Out-Null
-$spcItems = @("history", "list", "soft_pages_urls.txt", "watch_tier_a_urls.txt", "list_scopes.py")
+$spcItems = @("history", "list", "soft_pages_urls.txt", "watch_tier_a_urls.txt", "list_scopes.py", "423down_digest_urls.txt")
 foreach ($item in $spcItems) {
     $src = Join-Path $spcSrc $item
     if (-not (Test-Path $src)) { continue }

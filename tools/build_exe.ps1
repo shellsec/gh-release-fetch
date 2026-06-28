@@ -42,7 +42,12 @@ Build-One "search_soft_pages" "tools\soft_page_check\search_pages.py" @(
     "--paths", $SoftCheck,
     "--hidden-import", "list_scopes"
 )
+Build-One "search_games" "tools\soft_page_check\search_games.py" @(
+    "--paths", $SoftCheck,
+    "--hidden-import", "list_scopes",
+    "--hidden-import", "search_pages"
+)
 
 Write-Host ""
 Write-Host "Done: $Dist" -ForegroundColor Green
-Write-Host "Copy to repo root: lookup_app.exe run_saved_apps.exe search_soft_pages.exe auto_update.exe"
+Write-Host "Copy to repo root: lookup_app.exe run_saved_apps.exe search_soft_pages.exe search_games.exe auto_update.exe"

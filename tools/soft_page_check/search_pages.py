@@ -48,6 +48,7 @@ SCOPE_LABELS = {
     "a": "A 类 · 同步软件",
     "all": "全量 · Lastb 装机页",
     "423down": "423down digest",
+    "gamer520": "gamer520 · 游戏",
     "7xiazai": "7xiazai 列表",
 }
 for _scope in LIST_SCOPE_DEFS:
@@ -56,6 +57,7 @@ for _scope in LIST_SCOPE_DEFS:
 FALLBACK_URL_FILES: list[tuple[str, Path]] = [
     ("all", HERE / "soft_pages_urls.txt"),
     ("a", HERE / "watch_tier_a_urls.txt"),
+    ("gamer520", LIST_DIR / "gamer520_urls.txt"),
 ]
 
 
@@ -118,9 +120,39 @@ def _load_url_file(scope: str, path: Path | str) -> list[dict]:
     return out
 
 
-def build_index() -> list[dict]:
+def _load_gamer520_list(path: Path) -> list[dict]:
+    if not path.is_file():
+        return []
+    label = SCOPE_LABELS.get("gamer520", "gamer520")
+    rows: list[dict] = []
+    for line in path.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if not line or line.startswith("#"):
+            continue
+        if "\t" not in line:
+            continue
+        title, url = line.split("\t", 1)
+        title = title.strip()
+        url = url.strip()
+        if not url.startswith("http"):
+            continue
+        rows.append(
+            {
+                "url": url,
+                "title": title if title != "(列表页无标题)" else "",
+                "scope": "gamer520",
+                "scope_label": label,
+            }
+        )
+    return rows
+
+
+def build_index(scopes: frozenset[str] | None = None) -> list[dict]:
     by_url: dict[str, dict] = {}
     for snap in sorted(HISTORY.glob("titles_latest_*.json")):
+        scope = _scope_from_snapshot(snap.name)
+        if scopes and scope not in scopes:
+            continue
         for row in _load_snapshot(snap):
             url = row["url"]
             prev = by_url.get(url)
@@ -130,14 +162,28 @@ def build_index() -> list[dict]:
                 by_url[url] = row
 
     for scope, path in FALLBACK_URL_FILES:
+        if scopes and scope not in scopes:
+            continue
         for row in _load_url_file(scope, path):
             if row["url"] not in by_url:
                 by_url[row["url"]] = row
+        if scope == "gamer520":
+            for row in _load_gamer520_list(LIST_DIR / "gamer520_list.txt"):
+                prev = by_url.get(row["url"])
+                if prev is None or (not prev.get("title") and row.get("title")):
+                    by_url[row["url"]] = row
 
-    for scope, defn in LIST_SCOPE_DEFS.items():
-        for row in _load_url_file(scope, defn["url_file"]):
-            if row["url"] not in by_url:
-                by_url[row["url"]] = row
+    if scopes:
+        for scope in scopes:
+            if scope in LIST_SCOPE_DEFS:
+                for row in _load_url_file(scope, LIST_SCOPE_DEFS[scope]["url_file"]):
+                    if row["url"] not in by_url:
+                        by_url[row["url"]] = row
+    else:
+        for scope, defn in LIST_SCOPE_DEFS.items():
+            for row in _load_url_file(scope, defn["url_file"]):
+                if row["url"] not in by_url:
+                    by_url[row["url"]] = row
 
     return sorted(by_url.values(), key=lambda r: (r.get("title") or r["url"]).lower())
 
@@ -283,30 +329,20 @@ def pick_and_open(hits: list[dict], auto_open: bool) -> int:
     return 0
 
 
-def main() -> int:
-    if not argv_from_prompt(
-        [
-            "用法: search_soft_pages [选项与关键词...]",
-            "示例: search_soft_pages 7zip",
-            "      search_soft_pages --scope dayanzai 优化",
-            "      search_soft_pages --stats",
-            "",
-            "搜索 soft_page_check 介绍页标题并打开链接（不自动下载）。",
-            "GitHub 清单请用 lookup_app。",
-        ],
-        "请输入关键词（可含 --scope a 等）: ",
-    ):
-        return 0
-
+def run_search(
+    *,
+    default_scope: str = "",
+    index_scopes: frozenset[str] | None = None,
+) -> int:
     ap = argparse.ArgumentParser(description="在 soft_page_check 标题快照中搜索并打开链接")
     ap.add_argument("queries", nargs="*", help="搜索关键词（标题 / URL / 软件名）")
-    ap.add_argument("--scope", default="", help="限定来源，如 dayanzai、a、hybase_system")
+    ap.add_argument("--scope", default=default_scope, help="限定来源，如 dayanzai、a、gamer520")
     ap.add_argument("--open", action="store_true", help="不交互，直接打开前几条匹配")
     ap.add_argument("--stats", action="store_true", help="显示索引统计")
     ap.add_argument("--limit", type=int, default=40, help="最多显示条数")
     args = ap.parse_args()
 
-    index = build_index()
+    index = build_index(index_scopes)
     if args.stats:
         print_stats(index)
         if not args.queries:
@@ -328,9 +364,25 @@ def main() -> int:
 
     hits = search(index, args.queries, args.scope)
     if args.limit and len(hits) > args.limit and not args.open:
-        # pick_and_open handles truncation display
         pass
     return pick_and_open(hits, args.open)
+
+
+def main() -> int:
+    if not argv_from_prompt(
+        [
+            "用法: search_soft_pages [选项与关键词...]",
+            "示例: search_soft_pages 7zip",
+            "      search_soft_pages --scope dayanzai 优化",
+            "      search_soft_pages --stats",
+            "",
+            "搜索 soft_page_check 介绍页标题并打开链接（不自动下载）。",
+            "GitHub 清单请用 lookup_app；游戏频道请用 search_games。",
+        ],
+        "请输入关键词（可含 --scope a 等）: ",
+    ):
+        return 0
+    return run_search()
 
 
 if __name__ == "__main__":
