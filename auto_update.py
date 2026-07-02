@@ -7,6 +7,7 @@ GH Release Fetch（GitHub 发行版拉取工具）：按 GitHub Releases 解析�
 也可用 --apps-dir 指向另一套同级目录（如 VibeCodingToolsDown/，内含 root.json 与分片），与 apps/ 互不合并。
 resolve_via=github_pages_manifest：从 root.json 的 vibecoding_manifest_url（本地路径或 https raw）读取 manifest.json，可与 CI 提交到 main 的 manifest 或 gh-pages 配套。
 resolve_via=go_dev_json：从 https://go.dev/dl/?mode=json 解析 Go 官方稳定版与安装包（golang/go 仓库无 Release 资产）。
+resolve_via=docker_desktop：从 docker/docs 发布说明解析 Docker Desktop 最新版与 desktop.docker.com 直链（非 GitHub Release）。
 合并后仍使用 platforms.windows / darwin / linux；可用 --platform 覆盖当前系统。
 条目的「简介」「分类」仅供人阅读，脚本不解析。
 """
@@ -213,12 +214,25 @@ def probe_network(cfg, verify=True, per_url_timeout=6):
 
 
 def github_headers():
-    return {
+    headers = {
         "User-Agent": (
             "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
             "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
         )
     }
+    token = (os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN") or "").strip()
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+    return headers
+
+
+def github_rate_limited(exc: BaseException) -> bool:
+    if not isinstance(exc, requests.HTTPError) or exc.response is None:
+        return False
+    if exc.response.status_code != 403:
+        return False
+    body = (exc.response.text or "").lower()
+    return "rate limit" in body or "api rate limit" in body
 
 
 def uses_github_pages_manifest(app):
@@ -227,6 +241,25 @@ def uses_github_pages_manifest(app):
 
 def uses_go_dev_json(app):
     return (app.get("resolve_via") or "").strip().lower() == "go_dev_json"
+
+
+def uses_docker_desktop(app):
+    return (app.get("resolve_via") or "").strip().lower() == "docker_desktop"
+
+
+DOCKER_DESKTOP_RELEASE_NOTES_RAW = (
+    "https://raw.githubusercontent.com/docker/docs/main/content/manuals/desktop/release-notes.md"
+)
+
+DOCKER_DESKTOP_ASSETS = {
+    "windows_x64": ("win", "amd64", "Docker%20Desktop%20Installer.exe"),
+    "windows_arm64": ("win", "arm64", "Docker%20Desktop%20Installer.exe"),
+    "darwin_arm64": ("mac", "arm64", "Docker.dmg"),
+    "darwin_amd64": ("mac", "amd64", "Docker.dmg"),
+    "linux_amd64_deb": ("linux", "amd64", "docker-desktop-amd64.deb"),
+    "linux_amd64_rpm": ("linux", "amd64", "docker-desktop-x86_64.rpm"),
+    "linux_amd64_arch": ("linux", "amd64", "docker-desktop-x86_64.pkg.tar.zst"),
+}
 
 
 def _load_vibecoding_manifest(url_or_path, verify=True, apps_config_root=None):
@@ -333,6 +366,60 @@ def resolve_go_dev_json(app, verify, platform_key):
         download_url,
     )
     return version_num, download_url
+
+
+def resolve_docker_desktop(app, verify):
+    """从 docker/docs release-notes.md 解析 Docker Desktop 版本、build 与 desktop.docker.com 直链。"""
+    asset_key = (app.get("docker_desktop_asset") or "").strip()
+    if not asset_key:
+        plat = detect_platform_key()
+        defaults = {
+            "windows": "windows_x64",
+            "darwin": "darwin_arm64",
+            "linux": "linux_amd64_deb",
+        }
+        asset_key = defaults.get(plat, "windows_x64")
+    spec = DOCKER_DESKTOP_ASSETS.get(asset_key)
+    if not spec:
+        raise RuntimeError("未知 docker_desktop_asset=%r" % asset_key)
+
+    raw_url = (
+        app.get("docker_desktop_release_notes_url") or DOCKER_DESKTOP_RELEASE_NOTES_RAW
+    ).strip()
+    response = requests.get(raw_url, headers=github_headers(), timeout=45, verify=verify)
+    response.raise_for_status()
+    md = response.text
+
+    ver_m = re.search(r"##\s+(4\.\d+\.\d+)\s*$", md, re.M)
+    if not ver_m:
+        raise RuntimeError("无法从 Docker Desktop 发布说明解析版本")
+    version = ver_m.group(1)
+
+    build_m = re.search(
+        r'version="' + re.escape(version) + r'"\s+build_path="/(\d+)/"',
+        md,
+    )
+    if not build_m:
+        build_m = re.search(r'build_path="/(\d+)/"', md)
+    if not build_m:
+        raise RuntimeError("无法从 Docker Desktop 发布说明解析 build 号")
+    build = build_m.group(1)
+
+    os_part, arch_part, filename = spec
+    download_url = "https://desktop.docker.com/%s/main/%s/%s/%s" % (
+        os_part,
+        arch_part,
+        build,
+        filename,
+    )
+    logger.info(
+        "[%s] Docker Desktop 解析: %s build=%s -> %s",
+        app["id"],
+        version,
+        build,
+        download_url,
+    )
+    return version, download_url
 
 
 def canonical_releases_url(repo_path, base_url="https://github.com"):
@@ -609,11 +696,24 @@ def check_latest_version(app, debug_html_path, verify=True, cfg=None, platform_k
     if uses_go_dev_json(app):
         plat = platform_key or detect_platform_key()
         return resolve_go_dev_json(app, verify, plat)
+    if uses_docker_desktop(app):
+        return resolve_docker_desktop(app, verify)
+
+    api_rate_limited = False
+    if app.get("prefer_api_assets"):
+        try:
+            return fetch_release_via_api(app, verify=verify)
+        except requests.HTTPError as e:
+            if github_rate_limited(e):
+                api_rate_limited = True
+                logger.warning(
+                    "[%s] GitHub API 限流，改用发布页 HTML 解析（可设置 GITHUB_TOKEN 提高额度）",
+                    app["id"],
+                )
+            else:
+                raise
 
     try:
-        if app.get("prefer_api_assets"):
-            return fetch_release_via_api(app, verify=verify)
-
         used_url, page_html = request_release_page(app, verify=verify, cfg=cfg)
         with open(debug_html_path, "w", encoding="utf-8") as f:
             f.write(page_html)
@@ -739,6 +839,9 @@ def check_latest_version(app, debug_html_path, verify=True, cfg=None, platform_k
         return version, download_url
 
     except Exception as e:
+        if api_rate_limited:
+            logger.error("[%s] 发布页解析失败（API 已限流）: %s", app["id"], e)
+            raise
         logger.warning("[%s] 发布页解析失败，准备回退 GitHub API: %s", app["id"], e)
         try:
             return fetch_release_via_api(app, verify=verify)
@@ -751,7 +854,7 @@ def check_latest_version(app, debug_html_path, verify=True, cfg=None, platform_k
 
 
 def build_fallback_urls(version, app):
-    if uses_github_pages_manifest(app) or uses_go_dev_json(app):
+    if uses_github_pages_manifest(app) or uses_go_dev_json(app) or uses_docker_desktop(app):
         return []
     version_plain = version.lstrip("v")
     repo = (app.get("repo_path") or "").strip("/")
