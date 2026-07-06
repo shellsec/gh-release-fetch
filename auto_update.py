@@ -274,10 +274,15 @@ def _load_vibecoding_manifest(url_or_path, verify=True, apps_config_root=None):
     path = raw
     if not os.path.isabs(path):
         rel = path.lstrip("./\\")
+        # 依次尝试：配置根(apps/)、配置根上一级(安装/仓库根)、脚本所在目录
+        candidates = []
         if apps_config_root:
-            path = os.path.normpath(os.path.join(apps_config_root, rel))
-        else:
-            path = os.path.normpath(os.path.join(SCRIPT_DIR, rel))
+            candidates.append(os.path.normpath(os.path.join(apps_config_root, rel)))
+            candidates.append(
+                os.path.normpath(os.path.join(os.path.dirname(apps_config_root), rel))
+            )
+        candidates.append(os.path.normpath(os.path.join(SCRIPT_DIR, rel)))
+        path = next((p for p in candidates if os.path.isfile(p)), candidates[0])
     with open(path, encoding="utf-8") as f:
         return json.load(f)
 
