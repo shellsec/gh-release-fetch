@@ -46,6 +46,7 @@ powershell -ExecutionPolicy Bypass -File tools\pack_windows_release.ps1
 - `tools/soft_page_check/`（`history`、`list` 等，供 search_soft_pages / search_games）
 - `README.txt`、`VERSION.txt`、`saved_apps_windows.example.json`
 - `CATALOG.md`、`RECOMMENDED.zh-CN.md` 等导读（可选阅读）
+- `VibeCodingToolsDown/dist/vibecoding/manifest.json`（VirtualBox / Cyberduck 等 manifest 解析）
 
 不含 Python 源码与维护脚本（`monthly_check` 等请用完整仓库）。
 

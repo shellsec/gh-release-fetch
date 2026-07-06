@@ -402,8 +402,13 @@ def fetch_antigravity(s: requests.Session) -> dict[str, Any]:
         lambda u: "darwin-x64" in u and u.lower().endswith(".dmg")
     )
     lin = pick(lambda u: "linux-x64" in u and u.lower().endswith(".tar.gz"))
-    ver_m = re.search(r"/stable/(\d+\.\d+\.\d+)-\d+/", urls[0])
-    ver = ver_m.group(1) if ver_m else "unknown"
+    vers = [
+        m.group(1)
+        for u in urls
+        for m in [re.search(r"/stable/(\d+\.\d+\.\d+)-\d+/", u)]
+        if m
+    ]
+    ver = max(vers, key=_qoder_alicdn_version_sort_key) if vers else "unknown"
     return _item(
         "antigravity",
         ver,
@@ -430,6 +435,45 @@ def _gh_latest_assets(s: requests.Session, owner: str, repo: str) -> tuple[str, 
     return tag, assets
 
 
+def fetch_cyberduck(s: requests.Session) -> dict[str, Any]:
+    """Cyberduck：iterate-ch/cyberduck 无 GitHub Release；从 cyberduck.io/download 解析 update.cyberduck.io 直链。"""
+    r = s.get("https://cyberduck.io/download/", timeout=40)
+    r.raise_for_status()
+    html = r.text.replace("\\/", "/")
+    win_m = re.search(
+        r"https://update\.cyberduck\.io/windows/Cyberduck-Installer-([\d.]+)\.exe",
+        html,
+        re.I,
+    )
+    mac_m = re.search(
+        r"https://update\.cyberduck\.io/Cyberduck-([\d.]+)\.zip",
+        html,
+        re.I,
+    )
+    if not win_m and not mac_m:
+        raise RuntimeError("未能从 cyberduck.io/download 解析安装包 URL")
+    ver = win_m.group(1) if win_m else mac_m.group(1)
+    win = (
+        {"url": win_m.group(0), "filename": os.path.basename(win_m.group(0))}
+        if win_m
+        else None
+    )
+    mac = (
+        {"url": mac_m.group(0), "filename": os.path.basename(mac_m.group(0))}
+        if mac_m
+        else None
+    )
+    return _item(
+        "cyberduck",
+        ver,
+        {"windows": win, "darwin": mac, "linux": None},
+        notes=(
+            "源码 iterate-ch/cyberduck；安装包来自 update.cyberduck.io（非 GitHub Release）。"
+            " macOS 为 .zip；Linux 请用发行版仓库或官网安装说明。"
+        ),
+    )
+
+
 def fetch_restic(s: requests.Session) -> dict[str, Any]:
     tag, assets = _gh_latest_assets(s, "restic", "restic")
     ver = tag.lstrip("v") if tag.startswith("v") else tag
@@ -450,6 +494,71 @@ def fetch_restic(s: requests.Session) -> dict[str, Any]:
         ver,
         {"windows": win, "darwin": mac, "linux": lin},
         notes="GitHub restic/restic latest；Windows zip；macOS 优先 arm64 .bz2 否则 amd64；Linux 为 amd64 .bz2（arm64 请用发行版或主仓库 apps 分架构项）。",
+    )
+
+
+def fetch_virtualbox(s: requests.Session) -> dict[str, Any]:
+    """VirtualBox：无 GitHub Release；从 virtualbox.org/wiki/Downloads 解析 download.virtualbox.org 直链。"""
+    r = s.get("https://www.virtualbox.org/wiki/Downloads", timeout=40)
+    r.raise_for_status()
+    html = r.text.replace("\\/", "/")
+    urls = sorted(
+        set(
+            re.findall(
+                r"https://download\.virtualbox\.org/virtualbox/[\d.]+/"
+                r"VirtualBox-[\d.]+-\d+-[^\s\"'<>]+\.(?:exe|dmg|tar\.bz2)",
+                html,
+                re.I,
+            )
+        )
+    )
+    if not urls:
+        raise RuntimeError("未能从 virtualbox.org/wiki/Downloads 解析安装包 URL")
+
+    def pick(pred):
+        for u in urls:
+            if pred(u):
+                return {"url": u, "filename": os.path.basename(u)}
+        return None
+
+    win = pick(lambda u: u.endswith("-Win.exe"))
+    mac = pick(lambda u: "macOSArm64.dmg" in u) or pick(lambda u: u.endswith("-OSX.dmg"))
+    lin = pick(lambda u: re.search(r"VirtualBox-[\d.]+\.tar\.bz2$", u, re.I))
+    ver_m = re.search(r"/virtualbox/([\d.]+)/", urls[0])
+    ver = ver_m.group(1) if ver_m else "unknown"
+    return _item(
+        "virtualbox",
+        ver,
+        {"windows": win, "darwin": mac, "linux": lin},
+        notes=(
+            "Oracle VirtualBox；安装包来自 download.virtualbox.org（非 GitHub Release）。"
+            " macOS 优先 Apple Silicon dmg；Linux 为通用 tar.bz2，各发行版 deb/rpm 见官网。"
+        ),
+    )
+
+
+def fetch_cutter(s: requests.Session) -> dict[str, Any]:
+    tag, assets = _gh_latest_assets(s, "rizinorg", "cutter")
+    ver = tag.lstrip("v") if tag.startswith("v") else tag
+
+    def pick(pred):
+        for name, u in assets.items():
+            if pred(name):
+                return {"url": u, "filename": name}
+        return None
+
+    win = pick(lambda n: "Windows" in n and n.endswith(".zip"))
+    mac = pick(lambda n: "macOS-arm64" in n and n.endswith(".dmg")) or pick(
+        lambda n: "macOS" in n and n.endswith(".dmg")
+    )
+    lin = pick(lambda n: "Linux" in n and n.endswith(".AppImage") and "Qt5" not in n) or pick(
+        lambda n: "Linux" in n and "AppImage" in n
+    )
+    return _item(
+        "cutter",
+        ver,
+        {"windows": win, "darwin": mac, "linux": lin},
+        notes="GitHub rizinorg/cutter latest；Windows zip；macOS dmg；Linux AppImage（优先非 Qt5 构建）。",
     )
 
 
@@ -606,6 +715,70 @@ def _qoder_alicdn_version_sort_key(v: str) -> tuple[int, ...]:
     return tuple(out)
 
 
+def fetch_zcode(s: requests.Session) -> dict[str, Any]:
+    """ZCode 桌面端：从 zcode.z.ai 首页解析 cdn-zcode.z.ai 最新版本与安装包直链。"""
+    vers: set[str] = set()
+    for page in ("https://zcode.z.ai/", "https://zcode.z.ai/en", "https://zcode.z.ai/cn"):
+        r = s.get(page, timeout=40)
+        r.raise_for_status()
+        html = r.text
+        vers.update(re.findall(r"cdn-zcode\.z\.ai/zcode/electron/releases/([\d.]+)/", html))
+        vers.update(re.findall(r"cdn\.zcode-ai\.com/zcode/electron/releases/([\d.]+)/", html))
+    if not vers:
+        raise RuntimeError("无法从 zcode.z.ai 解析版本号")
+    ver = max(vers, key=_qoder_alicdn_version_sort_key)
+    base = f"https://cdn-zcode.z.ai/zcode/electron/releases/{ver}/"
+
+    def pkg(name: str) -> dict[str, str]:
+        return {"url": base + name, "filename": name}
+
+    return _item(
+        "zcode",
+        ver,
+        {
+            "windows": pkg(f"ZCode-{ver}-win-x64.exe"),
+            "darwin": pkg(f"ZCode-{ver}-mac-arm64.dmg"),
+            "linux": pkg(f"ZCode-{ver}-linux-x64.AppImage"),
+        },
+        notes="自 zcode.z.ai 首页 CDN（cdn-zcode.z.ai）解析；Intel Mac 可用 mac-x64.dmg。",
+    )
+
+
+def _qoder_install_urls_from_site_chunks(
+    s: requests.Session, html: str, page_url: str
+) -> tuple[str, list[str]]:
+    """从 qoder.com 本站 Next.js chunks 解析 download.qoder.com 安装包直链（2026 起主路径）。"""
+    origin_m = re.match(r"(https://[^/]+)", page_url)
+    origin = origin_m.group(1) if origin_m else "https://qoder.com"
+    chunk_paths = sorted(set(re.findall(r'/_next/static/chunks/[^"\']+\.js', html)))
+    inst_pat = re.compile(
+        r"https://[a-zA-Z0-9./_?=&%-]{12,500}\.(?:exe|dmg|deb|rpm|AppImage)\b",
+        re.I,
+    )
+    found: set[str] = set()
+    for rel in chunk_paths[:55]:
+        ju = origin + rel
+        try:
+            jr = s.get(ju, timeout=40)
+            jr.raise_for_status()
+            body = jr.text.replace("\\/", "/")
+            for u in inst_pat.findall(body):
+                if "${" in u or "{" in u:
+                    continue
+                found.add(u.split("?", 1)[0])
+        except Exception:
+            continue
+    if not found:
+        return "unknown", []
+    vers = re.findall(
+        r"(?:Qoder|qoder)[-_]?(\d+\.\d+\.\d+)",
+        " ".join(found),
+        flags=re.I,
+    )
+    ver = max(vers, key=_qoder_alicdn_version_sort_key) if vers else "latest"
+    return ver, sorted(found)
+
+
 def _qoder_install_urls_from_chunks(s: requests.Session, html: str) -> tuple[str, list[str]]:
     """从 qoder.com 下载页 HTML 解析 alicdn 版本号并扫描 _next/static/chunks 下的 JS 直链。"""
     vers = sorted(
@@ -656,19 +829,24 @@ def _qoder_install_urls_from_chunks(s: requests.Session, html: str) -> tuple[str
 
 
 def _pick_qoder_installers(hits: list[str]) -> tuple[str | None, str | None, str | None]:
-    """优先选 Qoder IDE 包，避免误选 QoderWork 独立应用（若仅有 Work 包则回退）。"""
+    """优先选 Qoder IDE 包，避免误选 QoderWork / QoderWake 独立应用。"""
 
     def is_work(u: str) -> bool:
         x = u.lower()
-        return "qoderwork" in x or "qoder-work" in x or "qoder_work" in x
+        return (
+            "qoderwork" in x
+            or "qoder-work" in x
+            or "qoder_work" in x
+            or "qoderwake" in x
+        )
 
-    win = next((h for h in hits if h.lower().endswith(".exe") and not is_work(h)), None) or next(
-        (h for h in hits if h.lower().endswith(".exe")), None
+    win_pool = [h for h in hits if h.lower().endswith(".exe") and not is_work(h)]
+    win = next((h for h in win_pool if "usersetup" not in h.lower() and "setup" in h.lower()), None) or (
+        win_pool[0] if win_pool else None
     )
-    mac = next((h for h in hits if h.lower().endswith(".dmg") and not is_work(h)), None) or next(
-        (h for h in hits if h.lower().endswith(".dmg")), None
-    )
-    lin = next((h for h in hits if h.lower().endswith((".deb", ".rpm", ".appimage"))), None)
+    mac_pool = [h for h in hits if h.lower().endswith(".dmg") and not is_work(h)]
+    mac = next((h for h in mac_pool if "arm64" in h.lower()), None) or (mac_pool[0] if mac_pool else None)
+    lin = next((h for h in hits if h.lower().endswith((".deb", ".rpm", ".appimage")) and not is_work(h)), None)
     return win, mac, lin
 
 
@@ -685,15 +863,85 @@ def _pick_qoderwork_installers(hits: list[str]) -> tuple[str | None, str | None,
     return win, mac, lin
 
 
+def _windsurf_update(s: requests.Session, platform: str) -> tuple[str, str]:
+    r = s.get(
+        f"https://windsurf-stable.codeium.com/api/update/{platform}/stable/latest",
+        timeout=40,
+    )
+    r.raise_for_status()
+    j = r.json()
+    ver = str(j.get("windsurfVersion") or j.get("version") or "unknown")
+    url = (j.get("url") or "").strip()
+    return ver, url
+
+
+def fetch_windsurf(s: requests.Session) -> dict[str, Any]:
+    """Windsurf / Devin Desktop：windsurf-stable.codeium.com/api/update/{platform}/stable/latest。"""
+    win_ver, win_url = _windsurf_update(s, "win32-x64")
+    _, mac_arm = _windsurf_update(s, "darwin-arm64")
+    _, mac_x64 = _windsurf_update(s, "darwin-x64")
+    mac_url = mac_arm or mac_x64
+    _, lin_url = _windsurf_update(s, "linux-x64")
+    return _item(
+        "windsurf",
+        win_ver,
+        {
+            "windows": {"url": win_url, "filename": os.path.basename(win_url.split("?", 1)[0])}
+            if win_url
+            else None,
+            "darwin": {"url": mac_url, "filename": os.path.basename(mac_url.split("?", 1)[0])}
+            if mac_url
+            else None,
+            "linux": {"url": lin_url, "filename": os.path.basename(lin_url.split("?", 1)[0])}
+            if lin_url
+            else None,
+        },
+        notes=(
+            "官方 update API（包名现为 Devin*，产品 Windsurf/Devin Desktop）。"
+            " Windows 为 DevinSetup-x64（系统安装包）；亦可用 win32-x64-user 得 DevinUserSetup。"
+        ),
+    )
+
+
+def fetch_lmstudio(s: requests.Session) -> dict[str, Any]:
+    """LM Studio：lmstudio.ai/download/latest/{os}/{arch} 重定向至 installers.lmstudio.ai。"""
+
+    def resolve(path_suffix: str) -> tuple[str, str]:
+        start = f"https://lmstudio.ai/download/latest/{path_suffix}"
+        with s.get(start, allow_redirects=True, timeout=40, stream=True) as r:
+            r.raise_for_status()
+            final = r.url
+        vm = re.search(r"/(\d+\.\d+\.\d+)-\d+/", final)
+        ver = vm.group(1) if vm else "unknown"
+        return ver, final
+
+    win_ver, win_url = resolve("win32/x64")
+    mac_ver, mac_url = resolve("darwin/arm64")
+    lin_ver, lin_url = resolve("linux/x64")
+    ver = max([win_ver, mac_ver, lin_ver], key=_qoder_alicdn_version_sort_key)
+    return _item(
+        "lmstudio",
+        ver,
+        {
+            "windows": {"url": win_url, "filename": os.path.basename(win_url.split("?", 1)[0])},
+            "darwin": {"url": mac_url, "filename": os.path.basename(mac_url.split("?", 1)[0])},
+            "linux": {"url": lin_url, "filename": os.path.basename(lin_url.split("?", 1)[0])},
+        },
+        notes="自 lmstudio.ai/download/latest 重定向链；Intel Mac 可用 darwin/x64。",
+    )
+
+
 def fetch_qoder(s: requests.Session) -> dict[str, Any]:
-    """新版官网为 Next.js：扫描 alicdn chunks；仍兼容旧版 download/page-*.js 分片。"""
+    """新版官网为 Next.js：优先 qoder.com chunks + download.qoder.com；兼容 alicdn 与旧 page JS。"""
     notes: list[str] = []
     try:
         for page in ("https://qoder.com/zh/download", "https://qoder.com/en/download"):
             r = s.get(page, timeout=40)
             r.raise_for_status()
             html = r.text
-            ver, hits = _qoder_install_urls_from_chunks(s, html)
+            ver, hits = _qoder_install_urls_from_site_chunks(s, html, page)
+            if not hits:
+                ver, hits = _qoder_install_urls_from_chunks(s, html)
             win, mac, lin = _pick_qoder_installers(hits)
             if win or mac or lin:
                 return _item(
@@ -710,7 +958,7 @@ def fetch_qoder(s: requests.Session) -> dict[str, Any]:
                         if lin
                         else None,
                     },
-                    notes=f"自 {page} 的 g.alicdn.com Qoder Next chunks 解析。",
+                    notes=f"自 {page} 解析（download.qoder.com 或 g.alicdn.com chunks）。",
                 )
             # 旧版 page 分片
             chunks = re.findall(
@@ -780,7 +1028,9 @@ def fetch_qoderwork(s: requests.Session) -> dict[str, Any]:
                 continue
             r.raise_for_status()
             html = r.text
-            ver, hits = _qoder_install_urls_from_chunks(s, html)
+            ver, hits = _qoder_install_urls_from_site_chunks(s, html, page)
+            if not hits:
+                ver, hits = _qoder_install_urls_from_chunks(s, html)
             win, mac, lin = _pick_qoderwork_installers(hits)
             if win or mac or lin:
                 return _item(
@@ -959,12 +1209,18 @@ def main():
         fetch_trae_solo,
         fetch_qoder,
         fetch_qoderwork,
+        fetch_zcode,
+        fetch_windsurf,
+        fetch_lmstudio,
         fetch_codebuddy,
         fetch_codebuddy_cn,
         fetch_workbuddy,
         fetch_antigravity,
         fetch_kiro,
+        fetch_cyberduck,
         fetch_restic,
+        fetch_virtualbox,
+        fetch_cutter,
         fetch_syncthing,
         fetch_sqlitebrowser,
         fetch_caesium,

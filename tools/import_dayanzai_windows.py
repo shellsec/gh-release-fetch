@@ -1,15 +1,17 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-从 dayanzai.me/windows 抓取开源软件条目，解析 GitHub 仓库并追加到 apps/windows。
+从 dayanzai.me 抓取开源软件条目，解析 GitHub 仓库并追加到 apps/windows。
 
 用法:
   python tools/import_dayanzai_windows.py --dry-run          # 仅统计
   python tools/import_dayanzai_windows.py --max-pages 5      # 试跑前 5 页
-  python tools/import_dayanzai_windows.py                    # 全量（约 151 页）
+  python tools/import_dayanzai_windows.py                    # 全量 windows 列表（约 151 页）
+  python tools/import_dayanzai_windows.py --search 开源      # 搜索「开源」全站翻页（约 57 页）
   python tools/import_dayanzai_windows.py --apply            # 写入 JSON
 
 筛选：标题/摘要/标签含「开源」或标签含 GitHub；正文含 github.com 链接。
+使用 --search 时列表已由站点过滤，不再二次套用 is_opensource_candidate。
 无直链时尝试 GitHub Search API（需 GITHUB_TOKEN 环境变量，否则跳过）。
 新条目默认写入 apps/windows/99-未匹配-windows分片.json。
 缓存目录 tools/dayanzai_cache/ 仅加速重复抓取，已 .gitignore，日常 lookup/run_saved_apps 闭环不需要。
@@ -66,9 +68,23 @@ def fetch(url: str, retries: int = 3, allow_fail: bool = False) -> str:
     raise last_err  # type: ignore[misc]
 
 
-def max_page(html: str) -> int:
-    nums = [int(x) for x in re.findall(r"/windows/page/(\d+)", html)]
+def max_page(html: str, search: str | None = None) -> int:
+    if search:
+        nums = [int(x) for x in re.findall(r"page/(\d+)", html)]
+    else:
+        nums = [int(x) for x in re.findall(r"/windows/page/(\d+)", html)]
     return max(nums) if nums else 1
+
+
+def list_url_for_page(page: int, search: str | None) -> str:
+    if search:
+        q = quote(search)
+        if page == 1:
+            return f"{BASE}/?s={q}"
+        return f"{BASE}/page/{page}/?s={q}"
+    if page == 1:
+        return LIST_URL
+    return f"{LIST_URL}/page/{page}"
 
 
 def list_entries(html: str) -> list[dict]:
@@ -238,21 +254,27 @@ def load_catalog(platform: str = "windows") -> tuple[dict[str, dict], set[str], 
     return by_repo, ids, repos
 
 
-def list_cache_path(page: int) -> str:
-    return os.path.join(DATA_DIR, "lists", f"page_{page}.html")
+def list_cache_path(page: int, search: str | None = None) -> str:
+    sub = "lists"
+    if search:
+        sub = os.path.join("lists", f"search_{quote(search, safe='')}")
+    return os.path.join(DATA_DIR, sub, f"page_{page}.html")
 
 
-def crawl_list_pages(max_pages: int | None) -> list[dict]:
-    html = fetch(LIST_URL)
-    mp = max_page(html)
+def crawl_list_pages(max_pages: int | None, search: str | None = None) -> list[dict]:
+    first_url = list_url_for_page(1, search)
+    html = fetch(first_url)
+    mp = max_page(html, search)
     limit = mp if max_pages is None else min(max_pages, mp)
-    print(f"列表共 {mp} 页，将抓取 {limit} 页", flush=True)
+    label = f"搜索「{search}」" if search else "windows 列表"
+    print(f"{label}共 {mp} 页，将抓取 {limit} 页", flush=True)
 
     all_entries: list[dict] = []
     seen_url: set[str] = set()
-    os.makedirs(os.path.join(DATA_DIR, "lists"), exist_ok=True)
+    cache_dir = os.path.dirname(list_cache_path(1, search))
+    os.makedirs(cache_dir, exist_ok=True)
     for p in range(1, limit + 1):
-        cache = list_cache_path(p)
+        cache = list_cache_path(p, search)
         if p == 1:
             page_html = html
             with open(cache, "w", encoding="utf-8") as f:
@@ -262,7 +284,7 @@ def crawl_list_pages(max_pages: int | None) -> list[dict]:
                 with open(cache, encoding="utf-8", errors="replace") as f:
                     page_html = f.read()
             else:
-                page_html = fetch(f"{LIST_URL}/page/{p}")
+                page_html = fetch(list_url_for_page(p, search))
                 with open(cache, "w", encoding="utf-8") as f:
                     f.write(page_html)
                 time.sleep(0.25)
@@ -342,15 +364,19 @@ def main():
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--apply", action="store_true")
     ap.add_argument("--max-pages", type=int, default=None)
+    ap.add_argument("--search", default=None, help="站点搜索关键词，如：开源")
     ap.add_argument("--max-articles", type=int, default=None, help="限制解析正文篇数（调试）")
     args = ap.parse_args()
 
     token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
     _, existing_ids, existing_repos = load_catalog("windows")
 
-    entries = crawl_list_pages(args.max_pages)
-    candidates = [e for e in entries if is_opensource_candidate(e)]
-    print(f"全站条目 {len(entries)}，开源/GitHub 候选 {len(candidates)}", flush=True)
+    entries = crawl_list_pages(args.max_pages, args.search)
+    if args.search:
+        candidates = entries
+    else:
+        candidates = [e for e in entries if is_opensource_candidate(e)]
+    print(f"全站条目 {len(entries)}，待解析候选 {len(candidates)}", flush=True)
 
     if args.max_articles:
         candidates = candidates[: args.max_articles]
@@ -388,7 +414,10 @@ def main():
     print(f"  可新增: {len(new_apps)}")
 
     os.makedirs(DATA_DIR, exist_ok=True)
-    report_path = os.path.join(DATA_DIR, "import_report.json")
+    report_name = "import_report.json"
+    if args.search:
+        report_name = f"import_report_search_{quote(args.search, safe='')}.json"
+    report_path = os.path.join(DATA_DIR, report_name)
     with open(report_path, "w", encoding="utf-8") as f:
         json.dump(
             {

@@ -59,6 +59,16 @@ if (Test-Path (Join-Path $Root "apps-mobile")) {
     Copy-Item (Join-Path $Root "apps-mobile") (Join-Path $Stage "apps-mobile") -Recurse -Force
 }
 
+$manifestSrc = Join-Path $Root "VibeCodingToolsDown\dist\vibecoding"
+if (Test-Path $manifestSrc) {
+    Write-Host "Copy VibeCodingToolsDown/dist/vibecoding/ (manifest for VirtualBox etc.)..."
+    $manifestDst = Join-Path $Stage "VibeCodingToolsDown\dist\vibecoding"
+    New-Item -ItemType Directory -Force -Path (Split-Path $manifestDst) | Out-Null
+    Copy-Item $manifestSrc $manifestDst -Recurse -Force
+} else {
+    Write-Warning "Missing $manifestSrc — run: python VibeCodingToolsDown/scripts/build_manifest.py"
+}
+
 Write-Host "Copy soft_page_check index (search_soft_pages)..."
 $spcSrc = Join-Path $Root "tools\soft_page_check"
 $spcDst = Join-Path $Stage "tools\soft_page_check"

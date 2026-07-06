@@ -1,40 +1,36 @@
-2026-06-29 15:47:14,953 - INFO - 已从配置目录合并：E:\GITHUB\已经发布\gh-release-fetch\apps — windows 652 项
-2026-06-29 15:47:14,954 - INFO - 使用 platforms.windows（共 652 项）
-2026-06-29 15:47:14,954 - WARNING - 已关闭 TLS 证书校验（--insecure 或 apps.json ssl_verify=false）
-2026-06-29 15:47:16,302 - INFO - 网络探测通过：https://github.com
-2026-06-29 15:47:16,303 - INFO - === [lightbulb] 开始 === [平台: windows] [下载目录: E:\GITHUB\已经发布\gh-release-fetch\windows]
-2026-06-29 15:47:16,303 - INFO - [lightbulb] 尝试使用 GitHub API: https://api.github.com/repos/Tyrrrz/LightBulb/releases/latest
-2026-06-29 15:47:17,212 - INFO - [lightbulb] 从 GitHub API 中找到下载链接: https://github.com/Tyrrrz/LightBulb/releases/download/2.7.1/LightBulb-Installer.win-arm64.exe
-2026-06-29 15:47:17,216 - INFO - [lightbulb] 通过 GitHub API 找到最新版本: 2.7.1
-2026-06-29 15:47:17,218 - INFO - 使用从页面解析的下载链接: https://github.com/Tyrrrz/LightBulb/releases/download/2.7.1/LightBulb-Installer.win-arm64.exe
-2026-06-29 15:47:17,218 - INFO - 开始下载安装程序到: E:\GITHUB\已经发布\gh-release-fetch\windows\setup-2.7.1.exe [平台: windows]
-2026-06-29 15:47:17,218 - INFO - 尝试下载源 1/4: https://gh-proxy.com/https://github.com/Tyrrrz/LightBulb/releases/download/2.7.1/LightBulb-Installer.win-arm64.exe
-2026-06-29 15:48:23,883 - INFO - 已从配置目录合并：apps — windows 652 项
-2026-06-29 15:48:23,884 - INFO - [lightbulb] 尝试使用 GitHub API: https://api.github.com/repos/Tyrrrz/LightBulb/releases/latest
-2026-06-29 15:48:24,874 - INFO - [lightbulb] 从 GitHub API 中找到下载链接: https://github.com/Tyrrrz/LightBulb/releases/download/2.7.1/LightBulb-Installer.win-x64.exe
-2026-06-29 15:48:24,874 - INFO - [lightbulb] 通过 GitHub API 找到最新版本: 2.7.1
-2026-06-29 15:52:33,368 - INFO - 已从配置目录合并：apps — windows 653 项
-2026-06-29 15:52:33,368 - INFO - [dev_sidecar] 尝试使用 GitHub API: https://api.github.com/repos/docmirror/dev-sidecar/releases/latest
-2026-06-29 15:52:34,230 - INFO - [dev_sidecar] 从 GitHub API 中找到下载链接: https://github.com/docmirror/dev-sidecar/releases/download/v2.1.1/DevSidecar-2.1.1-windows-x86_64.exe
-2026-06-29 15:52:34,230 - INFO - [dev_sidecar] 通过 GitHub API 找到最新版本: v2.1.1
-2026-06-30 12:25:41,683 - INFO - 已从配置目录合并：apps — windows 654 项
-2026-06-30 12:25:41,683 - INFO - [wsl] 尝试使用 GitHub API: https://api.github.com/repos/microsoft/WSL/releases/latest
-2026-06-30 12:25:47,901 - INFO - 已从配置目录合并：apps — windows 654 项
-2026-06-30 12:25:47,901 - INFO - [wsl] 尝试使用 GitHub API: https://api.github.com/repos/microsoft/WSL/releases/latest
-2026-06-30 14:07:46,236 - INFO - 已从配置目录合并：apps — windows 656 项
-2026-06-30 14:07:46,847 - INFO - [docker_desktop] Docker Desktop 解析: 4.80.0 build=232116 -> https://desktop.docker.com/win/main/amd64/232116/Docker%20Desktop%20Installer.exe
-2026-06-30 14:07:46,849 - INFO - [docker_compose] 尝试使用 GitHub API: https://api.github.com/repos/docker/compose/releases/latest
-2026-06-30 14:07:47,716 - INFO - [docker_compose] 从 GitHub API 中找到下载链接: https://github.com/docker/compose/releases/download/v5.2.0/docker-compose-windows-x86_64.exe
-2026-06-30 14:07:47,717 - INFO - [docker_compose] 通过 GitHub API 找到最新版本: v5.2.0
-2026-06-30 22:23:13,533 - INFO - [nextplayer] 尝试使用 GitHub API: https://api.github.com/repos/anilbeesetti/nextplayer/releases/latest
-2026-06-30 22:23:14,417 - INFO - [nextplayer] 从 GitHub API 中找到下载链接: https://github.com/anilbeesetti/nextplayer/releases/download/v0.16.3/nextplayer-v0.16.3-universal.apk
-2026-06-30 22:23:14,417 - INFO - [nextplayer] 通过 GitHub API 找到最新版本: v0.16.3
-2026-07-02 11:04:15,590 - INFO - 已从配置目录合并：apps — windows 656 项
-2026-07-02 11:04:15,590 - INFO - [heu_kms] 尝试使用 GitHub API: https://api.github.com/repos/zbezj/HEU_KMS_Activator/releases/latest
-2026-07-02 11:04:16,452 - INFO - [heu_kms] 从 GitHub API 中找到下载链接: https://github.com/zbezj/HEU_KMS_Activator/releases/download/63.4.0/HEU_KMS_Activator_v63.4.0.rar
-2026-07-02 11:04:16,453 - INFO - [heu_kms] 通过 GitHub API 找到最新版本: 63.4.0
-2026-07-02 11:21:32,578 - INFO - [mas_scripts] 尝试使用 GitHub API: https://api.github.com/repos/massgravel/Microsoft-Activation-Scripts/releases/latest
-2026-07-02 11:54:59,432 - INFO - 已从配置目录合并：apps — windows 656 项
-2026-07-02 11:54:59,435 - INFO - [zen_desktop] 尝试使用 GitHub API: https://api.github.com/repos/irbis-sh/zen-desktop/releases/latest
-2026-07-02 11:55:00,380 - INFO - [zen_desktop] 从 GitHub API 中找到下载链接: https://github.com/irbis-sh/zen-desktop/releases/download/v0.24.0/Zen-amd64-installer.exe
-2026-07-02 11:55:00,380 - INFO - [zen_desktop] 通过 GitHub API 找到最新版本: v0.24.0
+2026-07-02 15:12:21,880 - INFO - [ollama] 尝试使用 GitHub API: https://api.github.com/repos/ollama/ollama/releases/latest
+2026-07-02 15:12:22,831 - INFO - [ollama] 从 GitHub API 中找到下载链接: https://github.com/ollama/ollama/releases/download/v0.31.1/Ollama-darwin.zip
+2026-07-02 15:12:22,832 - INFO - [ollama] 通过 GitHub API 找到最新版本: v0.31.1
+2026-07-02 15:12:22,836 - INFO - [opencode] 尝试使用 GitHub API: https://api.github.com/repos/sst/opencode/releases/latest
+2026-07-02 15:12:25,339 - INFO - [opencode] 从 GitHub API 中找到下载链接: https://github.com/anomalyco/opencode/releases/download/v1.17.13/opencode-desktop-mac-arm64.dmg
+2026-07-02 15:12:25,340 - INFO - [opencode] 通过 GitHub API 找到最新版本: v1.17.13
+2026-07-02 15:12:25,343 - INFO - [aichat] 尝试使用 GitHub API: https://api.github.com/repos/sigoden/aichat/releases/latest
+2026-07-02 15:12:26,227 - INFO - [aichat] 从 GitHub API 中找到下载链接: https://github.com/sigoden/aichat/releases/download/v0.30.0/aichat-v0.30.0-aarch64-apple-darwin.tar.gz
+2026-07-02 15:12:26,228 - INFO - [aichat] 通过 GitHub API 找到最新版本: v0.30.0
+2026-07-02 15:12:26,231 - INFO - [roo_code] 尝试使用 GitHub API: https://api.github.com/repos/RooCodeInc/Roo-Code/releases/latest
+2026-07-02 15:12:27,079 - INFO - [roo_code] 从 GitHub API 中找到下载链接: https://github.com/RooCodeInc/Roo-Code/releases/download/v3.54.0/roo-cline-3.54.0.vsix
+2026-07-02 15:12:27,080 - INFO - [roo_code] 通过 GitHub API 找到最新版本: v3.54.0
+2026-07-02 15:12:27,083 - INFO - [ollama] 尝试使用 GitHub API: https://api.github.com/repos/ollama/ollama/releases/latest
+2026-07-02 15:12:30,124 - INFO - [ollama] 从 GitHub API 中找到下载链接: https://github.com/ollama/ollama/releases/download/v0.31.1/ollama-linux-amd64.tar.zst
+2026-07-02 15:12:30,124 - INFO - [ollama] 通过 GitHub API 找到最新版本: v0.31.1
+2026-07-02 15:12:30,128 - INFO - [opencode] 尝试使用 GitHub API: https://api.github.com/repos/sst/opencode/releases/latest
+2026-07-02 15:12:31,106 - INFO - [opencode] 从 GitHub API 中找到下载链接: https://github.com/anomalyco/opencode/releases/download/v1.17.13/opencode-desktop-linux-x86_64.AppImage
+2026-07-02 15:12:31,107 - INFO - [opencode] 通过 GitHub API 找到最新版本: v1.17.13
+2026-07-02 15:12:31,111 - INFO - [aichat] 尝试使用 GitHub API: https://api.github.com/repos/sigoden/aichat/releases/latest
+2026-07-02 15:12:31,823 - INFO - [aichat] 从 GitHub API 中找到下载链接: https://github.com/sigoden/aichat/releases/download/v0.30.0/aichat-v0.30.0-x86_64-unknown-linux-musl.tar.gz
+2026-07-02 15:12:31,823 - INFO - [aichat] 通过 GitHub API 找到最新版本: v0.30.0
+2026-07-02 15:12:31,827 - INFO - [roo_code] 尝试使用 GitHub API: https://api.github.com/repos/RooCodeInc/Roo-Code/releases/latest
+2026-07-02 15:12:32,548 - INFO - [roo_code] 从 GitHub API 中找到下载链接: https://github.com/RooCodeInc/Roo-Code/releases/download/v3.54.0/roo-cline-3.54.0.vsix
+2026-07-02 15:12:32,549 - INFO - [roo_code] 通过 GitHub API 找到最新版本: v3.54.0
+2026-07-02 15:12:32,551 - INFO - [zed] 尝试使用 GitHub API: https://api.github.com/repos/zed-industries/zed/releases/latest
+2026-07-02 15:12:33,441 - INFO - [zed] 从 GitHub API 中找到下载链接: https://github.com/zed-industries/zed/releases/download/v1.9.0/Zed-aarch64.dmg
+2026-07-02 15:12:33,441 - INFO - [zed] 通过 GitHub API 找到最新版本: v1.9.0
+2026-07-02 15:12:33,445 - INFO - [zed] 尝试使用 GitHub API: https://api.github.com/repos/zed-industries/zed/releases/latest
+2026-07-02 15:12:37,151 - INFO - [zed] 从 GitHub API 中找到下载链接: https://github.com/zed-industries/zed/releases/download/v1.9.0/zed-linux-x86_64.tar.gz
+2026-07-02 15:12:37,151 - INFO - [zed] 通过 GitHub API 找到最新版本: v1.9.0
+2026-07-02 15:48:14,578 - INFO - [calendar_diary] 尝试使用 GitHub API: https://api.github.com/repos/trustdev-org/calendar-diary/releases/latest
+2026-07-02 15:48:15,439 - INFO - [calendar_diary] 从 GitHub API 中找到下载链接: https://github.com/trustdev-org/calendar-diary/releases/download/v0.2.0/CalendarDiary.Setup.0.2.0-beta.exe
+2026-07-02 15:48:15,439 - INFO - [calendar_diary] 通过 GitHub API 找到最新版本: v0.2.0
+2026-07-03 17:09:21,971 - INFO - 已从配置目录合并：E:\GITHUB\已经发布\gh-release-fetch\apps — windows 718 项
+2026-07-03 17:10:37,782 - INFO - 已从配置目录合并：E:\GITHUB\已经发布\gh-release-fetch\apps — windows 718 项
+2026-07-03 17:14:19,814 - INFO - 已从配置目录合并：E:\GITHUB\已经发布\gh-release-fetch\apps — windows 718 项
