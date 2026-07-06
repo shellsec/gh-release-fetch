@@ -34,3 +34,5 @@
 2026-07-03 17:09:21,971 - INFO - 已从配置目录合并：E:\GITHUB\已经发布\gh-release-fetch\apps — windows 718 项
 2026-07-03 17:10:37,782 - INFO - 已从配置目录合并：E:\GITHUB\已经发布\gh-release-fetch\apps — windows 718 项
 2026-07-03 17:14:19,814 - INFO - 已从配置目录合并：E:\GITHUB\已经发布\gh-release-fetch\apps — windows 718 项
+2026-07-06 14:44:49,233 - INFO - 已从配置目录合并：apps — windows 721 项
+2026-07-06 17:10:21,292 - INFO - 已从配置目录合并：apps — windows 721 项, darwin 599 项, linux 593 项
