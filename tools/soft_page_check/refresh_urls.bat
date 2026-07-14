@@ -11,6 +11,7 @@ if /i "%TARGET%"=="pages" goto pages_only
 if /i "%TARGET%"=="watchlist" goto watchlist_only
 if /i "%TARGET%"=="423down" goto digest_only
 if /i "%TARGET%"=="gamer520" goto gamer520_only
+if /i "%TARGET%"=="macwk" goto macwk_only
 if /i "%TARGET%"=="7xiazai" goto xiazai_only
 if /i "%TARGET%"=="all" goto all_targets
 goto usage
@@ -43,6 +44,10 @@ goto finish
 call :run_gamer520 || goto fail
 goto finish
 
+:macwk_only
+call :run_macwk || goto fail
+goto finish
+
 :xiazai_only
 call :run_7xiazai || goto fail
 goto finish
@@ -67,6 +72,11 @@ echo [refresh] extract_gamer520_urls.py --pages 50
 python extract_gamer520_urls.py --pages 50
 exit /b %errorlevel%
 
+:run_macwk
+echo [refresh] extract_macwk_urls.py
+python extract_macwk_urls.py
+exit /b %errorlevel%
+
 :run_7xiazai
 echo [refresh] extract_7xiazai_pages.py
 python extract_7xiazai_pages.py
@@ -88,6 +98,7 @@ echo   pages     仅 extract_pages
 echo   watchlist 仅 build_watchlist（需先有 soft_pages_urls.txt）
 echo   423down   仅 digest 区 423down 链接
 echo   gamer520  仅 gamer520 近期文章列表（首页分页）
+echo   macwk     仅 macwk Mac 软件列表（/soft/all 翻页）
 echo   7xiazai   仅 7xiazai 软件页列表
 pause
 exit /b 1

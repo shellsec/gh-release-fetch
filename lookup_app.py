@@ -37,6 +37,11 @@ PLATFORMS = ("windows", "darwin", "linux", "android", "ios")
 DESKTOP_PLATFORMS = ("windows", "darwin", "linux")
 SHARD_RE = re.compile(r"^\d+-(.+)\.json$", re.UNICODE)
 
+from tools.app_download import (  # noqa: E402
+    is_app_downloadable,
+    open_page,
+    resolve_open_page_url,
+)
 from tools.app_list import (  # noqa: E402
     default_list_basename,
     default_list_path,
@@ -110,6 +115,11 @@ def match_score(query: str, app: dict) -> int:
         (app.get("releases_url") or "").lower(),
         (app.get("url_hint") or "").lower(),
     ]
+    aliases = app.get("aliases") or []
+    if isinstance(aliases, str):
+        aliases = [aliases]
+    for alias in aliases:
+        fields.append(str(alias).lower())
     for token in parts:
         if idv == token:
             best = max(best, 100)
@@ -154,6 +164,8 @@ def search_apps(apps_dir: str, query: str, min_score: int = 40) -> list[dict]:
                     "enabled": app.get("enabled") is True,
                     "简介": (app.get("简介") or "").strip(),
                     "repo_path": (app.get("repo_path") or "").strip(),
+                    "downloadable": is_app_downloadable(app),
+                    "open_page_url": resolve_open_page_url(app),
                 }
             )
     hits.sort(key=lambda h: (-h["score"], h["platform"], h["id"]))
@@ -169,7 +181,8 @@ def print_hits(hits: list[dict]) -> None:
         brief = h["简介"]
         if len(brief) > 56:
             brief = brief[:53] + "..."
-        print("[%d] %s  id=%s  enabled=%s" % (i, h["platform"], h["id"], en))
+        mode = "可下载" if h.get("downloadable") else "仅页面"
+        print("[%d] %s  id=%s  enabled=%s  [%s]" % (i, h["platform"], h["id"], en, mode))
         print("    分片: %s" % h["path"])
         print("    分类: %s" % h["分类"])
         if h["repo_path"]:
@@ -295,13 +308,14 @@ def prompt_add_to_saved_list(
 
 
 def prompt_action_mode() -> str | None:
-    """一次选择后续操作：1 立刻下载 | 2 加入并下载 | 3 加入列表 | 4 启用 | 回车跳过。"""
+    """一次选择后续操作：1 下载/打开 | 2 加入并下载 | 3 加入列表 | 4 启用 | 5 打开页面 | 回车跳过。"""
     print()
     print("请选择操作：")
-    print("  1 = 立刻下载（不修改 enabled）")
+    print("  1 = 立刻下载（无安装包则自动打开页面；不修改 enabled）")
     print("  2 = 加入更新列表并立刻下载")
     print("  3 = 加入更新列表 saved_apps_<平台>.json")
     print("  4 = 设为 enabled=true")
+    print("  5 = 打开页面（官网 / GitHub Releases）")
     print("  回车 = 跳过")
     try:
         line = input("> ").strip()
@@ -311,19 +325,44 @@ def prompt_action_mode() -> str | None:
     if not line:
         print("未选择操作。")
         return None
-    if line in ("1", "2", "3", "4"):
+    if line in ("1", "2", "3", "4", "5"):
         return line
     low = line.lower()
     if low in ("d", "download", "下载", "down"):
         return "1"
+    if low in ("o", "open", "打开", "页面", "url"):
+        return "5"
     if low in ("sd", "save-download", "加入下载", "列表下载"):
         return "2"
     if low in ("s", "save", "list", "列表", "加入"):
         return "3"
     if low in ("e", "enable", "启用", "on"):
         return "4"
-    print("无效输入: %r（请输入 1 / 2 / 3 / 4）" % line)
+    print("无效输入: %r（请输入 1 / 2 / 3 / 4 / 5）" % line)
     return None
+
+
+def run_open_pages(chosen: list[dict], dry_run: bool) -> int:
+    """在浏览器中打开条目对应页面。"""
+    if not chosen:
+        return 0
+    opened = 0
+    for h in chosen:
+        url = (h.get("open_page_url") or "").strip()
+        if not url:
+            print("[跳过] %s / %s：无可用页面 URL" % (h["platform"], h["id"]))
+            continue
+        print()
+        if dry_run:
+            print("[dry-run] 将打开: %s  (%s / %s)" % (url, h["platform"], h["id"]))
+            opened += 1
+            continue
+        if open_page(url):
+            print("[已打开] %s / %s → %s" % (h["platform"], h["id"], url))
+            opened += 1
+        else:
+            print("[失败] 无法打开浏览器: %s" % url)
+    return 0 if opened else 1
 
 
 def _apps_dir_cli_args(apps_dir: str) -> list[str]:
@@ -345,12 +384,18 @@ def run_download_now(
     *,
     insecure: bool = False,
 ) -> int:
-    """按 id 调用 auto_update 下载（不修改 enabled）。"""
-    downloadable = [h for h in chosen if h.get("platform") != "ios"]
-    skipped_ios = len(chosen) - len(downloadable)
+    """按 id 调用 auto_update 下载；不可下载条目改为打开页面。"""
+    page_only = [h for h in chosen if not h.get("downloadable")]
+    downloadable = [h for h in chosen if h.get("downloadable") and h.get("platform") != "ios"]
+    skipped_ios = len([h for h in chosen if h.get("platform") == "ios"])
     if skipped_ios:
         print("[提示] 跳过 %d 条 iOS 占位（无 GitHub 安装包）。" % skipped_ios)
+    if page_only:
+        print("[提示] %d 条无安装包，将打开页面。" % len(page_only))
+        run_open_pages(page_only, dry_run)
     if not downloadable:
+        if page_only:
+            return 0
         print("没有可下载的条目。")
         return 1
 
@@ -405,6 +450,8 @@ def run_interactive(
 
     if action == "1":
         return run_download_now(chosen, apps_dir, dry_run, insecure=insecure)
+    if action == "5":
+        return run_open_pages(chosen, dry_run)
     if action == "2":
         prompt_add_to_saved_list(
             chosen, apps_dir, dry_run, auto=True, save_path=save_path
@@ -435,8 +482,9 @@ def main() -> int:
             "用法: lookup_app [选项与关键词...]",
             "示例: lookup_app drawio",
             "      lookup_app --platform android termux",
-            "交互选条目: 1=立刻下载  2=加入并下载  3=加入列表  4=启用",
+            "交互选条目: 1=下载(无包则开页)  2=加入并下载  3=加入列表  4=启用  5=打开页面",
             "直接下载: lookup_app -y --download drawio",
+            "打开页面: lookup_app chatbox --open",
         ],
         "请输入关键词（可含 --platform android 等）: ",
     ):
@@ -500,6 +548,11 @@ def main() -> int:
         action="store_true",
         help="不询问是否加入更新列表（未指定 --save 时生效）",
     )
+    parser.add_argument(
+        "--open",
+        action="store_true",
+        help="对匹配项打开官网 / GitHub Releases 页面（不下载）",
+    )
     args = parser.parse_args()
 
     if not args.query:
@@ -540,6 +593,9 @@ def main() -> int:
             save_path = args.save if os.path.isabs(args.save) else os.path.join(SCRIPT_DIR, args.save)
         elif args.platform:
             save_path = default_list_path(SCRIPT_DIR, args.platform)
+
+    if args.open:
+        return run_open_pages(hits, args.dry_run)
 
     if args.no_prompt:
         if args.download:

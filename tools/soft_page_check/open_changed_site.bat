@@ -22,6 +22,10 @@ if /i "%SITE%"=="gamer520" (
     call :open_one "changed_gamer520_urls.txt" "gamer520"
     goto done
 )
+if /i "%SITE%"=="macwk" (
+    call :open_one "changed_macwk_urls.txt" "macwk"
+    goto done
+)
 if /i "%SITE%"=="hybase" (
     call :open_one "changed_hybase_system_urls.txt" "hybase系统"
     call :open_one "changed_hybase_mobile_urls.txt" "hybase移动"
@@ -71,7 +75,7 @@ exit /b 0
 
 :usage
 echo 用法: open_changed_site.bat ^<站点^>
-echo   a 423down gamer520 hybase dayanzai down66 7xiazai all
+echo   a 423down gamer520 macwk hybase dayanzai down66 7xiazai all
 echo.
 echo A 类变化仍可用: open_changed_pages.bat
 pause

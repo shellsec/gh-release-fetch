@@ -537,6 +537,123 @@ def fetch_virtualbox(s: requests.Session) -> dict[str, Any]:
     )
 
 
+def _oray_client_software(s: requests.Session, key: str, **params: Any) -> dict[str, Any]:
+    q = "&".join(f"{k}={v}" for k, v in params.items())
+    url = f"https://client-api.oray.com/softwares/{key}"
+    if q:
+        url += "?" + q
+    r = s.get(url, timeout=40)
+    r.raise_for_status()
+    return r.json()
+
+
+def _normalize_oray_download_url(url: str) -> str:
+    u = (url or "").strip()
+    if not u:
+        return u
+    if u.startswith("https://dl.oray.com/"):
+        return u.replace("https://dl.oray.com/", "https://d-cdn.oray.com/", 1)
+    return u
+
+
+def _oray_download_block(url: str | None) -> dict[str, str] | None:
+    u = _normalize_oray_download_url((url or "").strip())
+    if not u:
+        return None
+    return {"url": u, "filename": os.path.basename(u)}
+
+
+def _oray_linux_deb_url(data: dict[str, Any]) -> str | None:
+    for item in data.get("downloadurlmultiple") or []:
+        name = (item.get("name") or "").lower()
+        url = (item.get("url") or "").strip()
+        if url and ("ubuntu" in name or "deepin" in name):
+            return url
+    url = (data.get("downloadurl") or "").strip()
+    return url if url.endswith(".deb") else None
+
+
+def fetch_sunlogin(s: requests.Session) -> dict[str, Any]:
+    """向日葵个人版（AweSun）：官方 client-api.oray.com 提供版本与 CDN 直链。"""
+    win = _oray_client_software(s, "SUNLOGIN_X_WINDOWS", x64=1)
+    mac_intel = _oray_client_software(s, "SUNLOGIN_X_MAC")
+    mac_arm = _oray_client_software(s, "SUNLOGIN_X_MAC_ARM")
+    lin = _oray_client_software(s, "SUNLOGIN_X_LINUX", x64=1)
+    ver = (win.get("versionno") or "").strip() or "unknown"
+    mac_url = (mac_arm.get("downloadurl") or "").strip() or (mac_intel.get("downloadurl") or "").strip()
+    return _item(
+        "sunlogin",
+        ver,
+        {
+            "windows": _oray_download_block(win.get("downloadurl")),
+            "darwin": _oray_download_block(mac_url),
+            "linux": _oray_download_block(_oray_linux_deb_url(lin)),
+        },
+        notes=(
+            "贝锐向日葵个人版（AweSun）；版本与直链来自 client-api.oray.com。"
+            " 下载 oray CDN 时需 Referer（auto_update 已自动附加 sunlogin.oray.com）。"
+            " macOS 优先 arm64 dmg；Linux 为 deb（Ubuntu/Deepin）。"
+        ),
+    )
+
+
+def _termius_electron_release(
+    s: requests.Session, cdn_base: str, yml_name: str, artifact: str
+) -> tuple[str, str]:
+    """从 Termius autoupdate.termius.com 的 electron-builder yml 取版本与直链。"""
+    yml_url = f"{cdn_base.rstrip('/')}/{yml_name}"
+    r = s.get(yml_url, timeout=40)
+    r.raise_for_status()
+    text = r.text
+    ver_m = re.search(r"^version:\s*['\"]?([^\s'\"]+)", text, re.M)
+    if not ver_m:
+        raise RuntimeError("未能从 %s 解析 version" % yml_url)
+    ver = ver_m.group(1).strip()
+    file_url = f"{cdn_base.rstrip('/')}/{quote(artifact, safe='')}"
+    return ver, file_url
+
+
+def fetch_termius(s: requests.Session) -> dict[str, Any]:
+    """Termius：跨平台 SSH 终端；autoupdate.termius.com + download.termius.com。"""
+    win_ver, win_url = _termius_electron_release(
+        s, "https://autoupdate.termius.com/windows", "latest.yml", "Install Termius.exe"
+    )
+    _, mac_arm_url = _termius_electron_release(
+        s, "https://autoupdate.termius.com/mac-arm64", "latest-mac.yml", "Termius.dmg"
+    )
+    _, mac_intel_url = _termius_electron_release(
+        s, "https://autoupdate.termius.com/mac", "latest-mac.yml", "Termius.dmg"
+    )
+    deb_r = s.head(
+        "https://www.termius.com/download/linux/Termius.deb",
+        timeout=40,
+        allow_redirects=True,
+    )
+    deb_r.raise_for_status()
+    deb_url = deb_r.url
+
+    def blk(url: str | None, filename: str = "") -> dict[str, str] | None:
+        if not url:
+            return None
+        name = filename or os.path.basename(url.split("?", 1)[0])
+        return {"url": url, "filename": name}
+
+    mac_url = mac_arm_url or mac_intel_url
+    return _item(
+        "termius",
+        win_ver,
+        {
+            "windows": blk(win_url, "Install Termius.exe"),
+            "darwin": blk(mac_url, "Termius.dmg"),
+            "linux": blk(deb_url, "Termius.deb"),
+        },
+        notes=(
+            "Termius 跨平台 SSH 终端；版本来自 autoupdate.termius.com electron-builder yml。"
+            " macOS 优先 arm64 dmg；Linux 为官方 Termius.deb（download.termius.com）。"
+        ),
+    )
+
+
 def fetch_cutter(s: requests.Session) -> dict[str, Any]:
     tag, assets = _gh_latest_assets(s, "rizinorg", "cutter")
     ver = tag.lstrip("v") if tag.startswith("v") else tag
@@ -1220,6 +1337,8 @@ def main():
         fetch_cyberduck,
         fetch_restic,
         fetch_virtualbox,
+        fetch_sunlogin,
+        fetch_termius,
         fetch_cutter,
         fetch_syncthing,
         fetch_sqlitebrowser,

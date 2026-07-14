@@ -49,6 +49,15 @@ SCOPE_META = {
         "changed_txt": "changed_gamer520_urls.txt",
         "accent": "#7c2d12",
     },
+    "macwk": {
+        "id": "macwk",
+        "title": "macwk · Mac 软件",
+        "desc": "macwk.com 全部软件列表（/soft/all 翻页，约 174 条）",
+        "snapshot": "titles_latest_MACWK.json",
+        "diff": "last_diff_macwk.json",
+        "changed_txt": "changed_macwk_urls.txt",
+        "accent": "#0369a1",
+    },
 }
 
 for _scope_key in LIST_SCOPE_DEFS:
@@ -353,7 +362,7 @@ def _render_list_site_group(group: dict) -> str:
 
 def build_index_html() -> Path:
     REPORTS.mkdir(parents=True, exist_ok=True)
-    core_scopes = [_collect_scope_data(k) for k in ("a", "all", "423down", "gamer520")]
+    core_scopes = [_collect_scope_data(k) for k in ("a", "all", "423down", "gamer520", "macwk")]
     list_sections = [_render_list_site_group(g) for g in LIST_SITE_GROUPS]
     all_data = core_scopes + [d for g in LIST_SITE_GROUPS for d in [_collect_scope_data(s) for s in g["scopes"]]]
     generated = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -521,6 +530,7 @@ def build_index_html() -> Path:
       <a href="#scope-all">装机全量</a>
       <a href="#scope-423down">423down</a>
       <a href="#scope-gamer520">gamer520</a>
+      <a href="#scope-macwk">macwk</a>
       <a href="#site-7xiazai">7xiazai</a>
       <a href="#site-hybase">hybase</a>
       <a href="#site-dayanzai">dayanzai</a>

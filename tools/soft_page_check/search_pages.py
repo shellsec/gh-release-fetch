@@ -49,6 +49,7 @@ SCOPE_LABELS = {
     "all": "全量 · Lastb 装机页",
     "423down": "423down digest",
     "gamer520": "gamer520 · 游戏",
+    "macwk": "macwk · Mac 软件",
     "7xiazai": "7xiazai 列表",
 }
 for _scope in LIST_SCOPE_DEFS:
@@ -58,6 +59,7 @@ FALLBACK_URL_FILES: list[tuple[str, Path]] = [
     ("all", HERE / "soft_pages_urls.txt"),
     ("a", HERE / "watch_tier_a_urls.txt"),
     ("gamer520", LIST_DIR / "gamer520_urls.txt"),
+    ("macwk", LIST_DIR / "macwk_urls.txt"),
 ]
 
 
@@ -121,9 +123,13 @@ def _load_url_file(scope: str, path: Path | str) -> list[dict]:
 
 
 def _load_gamer520_list(path: Path) -> list[dict]:
+    return _load_tab_list("gamer520", path)
+
+
+def _load_tab_list(scope: str, path: Path) -> list[dict]:
     if not path.is_file():
         return []
-    label = SCOPE_LABELS.get("gamer520", "gamer520")
+    label = SCOPE_LABELS.get(scope, scope)
     rows: list[dict] = []
     for line in path.read_text(encoding="utf-8").splitlines():
         line = line.strip()
@@ -140,7 +146,10 @@ def _load_gamer520_list(path: Path) -> list[dict]:
             {
                 "url": url,
                 "title": title if title != "(列表页无标题)" else "",
-                "scope": "gamer520",
+                "tier": "",
+                "software": [],
+                "domain": "",
+                "scope": scope,
                 "scope_label": label,
             }
         )
@@ -168,7 +177,12 @@ def build_index(scopes: frozenset[str] | None = None) -> list[dict]:
             if row["url"] not in by_url:
                 by_url[row["url"]] = row
         if scope == "gamer520":
-            for row in _load_gamer520_list(LIST_DIR / "gamer520_list.txt"):
+            for row in _load_tab_list("gamer520", LIST_DIR / "gamer520_list.txt"):
+                prev = by_url.get(row["url"])
+                if prev is None or (not prev.get("title") and row.get("title")):
+                    by_url[row["url"]] = row
+        if scope == "macwk":
+            for row in _load_tab_list("macwk", LIST_DIR / "macwk_list.txt"):
                 prev = by_url.get(row["url"])
                 if prev is None or (not prev.get("title") and row.get("title")):
                     by_url[row["url"]] = row

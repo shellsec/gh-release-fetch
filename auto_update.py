@@ -946,6 +946,11 @@ def download_installer(
             "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
         )
     }
+    referer = (app.get("download_referer") or "").strip()
+    if not referer and "oray.com" in urllib.parse.urlparse(download_urls[0]).netloc:
+        referer = "https://sunlogin.oray.com/download"
+    if referer:
+        headers["Referer"] = referer
 
     for url_index, download_url in enumerate(download_urls):
         if download_url.startswith("https://gh-proxy"):

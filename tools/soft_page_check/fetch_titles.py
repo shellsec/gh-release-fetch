@@ -39,17 +39,19 @@ PAGES_ALL = HERE / "soft_pages_urls.txt"
 PAGES_A = HERE / "watch_tier_a_urls.txt"
 PAGES_423DOWN = HERE / "423down_digest_urls.txt"
 PAGES_GAMER520 = HERE / "list" / "gamer520_urls.txt"
+PAGES_MACWK = HERE / "list" / "macwk_urls.txt"
 PAGES_7XIAZAI = HERE / "7xiazai_list_urls.txt"
 HISTORY_DIR = HERE / "history"
 REPORTS_DIR = HERE / "reports"
 
-EXTERNAL_SCOPES = frozenset({"423down", "gamer520"}) | EXTERNAL_LIST_SCOPES
+EXTERNAL_SCOPES = frozenset({"423down", "gamer520", "macwk"}) | EXTERNAL_LIST_SCOPES
 
 SCOPE_URL_FILES: dict[str, Path] = {
     "a": PAGES_A,
     "all": PAGES_ALL,
     "423down": PAGES_423DOWN,
     "gamer520": PAGES_GAMER520,
+    "macwk": PAGES_MACWK,
 }
 for _scope, _defn in LIST_SCOPE_DEFS.items():
     SCOPE_URL_FILES[_scope] = _defn["url_file"]
@@ -59,6 +61,7 @@ CHANGED_LIST_FILES: dict[str, str] = {
     "all": "changed_pages_urls.txt",
     "423down": "changed_423down_urls.txt",
     "gamer520": "changed_gamer520_urls.txt",
+    "macwk": "changed_macwk_urls.txt",
 }
 for _scope in LIST_SCOPE_DEFS:
     CHANGED_LIST_FILES[_scope] = changed_list_filename(_scope)
@@ -143,6 +146,13 @@ def ensure_gamer520_list() -> None:
         extract_gamer520_urls()
 
 
+def ensure_macwk_list() -> None:
+    if not PAGES_MACWK.exists() or PAGES_MACWK.stat().st_size == 0:
+        from extract_macwk_urls import main as extract_macwk_urls
+
+        extract_macwk_urls()
+
+
 def ensure_7xiazai_list() -> None:
     if not PAGES_7XIAZAI.exists():
         from extract_7xiazai_pages import main as extract_7xiazai_pages
@@ -160,6 +170,8 @@ def load_urls(scope: str) -> tuple[list[str], Path] | None:
         ensure_423down_list()
     elif scope == "gamer520":
         ensure_gamer520_list()
+    elif scope == "macwk":
+        ensure_macwk_list()
     elif scope in ("7xiazai_system", "7xiazai_mobile"):
         ensure_7xiazai_list()
 
@@ -183,6 +195,7 @@ def load_urls(scope: str) -> tuple[list[str], Path] | None:
         hints = {
             "423down": "refresh_urls.bat 423down",
             "gamer520": "refresh_urls.bat gamer520",
+            "macwk": "refresh_urls.bat macwk",
         }
         hint = hints.get(scope, "refresh_urls.bat core")
         raise FileNotFoundError(f"缺少 {src}，请先准备：{hint}")
@@ -357,6 +370,7 @@ def scope_label(scope: str) -> str:
     labels = {
         "423down": "423DOWN digest",
         "gamer520": "gamer520 · 游戏",
+        "macwk": "macwk · Mac 软件",
         "7xiazai": "7xiazai 软件页",
         "a": "A 类",
         "all": "全量页面",
@@ -450,7 +464,7 @@ def cmd_fetch(scope: str, compare_after: bool, skip_missing: bool = False) -> in
         if not HERE.joinpath("url_meta.json").exists():
             build_watchlist_index()
         meta = load_url_meta()
-    elif scope in ("423down", "gamer520") or is_list_scope(scope):
+    elif scope in ("423down", "gamer520", "macwk") or is_list_scope(scope):
         pass
     print(f"[{scope_label(scope)}] 抓取 {len(urls)} 个页面标题（并发 {workers}）...")
 
@@ -501,7 +515,7 @@ def cmd_fetch(scope: str, compare_after: bool, skip_missing: bool = False) -> in
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="抓取页面标题并比对历史")
-    all_scopes = ["a", "all", "423down", "gamer520", "7xiazai"] + list(LIST_SCOPE_DEFS.keys()) + list(LEGACY_LIST_SCOPES.keys())
+    all_scopes = ["a", "all", "423down", "gamer520", "macwk", "7xiazai"] + list(LIST_SCOPE_DEFS.keys()) + list(LEGACY_LIST_SCOPES.keys())
     parser.add_argument(
         "--scope",
         choices=sorted(set(all_scopes)),
