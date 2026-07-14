@@ -38,3 +38,263 @@
 2026-07-06 17:10:21,292 - INFO - 已从配置目录合并：apps — windows 721 项, darwin 599 项, linux 593 项
 2026-07-06 17:23:03,633 - INFO - 已从配置目录合并：apps — windows 721 项
 2026-07-06 17:25:44,137 - INFO - 已从配置目录合并：dist\release\gh-release-fetch-windows-5ca5139\apps — windows 721 项
+2026-07-07 14:33:45,213 - INFO - 已从配置目录合并：apps — windows 722 项
+2026-07-08 11:51:29,176 - INFO - 已从配置目录合并：apps — windows 723 项, darwin 601 项, linux 595 项
+2026-07-08 14:27:45,482 - INFO - 已从配置目录合并：apps — windows 723 项, darwin 601 项, linux 595 项
+2026-07-08 14:28:07,021 - INFO - 已从配置目录合并：apps — windows 723 项
+2026-07-08 14:28:07,032 - INFO - 已从配置目录合并：apps — darwin 601 项
+2026-07-08 14:28:07,042 - INFO - 已从配置目录合并：apps — linux 595 项
+2026-07-09 15:43:13,358 - INFO - 已从配置目录合并：apps — windows 724 项, darwin 603 项, linux 596 项
+2026-07-09 15:43:13,359 - INFO - [esearch] 尝试使用 GitHub API: https://api.github.com/repos/xushengfeng/eSearch/releases/latest
+2026-07-09 15:43:14,305 - INFO - [esearch] 从 GitHub API 中找到下载链接: https://github.com/xushengfeng/eSearch/releases/download/15.3.3/eSearch-15.3.3-win32-x64.exe
+2026-07-09 15:43:14,306 - INFO - [esearch] 通过 GitHub API 找到最新版本: v15.3.3
+2026-07-09 15:43:14,307 - INFO - [esearch_macos_aarch64] 尝试使用 GitHub API: https://api.github.com/repos/xushengfeng/eSearch/releases/latest
+2026-07-09 15:43:14,954 - INFO - [esearch_macos_aarch64] 从 GitHub API 中找到下载链接: https://github.com/xushengfeng/eSearch/releases/download/15.3.3/eSearch-15.3.3-darwin-arm64.dmg
+2026-07-09 15:43:14,954 - INFO - [esearch_macos_aarch64] 通过 GitHub API 找到最新版本: v15.3.3
+2026-07-09 15:43:14,956 - INFO - [esearch_macos_x64] 尝试使用 GitHub API: https://api.github.com/repos/xushengfeng/eSearch/releases/latest
+2026-07-09 15:43:15,734 - INFO - [esearch_macos_x64] 从 GitHub API 中找到下载链接: https://github.com/xushengfeng/eSearch/releases/download/15.3.3/eSearch-15.3.3-darwin-x64.dmg
+2026-07-09 15:43:15,734 - INFO - [esearch_macos_x64] 通过 GitHub API 找到最新版本: v15.3.3
+2026-07-09 15:43:15,737 - INFO - [esearch_linux_amd64] 尝试使用 GitHub API: https://api.github.com/repos/xushengfeng/eSearch/releases/latest
+2026-07-09 15:43:16,493 - INFO - [esearch_linux_amd64] 从 GitHub API 中找到下载链接: https://github.com/xushengfeng/eSearch/releases/download/15.3.3/eSearch-15.3.3-linux-x64.deb
+2026-07-09 15:43:16,493 - INFO - [esearch_linux_amd64] 通过 GitHub API 找到最新版本: v15.3.3
+2026-07-10 10:58:04,078 - INFO - [comfyui_nvidia] 尝试使用 GitHub API: https://api.github.com/repos/comfyanonymous/ComfyUI/releases/latest
+2026-07-10 10:58:10,003 - INFO - [comfyui_nvidia] 从 GitHub API 中找到下载链接: https://github.com/Comfy-Org/ComfyUI/releases/download/v0.27.0/ComfyUI_windows_portable_nvidia.7z
+2026-07-10 10:58:10,004 - INFO - [comfyui_nvidia] 通过 GitHub API 找到最新版本: v0.27.0
+2026-07-10 10:58:10,007 - INFO - [whisper_cpp_win] 尝试使用 GitHub API: https://api.github.com/repos/ggml-org/whisper.cpp/releases/latest
+2026-07-10 10:58:10,933 - INFO - [whisper_cpp_win] 从 GitHub API 中找到下载链接: https://github.com/ggml-org/whisper.cpp/releases/download/v1.9.1/whisper-bin-x64.zip
+2026-07-10 10:58:10,933 - INFO - [whisper_cpp_win] 通过 GitHub API 找到最新版本: v1.9.1
+2026-07-10 10:58:10,937 - INFO - [textgen_webui_win_cpu] 尝试使用 GitHub API: https://api.github.com/repos/oobabooga/text-generation-webui/releases/latest
+2026-07-10 10:58:13,759 - INFO - [textgen_webui_win_cpu] 从 GitHub API 中找到下载链接: https://github.com/oobabooga/textgen/releases/download/v4.9/textgen-portable-4.9-windows-cpu.zip
+2026-07-10 10:58:13,759 - INFO - [textgen_webui_win_cpu] 通过 GitHub API 找到最新版本: v4.9
+2026-07-10 10:58:13,762 - INFO - [textgen_webui_linux_cpu] 尝试使用 GitHub API: https://api.github.com/repos/oobabooga/text-generation-webui/releases/latest
+2026-07-10 10:58:17,505 - INFO - [textgen_webui_linux_cpu] 从 GitHub API 中找到下载链接: https://github.com/oobabooga/textgen/releases/download/v4.9/textgen-portable-4.9-linux-cpu.tar.gz
+2026-07-10 10:58:17,506 - INFO - [textgen_webui_linux_cpu] 通过 GitHub API 找到最新版本: v4.9
+2026-07-10 10:58:29,511 - INFO - [comfyui_nvidia] 尝试使用 GitHub API: https://api.github.com/repos/comfyanonymous/ComfyUI/releases/latest
+2026-07-10 10:58:30,466 - INFO - [comfyui_nvidia] 从 GitHub API 中找到下载链接: https://github.com/Comfy-Org/ComfyUI/releases/download/v0.27.0/ComfyUI_windows_portable_nvidia.7z
+2026-07-10 10:58:30,467 - INFO - [comfyui_nvidia] 通过 GitHub API 找到最新版本: v0.27.0
+2026-07-10 10:58:38,615 - INFO - [whisper_cpp_win] 尝试使用 GitHub API: https://api.github.com/repos/ggml-org/whisper.cpp/releases/latest
+2026-07-10 10:58:39,365 - INFO - [whisper_cpp_win] 从 GitHub API 中找到下载链接: https://github.com/ggml-org/whisper.cpp/releases/download/v1.9.1/whisper-bin-x64.zip
+2026-07-10 10:58:39,365 - INFO - [whisper_cpp_win] 通过 GitHub API 找到最新版本: v1.9.1
+2026-07-10 10:58:40,613 - INFO - [textgen_webui_win_cpu] 尝试使用 GitHub API: https://api.github.com/repos/oobabooga/text-generation-webui/releases/latest
+2026-07-10 10:58:42,461 - INFO - [textgen_webui_win_cpu] 从 GitHub API 中找到下载链接: https://github.com/oobabooga/textgen/releases/download/v4.9/textgen-portable-4.9-windows-cpu.zip
+2026-07-10 10:58:42,462 - INFO - [textgen_webui_win_cpu] 通过 GitHub API 找到最新版本: v4.9
+2026-07-10 10:59:11,072 - INFO - [whisper_cpp_linux] 尝试使用 GitHub API: https://api.github.com/repos/ggml-org/whisper.cpp/releases/latest
+2026-07-10 10:59:11,591 - INFO - [whisper_cpp_linux] 从 GitHub API 中找到下载链接: https://github.com/ggml-org/whisper.cpp/releases/download/v1.9.1/whisper-bin-ubuntu-x64.tar.gz
+2026-07-10 10:59:11,592 - INFO - [whisper_cpp_linux] 通过 GitHub API 找到最新版本: v1.9.1
+2026-07-10 10:59:13,160 - INFO - [textgen_webui_macos_arm64] 尝试使用 GitHub API: https://api.github.com/repos/oobabooga/text-generation-webui/releases/latest
+2026-07-10 10:59:15,003 - INFO - [textgen_webui_macos_arm64] 从 GitHub API 中找到下载链接: https://github.com/oobabooga/textgen/releases/download/v4.9/textgen-portable-4.9-macos-arm64.tar.gz
+2026-07-10 10:59:15,003 - INFO - [textgen_webui_macos_arm64] 通过 GitHub API 找到最新版本: v4.9
+2026-07-10 10:59:18,420 - INFO - [textgen_webui_macos_x64] 尝试使用 GitHub API: https://api.github.com/repos/oobabooga/text-generation-webui/releases/latest
+2026-07-10 10:59:18,767 - INFO - [textgen_webui_macos_x64] 从 GitHub API 中找到下载链接: https://github.com/oobabooga/textgen/releases/download/v4.9/textgen-portable-4.9-macos-x86_64.tar.gz
+2026-07-10 10:59:18,768 - INFO - [textgen_webui_macos_x64] 通过 GitHub API 找到最新版本: v4.9
+2026-07-10 11:00:17,391 - INFO - [textgen_webui] 尝试使用 GitHub API: https://api.github.com/repos/oobabooga/text-generation-webui/releases/latest
+2026-07-10 11:00:18,860 - INFO - [textgen_webui] 从 GitHub API 中找到下载链接: https://github.com/oobabooga/textgen/releases/download/v4.9/textgen-portable-4.9-macos-arm64.tar.gz
+2026-07-10 11:00:18,861 - INFO - [textgen_webui] 通过 GitHub API 找到最新版本: v4.9
+2026-07-10 11:00:18,866 - INFO - [textgen_webui_intel] 尝试使用 GitHub API: https://api.github.com/repos/oobabooga/text-generation-webui/releases/latest
+2026-07-10 11:00:19,856 - INFO - [textgen_webui_intel] 从 GitHub API 中找到下载链接: https://github.com/oobabooga/textgen/releases/download/v4.9/textgen-portable-4.9-macos-x86_64.tar.gz
+2026-07-10 11:00:19,856 - INFO - [textgen_webui_intel] 通过 GitHub API 找到最新版本: v4.9
+2026-07-10 11:00:19,868 - INFO - [textgen_webui] 尝试使用 GitHub API: https://api.github.com/repos/oobabooga/text-generation-webui/releases/latest
+2026-07-10 11:00:20,756 - INFO - [textgen_webui] 从 GitHub API 中找到下载链接: https://github.com/oobabooga/textgen/releases/download/v4.9/textgen-portable-4.9-linux-cpu.tar.gz
+2026-07-10 11:00:20,756 - INFO - [textgen_webui] 通过 GitHub API 找到最新版本: v4.9
+2026-07-10 11:00:20,761 - INFO - [whisper_cpp] 尝试使用 GitHub API: https://api.github.com/repos/ggml-org/whisper.cpp/releases/latest
+2026-07-10 11:00:21,508 - INFO - [whisper_cpp] 从 GitHub API 中找到下载链接: https://github.com/ggml-org/whisper.cpp/releases/download/v1.9.1/whisper-bin-ubuntu-x64.tar.gz
+2026-07-10 11:00:21,508 - INFO - [whisper_cpp] 通过 GitHub API 找到最新版本: v1.9.1
+2026-07-10 11:00:21,524 - INFO - [comfyui] 尝试使用 GitHub API: https://api.github.com/repos/comfyanonymous/ComfyUI/releases/latest
+2026-07-10 11:00:22,385 - INFO - [comfyui] 从 GitHub API 中找到下载链接: https://github.com/Comfy-Org/ComfyUI/releases/download/v0.27.0/ComfyUI_windows_portable_nvidia.7z
+2026-07-10 11:00:22,385 - INFO - [comfyui] 通过 GitHub API 找到最新版本: v0.27.0
+2026-07-10 11:00:22,388 - INFO - [textgen_webui] 尝试使用 GitHub API: https://api.github.com/repos/oobabooga/text-generation-webui/releases/latest
+2026-07-10 11:00:22,689 - INFO - [textgen_webui] 从 GitHub API 中找到下载链接: https://github.com/oobabooga/textgen/releases/download/v4.9/textgen-portable-4.9-windows-cpu.zip
+2026-07-10 11:00:22,690 - INFO - [textgen_webui] 通过 GitHub API 找到最新版本: v4.9
+2026-07-10 11:00:22,696 - INFO - [whisper_cpp] 尝试使用 GitHub API: https://api.github.com/repos/ggml-org/whisper.cpp/releases/latest
+2026-07-10 11:00:22,966 - INFO - [whisper_cpp] 从 GitHub API 中找到下载链接: https://github.com/ggml-org/whisper.cpp/releases/download/v1.9.1/whisper-bin-x64.zip
+2026-07-10 11:00:22,966 - INFO - [whisper_cpp] 通过 GitHub API 找到最新版本: v1.9.1
+2026-07-10 12:06:04,132 - INFO - [ccometixline] 尝试使用 GitHub API: https://api.github.com/repos/Haleclipse/CCometixLine/releases/latest
+2026-07-10 12:06:05,032 - INFO - [ccometixline] 通过 GitHub API 找到最新版本: v1.1.2
+2026-07-10 12:06:05,035 - INFO - [picoclaw] 尝试使用 GitHub API: https://api.github.com/repos/sipeed/picoclaw/releases/latest
+2026-07-10 12:06:05,968 - INFO - [picoclaw] 通过 GitHub API 找到最新版本: v0.3.1
+2026-07-10 12:06:23,926 - INFO - [ccometixline] 尝试使用 GitHub API: https://api.github.com/repos/Haleclipse/CCometixLine/releases/latest
+2026-07-10 12:06:24,667 - INFO - [ccometixline] 从 GitHub API 中找到下载链接: https://github.com/Haleclipse/CCometixLine/releases/download/v1.1.2/ccline-windows-x64.zip
+2026-07-10 12:06:24,667 - INFO - [ccometixline] 通过 GitHub API 找到最新版本: v1.1.2
+2026-07-10 12:06:25,900 - INFO - [picoclaw] 尝试使用 GitHub API: https://api.github.com/repos/sipeed/picoclaw/releases/latest
+2026-07-10 12:06:26,834 - INFO - [picoclaw] 通过 GitHub API 找到最新版本: v0.3.1
+2026-07-10 12:08:54,611 - INFO - [ccometixline] 尝试使用 GitHub API: https://api.github.com/repos/Haleclipse/CCometixLine/releases/latest
+2026-07-10 12:08:55,501 - INFO - [ccometixline] 从 GitHub API 中找到下载链接: https://github.com/Haleclipse/CCometixLine/releases/download/v1.1.2/ccline-macos-arm64.tar.gz
+2026-07-10 12:08:55,501 - INFO - [ccometixline] 通过 GitHub API 找到最新版本: v1.1.2
+2026-07-10 12:08:55,506 - INFO - [picoclaw] 尝试使用 GitHub API: https://api.github.com/repos/sipeed/picoclaw/releases/latest
+2026-07-10 12:08:56,454 - INFO - [picoclaw] 从 GitHub API 中找到下载链接: https://github.com/sipeed/picoclaw/releases/download/v0.3.1/picoclaw_Darwin_arm64.tar.gz
+2026-07-10 12:08:56,454 - INFO - [picoclaw] 通过 GitHub API 找到最新版本: v0.3.1
+2026-07-10 12:08:56,456 - INFO - [ccometixline] 尝试使用 GitHub API: https://api.github.com/repos/Haleclipse/CCometixLine/releases/latest
+2026-07-10 12:08:57,119 - INFO - [ccometixline] 从 GitHub API 中找到下载链接: https://github.com/Haleclipse/CCometixLine/releases/download/v1.1.2/ccline-linux-x64.tar.gz
+2026-07-10 12:08:57,119 - INFO - [ccometixline] 通过 GitHub API 找到最新版本: v1.1.2
+2026-07-10 12:08:57,124 - INFO - [picoclaw] 尝试使用 GitHub API: https://api.github.com/repos/sipeed/picoclaw/releases/latest
+2026-07-10 12:08:57,975 - INFO - [picoclaw] 从 GitHub API 中找到下载链接: https://github.com/sipeed/picoclaw/releases/download/v0.3.1/picoclaw_Linux_x86_64.tar.gz
+2026-07-10 12:08:57,975 - INFO - [picoclaw] 通过 GitHub API 找到最新版本: v0.3.1
+2026-07-10 12:08:57,978 - INFO - [ccometixline] 尝试使用 GitHub API: https://api.github.com/repos/Haleclipse/CCometixLine/releases/latest
+2026-07-10 12:08:58,639 - INFO - [ccometixline] 从 GitHub API 中找到下载链接: https://github.com/Haleclipse/CCometixLine/releases/download/v1.1.2/ccline-windows-x64.zip
+2026-07-10 12:08:58,640 - INFO - [ccometixline] 通过 GitHub API 找到最新版本: v1.1.2
+2026-07-10 12:08:58,641 - INFO - [picoclaw] 尝试使用 GitHub API: https://api.github.com/repos/sipeed/picoclaw/releases/latest
+2026-07-10 12:08:59,565 - INFO - [picoclaw] 从 GitHub API 中找到下载链接: https://github.com/sipeed/picoclaw/releases/download/v0.3.1/picoclaw_Windows_x86_64.zip
+2026-07-10 12:08:59,565 - INFO - [picoclaw] 通过 GitHub API 找到最新版本: v0.3.1
+2026-07-10 20:07:38,879 - INFO - [zen_browser] 尝试使用 GitHub API: https://api.github.com/repos/zen-browser/desktop/releases/latest
+2026-07-10 20:07:39,736 - INFO - [zen_browser] 从 GitHub API 中找到下载链接: https://github.com/zen-browser/desktop/releases/download/1.21.6b/zen.macos-universal.dmg
+2026-07-10 20:07:39,736 - INFO - [zen_browser] 通过 GitHub API 找到最新版本: 1.21.6b
+2026-07-10 20:07:39,740 - INFO - [zen_browser] 尝试使用 GitHub API: https://api.github.com/repos/zen-browser/desktop/releases/latest
+2026-07-10 20:07:40,429 - INFO - [zen_browser] 从 GitHub API 中找到下载链接: https://github.com/zen-browser/desktop/releases/download/1.21.6b/zen-x86_64.AppImage
+2026-07-10 20:07:40,429 - INFO - [zen_browser] 通过 GitHub API 找到最新版本: 1.21.6b
+2026-07-10 20:07:40,432 - INFO - [zen_browser_arm64] 尝试使用 GitHub API: https://api.github.com/repos/zen-browser/desktop/releases/latest
+2026-07-10 20:07:41,144 - INFO - [zen_browser_arm64] 从 GitHub API 中找到下载链接: https://github.com/zen-browser/desktop/releases/download/1.21.6b/zen-aarch64.AppImage
+2026-07-10 20:07:41,144 - INFO - [zen_browser_arm64] 通过 GitHub API 找到最新版本: 1.21.6b
+2026-07-10 20:07:41,147 - INFO - [zen_browser] 尝试使用 GitHub API: https://api.github.com/repos/zen-browser/desktop/releases/latest
+2026-07-10 20:07:41,813 - INFO - [zen_browser] 从 GitHub API 中找到下载链接: https://github.com/zen-browser/desktop/releases/download/1.21.6b/zen.installer.exe
+2026-07-10 20:07:41,813 - INFO - [zen_browser] 通过 GitHub API 找到最新版本: 1.21.6b
+2026-07-10 20:07:41,815 - INFO - [zen_browser_arm64] 尝试使用 GitHub API: https://api.github.com/repos/zen-browser/desktop/releases/latest
+2026-07-10 20:07:42,465 - INFO - [zen_browser_arm64] 从 GitHub API 中找到下载链接: https://github.com/zen-browser/desktop/releases/download/1.21.6b/zen.installer-arm64.exe
+2026-07-10 20:07:42,465 - INFO - [zen_browser_arm64] 通过 GitHub API 找到最新版本: 1.21.6b
+2026-07-10 20:10:25,718 - INFO - [bee_count] 尝试使用 GitHub API: https://api.github.com/repos/TNT-Likely/BeeCount/releases/latest
+2026-07-10 20:10:26,592 - INFO - [bee_count] 通过 GitHub API 找到最新版本: 3.5.6
+2026-07-10 20:11:19,173 - INFO - [bee_count] 尝试使用 GitHub API: https://api.github.com/repos/TNT-Likely/BeeCount/releases/latest
+2026-07-10 20:11:19,990 - INFO - [bee_count] 从 GitHub API 中找到下载链接: https://github.com/TNT-Likely/BeeCount/releases/download/3.5.6/beecount-3.5.6-universal.apk
+2026-07-10 20:11:19,990 - INFO - [bee_count] 通过 GitHub API 找到最新版本: 3.5.6
+2026-07-10 20:11:19,993 - INFO - [bee_count] 尝试使用 GitHub API: https://api.github.com/repos/TNT-Likely/BeeCount/releases/latest
+2026-07-10 20:11:20,637 - INFO - [bee_count] 从 GitHub API 中找到下载链接: https://github.com/TNT-Likely/BeeCount/releases/download/3.5.6/beecount-3.5.6-signed.ipa
+2026-07-10 20:11:20,637 - INFO - [bee_count] 通过 GitHub API 找到最新版本: 3.5.6
+2026-07-13 14:45:07,233 - INFO - [applite] 尝试使用 GitHub API: https://api.github.com/repos/milanvarady/Applite/releases/latest
+2026-07-13 14:45:07,675 - INFO - [applite] 从 GitHub API 中找到下载链接: https://github.com/milanvarady/Applite/releases/download/v1.3.1/Applite.dmg
+2026-07-13 14:45:07,676 - INFO - [applite] 通过 GitHub API 找到最新版本: v1.3.1
+2026-07-13 14:52:55,332 - INFO - 已从配置目录合并：E:\GITHUB\已经发布\gh-release-fetch\apps — windows 729 项
+2026-07-13 14:52:55,333 - INFO - 使用 platforms.windows（共 729 项）
+2026-07-13 14:52:55,334 - WARNING - 已关闭 TLS 证书校验（--insecure 或 apps.json ssl_verify=false）
+2026-07-13 14:52:56,745 - INFO - 网络探测通过：https://github.com
+2026-07-13 14:52:56,746 - INFO - === [drawio] 开始 === [平台: windows] [下载目录: E:\GITHUB\已经发布\gh-release-fetch\windows]
+2026-07-13 14:52:56,747 - INFO - [drawio] 正在检查最新版本: https://bgithub.xyz/jgraph/drawio-desktop/releases
+2026-07-13 14:52:57,452 - WARNING - [drawio] 发布页获取失败: https://bgithub.xyz/jgraph/drawio-desktop/releases -> 403 Client Error: Forbidden for url: https://bgithub.xyz/jgraph/drawio-desktop/releases
+2026-07-13 14:52:57,453 - INFO - [drawio] 正在检查最新版本: https://github.com/jgraph/drawio-desktop/releases
+2026-07-13 14:52:59,715 - INFO - [drawio] 已保存发布页 HTML: E:\GITHUB\已经发布\gh-release-fetch\github_page_windows_drawio.html
+2026-07-13 14:52:59,997 - INFO - [drawio] 尝试从页面中查找下载链接...
+2026-07-13 14:53:00,013 - INFO - [drawio] 从页面中找到下载链接: https://github.com/jgraph/drawio-desktop/releases/download/v30.3.6/draw.io-30.3.6-windows-installer.exe
+2026-07-13 14:53:00,026 - INFO - [drawio] 找到最新版本: v30.3.6
+2026-07-13 14:53:00,027 - INFO - [drawio] 成功使用发布页来源: https://github.com/jgraph/drawio-desktop/releases
+2026-07-13 14:53:00,027 - INFO - [drawio] 同时找到下载链接: https://github.com/jgraph/drawio-desktop/releases/download/v30.3.6/draw.io-30.3.6-windows-installer.exe
+2026-07-13 14:53:00,027 - INFO - 使用从页面解析的下载链接: https://github.com/jgraph/drawio-desktop/releases/download/v30.3.6/draw.io-30.3.6-windows-installer.exe
+2026-07-13 14:53:00,028 - INFO - 开始下载安装程序到: E:\GITHUB\已经发布\gh-release-fetch\windows\draw.io-30.3.6-windows-installer.exe [平台: windows]
+2026-07-13 14:53:00,028 - INFO - 尝试下载源 1/4: https://gh-proxy.com/https://github.com/jgraph/drawio-desktop/releases/download/v30.3.6/draw.io-30.3.6-windows-installer.exe
+2026-07-13 14:53:17,562 - INFO - 已从配置目录合并：E:\GITHUB\已经发布\gh-release-fetch\apps — windows 729 项
+2026-07-13 14:53:17,562 - INFO - 使用 platforms.windows（共 729 项）
+2026-07-13 14:53:17,563 - WARNING - 已关闭 TLS 证书校验（--insecure 或 apps.json ssl_verify=false）
+2026-07-13 14:53:19,310 - INFO - 网络探测通过：https://github.com
+2026-07-13 14:53:19,311 - INFO - === [pixpin] 开始 === [平台: windows] [下载目录: E:\GITHUB\已经发布\gh-release-fetch\windows]
+2026-07-13 14:53:19,311 - INFO - [pixpin] 正在检查最新版本: https://pixpin.cn/download/
+2026-07-13 14:53:19,490 - INFO - [pixpin] 已保存发布页 HTML: E:\GITHUB\已经发布\gh-release-fetch\github_page_windows_pixpin.html
+2026-07-13 14:53:19,499 - INFO - [pixpin] 尝试从页面中查找下载链接...
+2026-07-13 14:53:19,501 - INFO - [pixpin] 从通用搜索中找到下载链接: https://down.pixpin.cn/PixPin_win_3.3.5.7.exe
+2026-07-13 14:53:19,502 - INFO - [pixpin] 找到最新版本: 3.3.5.7
+2026-07-13 14:53:19,503 - INFO - [pixpin] 成功使用发布页来源: https://pixpin.cn/download/
+2026-07-13 14:53:19,503 - INFO - [pixpin] 同时找到下载链接: https://down.pixpin.cn/PixPin_win_3.3.5.7.exe
+2026-07-13 14:53:19,503 - INFO - 使用从页面解析的下载链接: https://down.pixpin.cn/PixPin_win_3.3.5.7.exe
+2026-07-13 14:53:19,504 - INFO - 开始下载安装程序到: E:\GITHUB\已经发布\gh-release-fetch\windows\PixPin_cn_zh-cn_3.3.5.7.exe [平台: windows]
+2026-07-13 14:53:19,504 - INFO - 尝试下载源 1/6: https://down.pixpin.cn/PixPin_win_3.3.5.7.exe
+2026-07-13 14:53:34,890 - INFO - 
+下载完成: E:\GITHUB\已经发布\gh-release-fetch\windows\PixPin_cn_zh-cn_3.3.5.7.exe (66811712 字节)
+2026-07-13 14:53:34,890 - INFO - 成功使用下载源 https://down.pixpin.cn/PixPin_win_3.3.5.7.exe
+2026-07-13 14:53:34,892 - INFO - [pixpin] 安装包已下载: E:\GITHUB\已经发布\gh-release-fetch\windows\PixPin_cn_zh-cn_3.3.5.7.exe
+2026-07-13 14:53:34,892 - INFO - 尝试终止进程: PixPin.exe
+2026-07-13 14:53:35,408 - WARNING - 终止进程警告: Command '['taskkill', '/F', '/IM', 'PixPin.exe']' returned non-zero exit status 1.
+2026-07-13 14:53:37,420 - INFO - 开始运行安装程序: E:\GITHUB\已经发布\gh-release-fetch\windows\PixPin_cn_zh-cn_3.3.5.7.exe
+2026-07-13 14:53:37,496 - INFO - 安装程序已启动 (Popen)
+2026-07-13 14:53:37,496 - INFO - === [pixpin] 完成 ===
+2026-07-13 14:54:36,034 - INFO - 
+下载完成: E:\GITHUB\已经发布\gh-release-fetch\windows\draw.io-30.3.6-windows-installer.exe (143568512 字节)
+2026-07-13 14:54:36,034 - INFO - 成功使用下载源 https://gh-proxy.com/https://github.com/jgraph/drawio-desktop/releases/download/v30.3.6/draw.io-30.3.6-windows-installer.exe
+2026-07-13 14:54:36,036 - INFO - [drawio] 安装包已下载: E:\GITHUB\已经发布\gh-release-fetch\windows\draw.io-30.3.6-windows-installer.exe
+2026-07-13 14:54:36,036 - INFO - 开始运行安装程序: E:\GITHUB\已经发布\gh-release-fetch\windows\draw.io-30.3.6-windows-installer.exe
+2026-07-13 14:54:36,058 - INFO - 安装程序已启动 (Popen)
+2026-07-13 14:54:36,059 - INFO - === [drawio] 完成 ===
+2026-07-13 14:57:34,187 - INFO - [sucrose_wallpaper_engine] 尝试使用 GitHub API: https://api.github.com/repos/Taiizor/Sucrose/releases/latest
+2026-07-13 14:57:35,319 - INFO - [sucrose_wallpaper_engine] 通过 GitHub API 找到最新版本: v26.7.5.0
+2026-07-13 14:57:35,324 - INFO - [sucrose_wallpaper_engine] 尝试使用 GitHub API: https://api.github.com/repos/Taiizor/Sucrose/releases/latest
+2026-07-13 14:57:36,040 - INFO - [sucrose_wallpaper_engine] 通过 GitHub API 找到最新版本: v26.7.5.0
+2026-07-13 14:57:36,045 - INFO - [sucrose_wallpaper_engine] 尝试使用 GitHub API: https://api.github.com/repos/Taiizor/Sucrose/releases/latest
+2026-07-13 14:57:36,697 - INFO - [sucrose_wallpaper_engine] 通过 GitHub API 找到最新版本: v26.7.5.0
+2026-07-13 14:57:47,786 - INFO - [sucrose_wallpaper_engine] 尝试使用 GitHub API: https://api.github.com/repos/Taiizor/Sucrose/releases/latest
+2026-07-13 14:57:48,515 - INFO - [sucrose_wallpaper_engine] 从 GitHub API 中找到下载链接: https://github.com/Taiizor/Sucrose/releases/download/v26.7.5.0/Sucrose_Bundle_.NET_Framework_4.8_x64_26.7.5.0.exe
+2026-07-13 14:57:48,515 - INFO - [sucrose_wallpaper_engine] 通过 GitHub API 找到最新版本: v26.7.5.0
+2026-07-13 14:58:25,385 - INFO - [sucrose_wallpaper_engine] 尝试使用 GitHub API: https://api.github.com/repos/Taiizor/Sucrose/releases/latest
+2026-07-13 14:58:25,862 - INFO - [sucrose_wallpaper_engine] 从 GitHub API 中找到下载链接: https://github.com/Taiizor/Sucrose/releases/download/v26.7.5.0/Sucrose_Bundle_.NET_Framework_4.8_x64_26.7.5.0.exe
+2026-07-13 14:58:25,862 - INFO - [sucrose_wallpaper_engine] 通过 GitHub API 找到最新版本: v26.7.5.0
+2026-07-13 14:59:33,795 - INFO - [moekoe_music] 尝试使用 GitHub API: https://api.github.com/repos/MoeKoeMusic/MoeKoeMusic/releases/latest
+2026-07-13 14:59:34,758 - INFO - [moekoe_music] 从 GitHub API 中找到下载链接: https://github.com/MoeKoeMusic/MoeKoeMusic/releases/download/v1.6.8/MoeKoe_Music_Setup_v1.6.8-x64.exe
+2026-07-13 14:59:34,758 - INFO - [moekoe_music] 通过 GitHub API 找到最新版本: v1.6.8
+2026-07-13 14:59:34,760 - INFO - [moekoe_music] 尝试使用 GitHub API: https://api.github.com/repos/MoeKoeMusic/MoeKoeMusic/releases/latest
+2026-07-13 14:59:35,444 - INFO - [moekoe_music] 从 GitHub API 中找到下载链接: https://github.com/MoeKoeMusic/MoeKoeMusic/releases/download/v1.6.8/MoeKoe_Music_v1.6.8-x64.dmg
+2026-07-13 14:59:35,445 - INFO - [moekoe_music] 通过 GitHub API 找到最新版本: v1.6.8
+2026-07-13 14:59:35,448 - INFO - [moekoe_music] 尝试使用 GitHub API: https://api.github.com/repos/MoeKoeMusic/MoeKoeMusic/releases/latest
+2026-07-13 14:59:36,180 - INFO - [moekoe_music] 从 GitHub API 中找到下载链接: https://github.com/MoeKoeMusic/MoeKoeMusic/releases/download/v1.6.8/MoeKoe_Music_v1.6.8-arm64.dmg
+2026-07-13 14:59:36,180 - INFO - [moekoe_music] 通过 GitHub API 找到最新版本: v1.6.8
+2026-07-13 14:59:36,184 - INFO - [moekoe_music] 尝试使用 GitHub API: https://api.github.com/repos/MoeKoeMusic/MoeKoeMusic/releases/latest
+2026-07-13 14:59:36,958 - INFO - [moekoe_music] 从 GitHub API 中找到下载链接: https://github.com/MoeKoeMusic/MoeKoeMusic/releases/download/v1.6.8/MoeKoe_Music_v1.6.8-x86_64.AppImage
+2026-07-13 14:59:36,959 - INFO - [moekoe_music] 通过 GitHub API 找到最新版本: v1.6.8
+2026-07-13 15:00:03,641 - INFO - [moekoe_music] 尝试使用 GitHub API: https://api.github.com/repos/MoeKoeMusic/MoeKoeMusic/releases/latest
+2026-07-13 15:00:04,335 - INFO - [moekoe_music] 从 GitHub API 中找到下载链接: https://github.com/MoeKoeMusic/MoeKoeMusic/releases/download/v1.6.8/MoeKoe_Music_v1.6.8-x64.dmg
+2026-07-13 15:00:04,335 - INFO - [moekoe_music] 通过 GitHub API 找到最新版本: v1.6.8
+2026-07-13 15:00:04,339 - INFO - [moekoe_music_arm64] 尝试使用 GitHub API: https://api.github.com/repos/MoeKoeMusic/MoeKoeMusic/releases/latest
+2026-07-13 15:00:05,030 - INFO - [moekoe_music_arm64] 从 GitHub API 中找到下载链接: https://github.com/MoeKoeMusic/MoeKoeMusic/releases/download/v1.6.8/MoeKoe_Music_v1.6.8-arm64.dmg
+2026-07-13 15:00:05,030 - INFO - [moekoe_music_arm64] 通过 GitHub API 找到最新版本: v1.6.8
+2026-07-13 15:00:05,036 - INFO - [moekoe_music] 尝试使用 GitHub API: https://api.github.com/repos/MoeKoeMusic/MoeKoeMusic/releases/latest
+2026-07-13 15:00:05,757 - INFO - [moekoe_music] 从 GitHub API 中找到下载链接: https://github.com/MoeKoeMusic/MoeKoeMusic/releases/download/v1.6.8/MoeKoe_Music_v1.6.8-x86_64.AppImage
+2026-07-13 15:00:05,758 - INFO - [moekoe_music] 通过 GitHub API 找到最新版本: v1.6.8
+2026-07-13 15:00:05,763 - INFO - [moekoe_music] 尝试使用 GitHub API: https://api.github.com/repos/MoeKoeMusic/MoeKoeMusic/releases/latest
+2026-07-13 15:00:08,074 - INFO - [moekoe_music] 从 GitHub API 中找到下载链接: https://github.com/MoeKoeMusic/MoeKoeMusic/releases/download/v1.6.8/MoeKoe_Music_Setup_v1.6.8-x64.exe
+2026-07-13 15:00:08,074 - INFO - [moekoe_music] 通过 GitHub API 找到最新版本: v1.6.8
+2026-07-13 15:01:38,637 - INFO - [seelen_ui] 尝试使用 GitHub API: https://api.github.com/repos/eythaann/Seelen-UI/releases/latest
+2026-07-13 15:01:39,640 - INFO - [seelen_ui] 从 GitHub API 中找到下载链接: https://github.com/eythaann/Seelen-UI/releases/download/v2.7.4/Seelen.UI_2.7.4_x64-setup-fixed.exe
+2026-07-13 15:01:39,640 - INFO - [seelen_ui] 通过 GitHub API 找到最新版本: v2.7.4
+2026-07-13 15:01:39,643 - INFO - [seelen_ui] 尝试使用 GitHub API: https://api.github.com/repos/eythaann/Seelen-UI/releases/latest
+2026-07-13 15:01:40,409 - INFO - [seelen_ui] 从 GitHub API 中找到下载链接: https://github.com/eythaann/Seelen-UI/releases/download/v2.7.4/Seelen.UI_2.7.4_x64-setup.exe
+2026-07-13 15:01:40,409 - INFO - [seelen_ui] 通过 GitHub API 找到最新版本: v2.7.4
+2026-07-13 15:01:40,413 - INFO - [seelen_ui] 尝试使用 GitHub API: https://api.github.com/repos/eythaann/Seelen-UI/releases/latest
+2026-07-13 15:01:41,234 - INFO - [seelen_ui] 从 GitHub API 中找到下载链接: https://github.com/eythaann/Seelen-UI/releases/download/v2.7.4/Seelen.UI_2.7.4.0_x64.Msix
+2026-07-13 15:01:41,234 - INFO - [seelen_ui] 通过 GitHub API 找到最新版本: v2.7.4
+2026-07-13 15:02:13,354 - INFO - [seelen_ui] 尝试使用 GitHub API: https://api.github.com/repos/eythaann/Seelen-UI/releases/latest
+2026-07-13 15:02:14,313 - INFO - [seelen_ui] 从 GitHub API 中找到下载链接: https://github.com/eythaann/Seelen-UI/releases/download/v2.7.4/Seelen.UI_2.7.4_x64-setup-fixed.exe
+2026-07-13 15:02:14,313 - INFO - [seelen_ui] 通过 GitHub API 找到最新版本: v2.7.4
+2026-07-13 15:02:14,317 - INFO - [seelen_ui_arm64] 尝试使用 GitHub API: https://api.github.com/repos/eythaann/Seelen-UI/releases/latest
+2026-07-13 15:02:16,572 - INFO - [seelen_ui_arm64] 从 GitHub API 中找到下载链接: https://github.com/eythaann/Seelen-UI/releases/download/v2.7.4/Seelen.UI_2.7.4_arm64-setup-fixed.exe
+2026-07-13 15:02:16,573 - INFO - [seelen_ui_arm64] 通过 GitHub API 找到最新版本: v2.7.4
+2026-07-13 15:04:01,856 - INFO - [tchmaterial_parser] 尝试使用 GitHub API: https://api.github.com/repos/happycola233/tchMaterial-parser/releases/latest
+2026-07-13 15:04:02,737 - INFO - [tchmaterial_parser] 从 GitHub API 中找到下载链接: https://github.com/happycola233/tchMaterial-parser/releases/download/v3.3.4/tchMaterial-parser-windows-x64.exe
+2026-07-13 15:04:02,739 - INFO - [tchmaterial_parser] 通过 GitHub API 找到最新版本: v3.3.4
+2026-07-13 15:04:02,742 - INFO - [tchmaterial_parser] 尝试使用 GitHub API: https://api.github.com/repos/happycola233/tchMaterial-parser/releases/latest
+2026-07-13 15:04:03,404 - INFO - [tchmaterial_parser] 从 GitHub API 中找到下载链接: https://github.com/happycola233/tchMaterial-parser/releases/download/v3.3.4/tchMaterial-parser-linux-x64
+2026-07-13 15:04:03,404 - INFO - [tchmaterial_parser] 通过 GitHub API 找到最新版本: v3.3.4
+2026-07-13 15:04:03,409 - INFO - [tchmaterial_parser] 尝试使用 GitHub API: https://api.github.com/repos/happycola233/tchMaterial-parser/releases/latest
+2026-07-13 15:04:04,132 - INFO - [tchmaterial_parser] 从 GitHub API 中找到下载链接: https://github.com/happycola233/tchMaterial-parser/releases/download/v3.3.4/tchMaterial-parser-mac-arm64.zip
+2026-07-13 15:04:04,132 - INFO - [tchmaterial_parser] 通过 GitHub API 找到最新版本: v3.3.4
+2026-07-13 15:04:14,950 - INFO - [tchmaterial_parser] 尝试使用 GitHub API: https://api.github.com/repos/happycola233/tchMaterial-parser/releases/latest
+2026-07-13 15:04:15,714 - INFO - [tchmaterial_parser] 从 GitHub API 中找到下载链接: https://github.com/happycola233/tchMaterial-parser/releases/download/v3.3.4/tchMaterial-parser-mac-x64.zip
+2026-07-13 15:04:15,715 - INFO - [tchmaterial_parser] 通过 GitHub API 找到最新版本: v3.3.4
+2026-07-13 15:04:15,717 - INFO - [tchmaterial_parser] 尝试使用 GitHub API: https://api.github.com/repos/happycola233/tchMaterial-parser/releases/latest
+2026-07-13 15:04:16,450 - INFO - [tchmaterial_parser] 从 GitHub API 中找到下载链接: https://github.com/happycola233/tchMaterial-parser/releases/download/v3.3.4/tchMaterial-parser-windows-arm64.exe
+2026-07-13 15:04:16,450 - INFO - [tchmaterial_parser] 通过 GitHub API 找到最新版本: v3.3.4
+2026-07-13 15:04:16,454 - INFO - [tchmaterial_parser] 尝试使用 GitHub API: https://api.github.com/repos/happycola233/tchMaterial-parser/releases/latest
+2026-07-13 15:04:17,237 - INFO - [tchmaterial_parser] 从 GitHub API 中找到下载链接: https://github.com/happycola233/tchMaterial-parser/releases/download/v3.3.4/tchMaterial-parser-linux-arm64
+2026-07-13 15:04:17,237 - INFO - [tchmaterial_parser] 通过 GitHub API 找到最新版本: v3.3.4
+2026-07-13 15:04:42,672 - INFO - [tchmaterial_parser] 尝试使用 GitHub API: https://api.github.com/repos/happycola233/tchMaterial-parser/releases/latest
+2026-07-13 15:04:43,426 - INFO - [tchmaterial_parser] 从 GitHub API 中找到下载链接: https://github.com/happycola233/tchMaterial-parser/releases/download/v3.3.4/tchMaterial-parser-mac-x64.zip
+2026-07-13 15:04:43,426 - INFO - [tchmaterial_parser] 通过 GitHub API 找到最新版本: v3.3.4
+2026-07-13 15:04:43,429 - INFO - [tchmaterial_parser_arm64] 尝试使用 GitHub API: https://api.github.com/repos/happycola233/tchMaterial-parser/releases/latest
+2026-07-13 15:04:44,406 - INFO - [tchmaterial_parser_arm64] 从 GitHub API 中找到下载链接: https://github.com/happycola233/tchMaterial-parser/releases/download/v3.3.4/tchMaterial-parser-mac-arm64.zip
+2026-07-13 15:04:44,407 - INFO - [tchmaterial_parser_arm64] 通过 GitHub API 找到最新版本: v3.3.4
+2026-07-13 15:04:44,412 - INFO - [tchmaterial_parser] 尝试使用 GitHub API: https://api.github.com/repos/happycola233/tchMaterial-parser/releases/latest
+2026-07-13 15:04:53,363 - INFO - [tchmaterial_parser] 从 GitHub API 中找到下载链接: https://github.com/happycola233/tchMaterial-parser/releases/download/v3.3.4/tchMaterial-parser-linux-x64
+2026-07-13 15:04:53,364 - INFO - [tchmaterial_parser] 通过 GitHub API 找到最新版本: v3.3.4
+2026-07-13 15:04:53,366 - INFO - [tchmaterial_parser_arm64] 尝试使用 GitHub API: https://api.github.com/repos/happycola233/tchMaterial-parser/releases/latest
+2026-07-13 15:04:54,072 - INFO - [tchmaterial_parser_arm64] 从 GitHub API 中找到下载链接: https://github.com/happycola233/tchMaterial-parser/releases/download/v3.3.4/tchMaterial-parser-linux-arm64
+2026-07-13 15:04:54,072 - INFO - [tchmaterial_parser_arm64] 通过 GitHub API 找到最新版本: v3.3.4
+2026-07-13 15:04:54,075 - INFO - [tchmaterial_parser] 尝试使用 GitHub API: https://api.github.com/repos/happycola233/tchMaterial-parser/releases/latest
+2026-07-13 15:04:54,797 - INFO - [tchmaterial_parser] 从 GitHub API 中找到下载链接: https://github.com/happycola233/tchMaterial-parser/releases/download/v3.3.4/tchMaterial-parser-windows-x64.exe
+2026-07-13 15:04:54,797 - INFO - [tchmaterial_parser] 通过 GitHub API 找到最新版本: v3.3.4
+2026-07-13 15:04:54,802 - INFO - [tchmaterial_parser_arm64] 尝试使用 GitHub API: https://api.github.com/repos/happycola233/tchMaterial-parser/releases/latest
+2026-07-13 15:04:55,463 - INFO - [tchmaterial_parser_arm64] 从 GitHub API 中找到下载链接: https://github.com/happycola233/tchMaterial-parser/releases/download/v3.3.4/tchMaterial-parser-windows-arm64.exe
+2026-07-13 15:04:55,463 - INFO - [tchmaterial_parser_arm64] 通过 GitHub API 找到最新版本: v3.3.4
+2026-07-13 15:15:51,073 - INFO - [bitwarden_desktop] 尝试使用 GitHub API: https://api.github.com/repos/bitwarden/clients/releases/latest
+2026-07-13 15:15:51,567 - INFO - [bitwarden_desktop] 通过 GitHub API 找到最新版本: web-v2026.6.4
