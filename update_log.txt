@@ -298,3 +298,371 @@
 2026-07-13 15:04:55,463 - INFO - [tchmaterial_parser_arm64] 通过 GitHub API 找到最新版本: v3.3.4
 2026-07-13 15:15:51,073 - INFO - [bitwarden_desktop] 尝试使用 GitHub API: https://api.github.com/repos/bitwarden/clients/releases/latest
 2026-07-13 15:15:51,567 - INFO - [bitwarden_desktop] 通过 GitHub API 找到最新版本: web-v2026.6.4
+2026-07-14 17:27:09,407 - INFO - 已从配置目录合并：E:\GITHUB\已经发布\gh-release-fetch\apps — windows 735 项, darwin 617 项, linux 605 项
+2026-07-14 17:27:09,410 - INFO - [codex_app] 尝试使用 GitHub API: https://api.github.com/repos/Wangnov/codex-app-mirror/releases/latest
+2026-07-14 17:27:10,333 - INFO - [codex_app] 从 GitHub API 中找到下载链接: https://github.com/Wangnov/codex-app-mirror/releases/download/codex-app-26.707.72221/OpenAI.Codex_26.707.9981.0_x64__2p2nqsd0c76g0.Msix
+2026-07-14 17:27:10,333 - INFO - [codex_app] 通过 GitHub API 找到最新版本: codex-app-26.707.72221
+2026-07-14 17:27:10,336 - INFO - [codex_app] 尝试使用 GitHub API: https://api.github.com/repos/Wangnov/codex-app-mirror/releases/latest
+2026-07-14 17:27:11,104 - INFO - [codex_app] 从 GitHub API 中找到下载链接: https://github.com/Wangnov/codex-app-mirror/releases/download/codex-app-26.707.72221/Codex-mac-arm64.dmg
+2026-07-14 17:27:11,104 - INFO - [codex_app] 通过 GitHub API 找到最新版本: codex-app-26.707.72221
+2026-07-14 17:27:11,107 - INFO - [codex_app_darwin_intel] 尝试使用 GitHub API: https://api.github.com/repos/Wangnov/codex-app-mirror/releases/latest
+2026-07-14 17:27:11,837 - INFO - [codex_app_darwin_intel] 从 GitHub API 中找到下载链接: https://github.com/Wangnov/codex-app-mirror/releases/download/codex-app-26.707.72221/Codex-mac-x64.dmg
+2026-07-14 17:27:11,837 - INFO - [codex_app_darwin_intel] 通过 GitHub API 找到最新版本: codex-app-26.707.72221
+2026-07-15 11:33:13,627 - INFO - 已从配置目录合并：E:\GITHUB\已经发布\gh-release-fetch\apps — windows 735 项, darwin 617 项, linux 605 项
+2026-07-15 11:33:13,628 - INFO - [optimizerduck] 尝试使用 GitHub API: https://api.github.com/repos/itsfatduck/optimizerDuck/releases/latest
+2026-07-15 11:33:14,125 - INFO - [optimizerduck] 从 GitHub API 中找到下载链接: https://github.com/itsfatduck/optimizerDuck/releases/download/v2.25.2/optimizerDuck-Windows-x64-2.25.2.exe
+2026-07-15 11:33:14,125 - INFO - [optimizerduck] 通过 GitHub API 找到最新版本: v2.25.2
+2026-07-15 11:34:09,947 - INFO - 已从配置目录合并：E:\GITHUB\已经发布\gh-release-fetch\apps — windows 735 项, darwin 617 项, linux 605 项
+2026-07-15 11:34:09,948 - INFO - [vscode] 正在检查最新版本: https://bgithub.xyz/microsoft/vscode/releases
+2026-07-15 11:34:10,664 - WARNING - [vscode] 发布页获取失败: https://bgithub.xyz/microsoft/vscode/releases -> 403 Client Error: Forbidden for url: https://bgithub.xyz/microsoft/vscode/releases
+2026-07-15 11:34:10,665 - INFO - [vscode] 正在检查最新版本: https://github.com/microsoft/vscode/releases
+2026-07-15 11:34:12,350 - INFO - [vscode] 已保存发布页 HTML: _tmp_vscode.html
+2026-07-15 11:34:12,597 - INFO - [vscode] 尝试从页面中查找下载链接...
+2026-07-15 11:34:12,634 - INFO - [vscode] 尝试使用 GitHub API: https://api.github.com/repos/microsoft/vscode/releases/tags/1.128.1
+2026-07-15 11:34:13,427 - INFO - [vscode] 通过 GitHub API 找到最新版本: 1.128.1
+2026-07-15 11:34:13,428 - INFO - [vscode] 找到最新版本: 1.128.1
+2026-07-15 11:34:13,428 - INFO - [vscode] 成功使用发布页来源: https://github.com/microsoft/vscode/releases
+2026-07-15 11:34:13,428 - WARNING - [vscode] 未能在页面中找到下载链接，将使用拼接 URL
+2026-07-15 11:35:26,835 - INFO - 已从配置目录合并：E:\GITHUB\已经发布\gh-release-fetch\apps — windows 735 项, darwin 617 项, linux 605 项
+2026-07-15 15:26:24,842 - INFO - 已从配置目录合并：E:\GITHUB\已经发布\gh-release-fetch\apps — windows 735 项, darwin 617 项, linux 605 项
+2026-07-15 15:26:24,843 - INFO - [affine] 尝试使用 GitHub API: https://api.github.com/repos/toeverything/AFFiNE/releases/latest
+2026-07-15 15:26:25,700 - INFO - [affine] 从 GitHub API 中找到下载链接: https://github.com/toeverything/AFFiNE/releases/download/v0.27.0/affine-0.27.0-stable-windows-x64.exe
+2026-07-15 15:26:25,700 - INFO - [affine] 通过 GitHub API 找到最新版本: v0.27.0
+2026-07-15 15:26:25,702 - INFO - [affine] 尝试使用 GitHub API: https://api.github.com/repos/toeverything/AFFiNE/releases/latest
+2026-07-15 15:26:26,381 - INFO - [affine] 从 GitHub API 中找到下载链接: https://github.com/toeverything/AFFiNE/releases/download/v0.27.0/affine-0.27.0-stable-macos-x64.dmg
+2026-07-15 15:26:26,381 - INFO - [affine] 通过 GitHub API 找到最新版本: v0.27.0
+2026-07-15 15:26:26,383 - INFO - [affine] 尝试使用 GitHub API: https://api.github.com/repos/toeverything/AFFiNE/releases/latest
+2026-07-15 15:26:27,012 - INFO - [affine] 从 GitHub API 中找到下载链接: https://github.com/toeverything/AFFiNE/releases/download/v0.27.0/affine-0.27.0-stable-linux-x64.appimage
+2026-07-15 15:26:27,012 - INFO - [affine] 通过 GitHub API 找到最新版本: v0.27.0
+2026-07-16 10:38:48,418 - INFO - 已从配置目录合并：E:\GITHUB\已经发布\gh-release-fetch\apps — windows 736 项, darwin 619 项, linux 607 项
+2026-07-16 10:38:48,419 - INFO - [rmux] 尝试使用 GitHub API: https://api.github.com/repos/Helvesec/rmux/releases/latest
+2026-07-16 10:38:49,330 - INFO - [rmux] 从 GitHub API 中找到下载链接: https://github.com/Helvesec/rmux/releases/download/v0.8.0/rmux-0.8.0-windows-x86_64.zip
+2026-07-16 10:38:49,330 - INFO - [rmux] 通过 GitHub API 找到最新版本: v0.8.0
+2026-07-16 10:38:49,331 - INFO - [rmux] 尝试使用 GitHub API: https://api.github.com/repos/Helvesec/rmux/releases/latest
+2026-07-16 10:38:50,032 - INFO - [rmux] 从 GitHub API 中找到下载链接: https://github.com/Helvesec/rmux/releases/download/v0.8.0/rmux-0.8.0-macos-aarch64.tar.gz
+2026-07-16 10:38:50,032 - INFO - [rmux] 通过 GitHub API 找到最新版本: v0.8.0
+2026-07-16 10:38:50,036 - INFO - [rmux_darwin_intel] 尝试使用 GitHub API: https://api.github.com/repos/Helvesec/rmux/releases/latest
+2026-07-16 10:38:50,768 - INFO - [rmux_darwin_intel] 从 GitHub API 中找到下载链接: https://github.com/Helvesec/rmux/releases/download/v0.8.0/rmux-0.8.0-macos-x86_64.tar.gz
+2026-07-16 10:38:50,768 - INFO - [rmux_darwin_intel] 通过 GitHub API 找到最新版本: v0.8.0
+2026-07-16 10:38:50,772 - INFO - [rmux] 尝试使用 GitHub API: https://api.github.com/repos/Helvesec/rmux/releases/latest
+2026-07-16 10:38:52,535 - INFO - [rmux] 从 GitHub API 中找到下载链接: https://github.com/Helvesec/rmux/releases/download/v0.8.0/rmux-0.8.0-linux-x86_64.tar.gz
+2026-07-16 10:38:52,535 - INFO - [rmux] 通过 GitHub API 找到最新版本: v0.8.0
+2026-07-16 10:38:52,537 - INFO - [rmux_linux_arm64] 尝试使用 GitHub API: https://api.github.com/repos/Helvesec/rmux/releases/latest
+2026-07-16 10:38:53,237 - INFO - [rmux_linux_arm64] 从 GitHub API 中找到下载链接: https://github.com/Helvesec/rmux/releases/download/v0.8.0/rmux-0.8.0-linux-aarch64.tar.gz
+2026-07-16 10:38:53,237 - INFO - [rmux_linux_arm64] 通过 GitHub API 找到最新版本: v0.8.0
+2026-07-17 11:28:18,398 - INFO - 已从配置目录合并：E:\GITHUB\已经发布\gh-release-fetch\apps — windows 737 项, darwin 619 项, linux 607 项
+2026-07-17 11:28:18,399 - INFO - [altsnap] 尝试使用 GitHub API: https://api.github.com/repos/RamonUnch/AltSnap/releases/latest
+2026-07-17 11:28:19,238 - INFO - [altsnap] 从 GitHub API 中找到下载链接: https://github.com/RamonUnch/AltSnap/releases/download/1.68/AltSnap1.68-x64-inst.exe
+2026-07-17 11:28:19,239 - INFO - [altsnap] 通过 GitHub API 找到最新版本: 1.68
+2026-07-17 11:32:43,055 - INFO - 已从配置目录合并：E:\GITHUB\已经发布\gh-release-fetch\apps — windows 745 项, darwin 626 项, linux 607 项
+2026-07-17 11:32:43,056 - INFO - [glazewm] 尝试使用 GitHub API: https://api.github.com/repos/glzr-io/glazewm/releases/latest
+2026-07-17 11:32:43,779 - WARNING - [glazewm] GitHub API 限流，改用发布页 HTML 解析（可设置 GITHUB_TOKEN 提高额度）
+2026-07-17 11:32:43,782 - INFO - [glazewm] 正在检查最新版本: https://bgithub.xyz/glzr-io/glazewm/releases
+2026-07-17 11:32:44,515 - WARNING - [glazewm] 发布页获取失败: https://bgithub.xyz/glzr-io/glazewm/releases -> 403 Client Error: Forbidden for url: https://bgithub.xyz/glzr-io/glazewm/releases
+2026-07-17 11:32:44,515 - INFO - [glazewm] 正在检查最新版本: https://github.com/glzr-io/glazewm/releases
+2026-07-17 11:32:46,620 - INFO - [glazewm] 已保存发布页 HTML: _tmp_eff_glazewm.html
+2026-07-17 11:32:46,911 - INFO - [glazewm] 尝试从页面中查找下载链接...
+2026-07-17 11:32:46,981 - INFO - [glazewm] 尝试使用 GitHub API: https://api.github.com/repos/glzr-io/glazewm/releases/tags/v3.10.1
+2026-07-17 11:32:47,703 - WARNING - [glazewm] GitHub API 补充下载链接失败: 403 Client Error: rate limit exceeded for url: https://api.github.com/repos/glzr-io/glazewm/releases/tags/v3.10.1
+2026-07-17 11:32:47,704 - INFO - [glazewm] 找到最新版本: v3.10.1
+2026-07-17 11:32:47,704 - INFO - [glazewm] 成功使用发布页来源: https://github.com/glzr-io/glazewm/releases
+2026-07-17 11:32:47,705 - WARNING - [glazewm] 未能在页面中找到下载链接，将使用拼接 URL
+2026-07-17 11:32:48,513 - INFO - [komorebi] 尝试使用 GitHub API: https://api.github.com/repos/LGUG2Z/komorebi/releases/latest
+2026-07-17 11:32:49,218 - WARNING - [komorebi] GitHub API 限流，改用发布页 HTML 解析（可设置 GITHUB_TOKEN 提高额度）
+2026-07-17 11:32:49,219 - INFO - [komorebi] 正在检查最新版本: https://bgithub.xyz/LGUG2Z/komorebi/releases
+2026-07-17 11:32:49,897 - WARNING - [komorebi] 发布页获取失败: https://bgithub.xyz/LGUG2Z/komorebi/releases -> 403 Client Error: Forbidden for url: https://bgithub.xyz/LGUG2Z/komorebi/releases
+2026-07-17 11:32:49,897 - INFO - [komorebi] 正在检查最新版本: https://github.com/LGUG2Z/komorebi/releases
+2026-07-17 11:32:51,478 - INFO - [komorebi] 已保存发布页 HTML: _tmp_eff_komorebi.html
+2026-07-17 11:32:51,725 - INFO - [komorebi] 尝试从页面中查找下载链接...
+2026-07-17 11:32:51,782 - INFO - [komorebi] 尝试使用 GitHub API: https://api.github.com/repos/LGUG2Z/komorebi/releases/tags/nightly
+2026-07-17 11:32:52,438 - WARNING - [komorebi] GitHub API 补充下载链接失败: 403 Client Error: rate limit exceeded for url: https://api.github.com/repos/LGUG2Z/komorebi/releases/tags/nightly
+2026-07-17 11:32:52,439 - INFO - [komorebi] 找到最新版本: nightly
+2026-07-17 11:32:52,440 - INFO - [komorebi] 成功使用发布页来源: https://github.com/LGUG2Z/komorebi/releases
+2026-07-17 11:32:52,440 - WARNING - [komorebi] 未能在页面中找到下载链接，将使用拼接 URL
+2026-07-17 11:32:53,253 - INFO - [whkd] 尝试使用 GitHub API: https://api.github.com/repos/LGUG2Z/whkd/releases/latest
+2026-07-17 11:32:53,907 - WARNING - [whkd] GitHub API 限流，改用发布页 HTML 解析（可设置 GITHUB_TOKEN 提高额度）
+2026-07-17 11:32:53,908 - INFO - [whkd] 正在检查最新版本: https://bgithub.xyz/LGUG2Z/whkd/releases
+2026-07-17 11:32:54,589 - WARNING - [whkd] 发布页获取失败: https://bgithub.xyz/LGUG2Z/whkd/releases -> 403 Client Error: Forbidden for url: https://bgithub.xyz/LGUG2Z/whkd/releases
+2026-07-17 11:32:54,589 - INFO - [whkd] 正在检查最新版本: https://github.com/LGUG2Z/whkd/releases
+2026-07-17 11:32:56,325 - INFO - [whkd] 已保存发布页 HTML: _tmp_eff_whkd.html
+2026-07-17 11:32:56,518 - INFO - [whkd] 尝试从页面中查找下载链接...
+2026-07-17 11:32:56,557 - INFO - [whkd] 尝试使用 GitHub API: https://api.github.com/repos/LGUG2Z/whkd/releases/tags/v0.2.10
+2026-07-17 11:32:57,284 - WARNING - [whkd] GitHub API 补充下载链接失败: 403 Client Error: rate limit exceeded for url: https://api.github.com/repos/LGUG2Z/whkd/releases/tags/v0.2.10
+2026-07-17 11:32:57,287 - INFO - [whkd] 找到最新版本: v0.2.10
+2026-07-17 11:32:57,287 - INFO - [whkd] 成功使用发布页来源: https://github.com/LGUG2Z/whkd/releases
+2026-07-17 11:32:57,287 - WARNING - [whkd] 未能在页面中找到下载链接，将使用拼接 URL
+2026-07-17 11:32:58,101 - INFO - [yasb] 尝试使用 GitHub API: https://api.github.com/repos/amnweb/yasb/releases/latest
+2026-07-17 11:32:58,821 - WARNING - [yasb] GitHub API 限流，改用发布页 HTML 解析（可设置 GITHUB_TOKEN 提高额度）
+2026-07-17 11:32:58,822 - INFO - [yasb] 正在检查最新版本: https://bgithub.xyz/amnweb/yasb/releases
+2026-07-17 11:32:59,487 - WARNING - [yasb] 发布页获取失败: https://bgithub.xyz/amnweb/yasb/releases -> 403 Client Error: Forbidden for url: https://bgithub.xyz/amnweb/yasb/releases
+2026-07-17 11:32:59,487 - INFO - [yasb] 正在检查最新版本: https://github.com/amnweb/yasb/releases
+2026-07-17 11:33:01,974 - INFO - [yasb] 已保存发布页 HTML: _tmp_eff_yasb.html
+2026-07-17 11:33:02,266 - INFO - [yasb] 尝试从页面中查找下载链接...
+2026-07-17 11:33:02,344 - INFO - [yasb] 尝试使用 GitHub API: https://api.github.com/repos/amnweb/yasb/releases/tags/preview
+2026-07-17 11:33:03,051 - WARNING - [yasb] GitHub API 补充下载链接失败: 403 Client Error: rate limit exceeded for url: https://api.github.com/repos/amnweb/yasb/releases/tags/preview
+2026-07-17 11:33:03,052 - INFO - [yasb] 找到最新版本: preview
+2026-07-17 11:33:03,053 - INFO - [yasb] 成功使用发布页来源: https://github.com/amnweb/yasb/releases
+2026-07-17 11:33:03,053 - WARNING - [yasb] 未能在页面中找到下载链接，将使用拼接 URL
+2026-07-17 11:33:03,867 - INFO - [zebar] 尝试使用 GitHub API: https://api.github.com/repos/glzr-io/zebar/releases/latest
+2026-07-17 11:33:04,619 - WARNING - [zebar] GitHub API 限流，改用发布页 HTML 解析（可设置 GITHUB_TOKEN 提高额度）
+2026-07-17 11:33:04,621 - INFO - [zebar] 正在检查最新版本: https://bgithub.xyz/glzr-io/zebar/releases
+2026-07-17 11:33:05,310 - WARNING - [zebar] 发布页获取失败: https://bgithub.xyz/glzr-io/zebar/releases -> 403 Client Error: Forbidden for url: https://bgithub.xyz/glzr-io/zebar/releases
+2026-07-17 11:33:05,310 - INFO - [zebar] 正在检查最新版本: https://github.com/glzr-io/zebar/releases
+2026-07-17 11:33:07,230 - INFO - [zebar] 已保存发布页 HTML: _tmp_eff_zebar.html
+2026-07-17 11:33:07,466 - INFO - [zebar] 尝试从页面中查找下载链接...
+2026-07-17 11:33:07,519 - INFO - [zebar] 尝试使用 GitHub API: https://api.github.com/repos/glzr-io/zebar/releases/tags/v3.3.1
+2026-07-17 11:33:08,237 - WARNING - [zebar] GitHub API 补充下载链接失败: 403 Client Error: rate limit exceeded for url: https://api.github.com/repos/glzr-io/zebar/releases/tags/v3.3.1
+2026-07-17 11:33:08,239 - INFO - [zebar] 找到最新版本: v3.3.1
+2026-07-17 11:33:08,239 - INFO - [zebar] 成功使用发布页来源: https://github.com/glzr-io/zebar/releases
+2026-07-17 11:33:08,240 - WARNING - [zebar] 未能在页面中找到下载链接，将使用拼接 URL
+2026-07-17 11:33:09,055 - INFO - [translucenttb] 尝试使用 GitHub API: https://api.github.com/repos/TranslucentTB/TranslucentTB/releases/latest
+2026-07-17 11:33:09,722 - WARNING - [translucenttb] GitHub API 限流，改用发布页 HTML 解析（可设置 GITHUB_TOKEN 提高额度）
+2026-07-17 11:33:09,724 - INFO - [translucenttb] 正在检查最新版本: https://bgithub.xyz/TranslucentTB/TranslucentTB/releases
+2026-07-17 11:33:10,424 - WARNING - [translucenttb] 发布页获取失败: https://bgithub.xyz/TranslucentTB/TranslucentTB/releases -> 403 Client Error: Forbidden for url: https://bgithub.xyz/TranslucentTB/TranslucentTB/releases
+2026-07-17 11:33:10,425 - INFO - [translucenttb] 正在检查最新版本: https://github.com/TranslucentTB/TranslucentTB/releases
+2026-07-17 11:33:12,387 - INFO - [translucenttb] 已保存发布页 HTML: _tmp_eff_translucenttb.html
+2026-07-17 11:33:12,647 - INFO - [translucenttb] 尝试从页面中查找下载链接...
+2026-07-17 11:33:12,660 - INFO - [translucenttb] 从页面中找到下载链接: https://github.com/TranslucentTB/TranslucentTB/releases/download/2026.1/TranslucentTB-portable-x64.zip
+2026-07-17 11:33:12,670 - INFO - [translucenttb] 找到最新版本: 2026.1
+2026-07-17 11:33:12,670 - INFO - [translucenttb] 成功使用发布页来源: https://github.com/TranslucentTB/TranslucentTB/releases
+2026-07-17 11:33:12,670 - INFO - [translucenttb] 同时找到下载链接: https://github.com/TranslucentTB/TranslucentTB/releases/download/2026.1/TranslucentTB-portable-x64.zip
+2026-07-17 11:33:13,474 - INFO - [windhawk] 尝试使用 GitHub API: https://api.github.com/repos/ramensoftware/windhawk/releases/latest
+2026-07-17 11:33:14,169 - WARNING - [windhawk] GitHub API 限流，改用发布页 HTML 解析（可设置 GITHUB_TOKEN 提高额度）
+2026-07-17 11:33:14,170 - INFO - [windhawk] 正在检查最新版本: https://bgithub.xyz/ramensoftware/windhawk/releases
+2026-07-17 11:33:14,846 - WARNING - [windhawk] 发布页获取失败: https://bgithub.xyz/ramensoftware/windhawk/releases -> 403 Client Error: Forbidden for url: https://bgithub.xyz/ramensoftware/windhawk/releases
+2026-07-17 11:33:14,846 - INFO - [windhawk] 正在检查最新版本: https://github.com/ramensoftware/windhawk/releases
+2026-07-17 11:33:16,381 - INFO - [windhawk] 已保存发布页 HTML: _tmp_eff_windhawk.html
+2026-07-17 11:33:16,637 - INFO - [windhawk] 尝试从页面中查找下载链接...
+2026-07-17 11:33:16,682 - INFO - [windhawk] 尝试使用 GitHub API: https://api.github.com/repos/ramensoftware/windhawk/releases/tags/2.0.0-alpha.1
+2026-07-17 11:33:17,367 - WARNING - [windhawk] GitHub API 补充下载链接失败: 403 Client Error: rate limit exceeded for url: https://api.github.com/repos/ramensoftware/windhawk/releases/tags/2.0.0-alpha.1
+2026-07-17 11:33:17,368 - INFO - [windhawk] 找到最新版本: 2.0.0-alpha.1
+2026-07-17 11:33:17,368 - INFO - [windhawk] 成功使用发布页来源: https://github.com/ramensoftware/windhawk/releases
+2026-07-17 11:33:17,369 - WARNING - [windhawk] 未能在页面中找到下载链接，将使用拼接 URL
+2026-07-17 11:33:18,182 - INFO - [smartsystemmenu] 尝试使用 GitHub API: https://api.github.com/repos/AlexanderPro/SmartSystemMenu/releases/latest
+2026-07-17 11:33:18,884 - WARNING - [smartsystemmenu] GitHub API 限流，改用发布页 HTML 解析（可设置 GITHUB_TOKEN 提高额度）
+2026-07-17 11:33:18,885 - INFO - [smartsystemmenu] 正在检查最新版本: https://bgithub.xyz/AlexanderPro/SmartSystemMenu/releases
+2026-07-17 11:33:19,571 - WARNING - [smartsystemmenu] 发布页获取失败: https://bgithub.xyz/AlexanderPro/SmartSystemMenu/releases -> 403 Client Error: Forbidden for url: https://bgithub.xyz/AlexanderPro/SmartSystemMenu/releases
+2026-07-17 11:33:19,572 - INFO - [smartsystemmenu] 正在检查最新版本: https://github.com/AlexanderPro/SmartSystemMenu/releases
+2026-07-17 11:33:21,106 - INFO - [smartsystemmenu] 已保存发布页 HTML: _tmp_eff_smartsystemmenu.html
+2026-07-17 11:33:21,281 - INFO - [smartsystemmenu] 尝试从页面中查找下载链接...
+2026-07-17 11:33:21,323 - INFO - [smartsystemmenu] 尝试使用 GitHub API: https://api.github.com/repos/AlexanderPro/SmartSystemMenu/releases/tags/v2.33.1
+2026-07-17 11:33:21,997 - WARNING - [smartsystemmenu] GitHub API 补充下载链接失败: 403 Client Error: rate limit exceeded for url: https://api.github.com/repos/AlexanderPro/SmartSystemMenu/releases/tags/v2.33.1
+2026-07-17 11:33:21,999 - INFO - [smartsystemmenu] 找到最新版本: v2.33.1
+2026-07-17 11:33:21,999 - INFO - [smartsystemmenu] 成功使用发布页来源: https://github.com/AlexanderPro/SmartSystemMenu/releases
+2026-07-17 11:33:21,999 - WARNING - [smartsystemmenu] 未能在页面中找到下载链接，将使用拼接 URL
+2026-07-17 11:33:22,803 - INFO - [altsnap] 尝试使用 GitHub API: https://api.github.com/repos/RamonUnch/AltSnap/releases/latest
+2026-07-17 11:33:23,497 - WARNING - [altsnap] GitHub API 限流，改用发布页 HTML 解析（可设置 GITHUB_TOKEN 提高额度）
+2026-07-17 11:33:23,498 - INFO - [altsnap] 正在检查最新版本: https://bgithub.xyz/RamonUnch/AltSnap/releases
+2026-07-17 11:33:24,177 - WARNING - [altsnap] 发布页获取失败: https://bgithub.xyz/RamonUnch/AltSnap/releases -> 403 Client Error: Forbidden for url: https://bgithub.xyz/RamonUnch/AltSnap/releases
+2026-07-17 11:33:24,177 - INFO - [altsnap] 正在检查最新版本: https://github.com/RamonUnch/AltSnap/releases
+2026-07-17 11:33:26,276 - INFO - [altsnap] 已保存发布页 HTML: _tmp_eff_altsnap.html
+2026-07-17 11:33:26,580 - INFO - [altsnap] 尝试从页面中查找下载链接...
+2026-07-17 11:33:26,643 - INFO - [altsnap] 尝试使用 GitHub API: https://api.github.com/repos/RamonUnch/AltSnap/releases/tags/1.68
+2026-07-17 11:33:27,112 - INFO - [altsnap] 从 GitHub API 中找到下载链接: https://github.com/RamonUnch/AltSnap/releases/download/1.68/AltSnap1.68-x64-inst.exe
+2026-07-17 11:33:27,112 - INFO - [altsnap] 通过 GitHub API 找到最新版本: 1.68
+2026-07-17 11:33:27,114 - INFO - [altsnap] 找到最新版本: 1.68
+2026-07-17 11:33:27,114 - INFO - [altsnap] 成功使用发布页来源: https://github.com/RamonUnch/AltSnap/releases
+2026-07-17 11:33:27,115 - INFO - [altsnap] 同时找到下载链接: https://github.com/RamonUnch/AltSnap/releases/download/1.68/AltSnap1.68-x64-inst.exe
+2026-07-17 11:33:27,930 - INFO - [rectangle] 尝试使用 GitHub API: https://api.github.com/repos/rxhanson/Rectangle/releases/latest
+2026-07-17 11:33:28,393 - INFO - [rectangle] 从 GitHub API 中找到下载链接: https://github.com/rxhanson/Rectangle/releases/download/v0.98/Rectangle0.98.dmg
+2026-07-17 11:33:28,393 - INFO - [rectangle] 通过 GitHub API 找到最新版本: v0.98
+2026-07-17 11:33:29,205 - INFO - [alt_tab_macos] 尝试使用 GitHub API: https://api.github.com/repos/lwouis/alt-tab-macos/releases/latest
+2026-07-17 11:33:29,684 - INFO - [alt_tab_macos] 从 GitHub API 中找到下载链接: https://github.com/lwouis/alt-tab-macos/releases/download/v11.4.3/AltTab-11.4.3.zip
+2026-07-17 11:33:29,684 - INFO - [alt_tab_macos] 通过 GitHub API 找到最新版本: v11.4.3
+2026-07-17 11:33:30,491 - INFO - [easy_move_resize] 尝试使用 GitHub API: https://api.github.com/repos/dmarcotte/easy-move-resize/releases/latest
+2026-07-17 11:33:30,954 - INFO - [easy_move_resize] 从 GitHub API 中找到下载链接: https://github.com/dmarcotte/easy-move-resize/releases/download/1.8.1/EasyMoveResize-signed.zip
+2026-07-17 11:33:30,954 - INFO - [easy_move_resize] 通过 GitHub API 找到最新版本: 1.8.1
+2026-07-17 11:33:31,768 - INFO - [aerospace] 正在检查最新版本: https://bgithub.xyz/nikitabobko/AeroSpace/releases
+2026-07-17 11:33:32,453 - WARNING - [aerospace] 发布页获取失败: https://bgithub.xyz/nikitabobko/AeroSpace/releases -> 403 Client Error: Forbidden for url: https://bgithub.xyz/nikitabobko/AeroSpace/releases
+2026-07-17 11:33:32,453 - INFO - [aerospace] 正在检查最新版本: https://github.com/nikitabobko/AeroSpace/releases
+2026-07-17 11:33:34,251 - INFO - [aerospace] 已保存发布页 HTML: _tmp_eff_aerospace.html
+2026-07-17 11:33:34,556 - INFO - [aerospace] 尝试从页面中查找下载链接...
+2026-07-17 11:33:34,609 - INFO - [aerospace] 尝试使用 GitHub API: https://api.github.com/repos/nikitabobko/AeroSpace/releases/tags/v0.21.3-Beta
+2026-07-17 11:33:35,055 - INFO - [aerospace] 从 GitHub API 中找到下载链接: https://github.com/nikitabobko/AeroSpace/releases/download/v0.21.3-Beta/AeroSpace-v0.21.3-Beta.zip
+2026-07-17 11:33:35,056 - INFO - [aerospace] 通过 GitHub API 找到最新版本: v0.21.3-Beta
+2026-07-17 11:33:35,057 - INFO - [aerospace] 找到最新版本: v0.21.3-Beta
+2026-07-17 11:33:35,057 - INFO - [aerospace] 成功使用发布页来源: https://github.com/nikitabobko/AeroSpace/releases
+2026-07-17 11:33:35,057 - INFO - [aerospace] 同时找到下载链接: https://github.com/nikitabobko/AeroSpace/releases/download/v0.21.3-Beta/AeroSpace-v0.21.3-Beta.zip
+2026-07-17 11:33:35,868 - INFO - [karabiner_elements] 尝试使用 GitHub API: https://api.github.com/repos/pqrs-org/Karabiner-Elements/releases/latest
+2026-07-17 11:33:36,344 - INFO - [karabiner_elements] 从 GitHub API 中找到下载链接: https://github.com/pqrs-org/Karabiner-Elements/releases/download/v16.1.0/Karabiner-Elements-16.1.0.dmg
+2026-07-17 11:33:36,344 - INFO - [karabiner_elements] 通过 GitHub API 找到最新版本: v16.1.0
+2026-07-17 11:33:37,158 - INFO - [hammerspoon] 尝试使用 GitHub API: https://api.github.com/repos/Hammerspoon/hammerspoon/releases/latest
+2026-07-17 11:33:37,617 - INFO - [hammerspoon] 从 GitHub API 中找到下载链接: https://github.com/Hammerspoon/hammerspoon/releases/download/1.1.1/Hammerspoon-1.1.1.zip
+2026-07-17 11:33:37,618 - INFO - [hammerspoon] 通过 GitHub API 找到最新版本: 1.1.1
+2026-07-17 11:33:38,433 - INFO - [yabai] 尝试使用 GitHub API: https://api.github.com/repos/koekeishiya/yabai/releases/latest
+2026-07-17 11:33:39,161 - INFO - [yabai] 从 GitHub API 中找到下载链接: https://github.com/asmvik/yabai/releases/download/v7.1.25/yabai-v7.1.25.tar.gz
+2026-07-17 11:33:39,162 - INFO - [yabai] 通过 GitHub API 找到最新版本: v7.1.25
+2026-07-17 11:35:30,403 - INFO - 已从配置目录合并：E:\GITHUB\已经发布\gh-release-fetch\apps — windows 745 项, darwin 626 项, linux 607 项
+2026-07-17 11:35:30,404 - INFO - [glazewm] 尝试使用 GitHub API: https://api.github.com/repos/glzr-io/glazewm/releases/latest
+2026-07-17 11:35:31,268 - INFO - [glazewm] 从 GitHub API 中找到下载链接: https://github.com/glzr-io/glazewm/releases/download/v3.10.1/standalone-glazewm-v3.10.1-x64.msi
+2026-07-17 11:35:31,268 - INFO - [glazewm] 通过 GitHub API 找到最新版本: v3.10.1
+2026-07-17 11:35:32,474 - INFO - [komorebi] 尝试使用 GitHub API: https://api.github.com/repos/LGUG2Z/komorebi/releases/latest
+2026-07-17 11:35:33,288 - INFO - [komorebi] 从 GitHub API 中找到下载链接: https://github.com/LGUG2Z/komorebi/releases/download/v0.1.41/komorebi-0.1.41-x86_64.msi
+2026-07-17 11:35:33,289 - INFO - [komorebi] 通过 GitHub API 找到最新版本: v0.1.41
+2026-07-17 11:35:34,496 - INFO - [whkd] 尝试使用 GitHub API: https://api.github.com/repos/LGUG2Z/whkd/releases/latest
+2026-07-17 11:35:35,367 - INFO - [whkd] 从 GitHub API 中找到下载链接: https://github.com/LGUG2Z/whkd/releases/download/v0.2.10/whkd-0.2.10-x86_64.msi
+2026-07-17 11:35:35,367 - INFO - [whkd] 通过 GitHub API 找到最新版本: v0.2.10
+2026-07-17 11:35:36,580 - INFO - [yasb] 尝试使用 GitHub API: https://api.github.com/repos/amnweb/yasb/releases/latest
+2026-07-17 11:35:37,404 - INFO - [yasb] 从 GitHub API 中找到下载链接: https://github.com/amnweb/yasb/releases/download/v2.0.5/yasb-2.0.5-x64.msi
+2026-07-17 11:35:37,405 - INFO - [yasb] 通过 GitHub API 找到最新版本: v2.0.5
+2026-07-17 11:35:38,612 - INFO - [zebar] 尝试使用 GitHub API: https://api.github.com/repos/glzr-io/zebar/releases/latest
+2026-07-17 11:35:39,423 - INFO - [zebar] 从 GitHub API 中找到下载链接: https://github.com/glzr-io/zebar/releases/download/v3.3.1/zebar-v3.3.1-opt1-x64.msi
+2026-07-17 11:35:39,423 - INFO - [zebar] 通过 GitHub API 找到最新版本: v3.3.1
+2026-07-17 11:35:40,629 - INFO - [windhawk] 尝试使用 GitHub API: https://api.github.com/repos/ramensoftware/windhawk/releases/latest
+2026-07-17 11:35:41,481 - INFO - [windhawk] 从 GitHub API 中找到下载链接: https://github.com/ramensoftware/windhawk/releases/download/v1.7.3/windhawk_setup.exe
+2026-07-17 11:35:41,482 - INFO - [windhawk] 通过 GitHub API 找到最新版本: v1.7.3
+2026-07-17 11:35:42,690 - INFO - [smartsystemmenu] 尝试使用 GitHub API: https://api.github.com/repos/AlexanderPro/SmartSystemMenu/releases/latest
+2026-07-17 11:35:43,514 - INFO - [smartsystemmenu] 从 GitHub API 中找到下载链接: https://github.com/AlexanderPro/SmartSystemMenu/releases/download/v2.33.1/SmartSystemMenu_v2.33.1.zip
+2026-07-17 11:35:43,514 - INFO - [smartsystemmenu] 通过 GitHub API 找到最新版本: v2.33.1
+2026-07-17 11:37:13,522 - INFO - 已从配置目录合并：E:\GITHUB\已经发布\gh-release-fetch\apps — windows 746 项, darwin 626 项, linux 607 项
+2026-07-17 11:37:13,524 - INFO - [formatmaster] 尝试使用 GitHub API: https://api.github.com/repos/2048895034qq/FormatMaster-EN/releases/latest
+2026-07-17 11:37:14,225 - WARNING - [formatmaster] GitHub API 限流，改用发布页 HTML 解析（可设置 GITHUB_TOKEN 提高额度）
+2026-07-17 11:37:14,227 - INFO - [formatmaster] 正在检查最新版本: https://bgithub.xyz/2048895034qq/FormatMaster-EN/releases
+2026-07-17 11:37:14,899 - WARNING - [formatmaster] 发布页获取失败: https://bgithub.xyz/2048895034qq/FormatMaster-EN/releases -> 403 Client Error: Forbidden for url: https://bgithub.xyz/2048895034qq/FormatMaster-EN/releases
+2026-07-17 11:37:14,899 - INFO - [formatmaster] 正在检查最新版本: https://github.com/2048895034qq/FormatMaster-EN/releases
+2026-07-17 11:37:16,417 - INFO - [formatmaster] 已保存发布页 HTML: _tmp_fm.html
+2026-07-17 11:37:16,527 - INFO - [formatmaster] 尝试从页面中查找下载链接...
+2026-07-17 11:37:16,546 - INFO - [formatmaster] 尝试使用 GitHub API: https://api.github.com/repos/2048895034qq/FormatMaster-EN/releases/tags/v1.1.0
+2026-07-17 11:37:17,223 - WARNING - [formatmaster] GitHub API 补充下载链接失败: 403 Client Error: rate limit exceeded for url: https://api.github.com/repos/2048895034qq/FormatMaster-EN/releases/tags/v1.1.0
+2026-07-17 11:37:17,225 - INFO - [formatmaster] 找到最新版本: v1.1.0
+2026-07-17 11:37:17,225 - INFO - [formatmaster] 成功使用发布页来源: https://github.com/2048895034qq/FormatMaster-EN/releases
+2026-07-17 11:37:17,226 - WARNING - [formatmaster] 未能在页面中找到下载链接，将使用拼接 URL
+2026-07-17 11:42:35,080 - INFO - 已从配置目录合并：E:\GITHUB\已经发布\gh-release-fetch\apps — windows 747 项, darwin 628 项, linux 608 项
+2026-07-17 11:42:35,082 - INFO - [freeplane] 尝试使用 GitHub API: https://api.github.com/repos/freeplane/freeplane/releases/latest
+2026-07-17 11:42:35,772 - WARNING - [freeplane] GitHub API 限流，改用发布页 HTML 解析（可设置 GITHUB_TOKEN 提高额度）
+2026-07-17 11:42:35,774 - INFO - [freeplane] 正在检查最新版本: https://bgithub.xyz/freeplane/freeplane/releases
+2026-07-17 11:42:36,463 - WARNING - [freeplane] 发布页获取失败: https://bgithub.xyz/freeplane/freeplane/releases -> 403 Client Error: Forbidden for url: https://bgithub.xyz/freeplane/freeplane/releases
+2026-07-17 11:42:36,463 - INFO - [freeplane] 正在检查最新版本: https://github.com/freeplane/freeplane/releases
+2026-07-17 11:42:37,948 - INFO - [freeplane] 已保存发布页 HTML: _tmp_freeplane.html
+2026-07-17 11:42:38,126 - INFO - [freeplane] 尝试从页面中查找下载链接...
+2026-07-17 11:42:38,156 - INFO - [freeplane] 尝试使用 GitHub API: https://api.github.com/repos/freeplane/freeplane/releases/tags/release-1.13.3
+2026-07-17 11:42:38,897 - WARNING - [freeplane] GitHub API 补充下载链接失败: 403 Client Error: rate limit exceeded for url: https://api.github.com/repos/freeplane/freeplane/releases/tags/release-1.13.3
+2026-07-17 11:42:38,898 - INFO - [freeplane] 找到最新版本: release-1.13.3
+2026-07-17 11:42:38,898 - INFO - [freeplane] 成功使用发布页来源: https://github.com/freeplane/freeplane/releases
+2026-07-17 11:42:38,898 - WARNING - [freeplane] 未能在页面中找到下载链接，将使用拼接 URL
+2026-07-17 11:42:39,702 - INFO - [freeplane] 尝试使用 GitHub API: https://api.github.com/repos/freeplane/freeplane/releases/latest
+2026-07-17 11:42:40,382 - WARNING - [freeplane] GitHub API 限流，改用发布页 HTML 解析（可设置 GITHUB_TOKEN 提高额度）
+2026-07-17 11:42:40,384 - INFO - [freeplane] 正在检查最新版本: https://bgithub.xyz/freeplane/freeplane/releases
+2026-07-17 11:42:41,075 - WARNING - [freeplane] 发布页获取失败: https://bgithub.xyz/freeplane/freeplane/releases -> 403 Client Error: Forbidden for url: https://bgithub.xyz/freeplane/freeplane/releases
+2026-07-17 11:42:41,076 - INFO - [freeplane] 正在检查最新版本: https://github.com/freeplane/freeplane/releases
+2026-07-17 11:42:42,202 - INFO - [freeplane] 已保存发布页 HTML: _tmp_freeplane.html
+2026-07-17 11:42:42,420 - INFO - [freeplane] 尝试从页面中查找下载链接...
+2026-07-17 11:42:42,461 - INFO - [freeplane] 尝试使用 GitHub API: https://api.github.com/repos/freeplane/freeplane/releases/tags/release-1.13.3
+2026-07-17 11:42:43,137 - WARNING - [freeplane] GitHub API 补充下载链接失败: 403 Client Error: rate limit exceeded for url: https://api.github.com/repos/freeplane/freeplane/releases/tags/release-1.13.3
+2026-07-17 11:42:43,139 - INFO - [freeplane] 找到最新版本: release-1.13.3
+2026-07-17 11:42:43,139 - INFO - [freeplane] 成功使用发布页来源: https://github.com/freeplane/freeplane/releases
+2026-07-17 11:42:43,139 - WARNING - [freeplane] 未能在页面中找到下载链接，将使用拼接 URL
+2026-07-17 11:42:43,953 - INFO - [freeplane_darwin_intel] 尝试使用 GitHub API: https://api.github.com/repos/freeplane/freeplane/releases/latest
+2026-07-17 11:42:44,608 - WARNING - [freeplane_darwin_intel] GitHub API 限流，改用发布页 HTML 解析（可设置 GITHUB_TOKEN 提高额度）
+2026-07-17 11:42:44,609 - INFO - [freeplane_darwin_intel] 正在检查最新版本: https://bgithub.xyz/freeplane/freeplane/releases
+2026-07-17 11:42:45,293 - WARNING - [freeplane_darwin_intel] 发布页获取失败: https://bgithub.xyz/freeplane/freeplane/releases -> 403 Client Error: Forbidden for url: https://bgithub.xyz/freeplane/freeplane/releases
+2026-07-17 11:42:45,294 - INFO - [freeplane_darwin_intel] 正在检查最新版本: https://github.com/freeplane/freeplane/releases
+2026-07-17 11:42:46,412 - INFO - [freeplane_darwin_intel] 已保存发布页 HTML: _tmp_freeplane_darwin_intel.html
+2026-07-17 11:42:46,640 - INFO - [freeplane_darwin_intel] 尝试从页面中查找下载链接...
+2026-07-17 11:42:46,679 - INFO - [freeplane_darwin_intel] 尝试使用 GitHub API: https://api.github.com/repos/freeplane/freeplane/releases/tags/release-1.13.3
+2026-07-17 11:42:47,329 - WARNING - [freeplane_darwin_intel] GitHub API 补充下载链接失败: 403 Client Error: rate limit exceeded for url: https://api.github.com/repos/freeplane/freeplane/releases/tags/release-1.13.3
+2026-07-17 11:42:47,330 - INFO - [freeplane_darwin_intel] 找到最新版本: release-1.13.3
+2026-07-17 11:42:47,330 - INFO - [freeplane_darwin_intel] 成功使用发布页来源: https://github.com/freeplane/freeplane/releases
+2026-07-17 11:42:47,331 - WARNING - [freeplane_darwin_intel] 未能在页面中找到下载链接，将使用拼接 URL
+2026-07-17 11:42:48,147 - INFO - [freeplane] 尝试使用 GitHub API: https://api.github.com/repos/freeplane/freeplane/releases/latest
+2026-07-17 11:42:48,812 - WARNING - [freeplane] GitHub API 限流，改用发布页 HTML 解析（可设置 GITHUB_TOKEN 提高额度）
+2026-07-17 11:42:48,814 - INFO - [freeplane] 正在检查最新版本: https://bgithub.xyz/freeplane/freeplane/releases
+2026-07-17 11:42:49,492 - WARNING - [freeplane] 发布页获取失败: https://bgithub.xyz/freeplane/freeplane/releases -> 403 Client Error: Forbidden for url: https://bgithub.xyz/freeplane/freeplane/releases
+2026-07-17 11:42:49,492 - INFO - [freeplane] 正在检查最新版本: https://github.com/freeplane/freeplane/releases
+2026-07-17 11:42:50,605 - INFO - [freeplane] 已保存发布页 HTML: _tmp_freeplane.html
+2026-07-17 11:42:50,816 - INFO - [freeplane] 尝试从页面中查找下载链接...
+2026-07-17 11:42:50,854 - INFO - [freeplane] 尝试使用 GitHub API: https://api.github.com/repos/freeplane/freeplane/releases/tags/release-1.13.3
+2026-07-17 11:42:51,550 - WARNING - [freeplane] GitHub API 补充下载链接失败: 403 Client Error: rate limit exceeded for url: https://api.github.com/repos/freeplane/freeplane/releases/tags/release-1.13.3
+2026-07-17 11:42:51,551 - INFO - [freeplane] 找到最新版本: release-1.13.3
+2026-07-17 11:42:51,552 - INFO - [freeplane] 成功使用发布页来源: https://github.com/freeplane/freeplane/releases
+2026-07-17 11:42:51,552 - WARNING - [freeplane] 未能在页面中找到下载链接，将使用拼接 URL
+2026-07-17 11:48:49,327 - INFO - 已从配置目录合并：E:\GITHUB\已经发布\gh-release-fetch\apps — windows 749 项, darwin 628 项, linux 608 项
+2026-07-17 11:48:49,328 - INFO - [voxtrans] 尝试使用 GitHub API: https://api.github.com/repos/eclipse005/VoxTrans/releases/latest
+2026-07-17 11:48:50,187 - INFO - [voxtrans] 从 GitHub API 中找到下载链接: https://github.com/eclipse005/VoxTrans/releases/download/v1.3.1/VoxTrans_1.3.1_cpu.exe
+2026-07-17 11:48:50,188 - INFO - [voxtrans] 通过 GitHub API 找到最新版本: v1.3.1
+2026-07-17 11:48:50,692 - INFO - [voxtrans_cuda] 尝试使用 GitHub API: https://api.github.com/repos/eclipse005/VoxTrans/releases/latest
+2026-07-17 11:48:51,419 - INFO - [voxtrans_cuda] 从 GitHub API 中找到下载链接: https://github.com/eclipse005/VoxTrans/releases/download/v1.3.1/VoxTrans_1.3.1_cuda.exe
+2026-07-17 11:48:51,419 - INFO - [voxtrans_cuda] 通过 GitHub API 找到最新版本: v1.3.1
+2026-07-17 11:59:47,702 - INFO - 已从配置目录合并：E:\GITHUB\已经发布\gh-release-fetch\apps — windows 750 项
+2026-07-17 11:59:47,703 - INFO - 使用 platforms.windows（共 750 项）
+2026-07-17 11:59:47,703 - WARNING - 已关闭 TLS 证书校验（--insecure 或 apps.json ssl_verify=false）
+2026-07-17 11:59:49,033 - INFO - 网络探测通过：https://github.com
+2026-07-17 11:59:49,034 - INFO - === [snowdesktop] 开始 === [平台: windows] [下载目录: E:\GITHUB\已经发布\gh-release-fetch\windows]
+2026-07-17 11:59:49,035 - INFO - [snowdesktop] 尝试使用 GitHub API: https://api.github.com/repos/FreeFallingSnow/SnowDesktop_Release/releases/latest
+2026-07-17 11:59:49,860 - INFO - [snowdesktop] 通过 GitHub API 找到最新版本: v0.1.20
+2026-07-17 11:59:49,862 - INFO - 开始下载安装程序到: E:\GITHUB\已经发布\gh-release-fetch\windows\SnowDesktop-{ver_plain}.zip [平台: windows]
+2026-07-17 11:59:49,862 - INFO - 尝试下载源 1/4: https://gh-proxy.com/https://github.com/FreeFallingSnow/SnowDesktop_Release/archive/refs/tags/v0.1.20.zip
+2026-07-17 11:59:51,960 - INFO - 
+下载完成: E:\GITHUB\已经发布\gh-release-fetch\windows\SnowDesktop-{ver_plain}.zip (2006281 字节)
+2026-07-17 11:59:51,960 - INFO - 成功使用下载源 https://gh-proxy.com/https://github.com/FreeFallingSnow/SnowDesktop_Release/archive/refs/tags/v0.1.20.zip
+2026-07-17 11:59:51,962 - INFO - [snowdesktop] 安装包已下载: E:\GITHUB\已经发布\gh-release-fetch\windows\SnowDesktop-{ver_plain}.zip
+2026-07-17 11:59:51,962 - INFO - [snowdesktop] 配置为仅下载，跳过结束进程与启动安装包
+2026-07-17 12:00:00,775 - INFO - 已从配置目录合并：E:\GITHUB\已经发布\gh-release-fetch\apps — windows 750 项
+2026-07-17 12:00:00,777 - INFO - 使用 platforms.windows（共 750 项）
+2026-07-17 12:00:00,777 - WARNING - 已关闭 TLS 证书校验（--insecure 或 apps.json ssl_verify=false）
+2026-07-17 12:00:02,075 - INFO - 网络探测通过：https://github.com
+2026-07-17 12:00:02,075 - INFO - === [snowdesktop] 开始 === [平台: windows] [下载目录: E:\GITHUB\已经发布\gh-release-fetch\windows]
+2026-07-17 12:00:02,075 - INFO - [snowdesktop] 尝试使用 GitHub API: https://api.github.com/repos/FreeFallingSnow/SnowDesktop_Release/releases/latest
+2026-07-17 12:00:02,901 - INFO - [snowdesktop] 通过 GitHub API 找到最新版本: v0.1.20
+2026-07-17 12:00:02,903 - INFO - 开始下载安装程序到: E:\GITHUB\已经发布\gh-release-fetch\windows\SnowDesktop-0.1.20.zip [平台: windows]
+2026-07-17 12:00:02,903 - INFO - 尝试下载源 1/4: https://gh-proxy.com/https://github.com/FreeFallingSnow/SnowDesktop_Release/archive/refs/tags/v0.1.20.zip
+2026-07-17 12:00:04,671 - INFO - 
+下载完成: E:\GITHUB\已经发布\gh-release-fetch\windows\SnowDesktop-0.1.20.zip (2006281 字节)
+2026-07-17 12:00:04,671 - INFO - 成功使用下载源 https://gh-proxy.com/https://github.com/FreeFallingSnow/SnowDesktop_Release/archive/refs/tags/v0.1.20.zip
+2026-07-17 12:00:04,673 - INFO - [snowdesktop] 安装包已下载: E:\GITHUB\已经发布\gh-release-fetch\windows\SnowDesktop-0.1.20.zip
+2026-07-17 12:00:04,673 - INFO - [snowdesktop] 配置为仅下载，跳过结束进程与启动安装包
+2026-07-17 12:02:30,389 - INFO - 已从配置目录合并：E:\GITHUB\已经发布\gh-release-fetch\apps — windows 750 项
+2026-07-17 12:02:30,389 - INFO - 使用 platforms.windows（共 750 项）
+2026-07-17 12:02:30,390 - WARNING - 已关闭 TLS 证书校验（--insecure 或 apps.json ssl_verify=false）
+2026-07-17 12:02:31,720 - INFO - 网络探测通过：https://github.com
+2026-07-17 12:02:31,721 - INFO - === [altsnap] 开始 === [平台: windows] [下载目录: E:\GITHUB\已经发布\gh-release-fetch\windows]
+2026-07-17 12:02:31,721 - INFO - [altsnap] 尝试使用 GitHub API: https://api.github.com/repos/RamonUnch/AltSnap/releases/latest
+2026-07-17 12:02:32,349 - INFO - [altsnap] 从 GitHub API 中找到下载链接: https://github.com/RamonUnch/AltSnap/releases/download/1.68/AltSnap1.68-x64-inst.exe
+2026-07-17 12:02:32,350 - INFO - [altsnap] 通过 GitHub API 找到最新版本: 1.68
+2026-07-17 12:02:32,351 - INFO - 使用从页面解析的下载链接: https://github.com/RamonUnch/AltSnap/releases/download/1.68/AltSnap1.68-x64-inst.exe
+2026-07-17 12:02:32,352 - INFO - 开始下载安装程序到: E:\GITHUB\已经发布\gh-release-fetch\windows\AltSnap1.68-x64-inst.exe [平台: windows]
+2026-07-17 12:02:32,352 - INFO - 尝试下载源 1/8: https://gh-proxy.com/https://github.com/RamonUnch/AltSnap/releases/download/1.68/AltSnap1.68-x64-inst.exe
+2026-07-17 12:02:33,099 - INFO - 
+下载完成: E:\GITHUB\已经发布\gh-release-fetch\windows\AltSnap1.68-x64-inst.exe (195010 字节)
+2026-07-17 12:02:33,099 - INFO - 成功使用下载源 https://gh-proxy.com/https://github.com/RamonUnch/AltSnap/releases/download/1.68/AltSnap1.68-x64-inst.exe
+2026-07-17 12:02:33,101 - INFO - [altsnap] 安装包已下载: E:\GITHUB\已经发布\gh-release-fetch\windows\AltSnap1.68-x64-inst.exe
+2026-07-17 12:02:33,101 - INFO - 尝试终止进程: AltSnap.exe
+2026-07-17 12:02:33,820 - INFO - 进程未运行: AltSnap.exe
+2026-07-17 12:02:35,833 - INFO - 开始运行安装程序: E:\GITHUB\已经发布\gh-release-fetch\windows\AltSnap1.68-x64-inst.exe
+2026-07-17 12:02:35,923 - INFO - 安装程序已启动 (Popen)
+2026-07-17 12:02:35,924 - INFO - === [altsnap] 完成 ===
+2026-07-17 12:03:12,082 - INFO - 已从配置目录合并：E:\GITHUB\已经发布\gh-release-fetch\apps — windows 759 项
+2026-07-17 12:03:12,083 - INFO - [bing_wallpaper_now] 尝试使用 GitHub API: https://api.github.com/repos/qiyuey/bing-wallpaper-now/releases/latest
+2026-07-17 12:03:12,979 - INFO - [bing_wallpaper_now] 从 GitHub API 中找到下载链接: https://github.com/qiyuey/bing-wallpaper-now/releases/download/1.6.0/Bing.Wallpaper.Now_1.6.0_x64_zh-CN.msi
+2026-07-17 12:03:12,981 - INFO - [bing_wallpaper_now] 通过 GitHub API 找到最新版本: 1.6.0
+2026-07-17 12:03:12,982 - INFO - [bing_wallpaper_lib] 尝试使用 GitHub API: https://api.github.com/repos/pandaligx/bing-wallpaper-lib/releases/latest
+2026-07-17 12:03:13,824 - INFO - [bing_wallpaper_lib] 从 GitHub API 中找到下载链接: https://github.com/pandaligx/bing-wallpaper-lib/releases/download/v0.2.32/bing-wallpaper-lib-v0.2.32-x64.exe
+2026-07-17 12:03:13,826 - INFO - [bing_wallpaper_lib] 通过 GitHub API 找到最新版本: v0.2.32
+2026-07-17 12:03:13,828 - INFO - [jadepeng_bing_wallpaper] 尝试使用 GitHub API: https://api.github.com/repos/jadepeng/bing-wallpaper/releases/latest
+2026-07-17 12:03:14,783 - INFO - [jadepeng_bing_wallpaper] 从 GitHub API 中找到下载链接: https://github.com/jadepeng/bing-wallpaper/releases/download/v1.3.2/V1.3.2.zip
+2026-07-17 12:03:14,784 - INFO - [jadepeng_bing_wallpaper] 通过 GitHub API 找到最新版本: v1.3.2
+2026-07-17 12:03:14,785 - INFO - [bingwallpaper_windows] 尝试使用 GitHub API: https://api.github.com/repos/BingHomepage/BingWallpaper.Windows/releases/latest
+2026-07-17 12:03:15,679 - INFO - [bingwallpaper_windows] 从 GitHub API 中找到下载链接: https://github.com/BingHomepage/BingWallpaper.Windows/releases/download/v2.0.2109/Bing.Wallpaper.v2.0.2109.zip
+2026-07-17 12:03:15,681 - INFO - [bingwallpaper_windows] 通过 GitHub API 找到最新版本: v2.0.2109
+2026-07-17 12:03:15,682 - INFO - [unsplash_wallpapers] 尝试使用 GitHub API: https://api.github.com/repos/soroushchehresa/unsplash-wallpapers/releases/latest
+2026-07-17 12:03:16,587 - INFO - [unsplash_wallpapers] 从 GitHub API 中找到下载链接: https://github.com/soroushchehresa/unsplash-wallpapers/releases/download/v1.3.0/Unsplash-Wallpapers-Setup-1.3.0.exe
+2026-07-17 12:03:16,587 - INFO - [unsplash_wallpapers] 通过 GitHub API 找到最新版本: v1.3.0
+2026-07-17 12:03:16,590 - INFO - [splashy] 尝试使用 GitHub API: https://api.github.com/repos/Halfaxas/Splashy/releases/latest
+2026-07-17 12:03:17,437 - INFO - [splashy] 从 GitHub API 中找到下载链接: https://github.com/Halfaxas/Splashy/releases/download/v1.0.5/Splashy_1.0.5_x64-setup.exe
+2026-07-17 12:03:17,437 - INFO - [splashy] 通过 GitHub API 找到最新版本: v1.0.5
+2026-07-17 12:03:17,438 - INFO - [wallhaven_desktop] 尝试使用 GitHub API: https://api.github.com/repos/ErKeLost/wallhaven-desktop/releases/latest
+2026-07-17 12:03:18,364 - INFO - [wallhaven_desktop] 从 GitHub API 中找到下载链接: https://github.com/ErKeLost/wallhaven-desktop/releases/download/v0.0.7/wallhaven_0.0.1_x64-setup.exe
+2026-07-17 12:03:18,365 - INFO - [wallhaven_desktop] 通过 GitHub API 找到最新版本: v0.0.7
+2026-07-17 12:03:18,367 - INFO - [flying_bird_wallpaper] 尝试使用 GitHub API: https://api.github.com/repos/OXOYO/Flying-Bird-Wallpaper/releases/latest
+2026-07-17 12:03:19,182 - INFO - [flying_bird_wallpaper] 从 GitHub API 中找到下载链接: https://github.com/OXOYO/Flying-Bird-Wallpaper/releases/download/v2.0.1/Flying-Bird-Wallpaper-2.0.1-x64-setup.exe
+2026-07-17 12:03:19,182 - INFO - [flying_bird_wallpaper] 通过 GitHub API 找到最新版本: v2.0.1
+2026-07-17 12:03:19,183 - INFO - [binglish] 尝试使用 GitHub API: https://api.github.com/repos/klemperer/binglish/releases/latest
+2026-07-17 12:03:20,052 - INFO - [binglish] 从 GitHub API 中找到下载链接: https://github.com/klemperer/binglish/releases/download/v1.4.6/binglish.exe
+2026-07-17 12:03:20,052 - INFO - [binglish] 通过 GitHub API 找到最新版本: v1.4.6
+2026-07-17 12:03:57,082 - INFO - 已从配置目录合并：E:\GITHUB\已经发布\gh-release-fetch\apps — darwin 638 项, linux 618 项
+2026-07-17 12:03:57,083 - INFO - [bing_wallpaper_now] 尝试使用 GitHub API: https://api.github.com/repos/qiyuey/bing-wallpaper-now/releases/latest
+2026-07-17 12:03:57,963 - INFO - [bing_wallpaper_now] 从 GitHub API 中找到下载链接: https://github.com/qiyuey/bing-wallpaper-now/releases/download/1.6.0/Bing.Wallpaper.Now_1.6.0_aarch64.dmg
+2026-07-17 12:03:57,963 - INFO - [bing_wallpaper_now] 通过 GitHub API 找到最新版本: 1.6.0
+2026-07-17 12:03:57,966 - INFO - [unsplash_wallpapers] 尝试使用 GitHub API: https://api.github.com/repos/soroushchehresa/unsplash-wallpapers/releases/latest
+2026-07-17 12:13:59,735 - INFO - 已从配置目录合并：E:\GITHUB\已经发布\gh-release-fetch\apps — windows 785 项
+2026-07-17 12:19:51,543 - INFO - 已从配置目录合并：E:\GITHUB\已经发布\gh-release-fetch\apps — windows 799 项

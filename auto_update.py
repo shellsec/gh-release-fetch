@@ -862,6 +862,9 @@ def build_fallback_urls(version, app):
     if uses_github_pages_manifest(app) or uses_go_dev_json(app) or uses_docker_desktop(app):
         return []
     version_plain = version.lstrip("v")
+    # tag 形如 release-1.13.3 时，文件名通常只用 1.13.3
+    if version_plain.lower().startswith("release-"):
+        version_plain = version_plain[8:]
     repo = (app.get("repo_path") or "").strip("/")
     if not repo:
         return []
@@ -870,7 +873,7 @@ def build_fallback_urls(version, app):
     for tpl in (app.get("download_url_templates") or []):
         out.append(tpl.replace("{ver}", version).replace("{ver_plain}", version_plain))
     for tpl in names:
-        fname = tpl.replace("{ver}", version_plain)
+        fname = tpl.replace("{ver}", version_plain).replace("{ver_plain}", version_plain)
         out.append(f"https://github.com/{repo}/releases/download/{version}/{fname}")
     return out
 
@@ -1136,8 +1139,13 @@ def update_one(app, download_root, verify=True, platform_key=None, cfg=None):
         app, debug_html, verify=verify, cfg=cfg, platform_key=plat
     )
     version_plain = version.lstrip("v")
+    if version_plain.lower().startswith("release-"):
+        version_plain = version_plain[8:]
     tpl_save = app.get("save_name") or (app.get("download_names") or ["setup-{ver}.exe"])[0]
-    local_filename = os.path.join(target_dir, tpl_save.replace("{ver}", version_plain))
+    local_filename = os.path.join(
+        target_dir,
+        tpl_save.replace("{ver}", version_plain).replace("{ver_plain}", version_plain),
+    )
     if app.get("use_download_filename") and dl_url:
         pu = urllib.parse.urlparse(dl_url)
         base = urllib.parse.unquote(os.path.basename(pu.path))
