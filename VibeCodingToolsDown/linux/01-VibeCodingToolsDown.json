@@ -1,14 +1,15 @@
 [
   {
     "id": "cursor",
-    "简介": "Cursor Linux（manifest 常为 null，勿启用）",
+    "简介": "Cursor Linux x64 AppImage（manifest：官方 CDN）",
     "分类": "VibeCodingToolsDown",
     "enabled": false,
     "resolve_via": "github_pages_manifest",
     "manifest_item_id": "cursor",
     "version_tag_as_on_github": true,
     "use_download_filename": true,
-    "save_name": "Cursor.AppImage",
+    "installer_extensions": [".AppImage"],
+    "save_name": "Cursor-x86_64.AppImage",
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false

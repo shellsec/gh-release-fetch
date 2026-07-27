@@ -1,18 +1,18 @@
 # 推荐开源软件（Linux · 全分类导读）
 
-> 由 `python tools/generate_recommended_md.py` 根据 [`apps/linux/`](apps/linux/) 自动生成，生成日期：**2026-06-27**。条目 **539** 个（linux 平台）。
+> 由 `python tools/generate_recommended_md.py` 根据 [`apps/linux/`](apps/linux/) 自动生成，生成日期：**2026-07-27**。条目 **633** 个（linux 平台）。
 > 其它平台导读：[Windows](RECOMMENDED.zh-CN.md) · [macOS](RECOMMENDED.darwin.zh-CN.md)。
 > 技术索引与分片统计见 [`CATALOG.md`](CATALOG.md)。启用/更新：lookup → `run_saved_apps`（Windows 可用 `run_saved_apps.bat`）。
 
 ---
 
-## AI（48）
+## AI（53）
 
-### aichat · `aichat`
+### aichat（终端多模型 CLI；Linux x86_64 musl tar.gz） · `aichat`
 
-（见仓库 Release 说明）
+aichat（终端多模型 CLI；Linux x86_64 musl tar.gz）
 
-- 仓库：`sigoden/aichat` · 分片：`apps/linux/01-AI.json` · 配置：基础条目（试跑前建议补规则）
+- 仓库：`sigoden/aichat` · 分片：`apps/linux/01-AI.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform linux aichat`
 
 ### aider（Linux x86_64） · `aider`
@@ -57,6 +57,13 @@ CC Switch Linux arm64（官方 AppImage）
 - 仓库：`farion1231/cc-switch` · 分片：`apps/linux/01-AI.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform linux cc_switch_linux_arm64`
 
+### ccometixline · `ccometixline`
+
+CCometixLine（Claude Code 状态栏 ccline；Linux x64 tar.gz）
+
+- 仓库：`Haleclipse/CCometixLine` · 分片：`apps/linux/01-AI.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform linux ccometixline`
+
 ### chatbox · `chatbox`
 
 Chatbox：主仓库 Release 多为源码；桌面版见 https://chatboxai.app 。
@@ -99,6 +106,13 @@ Cockpit Tools（通用 AI IDE 账号管理；Linux amd64 AppImage）
 - 仓库：`jlcodes99/cockpit-tools` · 分片：`apps/linux/01-AI.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform linux cockpit_tools`
 
+### codex app · `codex_app`
+
+OpenAI Codex：官方桌面安装包仅 Windows/macOS（见 Wangnov/codex-app-mirror）；Linux 请用 Codex CLI 或 ChatGPT 网页版。
+
+- 仓库：`Wangnov/codex-app-mirror` · 分片：`apps/linux/01-AI.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform linux codex_app`
+
 ### OpenAI Codex CLI（Linux x86_64 gnu · `codex_cli`
 
 OpenAI Codex CLI（Linux x86_64 gnu，codex-x86_64-unknown-linux-gnu.tar.gz）
@@ -113,11 +127,11 @@ OpenAI Codex CLI（Linux aarch64 gnu，codex-aarch64-unknown-linux-gnu.tar.gz）
 - 仓库：`openai/codex` · 分片：`apps/linux/01-AI.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform linux codex_cli_linux_arm64`
 
-### Continue（Linux x64 .vsix · `continue`
+### continue · `continue`
 
-Continue（Linux x64 .vsix，若 Release 提供）
+Continue（Linux x64 .vsix；v2.x 部分 Release 无 .vsix 资产）
 
-- 仓库：`continuedev/continue` · 分片：`apps/linux/01-AI.json` · 配置：基础条目（试跑前建议补规则）
+- 仓库：`continuedev/continue` · 分片：`apps/linux/01-AI.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform linux continue`
 
 ### Crush（Charmbracelet 终端 AI 编程助手） · `crush`
@@ -232,6 +246,13 @@ LlamaIndex：pip 框架，无独立安装包 Release。
 - 仓库：`run-llama/llama_index` · 分片：`apps/linux/01-AI.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform linux llamaindex_note`
 
+### LM Studio Linux（manifest；AppImage x64） · `lmstudio`
+
+LM Studio Linux（manifest；AppImage x64）
+
+- 分片：`apps/linux/01-AI.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform linux lmstudio`
+
 ### Lobe Chat Hub（Linux AppImage） · `lobe_chat`
 
 Lobe Chat Hub（Linux AppImage）
@@ -246,11 +267,11 @@ NextChat：Release 多为源码；部署见项目说明。
 - 仓库：`ChatGPTNextWeb/NextChat` · 分片：`apps/linux/01-AI.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform linux nextchat`
 
-### ollama · `ollama`
+### Ollama（本地运行大模型；Linux x64 amd64 tar.zst） · `ollama`
 
-（见仓库 Release 说明）
+Ollama（本地运行大模型；Linux x64 amd64 tar.zst）
 
-- 仓库：`ollama/ollama` · 分片：`apps/linux/01-AI.json` · 配置：基础条目（试跑前建议补规则）
+- 仓库：`ollama/ollama` · 分片：`apps/linux/01-AI.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform linux ollama`
 
 ### Open Claude Cowork：仓库无 Release 二进制 · `open_claude_cowork`
@@ -281,11 +302,11 @@ OpenClaw（Linux 用 Release 中 OpenClaw-*.zip）
 - 仓库：`openclaw/openclaw` · 分片：`apps/linux/01-AI.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform linux openclaw`
 
-### opencode · `opencode`
+### OpenCode 桌面端（Linux x86_64 AppImage） · `opencode`
 
-（见仓库 Release 说明）
+OpenCode 桌面端（Linux x86_64 AppImage）
 
-- 仓库：`sst/opencode` · 分片：`apps/linux/01-AI.json` · 配置：基础条目（试跑前建议补规则）
+- 仓库：`sst/opencode` · 分片：`apps/linux/01-AI.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform linux opencode`
 
 ### opencode cli · `opencode_cli`
@@ -302,11 +323,18 @@ OpenCode CLI（opencode-ai 独立 CLI；Linux x86_64 tar.gz）
 - 仓库：`All-Hands-AI/OpenHands` · 分片：`apps/linux/01-AI.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform linux openhands`
 
-### roo code · `roo_code`
+### PicoClaw（超轻量 AI 助手；Linux x86_64 tar.gz） · `picoclaw`
 
-（见仓库 Release 说明）
+PicoClaw（超轻量 AI 助手；Linux x86_64 tar.gz）
 
-- 仓库：`RooCodeInc/Roo-Code` · 分片：`apps/linux/01-AI.json` · 配置：基础条目（试跑前建议补规则）
+- 仓库：`sipeed/picoclaw` · 分片：`apps/linux/01-AI.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform linux picoclaw`
+
+### Roo Code（VS Code AI 代理扩展 · `roo_code`
+
+Roo Code（VS Code AI 代理扩展，Release .vsix）
+
+- 仓库：`RooCodeInc/Roo-Code` · 分片：`apps/linux/01-AI.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform linux roo_code`
 
 ### RTK（CLI 代理压缩 LLM token · `rtk`
@@ -330,6 +358,13 @@ Tabby（自托管 AI 代码补全服务 / 本地推理包）
 - 仓库：`TabbyML/tabby` · 分片：`apps/linux/01-AI.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform linux tabbyml`
 
+### textgen webui · `textgen_webui`
+
+text-generation-webui / oobabooga（本地 LLM WebUI；Linux CPU 便携 tar.gz）
+
+- 仓库：`oobabooga/text-generation-webui` · 分片：`apps/linux/01-AI.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform linux textgen_webui`
+
 ### GitHub Copilot Chat（VS Code 扩展 .vsix） · `vscode_copilot_chat`
 
 GitHub Copilot Chat（VS Code 扩展 .vsix）
@@ -346,7 +381,7 @@ Zed Codex ACP（在 Zed 中使用 Codex，linux）
 
 ---
 
-## 下载（17）
+## 下载（20）
 
 ### aria2 · `aria2`
 
@@ -425,6 +460,13 @@ Motrix（全能下载工具：HTTP/FTP/BT/磁力链）
 - 仓库：`agalwood/Motrix` · 分片：`apps/linux/02-下载.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform linux motrix`
 
+### Nicotine+（非 Windows 请用发行版包或打开 Releases 页） · `nicotine_plus`
+
+Nicotine+（非 Windows 请用发行版包或打开 Releases 页）
+
+- 仓库：`nicotine-plus/nicotine-plus` · 分片：`apps/linux/02-下载.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform linux nicotine_plus`
+
 ### 开源免费下载工具 Persepolis Download Manager · `persepolis_download_manager`
 
 开源免费下载工具 Persepolis Download Manager 3.2.0 中文免费版
@@ -445,6 +487,20 @@ qBittorrent 增强版 qBittorrent Enhanced Edition 5.2.1.10 中文版更新发�
 
 - 仓库：`c0re100/qBittorrent-Enhanced-Edition` · 分片：`apps/linux/02-下载.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform linux qbittorrent_enhanced_edition`
+
+### tchMaterial-parser（Linux x64 裸二进制） · `tchmaterial_parser`
+
+tchMaterial-parser（Linux x64 裸二进制）
+
+- 仓库：`happycola233/tchMaterial-parser` · 分片：`apps/linux/02-下载.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform linux tchmaterial_parser`
+
+### tchMaterial-parser（Linux ARM64 裸二进制） · `tchmaterial_parser_arm64`
+
+tchMaterial-parser（Linux ARM64 裸二进制）
+
+- 仓库：`happycola233/tchMaterial-parser` · 分片：`apps/linux/02-下载.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform linux tchmaterial_parser_arm64`
 
 ### Transmission（BT 客户端） · `transmission`
 
@@ -469,7 +525,7 @@ Transmission（BT 客户端）
 
 ---
 
-## 云原生（20）
+## 云原生（23）
 
 ### caddy · `caddy`
 
@@ -491,6 +547,20 @@ DevSpace（K8s 开发工具）
 
 - 仓库：`devspace-sh/devspace` · 分片：`apps/linux/24-云原生.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform linux devspace`
+
+### Docker Compose CLI 独立二进制（docker/compose · `docker_compose`
+
+Docker Compose CLI 独立二进制（docker/compose，Linux x86_64）
+
+- 仓库：`docker/compose` · 分片：`apps/linux/24-云原生.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform linux docker_compose`
+
+### Docker Desktop 官方 deb（x86_64；从 Docker 文档发布说明解析） · `docker_desktop`
+
+Docker Desktop 官方 deb（x86_64；从 Docker 文档发布说明解析）
+
+- 仓库：`docker/docs` · 分片：`apps/linux/24-云原生.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform linux docker_desktop`
 
 ### Helm（K8s 包管理 · `helm`
 
@@ -547,6 +617,13 @@ minikube（本地 K8s）
 
 - 仓库：`kubernetes/minikube` · 分片：`apps/linux/24-云原生.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform linux minikube`
+
+### Multipass（Linux 请用 snap/发行版或打开 Releases 页） · `multipass`
+
+Multipass（Linux 请用 snap/发行版或打开 Releases 页）
+
+- 仓库：`canonical/multipass` · 分片：`apps/linux/24-云原生.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform linux multipass`
 
 ### Nomad · `nomad`
 
@@ -613,7 +690,7 @@ Terraform
 
 ---
 
-## 代理与隧道（12）
+## 代理与隧道（18）
 
 ### Clash Verge Rev（Clash 客户端） · `clash_verge_rev`
 
@@ -629,6 +706,13 @@ Clash Verge Rev（Linux amd64 deb）
 - 仓库：`clash-verge-rev/clash-verge-rev` · 分片：`apps/linux/30-代理与隧道.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform linux clash_verge_rev_linux_amd64`
 
+### dev sidecar · `dev_sidecar`
+
+开发者边车：加速 GitHub、git clone、Release 下载等开发网络请求（Linux x86_64 AppImage）
+
+- 仓库：`docmirror/dev-sidecar` · 分片：`apps/linux/30-代理与隧道.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform linux dev_sidecar`
+
 ### FlClash（Flutter Clash 客户端） · `flclash`
 
 FlClash（Flutter Clash 客户端）
@@ -643,12 +727,26 @@ FlClash（Linux amd64 deb）
 - 仓库：`chen08209/FlClash` · 分片：`apps/linux/30-代理与隧道.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform linux flclash_linux_amd64`
 
+### frp（内网穿透；Linux amd64） · `frp`
+
+frp（内网穿透；Linux amd64）
+
+- 仓库：`fatedier/frp` · 分片：`apps/linux/30-代理与隧道.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform linux frp`
+
 ### Frpc Desktop（frp 桌面 GUI · `frpc_desktop`
 
 Frpc Desktop（frp 桌面 GUI，Linux amd64 deb）
 
 - 仓库：`luckjiawei/frpc-desktop` · 分片：`apps/linux/30-代理与隧道.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform linux frpc_desktop`
+
+### GUI.for.SingBox（sing-box 图形前端；Linux） · `gui_for_singbox`
+
+GUI.for.SingBox（sing-box 图形前端；Linux）
+
+- 仓库：`GUI-for-Cores/GUI.for.SingBox` · 分片：`apps/linux/30-代理与隧道.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform linux gui_for_singbox`
 
 ### Hiddify Next（Linux x64 AppImage） · `hiddify_next`
 
@@ -670,6 +768,20 @@ mihomo Clash Meta 内核（Linux amd64 gz）
 
 - 仓库：`SagerNet/sing-box` · 分片：`apps/linux/30-代理与隧道.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform linux mihomo_linux_amd64`
+
+### NekoRay/NekoBox（Linux AppImage） · `nekoray`
+
+NekoRay/NekoBox（Linux AppImage）
+
+- 仓库：`MatsuriDayo/nekoray` · 分片：`apps/linux/30-代理与隧道.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform linux nekoray`
+
+### shadowsocks-rust（Linux x86_64 musl） · `shadowsocks_rust`
+
+shadowsocks-rust（Linux x86_64 musl）
+
+- 仓库：`shadowsocks/shadowsocks-rust` · 分片：`apps/linux/30-代理与隧道.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform linux shadowsocks_rust`
 
 ### sing-box（通用代理平台） · `sing_box`
 
@@ -699,9 +811,16 @@ v2rayN（Linux arm64，官方 zip，仅下载）
 - 仓库：`2dust/v2rayN` · 分片：`apps/linux/30-代理与隧道.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform linux v2rayn_linux_arm64`
 
+### Xray-core（代理内核；Linux · `xray_core`
+
+Xray-core（代理内核；Linux 64）
+
+- 仓库：`XTLS/Xray-core` · 分片：`apps/linux/30-代理与隧道.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform linux xray_core`
+
 ---
 
-## 写作（8）
+## 写作（14）
 
 ### 开源免费多平台 Markdown 写作工具 Boostnote · `boostnote`
 
@@ -709,6 +828,27 @@ v2rayN（Linux arm64，官方 zip，仅下载）
 
 - 仓库：`BoostIO/boost-releases` · 分片：`apps/linux/03-写作.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform linux boostnote`
+
+### doocs/md（Markdown 编辑器） · `doocs_md`
+
+doocs/md（Markdown 编辑器）
+
+- 仓库：`doocs/md` · 分片：`apps/linux/03-写作.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform linux doocs_md`
+
+### flymd（Markdown 编辑器） · `flymd`
+
+flymd（Markdown 编辑器）
+
+- 仓库：`flyhunterl/flymd` · 分片：`apps/linux/03-写作.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform linux flymd`
+
+### ghostwriter（KDE Markdown 编辑器） · `ghostwriter`
+
+ghostwriter（KDE Markdown 编辑器）
+
+- 仓库：`KDE/ghostwriter` · 分片：`apps/linux/03-写作.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform linux ghostwriter`
 
 ### 开源跨平台电子书阅读器 Koodo Reader · `koodo_reader`
 
@@ -731,12 +871,26 @@ Pandoc（Linux amd64 deb）
 - 仓库：`jgm/pandoc` · 分片：`apps/linux/03-写作.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform linux pandoc`
 
+### Quarto CLI（科学/技术写作发布；Linux amd64 tar.gz） · `quarto_cli`
+
+Quarto CLI（科学/技术写作发布；Linux amd64 tar.gz）
+
+- 仓库：`quarto-dev/quarto-cli` · 分片：`apps/linux/03-写作.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform linux quarto_cli`
+
 ### 专业 EPUB 格式电子书编辑器 Sigil · `sigil`
 
 专业 EPUB 格式电子书编辑器 Sigil 2.8.0 x64 中文多语免费版
 
 - 仓库：`Sigil-Ebook/Sigil` · 分片：`apps/linux/03-写作.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform linux sigil`
+
+### Tectonic（现代 TeX 引擎；Linux x86_64 musl） · `tectonic`
+
+Tectonic（现代 TeX 引擎；Linux x86_64 musl）
+
+- 仓库：`tectonic-typesetting/tectonic` · 分片：`apps/linux/03-写作.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform linux tectonic`
 
 ### 开源跨平台免费电子书阅读器 Thorium Reader · `thorium_reader`
 
@@ -759,9 +913,16 @@ Zola（静态站点生成器）
 - 仓库：`getzola/zola` · 分片：`apps/linux/03-写作.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform linux zola`
 
+### Zotero（文献管理；官方不走 GitHub Assets · `zotero`
+
+Zotero（文献管理；官方不走 GitHub Assets，请打开 Releases/官网）
+
+- 仓库：`zotero/zotero` · 分片：`apps/linux/03-写作.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform linux zotero`
+
 ---
 
-## 办公（8）
+## 办公（9）
 
 ### AFFiNE 知识库/文档/白板 · `affine`
 
@@ -805,6 +966,13 @@ PDF Arranger（PDF 合并/拆分，Linux）
 - 仓库：`pdfarranger/pdfarranger` · 分片：`apps/linux/04-办公.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform linux pdfarranger`
 
+### pdfcpu（PDF 工具箱；Linux x86_64） · `pdfcpu`
+
+pdfcpu（PDF 工具箱；Linux x86_64）
+
+- 仓库：`pdfcpu/pdfcpu` · 分片：`apps/linux/04-办公.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform linux pdfcpu`
+
 ### texstudio · `texstudio`
 
 （见仓库 Release 说明）
@@ -821,7 +989,7 @@ Typst（排版系统）
 
 ---
 
-## 办公与设计（3）
+## 办公与设计（5）
 
 ### drawio · `drawio`
 
@@ -829,6 +997,20 @@ Typst（排版系统）
 
 - 仓库：`jgraph/drawio-desktop` · 分片：`apps/linux/05-办公与设计.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform linux drawio`
+
+### LibreCAD（开源 · `librecad`
+
+LibreCAD（开源 2D CAD；Linux x86_64 AppImage）
+
+- 仓库：`LibreCAD/LibreCAD` · 分片：`apps/linux/05-办公与设计.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform linux librecad`
+
+### Pencil2D（开源 · `pencil2d`
+
+Pencil2D（开源 2D 手绘动画；Linux AppImage）
+
+- 仓库：`pencil2d/pencil` · 分片：`apps/linux/05-办公与设计.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform linux pencil2d`
 
 ### Rnote（手写笔记） · `rnote`
 
@@ -969,7 +1151,7 @@ Wasabi Wallet（Linux x64 zip 便携包）
 
 ---
 
-## 可观测（9）
+## 可观测（11）
 
 ### Grafana 可观测性仪表盘 · `grafana`
 
@@ -1006,6 +1188,13 @@ Netdata（监控 Agent，Linux 静态二进制）
 - 仓库：`netdata/netdata` · 分片：`apps/linux/25-可观测.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform linux netdata`
 
+### OpenTelemetry Collector（otelcol；Linux amd64） · `otelcol`
+
+OpenTelemetry Collector（otelcol；Linux amd64）
+
+- 仓库：`open-telemetry/opentelemetry-collector-releases` · 分片：`apps/linux/25-可观测.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform linux otelcol`
+
 ### Prometheus 监控 · `prometheus`
 
 Prometheus 监控
@@ -1034,9 +1223,16 @@ Vector 日志/指标采集
 - 仓库：`vectordotdev/vector` · 分片：`apps/linux/25-可观测.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform linux vector`
 
+### VictoriaMetrics（高性能 Prometheus 兼容时序库；单机 Linux） · `victoria_metrics`
+
+VictoriaMetrics（高性能 Prometheus 兼容时序库；单机 Linux）
+
+- 仓库：`VictoriaMetrics/VictoriaMetrics` · 分片：`apps/linux/25-可观测.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform linux victoria_metrics`
+
 ---
 
-## 命令行（25）
+## 命令行（29）
 
 ### atuin · `atuin`
 
@@ -1115,6 +1311,13 @@ Kilo Code CLI / 独立包（zip/tar.gz）
 - 仓库：`Kilo-Org/kilocode` · 分片：`apps/linux/06-命令行.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform linux kilo_cli`
 
+### lf（终端文件管理器；Linux amd64） · `lf`
+
+lf（终端文件管理器；Linux amd64）
+
+- 仓库：`gokcehan/lf` · 分片：`apps/linux/06-命令行.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform linux lf`
+
 ### lsd（彩色 ls） · `lsd`
 
 lsd（彩色 ls）
@@ -1164,6 +1367,20 @@ ripgrep-all（PDF/Office 内 ripgrep）
 - 仓库：`phiresky/ripgrep-all` · 分片：`apps/linux/06-命令行.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform linux ripgrep_all`
 
+### rmux（跨平台 Rust 多路复用器 · `rmux`
+
+rmux（跨平台 Rust 多路复用器，可用代码驱动 CLI/TUI；Linux x86_64 tar.gz）
+
+- 仓库：`Helvesec/rmux` · 分片：`apps/linux/06-命令行.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform linux rmux`
+
+### rmux（Linux aarch64 tar.gz） · `rmux_linux_arm64`
+
+rmux（Linux aarch64 tar.gz）
+
+- 仓库：`Helvesec/rmux` · 分片：`apps/linux/06-命令行.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform linux rmux_linux_arm64`
+
 ### sd · `sd`
 
 （见仓库 Release 说明）
@@ -1184,6 +1401,13 @@ UniClipboard CLI（Linux x86_64 musl tar.gz）
 
 - 仓库：`UniClipboard/UniClipboard` · 分片：`apps/linux/06-命令行.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform linux uniclipboard_cli`
+
+### whisper cpp · `whisper_cpp`
+
+whisper.cpp（OpenAI Whisper 本地推理 CLI；Linux x64 tar.gz）
+
+- 仓库：`ggml-org/whisper.cpp` · 分片：`apps/linux/06-命令行.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform linux whisper_cpp`
 
 ### yazi · `yazi`
 
@@ -1215,7 +1439,14 @@ UniClipboard CLI（Linux x86_64 musl tar.gz）
 
 ---
 
-## 备份（6）
+## 备份（8）
+
+### BorgBackup（去重加密备份；Linux 独立二进制） · `borg`
+
+BorgBackup（去重加密备份；Linux 独立二进制）
+
+- 仓库：`borgbackup/borg` · 分片：`apps/linux/07-备份.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform linux borg`
 
 ### Duplicacy · `duplicacy`
 
@@ -1259,9 +1490,16 @@ rustic（restic 兼容）
 - 仓库：`rustic-rs/rustic` · 分片：`apps/linux/07-备份.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform linux rustic`
 
+### UrBackup Server（Linux amd64 deb） · `urbackup_server`
+
+UrBackup Server（Linux amd64 deb）
+
+- 仓库：`uroni/urbackup_backend` · 分片：`apps/linux/07-备份.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform linux urbackup_server`
+
 ---
 
-## 多媒体（31）
+## 多媒体（35）
 
 ### audacity · `audacity`
 
@@ -1333,12 +1571,26 @@ Jellyfin 媒体服务器（安装见 jellyfin.org；GitHub 主仓常无安装包
 - 仓库：`Kdenlive/kdenlive` · 分片：`apps/linux/08-多媒体.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform linux kdenlive`
 
+### Listen · `listen1_desktop`
+
+Listen 1（聚合音乐播放器）
+
+- 仓库：`listen1/listen1_desktop` · 分片：`apps/linux/08-多媒体.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform linux listen1_desktop`
+
 ### LMMS（数字音频工作站） · `lmms`
 
 LMMS（数字音频工作站）
 
 - 仓库：`LMMS/lmms` · 分片：`apps/linux/08-多媒体.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform linux lmms`
+
+### 洛雪音乐助手（桌面版） · `lx_music_desktop`
+
+洛雪音乐助手（桌面版）
+
+- 仓库：`lyswhut/lx-music-desktop` · 分片：`apps/linux/08-多媒体.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform linux lx_music_desktop`
 
 ### MediaInfo（媒体元数据） · `mediainfo`
 
@@ -1354,6 +1606,13 @@ MediaInfo（媒体元数据）
 - 仓库：`mixxxdj/mixxx` · 分片：`apps/linux/08-多媒体.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform linux mixxx`
 
+### MoeKoe Music（酷狗音乐第三方桌面客户端；Linux x86_64 AppImage） · `moekoe_music`
+
+MoeKoe Music（酷狗音乐第三方桌面客户端；Linux x86_64 AppImage）
+
+- 仓库：`MoeKoeMusic/MoeKoeMusic` · 分片：`apps/linux/08-多媒体.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform linux moekoe_music`
+
 ### 轻量级开源媒体播放器 MPC-BE · `mpc_be`
 
 轻量级开源媒体播放器 MPC-BE 1.8.7 + x64 免费好用的高清视频播放器
@@ -1361,9 +1620,9 @@ MediaInfo（媒体元数据）
 - 仓库：`Aleksoid1978/MPC-BE` · 分片：`apps/linux/08-多媒体.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform linux mpc_be`
 
-### mpv · `mpv`
+### mpv（Linux：官方 GitHub Release 无预编译包 · `mpv`
 
-（见仓库 Release 说明）
+mpv（Linux：官方 GitHub Release 无预编译包，请用发行版包管理器或 https://mpv.io/installation/）
 
 - 仓库：`mpv-player/mpv` · 分片：`apps/linux/08-多媒体.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform linux mpv`
@@ -1395,6 +1654,13 @@ MediaInfo（媒体元数据）
 
 - 仓库：`obsproject/obs-studio` · 分片：`apps/linux/08-多媒体.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform linux obs`
+
+### Koel（自托管音乐播放器） · `player`
+
+Koel（自托管音乐播放器）
+
+- 仓库：`koel/player` · 分片：`apps/linux/08-多媒体.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform linux player`
 
 ### 开源媒体播放器 QMPlay2 Build · `qmplay2`
 
@@ -1917,7 +2183,7 @@ YubiKey Manager
 
 ---
 
-## 局域网文件共享（10）
+## 局域网文件共享（13）
 
 ### AList（Linux amd64 tar.gz） · `alist`
 
@@ -1925,6 +2191,20 @@ AList（Linux amd64 tar.gz）
 
 - 仓库：`AlistGo/alist` · 分片：`apps/linux/29-局域网文件共享.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform linux alist`
+
+### copyparty（文件共享 Web UI） · `copyparty`
+
+copyparty（文件共享 Web UI）
+
+- 仓库：`9001/copyparty` · 分片：`apps/linux/29-局域网文件共享.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform linux copyparty`
+
+### file-transfer-go · `file_transfer_go`
+
+file-transfer-go
+
+- 仓库：`MatrixSeven/file-transfer-go` · 分片：`apps/linux/29-局域网文件共享.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform linux file_transfer_go`
 
 ### FileBrowser（Linux amd64 tar.gz） · `filebrowser`
 
@@ -1982,6 +2262,13 @@ FileBrowser（Linux amd64 tar.gz）
 - 仓库：`nocab-transfer/nocab-desktop` · 分片：`apps/linux/29-局域网文件共享.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform linux nocab_desktop`
 
+### SFTPGo（SFTP/WebDAV 文件服务） · `sftpgo`
+
+SFTPGo（SFTP/WebDAV 文件服务）
+
+- 仓库：`drakkan/sftpgo` · 分片：`apps/linux/29-局域网文件共享.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform linux sftpgo`
+
 ### 开源免费文件共享工具 SyncTrayzor · `synctrayzor`
 
 开源免费文件共享工具 SyncTrayzor 1.1.29 + x64 中文多语免费版
@@ -1991,7 +2278,7 @@ FileBrowser（Linux amd64 tar.gz）
 
 ---
 
-## 工具（11）
+## 工具（14）
 
 ### 7-Zip（Linux x64 tar.xz · `7zip`
 
@@ -1999,6 +2286,20 @@ FileBrowser（Linux amd64 tar.gz）
 
 - 仓库：`ip7z/7zip` · 分片：`apps/linux/11-工具.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform linux 7zip`
+
+### 7-Zip ZS（仅 Windows；其他平台请打开 Releases 页） · `7zip_zstd`
+
+7-Zip ZS（仅 Windows；其他平台请打开 Releases 页）
+
+- 仓库：`mcmilk/7-Zip-zstd` · 分片：`apps/linux/11-工具.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform linux 7zip_zstd`
+
+### BleachBit（系统清理） · `bleachbit`
+
+BleachBit（系统清理）
+
+- 仓库：`bleachbit/bleachbit` · 分片：`apps/linux/11-工具.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform linux bleachbit`
 
 ### caesium · `caesium`
 
@@ -2013,6 +2314,13 @@ Caesium Image Compressor：当前 GitHub Release 无 Linux 通用二进制，请
 
 - 仓库：`Leo-Corporation/ColorPicker` · 分片：`apps/linux/11-工具.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform linux colorpicker`
+
+### CrossPaste（跨设备剪贴板） · `crosspaste`
+
+CrossPaste（跨设备剪贴板）
+
+- 仓库：`crosspaste/crosspaste-desktop` · 分片：`apps/linux/11-工具.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform linux crosspaste`
 
 ### 开源平替 Picasa 极速看图工具 FlyPhotos · `flyphotos`
 
@@ -2072,7 +2380,7 @@ Caesium Image Compressor：当前 GitHub Release 无 Linux 通用二进制，请
 
 ---
 
-## 开发（48）
+## 开发（53）
 
 ### act（Linux x64） · `act`
 
@@ -2150,6 +2458,13 @@ CMake 构建系统
 
 - 仓库：`anbangli/codeblocks-cn` · 分片：`apps/linux/12-开发.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform linux codeblocks`
+
+### Cutter（Rizin 逆向工程 GUI · `cutter`
+
+Cutter（Rizin 逆向工程 GUI，Linux AppImage）
+
+- 仓库：`rizinorg/cutter` · 分片：`apps/linux/12-开发.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform linux cutter`
 
 ### DDEV（本地 PHP/Drupal/WordPress 容器开发环境） · `ddev`
 
@@ -2305,6 +2620,13 @@ Hurl（HTTP 测试 CLI）
 - 仓库：`jindrapetrik/jpexs-decompiler` · 分片：`apps/linux/12-开发.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform linux jpexs_flash_decompiler`
 
+### JupyterLab Desktop（Linux Debian x64） · `jupyterlab_desktop`
+
+JupyterLab Desktop（Linux Debian x64）
+
+- 仓库：`jupyterlab/jupyterlab-desktop` · 分片：`apps/linux/12-开发.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform linux jupyterlab_desktop`
+
 ### just · `just`
 
 （见仓库 Release 说明）
@@ -2325,6 +2647,13 @@ Hurl（HTTP 测试 CLI）
 
 - 仓库：`jdx/mise` · 分片：`apps/linux/12-开发.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform linux mise`
+
+### mkcert（本地 HTTPS 开发证书；Linux amd64） · `mkcert`
+
+mkcert（本地 HTTPS 开发证书；Linux amd64）
+
+- 仓库：`FiloSottile/mkcert` · 分片：`apps/linux/12-开发.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform linux mkcert`
 
 ### 开源 .Net Reactor 脱壳工具 .Net Reactor Slayer · `net_reactor_slayer`
 
@@ -2382,6 +2711,13 @@ Playwright CLI（linux zip）
 - 仓库：`mvdan/sh` · 分片：`apps/linux/12-开发.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform linux shfmt`
 
+### Spyder（非 Windows 安装包请打开 Releases/conda 页） · `spyder`
+
+Spyder（非 Windows 安装包请打开 Releases/conda 页）
+
+- 仓库：`spyder-ide/spyder` · 分片：`apps/linux/12-开发.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform linux spyder`
+
 ### taplo · `taplo`
 
 （见仓库 Release 说明）
@@ -2410,9 +2746,16 @@ Playwright CLI（linux zip）
 - 仓库：`astral-sh/uv` · 分片：`apps/linux/12-开发.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform linux uv`
 
+### wxMaxima（非 Windows 请打开 Releases/发行版包） · `wxmaxima`
+
+wxMaxima（非 Windows 请打开 Releases/发行版包）
+
+- 仓库：`wxMaxima-developers/wxmaxima` · 分片：`apps/linux/12-开发.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform linux wxmaxima`
+
 ---
 
-## 效率（22）
+## 效率（28）
 
 ### 开源免费思维导图工具 BlinkMind · `blinkmind`
 
@@ -2420,6 +2763,20 @@ Playwright CLI（linux zip）
 
 - 仓库：`awehook/blink-mind-desktop` · 分片：`apps/linux/13-效率.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform linux blinkmind`
+
+### calcure（TUI 日历/任务） · `calcure`
+
+calcure（TUI 日历/任务）
+
+- 仓库：`anufrievroman/calcure` · 分片：`apps/linux/13-效率.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform linux calcure`
+
+### Calendar Diary（日历日记；Linux arm64 AppImage） · `calendar_diary`
+
+Calendar Diary（日历日记；Linux arm64 AppImage）
+
+- 仓库：`trustdev-org/calendar-diary` · 分片：`apps/linux/13-效率.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform linux calendar_diary`
 
 ### CopyQ 剪贴板管理 · `copyq`
 
@@ -2435,6 +2792,13 @@ CopyQ 剪贴板管理
 - 仓库：`copytranslator/CopyTranslator` · 分片：`apps/linux/13-效率.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform linux copytranslator`
 
+### eSearch（Linux x64 deb · `esearch_linux_amd64`
+
+eSearch（Linux x64 deb，xushengfeng）
+
+- 仓库：`xushengfeng/eSearch` · 分片：`apps/linux/13-效率.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform linux esearch_linux_amd64`
+
 ### Espanso 文本扩展 · `espanso`
 
 Espanso 文本扩展
@@ -2448,6 +2812,13 @@ Flameshot（Linux AppImage 打包 zip）
 
 - 仓库：`flameshot-org/flameshot` · 分片：`apps/linux/13-效率.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform linux flameshot`
+
+### Freeplane（开源思维导图；Linux deb；tag 形如 release-x.y.z） · `freeplane`
+
+Freeplane（开源思维导图；Linux deb；tag 形如 release-x.y.z）
+
+- 仓库：`freeplane/freeplane` · 分片：`apps/linux/13-效率.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform linux freeplane`
 
 ### ksnip（Linux x86_64 AppImage） · `ksnip`
 
@@ -2498,6 +2869,13 @@ PixPin（官方暂无 Linux 版；占位勿启用）
 - 仓库：`pixpin-cn/desktop` · 分片：`apps/linux/13-效率.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform linux pixpin`
 
+### Pomotroid（番茄钟） · `pomotroid`
+
+Pomotroid（番茄钟）
+
+- 仓库：`Splode/pomotroid` · 分片：`apps/linux/13-效率.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform linux pomotroid`
+
 ### 开源免费 Windows 实用程序 PowerToys · `powertoys_2`
 
 开源免费 Windows 实用程序 PowerToys 0.99.1 中文多语免费版
@@ -2546,6 +2924,13 @@ Snipaste（Linux x86_64 AppImage，官方 archives CDN）
 
 - 仓库：`hovancik/stretchly` · 分片：`apps/linux/13-效率.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform linux stretchly`
+
+### Super Productivity（任务管理/番茄钟；Linux AppImage） · `super_productivity`
+
+Super Productivity（任务管理/番茄钟；Linux AppImage）
+
+- 仓库：`super-productivity/super-productivity` · 分片：`apps/linux/13-效率.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform linux super_productivity`
 
 ### UniClipboard（跨平台剪贴板同步与管理；Linux amd64 AppImage） · `uniclipboard`
 
@@ -2872,7 +3257,14 @@ Xemu（Xbox 模拟器 AppImage）
 
 ---
 
-## 笔记（23）
+## 笔记（27）
+
+### Anki（间隔重复记忆卡片；Linux x86_64） · `anki`
+
+Anki（间隔重复记忆卡片；Linux x86_64）
+
+- 仓库：`ankitects/anki` · 分片：`apps/linux/15-笔记.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform linux anki`
 
 ### anytype · `anytype`
 
@@ -2930,6 +3322,13 @@ AppFlowy 开源 Notion 类
 - 仓库：`logseq/logseq` · 分片：`apps/linux/15-笔记.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform linux logseq`
 
+### MarkFlowy（Markdown 笔记） · `markflowy`
+
+MarkFlowy（Markdown 笔记）
+
+- 仓库：`drl990114/MarkFlowy` · 分片：`apps/linux/15-笔记.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform linux markflowy`
+
 ### MarkText（Linux AppImage） · `marktext`
 
 MarkText（Linux AppImage）
@@ -2943,6 +3342,13 @@ MarkText（Linux AppImage）
 
 - 仓库：`usememos/memos` · 分片：`apps/linux/15-笔记.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform linux memos`
+
+### NoteGen（AI 笔记生成） · `note_gen`
+
+NoteGen（AI 笔记生成）
+
+- 仓库：`codexu/note-gen` · 分片：`apps/linux/15-笔记.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform linux note_gen`
 
 ### 开源免费加密笔记软件 Notesnook · `notesnook`
 
@@ -3014,6 +3420,13 @@ MarkText（Linux AppImage）
 - 仓库：`zadam/trilium` · 分片：`apps/linux/15-笔记.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform linux trilium_notes`
 
+### VNote（Markdown 笔记） · `vnote`
+
+VNote（Markdown 笔记）
+
+- 仓库：`vnotex/vnote` · 分片：`apps/linux/15-笔记.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform linux vnote`
+
 ### Xournal++（手写/PDF 标注） · `xournalpp`
 
 Xournal++（手写/PDF 标注）
@@ -3037,7 +3450,7 @@ Yank Note（Markdown 笔记）
 
 ---
 
-## 系统（24）
+## 系统（38）
 
 ### Windows · `auto_dark_mode`
 
@@ -3052,6 +3465,34 @@ balenaEtcher（USB 启动盘写入）
 
 - 仓库：`balena-io/etcher` · 分片：`apps/linux/16-系统.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform linux balena_etcher`
+
+### 必应每日壁纸库（仅 Windows；Linux 请打开 Releases 页） · `bing_wallpaper_lib`
+
+必应每日壁纸库（仅 Windows；Linux 请打开 Releases 页）
+
+- 仓库：`pandaligx/bing-wallpaper-lib` · 分片：`apps/linux/16-系统.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform linux bing_wallpaper_lib`
+
+### bing wallpaper now · `bing_wallpaper_now`
+
+Bing Wallpaper Now（仅 Windows/macOS；Linux 请打开 Releases 页）
+
+- 仓库：`qiyuey/bing-wallpaper-now` · 分片：`apps/linux/16-系统.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform linux bing_wallpaper_now`
+
+### binglish（仅 Windows/macOS；Linux 请打开 Releases 页） · `binglish`
+
+binglish（仅 Windows/macOS；Linux 请打开 Releases 页）
+
+- 仓库：`klemperer/binglish` · 分片：`apps/linux/16-系统.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform linux binglish`
+
+### bingwallpaper windows · `bingwallpaper_windows`
+
+BingWallpaper.Windows（仅 Windows；Linux 请打开 Releases 页）
+
+- 仓库：`BingHomepage/BingWallpaper.Windows` · 分片：`apps/linux/16-系统.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform linux bingwallpaper_windows`
 
 ### Windows 右键菜单管理工具 ContextMenuManager · `context_menu_manager`
 
@@ -3095,6 +3536,13 @@ Fedora Linux 系统启动盘创建工具 Fedora Media Writer 5.3.1 x64 中文版
 - 仓库：`FedoraQt/MediaWriter` · 分片：`apps/linux/16-系统.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform linux fedora_media_writer`
 
+### flying bird wallpaper · `flying_bird_wallpaper`
+
+Flying Bird Wallpaper（仅 Windows/macOS；Linux 请打开 Releases 页）
+
+- 仓库：`OXOYO/Flying-Bird-Wallpaper` · 分片：`apps/linux/16-系统.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform linux flying_bird_wallpaper`
+
 ### gdu（磁盘用量分析） · `gdu`
 
 gdu（磁盘用量分析）
@@ -3102,9 +3550,23 @@ gdu（磁盘用量分析）
 - 仓库：`dundee/gdu` · 分片：`apps/linux/16-系统.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform linux gdu`
 
-### LightBulb 开源护眼软件 LightBulb · `lightbulb`
+### Bing每日壁纸（仅 Windows；Linux 请打开 Releases 页） · `jadepeng_bing_wallpaper`
 
-LightBulb 开源护眼软件 LightBulb 2.7.1 + x64 中文绿色版
+Bing每日壁纸（仅 Windows；Linux 请打开 Releases 页）
+
+- 仓库：`jadepeng/bing-wallpaper` · 分片：`apps/linux/16-系统.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform linux jadepeng_bing_wallpaper`
+
+### libre hardware monitor · `libre_hardware_monitor`
+
+LibreHardwareMonitor（仅 Windows；其他平台请打开 Releases 页）
+
+- 仓库：`LibreHardwareMonitor/LibreHardwareMonitor` · 分片：`apps/linux/16-系统.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform linux libre_hardware_monitor`
+
+### LightBulb 护眼色温调节（Tyrrrz/LightBulb · `lightbulb`
+
+LightBulb 护眼色温调节（Tyrrrz/LightBulb，仅 Windows；见 windows 分片）
 
 - 仓库：`Tyrrrz/LightBulb` · 分片：`apps/linux/16-系统.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform linux lightbulb`
@@ -3151,6 +3613,20 @@ Windows 密钥激活次数查询工具 PID Key Checker 4.0.0.0 中文免费版
 - 仓库：`qemu/qemu` · 分片：`apps/linux/16-系统.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform linux qemu`
 
+### Seelen UI（仅 Windows；Linux 请打开 Releases 页） · `seelen_ui`
+
+Seelen UI（仅 Windows；Linux 请打开 Releases 页）
+
+- 仓库：`eythaann/Seelen-UI` · 分片：`apps/linux/16-系统.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform linux seelen_ui`
+
+### 飘雪桌面 SnowDesktop（仅 Windows；Linux 请打开 Releases 页） · `snowdesktop`
+
+飘雪桌面 SnowDesktop（仅 Windows；Linux 请打开 Releases 页）
+
+- 仓库：`FreeFallingSnow/SnowDesktop_Release` · 分片：`apps/linux/16-系统.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform linux snowdesktop`
+
 ### 开源 Windows 系统优化调整工具 SophiApp · `sophiapp`
 
 开源 Windows 系统优化调整工具 SophiApp 1.0.0.97 中文多语免费版
@@ -3158,9 +3634,16 @@ Windows 密钥激活次数查询工具 PID Key Checker 4.0.0.0 中文免费版
 - 仓库：`Sophia-Community/SophiApp` · 分片：`apps/linux/16-系统.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform linux sophiapp`
 
-### 强大的开源动态壁纸引擎 Sucrose Wallpaper Engine · `sucrose_wallpaper_engine`
+### splashy · `splashy`
 
-强大的开源动态壁纸引擎 Sucrose Wallpaper Engine 26.6.4.0 中文版
+Splashy（Unsplash 壁纸自动轮换；需 API Key；Linux AppImage）
+
+- 仓库：`Halfaxas/Splashy` · 分片：`apps/linux/16-系统.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform linux splashy`
+
+### sucrose wallpaper engine · `sucrose_wallpaper_engine`
+
+Sucrose Wallpaper Engine（仅 Windows Release；Linux 请打开 Releases 页）
 
 - 仓库：`Taiizor/Sucrose` · 分片：`apps/linux/16-系统.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform linux sucrose_wallpaper_engine`
@@ -3172,12 +3655,33 @@ Windows 密钥激活次数查询工具 PID Key Checker 4.0.0.0 中文免费版
 - 仓库：`zodiacon/TotalRegistry` · 分片：`apps/linux/16-系统.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform linux total_registry`
 
+### unsplash wallpapers · `unsplash_wallpapers`
+
+Unsplash Wallpapers（从 Unsplash 自动换壁纸；Linux AppImage）
+
+- 仓库：`soroushchehresa/unsplash-wallpapers` · 分片：`apps/linux/16-系统.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform linux unsplash_wallpapers`
+
 ### Ventoy（多系统 USB 启动 · `ventoy`
 
 Ventoy（多系统 USB 启动，Linux 包）
 
 - 仓库：`ventoy/Ventoy` · 分片：`apps/linux/16-系统.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform linux ventoy`
+
+### virtualbox · `virtualbox`
+
+Oracle VirtualBox（Linux tar.bz2；manifest：download.virtualbox.org）
+
+- 仓库：`oracle/virtualbox` · 分片：`apps/linux/16-系统.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform linux virtualbox`
+
+### wallhaven desktop · `wallhaven_desktop`
+
+wallhaven-desktop（Wallhaven 壁纸客户端；Linux AppImage）
+
+- 仓库：`ErKeLost/wallhaven-desktop` · 分片：`apps/linux/16-系统.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform linux wallhaven_desktop`
 
 ### 开源检测 Win11 硬件需求工具 WhyNotWin11 · `whynotwin11`
 
@@ -3207,9 +3711,16 @@ Ventoy（多系统 USB 启动，Linux 包）
 - 仓库：`bostrot/wsl2-distro-manager` · 分片：`apps/linux/16-系统.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform linux wsl_manager`
 
+### zen browser legacy · `zen_browser_legacy`
+
+Zen Browser（旧仓库 anfragment/zen；新上游 irbis-sh/zen-desktop）
+
+- 仓库：`anfragment/zen` · 分片：`apps/linux/16-系统.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform linux zen_browser_legacy`
+
 ---
 
-## 终端（12）
+## 终端（15）
 
 ### alacritty · `alacritty`
 
@@ -3224,6 +3735,13 @@ Ventoy（多系统 USB 启动，Linux 包）
 
 - 仓库：`ClementTsang/bottom` · 分片：`apps/linux/17-终端.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform linux bottom`
+
+### Contour（现代 GPU 加速终端；Ubuntu deb） · `contour`
+
+Contour（现代 GPU 加速终端；Ubuntu deb）
+
+- 仓库：`contour-terminal/contour` · 分片：`apps/linux/17-终端.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform linux contour`
 
 ### electerm 终端/SSH/SFTP · `electerm`
 
@@ -3267,6 +3785,20 @@ Rio（GPU 终端）
 - 仓库：`Eugeny/tabby` · 分片：`apps/linux/17-终端.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform linux tabby`
 
+### Termius 跨平台 SSH/SFTP 终端（官网 Termius.deb） · `termius`
+
+Termius 跨平台 SSH/SFTP 终端（官网 Termius.deb）
+
+- 分片：`apps/linux/17-终端.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform linux termius`
+
+### Termora（终端/SSH 客户端） · `termora`
+
+Termora（终端/SSH 客户端）
+
+- 仓库：`TermoraDev/termora` · 分片：`apps/linux/17-终端.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform linux termora`
+
 ### Warp：安装包见 warp.dev；GitHub Release 无桌面安装资产；勿启用 · `warp`
 
 Warp：安装包见 warp.dev；GitHub Release 无桌面安装资产；勿启用。
@@ -3297,7 +3829,7 @@ WindTerm（SSH/SFTP/终端，便携版）
 
 ---
 
-## 编辑器（31）
+## 编辑器（33）
 
 ### 开源免费 Windows 记事本 AkelPad · `akelpad`
 
@@ -3341,9 +3873,9 @@ CodeBuddy CN Linux（manifest）
 - 仓库：`Alexey-T/CudaText` · 分片：`apps/linux/26-编辑器.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform linux cudatext`
 
-### Cursor（manifest 当前 linux 多为 null · `cursor`
+### Cursor Linux x64 AppImage（manifest：官方 CDN） · `cursor`
 
-Cursor（manifest 当前 linux 多为 null，勿盲目启用）
+Cursor Linux x64 AppImage（manifest：官方 CDN）
 
 - 分片：`apps/linux/26-编辑器.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform linux cursor`
@@ -3382,6 +3914,13 @@ Lite XL（Linux x86_64 tar.gz）
 
 - 仓库：`lite-xl/lite-xl` · 分片：`apps/linux/26-编辑器.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform linux lite_xl`
+
+### markdown-it（JS 库 Release · `markdown_it`
+
+markdown-it（JS 库 Release，非安装包）
+
+- 仓库：`markdown-it/markdown-it` · 分片：`apps/linux/26-编辑器.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform linux markdown_it`
 
 ### Neovide（Linux AppImage） · `neovide`
 
@@ -3481,11 +4020,11 @@ Void（Linux x64 tar.gz）
 - 仓库：`voideditor/binaries` · 分片：`apps/linux/26-编辑器.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform linux void_editor`
 
-### Visual Studio Code · `vscode`
+### Visual Studio Code（微软构建；GitHub Release 无安装包 · `vscode`
 
-Visual Studio Code
+Visual Studio Code（微软构建；GitHub Release 无安装包，走 update.code.visualstudio.com CDN）
 
-- 仓库：`microsoft/vscode` · 分片：`apps/linux/26-编辑器.json` · 配置：已配匹配规则
+- 仓库：`microsoft/vscode` · 分片：`apps/linux/26-编辑器.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform linux vscode`
 
 ### vscodium · `vscodium`
@@ -3495,11 +4034,11 @@ Visual Studio Code
 - 仓库：`VSCodium/vscodium` · 分片：`apps/linux/26-编辑器.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform linux vscodium`
 
-### windsurf · `windsurf`
+### Windsurf / Devin Desktop Linux（manifest；tar.gz） · `windsurf`
 
-Windsurf IDE（Codeium AI IDE；官网 codeium.com/windsurf 分发，GitHub 无桌面安装包；勿启用）
+Windsurf / Devin Desktop Linux（manifest；tar.gz）
 
-- 仓库：`Exafunction/Windsurf` · 分片：`apps/linux/26-编辑器.json` · 配置：基础条目（试跑前建议补规则）
+- 分片：`apps/linux/26-编辑器.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform linux windsurf`
 
 ### WorkBuddy（manifest；Linux 常 null） · `workbuddy`
@@ -3509,16 +4048,23 @@ WorkBuddy（manifest；Linux 常 null）
 - 分片：`apps/linux/26-编辑器.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform linux workbuddy`
 
-### zed · `zed`
+### ZCode（GLM 官方 AI 编程桌面端 · `zcode`
 
-（见仓库 Release 说明）
+ZCode（GLM 官方 AI 编程桌面端，manifest：cdn-zcode.z.ai）
 
-- 仓库：`zed-industries/zed` · 分片：`apps/linux/26-编辑器.json` · 配置：基础条目（试跑前建议补规则）
+- 分片：`apps/linux/26-编辑器.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform linux zcode`
+
+### Zed（Rust 高性能编辑器；Linux x86_64 tar.gz） · `zed`
+
+Zed（Rust 高性能编辑器；Linux x86_64 tar.gz）
+
+- 仓库：`zed-industries/zed` · 分片：`apps/linux/26-编辑器.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform linux zed`
 
 ---
 
-## 网络（21）
+## 网络（26）
 
 ### bandwhich · `bandwhich`
 
@@ -3541,6 +4087,20 @@ WorkBuddy（manifest；Linux 常 null）
 - 仓库：`schollz/croc` · 分片：`apps/linux/18-网络.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform linux croc`
 
+### Cyberduck（Linux 无官方直链；manifest linux 为 null · `cyberduck`
+
+Cyberduck（Linux 无官方直链；manifest linux 为 null，请用 apt/snap/flatpak 或 iterate-ch/cyberduck 源码）
+
+- 仓库：`iterate-ch/cyberduck` · 分片：`apps/linux/18-网络.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform linux cyberduck`
+
+### FlowPick（媒体资源嗅探浏览器扩展 · `flowpick`
+
+FlowPick（媒体资源嗅探浏览器扩展，Chrome zip；Chromium 开发者模式加载）
+
+- 仓库：`ezwebtools/flowpick` · 分片：`apps/linux/18-网络.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform linux flowpick`
+
 ### 开源免费网络测试工具 InternetTest Pro · `internettest`
 
 开源免费网络测试工具 InternetTest Pro 9.1.0.2602 中文多语免费版
@@ -3554,6 +4114,13 @@ WorkBuddy（manifest；Linux 常 null）
 
 - 仓库：`localsend/localsend` · 分片：`apps/linux/18-网络.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform linux localsend`
+
+### Mullvad Browser（隐私浏览器；Linux deb） · `mullvad_browser`
+
+Mullvad Browser（隐私浏览器；Linux deb）
+
+- 仓库：`mullvad/mullvad-browser` · 分片：`apps/linux/18-网络.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform linux mullvad_browser`
 
 ### NetBird（WireGuard 组网） · `netbird`
 
@@ -3597,6 +4164,13 @@ OpenTrace 1.5.0.0 绿色中文版，让网络追踪从未如此简单
 - 仓库：`rclone/rclone` · 分片：`apps/linux/18-网络.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform linux rclone`
 
+### Simple Web Server · `simple_web_server`
+
+Simple Web Server
+
+- 仓库：`terreng/simple-web-server` · 分片：`apps/linux/18-网络.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform linux simple_web_server`
+
 ### Syncthing（Linux x86_64 官方 tar.gz · `syncthing`
 
 Syncthing（Linux x86_64 官方 tar.gz，仅下载）
@@ -3631,6 +4205,13 @@ Syncthing（Linux arm64 官方 tar.gz，仅下载）
 
 - 仓库：`Alex313031/Thorium` · 分片：`apps/linux/18-网络.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform linux thorium`
+
+### ungoogled chromium · `ungoogled_chromium`
+
+ungoogled-chromium（Windows 专用构建；其他平台请打开 Releases 页）
+
+- 仓库：`ungoogled-software/ungoogled-chromium-windows` · 分片：`apps/linux/18-网络.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform linux ungoogled_chromium`
 
 ### wireshark · `wireshark`
 
@@ -3669,7 +4250,7 @@ ZeroTier 虚拟组网
 
 ---
 
-## 网络与协作（4）
+## 网络与协作（5）
 
 ### Ferdium（聚合 Slack/Discord 等） · `ferdium`
 
@@ -3677,6 +4258,13 @@ Ferdium（聚合 Slack/Discord 等）
 
 - 仓库：`ferdium/ferdium-app` · 分片：`apps/linux/19-网络与协作.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform linux ferdium`
+
+### Jitsi Meet（开源视频会议桌面端；Linux AppImage） · `jitsi_meet_electron`
+
+Jitsi Meet（开源视频会议桌面端；Linux AppImage）
+
+- 仓库：`jitsi/jitsi-meet-electron` · 分片：`apps/linux/19-网络与协作.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform linux jitsi_meet_electron`
 
 ### Mattermost 桌面客户端 · `mattermost_desktop`
 
@@ -3701,7 +4289,7 @@ Zulip 桌面客户端
 
 ---
 
-## 网络与通讯（6）
+## 网络与通讯（7）
 
 ### chatterino · `chatterino`
 
@@ -3716,6 +4304,13 @@ Zulip 桌面客户端
 
 - 仓库：`element-hq/element-desktop` · 分片：`apps/linux/20-网络与通讯.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform linux element_desktop`
+
+### Session Desktop（去中心化隐私即时通讯；Linux AppImage） · `session_desktop`
+
+Session Desktop（去中心化隐私即时通讯；Linux AppImage）
+
+- 仓库：`session-foundation/session-desktop` · 分片：`apps/linux/20-网络与通讯.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform linux session_desktop`
 
 ### signal desktop · `signal_desktop`
 
@@ -3747,7 +4342,7 @@ Thunderbird（邮件客户端）
 
 ---
 
-## 远程与协作（4）
+## 远程与协作（9）
 
 ### Barrier 开源 KVM · `barrier`
 
@@ -3755,6 +4350,13 @@ Barrier 开源 KVM
 
 - 仓库：`debauchee/barrier` · 分片：`apps/linux/21-远程与协作.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform linux barrier`
+
+### Deskflow（跨机键鼠共享；Linux x86_64 flatpak） · `deskflow`
+
+Deskflow（跨机键鼠共享；Linux x86_64 flatpak）
+
+- 仓库：`deskflow/deskflow` · 分片：`apps/linux/21-远程与协作.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform linux deskflow`
 
 ### Deskreen（屏幕共享） · `deskreen`
 
@@ -3770,6 +4372,13 @@ Deskreen（屏幕共享）
 - 仓库：`viarotel-org/escrcpy` · 分片：`apps/linux/21-远程与协作.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform linux escrcpy`
 
+### Input Leap（Barrier 分支；当前多为调试包 · `input_leap`
+
+Input Leap（Barrier 分支；当前多为调试包，请打开 Releases 页）
+
+- 仓库：`input-leap/input-leap` · 分片：`apps/linux/21-远程与协作.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform linux input_leap`
+
 ### rustdesk · `rustdesk`
 
 （见仓库 Release 说明）
@@ -3777,9 +4386,30 @@ Deskreen（屏幕共享）
 - 仓库：`rustdesk/rustdesk` · 分片：`apps/linux/21-远程与协作.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform linux rustdesk`
 
+### RustDesk Server（hbbs/hbbr） · `rustdesk_server`
+
+RustDesk Server（hbbs/hbbr）
+
+- 仓库：`rustdesk/rustdesk-server` · 分片：`apps/linux/21-远程与协作.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform linux rustdesk_server`
+
+### 向日葵远程控制个人版（贝锐 Oray Sunlogin / AweSun） · `sunlogin`
+
+向日葵远程控制个人版（贝锐 Oray Sunlogin / AweSun）
+
+- 分片：`apps/linux/21-远程与协作.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform linux sunlogin`
+
+### TigerVNC（开源 VNC；GitHub 无 Assets · `tigervnc`
+
+TigerVNC（开源 VNC；GitHub 无 Assets，请打开 Releases/官网）
+
+- 仓库：`TigerVNC/tigervnc` · 分片：`apps/linux/21-远程与协作.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform linux tigervnc`
+
 ---
 
-## 金融与股票（8）
+## 金融与股票（11）
 
 ### Actual Budget（本地记账） · `actual_budget`
 
@@ -3802,6 +4432,13 @@ Actual Budget（Linux arm64 AppImage）
 - 仓库：`actualbudget/actual` · 分片：`apps/linux/27-金融与股票.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform linux actual_budget_appimage_arm64`
 
+### Freqtrade（量化交易机器人；以 Docker/源码为主 · `freqtrade`
+
+Freqtrade（量化交易机器人；以 Docker/源码为主，请打开 Releases 页）
+
+- 仓库：`freqtrade/freqtrade` · 分片：`apps/linux/27-金融与股票.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform linux freqtrade`
+
 ### FreqUI（Freqtrade Web 界面 zip · `frequi`
 
 FreqUI（Freqtrade Web 界面 zip，Linux 通用解压使用）
@@ -3809,12 +4446,26 @@ FreqUI（Freqtrade Web 界面 zip，Linux 通用解压使用）
 - 仓库：`freqtrade/frequi` · 分片：`apps/linux/27-金融与股票.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform linux frequi`
 
+### gnucash · `gnucash`
+
+GnuCash（Linux 请用发行版包或打开 Releases 页）（请打开 Releases 页）
+
+- 仓库：`Gnucash/gnucash` · 分片：`apps/linux/27-金融与股票.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform linux gnucash`
+
 ### go-stock · `go_stock`
 
 go-stock
 
 - 仓库：`ArvinLovegood/go-stock` · 分片：`apps/linux/27-金融与股票.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform linux go_stock`
+
+### hledger（纯文本复式记账 CLI；Linux x64） · `hledger`
+
+hledger（纯文本复式记账 CLI；Linux x64）
+
+- 仓库：`simonmichael/hledger` · 分片：`apps/linux/27-金融与股票.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform linux hledger`
 
 ### OpenBB Desktop（金融终端） · `openbb_desktop`
 
@@ -3839,7 +4490,7 @@ TA-Lib（技术分析 C 库，Debian/Ubuntu amd64 deb）
 
 ---
 
-## 音视频（8）
+## 音视频（9）
 
 ### FFmpeg（BtbN 预编译 master/latest 构建） · `ffmpeg_builds`
 
@@ -3854,6 +4505,13 @@ LosslessCut（无损裁剪/合并）
 
 - 仓库：`mifi/lossless-cut` · 分片：`apps/linux/22-音视频.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform linux losslesscut`
+
+### Olive（开源非线性视频剪辑；Linux AppImage；钉选 · `olive`
+
+Olive（开源非线性视频剪辑；Linux AppImage；钉选 0.2.0-nightly）
+
+- 仓库：`olive-editor/olive` · 分片：`apps/linux/22-音视频.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform linux olive`
 
 ### OpenShot 视频编辑器（AppImage） · `openshot`
 

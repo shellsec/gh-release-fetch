@@ -287,12 +287,90 @@ def _load_vibecoding_manifest(url_or_path, verify=True, apps_config_root=None):
         return json.load(f)
 
 
+def _manifest_refresh_enabled(app, cfg) -> bool:
+    """条目 refresh_manifest_before_resolve 优先；否则看 root 级（默认 true）。"""
+    if "refresh_manifest_before_resolve" in app:
+        return bool(app.get("refresh_manifest_before_resolve"))
+    if isinstance(cfg, dict) and "refresh_manifest_before_resolve" in cfg:
+        return bool(cfg.get("refresh_manifest_before_resolve"))
+    return True
+
+
+def _resolve_local_manifest_path(raw: str, apps_config_root=None) -> str | None:
+    """若 vibecoding_manifest_url 指向本地文件则返回绝对路径，否则 None。"""
+    raw = (raw or "").strip()
+    if not raw or raw.startswith("http://") or raw.startswith("https://"):
+        return None
+    rel = raw.lstrip("./\\")
+    candidates = []
+    if apps_config_root:
+        candidates.append(os.path.normpath(os.path.join(apps_config_root, rel)))
+        candidates.append(
+            os.path.normpath(os.path.join(os.path.dirname(apps_config_root), rel))
+        )
+    candidates.append(os.path.normpath(os.path.join(SCRIPT_DIR, rel)))
+    for p in candidates:
+        if os.path.isfile(p):
+            return p
+    # 即使尚未生成，也返回首选路径，便于 --only 写出
+    return candidates[0] if candidates else None
+
+
+def _refresh_manifest_item(mid: str, manifest_path: str) -> bool:
+    """调用 build_manifest.py --only <id> 合并刷新本地 manifest。成功返回 True。"""
+    script = os.path.join(
+        SCRIPT_DIR, "VibeCodingToolsDown", "scripts", "build_manifest.py"
+    )
+    if not os.path.isfile(script):
+        logger.warning("未找到 %s，跳过 manifest 实时刷新", script)
+        return False
+    out_root = os.path.dirname(os.path.dirname(manifest_path))  # .../dist
+    cmd = [
+        sys.executable,
+        script,
+        "--only",
+        mid,
+        "--output-dir",
+        out_root,
+    ]
+    logger.info("[%s] 下载前刷新 manifest: %s", mid, " ".join(cmd))
+    try:
+        proc = subprocess.run(
+            cmd,
+            cwd=SCRIPT_DIR,
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            errors="replace",
+            timeout=120,
+        )
+    except Exception as e:
+        logger.warning("[%s] manifest 刷新异常，将使用已有快照: %s", mid, e)
+        return False
+    if proc.stdout:
+        for line in proc.stdout.strip().splitlines()[-5:]:
+            logger.info("[manifest] %s", line)
+    if proc.returncode != 0:
+        err = (proc.stderr or proc.stdout or "").strip()
+        logger.warning(
+            "[%s] manifest 刷新失败 (exit %s)，将使用已有快照: %s",
+            mid,
+            proc.returncode,
+            err[-400:] if err else "(无输出)",
+        )
+        return False
+    return True
+
+
 def resolve_github_pages_manifest(app, verify, cfg, platform_key):
     raw = (app.get("manifest_url") or "").strip() or (cfg.get("vibecoding_manifest_url") or "").strip()
+    mid = (app.get("manifest_item_id") or app["id"]).strip()
+    local_path = _resolve_local_manifest_path(raw, cfg.get("_apps_config_root"))
+    if local_path and _manifest_refresh_enabled(app, cfg):
+        _refresh_manifest_item(mid, local_path)
     data = _load_vibecoding_manifest(
         raw, verify=verify, apps_config_root=cfg.get("_apps_config_root")
     )
-    mid = (app.get("manifest_item_id") or app["id"]).strip()
     item = None
     for it in data.get("items") or []:
         if (it.get("id") or "").strip() == mid:

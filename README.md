@@ -21,7 +21,7 @@
 |------------------------|---------------|
 | Browse GitHub Releases and pick x64/dmg/AppImage links | Resolve the **latest tag** and filter assets by rules in the catalog |
 | Track “which version / which URL today” | Filenames usually include the **version** (`save_name` templates) |
-| Maintain hundreds of download URLs yourself | **500+** pre-catalogued entries; **fuzzy search** by app name |
+| Maintain hundreds of download URLs yourself | **700+** pre-catalogued entries (Windows); **fuzzy search** by app name |
 
 ```bat
 lookup_app.bat drawio
@@ -37,13 +37,13 @@ In the repo sidebar **About → ⚙**, paste:
 **Description (Chinese)**
 
 ```
-GitHub 发行版拉取工具：500+ 开源软件清单，搜名字即可下载/更新，无需自己翻 Release 页或找下载链接。脚本自动解析最新版本并匹配 Win/macOS/Linux 安装包，支持 lookup 一键下载与批量更新。
+GitHub 发行版拉取工具：700+ 开源软件清单（Windows），搜名字即可下载/更新，无需自己翻 Release 页或找下载链接。脚本自动解析最新版本并匹配 Win/macOS/Linux 安装包，支持 lookup 一键下载与批量更新。
 ```
 
 **Description (English)**
 
 ```
-GH Release Fetch: 500+ app catalog — search by name, download/update without hunting Release pages or URLs. Auto-resolves latest assets for Windows/macOS/Linux. One-click lookup + batch updates.
+GH Release Fetch: 700+ app catalog (Windows) — search by name, download/update without hunting Release pages or URLs. Auto-resolves latest assets for Windows/macOS/Linux. One-click lookup + batch updates.
 ```
 
 **Website (optional)** `https://github.com/shellsec/gh-release-fetch#readme`
@@ -82,9 +82,9 @@ Full catalog guides by platform:
 
 | Platform | Chinese | English table | Scale |
 |----------|---------|---------------|-------|
-| Windows | [`RECOMMENDED.zh-CN.md`](RECOMMENDED.zh-CN.md) | [`RECOMMENDED.md`](RECOMMENDED.md) | 567 |
-| macOS | [`RECOMMENDED.darwin.zh-CN.md`](RECOMMENDED.darwin.zh-CN.md) | [`RECOMMENDED.darwin.md`](RECOMMENDED.darwin.md) | 539 |
-| Linux | [`RECOMMENDED.linux.zh-CN.md`](RECOMMENDED.linux.zh-CN.md) | [`RECOMMENDED.linux.md`](RECOMMENDED.linux.md) | 539 |
+| Windows | [`RECOMMENDED.zh-CN.md`](RECOMMENDED.zh-CN.md) | [`RECOMMENDED.md`](RECOMMENDED.md) | 742 |
+| macOS | [`RECOMMENDED.darwin.zh-CN.md`](RECOMMENDED.darwin.zh-CN.md) | [`RECOMMENDED.darwin.md`](RECOMMENDED.darwin.md) | 653 |
+| Linux | [`RECOMMENDED.linux.zh-CN.md`](RECOMMENDED.linux.zh-CN.md) | [`RECOMMENDED.linux.md`](RECOMMENDED.linux.md) | 633 |
 
 Regenerate all: `python tools/generate_recommended_md.py`. Stats: [`CATALOG.md`](CATALOG.md).
 
@@ -116,9 +116,9 @@ Separate from the GitHub **`apps/`** catalog: tracks **page titles** on dayanzai
 
 **vs `lookup_app`:** GitHub Releases catalog vs intro-page titles. This repo often has **no** `Lastb_soft_version.txt`; checks reuse cached URL lists under `soft_page_check/`. SoftGitUp-style `generate_and_push.bat` / `software/` sync is optional; the main gh-release-fetch flow uses `run_saved_apps.bat`, etc. Run tier-A check **twice** on first use for a diff baseline. Details: [`tools/soft_page_check/README.md`](tools/soft_page_check/README.md).
 
-**Approximate catalog size** (changes when you edit JSON): **567** Windows, **539** darwin, **539** linux entries across **30** shard files each (**excluding** `99-未匹配-windows分片.json` placeholders). See [`CATALOG.md`](CATALOG.md) for a per-shard table (`python tools/generate_catalog_index.py` to refresh). Confirm totals with the merge log line when you run the script.
+**Approximate catalog size** (changes when you edit JSON): **742** Windows, **653** darwin, **633** linux entries across **30** shard files each (**excluding** `99-未匹配-windows分片.json` placeholders). See [`CATALOG.md`](CATALOG.md) for a per-shard table (`python tools/generate_catalog_index.py` to refresh). Confirm totals with the merge log line when you run the script.
 
-Some AI IDE rows in main `apps/` use `resolve_via=github_pages_manifest` via `vibecoding_manifest_url` in [`apps/root.json`](apps/root.json) (default `./VibeCodingToolsDown/dist/vibecoding/manifest.json`). Refresh with `python VibeCodingToolsDown/scripts/build_manifest.py` before enabling those entries.
+Some AI IDE / CDN rows in main `apps/` (Cursor, VS Code, Trae, Windsurf, LM Studio, Antigravity, ZCode, etc.) use `resolve_via=github_pages_manifest` via `vibecoding_manifest_url` in [`apps/root.json`](apps/root.json) (default `./VibeCodingToolsDown/dist/vibecoding/manifest.json`). Root default **`refresh_manifest_before_resolve: true`**: before download, `auto_update` runs `build_manifest.py --only <id>` against the local snapshot (falls back to the cached file on failure). Portable zips without `VibeCodingToolsDown/scripts/` skip live refresh and use the bundled snapshot. Manual: `python VibeCodingToolsDown/scripts/build_manifest.py` (full) or `--only cursor,vscode`.
 
 **Duplicate `id`**: within one platform, each `id` must appear once across all shards (including `99-*`); remove stale placeholders if `auto_update.py` reports duplicates.
 

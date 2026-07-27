@@ -666,3 +666,80 @@
 2026-07-17 12:03:57,966 - INFO - [unsplash_wallpapers] 尝试使用 GitHub API: https://api.github.com/repos/soroushchehresa/unsplash-wallpapers/releases/latest
 2026-07-17 12:13:59,735 - INFO - 已从配置目录合并：E:\GITHUB\已经发布\gh-release-fetch\apps — windows 785 项
 2026-07-17 12:19:51,543 - INFO - 已从配置目录合并：E:\GITHUB\已经发布\gh-release-fetch\apps — windows 799 项
+2026-07-20 15:44:49,475 - INFO - 已从配置目录合并：E:\GITHUB\已经发布\gh-release-fetch\apps — windows 799 项
+2026-07-20 15:44:49,475 - INFO - 使用 platforms.windows（共 799 项）
+2026-07-20 15:44:49,476 - WARNING - 已关闭 TLS 证书校验（--insecure 或 apps.json ssl_verify=false）
+2026-07-20 15:44:53,478 - INFO - 网络探测通过：https://github.com
+2026-07-20 15:44:53,479 - INFO - === [uniclipboard] 开始 === [平台: windows] [下载目录: E:\GITHUB\已经发布\gh-release-fetch\windows]
+2026-07-20 15:44:53,480 - INFO - [uniclipboard] 尝试使用 GitHub API: https://api.github.com/repos/UniClipboard/UniClipboard/releases/latest
+2026-07-20 15:44:54,355 - INFO - [uniclipboard] 从 GitHub API 中找到下载链接: https://github.com/UniClipboard/UniClipboard/releases/download/v0.19.1/UniClipboard_0.19.1_x64-setup.exe
+2026-07-20 15:44:54,355 - INFO - [uniclipboard] 通过 GitHub API 找到最新版本: v0.19.1
+2026-07-20 15:44:54,356 - INFO - 使用从页面解析的下载链接: https://github.com/UniClipboard/UniClipboard/releases/download/v0.19.1/UniClipboard_0.19.1_x64-setup.exe
+2026-07-20 15:44:54,357 - INFO - 开始下载安装程序到: E:\GITHUB\已经发布\gh-release-fetch\windows\UniClipboard_0.19.1_x64-setup.exe [平台: windows]
+2026-07-20 15:44:54,357 - INFO - 尝试下载源 1/4: https://gh-proxy.com/https://github.com/UniClipboard/UniClipboard/releases/download/v0.19.1/UniClipboard_0.19.1_x64-setup.exe
+2026-07-20 15:52:44,517 - INFO - 
+下载完成: E:\GITHUB\已经发布\gh-release-fetch\windows\UniClipboard_0.19.1_x64-setup.exe (17985626 字节)
+2026-07-20 15:52:44,517 - INFO - 成功使用下载源 https://gh-proxy.com/https://github.com/UniClipboard/UniClipboard/releases/download/v0.19.1/UniClipboard_0.19.1_x64-setup.exe
+2026-07-20 15:52:44,518 - INFO - [uniclipboard] 安装包已下载: E:\GITHUB\已经发布\gh-release-fetch\windows\UniClipboard_0.19.1_x64-setup.exe
+2026-07-20 15:52:44,520 - INFO - 开始运行安装程序: E:\GITHUB\已经发布\gh-release-fetch\windows\UniClipboard_0.19.1_x64-setup.exe
+2026-07-20 15:52:44,607 - INFO - 安装程序已启动 (Popen)
+2026-07-20 15:52:44,607 - INFO - === [uniclipboard] 完成 ===
+2026-07-20 17:21:54,640 - INFO - 已从配置目录合并：E:\GITHUB\已经发布\gh-release-fetch\apps — windows 799 项
+2026-07-20 17:21:54,640 - INFO - 使用 platforms.windows（共 799 项）
+2026-07-20 17:21:54,641 - WARNING - 已关闭 TLS 证书校验（--insecure 或 apps.json ssl_verify=false）
+2026-07-20 17:21:56,022 - INFO - 网络探测通过：https://github.com
+2026-07-20 17:21:56,022 - INFO - === [drawio] 开始 === [平台: windows] [下载目录: E:\GITHUB\已经发布\gh-release-fetch\windows]
+2026-07-20 17:21:56,023 - INFO - [drawio] 正在检查最新版本: https://bgithub.xyz/jgraph/drawio-desktop/releases
+2026-07-20 17:21:56,679 - WARNING - [drawio] 发布页获取失败: https://bgithub.xyz/jgraph/drawio-desktop/releases -> 403 Client Error: Forbidden for url: https://bgithub.xyz/jgraph/drawio-desktop/releases
+2026-07-20 17:21:56,681 - INFO - [drawio] 正在检查最新版本: https://github.com/jgraph/drawio-desktop/releases
+2026-07-20 17:21:58,574 - INFO - [drawio] 已保存发布页 HTML: E:\GITHUB\已经发布\gh-release-fetch\github_page_windows_drawio.html
+2026-07-20 17:21:58,788 - INFO - [drawio] 尝试从页面中查找下载链接...
+2026-07-20 17:21:58,799 - INFO - [drawio] 从页面中找到下载链接: https://github.com/jgraph/drawio-desktop/releases/download/v30.3.14/draw.io-30.3.14-windows-installer.exe
+2026-07-20 17:21:58,807 - INFO - [drawio] 找到最新版本: v30.3.14
+2026-07-20 17:21:58,809 - INFO - [drawio] 成功使用发布页来源: https://github.com/jgraph/drawio-desktop/releases
+2026-07-20 17:21:58,809 - INFO - [drawio] 同时找到下载链接: https://github.com/jgraph/drawio-desktop/releases/download/v30.3.14/draw.io-30.3.14-windows-installer.exe
+2026-07-20 17:21:58,809 - INFO - 使用从页面解析的下载链接: https://github.com/jgraph/drawio-desktop/releases/download/v30.3.14/draw.io-30.3.14-windows-installer.exe
+2026-07-20 17:21:58,810 - INFO - 开始下载安装程序到: E:\GITHUB\已经发布\gh-release-fetch\windows\draw.io-30.3.14-windows-installer.exe [平台: windows]
+2026-07-20 17:21:58,810 - INFO - 尝试下载源 1/4: https://gh-proxy.com/https://github.com/jgraph/drawio-desktop/releases/download/v30.3.14/draw.io-30.3.14-windows-installer.exe
+2026-07-20 17:23:33,818 - INFO - 
+下载完成: E:\GITHUB\已经发布\gh-release-fetch\windows\draw.io-30.3.14-windows-installer.exe (146188680 字节)
+2026-07-20 17:23:33,819 - INFO - 成功使用下载源 https://gh-proxy.com/https://github.com/jgraph/drawio-desktop/releases/download/v30.3.14/draw.io-30.3.14-windows-installer.exe
+2026-07-20 17:23:33,820 - INFO - [drawio] 安装包已下载: E:\GITHUB\已经发布\gh-release-fetch\windows\draw.io-30.3.14-windows-installer.exe
+2026-07-20 17:23:33,821 - INFO - 开始运行安装程序: E:\GITHUB\已经发布\gh-release-fetch\windows\draw.io-30.3.14-windows-installer.exe
+2026-07-20 17:23:33,949 - INFO - 安装程序已启动 (Popen)
+2026-07-20 17:23:33,950 - INFO - === [drawio] 完成 ===
+2026-07-27 10:12:20,479 - INFO - 已从配置目录合并：E:\GITHUB\已经发布\gh-release-fetch\apps — windows 799 项
+2026-07-27 10:12:20,479 - INFO - [super_productivity] 尝试使用 GitHub API: https://api.github.com/repos/super-productivity/super-productivity/releases/latest
+2026-07-27 10:12:21,361 - INFO - [super_productivity] 通过 GitHub API 找到最新版本: v18.16.0
+2026-07-27 10:12:41,466 - INFO - 已从配置目录合并：E:\GITHUB\已经发布\gh-release-fetch\apps — windows 799 项, darwin 675 项, linux 655 项
+2026-07-27 10:12:41,466 - INFO - [super_productivity] 尝试使用 GitHub API: https://api.github.com/repos/super-productivity/super-productivity/releases/latest
+2026-07-27 10:12:42,164 - INFO - [super_productivity] 从 GitHub API 中找到下载链接: https://github.com/super-productivity/super-productivity/releases/download/v18.16.0/Super-Productivity-Setup-x64.exe
+2026-07-27 10:12:42,164 - INFO - [super_productivity] 通过 GitHub API 找到最新版本: v18.16.0
+2026-07-27 10:12:42,166 - INFO - [super_productivity] 尝试使用 GitHub API: https://api.github.com/repos/super-productivity/super-productivity/releases/latest
+2026-07-27 10:12:42,861 - INFO - [super_productivity] 从 GitHub API 中找到下载链接: https://github.com/super-productivity/super-productivity/releases/download/v18.16.0/superProductivity-arm64.dmg
+2026-07-27 10:12:42,861 - INFO - [super_productivity] 通过 GitHub API 找到最新版本: v18.16.0
+2026-07-27 10:12:42,863 - INFO - [super_productivity] 尝试使用 GitHub API: https://api.github.com/repos/super-productivity/super-productivity/releases/latest
+2026-07-27 10:12:43,575 - INFO - [super_productivity] 从 GitHub API 中找到下载链接: https://github.com/super-productivity/super-productivity/releases/download/v18.16.0/superProductivity-x86_64.AppImage
+2026-07-27 10:12:43,575 - INFO - [super_productivity] 通过 GitHub API 找到最新版本: v18.16.0
+2026-07-27 10:13:10,262 - INFO - 已从配置目录合并：E:\GITHUB\已经发布\gh-release-fetch\apps — windows 799 项
+2026-07-27 10:13:10,263 - INFO - 使用 platforms.windows（共 799 项）
+2026-07-27 10:13:10,263 - WARNING - 已关闭 TLS 证书校验（--insecure 或 apps.json ssl_verify=false）
+2026-07-27 10:13:12,316 - INFO - 网络探测通过：https://github.com
+2026-07-27 10:13:12,317 - INFO - === [super_productivity] 开始 === [平台: windows] [下载目录: E:\GITHUB\已经发布\gh-release-fetch\windows]
+2026-07-27 10:13:12,317 - INFO - [super_productivity] 尝试使用 GitHub API: https://api.github.com/repos/super-productivity/super-productivity/releases/latest
+2026-07-27 10:13:13,768 - INFO - [super_productivity] 从 GitHub API 中找到下载链接: https://github.com/super-productivity/super-productivity/releases/download/v18.16.0/Super-Productivity-Setup-x64.exe
+2026-07-27 10:13:13,768 - INFO - [super_productivity] 通过 GitHub API 找到最新版本: v18.16.0
+2026-07-27 10:13:13,770 - INFO - 使用从页面解析的下载链接: https://github.com/super-productivity/super-productivity/releases/download/v18.16.0/Super-Productivity-Setup-x64.exe
+2026-07-27 10:13:13,770 - INFO - 开始下载安装程序到: E:\GITHUB\已经发布\gh-release-fetch\windows\Super-Productivity-Setup-x64.exe [平台: windows]
+2026-07-27 10:13:13,771 - INFO - 尝试下载源 1/4: https://gh-proxy.com/https://github.com/super-productivity/super-productivity/releases/download/v18.16.0/Super-Productivity-Setup-x64.exe
+2026-07-27 10:14:31,416 - INFO - 
+下载完成: E:\GITHUB\已经发布\gh-release-fetch\windows\Super-Productivity-Setup-x64.exe (111398640 字节)
+2026-07-27 10:14:31,416 - INFO - 成功使用下载源 https://gh-proxy.com/https://github.com/super-productivity/super-productivity/releases/download/v18.16.0/Super-Productivity-Setup-x64.exe
+2026-07-27 10:14:31,417 - INFO - [super_productivity] 安装包已下载: E:\GITHUB\已经发布\gh-release-fetch\windows\Super-Productivity-Setup-x64.exe
+2026-07-27 10:14:31,418 - INFO - 开始运行安装程序: E:\GITHUB\已经发布\gh-release-fetch\windows\Super-Productivity-Setup-x64.exe
+2026-07-27 10:14:31,534 - INFO - 安装程序已启动 (Popen)
+2026-07-27 10:14:31,535 - INFO - === [super_productivity] 完成 ===
+2026-07-27 10:56:36,769 - INFO - 已从配置目录合并：E:\GITHUB\已经发布\gh-release-fetch\apps — windows 799 项, darwin 675 项, linux 655 项
+2026-07-27 11:01:06,068 - INFO - 已从配置目录合并：E:\GITHUB\已经发布\gh-release-fetch\apps — windows 799 项
+2026-07-27 11:01:06,069 - INFO - [cursor] 下载前刷新 manifest: C:\Program Files\Python310\python.exe E:\GITHUB\已经发布\gh-release-fetch\VibeCodingToolsDown\scripts\build_manifest.py --only cursor --output-dir E:\GITHUB\已经发布\gh-release-fetch\VibeCodingToolsDown\dist
+2026-07-27 11:01:07,176 - INFO - [manifest] Wrote E:\GITHUB\�Ѿ�����\gh-release-fetch\VibeCodingToolsDown\dist\vibecoding\manifest.json items 27 refreshed 1 errors 0

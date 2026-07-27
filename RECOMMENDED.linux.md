@@ -1,28 +1,30 @@
 # Recommended apps (Linux · full catalog guide)
 
-> Auto-generated from [`apps/linux/`](apps/linux/) on **2026-06-27**. **539** entries.
+> Auto-generated from [`apps/linux/`](apps/linux/) on **2026-07-27**. **633** entries.
 > Chinese guide: [`RECOMMENDED.linux.zh-CN.md`](RECOMMENDED.linux.zh-CN.md). Other platforms: [Windows](RECOMMENDED.zh-CN.md) · [macOS](RECOMMENDED.darwin.zh-CN.md). Index: [`CATALOG.md`](CATALOG.md).
 
-## AI (48)
+## AI (53)
 
 | id | Intro | repo |
 |----|-------|------|
-| `aichat` | - | `sigoden/aichat` |
+| `aichat` | aichat（终端多模型 CLI；Linux x86_64 musl tar.gz） | `sigoden/aichat` |
 | `aider` | aider（Linux x86_64） | `Aider-AI/aider` |
 | `amazon_q_cli` | Amazon Q Developer CLI（aws/amazon-q-developer-cli；Release 无附件，请用官方 curl/insta... | `aws/amazon-q-developer-cli` |
 | `anything_llm` | AnythingLLM Linux AppImage（官方 CDN latest；版本 tag 来自 GitHub API） | `Mintplex-Labs/anything-llm` |
 | `botgem` | BotGem：gaodeng/botgem-docs Release 当前仅有 Windows 安装包；Linux 请从官网获取。本条占位勿启用。 | `gaodeng/botgem-docs` |
 | `cc_switch` | CC Switch Linux x86_64（官方 AppImage；deb/rpm 见 Release 同版本） | `farion1231/cc-switch` |
 | `cc_switch_linux_arm64` | CC Switch Linux arm64（官方 AppImage） | `farion1231/cc-switch` |
+| `ccometixline` | CCometixLine（Claude Code 状态栏 ccline；Linux x64 tar.gz） | `Haleclipse/CCometixLine` |
 | `chatbox` | Chatbox：主仓库 Release 多为源码；桌面版见 https://chatboxai.app 。 | `chatboxai/chatbox` |
 | `cherry_studio` | Cherry Studio Linux（x86_64 AppImage，GitHub Release API） | `CherryHQ/cherry-studio` |
 | `claude_code` | Claude Code（Linux x86_64 glibc，claude-linux-x64.tar.gz；musl 见 claude-linux-x6... | `anthropics/claude-code` |
 | `claude_code_linux_arm64` | Claude Code（Linux arm64 glibc，claude-linux-arm64.tar.gz） | `anthropics/claude-code` |
 | `cline` | Cline（VS Code 扩展，Release .vsix） | `cline/cline` |
 | `cockpit_tools` | Cockpit Tools（通用 AI IDE 账号管理；Linux amd64 AppImage） | `jlcodes99/cockpit-tools` |
+| `codex_app` | OpenAI Codex：官方桌面安装包仅 Windows/macOS（见 Wangnov/codex-app-mirror）；Linux 请用 Code... | `Wangnov/codex-app-mirror` |
 | `codex_cli` | OpenAI Codex CLI（Linux x86_64 gnu，codex-x86_64-unknown-linux-gnu.tar.gz） | `openai/codex` |
 | `codex_cli_linux_arm64` | OpenAI Codex CLI（Linux aarch64 gnu，codex-aarch64-unknown-linux-gnu.tar.gz） | `openai/codex` |
-| `continue` | Continue（Linux x64 .vsix，若 Release 提供） | `continuedev/continue` |
+| `continue` | Continue（Linux x64 .vsix；v2.x 部分 Release 无 .vsix 资产） | `continuedev/continue` |
 | `crush` | Crush（Charmbracelet 终端 AI 编程助手） | `charmbracelet/crush` |
 | `deepseek_cli` | DeepSeek-TUI dispatcher（deepseek 命令；Linux x64，裸 binary deepseek-linux-x64；需配套... | `Hmbown/DeepSeek-TUI` |
 | `deepseek_tui` | DeepSeek-TUI companion runtime（deepseek-tui 命令；Linux x64，裸 binary deepseek-tu... | `Hmbown/DeepSeek-TUI` |
@@ -39,24 +41,27 @@
 | `langchain_note` | LangChain：PyPI/npm 框架，不适合 Release 二进制拉取。 | `langchain-ai/langchain` |
 | `langflow` | Langflow | `langflow-ai/langflow` |
 | `llamaindex_note` | LlamaIndex：pip 框架，无独立安装包 Release。 | `run-llama/llama_index` |
+| `lmstudio` | LM Studio Linux（manifest；AppImage x64） | `-` |
 | `lobe_chat` | Lobe Chat Hub（Linux AppImage） | `lobehub/lobe-chat` |
 | `nextchat` | NextChat：Release 多为源码；部署见项目说明。 | `ChatGPTNextWeb/NextChat` |
-| `ollama` | - | `ollama/ollama` |
+| `ollama` | Ollama（本地运行大模型；Linux x64 amd64 tar.zst） | `ollama/ollama` |
 | `open_claude_cowork` | Open Claude Cowork：仓库无 Release 二进制。 | `ComposioHQ/open-claude-cowork` |
 | `open_webui_desktop` | Open WebUI Desktop（Linux x86_64 AppImage） | `open-webui/desktop` |
 | `opencat` | OpenCat：以 App Store 等为主；repo_path 仅满足配置校验，勿启用。 | `octocat/Hello-World` |
 | `openclaw` | OpenClaw（Linux 用 Release 中 OpenClaw-*.zip） | `openclaw/openclaw` |
-| `opencode` | - | `sst/opencode` |
+| `opencode` | OpenCode 桌面端（Linux x86_64 AppImage） | `sst/opencode` |
 | `opencode_cli` | OpenCode CLI（opencode-ai 独立 CLI；Linux x86_64 tar.gz） | `opencode-ai/opencode` |
 | `openhands` | - | `All-Hands-AI/OpenHands` |
-| `roo_code` | - | `RooCodeInc/Roo-Code` |
+| `picoclaw` | PicoClaw（超轻量 AI 助手；Linux x86_64 tar.gz） | `sipeed/picoclaw` |
+| `roo_code` | Roo Code（VS Code AI 代理扩展，Release .vsix） | `RooCodeInc/Roo-Code` |
 | `rtk` | RTK（CLI 代理压缩 LLM token，Linux x86_64 musl tar.gz） | `rtk-ai/rtk` |
 | `sourcegraph_src_cli` | Sourcegraph src CLI（linux，Cody/源码搜索生态） | `sourcegraph/src-cli` |
 | `tabbyml` | Tabby（自托管 AI 代码补全服务 / 本地推理包） | `TabbyML/tabby` |
+| `textgen_webui` | text-generation-webui / oobabooga（本地 LLM WebUI；Linux CPU 便携 tar.gz） | `oobabooga/text-generation-webui` |
 | `vscode_copilot_chat` | GitHub Copilot Chat（VS Code 扩展 .vsix） | `microsoft/vscode-copilot-chat` |
 | `zed_codex_acp` | Zed Codex ACP（在 Zed 中使用 Codex，linux） | `zed-industries/codex-acp` |
 
-## 下载 (17)
+## 下载 (20)
 
 | id | Intro | repo |
 |----|-------|------|
@@ -71,20 +76,25 @@
 | `lux_linux_arm64` | lux（Linux arm64 tarball，树莓派/ARM 服务器等） | `iawia002/lux` |
 | `m3u8_downloader` | 开源免费 m3u8 下载工具 m3u8 downloader 3.0.1 中文免费版 | `nilaoda/N_m3u8DL-CLI` |
 | `motrix` | Motrix（全能下载工具：HTTP/FTP/BT/磁力链） | `agalwood/Motrix` |
+| `nicotine_plus` | Nicotine+（非 Windows 请用发行版包或打开 Releases 页） | `nicotine-plus/nicotine-plus` |
 | `persepolis_download_manager` | 开源免费下载工具 Persepolis Download Manager 3.2.0 中文免费版 | `persepolisdm/persepolis` |
 | `qbittorrent` | qBittorrent（BT/磁力） | `qbittorrent/qBittorrent` |
 | `qbittorrent_enhanced_edition` | qBittorrent 增强版 qBittorrent Enhanced Edition 5.2.1.10 中文版更新发布 | `c0re100/qBittorrent-Enhanced-Edition` |
+| `tchmaterial_parser` | tchMaterial-parser（Linux x64 裸二进制） | `happycola233/tchMaterial-parser` |
+| `tchmaterial_parser_arm64` | tchMaterial-parser（Linux ARM64 裸二进制） | `happycola233/tchMaterial-parser` |
 | `transmission` | Transmission（BT 客户端） | `transmission/transmission` |
 | `ydl_ui` | 开源免费 Youtube 视频下载工具 YDL-UI 2.9.1 中文多语免费版 | `Maxstupo/ydl-ui` |
 | `youtube_downloader_gui` | 开源免费视频下载工具 Open Video Downloader 2.4.0 中文免费版 | `jely2002/youtube-dl-gui` |
 
-## 云原生 (20)
+## 云原生 (23)
 
 | id | Intro | repo |
 |----|-------|------|
 | `caddy` | - | `caddyserver/caddy` |
 | `consul` | Consul 服务发现 | `hashicorp/consul` |
 | `devspace` | DevSpace（K8s 开发工具） | `devspace-sh/devspace` |
+| `docker_compose` | Docker Compose CLI 独立二进制（docker/compose，Linux x86_64） | `docker/compose` |
+| `docker_desktop` | Docker Desktop 官方 deb（x86_64；从 Docker 文档发布说明解析） | `docker/docs` |
 | `helm` | Helm（K8s 包管理，Linux amd64） | `helm/helm` |
 | `k9s` | K9s（K8s 终端 UI，Linux amd64） | `derailed/k9s` |
 | `kind` | kind（K8s in Docker） | `kubernetes-sigs/kind` |
@@ -93,6 +103,7 @@
 | `lazydocker` | - | `jesseduffield/lazydocker` |
 | `lens` | - | `lensapp/lens` |
 | `minikube` | minikube（本地 K8s） | `kubernetes/minikube` |
+| `multipass` | Multipass（Linux 请用 snap/发行版或打开 Releases 页） | `canonical/multipass` |
 | `nomad` | Nomad | `hashicorp/nomad` |
 | `packer` | Packer | `hashicorp/packer` |
 | `podman` | Podman（无守护进程容器，Desktop/CLI） | `containers/podman` |
@@ -103,37 +114,49 @@
 | `terraform` | Terraform | `hashicorp/terraform` |
 | `tilt` | - | `tilt-dev/tilt` |
 
-## 代理与隧道 (12)
+## 代理与隧道 (18)
 
 | id | Intro | repo |
 |----|-------|------|
 | `clash_verge_rev` | Clash Verge Rev（Clash 客户端） | `clash-verge-rev/clash-verge-rev` |
 | `clash_verge_rev_linux_amd64` | Clash Verge Rev（Linux amd64 deb） | `clash-verge-rev/clash-verge-rev` |
+| `dev_sidecar` | 开发者边车：加速 GitHub、git clone、Release 下载等开发网络请求（Linux x86_64 AppImage） | `docmirror/dev-sidecar` |
 | `flclash` | FlClash（Flutter Clash 客户端） | `chen08209/FlClash` |
 | `flclash_linux_amd64` | FlClash（Linux amd64 deb） | `chen08209/FlClash` |
+| `frp` | frp（内网穿透；Linux amd64） | `fatedier/frp` |
 | `frpc_desktop` | Frpc Desktop（frp 桌面 GUI，Linux amd64 deb） | `luckjiawei/frpc-desktop` |
+| `gui_for_singbox` | GUI.for.SingBox（sing-box 图形前端；Linux） | `GUI-for-Cores/GUI.for.SingBox` |
 | `hiddify_next` | Hiddify Next（Linux x64 AppImage） | `hiddify/hiddify-next` |
 | `mihomo` | mihomo（Clash Meta 内核） | `MetaCubeX/mihomo` |
 | `mihomo_linux_amd64` | mihomo Clash Meta 内核（Linux amd64 gz） | `SagerNet/sing-box` |
+| `nekoray` | NekoRay/NekoBox（Linux AppImage） | `MatsuriDayo/nekoray` |
+| `shadowsocks_rust` | shadowsocks-rust（Linux x86_64 musl） | `shadowsocks/shadowsocks-rust` |
 | `sing_box` | sing-box（通用代理平台） | `SagerNet/sing-box` |
 | `sing_box_linux_amd64` | sing-box 代理内核 | `SagerNet/sing-box` |
 | `v2rayn_linux_amd64` | v2rayN（Linux x86_64，官方 zip，仅下载） | `2dust/v2rayN` |
 | `v2rayn_linux_arm64` | v2rayN（Linux arm64，官方 zip，仅下载） | `2dust/v2rayN` |
+| `xray_core` | Xray-core（代理内核；Linux 64） | `XTLS/Xray-core` |
 
-## 写作 (8)
+## 写作 (14)
 
 | id | Intro | repo |
 |----|-------|------|
 | `boostnote` | 开源免费多平台 Markdown 写作工具 Boostnote 0.16.0 x64 中文多语免费版 | `BoostIO/boost-releases` |
+| `doocs_md` | doocs/md（Markdown 编辑器） | `doocs/md` |
+| `flymd` | flymd（Markdown 编辑器） | `flyhunterl/flymd` |
+| `ghostwriter` | ghostwriter（KDE Markdown 编辑器） | `KDE/ghostwriter` |
 | `koodo_reader` | 开源跨平台电子书阅读器 Koodo Reader 2.3.5 免费好用的电子书阅读器 | `troyeguo/koodo-reader` |
 | `mdbook` | mdBook（Rust 静态书生成器） | `rust-lang/mdBook` |
 | `pandoc` | Pandoc（Linux amd64 deb） | `jgm/pandoc` |
+| `quarto_cli` | Quarto CLI（科学/技术写作发布；Linux amd64 tar.gz） | `quarto-dev/quarto-cli` |
 | `sigil` | 专业 EPUB 格式电子书编辑器 Sigil 2.8.0 x64 中文多语免费版 | `Sigil-Ebook/Sigil` |
+| `tectonic` | Tectonic（现代 TeX 引擎；Linux x86_64 musl） | `tectonic-typesetting/tectonic` |
 | `thorium_reader` | 开源跨平台免费电子书阅读器 Thorium Reader 2.3.0 中文多语免费版 | `edrlab/thorium-reader` |
 | `vale` | - | `errata-ai/vale` |
 | `zola` | Zola（静态站点生成器） | `getzola/zola` |
+| `zotero` | Zotero（文献管理；官方不走 GitHub Assets，请打开 Releases/官网） | `zotero/zotero` |
 
-## 办公 (8)
+## 办公 (9)
 
 | id | Intro | repo |
 |----|-------|------|
@@ -143,14 +166,17 @@
 | `office_tool_plus` | 开源免费 Office 部署管理工具 Office Tool Plus 11.4.17.0 中文版 | `YerongAI/Office-Tool` |
 | `onlyoffice` | - | `ONLYOFFICE/DesktopEditors` |
 | `pdfarranger` | PDF Arranger（PDF 合并/拆分，Linux） | `pdfarranger/pdfarranger` |
+| `pdfcpu` | pdfcpu（PDF 工具箱；Linux x86_64） | `pdfcpu/pdfcpu` |
 | `texstudio` | - | `texstudio-org/texstudio` |
 | `typst` | Typst（排版系统） | `typst/typst` |
 
-## 办公与设计 (3)
+## 办公与设计 (5)
 
 | id | Intro | repo |
 |----|-------|------|
 | `drawio` | - | `jgraph/drawio-desktop` |
+| `librecad` | LibreCAD（开源 2D CAD；Linux x86_64 AppImage） | `LibreCAD/LibreCAD` |
+| `pencil2d` | Pencil2D（开源 2D 手绘动画；Linux AppImage） | `pencil2d/pencil` |
 | `rnote` | Rnote（手写笔记） | `flxzt/rnote` |
 | `stirling_pdf` | Stirling-PDF（PDF 工具集） | `Stirling-Tools/Stirling-PDF` |
 
@@ -176,7 +202,7 @@
 | `wasabi_wallet` | Wasabi Wallet（Bitcoin 隐私） | `zkSNACKs/WalletWasabi` |
 | `wasabi_wallet_linux` | Wasabi Wallet（Linux x64 zip 便携包） | `zkSNACKs/WalletWasabi` |
 
-## 可观测 (9)
+## 可观测 (11)
 
 | id | Intro | repo |
 |----|-------|------|
@@ -185,12 +211,14 @@
 | `jaeger` | Jaeger 分布式链路追踪 | `jaegertracing/jaeger` |
 | `loki` | Grafana Loki 日志聚合 | `grafana/loki` |
 | `netdata` | Netdata（监控 Agent，Linux 静态二进制） | `netdata/netdata` |
+| `otelcol` | OpenTelemetry Collector（otelcol；Linux amd64） | `open-telemetry/opentelemetry-collector-releases` |
 | `prometheus` | Prometheus 监控 | `prometheus/prometheus` |
 | `tempo` | Grafana Tempo 追踪后端 | `grafana/tempo` |
 | `uptime_kuma` | Uptime Kuma（监控面板 dist 源码包，非安装程序） | `louislam/uptime-kuma` |
 | `vector` | Vector 日志/指标采集 | `vectordotdev/vector` |
+| `victoria_metrics` | VictoriaMetrics（高性能 Prometheus 兼容时序库；单机 Linux） | `VictoriaMetrics/VictoriaMetrics` |
 
-## 命令行 (25)
+## 命令行 (29)
 
 | id | Intro | repo |
 |----|-------|------|
@@ -205,6 +233,7 @@
 | `hyperfine` | - | `sharkdp/hyperfine` |
 | `jq` | - | `jqlang/jq` |
 | `kilo_cli` | Kilo Code CLI / 独立包（zip/tar.gz） | `Kilo-Org/kilocode` |
+| `lf` | lf（终端文件管理器；Linux amd64） | `gokcehan/lf` |
 | `lsd` | lsd（彩色 ls） | `lsd-rs/lsd` |
 | `micro` | micro（终端编辑器） | `zyedidia/micro` |
 | `nushell` | Nushell（结构化 Shell） | `nushell/nushell` |
@@ -212,26 +241,31 @@
 | `procs` | - | `dalance/procs` |
 | `ripgrep` | - | `BurntSushi/ripgrep` |
 | `ripgrep_all` | ripgrep-all（PDF/Office 内 ripgrep） | `phiresky/ripgrep-all` |
+| `rmux` | rmux（跨平台 Rust 多路复用器，可用代码驱动 CLI/TUI；Linux x86_64 tar.gz） | `Helvesec/rmux` |
+| `rmux_linux_arm64` | rmux（Linux aarch64 tar.gz） | `Helvesec/rmux` |
 | `sd` | - | `chmln/sd` |
 | `starship` | - | `starship/starship` |
 | `uniclipboard_cli` | UniClipboard CLI（Linux x86_64 musl tar.gz） | `UniClipboard/UniClipboard` |
+| `whisper_cpp` | whisper.cpp（OpenAI Whisper 本地推理 CLI；Linux x64 tar.gz） | `ggml-org/whisper.cpp` |
 | `yazi` | - | `sxyazi/yazi` |
 | `yq` | - | `mikefarah/yq` |
 | `zellij` | - | `zellij-org/zellij` |
 | `zoxide` | - | `ajeetdsouza/zoxide` |
 
-## 备份 (6)
+## 备份 (8)
 
 | id | Intro | repo |
 |----|-------|------|
+| `borg` | BorgBackup（去重加密备份；Linux 独立二进制） | `borgbackup/borg` |
 | `duplicacy` | Duplicacy | `gilbertchen/duplicacy` |
 | `kopia` | - | `kopia/kopia` |
 | `restic` | restic（Linux amd64 二进制 zip） | `restic/restic` |
 | `restic_linux_amd64` | restic（Linux x86_64，官方 .bz2 单文件包） | `restic/restic` |
 | `restic_linux_arm64` | restic（Linux arm64，官方 .bz2 单文件包） | `restic/restic` |
 | `rustic` | rustic（restic 兼容） | `rustic-rs/rustic` |
+| `urbackup_server` | UrBackup Server（Linux amd64 deb） | `uroni/urbackup_backend` |
 
-## 多媒体 (31)
+## 多媒体 (35)
 
 | id | Intro | repo |
 |----|-------|------|
@@ -245,15 +279,19 @@
 | `jellyfin_media_player` | - | `jellyfin/jellyfin-media-player` |
 | `jellyfin_server` | Jellyfin 媒体服务器（安装见 jellyfin.org；GitHub 主仓常无安装包，勿启用） | `jellyfin/jellyfin` |
 | `kdenlive` | - | `Kdenlive/kdenlive` |
+| `listen1_desktop` | Listen 1（聚合音乐播放器） | `listen1/listen1_desktop` |
 | `lmms` | LMMS（数字音频工作站） | `LMMS/lmms` |
+| `lx_music_desktop` | 洛雪音乐助手（桌面版） | `lyswhut/lx-music-desktop` |
 | `mediainfo` | MediaInfo（媒体元数据） | `MediaArea/MediaInfo` |
 | `mixxx` | 开源免费 DJ 混音软件 Mixxx 2.5.2 中文多语免费版 | `mixxxdj/mixxx` |
+| `moekoe_music` | MoeKoe Music（酷狗音乐第三方桌面客户端；Linux x86_64 AppImage） | `MoeKoeMusic/MoeKoeMusic` |
 | `mpc_be` | 轻量级开源媒体播放器 MPC-BE 1.8.7 + x64 免费好用的高清视频播放器 | `Aleksoid1978/MPC-BE` |
-| `mpv` | - | `mpv-player/mpv` |
+| `mpv` | mpv（Linux：官方 GitHub Release 无预编译包，请用发行版包管理器或 https://mpv.io/installation/） | `mpv-player/mpv` |
 | `musescore` | - | `musescore/MuseScore` |
 | `musicplayer2` | 开源免费多功能音乐播放器 MusicPlayer2 2.76.1 中文免费版 | `zhongyang219/MusicPlayer2` |
 | `notenoughav1encodes` | 开源视频编码工具 NotEnoughAV1Encodes 2.1.7 中文多语免费版 | `Alkl58/NotEnoughAV1Encodes` |
 | `obs` | - | `obsproject/obs-studio` |
+| `player` | Koel（自托管音乐播放器） | `koel/player` |
 | `qmplay2` | 开源媒体播放器 QMPlay2 Build 25.09.11 + x64 中文多语免费版 | `zaps166/QMPlay2` |
 | `recordly` | - | `webadderall/Recordly` |
 | `shotcut` | - | `mltframework/shotcut` |
@@ -338,11 +376,13 @@
 | `zen_desktop` | - | `irbis-sh/zen-desktop` |
 | `zen_desktop_arm64` | - | `irbis-sh/zen-desktop` |
 
-## 局域网文件共享 (10)
+## 局域网文件共享 (13)
 
 | id | Intro | repo |
 |----|-------|------|
 | `alist` | AList（Linux amd64 tar.gz） | `AlistGo/alist` |
+| `copyparty` | copyparty（文件共享 Web UI） | `9001/copyparty` |
+| `file_transfer_go` | file-transfer-go | `MatrixSeven/file-transfer-go` |
 | `filebrowser` | FileBrowser（Linux amd64 tar.gz） | `filebrowser/filebrowser` |
 | `fileshare-go` | - | `fileshare-go/fileshare` |
 | `go-drive` | - | `devld/go-drive` |
@@ -351,15 +391,19 @@
 | `gohttpserver` | - | `codeskyblue/gohttpserver` |
 | `localfs-go` | - | `monocodx/localfs-go` |
 | `nocab_desktop` | 开源免费无线传输工具 NoCab Desktop 1.4.7 中文多语免费版 | `nocab-transfer/nocab-desktop` |
+| `sftpgo` | SFTPGo（SFTP/WebDAV 文件服务） | `drakkan/sftpgo` |
 | `synctrayzor` | 开源免费文件共享工具 SyncTrayzor 1.1.29 + x64 中文多语免费版 | `canton7/SyncTrayzor` |
 
-## 工具 (11)
+## 工具 (14)
 
 | id | Intro | repo |
 |----|-------|------|
 | `7zip` | 7-Zip（Linux x64 tar.xz，ip7z/7zip） | `ip7z/7zip` |
+| `7zip_zstd` | 7-Zip ZS（仅 Windows；其他平台请打开 Releases 页） | `mcmilk/7-Zip-zstd` |
+| `bleachbit` | BleachBit（系统清理） | `bleachbit/bleachbit` |
 | `caesium` | Caesium Image Compressor：当前 GitHub Release 无 Linux 通用二进制，请用 Flatpak（flathub）或... | `Lymphatus/caesium-image-compressor` |
 | `colorpicker` | 开源免费颜色拾取工具 ColorPicker Max 6.9.0.2602 中文多语免费版 | `Leo-Corporation/ColorPicker` |
+| `crosspaste` | CrossPaste（跨设备剪贴板） | `crosspaste/crosspaste-desktop` |
 | `flyphotos` | 开源平替 Picasa 极速看图工具 FlyPhotos v2.6.1 for Windows | `riyasy/FlyPhotos` |
 | `hashing` | 开源哈希校验工具 Hashing 3.7 中文多语免费版 | `hellzerg/hashing` |
 | `imagine_compression` | 开源免费图像压缩工具 Imagine 0.7.5 中文多语免费版 | `meowtec/Imagine` |
@@ -369,7 +413,7 @@
 | `pineapple_picture` | 免费开源菠萝看图 Pineapple Picture 1.4.1 中文多语免费版 | `BLumia/pineapple-pictures` |
 | `quick_picture_viewer` | 开源免费轻量级 Windows 图像查看器 Quick Picture Viewer 3.1.4 中文免费版 | `ModuleArt/quick-picture-viewer` |
 
-## 开发 (48)
+## 开发 (53)
 
 | id | Intro | repo |
 |----|-------|------|
@@ -384,6 +428,7 @@
 | `chezmoi` | - | `twpayne/chezmoi` |
 | `cmake` | CMake 构建系统 | `Kitware/CMake` |
 | `codeblocks` | 开源免费 C/C++ 和 Fortran IDE Code::Blocks 24.04 中文汉化版 | `anbangli/codeblocks-cn` |
+| `cutter` | Cutter（Rizin 逆向工程 GUI，Linux AppImage） | `rizinorg/cutter` |
 | `ddev` | DDEV（本地 PHP/Drupal/WordPress 容器开发环境） | `ddev/ddev` |
 | `deno` | - | `denoland/deno` |
 | `dnspy` | 开源 .Net 反汇编工具 dnSpy 6.5.1 + x64 中文绿色免费版 | `dnSpyEx/dnSpy` |
@@ -406,9 +451,11 @@
 | `hurl` | Hurl（HTTP 测试 CLI） | `Orange-OpenSource/hurl` |
 | `insomnia` | - | `Kong/insomnia` |
 | `jpexs_flash_decompiler` | 免费开源 Flash 反编译工具 JPEXS Free Flash Decompiler 26.2.1 中文免费版 | `jindrapetrik/jpexs-decompiler` |
+| `jupyterlab_desktop` | JupyterLab Desktop（Linux Debian x64） | `jupyterlab/jupyterlab-desktop` |
 | `just` | - | `casey/just` |
 | `lazygit` | - | `jesseduffield/lazygit` |
 | `mise` | - | `jdx/mise` |
+| `mkcert` | mkcert（本地 HTTPS 开发证书；Linux amd64） | `FiloSottile/mkcert` |
 | `net_reactor_slayer` | 开源 .Net Reactor 脱壳工具 .Net Reactor Slayer 6.4.0 免费版下载 | `SychicBoy/NetReactorSlayer` |
 | `netron` | Netron（模型可视化） | `lutzroeder/netron` |
 | `ninja` | Ninja（构建系统） | `ninja-build/ninja` |
@@ -417,20 +464,26 @@
 | `pe_bear` | 开源 PE 文件分析工具 PE-bear 0.7.1 中文绿色便携版 | `hasherezade/pe-bear` |
 | `playwright_cli` | Playwright CLI（linux zip） | `microsoft/playwright` |
 | `shfmt` | - | `mvdan/sh` |
+| `spyder` | Spyder（非 Windows 安装包请打开 Releases/conda 页） | `spyder-ide/spyder` |
 | `taplo` | - | `tamasfe/taplo` |
 | `ty` | - | `astral-sh/ty` |
 | `ultimate_packer_for_executables` | 开源 EXE/Dll 资源压缩工具 UPX 5.1.1 + x64 发布！ | `upx/upx` |
 | `uv` | - | `astral-sh/uv` |
+| `wxmaxima` | wxMaxima（非 Windows 请打开 Releases/发行版包） | `wxMaxima-developers/wxmaxima` |
 
-## 效率 (22)
+## 效率 (28)
 
 | id | Intro | repo |
 |----|-------|------|
 | `blinkmind` | 开源免费思维导图工具 BlinkMind 0.1.6 中文多语免费版 | `awehook/blink-mind-desktop` |
+| `calcure` | calcure（TUI 日历/任务） | `anufrievroman/calcure` |
+| `calendar_diary` | Calendar Diary（日历日记；Linux arm64 AppImage） | `trustdev-org/calendar-diary` |
 | `copyq` | CopyQ 剪贴板管理 | `hluk/CopyQ` |
 | `copytranslator` | 开源复制即翻译解决方案 CopyTranslator 12.1.0 中文免费版 | `copytranslator/CopyTranslator` |
+| `esearch_linux_amd64` | eSearch（Linux x64 deb，xushengfeng） | `xushengfeng/eSearch` |
 | `espanso` | Espanso 文本扩展 | `espanso/espanso` |
 | `flameshot` | Flameshot（Linux AppImage 打包 zip） | `flameshot-org/flameshot` |
+| `freeplane` | Freeplane（开源思维导图；Linux deb；tag 形如 release-x.y.z） | `freeplane/freeplane` |
 | `ksnip` | ksnip（Linux x86_64 AppImage） | `ksnip/ksnip` |
 | `maye` | 免费快速启动工具 Maye Nano 6.1.0.260422 中文免费版 | `25H/MayeNano` |
 | `ohmyshot` | OhMyShot（Linux x86_64 AppImage） | `redf0x1/ohmyshot-releases` |
@@ -438,6 +491,7 @@
 | `picgo` | - | `Molunerfinn/PicGo` |
 | `picpick` | PicPick（截图/取色/标尺；官网 picpick.app 分发，GitHub 无安装包；勿启用） | `picpick/picpick` |
 | `pixpin` | PixPin（官方暂无 Linux 版；占位勿启用） | `pixpin-cn/desktop` |
+| `pomotroid` | Pomotroid（番茄钟） | `Splode/pomotroid` |
 | `powertoys_2` | 开源免费 Windows 实用程序 PowerToys 0.99.1 中文多语免费版 | `ZetaSp/PowerToys-Chinese-TransMOD` |
 | `quickclipboard` | 这款开源免费的 QuickClipboard 0.1.1 正在重新定义你的复制粘贴体验 | `mosheng1/QuickClipboard` |
 | `rambox` | Rambox（多账号 Web 应用） | `ramboxapp/community-edition` |
@@ -445,6 +499,7 @@
 | `snapx` | SnapX（ShareX 跨平台分支；pinned v0.3.0，latest 多为 flatpak） | `SnapXL/SnapX` |
 | `snipaste` | Snipaste（Linux x86_64 AppImage，官方 archives CDN） | `snipaste-cn/desktop` |
 | `stretchly` | - | `hovancik/stretchly` |
+| `super_productivity` | Super Productivity（任务管理/番茄钟；Linux AppImage） | `super-productivity/super-productivity` |
 | `uniclipboard` | UniClipboard（跨平台剪贴板同步与管理；Linux amd64 AppImage） | `UniClipboard/UniClipboard` |
 | `vhs` | - | `charmbracelet/vhs` |
 | `xerahs` | XerahS（ShareX 风格跨平台截图/上传） | `KovaForge/XerahS` |
@@ -501,10 +556,11 @@
 | `wesnoth` | - | `wesnoth/wesnoth` |
 | `xemu` | Xemu（Xbox 模拟器 AppImage） | `xemu-project/xemu` |
 
-## 笔记 (23)
+## 笔记 (27)
 
 | id | Intro | repo |
 |----|-------|------|
+| `anki` | Anki（间隔重复记忆卡片；Linux x86_64） | `ankitects/anki` |
 | `anytype` | - | `anyproto/anytype-ts` |
 | `appflowy` | AppFlowy 开源 Notion 类 | `AppFlowy-IO/AppFlowy` |
 | `beaver_notes` | 开源免费海狸笔记 Beaver Notes 4.4.0 x64 中文多语免费版 | `Beaver-Notes/Beaver-Notes` |
@@ -513,8 +569,10 @@
 | `desktopnote` | 开源免费桌面笔记工具 DesktopNote 1.6.4 绿色中文版 | `changbowen/DesktopNote` |
 | `joplin` | - | `laurent22/joplin` |
 | `logseq` | - | `logseq/logseq` |
+| `markflowy` | MarkFlowy（Markdown 笔记） | `drl990114/MarkFlowy` |
 | `marktext` | MarkText（Linux AppImage） | `marktext/marktext` |
 | `memos` | - | `usememos/memos` |
+| `note_gen` | NoteGen（AI 笔记生成） | `codexu/note-gen` |
 | `notesnook` | 开源免费加密笔记软件 Notesnook 3.3.18 x64 中文汉化解锁版 | `streetwriters/notesnook` |
 | `obsidian` | - | `obsidianmd/obsidian-releases` |
 | `pinny_notes` | 开源桌面便签应用 Pinny Notes 1.13.0 钉在屏幕上的便签神器 | `63BeetleSmurf/PinnyNotes` |
@@ -525,57 +583,75 @@
 | `tangent` | - | `suchnsuch/Tangent` |
 | `trilium` | - | `TriliumNext/Trilium` |
 | `trilium_notes` | 免费开源笔记应用程序 Trilium Notes 0.103.0 x64 官方中文免费版 | `zadam/trilium` |
+| `vnote` | VNote（Markdown 笔记） | `vnotex/vnote` |
 | `xournalpp` | Xournal++（手写/PDF 标注） | `xournalpp/xournalpp` |
 | `yanknote` | Yank Note（Markdown 笔记） | `purocean/yn` |
 | `zettlr` | - | `Zettlr/Zettlr` |
 
-## 系统 (24)
+## 系统 (38)
 
 | id | Intro | repo |
 |----|-------|------|
 | `auto_dark_mode` | Windows 10 自动深色模式 Auto Dark Mode X 11.0.0.54 中文多语免费版 | `Armin2208/Windows-Auto-Night-Mode` |
 | `balena_etcher` | balenaEtcher（USB 启动盘写入） | `balena-io/etcher` |
+| `bing_wallpaper_lib` | 必应每日壁纸库（仅 Windows；Linux 请打开 Releases 页） | `pandaligx/bing-wallpaper-lib` |
+| `bing_wallpaper_now` | Bing Wallpaper Now（仅 Windows/macOS；Linux 请打开 Releases 页） | `qiyuey/bing-wallpaper-now` |
+| `binglish` | binglish（仅 Windows/macOS；Linux 请打开 Releases 页） | `klemperer/binglish` |
+| `bingwallpaper_windows` | BingWallpaper.Windows（仅 Windows；Linux 请打开 Releases 页） | `BingHomepage/BingWallpaper.Windows` |
 | `context_menu_manager` | Windows 右键菜单管理工具 ContextMenuManager 3.3.3.1 中文免费版 | `BluePointLilac/ContextMenuManager` |
 | `dreamscene2` | 开源 Windows 动态桌面工具 DreamScene2 中文免费版 | `he55/DreamScene2` |
 | `duf` | duf 磁盘空间概览 | `muesli/duf` |
 | `efi_boot_editor` | 开源 EFI 引导编辑器 EFI Boot Editor 1.5.7 中文多语免费版 | `Neverous/efibooteditor` |
 | `fan_control` | 开源电脑风扇控制软件 Fan Control v269 绿色中文便携版 | `Rem0o/FanControl.Releases` |
 | `fedora_media_writer` | Fedora Linux 系统启动盘创建工具 Fedora Media Writer 5.3.1 x64 中文版 | `FedoraQt/MediaWriter` |
+| `flying_bird_wallpaper` | Flying Bird Wallpaper（仅 Windows/macOS；Linux 请打开 Releases 页） | `OXOYO/Flying-Bird-Wallpaper` |
 | `gdu` | gdu（磁盘用量分析） | `dundee/gdu` |
-| `lightbulb` | LightBulb 开源护眼软件 LightBulb 2.7.1 + x64 中文绿色版 | `Tyrrrz/LightBulb` |
+| `jadepeng_bing_wallpaper` | Bing每日壁纸（仅 Windows；Linux 请打开 Releases 页） | `jadepeng/bing-wallpaper` |
+| `libre_hardware_monitor` | LibreHardwareMonitor（仅 Windows；其他平台请打开 Releases 页） | `LibreHardwareMonitor/LibreHardwareMonitor` |
+| `lightbulb` | LightBulb 护眼色温调节（Tyrrrz/LightBulb，仅 Windows；见 windows 分片） | `Tyrrrz/LightBulb` |
 | `lively_wallpaper` | 开源 Windows 动态壁纸软件 Lively Wallpaper 2.2.1.0 中文多语免费版 | `rocksdanister/lively` |
 | `nsudo` | 开源免费系统管理软件 NSudo 8.2.0 中文免费版 | `Thdub/NSudo_Installer` |
 | `nwinfo` | 开源电脑硬件信息检测工具 NWinfo 1.6.4 绿色中文便携版 | `a1ive/nwinfo` |
 | `optimizer` | 开源 Windows 10/11 系统优化工具 Optimizer 16.7 中文多语免费版 | `hellzerg/optimizer` |
 | `pid_key_checker` | Windows 密钥激活次数查询工具 PID Key Checker 4.0.0.0 中文免费版 | `Ja7ad/PIDChecker` |
 | `qemu` | - | `qemu/qemu` |
+| `seelen_ui` | Seelen UI（仅 Windows；Linux 请打开 Releases 页） | `eythaann/Seelen-UI` |
+| `snowdesktop` | 飘雪桌面 SnowDesktop（仅 Windows；Linux 请打开 Releases 页） | `FreeFallingSnow/SnowDesktop_Release` |
 | `sophiapp` | 开源 Windows 系统优化调整工具 SophiApp 1.0.0.97 中文多语免费版 | `Sophia-Community/SophiApp` |
-| `sucrose_wallpaper_engine` | 强大的开源动态壁纸引擎 Sucrose Wallpaper Engine 26.6.4.0 中文版 | `Taiizor/Sucrose` |
+| `splashy` | Splashy（Unsplash 壁纸自动轮换；需 API Key；Linux AppImage） | `Halfaxas/Splashy` |
+| `sucrose_wallpaper_engine` | Sucrose Wallpaper Engine（仅 Windows Release；Linux 请打开 Releases 页） | `Taiizor/Sucrose` |
 | `total_registry` | 开源免费注册表工具 Total Registry 0.9.7.9 绿色汉化版 | `zodiacon/TotalRegistry` |
+| `unsplash_wallpapers` | Unsplash Wallpapers（从 Unsplash 自动换壁纸；Linux AppImage） | `soroushchehresa/unsplash-wallpapers` |
 | `ventoy` | Ventoy（多系统 USB 启动，Linux 包） | `ventoy/Ventoy` |
+| `virtualbox` | Oracle VirtualBox（Linux tar.bz2；manifest：download.virtualbox.org） | `oracle/virtualbox` |
+| `wallhaven_desktop` | wallhaven-desktop（Wallhaven 壁纸客户端；Linux AppImage） | `ErKeLost/wallhaven-desktop` |
 | `whynotwin11` | 开源检测 Win11 硬件需求工具 WhyNotWin11 2.7.0.0 中文多语免费版 | `rcmaehl/WhyNotWin11` |
 | `windynamicdesktop` | 开源免费 Windows 动态桌面壁纸 WinDynamicDesktop 5.6.1 中文免费版 | `t1m0thyj/WinDynamicDesktop` |
 | `winslop` | 开源免费 Windows 11 优化工具 Winslop 26.03.110 绿色中文版 | `builtbybel/Winslop` |
 | `wsl_manager` | 开源 WSL 发行版管理器 WSL Manager 1.11.0 中文多语免费版 | `bostrot/wsl2-distro-manager` |
+| `zen_browser_legacy` | Zen Browser（旧仓库 anfragment/zen；新上游 irbis-sh/zen-desktop） | `anfragment/zen` |
 
-## 终端 (12)
+## 终端 (15)
 
 | id | Intro | repo |
 |----|-------|------|
 | `alacritty` | - | `alacritty/alacritty` |
 | `bottom` | - | `ClementTsang/bottom` |
+| `contour` | Contour（现代 GPU 加速终端；Ubuntu deb） | `contour-terminal/contour` |
 | `electerm` | electerm 终端/SSH/SFTP | `electerm/electerm` |
 | `ghostty` | Ghostty 终端（Linux 构建见官方文档；Release 以 tag 资产为准，优先 tar.gz/zip） | `ghostty-org/ghostty` |
 | `nxshell` | 开源免费 Windows 终端仿真器 NxShell 1.9.3 中文多语免费版 | `nxshell/nxshell` |
 | `putty` | 开源免费 SSH 和 Telnet 客户端 Putty 0.84 中文汉化版 | `larryli/PuTTY` |
 | `rio` | Rio（GPU 终端） | `raphamorim/rio` |
 | `tabby` | - | `Eugeny/tabby` |
+| `termius` | Termius 跨平台 SSH/SFTP 终端（官网 Termius.deb） | `-` |
+| `termora` | Termora（终端/SSH 客户端） | `TermoraDev/termora` |
 | `warp` | Warp：安装包见 warp.dev；GitHub Release 无桌面安装资产；勿启用。 | `warpdotdev/warp` |
 | `wezterm` | - | `wezterm/wezterm` |
 | `windterm` | WindTerm（SSH/SFTP/终端，便携版） | `kingToolbox/WindTerm` |
 | `xterminal` | 开源免费命令终端 xTerminal 3.0.1.0 + x64 中文多语免费版 | `0x78654C/xTerminal` |
 
-## 编辑器 (31)
+## 编辑器 (33)
 
 | id | Intro | repo |
 |----|-------|------|
@@ -585,12 +661,13 @@
 | `codebuddy` | CodeBuddy Linux（manifest） | `-` |
 | `codebuddy_cn` | CodeBuddy CN Linux（manifest） | `-` |
 | `cudatext` | 免费开源代码编辑器 CudaText 1.222.0.0 + x64 中文多语免费版 | `Alexey-T/CudaText` |
-| `cursor` | Cursor（manifest 当前 linux 多为 null，勿盲目启用） | `-` |
+| `cursor` | Cursor Linux x64 AppImage（manifest：官方 CDN） | `-` |
 | `helix` | Helix（modal 编辑器） | `helix-editor/helix` |
 | `helix_editor` | - | `helix-editor/helix` |
 | `imhex` | - | `WerWolv/ImHex` |
 | `lapce` | - | `lapce/lapce` |
 | `lite_xl` | Lite XL（Linux x86_64 tar.gz） | `lite-xl/lite-xl` |
+| `markdown_it` | markdown-it（JS 库 Release，非安装包） | `markdown-it/markdown-it` |
 | `neovide` | Neovide（Linux AppImage） | `neovide/neovide` |
 | `neovim` | - | `neovim/neovim` |
 | `notepad_minusminus` | - | `cxasm/notepad--` |
@@ -605,86 +682,103 @@
 | `trae_cn` | Trae CN Linux（manifest） | `-` |
 | `trae_solo` | TRAE SOLO（manifest） | `-` |
 | `void_editor` | Void（Linux x64 tar.gz） | `voideditor/binaries` |
-| `vscode` | Visual Studio Code | `microsoft/vscode` |
+| `vscode` | Visual Studio Code（微软构建；GitHub Release 无安装包，走 update.code.visualstudio.com CDN） | `microsoft/vscode` |
 | `vscodium` | - | `VSCodium/vscodium` |
-| `windsurf` | Windsurf IDE（Codeium AI IDE；官网 codeium.com/windsurf 分发，GitHub 无桌面安装包；勿启用） | `Exafunction/Windsurf` |
+| `windsurf` | Windsurf / Devin Desktop Linux（manifest；tar.gz） | `-` |
 | `workbuddy` | WorkBuddy（manifest；Linux 常 null） | `-` |
-| `zed` | - | `zed-industries/zed` |
+| `zcode` | ZCode（GLM 官方 AI 编程桌面端，manifest：cdn-zcode.z.ai） | `-` |
+| `zed` | Zed（Rust 高性能编辑器；Linux x86_64 tar.gz） | `zed-industries/zed` |
 
-## 网络 (21)
+## 网络 (26)
 
 | id | Intro | repo |
 |----|-------|------|
 | `bandwhich` | - | `imsnif/bandwhich` |
 | `cloudflared` | - | `cloudflare/cloudflared` |
 | `croc` | - | `schollz/croc` |
+| `cyberduck` | Cyberduck（Linux 无官方直链；manifest linux 为 null，请用 apt/snap/flatpak 或 iterate-ch/... | `iterate-ch/cyberduck` |
+| `flowpick` | FlowPick（媒体资源嗅探浏览器扩展，Chrome zip；Chromium 开发者模式加载） | `ezwebtools/flowpick` |
 | `internettest` | 开源免费网络测试工具 InternetTest Pro 9.1.0.2602 中文多语免费版 | `Leo-Corporation/InternetTest` |
 | `localsend` | - | `localsend/localsend` |
+| `mullvad_browser` | Mullvad Browser（隐私浏览器；Linux deb） | `mullvad/mullvad-browser` |
 | `netbird` | NetBird（WireGuard 组网） | `netbirdio/netbird` |
 | `nextcloud_desktop` | Nextcloud 桌面客户端 | `nextcloud/desktop` |
 | `nmap` | - | `nmap/nmap` |
 | `opentrace` | OpenTrace 1.5.0.0 绿色中文版，让网络追踪从未如此简单 | `Archeb/opentrace` |
 | `openvpn` | - | `OpenVPN/openvpn` |
 | `rclone` | - | `rclone/rclone` |
+| `simple_web_server` | Simple Web Server | `terreng/simple-web-server` |
 | `syncthing` | Syncthing（Linux x86_64 官方 tar.gz，仅下载） | `syncthing/syncthing` |
 | `syncthing_linux_arm64` | Syncthing（Linux arm64 官方 tar.gz，仅下载） | `syncthing/syncthing` |
 | `syncthingtray` | - | `Martchus/syncthingtray` |
 | `tailscale` | - | `tailscale/tailscale` |
 | `thorium` | - | `Alex313031/Thorium` |
+| `ungoogled_chromium` | ungoogled-chromium（Windows 专用构建；其他平台请打开 Releases 页） | `ungoogled-software/ungoogled-chromium-windows` |
 | `wireshark` | - | `wireshark/wireshark` |
 | `xh` | xh（彩色 HTTP 客户端） | `ducaale/xh` |
 | `zen_browser` | - | `zen-browser/desktop` |
 | `zen_browser_arm64` | - | `zen-browser/desktop` |
 | `zerotier` | ZeroTier 虚拟组网 | `zerotier/ZeroTierOne` |
 
-## 网络与协作 (4)
+## 网络与协作 (5)
 
 | id | Intro | repo |
 |----|-------|------|
 | `ferdium` | Ferdium（聚合 Slack/Discord 等） | `ferdium/ferdium-app` |
+| `jitsi_meet_electron` | Jitsi Meet（开源视频会议桌面端；Linux AppImage） | `jitsi/jitsi-meet-electron` |
 | `mattermost_desktop` | Mattermost 桌面客户端 | `mattermost/desktop` |
 | `rocketchat_desktop` | Rocket.Chat 桌面客户端 | `RocketChat/Rocket.Chat.Electron` |
 | `zulip_desktop` | Zulip 桌面客户端 | `zulip/zulip-desktop` |
 
-## 网络与通讯 (6)
+## 网络与通讯 (7)
 
 | id | Intro | repo |
 |----|-------|------|
 | `chatterino` | - | `Chatterino/chatterino2` |
 | `element_desktop` | - | `element-hq/element-desktop` |
+| `session_desktop` | Session Desktop（去中心化隐私即时通讯；Linux AppImage） | `session-foundation/session-desktop` |
 | `signal_desktop` | - | `signalapp/Signal-Desktop` |
 | `telegram` | - | `telegramdesktop/tdesktop` |
 | `thunderbird` | Thunderbird（邮件客户端） | `thunderbird/thunderbird` |
 | `thunderbird_2` | 开源免费雷鸟邮件客户端 Mozilla Thunderbird 151.0 + x64 中文多语免费版 | `mozilla/kitsune` |
 
-## 远程与协作 (4)
+## 远程与协作 (9)
 
 | id | Intro | repo |
 |----|-------|------|
 | `barrier` | Barrier 开源 KVM | `debauchee/barrier` |
+| `deskflow` | Deskflow（跨机键鼠共享；Linux x86_64 flatpak） | `deskflow/deskflow` |
 | `deskreen` | Deskreen（屏幕共享） | `pavlobu/deskreen` |
 | `escrcpy` | 开源远程控制和屏幕镜像工具 Escrcpy 2.11.1 中文免费版 | `viarotel-org/escrcpy` |
+| `input_leap` | Input Leap（Barrier 分支；当前多为调试包，请打开 Releases 页） | `input-leap/input-leap` |
 | `rustdesk` | - | `rustdesk/rustdesk` |
+| `rustdesk_server` | RustDesk Server（hbbs/hbbr） | `rustdesk/rustdesk-server` |
+| `sunlogin` | 向日葵远程控制个人版（贝锐 Oray Sunlogin / AweSun） | `-` |
+| `tigervnc` | TigerVNC（开源 VNC；GitHub 无 Assets，请打开 Releases/官网） | `TigerVNC/tigervnc` |
 
-## 金融与股票 (8)
+## 金融与股票 (11)
 
 | id | Intro | repo |
 |----|-------|------|
 | `actual_budget` | Actual Budget（本地记账） | `actualbudget/actual` |
 | `actual_budget_appimage_amd64` | Actual Budget（Linux x86_64 AppImage） | `actualbudget/actual` |
 | `actual_budget_appimage_arm64` | Actual Budget（Linux arm64 AppImage） | `actualbudget/actual` |
+| `freqtrade` | Freqtrade（量化交易机器人；以 Docker/源码为主，请打开 Releases 页） | `freqtrade/freqtrade` |
 | `frequi` | FreqUI（Freqtrade Web 界面 zip，Linux 通用解压使用） | `freqtrade/frequi` |
+| `gnucash` | GnuCash（Linux 请用发行版包或打开 Releases 页）（请打开 Releases 页） | `Gnucash/gnucash` |
 | `go_stock` | go-stock | `ArvinLovegood/go-stock` |
+| `hledger` | hledger（纯文本复式记账 CLI；Linux x64） | `simonmichael/hledger` |
 | `openbb_desktop` | OpenBB Desktop（金融终端） | `OpenBB-finance/OpenBB` |
 | `ta_lib` | TA-Lib | `ta-lib/ta-lib` |
 | `ta_lib_deb_amd64` | TA-Lib（技术分析 C 库，Debian/Ubuntu amd64 deb） | `ta-lib/ta-lib` |
 
-## 音视频 (8)
+## 音视频 (9)
 
 | id | Intro | repo |
 |----|-------|------|
 | `ffmpeg_builds` | FFmpeg（BtbN 预编译 master/latest 构建） | `BtbN/FFmpeg-Builds` |
 | `losslesscut` | LosslessCut（无损裁剪/合并） | `mifi/lossless-cut` |
+| `olive` | Olive（开源非线性视频剪辑；Linux AppImage；钉选 0.2.0-nightly） | `olive-editor/olive` |
 | `openshot` | OpenShot 视频编辑器（AppImage） | `OpenShot/openshot-qt` |
 | `quickcut` | 开源免费多功能视频编辑下载工具 QuickCut 1.6.10 中文免费版 | `HaujetZhao/QuickCut` |
 | `screen_to_gif` | 开源免费 Gif 录制工具 ScreenToGif 2.43.1 中文多语免费版 | `NickeManarin/ScreenToGif` |

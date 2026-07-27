@@ -1,18 +1,18 @@
 # 推荐开源软件（macOS · 全分类导读）
 
-> 由 `python tools/generate_recommended_md.py` 根据 [`apps/darwin/`](apps/darwin/) 自动生成，生成日期：**2026-06-27**。条目 **539** 个（darwin 平台）。
+> 由 `python tools/generate_recommended_md.py` 根据 [`apps/darwin/`](apps/darwin/) 自动生成，生成日期：**2026-07-27**。条目 **653** 个（darwin 平台）。
 > 其它平台导读：[Windows](RECOMMENDED.zh-CN.md) · [Linux](RECOMMENDED.linux.zh-CN.md)。
 > 技术索引与分片统计见 [`CATALOG.md`](CATALOG.md)。启用/更新：lookup → `run_saved_apps`（Windows 可用 `run_saved_apps.bat`）。
 
 ---
 
-## AI（49）
+## AI（58）
 
-### aichat · `aichat`
+### aichat（终端多模型 CLI；macOS Apple Silicon tar.gz） · `aichat`
 
-（见仓库 Release 说明）
+aichat（终端多模型 CLI；macOS Apple Silicon tar.gz）
 
-- 仓库：`sigoden/aichat` · 分片：`apps/darwin/01-AI.json` · 配置：基础条目（试跑前建议补规则）
+- 仓库：`sigoden/aichat` · 分片：`apps/darwin/01-AI.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform darwin aichat`
 
 ### aider（macOS arm64 tar.gz） · `aider`
@@ -49,6 +49,20 @@ CC Switch macOS（官方 dmg，通用二进制；仓库 farion1231/cc-switch）
 
 - 仓库：`farion1231/cc-switch` · 分片：`apps/darwin/01-AI.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform darwin cc_switch`
+
+### ccometixline · `ccometixline`
+
+CCometixLine（Claude Code 状态栏 ccline；macOS Apple Silicon tar.gz）
+
+- 仓库：`Haleclipse/CCometixLine` · 分片：`apps/darwin/01-AI.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin ccometixline`
+
+### ccometixline intel · `ccometixline_intel`
+
+CCometixLine（Claude Code 状态栏 ccline；macOS Intel x64 tar.gz）
+
+- 仓库：`Haleclipse/CCometixLine` · 分片：`apps/darwin/01-AI.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin ccometixline_intel`
 
 ### chatbox · `chatbox`
 
@@ -92,6 +106,20 @@ Cockpit Tools（通用 AI IDE 账号管理；macOS universal dmg）
 - 仓库：`jlcodes99/cockpit-tools` · 分片：`apps/darwin/01-AI.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform darwin cockpit_tools`
 
+### codex app · `codex_app`
+
+OpenAI Codex 桌面应用（官方 dmg 镜像；Apple Silicon；见 openai.com/codex）
+
+- 仓库：`Wangnov/codex-app-mirror` · 分片：`apps/darwin/01-AI.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin codex_app`
+
+### codex app darwin intel · `codex_app_darwin_intel`
+
+OpenAI Codex 桌面应用（官方 dmg 镜像；macOS Intel；见 openai.com/codex）
+
+- 仓库：`Wangnov/codex-app-mirror` · 分片：`apps/darwin/01-AI.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin codex_app_darwin_intel`
+
 ### OpenAI Codex CLI（macOS Apple Silicon · `codex_cli`
 
 OpenAI Codex CLI（macOS Apple Silicon，codex-aarch64-apple-darwin.dmg）
@@ -120,11 +148,11 @@ CodexPlusPlus（Codex App 增强工具，macOS Intel dmg）
 - 仓库：`BigPizzaV3/CodexPlusPlus` · 分片：`apps/darwin/01-AI.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform darwin codex_plus_plus_darwin_intel`
 
-### Continue（macOS arm64 .vsix） · `continue`
+### continue · `continue`
 
-Continue（macOS arm64 .vsix）
+Continue（macOS arm64 .vsix；v2.x 部分 Release 无 .vsix 资产）
 
-- 仓库：`continuedev/continue` · 分片：`apps/darwin/01-AI.json` · 配置：基础条目（试跑前建议补规则）
+- 仓库：`continuedev/continue` · 分片：`apps/darwin/01-AI.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform darwin continue`
 
 ### Crush（Charmbracelet 终端 AI 编程助手） · `crush`
@@ -239,6 +267,13 @@ LlamaIndex：pip 框架，无独立安装包 Release。
 - 仓库：`run-llama/llama_index` · 分片：`apps/darwin/01-AI.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform darwin llamaindex_note`
 
+### LM Studio macOS（manifest；默认 arm64 dmg） · `lmstudio`
+
+LM Studio macOS（manifest；默认 arm64 dmg）
+
+- 分片：`apps/darwin/01-AI.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform darwin lmstudio`
+
 ### Lobe Chat Hub（多模型 AI 桌面客户端 · `lobe_chat`
 
 Lobe Chat Hub（多模型 AI 桌面客户端，LobeHub）
@@ -255,9 +290,9 @@ NextChat：Release 多为源码；部署见 ChatGPTNextWeb/NextChat 说明。
 
 ### ollama · `ollama`
 
-（见仓库 Release 说明）
+Ollama（本地运行大模型；macOS 默认 Ollama-darwin.zip；亦可选 Ollama.dmg）
 
-- 仓库：`ollama/ollama` · 分片：`apps/darwin/01-AI.json` · 配置：基础条目（试跑前建议补规则）
+- 仓库：`ollama/ollama` · 分片：`apps/darwin/01-AI.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform darwin ollama`
 
 ### Open Claude Cowork：仓库无 Release 二进制 · `open_claude_cowork`
@@ -288,11 +323,11 @@ OpenClaw（macOS 用 Release 中 OpenClaw-*.dmg）
 - 仓库：`openclaw/openclaw` · 分片：`apps/darwin/01-AI.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform darwin openclaw`
 
-### opencode · `opencode`
+### OpenCode 桌面端（macOS arm64 dmg） · `opencode`
 
-（见仓库 Release 说明）
+OpenCode 桌面端（macOS arm64 dmg）
 
-- 仓库：`sst/opencode` · 分片：`apps/darwin/01-AI.json` · 配置：基础条目（试跑前建议补规则）
+- 仓库：`sst/opencode` · 分片：`apps/darwin/01-AI.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform darwin opencode`
 
 ### OpenCode CLI（macOS arm64 tar.gz） · `opencode_cli`
@@ -309,11 +344,25 @@ OpenCode CLI（macOS arm64 tar.gz）
 - 仓库：`All-Hands-AI/OpenHands` · 分片：`apps/darwin/01-AI.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform darwin openhands`
 
-### roo code · `roo_code`
+### PicoClaw（超轻量 AI 助手；macOS Apple Silicon tar.gz） · `picoclaw`
 
-（见仓库 Release 说明）
+PicoClaw（超轻量 AI 助手；macOS Apple Silicon tar.gz）
 
-- 仓库：`RooCodeInc/Roo-Code` · 分片：`apps/darwin/01-AI.json` · 配置：基础条目（试跑前建议补规则）
+- 仓库：`sipeed/picoclaw` · 分片：`apps/darwin/01-AI.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin picoclaw`
+
+### PicoClaw（超轻量 AI 助手；macOS Intel x86_64 tar.gz） · `picoclaw_intel`
+
+PicoClaw（超轻量 AI 助手；macOS Intel x86_64 tar.gz）
+
+- 仓库：`sipeed/picoclaw` · 分片：`apps/darwin/01-AI.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin picoclaw_intel`
+
+### Roo Code（VS Code AI 代理扩展 · `roo_code`
+
+Roo Code（VS Code AI 代理扩展，Release .vsix）
+
+- 仓库：`RooCodeInc/Roo-Code` · 分片：`apps/darwin/01-AI.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform darwin roo_code`
 
 ### RTK（CLI 代理压缩 LLM token · `rtk`
@@ -337,6 +386,20 @@ Tabby（自托管 AI 代码补全服务 / 本地推理包）
 - 仓库：`TabbyML/tabby` · 分片：`apps/darwin/01-AI.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform darwin tabbyml`
 
+### textgen webui · `textgen_webui`
+
+text-generation-webui / oobabooga（本地 LLM WebUI；macOS Apple Silicon 便携 tar.gz）
+
+- 仓库：`oobabooga/text-generation-webui` · 分片：`apps/darwin/01-AI.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin textgen_webui`
+
+### textgen webui intel · `textgen_webui_intel`
+
+text-generation-webui / oobabooga（本地 LLM WebUI；macOS Intel x86_64 便携 tar.gz）
+
+- 仓库：`oobabooga/text-generation-webui` · 分片：`apps/darwin/01-AI.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin textgen_webui_intel`
+
 ### GitHub Copilot Chat（VS Code 扩展 .vsix） · `vscode_copilot_chat`
 
 GitHub Copilot Chat（VS Code 扩展 .vsix）
@@ -353,7 +416,7 @@ Zed Codex ACP（在 Zed 中使用 Codex，darwin）
 
 ---
 
-## 下载（17）
+## 下载（20）
 
 ### aria2 · `aria2`
 
@@ -432,6 +495,13 @@ Motrix（全能下载工具：HTTP/FTP/BT/磁力链）
 - 仓库：`agalwood/Motrix` · 分片：`apps/darwin/02-下载.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform darwin motrix`
 
+### Nicotine+（非 Windows 请用发行版包或打开 Releases 页） · `nicotine_plus`
+
+Nicotine+（非 Windows 请用发行版包或打开 Releases 页）
+
+- 仓库：`nicotine-plus/nicotine-plus` · 分片：`apps/darwin/02-下载.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform darwin nicotine_plus`
+
 ### 开源免费下载工具 Persepolis Download Manager · `persepolis_download_manager`
 
 开源免费下载工具 Persepolis Download Manager 3.2.0 中文免费版
@@ -452,6 +522,20 @@ qBittorrent 增强版 qBittorrent Enhanced Edition 5.2.1.10 中文版更新发�
 
 - 仓库：`c0re100/qBittorrent-Enhanced-Edition` · 分片：`apps/darwin/02-下载.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform darwin qbittorrent_enhanced_edition`
+
+### tchMaterial-parser（macOS Intel x64 zip） · `tchmaterial_parser`
+
+tchMaterial-parser（macOS Intel x64 zip）
+
+- 仓库：`happycola233/tchMaterial-parser` · 分片：`apps/darwin/02-下载.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin tchmaterial_parser`
+
+### tchMaterial-parser（macOS Apple Silicon zip） · `tchmaterial_parser_arm64`
+
+tchMaterial-parser（macOS Apple Silicon zip）
+
+- 仓库：`happycola233/tchMaterial-parser` · 分片：`apps/darwin/02-下载.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin tchmaterial_parser_arm64`
 
 ### Transmission（BT 客户端） · `transmission`
 
@@ -476,7 +560,7 @@ Transmission（BT 客户端）
 
 ---
 
-## 云原生（19）
+## 云原生（24）
 
 ### caddy · `caddy`
 
@@ -498,6 +582,34 @@ DevSpace（K8s 开发工具）
 
 - 仓库：`devspace-sh/devspace` · 分片：`apps/darwin/24-云原生.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform darwin devspace`
+
+### Docker Compose CLI 独立二进制（docker/compose · `docker_compose`
+
+Docker Compose CLI 独立二进制（docker/compose，Apple Silicon）
+
+- 仓库：`docker/compose` · 分片：`apps/darwin/24-云原生.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin docker_compose`
+
+### Docker Compose CLI 独立二进制（docker/compose · `docker_compose_intel`
+
+Docker Compose CLI 独立二进制（docker/compose，Intel Mac）
+
+- 仓库：`docker/compose` · 分片：`apps/darwin/24-云原生.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin docker_compose_intel`
+
+### docker desktop · `docker_desktop`
+
+Docker Desktop 官方 dmg（Apple Silicon；从 Docker 文档发布说明解析）
+
+- 仓库：`docker/docs` · 分片：`apps/darwin/24-云原生.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform darwin docker_desktop`
+
+### docker desktop intel · `docker_desktop_intel`
+
+Docker Desktop 官方 dmg（Intel Mac；从 Docker 文档发布说明解析）
+
+- 仓库：`docker/docs` · 分片：`apps/darwin/24-云原生.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform darwin docker_desktop_intel`
 
 ### Helm（K8s 包管理 · `helm`
 
@@ -554,6 +666,13 @@ minikube（本地 K8s）
 
 - 仓库：`kubernetes/minikube` · 分片：`apps/darwin/24-云原生.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform darwin minikube`
+
+### Multipass（Canonical 轻量 Ubuntu VM；macOS） · `multipass`
+
+Multipass（Canonical 轻量 Ubuntu VM；macOS）
+
+- 仓库：`canonical/multipass` · 分片：`apps/darwin/24-云原生.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin multipass`
 
 ### Nomad · `nomad`
 
@@ -613,7 +732,7 @@ Terraform
 
 ---
 
-## 代理与隧道（13）
+## 代理与隧道（20）
 
 ### Clash Verge Rev（Clash 客户端） · `clash_verge_rev`
 
@@ -636,6 +755,20 @@ Clash Verge Rev（macOS Intel dmg）
 - 仓库：`clash-verge-rev/clash-verge-rev` · 分片：`apps/darwin/30-代理与隧道.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform darwin clash_verge_rev_macos_x64`
 
+### dev sidecar · `dev_sidecar`
+
+开发者边车：加速 GitHub、git clone、Release 下载等开发网络请求（Apple Silicon）
+
+- 仓库：`docmirror/dev-sidecar` · 分片：`apps/darwin/30-代理与隧道.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin dev_sidecar`
+
+### dev sidecar intel · `dev_sidecar_intel`
+
+开发者边车：加速 GitHub、git clone、Release 下载等开发网络请求（Intel Mac）
+
+- 仓库：`docmirror/dev-sidecar` · 分片：`apps/darwin/30-代理与隧道.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin dev_sidecar_intel`
+
 ### FlClash（Flutter Clash 客户端） · `flclash`
 
 FlClash（Flutter Clash 客户端）
@@ -650,12 +783,26 @@ FlClash（macOS Apple Silicon dmg）
 - 仓库：`chen08209/FlClash` · 分片：`apps/darwin/30-代理与隧道.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform darwin flclash_macos_arm64`
 
+### frp（内网穿透；macOS Apple Silicon） · `frp`
+
+frp（内网穿透；macOS Apple Silicon）
+
+- 仓库：`fatedier/frp` · 分片：`apps/darwin/30-代理与隧道.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin frp`
+
 ### Frpc Desktop（frp 桌面 GUI · `frpc_desktop`
 
 Frpc Desktop（frp 桌面 GUI，macOS universal dmg）
 
 - 仓库：`luckjiawei/frpc-desktop` · 分片：`apps/darwin/30-代理与隧道.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform darwin frpc_desktop`
+
+### gui for singbox · `gui_for_singbox`
+
+GUI.for.SingBox（sing-box 图形前端；macOS Apple Silicon）
+
+- 仓库：`GUI-for-Cores/GUI.for.SingBox` · 分片：`apps/darwin/30-代理与隧道.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin gui_for_singbox`
 
 ### Hiddify Next（macOS dmg） · `hiddify_next`
 
@@ -677,6 +824,20 @@ mihomo（macOS arm64 gz）
 
 - 仓库：`SagerNet/sing-box` · 分片：`apps/darwin/30-代理与隧道.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform darwin mihomo_macos_arm64`
+
+### NekoRay（已不支持旧版 macOS；请打开 Releases 页） · `nekoray`
+
+NekoRay（已不支持旧版 macOS；请打开 Releases 页）
+
+- 仓库：`MatsuriDayo/nekoray` · 分片：`apps/darwin/30-代理与隧道.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform darwin nekoray`
+
+### shadowsocks-rust（macOS Apple Silicon） · `shadowsocks_rust`
+
+shadowsocks-rust（macOS Apple Silicon）
+
+- 仓库：`shadowsocks/shadowsocks-rust` · 分片：`apps/darwin/30-代理与隧道.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin shadowsocks_rust`
 
 ### sing-box（通用代理平台） · `sing_box`
 
@@ -706,9 +867,16 @@ v2rayN（macOS Intel x64，官方 dmg，仅下载）
 - 仓库：`2dust/v2rayN` · 分片：`apps/darwin/30-代理与隧道.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform darwin v2rayn_macos_intel`
 
+### Xray-core（代理内核；macOS Apple Silicon） · `xray_core`
+
+Xray-core（代理内核；macOS Apple Silicon）
+
+- 仓库：`XTLS/Xray-core` · 分片：`apps/darwin/30-代理与隧道.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin xray_core`
+
 ---
 
-## 写作（8）
+## 写作（14）
 
 ### 开源免费多平台 Markdown 写作工具 Boostnote · `boostnote`
 
@@ -716,6 +884,27 @@ v2rayN（macOS Intel x64，官方 dmg，仅下载）
 
 - 仓库：`BoostIO/boost-releases` · 分片：`apps/darwin/03-写作.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform darwin boostnote`
+
+### doocs/md（Markdown 编辑器） · `doocs_md`
+
+doocs/md（Markdown 编辑器）
+
+- 仓库：`doocs/md` · 分片：`apps/darwin/03-写作.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform darwin doocs_md`
+
+### flymd（Markdown 编辑器） · `flymd`
+
+flymd（Markdown 编辑器）
+
+- 仓库：`flyhunterl/flymd` · 分片：`apps/darwin/03-写作.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform darwin flymd`
+
+### ghostwriter（KDE Markdown 编辑器） · `ghostwriter`
+
+ghostwriter（KDE Markdown 编辑器）
+
+- 仓库：`KDE/ghostwriter` · 分片：`apps/darwin/03-写作.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform darwin ghostwriter`
 
 ### 开源跨平台电子书阅读器 Koodo Reader · `koodo_reader`
 
@@ -738,12 +927,26 @@ Pandoc（macOS pkg）
 - 仓库：`jgm/pandoc` · 分片：`apps/darwin/03-写作.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform darwin pandoc`
 
+### Quarto CLI（科学/技术写作发布；macOS pkg） · `quarto_cli`
+
+Quarto CLI（科学/技术写作发布；macOS pkg）
+
+- 仓库：`quarto-dev/quarto-cli` · 分片：`apps/darwin/03-写作.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin quarto_cli`
+
 ### 专业 EPUB 格式电子书编辑器 Sigil · `sigil`
 
 专业 EPUB 格式电子书编辑器 Sigil 2.8.0 x64 中文多语免费版
 
 - 仓库：`Sigil-Ebook/Sigil` · 分片：`apps/darwin/03-写作.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform darwin sigil`
+
+### Tectonic（现代 TeX 引擎；macOS Apple Silicon） · `tectonic`
+
+Tectonic（现代 TeX 引擎；macOS Apple Silicon）
+
+- 仓库：`tectonic-typesetting/tectonic` · 分片：`apps/darwin/03-写作.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin tectonic`
 
 ### 开源跨平台免费电子书阅读器 Thorium Reader · `thorium_reader`
 
@@ -766,9 +969,16 @@ Zola（静态站点生成器）
 - 仓库：`getzola/zola` · 分片：`apps/darwin/03-写作.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform darwin zola`
 
+### Zotero（文献管理；官方不走 GitHub Assets · `zotero`
+
+Zotero（文献管理；官方不走 GitHub Assets，请打开 Releases/官网）
+
+- 仓库：`zotero/zotero` · 分片：`apps/darwin/03-写作.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform darwin zotero`
+
 ---
 
-## 办公（7）
+## 办公（8）
 
 ### AFFiNE 知识库/文档/白板 · `affine`
 
@@ -805,6 +1015,13 @@ AFFiNE 知识库/文档/白板
 - 仓库：`ONLYOFFICE/DesktopEditors` · 分片：`apps/darwin/04-办公.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform darwin onlyoffice`
 
+### pdfcpu（PDF 工具箱；macOS Apple Silicon） · `pdfcpu`
+
+pdfcpu（PDF 工具箱；macOS Apple Silicon）
+
+- 仓库：`pdfcpu/pdfcpu` · 分片：`apps/darwin/04-办公.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin pdfcpu`
+
 ### texstudio · `texstudio`
 
 （见仓库 Release 说明）
@@ -821,7 +1038,7 @@ Typst（排版系统）
 
 ---
 
-## 办公与设计（3）
+## 办公与设计（5）
 
 ### drawio · `drawio`
 
@@ -829,6 +1046,20 @@ Typst（排版系统）
 
 - 仓库：`jgraph/drawio-desktop` · 分片：`apps/darwin/05-办公与设计.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform darwin drawio`
+
+### LibreCAD（开源 · `librecad`
+
+LibreCAD（开源 2D CAD；macOS DMG）
+
+- 仓库：`LibreCAD/LibreCAD` · 分片：`apps/darwin/05-办公与设计.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin librecad`
+
+### Pencil2D（开源 · `pencil2d`
+
+Pencil2D（开源 2D 手绘动画；macOS DMG）
+
+- 仓库：`pencil2d/pencil` · 分片：`apps/darwin/05-办公与设计.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin pencil2d`
 
 ### Rnote（手写笔记） · `rnote`
 
@@ -962,7 +1193,7 @@ Wasabi Wallet（Intel macOS dmg，无 arm64 后缀）
 
 ---
 
-## 可观测（9）
+## 可观测（11）
 
 ### Grafana 可观测性仪表盘 · `grafana`
 
@@ -999,6 +1230,13 @@ Netdata（macOS 静态二进制）
 - 仓库：`netdata/netdata` · 分片：`apps/darwin/25-可观测.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform darwin netdata`
 
+### otelcol · `otelcol`
+
+OpenTelemetry Collector（otelcol；macOS Apple Silicon）
+
+- 仓库：`open-telemetry/opentelemetry-collector-releases` · 分片：`apps/darwin/25-可观测.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin otelcol`
+
 ### Prometheus 监控 · `prometheus`
 
 Prometheus 监控
@@ -1027,9 +1265,16 @@ Vector 日志/指标采集
 - 仓库：`vectordotdev/vector` · 分片：`apps/darwin/25-可观测.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform darwin vector`
 
+### victoria metrics · `victoria_metrics`
+
+VictoriaMetrics（高性能 Prometheus 兼容时序库；单机 macOS Apple Silicon）
+
+- 仓库：`VictoriaMetrics/VictoriaMetrics` · 分片：`apps/darwin/25-可观测.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin victoria_metrics`
+
 ---
 
-## 命令行（27）
+## 命令行（30）
 
 ### atuin · `atuin`
 
@@ -1108,6 +1353,13 @@ Kilo Code CLI / 独立包（zip/tar.gz）
 - 仓库：`Kilo-Org/kilocode` · 分片：`apps/darwin/06-命令行.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform darwin kilo_cli`
 
+### lf（终端文件管理器；macOS Apple Silicon） · `lf`
+
+lf（终端文件管理器；macOS Apple Silicon）
+
+- 仓库：`gokcehan/lf` · 分片：`apps/darwin/06-命令行.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin lf`
+
 ### lsd（彩色 ls） · `lsd`
 
 lsd（彩色 ls）
@@ -1163,6 +1415,20 @@ ripgrep-all（PDF/Office 内 ripgrep）
 
 - 仓库：`phiresky/ripgrep-all` · 分片：`apps/darwin/06-命令行.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform darwin ripgrep_all`
+
+### rmux（跨平台 Rust 多路复用器 · `rmux`
+
+rmux（跨平台 Rust 多路复用器，可用代码驱动 CLI/TUI；macOS Apple Silicon）
+
+- 仓库：`Helvesec/rmux` · 分片：`apps/darwin/06-命令行.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin rmux`
+
+### rmux（macOS Intel x86_64 tar.gz） · `rmux_darwin_intel`
+
+rmux（macOS Intel x86_64 tar.gz）
+
+- 仓库：`Helvesec/rmux` · 分片：`apps/darwin/06-命令行.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin rmux_darwin_intel`
 
 ### sd · `sd`
 
@@ -1222,7 +1488,14 @@ UniClipboard CLI（macOS Intel x64 tar.gz）
 
 ---
 
-## 备份（6）
+## 备份（8）
+
+### BorgBackup（去重加密备份；macOS 独立二进制） · `borg`
+
+BorgBackup（去重加密备份；macOS 独立二进制）
+
+- 仓库：`borgbackup/borg` · 分片：`apps/darwin/07-备份.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin borg`
 
 ### Duplicacy · `duplicacy`
 
@@ -1266,9 +1539,16 @@ rustic（restic 兼容）
 - 仓库：`rustic-rs/rustic` · 分片：`apps/darwin/07-备份.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform darwin rustic`
 
+### urbackup server · `urbackup_server`
+
+UrBackup Server（仅 Windows/Linux 包；macOS 请打开 Releases 页）
+
+- 仓库：`uroni/urbackup_backend` · 分片：`apps/darwin/07-备份.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform darwin urbackup_server`
+
 ---
 
-## 多媒体（31）
+## 多媒体（36）
 
 ### audacity · `audacity`
 
@@ -1340,12 +1620,26 @@ Jellyfin 媒体服务器（安装见 jellyfin.org；GitHub 主仓常无安装包
 - 仓库：`Kdenlive/kdenlive` · 分片：`apps/darwin/08-多媒体.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform darwin kdenlive`
 
+### Listen · `listen1_desktop`
+
+Listen 1（聚合音乐播放器）
+
+- 仓库：`listen1/listen1_desktop` · 分片：`apps/darwin/08-多媒体.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform darwin listen1_desktop`
+
 ### LMMS（数字音频工作站） · `lmms`
 
 LMMS（数字音频工作站）
 
 - 仓库：`LMMS/lmms` · 分片：`apps/darwin/08-多媒体.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform darwin lmms`
+
+### 洛雪音乐助手（桌面版） · `lx_music_desktop`
+
+洛雪音乐助手（桌面版）
+
+- 仓库：`lyswhut/lx-music-desktop` · 分片：`apps/darwin/08-多媒体.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin lx_music_desktop`
 
 ### MediaInfo（媒体元数据） · `mediainfo`
 
@@ -1361,6 +1655,20 @@ MediaInfo（媒体元数据）
 - 仓库：`mixxxdj/mixxx` · 分片：`apps/darwin/08-多媒体.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform darwin mixxx`
 
+### MoeKoe Music（酷狗音乐第三方桌面客户端；macOS Intel x64 dmg） · `moekoe_music`
+
+MoeKoe Music（酷狗音乐第三方桌面客户端；macOS Intel x64 dmg）
+
+- 仓库：`MoeKoeMusic/MoeKoeMusic` · 分片：`apps/darwin/08-多媒体.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin moekoe_music`
+
+### moekoe music arm64 · `moekoe_music_arm64`
+
+MoeKoe Music（酷狗音乐第三方桌面客户端；macOS Apple Silicon dmg）
+
+- 仓库：`MoeKoeMusic/MoeKoeMusic` · 分片：`apps/darwin/08-多媒体.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin moekoe_music_arm64`
+
 ### 轻量级开源媒体播放器 MPC-BE · `mpc_be`
 
 轻量级开源媒体播放器 MPC-BE 1.8.7 + x64 免费好用的高清视频播放器
@@ -1368,12 +1676,19 @@ MediaInfo（媒体元数据）
 - 仓库：`Aleksoid1978/MPC-BE` · 分片：`apps/darwin/08-多媒体.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform darwin mpc_be`
 
-### mpv · `mpv`
+### mpv（macOS Apple Silicon 官方 zip · `mpv`
 
-（见仓库 Release 说明）
+mpv（macOS Apple Silicon 官方 zip，仅下载）
 
-- 仓库：`mpv-player/mpv` · 分片：`apps/darwin/08-多媒体.json` · 配置：基础条目（试跑前建议补规则）
+- 仓库：`mpv-player/mpv` · 分片：`apps/darwin/08-多媒体.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform darwin mpv`
+
+### mpv（macOS Intel 官方 zip · `mpv_macos_intel`
+
+mpv（macOS Intel 官方 zip，仅下载）
+
+- 仓库：`mpv-player/mpv` · 分片：`apps/darwin/08-多媒体.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin mpv_macos_intel`
 
 ### musescore · `musescore`
 
@@ -1396,12 +1711,12 @@ MediaInfo（媒体元数据）
 - 仓库：`Alkl58/NotEnoughAV1Encodes` · 分片：`apps/darwin/08-多媒体.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform darwin notenoughav1encodes`
 
-### obs · `obs`
+### Koel（自托管音乐播放器） · `player`
 
-（见仓库 Release 说明）
+Koel（自托管音乐播放器）
 
-- 仓库：`obsproject/obs-studio` · 分片：`apps/darwin/08-多媒体.json` · 配置：基础条目（试跑前建议补规则）
-- 查找：`python lookup_app.py --platform darwin obs`
+- 仓库：`koel/player` · 分片：`apps/darwin/08-多媒体.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform darwin player`
 
 ### 开源媒体播放器 QMPlay2 Build · `qmplay2`
 
@@ -1917,7 +2232,7 @@ YubiKey Manager
 
 ---
 
-## 局域网文件共享（10）
+## 局域网文件共享（13）
 
 ### AList（macOS arm64 tar.gz） · `alist`
 
@@ -1925,6 +2240,20 @@ AList（macOS arm64 tar.gz）
 
 - 仓库：`AlistGo/alist` · 分片：`apps/darwin/29-局域网文件共享.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform darwin alist`
+
+### copyparty（文件共享 Web UI） · `copyparty`
+
+copyparty（文件共享 Web UI）
+
+- 仓库：`9001/copyparty` · 分片：`apps/darwin/29-局域网文件共享.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform darwin copyparty`
+
+### file-transfer-go · `file_transfer_go`
+
+file-transfer-go
+
+- 仓库：`MatrixSeven/file-transfer-go` · 分片：`apps/darwin/29-局域网文件共享.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform darwin file_transfer_go`
 
 ### FileBrowser（macOS arm64 tar.gz） · `filebrowser`
 
@@ -1982,6 +2311,13 @@ FileBrowser（macOS arm64 tar.gz）
 - 仓库：`nocab-transfer/nocab-desktop` · 分片：`apps/darwin/29-局域网文件共享.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform darwin nocab_desktop`
 
+### SFTPGo（SFTP/WebDAV 文件服务） · `sftpgo`
+
+SFTPGo（SFTP/WebDAV 文件服务）
+
+- 仓库：`drakkan/sftpgo` · 分片：`apps/darwin/29-局域网文件共享.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform darwin sftpgo`
+
 ### 开源免费文件共享工具 SyncTrayzor · `synctrayzor`
 
 开源免费文件共享工具 SyncTrayzor 1.1.29 + x64 中文多语免费版
@@ -1991,7 +2327,7 @@ FileBrowser（macOS arm64 tar.gz）
 
 ---
 
-## 工具（11）
+## 工具（15）
 
 ### 7-Zip（macOS tar.xz · `7zip`
 
@@ -1999,6 +2335,27 @@ FileBrowser（macOS arm64 tar.gz）
 
 - 仓库：`ip7z/7zip` · 分片：`apps/darwin/11-工具.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform darwin 7zip`
+
+### 7-Zip ZS（仅 Windows；其他平台请打开 Releases 页） · `7zip_zstd`
+
+7-Zip ZS（仅 Windows；其他平台请打开 Releases 页）
+
+- 仓库：`mcmilk/7-Zip-zstd` · 分片：`apps/darwin/11-工具.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform darwin 7zip_zstd`
+
+### Applite（macOS 图形化 Homebrew Cask 管理器） · `applite`
+
+Applite（macOS 图形化 Homebrew Cask 管理器）
+
+- 仓库：`milanvarady/Applite` · 分片：`apps/darwin/11-工具.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin applite`
+
+### BleachBit（系统清理） · `bleachbit`
+
+BleachBit（系统清理）
+
+- 仓库：`bleachbit/bleachbit` · 分片：`apps/darwin/11-工具.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform darwin bleachbit`
 
 ### Caesium Image Compressor（macOS dmg） · `caesium`
 
@@ -2013,6 +2370,13 @@ Caesium Image Compressor（macOS dmg）
 
 - 仓库：`Leo-Corporation/ColorPicker` · 分片：`apps/darwin/11-工具.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform darwin colorpicker`
+
+### CrossPaste（跨设备剪贴板） · `crosspaste`
+
+CrossPaste（跨设备剪贴板）
+
+- 仓库：`crosspaste/crosspaste-desktop` · 分片：`apps/darwin/11-工具.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform darwin crosspaste`
 
 ### 开源平替 Picasa 极速看图工具 FlyPhotos · `flyphotos`
 
@@ -2072,7 +2436,7 @@ Caesium Image Compressor（macOS dmg）
 
 ---
 
-## 开发（48）
+## 开发（54）
 
 ### act（macOS arm64） · `act`
 
@@ -2150,6 +2514,13 @@ CMake 构建系统
 
 - 仓库：`anbangli/codeblocks-cn` · 分片：`apps/darwin/12-开发.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform darwin codeblocks`
+
+### Cutter（Rizin 逆向工程 GUI · `cutter`
+
+Cutter（Rizin 逆向工程 GUI，macOS dmg）
+
+- 仓库：`rizinorg/cutter` · 分片：`apps/darwin/12-开发.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin cutter`
 
 ### DDEV（本地 PHP/Drupal/WordPress 容器开发环境） · `ddev`
 
@@ -2305,6 +2676,13 @@ Hurl（HTTP 测试 CLI）
 - 仓库：`jindrapetrik/jpexs-decompiler` · 分片：`apps/darwin/12-开发.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform darwin jpexs_flash_decompiler`
 
+### JupyterLab Desktop（macOS x64 DMG） · `jupyterlab_desktop`
+
+JupyterLab Desktop（macOS x64 DMG）
+
+- 仓库：`jupyterlab/jupyterlab-desktop` · 分片：`apps/darwin/12-开发.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin jupyterlab_desktop`
+
 ### just · `just`
 
 （见仓库 Release 说明）
@@ -2325,6 +2703,13 @@ Hurl（HTTP 测试 CLI）
 
 - 仓库：`jdx/mise` · 分片：`apps/darwin/12-开发.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform darwin mise`
+
+### mkcert（本地 HTTPS 开发证书；macOS Apple Silicon） · `mkcert`
+
+mkcert（本地 HTTPS 开发证书；macOS Apple Silicon）
+
+- 仓库：`FiloSottile/mkcert` · 分片：`apps/darwin/12-开发.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin mkcert`
 
 ### 开源 .Net Reactor 脱壳工具 .Net Reactor Slayer · `net_reactor_slayer`
 
@@ -2382,6 +2767,13 @@ Playwright CLI（darwin zip）
 - 仓库：`mvdan/sh` · 分片：`apps/darwin/12-开发.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform darwin shfmt`
 
+### Spyder（非 Windows 安装包请打开 Releases/conda 页） · `spyder`
+
+Spyder（非 Windows 安装包请打开 Releases/conda 页）
+
+- 仓库：`spyder-ide/spyder` · 分片：`apps/darwin/12-开发.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform darwin spyder`
+
 ### taplo · `taplo`
 
 （见仓库 Release 说明）
@@ -2410,9 +2802,37 @@ Playwright CLI（darwin zip）
 - 仓库：`astral-sh/uv` · 分片：`apps/darwin/12-开发.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform darwin uv`
 
+### wxMaxima（非 Windows 请打开 Releases/发行版包） · `wxmaxima`
+
+wxMaxima（非 Windows 请打开 Releases/发行版包）
+
+- 仓库：`wxMaxima-developers/wxmaxima` · 分片：`apps/darwin/12-开发.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform darwin wxmaxima`
+
+### xtool（Xcode 命令行工具链辅助） · `xtool`
+
+xtool（Xcode 命令行工具链辅助）
+
+- 仓库：`xtool-org/xtool` · 分片：`apps/darwin/12-开发.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform darwin xtool`
+
 ---
 
-## 效率（28）
+## 效率（43）
+
+### AeroSpace（macOS i3 风格平铺窗口管理；当前多为 Beta zip） · `aerospace`
+
+AeroSpace（macOS i3 风格平铺窗口管理；当前多为 Beta zip）
+
+- 仓库：`nikitabobko/AeroSpace` · 分片：`apps/darwin/13-效率.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin aerospace`
+
+### AltTab（macOS 上 Windows 风格 Alt+Tab 窗口切换） · `alt_tab_macos`
+
+AltTab（macOS 上 Windows 风格 Alt+Tab 窗口切换）
+
+- 仓库：`lwouis/alt-tab-macos` · 分片：`apps/darwin/13-效率.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin alt_tab_macos`
 
 ### 开源免费思维导图工具 BlinkMind · `blinkmind`
 
@@ -2420,6 +2840,20 @@ Playwright CLI（darwin zip）
 
 - 仓库：`awehook/blink-mind-desktop` · 分片：`apps/darwin/13-效率.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform darwin blinkmind`
+
+### calcure（TUI 日历/任务） · `calcure`
+
+calcure（TUI 日历/任务）
+
+- 仓库：`anufrievroman/calcure` · 分片：`apps/darwin/13-效率.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform darwin calcure`
+
+### Calendar Diary（日历日记；macOS arm64 dmg） · `calendar_diary`
+
+Calendar Diary（日历日记；macOS arm64 dmg）
+
+- 仓库：`trustdev-org/calendar-diary` · 分片：`apps/darwin/13-效率.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin calendar_diary`
 
 ### CopyQ 剪贴板管理 · `copyq`
 
@@ -2434,6 +2868,27 @@ CopyQ 剪贴板管理
 
 - 仓库：`copytranslator/CopyTranslator` · 分片：`apps/darwin/13-效率.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform darwin copytranslator`
+
+### Easy Move+Resize（macOS 按住修饰键拖动/缩放窗口 · `easy_move_resize`
+
+Easy Move+Resize（macOS 按住修饰键拖动/缩放窗口，类似 AltSnap）
+
+- 仓库：`dmarcotte/easy-move-resize` · 分片：`apps/darwin/13-效率.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin easy_move_resize`
+
+### eSearch（macOS Apple Silicon dmg · `esearch_macos_aarch64`
+
+eSearch（macOS Apple Silicon dmg，xushengfeng）
+
+- 仓库：`xushengfeng/eSearch` · 分片：`apps/darwin/13-效率.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin esearch_macos_aarch64`
+
+### eSearch（macOS Intel dmg · `esearch_macos_x64`
+
+eSearch（macOS Intel dmg，xushengfeng）
+
+- 仓库：`xushengfeng/eSearch` · 分片：`apps/darwin/13-效率.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin esearch_macos_x64`
 
 ### Espanso 文本扩展 · `espanso`
 
@@ -2455,6 +2910,34 @@ Flameshot（macOS Intel dmg）
 
 - 仓库：`flameshot-org/flameshot` · 分片：`apps/darwin/13-效率.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform darwin flameshot_darwin_intel`
+
+### freeplane · `freeplane`
+
+Freeplane（开源思维导图；macOS Apple Silicon dmg；tag 形如 release-x.y.z）
+
+- 仓库：`freeplane/freeplane` · 分片：`apps/darwin/13-效率.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin freeplane`
+
+### Freeplane（macOS Intel dmg） · `freeplane_darwin_intel`
+
+Freeplane（macOS Intel dmg）
+
+- 仓库：`freeplane/freeplane` · 分片：`apps/darwin/13-效率.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin freeplane_darwin_intel`
+
+### Hammerspoon（macOS 自动化：Lua 脚本控制窗口/键鼠/系统） · `hammerspoon`
+
+Hammerspoon（macOS 自动化：Lua 脚本控制窗口/键鼠/系统）
+
+- 仓库：`Hammerspoon/hammerspoon` · 分片：`apps/darwin/13-效率.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin hammerspoon`
+
+### Karabiner-Elements（macOS 键盘改键与复杂修饰键规则） · `karabiner_elements`
+
+Karabiner-Elements（macOS 键盘改键与复杂修饰键规则）
+
+- 仓库：`pqrs-org/Karabiner-Elements` · 分片：`apps/darwin/13-效率.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin karabiner_elements`
 
 ### ksnip（macOS dmg） · `ksnip`
 
@@ -2519,6 +3002,13 @@ PixPin（macOS universal dmg，官方 CDN；下载页 https://pixpin.cn/download
 - 仓库：`pixpin-cn/desktop` · 分片：`apps/darwin/13-效率.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform darwin pixpin`
 
+### Pomotroid（番茄钟） · `pomotroid`
+
+Pomotroid（番茄钟）
+
+- 仓库：`Splode/pomotroid` · 分片：`apps/darwin/13-效率.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform darwin pomotroid`
+
 ### 开源免费 Windows 实用程序 PowerToys · `powertoys_2`
 
 开源免费 Windows 实用程序 PowerToys 0.99.1 中文多语免费版
@@ -2539,6 +3029,13 @@ Rambox（多账号 Web 应用）
 
 - 仓库：`ramboxapp/community-edition` · 分片：`apps/darwin/13-效率.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform darwin rambox`
+
+### Rectangle（macOS 窗口吸附/快捷键分屏 · `rectangle`
+
+Rectangle（macOS 窗口吸附/快捷键分屏，Spectacle 继任）
+
+- 仓库：`rxhanson/Rectangle` · 分片：`apps/darwin/13-效率.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin rectangle`
 
 ### 开源免费全快捷键截图/贴图工具 Screenote · `screenote`
 
@@ -2567,6 +3064,13 @@ Snipaste（macOS dmg，官方 archives CDN）
 
 - 仓库：`hovancik/stretchly` · 分片：`apps/darwin/13-效率.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform darwin stretchly`
+
+### super productivity · `super_productivity`
+
+Super Productivity（任务管理/番茄钟；macOS Apple Silicon DMG）
+
+- 仓库：`super-productivity/super-productivity` · 分片：`apps/darwin/13-效率.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin super_productivity`
 
 ### uniclipboard · `uniclipboard`
 
@@ -2609,6 +3113,13 @@ XerahS（macOS Apple Silicon tar.gz）
 
 - 仓库：`KovaForge/XerahS` · 分片：`apps/darwin/13-效率.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform darwin xerahs_darwin_arm64`
+
+### yabai（macOS 平铺窗口管理 · `yabai`
+
+yabai（macOS 平铺窗口管理，需配合 skhd 等；二进制 tar.gz）
+
+- 仓库：`asmvik/yabai` · 分片：`apps/darwin/13-效率.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin yabai`
 
 ---
 
@@ -2700,7 +3211,7 @@ usql（通用 SQL CLI）
 
 ---
 
-## 游戏（27）
+## 游戏（28）
 
 ### 0 A.D.（macOS dmg） · `0ad`
 
@@ -2821,6 +3332,13 @@ OpenRCT2
 - 仓库：`libretro/RetroArch` · 分片：`apps/darwin/14-游戏.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform darwin retroarch`
 
+### RPCS3（PS3 模拟器；GitHub Release 常无附件 · `rpcs3`
+
+RPCS3（PS3 模拟器；GitHub Release 常无附件，可配合 manifest 或官网）
+
+- 仓库：`RPCS3/rpcs3` · 分片：`apps/darwin/14-游戏.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin rpcs3`
+
 ### 开源 Flash Player 模拟器 Ruffle Nightly · `ruffle`
 
 开源 Flash Player 模拟器 Ruffle Nightly 2026-05-11 免费下载
@@ -2893,7 +3411,14 @@ Warzone 2100
 
 ---
 
-## 笔记（23）
+## 笔记（27）
+
+### Anki（间隔重复记忆卡片；macOS Apple Silicon） · `anki`
+
+Anki（间隔重复记忆卡片；macOS Apple Silicon）
+
+- 仓库：`ankitects/anki` · 分片：`apps/darwin/15-笔记.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin anki`
 
 ### anytype · `anytype`
 
@@ -2951,6 +3476,13 @@ AppFlowy 开源 Notion 类
 - 仓库：`logseq/logseq` · 分片：`apps/darwin/15-笔记.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform darwin logseq`
 
+### MarkFlowy（Markdown 笔记） · `markflowy`
+
+MarkFlowy（Markdown 笔记）
+
+- 仓库：`drl990114/MarkFlowy` · 分片：`apps/darwin/15-笔记.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform darwin markflowy`
+
 ### MarkText（macOS dmg） · `marktext`
 
 MarkText（macOS dmg）
@@ -2964,6 +3496,13 @@ MarkText（macOS dmg）
 
 - 仓库：`usememos/memos` · 分片：`apps/darwin/15-笔记.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform darwin memos`
+
+### NoteGen（AI 笔记生成） · `note_gen`
+
+NoteGen（AI 笔记生成）
+
+- 仓库：`codexu/note-gen` · 分片：`apps/darwin/15-笔记.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform darwin note_gen`
 
 ### 开源免费加密笔记软件 Notesnook · `notesnook`
 
@@ -3035,6 +3574,13 @@ MarkText（macOS dmg）
 - 仓库：`zadam/trilium` · 分片：`apps/darwin/15-笔记.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform darwin trilium_notes`
 
+### VNote（Markdown 笔记） · `vnote`
+
+VNote（Markdown 笔记）
+
+- 仓库：`vnotex/vnote` · 分片：`apps/darwin/15-笔记.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform darwin vnote`
+
 ### Xournal++（手写/PDF 标注） · `xournalpp`
 
 Xournal++（手写/PDF 标注）
@@ -3058,7 +3604,7 @@ Yank Note（Markdown 笔记）
 
 ---
 
-## 系统（24）
+## 系统（39）
 
 ### Windows · `auto_dark_mode`
 
@@ -3080,6 +3626,34 @@ balenaEtcher（macOS Intel dmg）
 
 - 仓库：`balena-io/etcher` · 分片：`apps/darwin/16-系统.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform darwin balena_etcher_darwin_intel`
+
+### 必应每日壁纸库（仅 Windows；macOS 请打开 Releases 页） · `bing_wallpaper_lib`
+
+必应每日壁纸库（仅 Windows；macOS 请打开 Releases 页）
+
+- 仓库：`pandaligx/bing-wallpaper-lib` · 分片：`apps/darwin/16-系统.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform darwin bing_wallpaper_lib`
+
+### bing wallpaper now · `bing_wallpaper_now`
+
+Bing Wallpaper Now（必应每日壁纸；macOS Apple Silicon DMG）
+
+- 仓库：`qiyuey/bing-wallpaper-now` · 分片：`apps/darwin/16-系统.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin bing_wallpaper_now`
+
+### binglish（必应壁纸+学英语；macOS 请打开 Releases 页取 mac 包） · `binglish`
+
+binglish（必应壁纸+学英语；macOS 请打开 Releases 页取 mac 包）
+
+- 仓库：`klemperer/binglish` · 分片：`apps/darwin/16-系统.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform darwin binglish`
+
+### bingwallpaper windows · `bingwallpaper_windows`
+
+BingWallpaper.Windows（仅 Windows；macOS 请打开 Releases 页）
+
+- 仓库：`BingHomepage/BingWallpaper.Windows` · 分片：`apps/darwin/16-系统.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform darwin bingwallpaper_windows`
 
 ### Windows 右键菜单管理工具 ContextMenuManager · `context_menu_manager`
 
@@ -3123,6 +3697,13 @@ Fedora Linux 系统启动盘创建工具 Fedora Media Writer 5.3.1 x64 中文版
 - 仓库：`FedoraQt/MediaWriter` · 分片：`apps/darwin/16-系统.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform darwin fedora_media_writer`
 
+### flying bird wallpaper · `flying_bird_wallpaper`
+
+Flying Bird Wallpaper（多源壁纸自动切换；macOS Intel x64 DMG）
+
+- 仓库：`OXOYO/Flying-Bird-Wallpaper` · 分片：`apps/darwin/16-系统.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin flying_bird_wallpaper`
+
 ### gdu（磁盘用量分析） · `gdu`
 
 gdu（磁盘用量分析）
@@ -3130,9 +3711,23 @@ gdu（磁盘用量分析）
 - 仓库：`dundee/gdu` · 分片：`apps/darwin/16-系统.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform darwin gdu`
 
-### LightBulb 开源护眼软件 LightBulb · `lightbulb`
+### Bing每日壁纸（仅 Windows；macOS 请打开 Releases 页） · `jadepeng_bing_wallpaper`
 
-LightBulb 开源护眼软件 LightBulb 2.7.1 + x64 中文绿色版
+Bing每日壁纸（仅 Windows；macOS 请打开 Releases 页）
+
+- 仓库：`jadepeng/bing-wallpaper` · 分片：`apps/darwin/16-系统.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform darwin jadepeng_bing_wallpaper`
+
+### libre hardware monitor · `libre_hardware_monitor`
+
+LibreHardwareMonitor（仅 Windows；其他平台请打开 Releases 页）
+
+- 仓库：`LibreHardwareMonitor/LibreHardwareMonitor` · 分片：`apps/darwin/16-系统.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform darwin libre_hardware_monitor`
+
+### LightBulb 护眼色温调节（Tyrrrz/LightBulb · `lightbulb`
+
+LightBulb 护眼色温调节（Tyrrrz/LightBulb，仅 Windows；见 windows 分片）
 
 - 仓库：`Tyrrrz/LightBulb` · 分片：`apps/darwin/16-系统.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform darwin lightbulb`
@@ -3143,6 +3738,13 @@ LightBulb 开源护眼软件 LightBulb 2.7.1 + x64 中文绿色版
 
 - 仓库：`rocksdanister/lively` · 分片：`apps/darwin/16-系统.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform darwin lively_wallpaper`
+
+### mactools · `mactools`
+
+MacTools / WaMacTools（macOS 菜单栏工具箱：清洁模式、Finder 右键、清空下载等）
+
+- 仓库：`ggbond268/MacTools` · 分片：`apps/darwin/16-系统.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin mactools`
 
 ### 开源免费系统管理软件 NSudo · `nsudo`
 
@@ -3179,6 +3781,20 @@ Windows 密钥激活次数查询工具 PID Key Checker 4.0.0.0 中文免费版
 - 仓库：`qemu/qemu` · 分片：`apps/darwin/16-系统.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform darwin qemu`
 
+### Seelen UI（仅 Windows；macOS 请打开 Releases 页） · `seelen_ui`
+
+Seelen UI（仅 Windows；macOS 请打开 Releases 页）
+
+- 仓库：`eythaann/Seelen-UI` · 分片：`apps/darwin/16-系统.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform darwin seelen_ui`
+
+### 飘雪桌面 SnowDesktop（仅 Windows；macOS 请打开 Releases 页） · `snowdesktop`
+
+飘雪桌面 SnowDesktop（仅 Windows；macOS 请打开 Releases 页）
+
+- 仓库：`FreeFallingSnow/SnowDesktop_Release` · 分片：`apps/darwin/16-系统.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform darwin snowdesktop`
+
 ### 开源 Windows 系统优化调整工具 SophiApp · `sophiapp`
 
 开源 Windows 系统优化调整工具 SophiApp 1.0.0.97 中文多语免费版
@@ -3186,9 +3802,16 @@ Windows 密钥激活次数查询工具 PID Key Checker 4.0.0.0 中文免费版
 - 仓库：`Sophia-Community/SophiApp` · 分片：`apps/darwin/16-系统.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform darwin sophiapp`
 
-### 强大的开源动态壁纸引擎 Sucrose Wallpaper Engine · `sucrose_wallpaper_engine`
+### splashy · `splashy`
 
-强大的开源动态壁纸引擎 Sucrose Wallpaper Engine 26.6.4.0 中文版
+Splashy（Unsplash 壁纸自动轮换；需 API Key；macOS Apple Silicon DMG）
+
+- 仓库：`Halfaxas/Splashy` · 分片：`apps/darwin/16-系统.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin splashy`
+
+### sucrose wallpaper engine · `sucrose_wallpaper_engine`
+
+Sucrose Wallpaper Engine（仅 Windows Release；macOS 请打开 Releases 页）
 
 - 仓库：`Taiizor/Sucrose` · 分片：`apps/darwin/16-系统.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform darwin sucrose_wallpaper_engine`
@@ -3199,6 +3822,27 @@ Windows 密钥激活次数查询工具 PID Key Checker 4.0.0.0 中文免费版
 
 - 仓库：`zodiacon/TotalRegistry` · 分片：`apps/darwin/16-系统.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform darwin total_registry`
+
+### Unsplash Wallpapers（从 Unsplash 自动换壁纸；macOS DMG） · `unsplash_wallpapers`
+
+Unsplash Wallpapers（从 Unsplash 自动换壁纸；macOS DMG）
+
+- 仓库：`soroushchehresa/unsplash-wallpapers` · 分片：`apps/darwin/16-系统.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin unsplash_wallpapers`
+
+### virtualbox · `virtualbox`
+
+Oracle VirtualBox（macOS dmg；manifest：download.virtualbox.org）
+
+- 仓库：`oracle/virtualbox` · 分片：`apps/darwin/16-系统.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform darwin virtualbox`
+
+### wallhaven desktop · `wallhaven_desktop`
+
+wallhaven-desktop（Wallhaven 壁纸客户端；macOS Apple Silicon DMG）
+
+- 仓库：`ErKeLost/wallhaven-desktop` · 分片：`apps/darwin/16-系统.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin wallhaven_desktop`
 
 ### 开源检测 Win11 硬件需求工具 WhyNotWin11 · `whynotwin11`
 
@@ -3228,9 +3872,16 @@ Windows 密钥激活次数查询工具 PID Key Checker 4.0.0.0 中文免费版
 - 仓库：`bostrot/wsl2-distro-manager` · 分片：`apps/darwin/16-系统.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform darwin wsl_manager`
 
+### zen browser legacy · `zen_browser_legacy`
+
+Zen Browser（旧仓库 anfragment/zen；新上游 irbis-sh/zen-desktop）
+
+- 仓库：`anfragment/zen` · 分片：`apps/darwin/16-系统.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform darwin zen_browser_legacy`
+
 ---
 
-## 终端（12）
+## 终端（15）
 
 ### alacritty · `alacritty`
 
@@ -3245,6 +3896,13 @@ Windows 密钥激活次数查询工具 PID Key Checker 4.0.0.0 中文免费版
 
 - 仓库：`ClementTsang/bottom` · 分片：`apps/darwin/17-终端.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform darwin bottom`
+
+### Contour（macOS 请打开 Releases 页） · `contour`
+
+Contour（macOS 请打开 Releases 页）
+
+- 仓库：`contour-terminal/contour` · 分片：`apps/darwin/17-终端.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform darwin contour`
 
 ### electerm 终端/SSH/SFTP · `electerm`
 
@@ -3288,6 +3946,20 @@ Rio（GPU 终端）
 - 仓库：`Eugeny/tabby` · 分片：`apps/darwin/17-终端.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform darwin tabby`
 
+### termius · `termius`
+
+Termius 跨平台 SSH/SFTP 终端（官网 autoupdate.termius.com）
+
+- 分片：`apps/darwin/17-终端.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform darwin termius`
+
+### Termora（终端/SSH 客户端） · `termora`
+
+Termora（终端/SSH 客户端）
+
+- 仓库：`TermoraDev/termora` · 分片：`apps/darwin/17-终端.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform darwin termora`
+
 ### Warp：安装包见 warp.dev；GitHub Release 无桌面安装资产；勿启用 · `warp`
 
 Warp：安装包见 warp.dev；GitHub Release 无桌面安装资产；勿启用。
@@ -3318,7 +3990,7 @@ WindTerm（SSH/SFTP/终端，便携版）
 
 ---
 
-## 编辑器（31）
+## 编辑器（33）
 
 ### 开源免费 Windows 记事本 AkelPad · `akelpad`
 
@@ -3362,9 +4034,9 @@ CodeBuddy CN dmg（manifest）
 - 仓库：`Alexey-T/CudaText` · 分片：`apps/darwin/26-编辑器.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform darwin cudatext`
 
-### Cursor macOS universal zip（manifest） · `cursor`
+### Cursor macOS universal（manifest：官方 CDN .dmg） · `cursor`
 
-Cursor macOS universal zip（manifest）
+Cursor macOS universal（manifest：官方 CDN .dmg）
 
 - 分片：`apps/darwin/26-编辑器.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform darwin cursor`
@@ -3410,6 +4082,13 @@ Lite XL（macOS tar.gz）
 
 - 仓库：`lite-xl/lite-xl` · 分片：`apps/darwin/26-编辑器.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform darwin lite_xl`
+
+### markdown-it（JS 库 Release · `markdown_it`
+
+markdown-it（JS 库 Release，非安装包）
+
+- 仓库：`markdown-it/markdown-it` · 分片：`apps/darwin/26-编辑器.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform darwin markdown_it`
 
 ### Neovide（macOS Apple Silicon dmg） · `neovide`
 
@@ -3502,11 +4181,11 @@ Void（macOS arm64 zip）
 - 仓库：`voideditor/binaries` · 分片：`apps/darwin/26-编辑器.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform darwin void_editor`
 
-### Visual Studio Code · `vscode`
+### Visual Studio Code（微软构建；GitHub Release 无安装包 · `vscode`
 
-Visual Studio Code
+Visual Studio Code（微软构建；GitHub Release 无安装包，走 update.code.visualstudio.com CDN）
 
-- 仓库：`microsoft/vscode` · 分片：`apps/darwin/26-编辑器.json` · 配置：已配匹配规则
+- 仓库：`microsoft/vscode` · 分片：`apps/darwin/26-编辑器.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform darwin vscode`
 
 ### vscodium · `vscodium`
@@ -3518,9 +4197,9 @@ Visual Studio Code
 
 ### windsurf · `windsurf`
 
-Windsurf IDE（Codeium AI IDE；官网 codeium.com/windsurf 分发，GitHub 无桌面安装包；勿启用）
+Windsurf / Devin Desktop（manifest：windsurf-stable.codeium.com；安装包名 Devin*）
 
-- 仓库：`Exafunction/Windsurf` · 分片：`apps/darwin/26-编辑器.json` · 配置：基础条目（试跑前建议补规则）
+- 分片：`apps/darwin/26-编辑器.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform darwin windsurf`
 
 ### WorkBuddy mac zip（manifest） · `workbuddy`
@@ -3530,16 +4209,23 @@ WorkBuddy mac zip（manifest）
 - 分片：`apps/darwin/26-编辑器.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform darwin workbuddy`
 
-### zed · `zed`
+### ZCode（GLM 官方 AI 编程桌面端 · `zcode`
 
-（见仓库 Release 说明）
+ZCode（GLM 官方 AI 编程桌面端，manifest：cdn-zcode.z.ai）
 
-- 仓库：`zed-industries/zed` · 分片：`apps/darwin/26-编辑器.json` · 配置：基础条目（试跑前建议补规则）
+- 分片：`apps/darwin/26-编辑器.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform darwin zcode`
+
+### Zed（Rust 高性能编辑器；macOS Apple Silicon dmg） · `zed`
+
+Zed（Rust 高性能编辑器；macOS Apple Silicon dmg）
+
+- 仓库：`zed-industries/zed` · 分片：`apps/darwin/26-编辑器.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform darwin zed`
 
 ---
 
-## 网络（19）
+## 网络（24）
 
 ### bandwhich · `bandwhich`
 
@@ -3562,6 +4248,20 @@ WorkBuddy mac zip（manifest）
 - 仓库：`schollz/croc` · 分片：`apps/darwin/18-网络.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform darwin croc`
 
+### cyberduck · `cyberduck`
+
+Cyberduck（macOS zip；manifest：update.cyberduck.io）
+
+- 仓库：`iterate-ch/cyberduck` · 分片：`apps/darwin/18-网络.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform darwin cyberduck`
+
+### FlowPick（媒体资源嗅探浏览器扩展 · `flowpick`
+
+FlowPick（媒体资源嗅探浏览器扩展，Chrome zip；Chrome/Edge 开发者模式加载）
+
+- 仓库：`ezwebtools/flowpick` · 分片：`apps/darwin/18-网络.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin flowpick`
+
 ### 开源免费网络测试工具 InternetTest Pro · `internettest`
 
 开源免费网络测试工具 InternetTest Pro 9.1.0.2602 中文多语免费版
@@ -3575,6 +4275,13 @@ WorkBuddy mac zip（manifest）
 
 - 仓库：`localsend/localsend` · 分片：`apps/darwin/18-网络.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform darwin localsend`
+
+### Mullvad Browser（macOS 请打开 Releases 页） · `mullvad_browser`
+
+Mullvad Browser（macOS 请打开 Releases 页）
+
+- 仓库：`mullvad/mullvad-browser` · 分片：`apps/darwin/18-网络.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform darwin mullvad_browser`
 
 ### NetBird（WireGuard 组网） · `netbird`
 
@@ -3618,6 +4325,13 @@ OpenTrace 1.5.0.0 绿色中文版，让网络追踪从未如此简单
 - 仓库：`rclone/rclone` · 分片：`apps/darwin/18-网络.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform darwin rclone`
 
+### Simple Web Server · `simple_web_server`
+
+Simple Web Server
+
+- 仓库：`terreng/simple-web-server` · 分片：`apps/darwin/18-网络.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform darwin simple_web_server`
+
 ### Syncthing（macOS universal 官方 zip · `syncthing`
 
 Syncthing（macOS universal 官方 zip，仅下载）
@@ -3645,6 +4359,13 @@ Syncthing（macOS universal 官方 zip，仅下载）
 
 - 仓库：`Alex313031/Thorium` · 分片：`apps/darwin/18-网络.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform darwin thorium`
+
+### ungoogled chromium · `ungoogled_chromium`
+
+ungoogled-chromium（Windows 专用构建；其他平台请打开 Releases 页）
+
+- 仓库：`ungoogled-software/ungoogled-chromium-windows` · 分片：`apps/darwin/18-网络.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform darwin ungoogled_chromium`
 
 ### wireshark · `wireshark`
 
@@ -3676,7 +4397,7 @@ ZeroTier 虚拟组网
 
 ---
 
-## 网络与协作（4）
+## 网络与协作（5）
 
 ### Ferdium（聚合 Slack/Discord 等） · `ferdium`
 
@@ -3684,6 +4405,13 @@ Ferdium（聚合 Slack/Discord 等）
 
 - 仓库：`ferdium/ferdium-app` · 分片：`apps/darwin/19-网络与协作.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform darwin ferdium`
+
+### Jitsi Meet（开源视频会议桌面端；macOS DMG） · `jitsi_meet_electron`
+
+Jitsi Meet（开源视频会议桌面端；macOS DMG）
+
+- 仓库：`jitsi/jitsi-meet-electron` · 分片：`apps/darwin/19-网络与协作.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin jitsi_meet_electron`
 
 ### Mattermost 桌面客户端 · `mattermost_desktop`
 
@@ -3708,7 +4436,7 @@ Zulip 桌面客户端
 
 ---
 
-## 网络与通讯（6）
+## 网络与通讯（7）
 
 ### chatterino · `chatterino`
 
@@ -3723,6 +4451,13 @@ Zulip 桌面客户端
 
 - 仓库：`element-hq/element-desktop` · 分片：`apps/darwin/20-网络与通讯.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform darwin element_desktop`
+
+### Session Desktop（去中心化隐私即时通讯；macOS Apple Silicon） · `session_desktop`
+
+Session Desktop（去中心化隐私即时通讯；macOS Apple Silicon）
+
+- 仓库：`session-foundation/session-desktop` · 分片：`apps/darwin/20-网络与通讯.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin session_desktop`
 
 ### signal desktop · `signal_desktop`
 
@@ -3754,7 +4489,7 @@ Thunderbird（邮件客户端）
 
 ---
 
-## 远程与协作（4）
+## 远程与协作（9）
 
 ### Barrier 开源 KVM · `barrier`
 
@@ -3762,6 +4497,13 @@ Barrier 开源 KVM
 
 - 仓库：`debauchee/barrier` · 分片：`apps/darwin/21-远程与协作.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform darwin barrier`
+
+### Deskflow（跨机键鼠共享；macOS Apple Silicon） · `deskflow`
+
+Deskflow（跨机键鼠共享；macOS Apple Silicon）
+
+- 仓库：`deskflow/deskflow` · 分片：`apps/darwin/21-远程与协作.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin deskflow`
 
 ### Deskreen（屏幕共享） · `deskreen`
 
@@ -3777,6 +4519,13 @@ Deskreen（屏幕共享）
 - 仓库：`viarotel-org/escrcpy` · 分片：`apps/darwin/21-远程与协作.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform darwin escrcpy`
 
+### Input Leap（Barrier 分支；当前多为调试包 · `input_leap`
+
+Input Leap（Barrier 分支；当前多为调试包，请打开 Releases 页）
+
+- 仓库：`input-leap/input-leap` · 分片：`apps/darwin/21-远程与协作.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform darwin input_leap`
+
 ### rustdesk · `rustdesk`
 
 （见仓库 Release 说明）
@@ -3784,9 +4533,30 @@ Deskreen（屏幕共享）
 - 仓库：`rustdesk/rustdesk` · 分片：`apps/darwin/21-远程与协作.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform darwin rustdesk`
 
+### RustDesk Server（hbbs/hbbr） · `rustdesk_server`
+
+RustDesk Server（hbbs/hbbr）
+
+- 仓库：`rustdesk/rustdesk-server` · 分片：`apps/darwin/21-远程与协作.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin rustdesk_server`
+
+### 向日葵远程控制个人版（贝锐 Oray Sunlogin / AweSun） · `sunlogin`
+
+向日葵远程控制个人版（贝锐 Oray Sunlogin / AweSun）
+
+- 分片：`apps/darwin/21-远程与协作.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform darwin sunlogin`
+
+### TigerVNC（开源 VNC；GitHub 无 Assets · `tigervnc`
+
+TigerVNC（开源 VNC；GitHub 无 Assets，请打开 Releases/官网）
+
+- 仓库：`TigerVNC/tigervnc` · 分片：`apps/darwin/21-远程与协作.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform darwin tigervnc`
+
 ---
 
-## 金融与股票（7）
+## 金融与股票（10）
 
 ### Actual Budget（本地记账） · `actual_budget`
 
@@ -3809,12 +4579,33 @@ Actual Budget（macOS Intel x64 dmg）
 - 仓库：`actualbudget/actual` · 分片：`apps/darwin/27-金融与股票.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform darwin actual_budget_intel`
 
+### Freqtrade（量化交易机器人；以 Docker/源码为主 · `freqtrade`
+
+Freqtrade（量化交易机器人；以 Docker/源码为主，请打开 Releases 页）
+
+- 仓库：`freqtrade/freqtrade` · 分片：`apps/darwin/27-金融与股票.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`python lookup_app.py --platform darwin freqtrade`
+
+### GnuCash（复式记账；macOS Apple Silicon） · `gnucash`
+
+GnuCash（复式记账；macOS Apple Silicon）
+
+- 仓库：`Gnucash/gnucash` · 分片：`apps/darwin/27-金融与股票.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin gnucash`
+
 ### go stock · `go_stock`
 
 go-stock（Wails：A股/港股/美股行情与 AI 分析；macOS 用 universal zip。仅供学习研究，投资有风险）
 
 - 仓库：`ArvinLovegood/go-stock` · 分片：`apps/darwin/27-金融与股票.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform darwin go_stock`
+
+### hledger（纯文本复式记账 CLI；macOS Apple Silicon） · `hledger`
+
+hledger（纯文本复式记账 CLI；macOS Apple Silicon）
+
+- 仓库：`simonmichael/hledger` · 分片：`apps/darwin/27-金融与股票.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin hledger`
 
 ### openbb desktop · `openbb_desktop`
 
@@ -3839,7 +4630,7 @@ TA-Lib
 
 ---
 
-## 音视频（8）
+## 音视频（9）
 
 ### LosslessCut（macOS dmg） · `losslesscut`
 
@@ -3854,6 +4645,13 @@ OBS Studio（macOS Apple Silicon dmg）
 
 - 仓库：`obsproject/obs-studio` · 分片：`apps/darwin/22-音视频.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform darwin obs`
+
+### Olive（开源非线性视频剪辑；macOS Apple Silicon；钉选 · `olive`
+
+Olive（开源非线性视频剪辑；macOS Apple Silicon；钉选 0.2.0-nightly）
+
+- 仓库：`olive-editor/olive` · 分片：`apps/darwin/22-音视频.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin olive`
 
 ### OpenShot 视频编辑器（macOS dmg） · `openshot`
 

@@ -1,15 +1,15 @@
 [
   {
     "id": "cursor",
-    "简介": "Cursor macOS zip",
+    "简介": "Cursor macOS universal dmg（manifest）",
     "分类": "VibeCodingToolsDown",
     "enabled": false,
     "resolve_via": "github_pages_manifest",
     "manifest_item_id": "cursor",
     "version_tag_as_on_github": true,
     "use_download_filename": true,
-    "installer_extensions": [".zip"],
-    "save_name": "Cursor-darwin-universal.zip",
+    "installer_extensions": [".dmg", ".zip"],
+    "save_name": "Cursor-darwin-universal.dmg",
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false

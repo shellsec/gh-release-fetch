@@ -21,7 +21,7 @@
 |------------------|--------------|
 | 去 GitHub 翻 Release、在几十个附件里找 x64 / dmg / AppImage | 按清单规则解析**最新 tag**，过滤架构与格式，选出对的安装包 |
 | 记住「现在该下 v几、链接是哪条」 | 下载文件名通常带**版本号**（由 `save_name` 等模板生成） |
-| 自己维护一长串下载地址 | 仓库 **500+ 条**已收录规则，**模糊搜索**即可用 |
+| 自己维护一长串下载地址 | 仓库 **700+ 条**（Windows）已收录规则，**模糊搜索**即可用 |
 
 ```bat
 lookup_app.bat drawio
@@ -37,13 +37,13 @@ REM 选序号 → 1 立刻下载（无需改 enabled）→ 2 加入并下载 →
 **Description（中文）**
 
 ```
-GitHub 发行版拉取工具：500+ 开源软件清单，搜名字即可下载/更新，无需自己翻 Release 页或找下载链接。脚本自动解析最新版本并匹配 Win/macOS/Linux 安装包，支持 lookup 一键下载与批量更新。
+GitHub 发行版拉取工具：700+ 开源软件清单（Windows），搜名字即可下载/更新，无需自己翻 Release 页或找下载链接。脚本自动解析最新版本并匹配 Win/macOS/Linux 安装包，支持 lookup 一键下载与批量更新。
 ```
 
 **Description（English）**
 
 ```
-GH Release Fetch: 500+ app catalog — search by name, download/update without hunting Release pages or URLs. Auto-resolves latest assets for Windows/macOS/Linux. One-click lookup + batch updates.
+GH Release Fetch: 700+ app catalog (Windows) — search by name, download/update without hunting Release pages or URLs. Auto-resolves latest assets for Windows/macOS/Linux. One-click lookup + batch updates.
 ```
 
 **Website（可选）** `https://github.com/shellsec/gh-release-fetch#readme`
@@ -82,9 +82,9 @@ GH Release Fetch: 500+ app catalog — search by name, download/update without h
 
 | 平台 | 中文导读 | 英文简表 | 规模（约） |
 |------|----------|----------|------------|
-| Windows | [`RECOMMENDED.zh-CN.md`](RECOMMENDED.zh-CN.md) | [`RECOMMENDED.md`](RECOMMENDED.md) | 567 条 |
-| macOS | [`RECOMMENDED.darwin.zh-CN.md`](RECOMMENDED.darwin.zh-CN.md) | [`RECOMMENDED.darwin.md`](RECOMMENDED.darwin.md) | 539 条 |
-| Linux | [`RECOMMENDED.linux.zh-CN.md`](RECOMMENDED.linux.zh-CN.md) | [`RECOMMENDED.linux.md`](RECOMMENDED.linux.md) | 539 条 |
+| Windows | [`RECOMMENDED.zh-CN.md`](RECOMMENDED.zh-CN.md) | [`RECOMMENDED.md`](RECOMMENDED.md) | 742 条 |
+| macOS | [`RECOMMENDED.darwin.zh-CN.md`](RECOMMENDED.darwin.zh-CN.md) | [`RECOMMENDED.darwin.md`](RECOMMENDED.darwin.md) | 653 条 |
+| Linux | [`RECOMMENDED.linux.zh-CN.md`](RECOMMENDED.linux.zh-CN.md) | [`RECOMMENDED.linux.md`](RECOMMENDED.linux.md) | 633 条 |
 
 刷新三份文档：`python tools/generate_recommended_md.py`（或指定 `windows` / `darwin` / `linux`）。分片统计见 [`CATALOG.md`](CATALOG.md)。
 
@@ -132,11 +132,11 @@ search_games.bat 艾尔登
 
 ### 仓库现状与收录范围（约略）
 
-合并配置后规模约为：**Windows 567 条**、**darwin 539 条**、**linux 539 条**（[`apps/windows/`](apps/windows/) 等下各 **30** 个分类分片；**不含** `99-未匹配-windows分片.json` 占位条目）。**分片级概览**见根目录 [`CATALOG.md`](CATALOG.md)（运行 `python tools/generate_catalog_index.py` 可刷新）。精确数以运行 `python auto_update.py` 时日志里「已从 apps/ 目录合并配置」为准。
+合并配置后规模约为：**Windows 742 条**、**darwin 653 条**、**linux 633 条**（[`apps/windows/`](apps/windows/) 等下各 **30** 个分类分片；**不含** `99-未匹配-windows分片.json` 占位条目）。**分片级概览**见根目录 [`CATALOG.md`](CATALOG.md)（运行 `python tools/generate_catalog_index.py` 可刷新）。精确数以运行 `python auto_update.py` 时日志里「已从 apps/ 目录合并配置」为准。
 
 **移动端**（独立清单 [`apps-mobile/`](apps-mobile/)）：Android **164 条** / **39 分片**（30 类 + 移动专属；GitHub APK **仅下载**）；iOS **52 条** App Store 占位（**不可** auto_update）。索引 [`CATALOG.mobile.md`](CATALOG.mobile.md)。
 
-主清单以 **GitHub Releases**（及镜像）为主；部分 AI IDE（Cursor、Trae、Qoder 等）通过 `resolve_via=github_pages_manifest` 读取 [`apps/root.json`](apps/root.json) 中的 `vibecoding_manifest_url`（默认 `./VibeCodingToolsDown/dist/vibecoding/manifest.json`）。使用前可先运行 `python VibeCodingToolsDown/scripts/build_manifest.py` 刷新 manifest。
+主清单以 **GitHub Releases**（及镜像）为主；部分 AI IDE（Cursor、VS Code、Trae、Windsurf、LM Studio、Antigravity、ZCode 等）通过 `resolve_via=github_pages_manifest` 读取 [`apps/root.json`](apps/root.json) 中的 `vibecoding_manifest_url`（默认 `./VibeCodingToolsDown/dist/vibecoding/manifest.json`）。根配置默认 **`refresh_manifest_before_resolve: true`**：下载前会对该条目执行 `build_manifest.py --only <id>` 刷新本地 snapshot（失败则回退已有文件）；便携 zip 若未附带 `VibeCodingToolsDown/scripts/` 则跳过联网刷新、直接用包内 snapshot。亦可手动：`python VibeCodingToolsDown/scripts/build_manifest.py`（全量）或 `--only cursor,vscode`。
 
 **注意**：同一平台内 **`id` 不可重复**（含 `99-` 分片）。若 `auto_update.py` 报「重复的 id」，请从占位分片删除与正式分片同 id 的条目。
 

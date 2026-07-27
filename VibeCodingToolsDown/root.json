@@ -12,6 +12,7 @@
   "download_subdir_by_platform": true,
   "ssl_verify": false,
   "vibecoding_manifest_url": "./dist/vibecoding/manifest.json",
+  "refresh_manifest_before_resolve": true,
   "release_page_mirrors": [
     "https://bgithub.xyz",
     "https://github.com"

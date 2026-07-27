@@ -11,6 +11,15 @@
 
 本地开发：`root.json` 里 `vibecoding_manifest_url` 使用 `./dist/vibecoding/manifest.json`（相对本目录）。
 
+**下载前自动刷新（推荐）**：[`root.json`](root.json) / 主 [`apps/root.json`](../apps/root.json) 默认 `refresh_manifest_before_resolve: true`。解析 `github_pages_manifest` 且指向**本地** manifest 时，`auto_update.py` 会先调用 `scripts/build_manifest.py --only <id>` 合并写入最新直链（失败则用已有 snapshot）。单条可设 `refresh_manifest_before_resolve: false` 跳过。便携包若未包含本目录 `scripts/`，则不会联网刷新。
+
+手动重建：
+
+```bash
+python scripts/build_manifest.py              # 全量
+python scripts/build_manifest.py --only cursor,vscode,antigravity
+```
+
 ## 目录与入口
 
 | 路径 | 作用 |

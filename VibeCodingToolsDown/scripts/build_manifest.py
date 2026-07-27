@@ -16,7 +16,7 @@ import re
 import sys
 from datetime import datetime, timezone
 from typing import Any
-from urllib.parse import quote
+from urllib.parse import quote, unquote
 
 import requests
 
@@ -72,17 +72,27 @@ def fetch_cursor(s: requests.Session) -> dict[str, Any]:
     body = j.get("body") or ""
     urls = re.findall(r"\((https://downloads\.cursor\.com[^)]+)\)", body)
     win = next((u for u in urls if "UserSetup-x64" in u and u.lower().endswith(".exe")), None)
-    mac_u = next((u for u in urls if "darwin-universal" in u and u.lower().endswith(".zip")), None)
-    mac_a = next((u for u in urls if "darwin-arm64" in u and u.lower().endswith(".zip")), None)
-    mac_i = next((u for u in urls if "darwin-x64" in u and u.lower().endswith(".zip")), None)
-    lin = next(
+    # 新版本多为 .dmg；旧索引可能是 .zip
+    mac_u = next(
+        (u for u in urls if "darwin-universal" in u and u.lower().endswith((".dmg", ".zip"))),
+        None,
+    )
+    mac_a = next(
+        (u for u in urls if "darwin-arm64" in u and u.lower().endswith((".dmg", ".zip"))),
+        None,
+    )
+    # 索引页常只挂 .AppImage.zsync；真实包去掉 .zsync 后缀即可下载
+    lin_raw = next(
         (
             u
             for u in urls
-            if "linux" in u and "x86_64" in u and u.lower().endswith(".appimage") and ".zsync" not in u.lower()
+            if "linux" in u
+            and ("x86_64" in u or "/x64/" in u)
+            and ".appimage" in u.lower()
         ),
         None,
     )
+    lin = lin_raw[:-6] if lin_raw and lin_raw.lower().endswith(".zsync") else lin_raw
     return _item(
         "cursor",
         ver,
@@ -371,30 +381,47 @@ def fetch_trae_solo(s: requests.Session) -> dict[str, Any]:
 
 
 def fetch_antigravity(s: requests.Session) -> dict[str, Any]:
-    """从 antigravity.google/download 引用 main-*.js，再在 bundle 内提取 edgedl.me.gvt1.com 直链。"""
-    r = s.get("https://antigravity.google/download", timeout=40)
+    """从 antigravity.google/download 提取 edgedl.me.gvt1.com 直链（HTML 内嵌，或 Astro/旧 main-*.js）。"""
+    page_url = "https://antigravity.google/download"
+    r = s.get(page_url, timeout=40)
     r.raise_for_status()
     html = r.text
-    m = re.search(r'src="(main-[A-Z0-9]+\.js)"', html)
-    if not m:
-        raise RuntimeError("Antigravity 下载页未找到 main-*.js")
-    bundle_url = "https://antigravity.google/" + m.group(1)
-    br = s.get(bundle_url, timeout=60)
-    br.raise_for_status()
-    body = br.text
     pat = re.compile(
         r"https://edgedl\.me\.gvt1\.com/edgedl/release2/[a-z0-9]+/antigravity/stable/"
         r"\d+\.\d+\.\d+-\d+/[^\"'\\\s<>)]+\.(?:exe|dmg|tar\.gz)\b",
         re.I,
     )
-    urls = sorted(set(pat.findall(body)))
+    urls = sorted(set(pat.findall(html)))
+    source = page_url
+
     if not urls:
-        raise RuntimeError("Antigravity main bundle 中未匹配到 edgedl 安装包 URL")
+        # 兼容旧版 SPA：main-*.js；以及当前 Astro：/_astro/*.js
+        script_srcs: list[str] = []
+        m = re.search(r'src="(main-[A-Z0-9]+\.js)"', html)
+        if m:
+            script_srcs.append("https://antigravity.google/" + m.group(1))
+        for rel in re.findall(r'src="(/_astro/[^"]+\.js)"', html):
+            script_srcs.append("https://antigravity.google" + rel)
+        for bundle_url in script_srcs:
+            try:
+                br = s.get(bundle_url, timeout=60)
+                br.raise_for_status()
+                found = pat.findall(br.text)
+                if found:
+                    urls = sorted(set(found))
+                    source = bundle_url
+                    break
+            except Exception:
+                continue
+
+    if not urls:
+        raise RuntimeError("Antigravity 下载页未匹配到 edgedl 安装包 URL")
 
     def pick(pred):
         for u in urls:
             if pred(u):
-                return {"url": u, "filename": os.path.basename(u.split("?", 1)[0])}
+                raw = os.path.basename(u.split("?", 1)[0])
+                return {"url": u, "filename": unquote(raw)}
         return None
 
     win = pick(lambda u: "windows-x64" in u and u.lower().endswith(".exe"))
@@ -413,7 +440,7 @@ def fetch_antigravity(s: requests.Session) -> dict[str, Any]:
         "antigravity",
         ver,
         {"windows": win, "darwin": mac, "linux": lin},
-        notes=f"自 {bundle_url} 解析 Google CDN（edgedl.me.gvt1.com）。",
+        notes=f"自 {source} 解析 Google CDN（edgedl.me.gvt1.com）。",
     )
 
 
@@ -835,14 +862,20 @@ def _qoder_alicdn_version_sort_key(v: str) -> tuple[int, ...]:
 def fetch_zcode(s: requests.Session) -> dict[str, Any]:
     """ZCode 桌面端：从 zcode.z.ai 首页解析 cdn-zcode.z.ai 最新版本与安装包直链。"""
     vers: set[str] = set()
+    last_err: Exception | None = None
     for page in ("https://zcode.z.ai/", "https://zcode.z.ai/en", "https://zcode.z.ai/cn"):
-        r = s.get(page, timeout=40)
-        r.raise_for_status()
+        try:
+            r = s.get(page, timeout=40)
+            r.raise_for_status()
+        except Exception as e:
+            last_err = e
+            continue
         html = r.text
         vers.update(re.findall(r"cdn-zcode\.z\.ai/zcode/electron/releases/([\d.]+)/", html))
         vers.update(re.findall(r"cdn\.zcode-ai\.com/zcode/electron/releases/([\d.]+)/", html))
     if not vers:
-        raise RuntimeError("无法从 zcode.z.ai 解析版本号")
+        detail = f"（末次错误: {last_err}）" if last_err else ""
+        raise RuntimeError("无法从 zcode.z.ai 解析版本号" + detail)
     ver = max(vers, key=_qoder_alicdn_version_sort_key)
     base = f"https://cdn-zcode.z.ai/zcode/electron/releases/{ver}/"
 
@@ -1299,12 +1332,80 @@ def fetch_workbuddy(s: requests.Session) -> dict[str, Any]:
         )
 
 
+BUILDERS: list[tuple[str, Any]] = [
+    ("cursor", fetch_cursor),
+    ("vscode", fetch_vscode),
+    ("vscodium", fetch_vscodium),
+    ("trae", fetch_trae),
+    ("trae_cn", fetch_trae_cn),
+    ("trae_solo", fetch_trae_solo),
+    ("qoder", fetch_qoder),
+    ("qoderwork", fetch_qoderwork),
+    ("zcode", fetch_zcode),
+    ("windsurf", fetch_windsurf),
+    ("lmstudio", fetch_lmstudio),
+    ("codebuddy", fetch_codebuddy),
+    ("codebuddy_cn", fetch_codebuddy_cn),
+    ("workbuddy", fetch_workbuddy),
+    ("antigravity", fetch_antigravity),
+    ("kiro", fetch_kiro),
+    ("cyberduck", fetch_cyberduck),
+    ("restic", fetch_restic),
+    ("virtualbox", fetch_virtualbox),
+    ("sunlogin", fetch_sunlogin),
+    ("termius", fetch_termius),
+    ("cutter", fetch_cutter),
+    ("syncthing", fetch_syncthing),
+    ("sqlitebrowser", fetch_sqlitebrowser),
+    ("caesium", fetch_caesium),
+    ("aria2", fetch_aria2),
+    ("cc_switch", fetch_cc_switch),
+]
+
+
+def _builder_map() -> dict[str, Any]:
+    return {aid: fn for aid, fn in BUILDERS}
+
+
+def merge_items_into_manifest(out_path: str, new_items: list[dict[str, Any]], errors: list[str]) -> dict[str, Any]:
+    """把 new_items 按 id 合并进已有 manifest（无文件则新建）。"""
+    doc: dict[str, Any] = {"schema": 1, "items": [], "errors": []}
+    if os.path.isfile(out_path):
+        try:
+            with open(out_path, encoding="utf-8") as f:
+                old = json.load(f)
+            if isinstance(old, dict):
+                doc = old
+        except Exception:
+            pass
+    by_id: dict[str, dict[str, Any]] = {}
+    for it in doc.get("items") or []:
+        if isinstance(it, dict) and it.get("id"):
+            by_id[str(it["id"]).strip()] = it
+    for it in new_items:
+        aid = str(it.get("id") or "").strip()
+        if aid:
+            by_id[aid] = it
+    doc["schema"] = 1
+    doc["generated_at"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    doc["items"] = list(by_id.values())
+    # 保留历史 errors 里与本次无关的项意义不大；只写本次
+    doc["errors"] = errors
+    return doc
+
+
 def main():
     ap = argparse.ArgumentParser(description="生成 VibeCodingToolsDown manifest.json")
     ap.add_argument(
         "--output-dir",
         default="",
         help="输出根目录（默认：本包根下 dist/）",
+    )
+    ap.add_argument(
+        "--only",
+        metavar="IDS",
+        default="",
+        help="只刷新指定 id（逗号分隔，如 cursor,vscode）；合并写入已有 manifest，不重建全部",
     )
     args = ap.parse_args()
     script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -1315,53 +1416,43 @@ def main():
     os.makedirs(out_dir, exist_ok=True)
     out_path = os.path.join(out_dir, "manifest.json")
 
+    only_ids = [x.strip() for x in (args.only or "").split(",") if x.strip()]
+    bmap = _builder_map()
+    if only_ids:
+        unknown = [i for i in only_ids if i not in bmap]
+        if unknown:
+            print("未知 manifest id: %s（可选: %s）" % (", ".join(unknown), ", ".join(bmap)), file=sys.stderr)
+            return 2
+        selected = [(i, bmap[i]) for i in only_ids]
+    else:
+        selected = list(BUILDERS)
+
     s = _session()
     items: list[dict[str, Any]] = []
-    builders = [
-        fetch_cursor,
-        fetch_vscode,
-        fetch_vscodium,
-        fetch_trae,
-        fetch_trae_cn,
-        fetch_trae_solo,
-        fetch_qoder,
-        fetch_qoderwork,
-        fetch_zcode,
-        fetch_windsurf,
-        fetch_lmstudio,
-        fetch_codebuddy,
-        fetch_codebuddy_cn,
-        fetch_workbuddy,
-        fetch_antigravity,
-        fetch_kiro,
-        fetch_cyberduck,
-        fetch_restic,
-        fetch_virtualbox,
-        fetch_sunlogin,
-        fetch_termius,
-        fetch_cutter,
-        fetch_syncthing,
-        fetch_sqlitebrowser,
-        fetch_caesium,
-        fetch_aria2,
-        fetch_cc_switch,
-    ]
     errors: list[str] = []
-    for fn in builders:
+    for aid, fn in selected:
         try:
             items.append(fn(s))
         except Exception as e:
-            errors.append(f"{fn.__name__}: {e}")
+            errors.append(f"{aid}/{fn.__name__}: {e}")
 
-    doc = {
-        "schema": 1,
-        "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "items": items,
-        "errors": errors,
-    }
+    if only_ids:
+        if not items:
+            print("未刷新任何条目", file=sys.stderr)
+            return 1
+        doc = merge_items_into_manifest(out_path, items, errors)
+    else:
+        doc = {
+            "schema": 1,
+            "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+            "items": items,
+            "errors": errors,
+        }
+
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(doc, f, ensure_ascii=False, indent=2)
-    print("Wrote", out_path, "items", len(items), "errors", len(errors))
+        f.write("\n")
+    print("Wrote", out_path, "items", len(doc.get("items") or []), "refreshed", len(items), "errors", len(errors))
     if errors:
         for e in errors:
             print("WARN:", e, file=sys.stderr)

@@ -1,6 +1,6 @@
 # apps 软件清单索引
 
-> 自动生成：运行 `python tools/generate_catalog_index.py` 刷新。生成时间：**2026-07-17 04:20 UTC**
+> 自动生成：运行 `python tools/generate_catalog_index.py` 刷新。生成时间：**2026-07-27 03:25 UTC**
 
 主清单数据在 [`apps/`](apps/)（`windows` / `darwin` / `linux` 各 30 个分类分片）。本文件只做**概览与导航**，不替代 JSON 配置。
 
