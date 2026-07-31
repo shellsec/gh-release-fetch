@@ -743,3 +743,80 @@
 2026-07-27 11:01:06,068 - INFO - 已从配置目录合并：E:\GITHUB\已经发布\gh-release-fetch\apps — windows 799 项
 2026-07-27 11:01:06,069 - INFO - [cursor] 下载前刷新 manifest: C:\Program Files\Python310\python.exe E:\GITHUB\已经发布\gh-release-fetch\VibeCodingToolsDown\scripts\build_manifest.py --only cursor --output-dir E:\GITHUB\已经发布\gh-release-fetch\VibeCodingToolsDown\dist
 2026-07-27 11:01:07,176 - INFO - [manifest] Wrote E:\GITHUB\�Ѿ�����\gh-release-fetch\VibeCodingToolsDown\dist\vibecoding\manifest.json items 27 refreshed 1 errors 0
+2026-07-27 14:54:11,171 - INFO - 已从配置目录合并：E:\GITHUB\已经发布\gh-release-fetch\apps — windows 799 项
+2026-07-27 14:54:11,172 - INFO - 使用 platforms.windows（共 799 项）
+2026-07-27 14:54:11,172 - WARNING - 已关闭 TLS 证书校验（--insecure 或 apps.json ssl_verify=false）
+2026-07-27 14:54:12,569 - INFO - 网络探测通过：https://github.com
+2026-07-27 14:54:12,570 - INFO - === [pixpin] 开始 === [平台: windows] [下载目录: E:\GITHUB\已经发布\gh-release-fetch\windows]
+2026-07-27 14:54:12,571 - INFO - [pixpin] 正在检查最新版本: https://pixpin.cn/download/
+2026-07-27 14:54:12,717 - INFO - [pixpin] 已保存发布页 HTML: E:\GITHUB\已经发布\gh-release-fetch\github_page_windows_pixpin.html
+2026-07-27 14:54:12,730 - INFO - [pixpin] 尝试从页面中查找下载链接...
+2026-07-27 14:54:12,733 - INFO - [pixpin] 从通用搜索中找到下载链接: https://down.pixpin.cn/PixPin_win_3.3.5.7.exe
+2026-07-27 14:54:12,733 - INFO - [pixpin] 找到最新版本: 3.3.5.7
+2026-07-27 14:54:12,734 - INFO - [pixpin] 成功使用发布页来源: https://pixpin.cn/download/
+2026-07-27 14:54:12,734 - INFO - [pixpin] 同时找到下载链接: https://down.pixpin.cn/PixPin_win_3.3.5.7.exe
+2026-07-27 14:54:12,734 - INFO - 使用从页面解析的下载链接: https://down.pixpin.cn/PixPin_win_3.3.5.7.exe
+2026-07-27 14:54:12,734 - INFO - 开始下载安装程序到: E:\GITHUB\已经发布\gh-release-fetch\windows\PixPin_cn_zh-cn_3.3.5.7.exe [平台: windows]
+2026-07-27 14:54:12,746 - INFO - 已删除旧文件: E:\GITHUB\已经发布\gh-release-fetch\windows\PixPin_cn_zh-cn_3.3.5.7.exe
+2026-07-27 14:54:12,747 - INFO - 尝试下载源 1/6: https://down.pixpin.cn/PixPin_win_3.3.5.7.exe
+2026-07-27 14:54:24,203 - INFO - 
+下载完成: E:\GITHUB\已经发布\gh-release-fetch\windows\PixPin_cn_zh-cn_3.3.5.7.exe (66811712 字节)
+2026-07-27 14:54:24,203 - INFO - 成功使用下载源 https://down.pixpin.cn/PixPin_win_3.3.5.7.exe
+2026-07-27 14:54:24,205 - INFO - [pixpin] 安装包已下载: E:\GITHUB\已经发布\gh-release-fetch\windows\PixPin_cn_zh-cn_3.3.5.7.exe
+2026-07-27 14:54:24,205 - INFO - 尝试终止进程: PixPin.exe
+2026-07-27 14:54:25,101 - INFO - 已终止进程: PixPin.exe
+2026-07-27 14:54:27,112 - INFO - 开始运行安装程序: E:\GITHUB\已经发布\gh-release-fetch\windows\PixPin_cn_zh-cn_3.3.5.7.exe
+2026-07-27 14:54:27,185 - INFO - 安装程序已启动 (Popen)
+2026-07-27 14:54:27,186 - INFO - === [pixpin] 完成 ===
+2026-07-27 14:56:11,750 - INFO - 已从配置目录合并：E:\GITHUB\已经发布\gh-release-fetch\apps — windows 799 项
+2026-07-27 14:56:11,751 - INFO - 使用 platforms.windows（共 799 项）
+2026-07-27 14:56:11,752 - WARNING - 已关闭 TLS 证书校验（--insecure 或 apps.json ssl_verify=false）
+2026-07-27 14:56:13,092 - INFO - 网络探测通过：https://github.com
+2026-07-27 14:56:13,092 - INFO - === [joplin] 开始 === [平台: windows] [下载目录: E:\GITHUB\已经发布\gh-release-fetch\windows]
+2026-07-27 14:56:13,093 - INFO - [joplin] 正在检查最新版本: https://bgithub.xyz/laurent22/joplin/releases
+2026-07-27 14:56:13,769 - WARNING - [joplin] 发布页获取失败: https://bgithub.xyz/laurent22/joplin/releases -> 403 Client Error: Forbidden for url: https://bgithub.xyz/laurent22/joplin/releases
+2026-07-27 14:56:13,770 - INFO - [joplin] 正在检查最新版本: https://github.com/laurent22/joplin/releases
+2026-07-27 14:56:15,403 - INFO - [joplin] 已保存发布页 HTML: E:\GITHUB\已经发布\gh-release-fetch\github_page_windows_joplin.html
+2026-07-27 14:56:15,627 - INFO - [joplin] 尝试从页面中查找下载链接...
+2026-07-27 14:56:15,691 - INFO - [joplin] 尝试使用 GitHub API: https://api.github.com/repos/laurent22/joplin/releases/tags/v3.7.9
+2026-07-27 14:56:16,518 - INFO - [joplin] 从 GitHub API 中找到下载链接: https://github.com/laurent22/joplin/releases/download/v3.7.9/Joplin-Setup-3.7.9.exe
+2026-07-27 14:56:16,518 - INFO - [joplin] 通过 GitHub API 找到最新版本: v3.7.9
+2026-07-27 14:56:16,519 - INFO - [joplin] 找到最新版本: v3.7.9
+2026-07-27 14:56:16,519 - INFO - [joplin] 成功使用发布页来源: https://github.com/laurent22/joplin/releases
+2026-07-27 14:56:16,520 - INFO - [joplin] 同时找到下载链接: https://github.com/laurent22/joplin/releases/download/v3.7.9/Joplin-Setup-3.7.9.exe
+2026-07-27 14:56:16,520 - INFO - 使用从页面解析的下载链接: https://github.com/laurent22/joplin/releases/download/v3.7.9/Joplin-Setup-3.7.9.exe
+2026-07-27 14:56:16,521 - INFO - 开始下载安装程序到: E:\GITHUB\已经发布\gh-release-fetch\windows\Joplin-Setup-3.7.9.exe [平台: windows]
+2026-07-27 14:56:16,521 - INFO - 尝试下载源 1/8: https://gh-proxy.com/https://github.com/laurent22/joplin/releases/download/v3.7.9/Joplin-Setup-3.7.9.exe
+2026-07-27 15:00:55,071 - INFO - 
+下载完成: E:\GITHUB\已经发布\gh-release-fetch\windows\Joplin-Setup-3.7.9.exe (431965664 字节)
+2026-07-27 15:00:55,072 - INFO - 成功使用下载源 https://gh-proxy.com/https://github.com/laurent22/joplin/releases/download/v3.7.9/Joplin-Setup-3.7.9.exe
+2026-07-27 15:00:55,073 - INFO - [joplin] 安装包已下载: E:\GITHUB\已经发布\gh-release-fetch\windows\Joplin-Setup-3.7.9.exe
+2026-07-27 15:00:55,073 - INFO - 尝试终止进程: Joplin.exe
+2026-07-27 15:00:56,010 - INFO - 进程未运行: Joplin.exe
+2026-07-27 15:00:58,018 - INFO - 开始运行安装程序: E:\GITHUB\已经发布\gh-release-fetch\windows\Joplin-Setup-3.7.9.exe
+2026-07-27 15:00:58,075 - INFO - 安装程序已启动 (Popen)
+2026-07-27 15:00:58,077 - INFO - === [joplin] 完成 ===
+2026-07-27 16:20:23,522 - INFO - 已从配置目录合并：E:\GITHUB\已经发布\gh-release-fetch\apps — windows 799 项
+2026-07-27 16:20:23,523 - INFO - 使用 platforms.windows（共 799 项）
+2026-07-27 16:20:23,523 - WARNING - 已关闭 TLS 证书校验（--insecure 或 apps.json ssl_verify=false）
+2026-07-27 16:20:24,879 - INFO - 网络探测通过：https://github.com
+2026-07-27 16:20:24,880 - INFO - === [drawio] 开始 === [平台: windows] [下载目录: E:\GITHUB\已经发布\gh-release-fetch\windows]
+2026-07-27 16:20:24,880 - INFO - [drawio] 正在检查最新版本: https://bgithub.xyz/jgraph/drawio-desktop/releases
+2026-07-27 16:20:25,559 - WARNING - [drawio] 发布页获取失败: https://bgithub.xyz/jgraph/drawio-desktop/releases -> 403 Client Error: Forbidden for url: https://bgithub.xyz/jgraph/drawio-desktop/releases
+2026-07-27 16:20:25,559 - INFO - [drawio] 正在检查最新版本: https://github.com/jgraph/drawio-desktop/releases
+2026-07-27 16:20:27,468 - INFO - [drawio] 已保存发布页 HTML: E:\GITHUB\已经发布\gh-release-fetch\github_page_windows_drawio.html
+2026-07-27 16:20:27,763 - INFO - [drawio] 尝试从页面中查找下载链接...
+2026-07-27 16:20:27,778 - INFO - [drawio] 从页面中找到下载链接: https://github.com/jgraph/drawio-desktop/releases/download/v31.0.2/draw.io-31.0.2-windows-installer.exe
+2026-07-27 16:20:27,801 - INFO - [drawio] 找到最新版本: v31.0.2
+2026-07-27 16:20:27,801 - INFO - [drawio] 成功使用发布页来源: https://github.com/jgraph/drawio-desktop/releases
+2026-07-27 16:20:27,802 - INFO - [drawio] 同时找到下载链接: https://github.com/jgraph/drawio-desktop/releases/download/v31.0.2/draw.io-31.0.2-windows-installer.exe
+2026-07-27 16:20:27,802 - INFO - 使用从页面解析的下载链接: https://github.com/jgraph/drawio-desktop/releases/download/v31.0.2/draw.io-31.0.2-windows-installer.exe
+2026-07-27 16:20:27,803 - INFO - 开始下载安装程序到: E:\GITHUB\已经发布\gh-release-fetch\windows\draw.io-31.0.2-windows-installer.exe [平台: windows]
+2026-07-27 16:20:27,803 - INFO - 尝试下载源 1/4: https://gh-proxy.com/https://github.com/jgraph/drawio-desktop/releases/download/v31.0.2/draw.io-31.0.2-windows-installer.exe
+2026-07-27 16:22:02,421 - INFO - 
+下载完成: E:\GITHUB\已经发布\gh-release-fetch\windows\draw.io-31.0.2-windows-installer.exe (146259832 字节)
+2026-07-27 16:22:02,422 - INFO - 成功使用下载源 https://gh-proxy.com/https://github.com/jgraph/drawio-desktop/releases/download/v31.0.2/draw.io-31.0.2-windows-installer.exe
+2026-07-27 16:22:02,423 - INFO - [drawio] 安装包已下载: E:\GITHUB\已经发布\gh-release-fetch\windows\draw.io-31.0.2-windows-installer.exe
+2026-07-27 16:22:02,424 - INFO - 开始运行安装程序: E:\GITHUB\已经发布\gh-release-fetch\windows\draw.io-31.0.2-windows-installer.exe
+2026-07-27 16:22:02,490 - INFO - 安装程序已启动 (Popen)
+2026-07-27 16:22:02,491 - INFO - === [drawio] 完成 ===
