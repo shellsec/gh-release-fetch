@@ -11,7 +11,7 @@ if /i "%SITE%"=="macwk" goto site_macwk
 if /i "%SITE%"=="7xiazai" goto site_7xiazai
 if /i "%SITE%"=="hybase" goto site_hybase
 if /i "%SITE%"=="dayanzai" goto site_dayanzai
-if /i "%SITE%"=="down66" goto site_down66
+if /i "%SITE%"=="appx64" goto site_appx64
 
 echo 未知站点: %SITE%
 goto usage
@@ -62,12 +62,12 @@ python fetch_titles.py --scope dayanzai_mobile --compare || goto fail
 call :summary changed_dayanzai_mobile_urls.txt last_diff_dayanzai_mobile.json dayanzai移动
 goto finish
 
-:site_down66
-echo === down66 快检（系统+移动）===
-python fetch_titles.py --scope down66_system --compare || goto fail
-call :summary changed_down66_system_urls.txt last_diff_down66_system.json down66系统
-python fetch_titles.py --scope down66_mobile --compare || goto fail
-call :summary changed_down66_mobile_urls.txt last_diff_down66_mobile.json down66移动
+:site_appx64
+echo === appx64 快检（系统+移动）===
+python fetch_titles.py --scope appx64_system --compare || goto fail
+call :summary changed_appx64_system_urls.txt last_diff_appx64_system.json appx64系统
+python fetch_titles.py --scope appx64_mobile --compare || goto fail
+call :summary changed_appx64_mobile_urls.txt last_diff_appx64_mobile.json appx64移动
 goto finish
 
 :summary
@@ -100,7 +100,7 @@ exit /b 1
 
 :usage
 echo 用法: monthly_check_site.bat ^<站点^>
-echo   423down  gamer520  macwk  7xiazai  hybase  dayanzai  down66
+echo   423down  gamer520  macwk  7xiazai  hybase  dayanzai  appx64
 echo.
 echo 多站连跑: monthly_check_list.bat
 echo 全量:     monthly_check_full.bat

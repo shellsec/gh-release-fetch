@@ -1,4 +1,4 @@
-"""从 dayanzai 首页分页、down66 /pc 分页发现 PC 区 URL，写入 list/*_system_urls.txt。"""
+"""从 dayanzai 首页分页、appx64 /pc 分页发现 PC 区 URL，写入 list/*_system_urls.txt。"""
 from __future__ import annotations
 
 import re
@@ -62,7 +62,7 @@ def dayanzai_article_urls(html: str) -> set[str]:
     return urls
 
 
-def down66_pc_urls(html: str) -> set[str]:
+def appx64_pc_urls(html: str) -> set[str]:
     skip = {
         "pc",
         "windows",
@@ -80,15 +80,15 @@ def down66_pc_urls(html: str) -> set[str]:
     }
     urls: set[str] = set()
     for href in HREF_PAT.findall(html):
-        u = urljoin("https://down66.com/", href.split("#")[0].strip())
+        u = urljoin("https://appx64.com/", href.split("#")[0].strip())
         parsed = urlparse(u)
         host = parsed.netloc.lower()
-        if host not in ("down66.com", "www.down66.com"):
+        if host not in ("appx64.com", "appx64.com"):
             continue
         parts = [p for p in parsed.path.strip("/").split("/") if p]
         if len(parts) != 1 or parts[0] in skip:
             continue
-        urls.add(f"https://down66.com/{parts[0]}")
+        urls.add(f"https://appx64.com/{parts[0]}")
     return urls
 
 
@@ -148,20 +148,20 @@ def crawl_dayanzai_system() -> tuple[list[str], list[str]]:
     return system, header
 
 
-def crawl_down66_system() -> tuple[list[str], list[str]]:
-    mobile = read_url_lines(LIST / "down66_app_urls.txt")
+def crawl_appx64_system() -> tuple[list[str], list[str]]:
+    mobile = read_url_lines(LIST / "appx64_app_urls.txt")
     last = discover_last_page(
-        "https://down66.com/pc",
-        "https://down66.com/pc/page/{}/",
+        "https://appx64.com/pc",
+        "https://appx64.com/pc/page/{}/",
         max_probe=80,
     )
-    page_urls = ["https://down66.com/pc"] + [
-        f"https://down66.com/pc/page/{p}/" for p in range(2, last + 1)
+    page_urls = ["https://appx64.com/pc"] + [
+        f"https://appx64.com/pc/page/{p}/" for p in range(2, last + 1)
     ]
-    found = crawl_pages(page_urls, down66_pc_urls)
+    found = crawl_pages(page_urls, appx64_pc_urls)
     system = sorted(found - mobile)
     header = [
-        "# down66.com/pc 分页（排除 app 清单已有 URL）",
+        "# appx64.com/pc 分页（排除 app 清单已有 URL）",
         f"# pages: 1-{last}",
         f"# total: {len(system)}",
     ]
@@ -177,10 +177,10 @@ def main() -> None:
     write_url_list(out_d, dayanzai_urls, dayanzai_hdr)
     print(f"dayanzai_system: {len(dayanzai_urls)} -> {out_d.relative_to(HERE)}")
 
-    down66_urls, down66_hdr = crawl_down66_system()
-    out_66 = LIST / "down66_system_urls.txt"
-    write_url_list(out_66, down66_urls, down66_hdr)
-    print(f"down66_system: {len(down66_urls)} -> {out_66.relative_to(HERE)}")
+    appx64_urls, appx64_hdr = crawl_appx64_system()
+    out_66 = LIST / "appx64_system_urls.txt"
+    write_url_list(out_66, appx64_urls, appx64_hdr)
+    print(f"appx64_system: {len(appx64_urls)} -> {out_66.relative_to(HERE)}")
 
 
 if __name__ == "__main__":

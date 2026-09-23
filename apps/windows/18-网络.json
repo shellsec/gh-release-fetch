@@ -1,25 +1,5 @@
 [
   {
-    "id": "localsend",
-    "简介": "局域网跨设备传文件，需同网段",
-    "分类": "网络",
-    "enabled": false,
-    "releases_url": "https://bgithub.xyz/localsend/localsend/releases",
-    "repo_path": "localsend/localsend",
-    "installer_markers": [
-      "LocalSend-",
-      "windows-x86-64.exe"
-    ],
-    "windows_installer": true,
-    "download_names": [
-      "LocalSend-{ver}-windows-x86-64.exe"
-    ],
-    "save_name": "LocalSend-{ver}-windows-x86-64.exe",
-    "process_name": "localsend_app.exe",
-    "kill_before_install": true,
-    "run_installer": true
-  },
-  {
     "id": "angryip",
     "简介": "局域网 IP 扫描",
     "分类": "网络",

@@ -8,7 +8,7 @@ echo ========================================
 echo.
 
 set "SOFT_PAGE_CHECK_NO_PAUSE=1"
-for %%S in (7xiazai hybase dayanzai down66) do (
+for %%S in (7xiazai hybase dayanzai appx64) do (
     echo.
     call "%~dp0monthly_check_site.bat" %%S nopause
     if errorlevel 1 goto fail

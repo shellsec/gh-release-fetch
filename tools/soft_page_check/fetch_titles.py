@@ -520,7 +520,7 @@ def main() -> int:
         "--scope",
         choices=sorted(set(all_scopes)),
         default="a",
-        help="list scope 按系统/移动拆分；hybase/dayanzai/down66/7xiazai 为旧名（依次跑 system+mobile）",
+        help="list scope 按系统/移动拆分；hybase/dayanzai/appx64/7xiazai 为旧名（依次跑 system+mobile）",
     )
     parser.add_argument("--compare", action="store_true", help="与上次同范围快照比对")
     args = parser.parse_args()

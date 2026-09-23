@@ -46,19 +46,19 @@
     "software": [],
     "domain": "developer.microsoft.com"
   },
-  "https://down66.com/startallback": {
+  "https://appx64.com/startallback": {
     "tier": "A",
     "software": [
       "system_good"
     ],
-    "domain": "down66"
+    "domain": "appx64"
   },
-  "https://down66.com/uestudio": {
+  "https://appx64.com/uestudio": {
     "tier": "A",
     "software": [
       "UltraEdit"
     ],
-    "domain": "down66"
+    "domain": "appx64"
   },
   "https://folivora.ai/": {
     "tier": "B",

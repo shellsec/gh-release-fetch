@@ -46,7 +46,7 @@
       "https://www.voidtools.com/forum/viewtopic.php?f=12&t=9787"
     ],
     "system_good": [
-      "https://down66.com/startallback",
+      "https://appx64.com/startallback",
       "https://github.com/Raphire/Win11Debloat",
       "https://github.com/choyy/VirtualDesktopSwitcher",
       "https://github.com/sabrogden/Ditto",
@@ -89,7 +89,7 @@
       "https://7-zip.org/download.html"
     ],
     "UltraEdit": [
-      "https://down66.com/uestudio"
+      "https://appx64.com/uestudio"
     ],
     "CrystalDiskInfo": [
       "https://www.423down.com/5432.html"
@@ -169,20 +169,20 @@
       "domain": "developer.microsoft.com"
     },
     {
-      "url": "https://down66.com/startallback",
+      "url": "https://appx64.com/startallback",
       "tier": "A",
       "software": [
         "system_good"
       ],
-      "domain": "down66"
+      "domain": "appx64"
     },
     {
-      "url": "https://down66.com/uestudio",
+      "url": "https://appx64.com/uestudio",
       "tier": "A",
       "software": [
         "UltraEdit"
       ],
-      "domain": "down66"
+      "domain": "appx64"
     },
     {
       "url": "https://folivora.ai/",

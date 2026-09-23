@@ -55,7 +55,7 @@ flowchart TD
 | 全量 118 页 | 建立基线，无 `changed_pages_urls.txt` | 有比对结果 |
 | 423down digest | 同上 | 同上 |
 | 7xiazai 列表 | 同上 | 同上 |
-| hybase / dayanzai / down66 | 同上 | 同上 |
+| hybase / dayanzai / appx64 | 同上 | 同上 |
 
 控制台出现 **「首次运行该范围：已保存标题基线」** 时属于正常，不是报错。再跑一遍即可。
 
@@ -66,7 +66,7 @@ flowchart TD
 | 操作 | 频率 |
 |------|------|
 | `monthly_check_full.bat` — A + 装机 + 423down + 7xiazai + list 三站 | 约每季度（连跑两次） |
-| `monthly_check_list.bat` — 仅 hybase + dayanzai + down66 | 约每季度（连跑两次） |
+| `monthly_check_list.bat` — 仅 hybase + dayanzai + appx64 | 约每季度（连跑两次） |
 
 ### SOP 主菜单说明
 
@@ -80,7 +80,7 @@ flowchart TD
 | **4 季度 423down** | digest 356 条全量比对 |
 | **5 7xiazai 列表** | 首页 ~ `/page/65/` 列表页快检 |
 | **6 打开报告页** | 刷新并打开 `index.html` |
-| **7 list 四站** | 7xiazai + hybase + dayanzai + down66（`monthly_check_list.bat`） |
+| **7 list 四站** | 7xiazai + hybase + dayanzai + appx64（`monthly_check_list.bat`） |
 
 ---
 
@@ -108,7 +108,7 @@ flowchart TD
 | 全量快检（A+装机+423down+7xiazai） | `monthly_check_full.bat` | 季度（连跑两次） |
 | **423down digest 全量（可选）** | `monthly_check_site.bat 423down` | 季度 / 想找新资源时 |
 | **7xiazai 软件页（可选）** | `monthly_check_site.bat 7xiazai` | 季度 |
-| **hybase / dayanzai / down66** | `monthly_check_site.bat <站点>` | 季度 |
+| **hybase / dayanzai / appx64** | `monthly_check_site.bat <站点>` | 季度 |
 | **list 三站 + 7xiazai 连跑** | `monthly_check_list.bat` | 季度 |
 | 打开某站变化页 | `open_changed_site.bat <站点>` | 快检后有变化时 |
 | 清理历史快照 | `prune_artifacts.bat` | 磁盘紧 / 提交前 |
@@ -129,11 +129,11 @@ flowchart TD
 | **7xiazai 软件页** | 从列表页解析的软件详情页（可选） | ~650+ | `7xiazai_list_urls.txt` |
 | **hybase 上新** | hybase.com soft/newlist（可选） | ~600 | `list/hybase_newlist_urls.txt` |
 | **dayanzai Android** | dayanzai.me/android 列表（可选） | ~262 | `list/dayanzai_android_urls.txt` |
-| **down66 app** | down66.com/app 列表（可选） | ~226 | `list/down66_app_urls.txt` |
+| **appx64 app** | appx64.com/app 列表（可选） | ~226 | `list/appx64_app_urls.txt` |
 
 - **月度默认**：`monthly_check.bat` 只跑 A 类（42 页）。
-- **季度全量**：`monthly_check_full.bat` 一次刷新报告页 **七个分区**（A / 装机 / 423down / 7xiazai / hybase / dayanzai / down66）。
-- **仅 list 四站连跑**：`monthly_check_list.bat`（7xiazai + hybase + dayanzai + down66，约 1088+ 条）。
+- **季度全量**：`monthly_check_full.bat` 一次刷新报告页 **七个分区**（A / 装机 / 423down / 7xiazai / hybase / dayanzai / appx64）。
+- **仅 list 四站连跑**：`monthly_check_list.bat`（7xiazai + hybase + dayanzai + appx64，约 1088+ 条）。
 
 A 类匹配规则在 [`build_watchlist.py`](build_watchlist.py) 的 `A_PATTERNS` 中维护；修改 `config.json` 或关键词后运行 `refresh_urls.bat watchlist` 刷新。
 
@@ -146,10 +146,10 @@ A 类匹配规则在 [`build_watchlist.py`](build_watchlist.py) 的 `A_PATTERNS`
 | **`monthly_sop.bat`** | **月度更新主入口**：菜单 + 5 步 SOP 引导 |
 | `monthly_check.bat` | A 类快检：刷新 URL → 抓标题 → 比对 → 打开报告 |
 | `open_changed_pages.bat` | 打开 A 类变化页；参数 `all` 为装机区全量 |
-| **`open_changed_site.bat`** | 打开变化页：`423down` `7xiazai` `hybase` `dayanzai` `down66` |
+| **`open_changed_site.bat`** | 打开变化页：`423down` `7xiazai` `hybase` `dayanzai` `appx64` |
 | `monthly_check_full.bat` | **季度全量**：A + 装机 + 423down + 7xiazai + list 四站 |
 | **`monthly_check_site.bat`** | **单站快检**：同上站点名 |
-| `monthly_check_list.bat` | 7xiazai + hybase + dayanzai + down66 连跑 |
+| `monthly_check_list.bat` | 7xiazai + hybase + dayanzai + appx64 连跑 |
 | **`refresh_urls.bat`** | 刷新 URL 清单：`core`（默认）`all` `pages` `423down` `7xiazai` … |
 | **`prune_artifacts.bat`** | 删除可再生的历史快照与旧 `report_*.txt` |
 | `open_report.bat` | 生成并打开 `reports/index.html` |
@@ -182,7 +182,7 @@ python fetch_titles.py --scope 423down --compare    REM digest 423down 全量 + 
 python fetch_titles.py --scope 7xiazai --compare    REM 7xiazai 列表 + 比对
 python fetch_titles.py --scope hybase --compare     REM list/hybase 上新 + 比对
 python fetch_titles.py --scope dayanzai --compare   REM list/dayanzai Android + 比对
-python fetch_titles.py --scope down66 --compare     REM list/down66 app + 比对
+python fetch_titles.py --scope appx64 --compare     REM list/appx64 app + 比对
 ```
 
 依赖：Python 3.6+，标准库即可，无需 `pip install`。
@@ -209,7 +209,7 @@ soft_page_check/
 ├── list/                        ← 扩展站点 URL 清单（见 list/README.md）
 │   ├── hybase_newlist_urls.txt
 │   ├── dayanzai_android_urls.txt
-│   └── down66_app_urls.txt
+│   └── appx64_app_urls.txt
 ├── watchlist.json               ← 完整分级索引（URL ↔ 软件 ↔ 域名）
 ├── url_meta.json                ← URL 元数据简表
 ├── changed_tier_a_urls.txt      ← 比对后有变化的 A 类 URL
@@ -218,7 +218,7 @@ soft_page_check/
 ├── changed_7xiazai_system_urls.txt / changed_7xiazai_mobile_urls.txt
 ├── changed_hybase_system_urls.txt / changed_hybase_mobile_urls.txt
 ├── changed_dayanzai_system_urls.txt / changed_dayanzai_mobile_urls.txt
-├── changed_down66_system_urls.txt / changed_down66_mobile_urls.txt
+├── changed_appx64_system_urls.txt / changed_appx64_mobile_urls.txt
 ├── history/
 │   ├── titles_latest_*.json     ← 各 scope 最新快照（保留）
 │   └── titles_*_YYYY-MM-DD_*.json  ← 历史副本（prune_artifacts 可删）
@@ -239,15 +239,15 @@ soft_page_check/
 3. 若有变化 → 打开 **`reports/index.html`** → 人工确认后决定是否更新 `software/`。
 
 （使用 **`monthly_sop.bat` 选 [1]** 可一次走完上述逻辑与后续发布引导。）
-**季度全量**：连续跑两次 `monthly_check_full.bat`，报告页 **A / 装机 / 423down / 7xiazai / hybase / dayanzai / down66** 七个分区都会有快照与变化比对。
+**季度全量**：连续跑两次 `monthly_check_full.bat`，报告页 **A / 装机 / 423down / 7xiazai / hybase / dayanzai / appx64** 七个分区都会有快照与变化比对。
 
 ---
 
-## list 三站可选监控（hybase / dayanzai / down66）
+## list 三站可选监控（hybase / dayanzai / appx64）
 
 - **来源**：`list/` 目录下手工维护的 `*_urls.txt`（详见 [`list/README.md`](list/README.md)）。
-- **数量**：hybase ~600、dayanzai ~262、down66 ~226。
-- **入口**：`monthly_check_site.bat hybase` / `dayanzai` / `down66`，或一次跑完 `monthly_check_list.bat`。
+- **数量**：hybase ~600、dayanzai ~262、appx64 ~226。
+- **入口**：`monthly_check_site.bat hybase` / `dayanzai` / `appx64`，或一次跑完 `monthly_check_list.bat`。
 - **说明**：标题常带版本号，适合季度扫新资源；具体下载仍须手工。
 
 ---
@@ -314,7 +314,7 @@ python github_fetch_on_changes.py --dry-run   rem 预览
 
 功能：
 
-- 七个分区：**A 类 / 装机全量 / 423down / 7xiazai / hybase / dayanzai / down66**
+- 七个分区：**A 类 / 装机全量 / 423down / 7xiazai / hybase / dayanzai / appx64**
 - **标题变化**（主区域）：链接、旧/新标题、打开按钮
 - **全部快照标题**（默认折叠）：当前抓到的每个页面标题，可搜索；有变化的条目带「有变化」标记
 - **搜索框**：变化区与快照区各有一个，互不影响

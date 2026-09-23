@@ -534,7 +534,7 @@ def build_index_html() -> Path:
       <a href="#site-7xiazai">7xiazai</a>
       <a href="#site-hybase">hybase</a>
       <a href="#site-dayanzai">dayanzai</a>
-      <a href="#site-down66">down66</a>
+      <a href="#site-appx64">appx64</a>
     </nav>
     {sections}
     <footer>soft_page_check/reports/index.html · 重新运行 monthly_check.bat 后刷新</footer>

@@ -62,16 +62,16 @@ if errorlevel 1 goto fail
 call :summary changed_dayanzai_mobile_urls.txt last_diff_dayanzai_mobile.json dayanzai移动
 
 echo.
-echo ========== 10/12 down66 系统 ==========
-python fetch_titles.py --scope down66_system --compare
+echo ========== 10/12 appx64 系统 ==========
+python fetch_titles.py --scope appx64_system --compare
 if errorlevel 1 goto fail
-call :summary changed_down66_system_urls.txt last_diff_down66_system.json down66系统
+call :summary changed_appx64_system_urls.txt last_diff_appx64_system.json appx64系统
 
 echo.
-echo ========== 11/12 down66 移动 ==========
-python fetch_titles.py --scope down66_mobile --compare
+echo ========== 11/12 appx64 移动 ==========
+python fetch_titles.py --scope appx64_mobile --compare
 if errorlevel 1 goto fail
-call :summary changed_down66_mobile_urls.txt last_diff_down66_mobile.json down66移动
+call :summary changed_appx64_mobile_urls.txt last_diff_appx64_mobile.json appx64移动
 
 echo.
 echo ============================================================
@@ -79,7 +79,7 @@ echo  全量快检完成 - 报告页核心分区 + list 四站(系统/移动)
 echo ============================================================
 echo  打开变化页:
 echo    A类/装机  open_changed_pages.bat [all]
-echo    其它站点  open_changed_site.bat ^<423down^|7xiazai^|hybase^|dayanzai^|down66^>
+echo    其它站点  open_changed_site.bat ^<423down^|7xiazai^|hybase^|dayanzai^|appx64^>
 echo.
 if exist "reports\index.html" start "" "%~dp0reports\index.html"
 pause

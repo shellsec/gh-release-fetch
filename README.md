@@ -115,7 +115,7 @@ Categorized **Gitee** repos under [`GiteeExploreHot/catalog/`](GiteeExploreHot/c
 
 **Optional intro-page monitor: [`tools/soft_page_check/`](tools/soft_page_check/)**
 
-Separate from the GitHub **`apps/`** catalog: tracks **page titles** on dayanzai, down66, 7xiazai, hybase, 423down, **gamer520** (games), tier-A install pages, etc. Use repo-root **[`search_soft_pages.bat`](search_soft_pages.bat)** to search ~5500+ indexed URLs and open matches in the browser. **Games:** [`search_games.bat`](search_games.bat) (gamer520; local recent list + **live site search fallback**). **No arguments:** prompts for keywords (same as `lookup_app.bat`).
+Separate from the GitHub **`apps/`** catalog: tracks **page titles** on dayanzai, appx64, 7xiazai, hybase, 423down, **gamer520** (games), tier-A install pages, etc. Use repo-root **[`search_soft_pages.bat`](search_soft_pages.bat)** to search ~5500+ indexed URLs and open matches in the browser. **Games:** [`search_games.bat`](search_games.bat) (gamer520; local recent list + **live site search fallback**). **No arguments:** prompts for keywords (same as `lookup_app.bat`).
 
 | Task | Entry |
 |------|--------|
@@ -124,8 +124,8 @@ Separate from the GitHub **`apps/`** catalog: tracks **page titles** on dayanzai
 | Monthly SOP | `tools\soft_page_check\monthly_sop.bat` |
 | **Monthly · tier A** (~42 pages, ~15s) | `tools\soft_page_check\monthly_check.bat` |
 | **Quarterly · all channels** (~2300+ pages, ~20–35 min; title diff only) | `tools\soft_page_check\monthly_check_full.bat` |
-| Per-site check / open changed URLs | `monthly_check_site.bat <site>` / `open_changed_site.bat <site>` (`423down` `7xiazai` `hybase` `dayanzai` `down66` **`gamer520`**) |
-| List four sites batch | `tools\soft_page_check\monthly_check_list.bat` (7xiazai + hybase + dayanzai + down66) |
+| Per-site check / open changed URLs | `monthly_check_site.bat <site>` / `open_changed_site.bat <site>` (`423down` `7xiazai` `hybase` `dayanzai` `appx64` **`gamer520`**) |
+| List four sites batch | `tools\soft_page_check\monthly_check_list.bat` (7xiazai + hybase + dayanzai + appx64) |
 | Refresh URL lists | `tools\soft_page_check\refresh_urls.bat` |
 | Prune dated snapshots | `tools\soft_page_check\prune_artifacts.bat` |
 | HTML report | `tools\soft_page_check\open_report.bat` |

@@ -1,11 +1,5 @@
 [
   {
-    "id": "localsend",
-    "enabled": false,
-    "releases_url": "https://bgithub.xyz/localsend/localsend/releases",
-    "repo_path": "localsend/localsend"
-  },
-  {
     "id": "syncthing",
     "简介": "Syncthing（macOS universal 官方 zip，仅下载）",
     "分类": "网络",

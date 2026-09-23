@@ -122,7 +122,7 @@ GH Release Fetch: 700+ app catalog (Windows) — search by name, download/update
 
 ### soft_page_check（介绍页标题监控 · 可选）
 
-目录 [`tools/soft_page_check/`](tools/soft_page_check/) 与主 `apps/` **独立**：监控 **dayanzai / down66 / 7xiazai / hybase / 423down / gamer520（游戏）/ 装机 A 类** 等介绍页的 `<title>` 变化，用于发现「可能有新版本」的资讯页，**不负责** GitHub 自动下载。
+目录 [`tools/soft_page_check/`](tools/soft_page_check/) 与主 `apps/` **独立**：监控 **dayanzai / appx64 / 7xiazai / hybase / 423down / gamer520（游戏）/ 装机 A 类** 等介绍页的 `<title>` 变化，用于发现「可能有新版本」的资讯页，**不负责** GitHub 自动下载。
 
 | 用途 | 入口 |
 |------|------|
@@ -131,8 +131,8 @@ GH Release Fetch: 700+ app catalog (Windows) — search by name, download/update
 | 月度快检 SOP | `tools\soft_page_check\monthly_sop.bat` |
 | **每月 · A 类**（~42 页，~15 秒） | `tools\soft_page_check\monthly_check.bat` |
 | **每季 · 频道全量**（~2300+ 页，~20–35 分钟，**只比标题、不下载**） | `tools\soft_page_check\monthly_check_full.bat` |
-| 单站快检 / 打开变化页 | `monthly_check_site.bat <站点>` / `open_changed_site.bat <站点>`（`423down` `7xiazai` `hybase` `dayanzai` `down66` **`gamer520`**） |
-| list 四站连跑 | `tools\soft_page_check\monthly_check_list.bat`（7xiazai + hybase + dayanzai + down66） |
+| 单站快检 / 打开变化页 | `monthly_check_site.bat <站点>` / `open_changed_site.bat <站点>`（`423down` `7xiazai` `hybase` `dayanzai` `appx64` **`gamer520`**） |
+| list 四站连跑 | `tools\soft_page_check\monthly_check_list.bat`（7xiazai + hybase + dayanzai + appx64） |
 | 刷新 URL 清单 | `tools\soft_page_check\refresh_urls.bat`（`core` / `all` / `423down` / `7xiazai` …） |
 | 清理历史快照 | `tools\soft_page_check\prune_artifacts.bat` |
 | HTML 报告 | `tools\soft_page_check\open_report.bat` → `reports/index.html` |
@@ -410,7 +410,7 @@ search_games.bat --stats
 
 ### 方式 A′：介绍页标题搜索（非 GitHub 清单）
 
-在 **dayanzai / down66 / 7xiazai** 等已抓取标题中搜索并打开浏览器（见 [`tools/soft_page_check/`](tools/soft_page_check/)）。**无参数**双击或运行 `search_soft_pages.bat` 会提示输入关键词（行为同 `lookup_app.bat`）。
+在 **dayanzai / appx64 / 7xiazai** 等已抓取标题中搜索并打开浏览器（见 [`tools/soft_page_check/`](tools/soft_page_check/)）。**无参数**双击或运行 `search_soft_pages.bat` 会提示输入关键词（行为同 `lookup_app.bat`）。
 
 ```bat
 search_soft_pages.bat
