@@ -84,7 +84,7 @@
     "run_installer": false
   },
   {
-    "简介": "qBittorrent（BT/磁力）",
+    "简介": "qBittorrent（Linux x86_64 AppImage）",
     "分类": "下载",
     "enabled": false,
     "prefer_api_assets": true,
@@ -94,10 +94,11 @@
     "id": "qbittorrent",
     "installer_markers_match_all": true,
     "installer_markers": [
-      "qbittorrent_",
+      "qbittorrent-",
       "_x86_64.AppImage"
     ],
     "href_exclude_substrings": [
+      "lt20",
       "Windows",
       "Darwin",
       "arm64",
@@ -108,7 +109,7 @@
       ".AppImage"
     ],
     "use_download_filename": true,
-    "save_name": "qbittorrent.AppImage",
+    "save_name": "qbittorrent-{ver}_x86_64.AppImage",
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
@@ -147,7 +148,7 @@
     "run_installer": false
   },
   {
-    "简介": "Motrix（全能下载工具：HTTP/FTP/BT/磁力链）",
+    "简介": "Motrix（Linux x64 AppImage）",
     "分类": "下载",
     "releases_url": "https://bgithub.xyz/agalwood/Motrix/releases",
     "repo_path": "agalwood/Motrix",
@@ -162,23 +163,27 @@
     "installer_markers_match_all": true,
     "installer_markers": [
       "Motrix-",
-      "x64.AppImage"
+      ".AppImage"
     ],
     "href_exclude_substrings": [
-      "dmg",
-      "exe",
       "arm64",
-      "yml",
-      "blockmap"
+      "armv7l",
+      "win",
+      "dmg",
+      "deb",
+      "mac"
     ],
     "installer_extensions": [
       ".AppImage"
     ],
     "use_download_filename": true,
-    "save_name": "Motrix.AppImage"
+    "save_name": "Motrix-{ver}.AppImage",
+    "download_names": [
+      "Motrix-{ver}.AppImage"
+    ]
   },
   {
-    "简介": "Gopeed（HTTP/BT 等，现代下载器）",
+    "简介": "Gopeed（Linux amd64 AppImage）",
     "分类": "下载",
     "releases_url": "https://bgithub.xyz/GopeedLab/gopeed/releases",
     "repo_path": "GopeedLab/gopeed",
@@ -193,24 +198,23 @@
     "installer_markers_match_all": true,
     "installer_markers": [
       "Gopeed-v",
-      "linux-amd64.zip"
+      "linux-amd64.AppImage"
     ],
     "href_exclude_substrings": [
+      "arm64",
       "windows",
       "macos",
-      "qnap",
-      "arm64",
-      "ia32",
-      "blockmap",
-      ".deb"
+      "android",
+      "web-"
     ],
     "installer_extensions": [
-      ".zip"
+      ".AppImage"
     ],
     "download_names": [
-      "Gopeed-v{ver}-linux-amd64.zip"
+      "Gopeed-v{ver}-linux-amd64.AppImage"
     ],
-    "save_name": "Gopeed-v{ver}-linux-amd64.zip"
+    "save_name": "Gopeed-v{ver}-linux-amd64.AppImage",
+    "use_download_filename": true
   },
   {
     "id": "qbittorrent_enhanced_edition",
@@ -605,5 +609,201 @@
     "open_page_url": "https://github.com/nicotine-plus/nicotine-plus/releases",
     "releases_url": "https://bgithub.xyz/nicotine-plus/nicotine-plus/releases",
     "repo_path": "nicotine-plus/nicotine-plus"
+  },
+  {
+    "id": "motrix_next",
+    "简介": "MotrixNext（Linux amd64 AppImage）",
+    "分类": "下载",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".exe",
+      ".dmg",
+      ".deb",
+      ".rpm",
+      "aarch64",
+      ".sig"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "MotrixNext_",
+      "amd64.AppImage"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "releases_url": "https://bgithub.xyz/AnInsomniacy/motrix-next/releases",
+    "repo_path": "AnInsomniacy/motrix-next"
+  },
+  {
+    "id": "ghost_downloader_3",
+    "简介": "Ghost Downloader（Linux x86_64 AppImage）",
+    "分类": "下载",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "arm64",
+      ".deb",
+      ".exe",
+      ".dmg",
+      ".apk",
+      ".sig"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Ghost-Downloader-",
+      "Linux-x86_64.AppImage"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "releases_url": "https://bgithub.xyz/XiaoYouChR/Ghost-Downloader-3/releases",
+    "repo_path": "XiaoYouChR/Ghost-Downloader-3"
+  },
+  {
+    "id": "fluxdown",
+    "简介": "FluxDown（Linux x64 AppImage）",
+    "分类": "下载",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".deb",
+      ".tar.gz",
+      "windows",
+      "macos",
+      ".sig"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "FluxDown-",
+      "linux-x64.AppImage"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "releases_url": "https://bgithub.xyz/zerx-lab/FluxDown/releases",
+    "repo_path": "zerx-lab/FluxDown"
+  },
+  {
+    "id": "ab_download_manager",
+    "简介": "ABDownloadManager（开源跨平台下载管理器；Linux x64 tar.gz）",
+    "分类": "下载",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "arm64",
+      "mac",
+      "windows",
+      ".md5",
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "ABDownloadManager_",
+      "linux_x64.tar.gz"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "aliases": [
+      "abdownloadmanager",
+      "ABDownloadManager",
+      "AB Download Manager"
+    ],
+    "releases_url": "https://bgithub.xyz/amir1376/ab-download-manager/releases",
+    "repo_path": "amir1376/ab-download-manager"
+  },
+  {
+    "id": "n_m3u8dl_re",
+    "简介": "N_m3u8DL-RE（nilaoda m3u8/流媒体下载；Linux x64 tar.gz）",
+    "分类": "下载",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "linux-arm64",
+      "osx",
+      "win-",
+      "android"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "N_m3u8DL-RE_",
+      "linux-x64_",
+      ".tar.gz"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "aliases": [
+      "n_m3u8dl_re",
+      "N_m3u8DL-RE",
+      "m3u8dl-re"
+    ],
+    "releases_url": "https://bgithub.xyz/nilaoda/N_m3u8DL-RE/releases",
+    "repo_path": "nilaoda/N_m3u8DL-RE"
   }
 ]

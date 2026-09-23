@@ -244,8 +244,12 @@
   },
   {
     "id": "openvpn",
-    "简介": "OpenVPN 社区版安装包",
+    "简介": "OpenVPN 社区版安装包（非 OpenVPN Connect 商业客户端）",
     "分类": "网络",
+    "aliases": [
+      "openvpn community",
+      "OpenVPN 社区版"
+    ],
     "enabled": false,
     "releases_url": "https://bgithub.xyz/OpenVPN/openvpn/releases",
     "repo_path": "OpenVPN/openvpn",
@@ -270,6 +274,24 @@
       ".msi"
     ],
     "version_tag_as_on_github": true
+  },
+  {
+    "id": "openvpn_connect",
+    "简介": "OpenVPN Connect 3（官方 GUI 客户端；安装包来自 packages.openvpn.net，非 GitHub 社区版。lookup 打开下载页）",
+    "分类": "网络",
+    "aliases": [
+      "openvpn connect",
+      "OpenVPN Connect",
+      "openvpn-connect"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://openvpn.net/client/",
+    "url_hint": "openvpn connect",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   },
   {
     "id": "tailscale",
@@ -787,5 +809,273 @@
     ],
     "releases_url": "https://bgithub.xyz/mullvad/mullvad-browser/releases",
     "repo_path": "mullvad/mullvad-browser"
+  },
+  {
+    "id": "chrome",
+    "简介": "Google Chrome（官网分发，lookup 打开下载页）",
+    "分类": "网络",
+    "aliases": [
+      "chrome",
+      "google chrome",
+      "谷歌浏览器",
+      "Chrome"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.google.com/chrome/",
+    "url_hint": "chrome google chrome 谷歌浏览器 Chrome",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "edge",
+    "简介": "Microsoft Edge（官网分发，lookup 打开下载页）",
+    "分类": "网络",
+    "aliases": [
+      "edge",
+      "microsoft edge",
+      "Edge",
+      "微软浏览器"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.microsoft.com/edge/download",
+    "url_hint": "edge microsoft edge Edge 微软浏览器",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "firefox",
+    "简介": "Mozilla Firefox（官网安装包，lookup 打开下载页）",
+    "分类": "网络",
+    "aliases": [
+      "firefox",
+      "Firefox",
+      "火狐"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.mozilla.org/zh-CN/firefox/new/",
+    "url_hint": "firefox Firefox 火狐",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "pojie_netdiag",
+    "简介": "吾爱破解论坛网络诊断修复工具（Windows 便携 exe；检测/修复论坛打不开、DNS 劫持、验证码异常）",
+    "分类": "网络",
+    "aliases": [
+      "52pojie",
+      "吾爱破解",
+      "netdiag",
+      "网络诊断",
+      "吾爱网络诊断",
+      "52pojie-Netdiag"
+    ],
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/Hmily-LCG/52pojie-Netdiag/releases",
+    "repo_path": "Hmily-LCG/52pojie-Netdiag",
+    "installer_extensions": [
+      ".exe"
+    ],
+    "installer_markers": [
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      ".zip",
+      ".tar",
+      ".txt",
+      ".md",
+      "checksum"
+    ],
+    "use_download_filename": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "52pojie 吾爱破解 netdiag 网络诊断"
+  },
+  {
+    "id": "switchhosts",
+    "简介": "SwitchHosts（Hosts 快速切换；Windows x64 安装包）",
+    "分类": "网络",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "arm64",
+      "x86",
+      "linux",
+      "mac",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "SwitchHosts-",
+      "windows-x64-setup.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "switchhosts",
+      "SwitchHosts"
+    ],
+    "releases_url": "https://bgithub.xyz/oldj/SwitchHosts/releases",
+    "repo_path": "oldj/SwitchHosts"
+  },
+  {
+    "id": "fluent_reader",
+    "简介": "Fluent Reader（开源 RSS 阅读器；Windows x64 安装包）",
+    "分类": "网络",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "x86",
+      "linux",
+      "dmg",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Fluent.Reader.Setup.",
+      ".x64.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "fluent reader",
+      "Fluent Reader",
+      "fluent-reader"
+    ],
+    "releases_url": "https://bgithub.xyz/yang991178/fluent-reader/releases",
+    "repo_path": "yang991178/fluent-reader"
+  },
+  {
+    "id": "adguardhome",
+    "简介": "AdGuard Home（局域网 DNS 广告拦截；Windows amd64 zip）",
+    "分类": "网络",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "386",
+      "arm64",
+      "linux",
+      "darwin"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "AdGuardHome_windows_amd64.zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "aliases": [
+      "adguardhome",
+      "AdGuard Home",
+      "adguard home",
+      "广告拦截dns"
+    ],
+    "releases_url": "https://bgithub.xyz/AdguardTeam/AdGuardHome/releases",
+    "repo_path": "AdguardTeam/AdGuardHome"
+  },
+  {
+    "id": "quark",
+    "简介": "夸克（阿里浏览器/网盘门户；官网分发，lookup 打开下载页。含推广与会员引导，请自行甄别）",
+    "分类": "网络",
+    "aliases": [
+      "quark",
+      "夸克",
+      "夸克浏览器",
+      "夸克网盘",
+      "阿里"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.quark.cn/",
+    "url_hint": "quark 夸克 夸克浏览器 夸克网盘 阿里",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

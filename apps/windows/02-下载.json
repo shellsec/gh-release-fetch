@@ -525,5 +525,221 @@
     ],
     "releases_url": "https://bgithub.xyz/nicotine-plus/nicotine-plus/releases",
     "repo_path": "nicotine-plus/nicotine-plus"
+  },
+  {
+    "id": "motrix_next",
+    "简介": "MotrixNext（Motrix Tauri 重写版下载器；Windows x64 Setup）",
+    "分类": "下载",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "arm64",
+      ".dmg",
+      ".deb",
+      "AppImage",
+      ".rpm",
+      ".sig"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "MotrixNext_",
+      "x64-setup.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "releases_url": "https://bgithub.xyz/AnInsomniacy/motrix-next/releases",
+    "repo_path": "AnInsomniacy/motrix-next"
+  },
+  {
+    "id": "fluxdown",
+    "简介": "FluxDown（Rust 多协议下载器；Windows x64 Setup）",
+    "分类": "下载",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "arm64",
+      "portable",
+      ".zip",
+      ".dmg",
+      "linux",
+      ".sig"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "FluxDown-",
+      "windows-x64-setup.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "releases_url": "https://bgithub.xyz/zerx-lab/FluxDown/releases",
+    "repo_path": "zerx-lab/FluxDown"
+  },
+  {
+    "id": "xiadown",
+    "简介": "XiaDown（资源库/视频下载管理；Windows x64 安装包）",
+    "分类": "下载",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".zip",
+      "macos",
+      ".sha256",
+      ".sig"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "xiadown-windows-x64-",
+      "installer.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "releases_url": "https://bgithub.xyz/arnoldhao/xiadown/releases",
+    "repo_path": "arnoldhao/xiadown"
+  },
+  {
+    "id": "xunlei",
+    "简介": "迅雷（官网分发，lookup 打开下载页）",
+    "分类": "下载",
+    "aliases": [
+      "xunlei",
+      "thunder",
+      "迅雷"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.xunlei.com/",
+    "url_hint": "xunlei thunder 迅雷",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "ab_download_manager",
+    "简介": "ABDownloadManager（开源跨平台下载管理器；Windows x64 exe）",
+    "分类": "下载",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "arm64",
+      "linux",
+      "mac",
+      ".zip",
+      ".md5",
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "ABDownloadManager_",
+      "windows_x64.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "abdownloadmanager",
+      "ABDownloadManager",
+      "AB Download Manager"
+    ],
+    "releases_url": "https://bgithub.xyz/amir1376/ab-download-manager/releases",
+    "repo_path": "amir1376/ab-download-manager"
+  },
+  {
+    "id": "n_m3u8dl_re",
+    "简介": "N_m3u8DL-RE（nilaoda m3u8/流媒体下载；Windows x64 zip，CLI 后继）",
+    "分类": "下载",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "arm64",
+      "NT6",
+      "linux",
+      "osx",
+      "android"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "N_m3u8DL-RE_",
+      "win-x64_",
+      ".zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "aliases": [
+      "n_m3u8dl_re",
+      "N_m3u8DL-RE",
+      "m3u8dl-re",
+      "m3u8下载"
+    ],
+    "releases_url": "https://bgithub.xyz/nilaoda/N_m3u8DL-RE/releases",
+    "repo_path": "nilaoda/N_m3u8DL-RE"
   }
 ]

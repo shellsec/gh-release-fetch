@@ -1,18 +1,39 @@
 [
   {
     "id": "cursor",
-    "简介": "Cursor macOS universal dmg（manifest）",
+    "简介": "Cursor macOS universal（国内勿用应用内更新：lookup 走 snapshot 覆盖安装）",
     "分类": "VibeCodingToolsDown",
     "enabled": false,
     "resolve_via": "github_pages_manifest",
     "manifest_item_id": "cursor",
+    "open_page_url": "https://cursor.com/cn/download",
     "version_tag_as_on_github": true,
     "use_download_filename": true,
     "installer_extensions": [".dmg", ".zip"],
     "save_name": "Cursor-darwin-universal.dmg",
     "process_name": "",
     "kill_before_install": false,
-    "run_installer": false
+    "run_installer": false,
+    "aliases": [
+      "cursor ide",
+      "cursor 国内更新"
+    ]
+  },
+  {
+    "id": "cursor_reh",
+    "简介": "Cursor Remote-SSH 服务端 linux-x64（snapshot commit，scp 到服务器）",
+    "分类": "VibeCodingToolsDown",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "cursor_reh",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "installer_extensions": [".tar.gz"],
+    "save_name": "cursor-reh-linux-x64.tar.gz",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "aliases": ["cursor-server", "cursor reh", "remote ssh"]
   },
   {
     "id": "vscode",

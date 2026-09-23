@@ -28,7 +28,7 @@
   },
   {
     "id": "imageglass",
-    "简介": "ImageGlass（轻量看图，x64 MSI）",
+    "简介": "ImageGlass（Windows x64 msi；包名 win-x64）",
     "分类": "工具",
     "enabled": false,
     "releases_url": "https://bgithub.xyz/d2phap/ImageGlass/releases",
@@ -38,7 +38,7 @@
     "installer_markers_match_all": true,
     "installer_markers": [
       "ImageGlass_",
-      "_x64.msi"
+      "win-x64.msi"
     ],
     "href_exclude_substrings": [
       "arm64",
@@ -49,12 +49,13 @@
       ".msi"
     ],
     "download_names": [
-      "ImageGlass_{ver}_x64.msi"
+      "ImageGlass_{ver}_win-x64.msi"
     ],
-    "save_name": "ImageGlass_{ver}_x64.msi",
+    "save_name": "ImageGlass_{ver}_win-x64.msi",
     "process_name": "ImageGlass.exe",
     "kill_before_install": true,
-    "run_installer": true
+    "run_installer": true,
+    "use_download_filename": true
   },
   {
     "id": "fileconverter",
@@ -914,5 +915,253 @@
     ],
     "releases_url": "https://bgithub.xyz/mcmilk/7-Zip-zstd/releases",
     "repo_path": "mcmilk/7-Zip-zstd"
+  },
+  {
+    "id": "leafview",
+    "简介": "LeafView（极简图片查看器；Windows x64 安装包）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".zip",
+      "blockmap",
+      ".yml",
+      "darwin",
+      "linux"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "LeafView-",
+      "win32-x64-installer.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "releases_url": "https://bgithub.xyz/sprout2000/leafview/releases",
+    "repo_path": "sprout2000/leafview"
+  },
+  {
+    "id": "bandizip",
+    "简介": "Bandizip（压缩解压；官网分发，lookup 打开下载页）",
+    "分类": "工具",
+    "aliases": [
+      "bandizip",
+      "Bandizip"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.bandisoft.com/bandizip/",
+    "url_hint": "bandizip Bandizip",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "winrar",
+    "简介": "WinRAR（压缩解压；官网分发，lookup 打开下载页）",
+    "分类": "工具",
+    "aliases": [
+      "winrar",
+      "WinRAR",
+      "rar"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.winrar.com.cn/",
+    "url_hint": "winrar WinRAR rar",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "tagspaces",
+    "简介": "TagSpaces（本地文件标签与素材库；Windows x64 安装包）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "arm64",
+      ".zip",
+      ".blockmap",
+      "linux",
+      "mac-",
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "tagspaces-win-x64-",
+      ".exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "tagspaces",
+      "TagSpaces",
+      "文件标签",
+      "素材库"
+    ],
+    "releases_url": "https://bgithub.xyz/tagspaces/tagspaces/releases",
+    "repo_path": "tagspaces/tagspaces"
+  },
+  {
+    "id": "ecopaste",
+    "简介": "EcoPaste（开源剪贴板管理；Windows x64 安装包）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "arm64",
+      ".sig",
+      "linux",
+      "dmg",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "EcoPaste_",
+      "_x64-setup.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "ecopaste",
+      "EcoPaste"
+    ],
+    "releases_url": "https://bgithub.xyz/EcoPasteHub/EcoPaste/releases",
+    "repo_path": "EcoPasteHub/EcoPaste"
+  },
+  {
+    "id": "steganographier_gui",
+    "简介": "隐写者 SteganographierGUI（文件隐写入 MP4/MKV；Windows 安装包）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "portable",
+      ".zip",
+      "SHA256",
+      ".txt",
+      "source",
+      "src.",
+      "linux",
+      "darwin",
+      "macos",
+      "mac-"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "SteganographierGUI_v",
+      "_installer.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "steganographier",
+      "steganographiergui",
+      "steganographier_gui",
+      "隐写者",
+      "隐写"
+    ],
+    "releases_url": "https://bgithub.xyz/cenglin123/SteganographierGUI/releases",
+    "repo_path": "cenglin123/SteganographierGUI"
+  },
+  {
+    "id": "taobao",
+    "简介": "淘宝（无官方 Windows 客户端；lookup 打开网页）",
+    "分类": "工具",
+    "aliases": [
+      "taobao",
+      "淘宝",
+      "阿里"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.taobao.com/",
+    "url_hint": "taobao 淘宝 阿里",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "jd",
+    "简介": "京东（无官方 Windows 客户端；lookup 打开网页）",
+    "分类": "工具",
+    "aliases": [
+      "jd",
+      "京东",
+      "jingdong"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.jd.com/",
+    "url_hint": "jd 京东 jingdong",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "meituan",
+    "简介": "美团（无官方 Windows 客户端；lookup 打开网页）",
+    "分类": "工具",
+    "aliases": [
+      "meituan",
+      "美团"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.meituan.com/",
+    "url_hint": "meituan 美团",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

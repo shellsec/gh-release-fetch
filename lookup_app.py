@@ -6,9 +6,12 @@
 用法：
   python lookup_app.py drawio
   python lookup_app.py --platform windows cherrytree
+  python lookup_app.py --apps-dir apps-mobile --platform android termux
   python lookup_app.py --apps-dir VibeCodingToolsDown warp
   python lookup_app.py --yes drawio          # 匹配项全部开启，不询问
   python lookup_app.py --dry-run drawio      # 只查询，不写文件
+  无参数：先选清单（桌面 / Android / iOS）再输入关键词。
+  Windows 快捷入口：lookup_mobile.bat / lookup_ios.bat
 
 加入更新列表（根目录 saved_apps_<平台>.json，配合 run_saved_apps.bat 一键更新）：
   python lookup_app.py cherrytree            # 交互：1立刻下载 / 2加入并下载 / 3加入列表 / 4启用
@@ -23,6 +26,7 @@ import argparse
 import json
 import os
 import re
+import shlex
 import subprocess
 import sys
 
@@ -30,7 +34,7 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__)) if not getattr(sys, "fro
 if SCRIPT_DIR not in sys.path:
     sys.path.insert(0, SCRIPT_DIR)
 
-from tools.ghrf_runtime import argv_from_prompt, resolve_auto_update_argv  # noqa: E402
+from tools.ghrf_runtime import resolve_auto_update_argv  # noqa: E402
 
 DEFAULT_APPS_DIR = os.path.join(SCRIPT_DIR, "apps")
 PLATFORMS = ("windows", "darwin", "linux", "android", "ios")
@@ -187,6 +191,8 @@ def print_hits(hits: list[dict]) -> None:
         print("    分类: %s" % h["分类"])
         if h["repo_path"]:
             print("    仓库: %s" % h["repo_path"])
+        if (not h.get("downloadable")) and (h.get("open_page_url") or "").strip():
+            print("    页面: %s" % h["open_page_url"].strip())
         if brief:
             print("    简介: %s" % brief)
         print()
@@ -476,18 +482,53 @@ def enable_all_matches(hits: list[dict], dry_run: bool) -> int:
     return apply_enable(hits, dry_run)
 
 
+def prompt_catalog_and_query() -> bool:
+    """无参数启动：先选清单，再输入关键词。取消或空输入返回 False。"""
+    if len(sys.argv) > 1:
+        return True
+    print("用法: lookup_app [选项与关键词...]")
+    print("示例: lookup_app drawio")
+    print("      lookup_mobile.bat termux")
+    print("      lookup_ios.bat 微信")
+    print("交互选条目: 1=下载(无包则开页)  2=加入并下载  3=加入列表  4=启用  5=打开页面")
+    print("直接下载: lookup_app -y --download drawio")
+    print("打开页面: lookup_app chatbox --open")
+    print()
+    print("搜哪个清单?")
+    print("  1  桌面（Windows / macOS / Linux）")
+    print("  2  Android APK")
+    print("  3  iOS App Store")
+    try:
+        choice = input("请选择 (1/2/3，回车=桌面): ").strip().lower()
+    except (EOFError, KeyboardInterrupt):
+        print("\n已取消。")
+        return False
+    extra: list[str] = []
+    if choice in ("", "1", "desktop", "d"):
+        print("清单: 桌面")
+    elif choice in ("2", "android", "apk"):
+        extra = ["--apps-dir", "apps-mobile", "--platform", "android"]
+        print("清单: Android")
+    elif choice in ("3", "ios"):
+        extra = ["--apps-dir", "apps-mobile", "--platform", "ios"]
+        print("清单: iOS")
+    else:
+        print("无效选择，已退出。")
+        return False
+    try:
+        text = input("请输入关键词: ").strip()
+    except (EOFError, KeyboardInterrupt):
+        print("\n已取消。")
+        return False
+    if not text:
+        print("未输入，已退出。")
+        return False
+    sys.argv[1:] = extra + shlex.split(text, posix=(os.name != "nt"))
+    return True
+
+
 def main() -> int:
-    if not argv_from_prompt(
-        [
-            "用法: lookup_app [选项与关键词...]",
-            "示例: lookup_app drawio",
-            "      lookup_app --platform android termux",
-            "交互选条目: 1=下载(无包则开页)  2=加入并下载  3=加入列表  4=启用  5=打开页面",
-            "直接下载: lookup_app -y --download drawio",
-            "打开页面: lookup_app chatbox --open",
-        ],
-        "请输入关键词（可含 --platform android 等）: ",
-    ):
+    if not prompt_catalog_and_query():
         return 0
 
     parser = argparse.ArgumentParser(description="在 apps 配置中模糊查找应用并可开启 enabled")

@@ -48,7 +48,7 @@ Write-Host "Copy exes and bats..."
 foreach ($name in $exes) {
     Copy-Item (Join-Path $ExeDir $name) (Join-Path $Stage $name) -Force
 }
-$bats = @("lookup_app.bat", "run_saved_apps.bat", "search_soft_pages.bat", "search_games.bat", "run_update.bat")
+$bats = @("lookup_app.bat", "lookup_mobile.bat", "lookup_ios.bat", "open_catalog.bat", "run_saved_apps.bat", "search_soft_pages.bat", "search_games.bat", "run_update.bat")
 foreach ($name in $bats) {
     Copy-Item (Join-Path $Root $name) (Join-Path $Stage $name) -Force
 }
@@ -87,6 +87,7 @@ foreach ($item in $spcItems) {
 
 Write-Host "Copy docs..."
 $docs = @(
+    "catalog.html",
     "CATALOG.md",
     "CATALOG.mobile.md",
     "RECOMMENDED.zh-CN.md",

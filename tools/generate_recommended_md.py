@@ -53,6 +53,8 @@ def collect(platform: str) -> dict[str, list[dict]]:
                 "platform": platform,
                 "has_rules": bool(app.get("installer_markers") or app.get("download_names")),
                 "run_installer": app.get("run_installer") is True,
+                "open_page_only": app.get("open_page_only") is True,
+                "open_page_url": (app.get("open_page_url") or "").strip(),
             }
             if row["id"]:
                 by_cat[cat].append(row)
@@ -66,6 +68,8 @@ def _clean_intro(text: str) -> str:
 
 
 def _rule_badge(row: dict) -> str:
+    if row.get("open_page_only"):
+        return "仅打开官网"
     if row["run_installer"] and row["has_rules"]:
         return "规则较完整"
     if row["has_rules"]:
@@ -106,13 +110,13 @@ def build_zh(platform: str = "windows") -> str:
     label = PLATFORM_LABEL[platform]
     nav = _platform_nav(platform)
     lines = [
-        "# 推荐开源软件（%s · 全分类导读）" % label,
+        "# 软件目录（%s · 全分类导读）" % label,
         "",
         "> 由 `python tools/generate_recommended_md.py` 根据 [`apps/%s/`](apps/%s/) 自动生成，"
-        "生成日期：**%s**。条目 **%d** 个（%s 平台）。"
+        "生成日期：**%s**。条目 **%d** 个（%s 平台；含 GitHub 可下载与仅打开官网）。"
         % (platform, platform, now, total, platform),
         "> 其它平台导读：%s。" % nav,
-        "> 技术索引与分片统计见 [`CATALOG.md`](CATALOG.md)。启用/更新：lookup → `run_saved_apps`（Windows 可用 `run_saved_apps.bat`）。",
+        "> 本地分类展示页：[`catalog.html`](catalog.html)。技术索引见 [`CATALOG.md`](CATALOG.md)。启用/更新：lookup → `run_saved_apps`。",
         "",
         "---",
         "",
@@ -131,6 +135,8 @@ def build_zh(platform: str = "windows") -> str:
             meta = []
             if row["repo_path"]:
                 meta.append("仓库：`%s`" % row["repo_path"])
+            if row.get("open_page_url"):
+                meta.append("页面：%s" % row["open_page_url"])
             meta.append("分片：`apps/%s/%s`" % (platform, row["shard"]))
             meta.append("配置：%s" % badge)
             lines.append("- " + " · ".join(meta))
@@ -151,9 +157,9 @@ def build_en(platform: str = "windows") -> str:
     lines = [
         "# Recommended apps (%s · full catalog guide)" % label,
         "",
-        "> Auto-generated from [`apps/%s/`](apps/%s/) on **%s**. **%d** entries."
+        "> Auto-generated from [`apps/%s/`](apps/%s/) on **%s**. **%d** entries (downloadable + official-site)."
         % (platform, platform, now, total),
-        "> Chinese guide: [`%s`](%s). Other platforms: %s. Index: [`CATALOG.md`](CATALOG.md)."
+        "> Chinese: [`%s`](%s). Browse: [`catalog.html`](catalog.html). Other platforms: %s. Index: [`CATALOG.md`](CATALOG.md)."
         % (zh_name, zh_name, nav),
         "",
     ]

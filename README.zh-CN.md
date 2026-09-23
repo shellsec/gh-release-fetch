@@ -1,21 +1,27 @@
-# GitHub 发行版拉取工具（GH Release Fetch）
+**语言 / Language:** 中文 | [English](README.md)
+
+[aiv123.com](https://aiv123.com/) · AI 工具导航，600+ 工具一网打尽
 
 ## 🚀 推荐使用 [ofox.ai](https://ofox.io/x/aiv123)
 
-> **一句话**：一个账号直达 GPT-5.5 / Claude 4.8 Opus / Gemini 3.5 Flash 等 **100+** 顶尖模型，首充额外赠 **$3** 额度。
+> **一句话**：一个账号直达最新 GPT / Claude / Gemini 等 **100+** 顶尖模型，首充额外赠 **$3** 额度。
+
+文本、图像、视频、向量一站调用；支持缓存，重复请求更省更快。
 
 [👉 注册领取](https://ofox.io/x/aiv123) · 全球专线 · 企业级 SLA · 不留存对话
 
-| ⚡️ 极速稳定 | 🧠 模型全 | 🛡️ 隐私安全 |
+| ⚡️ 极速更省 | 🧠 模型与模态 | 🛡️ 隐私安全 |
 |:---:|:---:|:---:|
-| 全球专线，企业级 SLA | 100+ 模型一号直达 | 不留存任何对话 |
+| 全球专线，企业级 SLA，支持缓存 | 100+ 模型 · 文本 / 图像 / 视频 / 向量 | 不留存任何对话 |
 
 ## ☕ 请我喝可乐
 
 开源不易，欢迎赞助支持：  
 👉 [爱发电](https://ifdian.net/a/shellsec)
 
-**中文** · [English README](README.md)
+---
+
+# GitHub 发行版拉取工具（GH Release Fetch）
 
 | | |
 |:---|:---|
@@ -82,21 +88,24 @@ GH Release Fetch: 700+ app catalog (Windows) — search by name, download/update
 - `auto_update.py`：按配置抓取版本、下载文件、按需启动安装程序（优先读取 `apps/` 目录合并结果，否则使用单文件 `apps.json`）
 - `apps/`：推荐布局——[`apps/root.json`](apps/root.json)（全局）+ [`apps/windows/*.json`](apps/windows/) + [`apps/darwin/*.json`](apps/darwin/) + [`apps/linux/*.json`](apps/linux/)（均按分类拆成多个数组文件，与 windows 命名风格一致）；若无分片目录则回退单文件 `apps/darwin.json`、`apps/linux.json`。历史单文件备份见 `apps.json.monolith.bak`；darwin/linux 由单文件迁出后的备份见 `apps/darwin.json.bak`、`apps/linux.json.bak`
 - `run_update.bat`：Windows 下一键检查 Python、安装依赖并执行 `python auto_update.py`
-- `lookup_app.py` / `lookup_app.bat`：在清单中**模糊检索** → 选条目 → **1 立刻下载 / 2 加入并下载 / 3 加入列表 / 4 启用**（见 §3）
+- `lookup_app.py` / `lookup_app.bat`：在清单中**模糊检索** → 选条目 → **1 立刻下载 / 2 加入并下载 / 3 加入列表 / 4 启用**（见 §3）。搜 APK 用 [`lookup_mobile.bat`](lookup_mobile.bat)，搜 iOS 用 [`lookup_ios.bat`](lookup_ios.bat)
 - `search_soft_pages.bat`：在 [`tools/soft_page_check/`](tools/soft_page_check/) 已抓取的介绍页**标题**中搜索并打开链接；**无参数**时提示输入关键词（与 GitHub 清单互补）
 - `run_saved_apps.bat`：按列表一键开启并执行 `auto_update.py`（与 `lookup_app` 配套）
 
-### 推荐软件介绍（Markdown）
+### 推荐软件介绍 / 分类展示页
 
-不知道清单里有什么、各自干什么用时，先看各平台全分类导读（简介、仓库、分片、配置完整度、lookup 命令）：
+不知道清单里有什么、各自干什么用时：
+
+- **本地展示页**（按平台、分类浏览，可搜索，区分「可下载 / 仅官网」）：双击 [`open_catalog.bat`](open_catalog.bat) 或用浏览器打开 [`catalog.html`](catalog.html)
+- **Markdown 全分类导读**（简介、仓库、分片、配置完整度、lookup 命令）：
 
 | 平台 | 中文导读 | 英文简表 | 规模（约） |
 |------|----------|----------|------------|
-| Windows | [`RECOMMENDED.zh-CN.md`](RECOMMENDED.zh-CN.md) | [`RECOMMENDED.md`](RECOMMENDED.md) | 742 条 |
-| macOS | [`RECOMMENDED.darwin.zh-CN.md`](RECOMMENDED.darwin.zh-CN.md) | [`RECOMMENDED.darwin.md`](RECOMMENDED.darwin.md) | 653 条 |
-| Linux | [`RECOMMENDED.linux.zh-CN.md`](RECOMMENDED.linux.zh-CN.md) | [`RECOMMENDED.linux.md`](RECOMMENDED.linux.md) | 633 条 |
+| Windows | [`RECOMMENDED.zh-CN.md`](RECOMMENDED.zh-CN.md) | [`RECOMMENDED.md`](RECOMMENDED.md) | 823 条 |
+| macOS | [`RECOMMENDED.darwin.zh-CN.md`](RECOMMENDED.darwin.zh-CN.md) | [`RECOMMENDED.darwin.md`](RECOMMENDED.darwin.md) | 769 条 |
+| Linux | [`RECOMMENDED.linux.zh-CN.md`](RECOMMENDED.linux.zh-CN.md) | [`RECOMMENDED.linux.md`](RECOMMENDED.linux.md) | 697 条 |
 
-刷新三份文档：`python tools/generate_recommended_md.py`（或指定 `windows` / `darwin` / `linux`）。分片统计见 [`CATALOG.md`](CATALOG.md)。
+刷新：`python tools/generate_catalog_html.py`（展示页）· `python tools/generate_recommended_md.py`（Markdown，可指定 `windows` / `darwin` / `linux`）。分片统计见 [`CATALOG.md`](CATALOG.md)。
 
 ### VibeCodingToolsDown（可选独立清单）
 
@@ -142,9 +151,9 @@ search_games.bat 艾尔登
 
 ### 仓库现状与收录范围（约略）
 
-合并配置后规模约为：**Windows 742 条**、**darwin 653 条**、**linux 633 条**（[`apps/windows/`](apps/windows/) 等下各 **30** 个分类分片；**不含** `99-未匹配-windows分片.json` 占位条目）。**分片级概览**见根目录 [`CATALOG.md`](CATALOG.md)（运行 `python tools/generate_catalog_index.py` 可刷新）。精确数以运行 `python auto_update.py` 时日志里「已从 apps/ 目录合并配置」为准。
+合并配置后规模约为：**Windows 823 条**、**darwin 769 条**、**linux 697 条**（[`apps/windows/`](apps/windows/) 等下各 **30** 个分类分片；**不含** `99-未匹配-windows分片.json` 占位条目）。**分片级概览**见根目录 [`CATALOG.md`](CATALOG.md)（运行 `python tools/generate_catalog_index.py` 可刷新）。精确数以运行 `python auto_update.py` 时日志里「已从 apps/ 目录合并配置」为准。
 
-**移动端**（独立清单 [`apps-mobile/`](apps-mobile/)）：Android **164 条** / **39 分片**（30 类 + 移动专属；GitHub APK **仅下载**）；iOS **52 条** App Store 占位（**不可** auto_update）。索引 [`CATALOG.mobile.md`](CATALOG.mobile.md)。
+**移动端**（独立清单 [`apps-mobile/`](apps-mobile/)）：Android **252 条** / **39 分片**（30 类 + 移动专属；GitHub APK **仅下载**，闭源官方为打开商店/官网页）；iOS **123 条** App Store 占位（**不可** auto_update，lookup 打开商店页）。索引 [`CATALOG.mobile.md`](CATALOG.mobile.md)。搜移动端：`lookup_mobile.bat 微信` 或 `lookup_ios.bat 微信`。
 
 主清单以 **GitHub Releases**（及镜像）为主；部分 AI IDE（Cursor、VS Code、Trae、Windsurf、LM Studio、Antigravity、ZCode 等）通过 `resolve_via=github_pages_manifest` 读取 [`apps/root.json`](apps/root.json) 中的 `vibecoding_manifest_url`（默认 `./VibeCodingToolsDown/dist/vibecoding/manifest.json`）。根配置默认 **`refresh_manifest_before_resolve: true`**：下载前会对该条目执行 `build_manifest.py --only <id>` 刷新本地 snapshot（失败则回退已有文件）；便携 zip 若未附带 `VibeCodingToolsDown/scripts/` 则跳过联网刷新、直接用包内 snapshot。亦可手动：`python VibeCodingToolsDown/scripts/build_manifest.py`（全量）或 `--only cursor,vscode`。
 
@@ -215,7 +224,9 @@ Windows 可从 [大眼仔旭 Windows 专区](https://www.dayanzai.me/windows) �
 
 | exe | bat | 作用 |
 |-----|-----|------|
-| `lookup_app.exe` | [`lookup_app.bat`](lookup_app.bat) | 模糊搜索 → 1/2/3/4 |
+| `lookup_app.exe` | [`lookup_app.bat`](lookup_app.bat) | 桌面模糊搜索 → 1/2/3/4（无参数时先选清单） |
+| （共用 lookup_app.exe） | [`lookup_mobile.bat`](lookup_mobile.bat) | 搜 Android APK |
+| （共用 lookup_app.exe） | [`lookup_ios.bat`](lookup_ios.bat) | 搜 iOS App Store 占位 |
 | `run_saved_apps.exe` | [`run_saved_apps.bat`](run_saved_apps.bat) | 按列表批量更新 |
 | `search_soft_pages.exe` | [`search_soft_pages.bat`](search_soft_pages.bat) | 搜工具介绍页标题（打开链接） |
 | `search_games.exe` | [`search_games.bat`](search_games.bat) | 搜 gamer520 游戏页（本地近期 + 站内搜索回退） |
@@ -326,6 +337,8 @@ python auto_update.py
 
 ```bat
 lookup_app.bat drawio
+lookup_mobile.bat termux
+lookup_ios.bat 微信
 ```
 
 或：
@@ -339,12 +352,14 @@ python lookup_app.py drawio
 ```text
 用法: lookup_app [选项与关键词...]
 示例: lookup_app drawio
-      lookup_app --platform android termux
+      lookup_mobile.bat termux
+      lookup_ios.bat 微信
+无参数: 先选清单（1 桌面 / 2 Android / 3 iOS）再输入关键词
 选条目后: 1=立刻下载  2=加入并下载  3=加入列表  4=启用
 跳过交互: lookup_app -y --download drawio
 ```
 
-**无参数：** 直接运行 `lookup_app.bat` 会提示输入关键词（同一行可带 `--platform android termux` 等）。
+**无参数：** 直接运行 `lookup_app.bat` / `lookup_app.exe` 会先问搜桌面还是 Android / iOS，再输入关键词。搜 APK 也可直接 `lookup_mobile.bat termux`。
 
 **两步交互：** 搜索 → 选序号（`1`、`1,3`、`a`，**回车**跳过）→ 选操作 **1**–**4**。短关键词如 `draw` 常出现 **三条**（darwin / linux / windows，同一 `id`）；选对平台，或用 `--platform windows drawio` 缩小范围。
 
@@ -367,7 +382,7 @@ lookup_app.bat draw
 
 | 选项 | 说明 |
 |------|------|
-| `--platform windows\|darwin\|linux` | 只显示该平台匹配项 |
+| `--platform windows\|darwin\|linux\|android\|ios` | 只显示该平台匹配项（android/ios 需 `--apps-dir apps-mobile`，或用 `lookup_mobile.bat` / `lookup_ios.bat`） |
 | `--save [文件]` | 选中项加入更新列表（默认 `saved_apps_<平台>.json`） |
 | `--no-save-prompt` | 不询问是否加入列表 |
 | `--no-prompt` | 只查询，不交互 |
@@ -547,7 +562,7 @@ python auto_update.py --insecure
 
 `{download_dir}/{windows|darwin|linux}/…`
 
-便于在同一台机器上交叉执行 `--platform windows` / `darwin` / `linux` 时，安装包按系统类型分文件夹存放。日志中会标注 **`[平台: …]`** 与完整目标路径。
+便于在同一台机器上交叉执行 `--platform windows` / `darwin` / `linux` 时，安装包按系统类型分文件夹存放。日志中会标注 **`[平台: …]`** 与完整目标路径。压缩包下完后会打开该目录（Windows 选中文件）；exe/msi 仍按 `run_installer` 启动安装程序。
 
 大文件经公共下载镜像（如 `gh-proxy.com` 等）时可能较慢；控制台会显示 **百分比（含小数）与已下/总大小（MiB）**，避免长时间停在「0%」的错觉。直连 GitHub 的备用 URL 会按脚本逻辑依次尝试。
 
@@ -574,7 +589,7 @@ python auto_update.py --insecure
 - `installer_extensions`：如 `.exe`、`.msi`
 - `process_name`：安装前要结束的进程名（Windows）
 - `kill_before_install`：安装前是否先结束进程
-- `run_installer`：是否下载完成后自动启动安装程序
+- `run_installer`：是否下载完成后自动启动安装程序（exe/msi）；压缩包始终只打开下载目录
 - `url_hint`：页面兜底搜索时使用的关键字
 - `href_exclude_substrings`：排除不需要的链接
 - `installer_markers_match_all`：要求多个关键字同时命中
@@ -591,7 +606,7 @@ python auto_update.py --insecure
 
 - 想 **立即稳定使用**，请优先启用 **已带完整匹配规则** 的条目（Windows 侧多数常用软件已配 `installer_markers` / `download_names` / `save_name` 等，但仍建议先对单个 `id` 试跑再批量定时）。
 - 想让某条 **目录型/占位** 条目真正可自动下载，需补全 `installer_markers`、`download_names`、`save_name` 等。
-- 部分条目下载结果为 **压缩包**（`run_installer: false`），脚本 **不会** 自动解压或安装。
+- 下载结果为 **压缩包**（7z/zip/tar 等）时，脚本 **不会** 自动解压，也不会用关联程序打开压缩包本身，而是打开下载目录（Windows 会选中该文件）。exe/msi 仍可按 `run_installer` 自动运行安装程序。
 - 个别条目（如 `nodejs`）含特殊逻辑：可能结合 `nodejs.org` 等官方地址，以脚本为准。
 - **GitHub API 有未认证请求频率限制**；短时间对大量 `prefer_api_assets` 条目连跑可能触发 403，可隔段时间重试、配置网络代理，或为请求配置 GitHub 令牌（需自行在环境中使 `requests` 生效，本仓库不内置令牌逻辑）。
 - 若某软件 **tag 与资产文件名规则不一致**（例如 tag 为 `release-1.x` 而包名为 `1.x`），可能无法仅靠 `{ver}` 模板拼对，需改配置或等脚本扩展；这类情况在 README 中无法穷举，以实际日志为准。
@@ -637,11 +652,14 @@ search_soft_pages.bat 7zip
 | 目的 | 命令 |
 |------|------|
 | GitHub 清单模糊查找 / 加入更新列表 | `lookup_app.bat <关键词>`（见 §3） |
+| 搜 Android APK / iOS 商店 | `lookup_mobile.bat` / `lookup_ios.bat` |
 | 介绍页标题搜索 / 打开链接 | **`search_soft_pages.bat`**（无参数可交互输入） |
 | 游戏页标题搜索（gamer520） | **`search_games.bat`** |
 | 按列表一键更新 | **`run_saved_apps.bat`** 或 `python tools/run_saved_apps.py` |
 | Windows 无 Python 打包 exe | `powershell -File tools\build_exe.ps1` → 复制 `dist/exe/*.exe` 到仓库根 |
 | 刷新推荐导读 Markdown | `python tools/generate_recommended_md.py` |
+| 打开分类展示页 | **`open_catalog.bat`**（[`catalog.html`](catalog.html)） |
+| 刷新分类展示页 [`catalog.html`](catalog.html) | `python tools/generate_catalog_html.py` |
 | 刷新 [`CATALOG.md`](CATALOG.md) | `python tools/generate_catalog_index.py` |
 | 刷新 [`CATALOG.mobile.md`](CATALOG.mobile.md) | `python tools/generate_mobile_catalog_index.py` |
 
@@ -666,6 +684,8 @@ search_soft_pages.bat 7zip
 | `tools/append_mobile_catalog_batch4.py` | NipaPlay-Reload、NextPlayer、mpv-android（Android） |
 | `tools/append_mobile_catalog_batch5.py` | Android 薄分类大补 + iOS App Store 占位扩展 |
 | `tools/append_mobile_catalog_batch6.py` | Android / iOS 尽量全覆盖（batch5 后再 +77） |
+| `tools/append_catalog_batch21.py` | macOS 装机必备官网/网页占位（对齐 Android） |
+| `tools/append_mobile_catalog_batch9.py` | iOS 装机必备 App Store 占位（对齐 Android） |
 | `tools/append_catalog_batch2.py` ~ `batch4.py` | 历史批处理（跨平台常用软件） |
 
 ### 介绍页监控（soft_page_check）

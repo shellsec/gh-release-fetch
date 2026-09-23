@@ -59,18 +59,60 @@ def _item(
     }
 
 
-def fetch_cursor(s: requests.Session) -> dict[str, Any]:
-    r = s.get(
-        "https://api.github.com/repos/accesstechnology-mike/cursor-downloads/releases/latest",
-        headers=_github_api_headers(),
-        timeout=40,
-    )
-    r.raise_for_status()
-    j = r.json()
+CURSOR_DOWNLOADS_API = (
+    "https://api.github.com/repos/accesstechnology-mike/cursor-downloads/releases/latest"
+)
+_GH_PROXY_PREFIXES = (
+    "https://gh-proxy.com/",
+    "https://ghp.ci/",
+    "https://mirror.ghproxy.com/",
+)
+
+
+def _get_github_json(s: requests.Session, api_url: str) -> dict[str, Any]:
+    """官方 API 优先；国内失败则走 gh-proxy（不把 token 发给第三方）。"""
+    last: Exception | None = None
+    attempts: list[tuple[str, bool]] = [(api_url, True)]
+    for prefix in _GH_PROXY_PREFIXES:
+        attempts.append((prefix + api_url, False))
+    for url, use_auth in attempts:
+        try:
+            headers = _github_api_headers() if use_auth else dict(GH_ACCEPT)
+            r = s.get(url, headers=headers, timeout=25)
+            r.raise_for_status()
+            data = r.json()
+            if not isinstance(data, dict):
+                raise RuntimeError("GitHub JSON 不是对象")
+            return data
+        except Exception as e:
+            last = e
+            continue
+    raise last or RuntimeError("GitHub JSON 不可达: %s" % api_url)
+
+
+def _cursor_urls_from_body(body: str) -> list[str]:
+    return re.findall(r"https://downloads\.cursor\.com[^)\s\"']+", body or "")
+
+
+def _cursor_commit(urls: list[str]) -> str:
+    for u in urls:
+        m = re.search(r"/production/([0-9a-f]{40})/", u)
+        if m:
+            return m.group(1)
+    return ""
+
+
+def _cursor_release(s: requests.Session) -> tuple[str, str, list[str], str]:
+    """返回 tag、去 v 版本、CDN 链、commit（snapshot hash）。"""
+    j = _get_github_json(s, CURSOR_DOWNLOADS_API)
     tag = (j.get("tag_name") or "").strip() or "unknown"
     ver = tag.lstrip("v")
-    body = j.get("body") or ""
-    urls = re.findall(r"\((https://downloads\.cursor\.com[^)]+)\)", body)
+    urls = _cursor_urls_from_body(j.get("body") or "")
+    return tag, ver, urls, _cursor_commit(urls)
+
+
+def fetch_cursor(s: requests.Session) -> dict[str, Any]:
+    _tag, ver, urls, commit = _cursor_release(s)
     win = next((u for u in urls if "UserSetup-x64" in u and u.lower().endswith(".exe")), None)
     # 新版本多为 .dmg；旧索引可能是 .zip
     mac_u = next(
@@ -93,7 +135,7 @@ def fetch_cursor(s: requests.Session) -> dict[str, Any]:
         None,
     )
     lin = lin_raw[:-6] if lin_raw and lin_raw.lower().endswith(".zsync") else lin_raw
-    return _item(
+    item = _item(
         "cursor",
         ver,
         {
@@ -103,8 +145,120 @@ def fetch_cursor(s: requests.Session) -> dict[str, Any]:
             else None,
             "linux": {"url": lin, "filename": os.path.basename(lin) if lin else ""} if lin else None,
         },
-        notes="索引自 accesstechnology-mike/cursor-downloads Release 正文中的官方 CDN 链。",
+        notes=(
+            "索引自 accesstechnology-mike/cursor-downloads。"
+            "国内请用本 snapshot 覆盖安装，勿依赖应用内 Check for Updates。"
+            + (f" commit={commit}" if commit else "")
+        ),
     )
+    if commit:
+        item["commit"] = commit
+    return item
+
+
+def fetch_cursor_reh(s: requests.Session) -> dict[str, Any]:
+    """Remote-SSH 用的 cursor-server（linux x64）。与客户端同一 commit。"""
+    _tag, ver, urls, commit = _cursor_release(s)
+    if not commit:
+        raise RuntimeError("Cursor 索引里没有 production/<commit>/，无法拼 cursor-reh")
+    url = (
+        f"https://downloads.cursor.com/production/{commit}/linux/x64/"
+        "cursor-reh-linux-x64.tar.gz"
+    )
+    blk = {"url": url, "filename": "cursor-reh-linux-x64.tar.gz"}
+    item = _item(
+        "cursor_reh",
+        ver,
+        {"windows": blk, "darwin": blk, "linux": blk},
+        notes=(
+            "Cursor Remote-SSH 服务端 linux-x64。"
+            f" 解压到 ~/.cursor-server/bin/linux-x64/{commit}/ ，再 touch 0。"
+            " 国内服务器访问不了 downloads.cursor.com 时：本机 snapshot 下载后 scp 上去。"
+        ),
+    )
+    item["commit"] = commit
+    return item
+
+
+GROK_BOT_PAGES = (
+    "https://cursor.com/cn/download/bot",
+    "https://cursor.com/download/bot",
+)
+GROK_BOT_CDN_RE = re.compile(r"https://downloads\.cursor\.com/grokbot/[^\s\"'<>)]+", re.I)
+
+
+def _grok_bot_urls(s: requests.Session) -> list[str]:
+    """从 Cursor 官网 Grok Bot 下载页提取 CDN 直链（?download=1 仍是 HTML，勿当安装包）。"""
+    seen: set[str] = set()
+    last: Exception | None = None
+    for page in GROK_BOT_PAGES:
+        try:
+            r = s.get(page, timeout=40)
+            r.raise_for_status()
+            for u in GROK_BOT_CDN_RE.findall(r.text or ""):
+                seen.add(u.split("?", 1)[0].rstrip("\\").rstrip(")"))
+        except Exception as e:
+            last = e
+            continue
+    if not seen and last:
+        raise last
+    return sorted(seen)
+
+
+def fetch_grok_bot(s: requests.Session) -> dict[str, Any]:
+    """Grok Bot 桌面端：解析 cursor.com/download/bot 页内 downloads.cursor.com/grokbot/ 直链。"""
+    urls = _grok_bot_urls(s)
+    if not urls:
+        raise RuntimeError("未解析到 Grok Bot CDN 直链（cursor.com/download/bot）")
+
+    def pick(*needles: str, suffix: str) -> str | None:
+        suf = suffix.lower()
+        for u in urls:
+            low = u.lower()
+            if all(n.lower() in low for n in needles) and low.endswith(suf):
+                return u
+        return None
+
+    win = pick("win32-x64", suffix=".exe")
+    mac = pick("darwin-arm64", suffix=".dmg") or pick("darwin-x64", suffix=".dmg")
+    lin = pick("/linux/x64/", suffix=".appimage")
+    if not (win or mac or lin):
+        raise RuntimeError("Grok Bot 页面无 Win/Mac/Linux 安装包直链")
+
+    ver = "unknown"
+    for u in (win, mac, lin):
+        if not u:
+            continue
+        m = re.search(r"(\d+\.\d+\.\d+)", os.path.basename(u.split("?", 1)[0]))
+        if m:
+            ver = m.group(1)
+            break
+    commit = ""
+    for u in urls:
+        m = re.search(r"/stable/([0-9a-f]{40})/", u)
+        if m:
+            commit = m.group(1)
+            break
+
+    def blk(u: str | None) -> dict[str, str] | None:
+        if not u:
+            return None
+        return {"url": u, "filename": os.path.basename(u.split("?", 1)[0])}
+
+    item = _item(
+        "grok_bot",
+        ver,
+        {"windows": blk(win), "darwin": blk(mac), "linux": blk(lin)},
+        notes=(
+            "Cursor 官网 Grok Bot 桌面端（不是 Cursor IDE，也不是 grok.com 网页）。"
+            " 直链来自 https://cursor.com/cn/download/bot 页内 downloads.cursor.com/grokbot/ ；"
+            " 勿套 gh-proxy，勿把 /download/bot?download=1 当安装包。"
+            + (f" commit={commit}" if commit else "")
+        ),
+    )
+    if commit:
+        item["commit"] = commit
+    return item
 
 
 def _vscode_redirect(s: requests.Session, path_suffix: str) -> str:
@@ -1334,6 +1488,8 @@ def fetch_workbuddy(s: requests.Session) -> dict[str, Any]:
 
 BUILDERS: list[tuple[str, Any]] = [
     ("cursor", fetch_cursor),
+    ("cursor_reh", fetch_cursor_reh),
+    ("grok_bot", fetch_grok_bot),
     ("vscode", fetch_vscode),
     ("vscodium", fetch_vscodium),
     ("trae", fetch_trae),

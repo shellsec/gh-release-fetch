@@ -317,7 +317,17 @@ def _resolve_local_manifest_path(raw: str, apps_config_root=None) -> str | None:
 
 
 def _refresh_manifest_item(mid: str, manifest_path: str) -> bool:
-    """调用 build_manifest.py --only <id> 合并刷新本地 manifest。成功返回 True。"""
+    """调用 build_manifest.py --only <id> 合并刷新本地 manifest。成功返回 True。
+
+    打包成 exe（frozen）时 sys.executable 即本程序，不能把 --only 传给它；
+    便携包应直接使用包内 snapshot。路径含空格时用 list 传参即可。
+    """
+    if getattr(sys, "frozen", False):
+        logger.info(
+            "[%s] 打包运行（frozen）跳过联网刷新 manifest，将使用已有 snapshot",
+            mid,
+        )
+        return False
     script = os.path.join(
         SCRIPT_DIR, "VibeCodingToolsDown", "scripts", "build_manifest.py"
     )
@@ -969,6 +979,8 @@ def normalize_download_url_list(parsed_url, fallback_urls):
                 f"https://mirror.ghproxy.com/{url}",
                 url,
             ]
+        # downloads.cursor.com / cursor-cdn.com 等厂商 CDN 不要套 gh-proxy
+        # （反代只代理 GitHub，套上去会 60s 超时后再试官方）
         return [url]
 
     download_urls = []
@@ -1157,6 +1169,70 @@ def kill_process(process_name):
         raise
 
 
+_ARCHIVE_EXTS = frozenset(
+    {
+        ".7z",
+        ".zip",
+        ".rar",
+        ".tar",
+        ".tgz",
+        ".tbz",
+        ".tbz2",
+        ".txz",
+        ".gz",
+        ".bz2",
+        ".xz",
+        ".zst",
+        ".lz4",
+        ".lzma",
+        ".cab",
+    }
+)
+_ARCHIVE_COMPOUND_SUFFIXES = (
+    ".tar.gz",
+    ".tar.bz2",
+    ".tar.xz",
+    ".tar.zst",
+    ".tar.lz",
+    ".tar.lz4",
+    ".tar.lzma",
+)
+_MOBILE_PACKAGE_EXTS = frozenset({".apk", ".aab", ".ipa"})
+
+
+def is_archive_filename(path):
+    name = os.path.basename(path or "").lower()
+    if any(name.endswith(suffix) for suffix in _ARCHIVE_COMPOUND_SUFFIXES):
+        return True
+    return os.path.splitext(name)[1] in _ARCHIVE_EXTS
+
+
+def reveal_in_file_manager(path):
+    path = os.path.abspath(path)
+    folder = os.path.dirname(path) if os.path.isfile(path) else path
+    if not os.path.isdir(folder):
+        logger.warning("下载目录不存在，无法打开: %s", folder)
+        return False
+    try:
+        if sys.platform == "win32":
+            if os.path.isfile(path):
+                subprocess.Popen(["explorer", "/select,", os.path.normpath(path)])
+            else:
+                subprocess.Popen(["explorer", os.path.normpath(folder)])
+        elif sys.platform == "darwin":
+            if os.path.isfile(path):
+                subprocess.Popen(["open", "-R", path])
+            else:
+                subprocess.Popen(["open", folder])
+        else:
+            subprocess.Popen(["xdg-open", folder])
+        logger.info("已在文件管理器中打开下载目录: %s", folder)
+        return True
+    except Exception as e:
+        logger.warning("打开下载目录失败: %s", e)
+        return False
+
+
 def run_installer(installer_path):
     logger.info("开始运行安装程序: %s", installer_path)
     if not os.path.exists(installer_path):
@@ -1235,13 +1311,17 @@ def update_one(app, download_root, verify=True, platform_key=None, cfg=None):
     )
     logger.info("[%s] 安装包已下载: %s", aid, installer_path)
 
-    if not app.get("run_installer", True):
-        logger.info("[%s] 配置为仅下载，跳过结束进程与启动安装包", aid)
-        return 0
-
     ext = os.path.splitext(installer_path)[1].lower()
-    if ext in (".apk", ".aab", ".ipa"):
-        logger.info("[%s] 移动端安装包仅下载，不执行安装（%s）", aid, ext)
+    archive = is_archive_filename(installer_path)
+    mobile = ext in _MOBILE_PACKAGE_EXTS
+    if archive or mobile or not app.get("run_installer", True):
+        if archive:
+            logger.info("[%s] 压缩包仅下载，不自动解压或打开压缩包本身；打开所在目录", aid)
+        elif mobile:
+            logger.info("[%s] 移动端安装包仅下载，不执行安装（%s）；打开所在目录", aid, ext)
+        else:
+            logger.info("[%s] 配置为仅下载，跳过结束进程与启动安装包；打开所在目录", aid)
+        reveal_in_file_manager(installer_path)
         return 0
 
     if app.get("kill_before_install", True):
@@ -1311,6 +1391,14 @@ def main():
 
     exit_code = 0
     for app in apps:
+        if app.get("open_page_only") is True:
+            url = (app.get("open_page_url") or "").strip()
+            logger.info(
+                "[%s] 仅打开官网，跳过自动下载%s",
+                app.get("id"),
+                (" → " + url) if url else "（请用 lookup_app --open）",
+            )
+            continue
         if uses_github_pages_manifest(app):
             missing = [k for k in ("id",) if not app.get(k)]
         else:

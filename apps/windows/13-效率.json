@@ -774,35 +774,37 @@
   },
   {
     "id": "snapx",
-    "简介": "SnapX（ShareX 跨平台分支；pinned v0.3.0，latest 多为 flatpak）",
+    "简介": "SnapX（Windows x64 msi）",
     "分类": "效率",
     "enabled": false,
     "prefer_api_assets": true,
     "version_tag_as_on_github": true,
-    "windows_installer": false,
+    "windows_installer": true,
     "process_name": "",
     "kill_before_install": false,
-    "run_installer": false,
+    "run_installer": true,
     "pinned_release_tag": "v0.3.0",
     "installer_markers_match_all": true,
     "installer_markers": [
-      "SnapX-Avalonia-Release-",
-      "Windows-X64.zip"
+      "SnapX-Release-Windows-",
+      "X64.msi"
     ],
     "href_exclude_substrings": [
-      "ARM64",
+      "Arm64",
       "Linux",
-      "macOS"
+      "macOS",
+      ".tar"
     ],
     "installer_extensions": [
-      ".zip"
+      ".msi"
     ],
     "download_names": [
       "SnapX-Avalonia-Release-{ver}-Windows-X64.zip"
     ],
     "save_name": "SnapX-Avalonia-Release-{ver}-Windows-X64.zip",
     "releases_url": "https://bgithub.xyz/SnapXL/SnapX/releases",
-    "repo_path": "SnapXL/SnapX"
+    "repo_path": "SnapXL/SnapX",
+    "use_download_filename": true
   },
   {
     "id": "xerahs",
@@ -866,6 +868,7 @@
     "use_download_filename": true,
     "aliases": [
       "Super Productivity",
+      "super-productivity",
       "superproductivity"
     ],
     "process_name": "",
@@ -1345,5 +1348,454 @@
     "process_name": "SmartSystemMenu.exe",
     "kill_before_install": true,
     "run_installer": false
+  },
+  {
+    "id": "paper_todo",
+    "简介": "PaperTodo（极简桌面便签/待办；Windows x64 自包含安装包）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "no-runtime",
+      ".sig",
+      ".crt"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "PaperTodo-",
+      "self-contained.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "releases_url": "https://bgithub.xyz/snownico0722/PaperTodo/releases",
+    "repo_path": "snownico0722/PaperTodo"
+  },
+  {
+    "id": "utools",
+    "简介": "uTools（效率启动器；官网分发，lookup 打开下载页）",
+    "分类": "效率",
+    "aliases": [
+      "utools",
+      "uTools",
+      "u工具"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.u.tools/",
+    "url_hint": "utools uTools u工具",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "listary",
+    "简介": "Listary（文件搜索启动器；官网分发，lookup 打开下载页）",
+    "分类": "效率",
+    "aliases": [
+      "listary",
+      "Listary"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.listary.com/download",
+    "url_hint": "listary Listary",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "catime",
+    "简介": "Catime（纯 C 轻量 Windows 计时器：倒计时/番茄钟/秒表，便携 exe）",
+    "分类": "效率",
+    "aliases": [
+      "catime",
+      "Catime",
+      "番茄钟",
+      "倒计时",
+      "计时器"
+    ],
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/vladelaina/Catime/releases",
+    "repo_path": "vladelaina/Catime",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "catime_",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      ".zip",
+      ".tar",
+      ".txt",
+      ".md",
+      "checksum"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "use_download_filename": true,
+    "save_name": "catime_{ver}.exe",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "catime Catime 番茄钟 倒计时 计时器"
+  },
+  {
+    "id": "kando",
+    "简介": "Kando（开源饼状菜单；Windows x64 安装包）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "arm64",
+      "darwin",
+      "linux",
+      "AppImage",
+      ".rpm",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Kando-",
+      "Setup-x64.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "kando",
+      "Kando"
+    ],
+    "releases_url": "https://bgithub.xyz/kando-menu/kando/releases",
+    "repo_path": "kando-menu/kando"
+  },
+  {
+    "id": "piclist",
+    "简介": "PicList（开源图床/图床管理，PicGo 增强；Windows x64 安装包）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "arm64",
+      "linux",
+      "mac",
+      "dmg",
+      ".yml"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "PicList-Setup-",
+      "-x64.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "piclist",
+      "PicList"
+    ],
+    "releases_url": "https://bgithub.xyz/Kuingsmile/PicList/releases",
+    "repo_path": "Kuingsmile/PicList"
+  },
+  {
+    "id": "handy",
+    "简介": "Handy（开源语音输入；Windows x64 安装包）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "arm64",
+      "linux",
+      "dmg",
+      ".msi",
+      ".sig"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Handy_",
+      "_x64-setup.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "handy",
+      "Handy"
+    ],
+    "releases_url": "https://bgithub.xyz/cjpais/Handy/releases",
+    "repo_path": "cjpais/Handy"
+  },
+  {
+    "id": "pot",
+    "简介": "Pot（划词翻译/OCR；Windows x64 安装包）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "arm64",
+      "x86",
+      "linux",
+      "dmg",
+      "webview2",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "pot_",
+      "_x64-setup.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "pot",
+      "Pot",
+      "pot-desktop"
+    ],
+    "releases_url": "https://bgithub.xyz/pot-app/pot-desktop/releases",
+    "repo_path": "pot-app/pot-desktop"
+  },
+  {
+    "id": "zapier",
+    "简介": "Zapier（自动化工作流网页；lookup 打开官网）",
+    "分类": "效率",
+    "aliases": [
+      "zapier",
+      "Zapier"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://zapier.com/",
+    "url_hint": "zapier Zapier",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "make",
+    "简介": "Make（原 Integromat；自动化工作流网页；lookup 打开官网）",
+    "分类": "效率",
+    "aliases": [
+      "make",
+      "Make",
+      "integromat",
+      "Integromat"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.make.com/",
+    "url_hint": "make Make integromat Integromat",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "jijyun",
+    "简介": "集简云（国内自动化集成网页；lookup 打开官网）",
+    "分类": "效率",
+    "aliases": [
+      "jijyun",
+      "集简云",
+      "jijian"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.jijyun.cn/",
+    "url_hint": "jijyun 集简云 jijian",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "n8n",
+    "简介": "n8n（开源自动化工作流；lookup 打开官网，自托管用 Docker）",
+    "分类": "效率",
+    "aliases": [
+      "n8n",
+      "n8n.io"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://n8n.io/",
+    "url_hint": "n8n n8n.io",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "activepieces",
+    "简介": "Activepieces（开源自动化工作流；lookup 打开官网）",
+    "分类": "效率",
+    "aliases": [
+      "activepieces",
+      "Activepieces"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.activepieces.com/",
+    "url_hint": "activepieces Activepieces",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "activitywatch",
+    "简介": "ActivityWatch（开源自动时间追踪；Windows x64 Setup）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "aw-qt.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      ".zip",
+      "linux",
+      "macos"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "activitywatch-v",
+      "windows-x86_64-setup.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "activitywatch",
+      "ActivityWatch",
+      "时间追踪"
+    ],
+    "releases_url": "https://bgithub.xyz/ActivityWatch/activitywatch/releases",
+    "repo_path": "ActivityWatch/activitywatch"
   }
 ]

@@ -1,21 +1,27 @@
-# GH Release Fetch
+**语言 / Language:** [中文](README.zh-CN.md) | English
+
+[aiv123.com](https://aiv123.com/) · AI tools directory, 600+ tools in one place
 
 ## 🚀 Recommended: [ofox.ai](https://ofox.io/x/aiv123)
 
-> **In short**: One account for GPT-5.5 / Claude 4.8 Opus / Gemini 3.5 Flash and **100+** top models. First top-up gets an extra **$3** credit.
+> **In short**: One account for the latest GPT / Claude / Gemini and **100+** top models. First top-up gets an extra **$3** credit.
+
+Text, image, video, and embeddings in one place. Caching supported — repeat calls stay cheaper and faster.
 
 [👉 Sign up](https://ofox.io/x/aiv123) · Global dedicated lines · Enterprise SLA · No conversation retention
 
-| ⚡️ Fast & Stable | 🧠 Full Model Coverage | 🛡️ Privacy |
+| ⚡️ Faster & Leaner | 🧠 Models & Modalities | 🛡️ Privacy |
 |:---:|:---:|:---:|
-| Global dedicated lines, enterprise SLA | 100+ models, one account | No conversation retention |
+| Global lines, enterprise SLA, plus caching | 100+ models · text / image / video / embeddings | No conversation retention |
 
 ## ☕ Buy Me a Coke
 
 Open source takes effort — sponsorship is welcome:  
 👉 [爱发电 / Afdian](https://ifdian.net/a/shellsec)
 
-**English** · [中文 README](README.zh-CN.md)
+---
+
+# GH Release Fetch
 
 | | |
 |:---|:---|
@@ -82,21 +88,22 @@ Open source on Git; everything else on monitored channels (scheduled checks). Do
 - [`auto_update.py`](auto_update.py) — loads merged config from [`apps/`](apps/) (or legacy root [`apps.json`](apps.json)), resolves latest release, downloads assets, optionally launches installers.
 - [`apps/`](apps/) — recommended layout: [`apps/root.json`](apps/root.json) + per-platform JSON shards under [`apps/windows/`](apps/windows/), [`apps/darwin/`](apps/darwin/), [`apps/linux/`](apps/linux/). Falls back to `apps/darwin.json` / `apps/linux.json` if shard dirs are empty. Monolith backup: `apps.json.monolith.bak`; optional backups after splitting: `apps/darwin.json.bak`, `apps/linux.json.bak`.
 - [`run_update.bat`](run_update.bat) — Windows shortcut: checks Python, installs deps, runs `python auto_update.py`.
-- [`lookup_app.py`](lookup_app.py) / [`lookup_app.bat`](lookup_app.bat) — fuzzy search → pick row → **1 download / 2 save+download / 3 save list / 4 enable** (see **§3**).
+- [`lookup_app.py`](lookup_app.py) / [`lookup_app.bat`](lookup_app.bat) — fuzzy search → pick row → **1 download / 2 save+download / 3 save list / 4 enable** (see **§3**). APK: [`lookup_mobile.bat`](lookup_mobile.bat). iOS: [`lookup_ios.bat`](lookup_ios.bat).
 - [`search_soft_pages.bat`](search_soft_pages.bat) — search **intro page titles** from [`tools/soft_page_check/`](tools/soft_page_check/) and open URLs; no-arg run prompts for keywords; complements GitHub catalog lookup.
 - [`run_saved_apps.bat`](run_saved_apps.bat) — enable + run `auto_update.py` for all apps in that list.
 
-### Recommended apps (Markdown guide)
+### Recommended apps (browse + Markdown)
 
-Full catalog guides by platform:
+- **Local catalog page** (by platform/category, searchable, downloadable vs official-site): [`open_catalog.bat`](open_catalog.bat) or open [`catalog.html`](catalog.html)
+- **Markdown guides** (intro, repo, shard, lookup command):
 
 | Platform | Chinese | English table | Scale |
 |----------|---------|---------------|-------|
-| Windows | [`RECOMMENDED.zh-CN.md`](RECOMMENDED.zh-CN.md) | [`RECOMMENDED.md`](RECOMMENDED.md) | 742 |
-| macOS | [`RECOMMENDED.darwin.zh-CN.md`](RECOMMENDED.darwin.zh-CN.md) | [`RECOMMENDED.darwin.md`](RECOMMENDED.darwin.md) | 653 |
-| Linux | [`RECOMMENDED.linux.zh-CN.md`](RECOMMENDED.linux.zh-CN.md) | [`RECOMMENDED.linux.md`](RECOMMENDED.linux.md) | 633 |
+| Windows | [`RECOMMENDED.zh-CN.md`](RECOMMENDED.zh-CN.md) | [`RECOMMENDED.md`](RECOMMENDED.md) | 823 |
+| macOS | [`RECOMMENDED.darwin.zh-CN.md`](RECOMMENDED.darwin.zh-CN.md) | [`RECOMMENDED.darwin.md`](RECOMMENDED.darwin.md) | 769 |
+| Linux | [`RECOMMENDED.linux.zh-CN.md`](RECOMMENDED.linux.zh-CN.md) | [`RECOMMENDED.linux.md`](RECOMMENDED.linux.md) | 697 |
 
-Regenerate all: `python tools/generate_recommended_md.py`. Stats: [`CATALOG.md`](CATALOG.md).
+Regenerate: `python tools/generate_catalog_html.py` and `python tools/generate_recommended_md.py`. Stats: [`CATALOG.md`](CATALOG.md).
 
 **Optional second catalog: [`VibeCodingToolsDown/`](VibeCodingToolsDown/)**
 
@@ -126,7 +133,7 @@ Separate from the GitHub **`apps/`** catalog: tracks **page titles** on dayanzai
 
 **vs `lookup_app`:** GitHub Releases catalog vs intro-page titles. This repo often has **no** `Lastb_soft_version.txt`; checks reuse cached URL lists under `soft_page_check/`. SoftGitUp-style `generate_and_push.bat` / `software/` sync is optional; the main gh-release-fetch flow uses `run_saved_apps.bat`, etc. Run tier-A check **twice** on first use for a diff baseline. Details: [`tools/soft_page_check/README.md`](tools/soft_page_check/README.md).
 
-**Approximate catalog size** (changes when you edit JSON): **742** Windows, **653** darwin, **633** linux entries across **30** shard files each (**excluding** `99-未匹配-windows分片.json` placeholders). See [`CATALOG.md`](CATALOG.md) for a per-shard table (`python tools/generate_catalog_index.py` to refresh). Confirm totals with the merge log line when you run the script.
+**Approximate catalog size** (changes when you edit JSON): **823** Windows, **769** darwin, **697** linux entries across **30** shard files each (**excluding** `99-未匹配-windows分片.json` placeholders). See [`CATALOG.md`](CATALOG.md) for a per-shard table (`python tools/generate_catalog_index.py` to refresh). Confirm totals with the merge log line when you run the script. Mobile catalog (`apps-mobile/`): Android **252**, iOS **123** (App Store placeholders; [`CATALOG.mobile.md`](CATALOG.mobile.md)). Search: `lookup_mobile.bat` / `lookup_ios.bat`.
 
 Some AI IDE / CDN rows in main `apps/` (Cursor, VS Code, Trae, Windsurf, LM Studio, Antigravity, ZCode, etc.) use `resolve_via=github_pages_manifest` via `vibecoding_manifest_url` in [`apps/root.json`](apps/root.json) (default `./VibeCodingToolsDown/dist/vibecoding/manifest.json`). Root default **`refresh_manifest_before_resolve: true`**: before download, `auto_update` runs `build_manifest.py --only <id>` against the local snapshot (falls back to the cached file on failure). Portable zips without `VibeCodingToolsDown/scripts/` skip live refresh and use the bundled snapshot. Manual: `python VibeCodingToolsDown/scripts/build_manifest.py` (full) or `--only cursor,vscode`.
 
@@ -190,7 +197,9 @@ Pack **5 exe files** beside [`apps/`](apps/). Bats use **Python when installed**
 
 | exe | bat | Role |
 |-----|-----|------|
-| `lookup_app.exe` | [`lookup_app.bat`](lookup_app.bat) | Search → actions 1/2/3/4 |
+| `lookup_app.exe` | [`lookup_app.bat`](lookup_app.bat) | Desktop search → actions 1/2/3/4 (no args: pick catalog first) |
+| (same exe) | [`lookup_mobile.bat`](lookup_mobile.bat) | Search Android APKs |
+| (same exe) | [`lookup_ios.bat`](lookup_ios.bat) | Search iOS App Store stubs |
 | `run_saved_apps.exe` | [`run_saved_apps.bat`](run_saved_apps.bat) | Batch update from saved list |
 | `search_soft_pages.exe` | [`search_soft_pages.bat`](search_soft_pages.bat) | Search intro-page titles |
 | `search_games.exe` | [`search_games.bat`](search_games.bat) | Search gamer520 game pages (local index + live site fallback) |
@@ -277,6 +286,8 @@ Default behavior: detect platform, merge `apps/` into `platforms.*`, process **o
 
 ```bat
 lookup_app.bat drawio
+lookup_mobile.bat termux
+lookup_ios.bat wechat
 ```
 
 ```bash
@@ -288,12 +299,14 @@ python lookup_app.py drawio
 ```text
 Usage: lookup_app [options and keywords...]
 Examples: lookup_app drawio
-         lookup_app --platform android termux
+         lookup_mobile.bat termux
+         lookup_ios.bat wechat
+No args: pick catalog (1 desktop / 2 Android / 3 iOS), then type a keyword
 After picking rows: 1=download now  2=save+download  3=save list  4=enable
 Non-interactive:    lookup_app -y --download drawio
 ```
 
-**No arguments:** `lookup_app.bat` prompts for a keyword (you can type `--platform android termux` on the same line).
+**No arguments:** `lookup_app.bat` / `lookup_app.exe` asks which catalog (desktop / Android / iOS), then a keyword. For APKs you can also run `lookup_mobile.bat termux`.
 
 **Two-step flow:** search → pick row (`1`, `1,3`, `a`, or **Enter** to skip) → pick action **1**–**4**. Short keywords like `draw` often match **three rows** (darwin / linux / windows with the same `id`); pick the right platform or narrow with `--platform windows drawio`.
 
@@ -314,7 +327,7 @@ Lists **platform**, **shard path**, **category**, and **enabled**. Interactive f
 
 | Flag | Meaning |
 |------|---------|
-| `--platform windows\|darwin\|linux` | Filter to one platform |
+| `--platform windows\|darwin\|linux\|android\|ios` | Filter to one platform (android/ios: `--apps-dir apps-mobile`, or `lookup_mobile.bat` / `lookup_ios.bat`) |
 | `--save [FILE]` | Add selection to update list (default `saved_apps_<platform>.json`) |
 | `--no-save-prompt` | Do not ask to add to list |
 | `--no-prompt` | Search only |
@@ -451,7 +464,7 @@ Root keys: `download_dir`, `ssl_verify`, `download_subdir_by_platform`, `release
 ## 10. Caveats
 
 - Prefer **fully specified rules** before enabling many apps for cron; smoke-test single `id` first.
-- Archives with `run_installer: false` are **not** auto-extracted.
+- Archives (7z/zip/tar, etc.) are **not** auto-extracted or opened with their associated app; after download the folder is opened in the file manager (Windows selects the file). exe/msi still auto-run when `run_installer` is true.
 - Special cases (e.g. `nodejs`) may use extra official URLs — see script.
 - **Unauthenticated GitHub API** rate limits can return 403; retry later, use a proxy, or wire a token into your environment for `requests` (not built into this repo).
 - If **tag names and file names diverge** (e.g. `release-1.x` vs `1.x` in the asset), `{ver}` templates may need manual tuning.
@@ -493,12 +506,15 @@ search_soft_pages.bat 7zip
 | Goal | Command |
 |------|---------|
 | Fuzzy search GitHub catalog / saved list | `lookup_app.bat <keyword>` (§3) |
+| Search Android APK / iOS App Store | `lookup_mobile.bat` / `lookup_ios.bat` |
 | Search intro-page titles / open URLs | **`search_soft_pages.bat`** (no-arg interactive) |
 | Search game pages (gamer520) | **`search_games.bat`** |
 | Update from saved list | **`run_saved_apps.bat`** or `python tools/run_saved_apps.py` |
 | Build Windows exe (no Python for daily use) | `powershell -File tools\build_exe.ps1` → copy `dist/exe/*.exe` to repo root |
 | **Pack Release zip (one-click)** | **`pack_windows_release.bat`** or `tools\pack_windows_release.ps1` |
 | Regenerate RECOMMENDED*.md | `python tools/generate_recommended_md.py` |
+| Open local catalog page | **`open_catalog.bat`** ([`catalog.html`](catalog.html)) |
+| Regenerate [`catalog.html`](catalog.html) | `python tools/generate_catalog_html.py` |
 | Refresh [`CATALOG.md`](CATALOG.md) | `python tools/generate_catalog_index.py` |
 
 ### enabled & layout

@@ -71,12 +71,14 @@ def argv_from_prompt(
 
 
 def resolve_auto_update_argv(root: str, extra: list[str] | None = None) -> list[str]:
-    """构造调用 auto_update 的 argv（不含 python 时用 exe）。"""
+    """构造调用 auto_update 的 argv。未打包且有 .py 时走脚本，否则用 exe。"""
     extra = extra or []
+    py = os.path.join(root, "auto_update.py")
     exe = os.path.join(root, "auto_update.exe")
+    if (not is_frozen()) and os.path.isfile(py):
+        return [sys.executable, py, *extra]
     if os.path.isfile(exe):
         return [exe, *extra]
-    py = os.path.join(root, "auto_update.py")
     if os.path.isfile(py):
         return [sys.executable, py, *extra]
     raise FileNotFoundError("未找到 auto_update.exe 或 auto_update.py（目录: %s）" % root)

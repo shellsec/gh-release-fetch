@@ -135,13 +135,13 @@
   },
   {
     "id": "hiddify_next",
-    "简介": "Hiddify Next（macOS dmg）",
+    "简介": "Hiddify（原 Hiddify Next / hiddify-app）（macOS dmg）",
     "分类": "代理与隧道",
     "enabled": false,
     "prefer_api_assets": true,
     "version_tag_as_on_github": true,
-    "releases_url": "https://bgithub.xyz/hiddify/hiddify-next/releases",
-    "repo_path": "hiddify/hiddify-next",
+    "releases_url": "https://bgithub.xyz/hiddify/hiddify-app/releases",
+    "repo_path": "hiddify/hiddify-app",
     "installer_markers_match_all": true,
     "installer_markers": [
       "Hiddify-MacOS.dmg"
@@ -608,5 +608,133 @@
     ],
     "releases_url": "https://bgithub.xyz/GUI-for-Cores/GUI.for.SingBox/releases",
     "repo_path": "GUI-for-Cores/GUI.for.SingBox"
+  },
+  {
+    "id": "clash_party",
+    "简介": "Clash Party（原 Mihomo Party；macOS Apple Silicon pkg）",
+    "分类": "代理与隧道",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "catalina",
+      "x64",
+      "mihomo-party",
+      ".dmg",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "clash-party-macos-",
+      "arm64.pkg"
+    ],
+    "installer_extensions": [
+      ".pkg"
+    ],
+    "releases_url": "https://bgithub.xyz/mihomo-party-org/clash-party/releases",
+    "repo_path": "mihomo-party-org/clash-party"
+  },
+  {
+    "id": "karing",
+    "简介": "Karing（多协议代理客户端；macOS universal dmg）",
+    "分类": "代理与隧道",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      ".pkg",
+      "windows",
+      "linux",
+      "android"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "karing_",
+      "macos_universal.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "karing",
+      "Karing"
+    ],
+    "releases_url": "https://bgithub.xyz/KaringX/Karing/releases",
+    "repo_path": "KaringX/Karing"
+  },
+  {
+    "id": "gui_for_clash",
+    "简介": "GUI.for.Clash（Clash/Mihomo 图形前端；macOS Apple Silicon zip）",
+    "分类": "代理与隧道",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "amd64",
+      "windows",
+      "linux"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "GUI.for.Clash-darwin-arm64.zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "aliases": [
+      "gui.for.clash",
+      "GUI.for.Clash"
+    ],
+    "releases_url": "https://bgithub.xyz/GUI-for-Cores/GUI.for.Clash/releases",
+    "repo_path": "GUI-for-Cores/GUI.for.Clash"
   }
 ]

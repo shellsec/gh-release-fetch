@@ -278,5 +278,140 @@
     "open_page_url": "https://github.com/freqtrade/freqtrade/releases",
     "releases_url": "https://bgithub.xyz/freqtrade/freqtrade/releases",
     "repo_path": "freqtrade/freqtrade"
+  },
+  {
+    "id": "alipay",
+    "简介": "支付宝（无官方 Mac 客户端；lookup 打开官网）",
+    "分类": "金融与股票",
+    "aliases": [
+      "alipay",
+      "支付宝"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://mobile.alipay.com/",
+    "url_hint": "alipay 支付宝",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "paypal",
+    "简介": "PayPal（网页版；lookup 打开）",
+    "分类": "金融与股票",
+    "aliases": [
+      "paypal",
+      "PayPal"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.paypal.com/",
+    "url_hint": "paypal PayPal",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "portfolio_performance",
+    "简介": "Portfolio Performance（开源投资组合跟踪；macOS Apple Silicon dmg）",
+    "分类": "金融与股票",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "x86_64",
+      "linux",
+      "windows",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "PortfolioPerformance-",
+      "-aarch64.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "portfolio performance",
+      "Portfolio Performance",
+      "投资组合"
+    ],
+    "releases_url": "https://bgithub.xyz/portfolio-performance/portfolio/releases",
+    "repo_path": "portfolio-performance/portfolio"
+  },
+  {
+    "id": "wealthfolio",
+    "简介": "Wealthfolio（本地优先投资组合桌面；macOS Apple Silicon dmg）",
+    "分类": "金融与股票",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "x64",
+      ".app.tar.gz",
+      "windows",
+      "linux"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Wealthfolio_",
+      "_aarch64.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "wealthfolio",
+      "Wealthfolio"
+    ],
+    "releases_url": "https://bgithub.xyz/afadil/wealthfolio/releases",
+    "repo_path": "afadil/wealthfolio"
   }
 ]

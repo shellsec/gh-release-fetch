@@ -41,10 +41,11 @@ powershell -ExecutionPolicy Bypass -File tools\pack_windows_release.ps1
 
 ## zip 内容
 
-- 5 个 exe + 5 个 bat（lookup / saved / search_soft / search_games / update）
+- 5 个 exe + 8 个 bat（lookup / lookup_mobile / lookup_ios / open_catalog / saved / search_soft / search_games / update）
 - `apps/`、`apps-mobile/`
 - `tools/soft_page_check/`（`history`、`list` 等，供 search_soft_pages / search_games）
 - `README.txt`、`VERSION.txt`、`saved_apps_windows.example.json`
+- `catalog.html` 分类展示页（`open_catalog.bat` 打开）
 - `CATALOG.md`、`RECOMMENDED.zh-CN.md` 等导读（可选阅读）
 - `VibeCodingToolsDown/dist/vibecoding/manifest.json`（Cursor / VS Code / Trae / VirtualBox 等 manifest 解析用的本地 snapshot）
 
@@ -54,4 +55,4 @@ powershell -ExecutionPolicy Bypass -File tools\pack_windows_release.ps1
 
 1. 创建 GitHub Release，打 tag（如 `v1.0.0`）
 2. 附件上传 `gh-release-fetch-windows-v1.0.0.zip`
-3. 说明中写：解压即用，`lookup_app.bat` 搜软件下载
+3. 说明中写：解压即用，`lookup_app.bat` 搜桌面软件；`lookup_mobile.bat` 搜 Android APK

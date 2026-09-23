@@ -204,31 +204,33 @@
   },
   {
     "id": "gdu",
-    "简介": "交互式磁盘占用分析",
+    "简介": "gdu（Windows amd64 exe.zip）",
     "分类": "系统",
     "enabled": false,
     "releases_url": "https://bgithub.xyz/dundee/gdu/releases",
     "repo_path": "dundee/gdu",
     "version_tag_as_on_github": true,
     "installer_markers": [
-      "gdu-windows-amd64.zip"
+      "gdu_windows_amd64.exe.zip"
     ],
     "href_exclude_substrings": [
-      "linux",
+      "arm",
       "darwin",
-      "arm"
+      "linux"
     ],
     "windows_installer": false,
     "installer_extensions": [
       ".zip"
     ],
     "download_names": [
-      "gdu-windows-amd64.zip"
+      "gdu_windows_amd64.exe.zip"
     ],
-    "save_name": "gdu-windows-amd64.zip",
+    "save_name": "gdu_windows_amd64.exe.zip",
     "process_name": "",
     "kill_before_install": false,
-    "run_installer": false
+    "run_installer": false,
+    "use_download_filename": true,
+    "prefer_api_assets": true
   },
   {
     "id": "qemu",
@@ -333,27 +335,29 @@
   },
   {
     "id": "unigetui",
-    "简介": "UniGetUI（Winget / Scoop 等的图形化软件包管理前端，原 WingetUI）",
+    "简介": "UniGetUI（Winget / Scoop 等的图形化软件包管理前端；原 WingetUI，现 Devolutions/UniGetUI）",
     "分类": "系统",
     "enabled": false,
-    "releases_url": "https://bgithub.xyz/marticliment/WingetUI/releases",
-    "repo_path": "marticliment/WingetUI",
+    "releases_url": "https://bgithub.xyz/Devolutions/UniGetUI/releases",
+    "repo_path": "Devolutions/UniGetUI",
     "prefer_api_assets": true,
     "installer_markers_match_all": true,
     "installer_markers": [
-      "UniGetUI.Installer",
+      "UniGetUI.Installer.x64",
       ".exe"
     ],
     "href_exclude_substrings": [
       "WingetUI.Installer",
       ".zip",
-      "blockmap"
+      "blockmap",
+      "arm64"
     ],
     "windows_installer": true,
     "download_names": [
-      "UniGetUI.Installer.exe"
+      "UniGetUI.Installer.x64.exe"
     ],
-    "save_name": "UniGetUI-Setup-{ver}.exe",
+    "save_name": "UniGetUI.Installer.x64.exe",
+    "use_download_filename": true,
     "process_name": "UniGetUI.exe",
     "kill_before_install": true,
     "run_installer": true
@@ -1181,40 +1185,33 @@
   },
   {
     "id": "winhance",
-    "简介": "Winhance（Windows 优化脚本套件）",
+    "简介": "Winhance（Windows 安装器）",
     "分类": "系统",
     "enabled": false,
     "prefer_api_assets": true,
     "version_tag_as_on_github": true,
-    "windows_installer": false,
+    "windows_installer": true,
     "process_name": "",
     "kill_before_install": false,
-    "run_installer": false,
+    "run_installer": true,
     "use_download_filename": true,
     "href_exclude_substrings": [
+      ".ps1",
       "source",
-      "src.",
-      "-src",
-      "symbols",
-      "debug",
-      "pdb",
-      "sha256",
-      ".sig",
-      ".json",
-      ".txt",
-      ".md",
-      "checksum"
+      "pdb"
     ],
     "installer_markers": [
-      "Get.ps1",
-      ".ps1"
+      "Winhance.Installer.exe"
     ],
     "installer_extensions": [
-      ".ps1",
-      ".zip"
+      ".exe"
     ],
     "releases_url": "https://bgithub.xyz/memstechtips/Winhance/releases",
-    "repo_path": "memstechtips/Winhance"
+    "repo_path": "memstechtips/Winhance",
+    "download_names": [
+      "Winhance.Installer.exe"
+    ],
+    "save_name": "Winhance.Installer.exe"
   },
   {
     "id": "memreduct",
@@ -1699,5 +1696,290 @@
     ],
     "releases_url": "https://bgithub.xyz/LibreHardwareMonitor/LibreHardwareMonitor/releases",
     "repo_path": "LibreHardwareMonitor/LibreHardwareMonitor"
+  },
+  {
+    "id": "server_box",
+    "简介": "Server Box（Linux 服务器状态与工具箱；Windows amd64 zip）",
+    "分类": "系统",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".apk",
+      "AppImage",
+      ".dmg",
+      "legacy"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "ServerBox_v",
+      "windows_amd64.zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "releases_url": "https://bgithub.xyz/lollipopkit/flutter_server_box/releases",
+    "repo_path": "lollipopkit/flutter_server_box"
+  },
+  {
+    "id": "windirstat",
+    "简介": "WinDirStat（磁盘使用统计与清理；Windows x64 MSI）",
+    "分类": "系统",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "arm64",
+      "x86",
+      "Debug",
+      "Hashes",
+      ".7z",
+      ".zip",
+      ".msix"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "WinDirStat-x64",
+      ".msi"
+    ],
+    "installer_extensions": [
+      ".msi"
+    ],
+    "releases_url": "https://bgithub.xyz/windirstat/windirstat/releases",
+    "repo_path": "windirstat/windirstat"
+  },
+  {
+    "id": "sogou_pinyin",
+    "简介": "搜狗输入法（官网分发，lookup 打开下载页）",
+    "分类": "系统",
+    "aliases": [
+      "sogou",
+      "搜狗",
+      "搜狗输入法",
+      "sogou pinyin"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://pinyin.sogou.com/",
+    "url_hint": "sogou 搜狗 搜狗输入法 sogou pinyin",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "openlogi",
+    "简介": "OpenLogi（罗技 Options+ 本地开源替代；Windows x64 MSI）",
+    "分类": "系统",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "arm64",
+      ".zip",
+      ".minisig",
+      "linux",
+      "macos"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "OpenLogi-v",
+      "windows-x86_64.msi"
+    ],
+    "installer_extensions": [
+      ".msi"
+    ],
+    "aliases": [
+      "openlogi",
+      "logitech options",
+      "罗技",
+      "Options+"
+    ],
+    "releases_url": "https://bgithub.xyz/AprilNEA/OpenLogi/releases",
+    "repo_path": "AprilNEA/OpenLogi"
+  },
+  {
+    "id": "letrecovery",
+    "简介": "LetRecovery（Windows 系统重装工具；Windows x64 Setup）",
+    "分类": "系统",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "LetRecovery.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".7z",
+      "source",
+      "linux",
+      "darwin",
+      "mac"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "LetRecovery-Setup-x64.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "letrecovery",
+      "LetRecovery",
+      "系统重装",
+      "重装系统"
+    ],
+    "releases_url": "https://bgithub.xyz/NORMAL-EX/LetRecovery/releases",
+    "repo_path": "NORMAL-EX/LetRecovery"
+  },
+  {
+    "id": "easyrc",
+    "简介": "EasyRC 一键重装（FirPE 出品；官网分发，lookup 打开下载页，不自动下载）",
+    "分类": "系统",
+    "aliases": [
+      "easyrc",
+      "EasyRC",
+      "easrc",
+      "firpe",
+      "FirPE",
+      "一键重装"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://firpe.cn/page-196",
+    "url_hint": "easyrc EasyRC easrc firpe FirPE 一键重装",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "wintohdd",
+    "简介": "Hasleo WinToHDD（硬盘直接安装/重装/克隆；官网分发，lookup 打开官方页，不收录第三方改包）",
+    "分类": "系统",
+    "aliases": [
+      "wintohdd",
+      "WinToHDD",
+      "hasleo",
+      "Hasleo",
+      "WinToHDD Free"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.easyuefi.com/wintohdd/",
+    "url_hint": "wintohdd WinToHDD hasleo Hasleo",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "baidu_ime",
+    "简介": "百度输入法（官网分发，lookup 打开下载页）",
+    "分类": "系统",
+    "aliases": [
+      "baidu_ime",
+      "百度输入法",
+      "百度拼音",
+      "百度"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://shurufa.baidu.com/",
+    "url_hint": "baidu_ime 百度输入法 百度拼音 百度",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "huawei_pc_manager",
+    "简介": "华为电脑管家（华为 Windows 电脑官方；lookup 打开下载页。仅华为机型）",
+    "分类": "系统",
+    "aliases": [
+      "huawei_pc_manager",
+      "华为电脑管家",
+      "华为",
+      "PC Manager"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://consumer.huawei.com/cn/support/pc-manager/",
+    "url_hint": "huawei_pc_manager 华为电脑管家 华为 PC Manager",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "xiaomi_pc_manager",
+    "简介": "小米电脑管家（小米/Redmi 电脑官方；lookup 打开官网帮助页。非小米电脑请勿用第三方破解包）",
+    "分类": "系统",
+    "aliases": [
+      "xiaomi_pc_manager",
+      "小米电脑管家",
+      "小米",
+      "红米电脑"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://pc.mi.com/pc-manager-help",
+    "url_hint": "xiaomi_pc_manager 小米电脑管家 小米 红米电脑",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "honor_pc_manager",
+    "简介": "荣耀电脑管家（荣耀官网；lookup 打开下载页。仅荣耀机型）",
+    "分类": "系统",
+    "aliases": [
+      "honor_pc_manager",
+      "荣耀电脑管家",
+      "荣耀"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.honor.com/cn/tech/pc-manager/",
+    "url_hint": "honor_pc_manager 荣耀电脑管家 荣耀",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "lenovo_pc_manager",
+    "简介": "联想电脑管家（联想官网；lookup 打开下载页）",
+    "分类": "系统",
+    "aliases": [
+      "lenovo_pc_manager",
+      "联想电脑管家",
+      "联想"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://guanjia.lenovo.com.cn/",
+    "url_hint": "lenovo_pc_manager 联想电脑管家 联想",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]
