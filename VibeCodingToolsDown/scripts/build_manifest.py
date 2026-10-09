@@ -1523,6 +1523,23 @@ def _builder_map() -> dict[str, Any]:
     return {aid: fn for aid, fn in BUILDERS}
 
 
+def _existing_items_by_id(out_path: str) -> dict[str, dict[str, Any]]:
+    """读取已有 manifest 的 items，按 id 索引。文件缺失或损坏时返回空。"""
+    if not os.path.isfile(out_path):
+        return {}
+    try:
+        with open(out_path, encoding="utf-8") as f:
+            old = json.load(f)
+    except Exception:
+        return {}
+    by_id: dict[str, dict[str, Any]] = {}
+    if isinstance(old, dict):
+        for it in old.get("items") or []:
+            if isinstance(it, dict) and it.get("id"):
+                by_id[str(it["id"]).strip()] = it
+    return by_id
+
+
 def merge_items_into_manifest(out_path: str, new_items: list[dict[str, Any]], errors: list[str]) -> dict[str, Any]:
     """把 new_items 按 id 合并进已有 manifest（无文件则新建）。"""
     doc: dict[str, Any] = {"schema": 1, "items": [], "errors": []}
@@ -1584,17 +1601,28 @@ def main():
         selected = list(BUILDERS)
 
     s = _session()
+    existing = _existing_items_by_id(out_path)
     items: list[dict[str, Any]] = []
     errors: list[str] = []
+    kept: list[str] = []
     for aid, fn in selected:
         try:
             items.append(fn(s))
         except Exception as e:
-            errors.append(f"{aid}/{fn.__name__}: {e}")
+            # 单项失败不丢掉已有快照：全量重写与 --only 都保留该 id。
+            old_item = existing.get(aid)
+            if old_item:
+                items.append(old_item)
+                kept.append(aid)
+                errors.append(f"{aid}/{fn.__name__}: {e}；未更新，保留已有条目")
+                print(f"WARN: {aid} 未更新，保留 manifest 已有条目", file=sys.stderr)
+            else:
+                errors.append(f"{aid}/{fn.__name__}: {e}")
+                print(f"WARN: {aid} 失败，manifest 中无已有条目可保留", file=sys.stderr)
 
     if only_ids:
         if not items:
-            print("未刷新任何条目", file=sys.stderr)
+            print("未刷新任何条目，且 manifest 中无已有条目可保留", file=sys.stderr)
             return 1
         doc = merge_items_into_manifest(out_path, items, errors)
     else:
@@ -1608,7 +1636,18 @@ def main():
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(doc, f, ensure_ascii=False, indent=2)
         f.write("\n")
-    print("Wrote", out_path, "items", len(doc.get("items") or []), "refreshed", len(items), "errors", len(errors))
+    print(
+        "Wrote",
+        out_path,
+        "items",
+        len(doc.get("items") or []),
+        "refreshed",
+        len(items) - len(kept),
+        "kept",
+        len(kept),
+        "errors",
+        len(errors),
+    )
     if errors:
         for e in errors:
             print("WARN:", e, file=sys.stderr)

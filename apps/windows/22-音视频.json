@@ -1204,5 +1204,36 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "ffmpegfreeui",
+    "简介": "FFmpegFreeUI / 3FUI（FFmpeg 图形界面，Windows x64）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/Lake1059/FFmpegFreeUI/releases",
+    "repo_path": "Lake1059/FFmpegFreeUI",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "FFmpegFreeUI.x64.exe"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "Updater.exe"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "FFmpegFreeUI.x64.exe"
+    ],
+    "save_name": "FFmpegFreeUI.x64.exe",
+    "process_name": "FFmpegFreeUI.exe",
+    "kill_before_install": true,
+    "run_installer": false,
+    "aliases": [
+      "FFmpegFreeUI",
+      "3FUI",
+      "FFmpeg Free UI"
+    ]
   }
 ]

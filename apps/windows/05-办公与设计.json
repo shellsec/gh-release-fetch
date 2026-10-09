@@ -213,5 +213,36 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "killerpdf",
+    "简介": "KillerPDF（开源 PDF 编辑器，Windows 安装包）",
+    "分类": "办公与设计",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/SteveTheKiller/KillerPDF/releases",
+    "repo_path": "SteveTheKiller/KillerPDF",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "KillerPDF.exe"
+    ],
+    "href_exclude_substrings": [
+      "Portable",
+      "src",
+      "SHA256",
+      ".zip"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "KillerPDF.exe"
+    ],
+    "save_name": "KillerPDF.exe",
+    "process_name": "KillerPDF.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "aliases": [
+      "KillerPDF"
+    ]
   }
 ]

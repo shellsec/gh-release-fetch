@@ -867,6 +867,44 @@
     "run_installer": false
   },
   {
+    "id": "ms_wallpaper_assistant",
+    "简介": "微软壁纸助手（必应每日一图 + Windows 聚焦，绿色 zip 解压即用）",
+    "分类": "系统",
+    "aliases": [
+      "ms_wallpaper_assistant",
+      "ms-wallpaper-assistant",
+      "微软壁纸助手",
+      "壁纸助手",
+      "bing wallpaper"
+    ],
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/kele551/ms-wallpaper-assistant/releases",
+    "repo_path": "kele551/ms-wallpaper-assistant",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "MSWallpaperAssistant-",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "version.json",
+      ".json"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "MSWallpaperAssistant-v{ver}.zip"
+    ],
+    "use_download_filename": true,
+    "save_name": "MSWallpaperAssistant-v{ver}.zip",
+    "process_name": "微软壁纸助手.exe",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
     "id": "bingwallpaper_windows",
     "简介": "BingWallpaper.Windows（轻量必应每日壁纸自动应用；Windows 安装包 zip）",
     "分类": "系统",
@@ -1981,5 +2019,34 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "wintune",
+    "简介": "WinTune（开源 Windows 系统优化小工具，x64）",
+    "分类": "系统",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/tranht17/WinTune/releases",
+    "repo_path": "tranht17/WinTune",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "WinTune.exe"
+    ],
+    "href_exclude_substrings": [
+      "WinTune32",
+      ".sha"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "WinTune.exe"
+    ],
+    "save_name": "WinTune.exe",
+    "process_name": "WinTune.exe",
+    "kill_before_install": true,
+    "run_installer": false,
+    "aliases": [
+      "WinTune"
+    ]
   }
 ]

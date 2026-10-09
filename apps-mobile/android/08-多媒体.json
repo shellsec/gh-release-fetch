@@ -482,6 +482,41 @@
     "repo_path": "lyswhut/lx-music-mobile"
   },
   {
+    "id": "lx_music_eink",
+    "简介": "洛雪音乐墨水屏版（Android）",
+    "分类": "多媒体",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "armeabi-v7a",
+      "x86",
+      "universal",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "lx-music-mobile",
+      "arm64",
+      ".apk"
+    ],
+    "installer_extensions": [
+      ".apk"
+    ],
+    "save_name": "lx_music_eink.apk",
+    "releases_url": "https://bgithub.xyz/shellsec/lx-music-eink/releases",
+    "repo_path": "shellsec/lx-music-eink"
+  },
+  {
     "id": "listen1_mobile",
     "简介": "Listen 1（Android）",
     "分类": "多媒体",

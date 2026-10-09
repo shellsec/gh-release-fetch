@@ -934,5 +934,142 @@
     ],
     "releases_url": "https://bgithub.xyz/aonez/Keka/releases",
     "repo_path": "aonez/Keka"
+  },
+  {
+    "id": "czkawka",
+    "简介": "Czkawka/Krokiet（开源重复文件清理，macOS arm64 Krokiet）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/qarmin/czkawka/releases",
+    "repo_path": "qarmin/czkawka",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "mac_krokiet_arm64"
+    ],
+    "href_exclude_substrings": [
+      "heif",
+      "all_backends",
+      "femtovg",
+      "vulkan",
+      "skia",
+      "cli",
+      "windows_",
+      "linux_",
+      ".zip"
+    ],
+    "windows_installer": false,
+    "download_names": [
+      "mac_krokiet_arm64"
+    ],
+    "save_name": "mac_krokiet_arm64",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "aliases": [
+      "Czkawka",
+      "Krokiet"
+    ]
+  },
+  {
+    "id": "nomacs",
+    "简介": "nomacs（开源图像查看器，macOS arm64 dmg）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/nomacs/nomacs/releases",
+    "repo_path": "nomacs/nomacs",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "nomacs-macOS-arm64.dmg"
+    ],
+    "href_exclude_substrings": [
+      "x86_64",
+      "AppImage",
+      ".msi",
+      ".zip",
+      "linux",
+      "win",
+      "portable"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "nomacs-macOS-arm64.dmg"
+    ],
+    "save_name": "nomacs-macOS-arm64.dmg",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "aliases": [
+      "nomacs"
+    ]
+  },
+  {
+    "id": "coolapk_desktop",
+    "简介": "酷安桌面客户端（非官方；macOS Apple Silicon dmg）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "x64",
+      "windows",
+      "exe",
+      "AppImage",
+      ".deb",
+      ".rpm",
+      ".apk",
+      ".aab",
+      ".ipa",
+      ".sig",
+      ".tar.gz"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "coolapk-desktop_",
+      "aarch64.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "coolapk",
+      "coolapk-desktop",
+      "酷安",
+      "酷安桌面"
+    ],
+    "releases_url": "https://bgithub.xyz/daimiaopeng/coolapk-desktop/releases",
+    "repo_path": "daimiaopeng/coolapk-desktop"
+  },
+  {
+    "id": "oldalmanac",
+    "简介": "老黄历 · 纸上光阴（静态网页；无 macOS 安装包，lookup 打开仓库）",
+    "分类": "工具",
+    "aliases": [
+      "OldAlmanac",
+      "old_almanac",
+      "老黄历",
+      "纸上光阴"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/jingguanzhang/OldAlmanac",
+    "url_hint": "oldalmanac OldAlmanac 老黄历 纸上光阴",
+    "releases_url": "https://bgithub.xyz/jingguanzhang/OldAlmanac/releases",
+    "repo_path": "jingguanzhang/OldAlmanac",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

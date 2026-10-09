@@ -1797,5 +1797,38 @@
     ],
     "releases_url": "https://bgithub.xyz/ActivityWatch/activitywatch/releases",
     "repo_path": "ActivityWatch/activitywatch"
+  },
+  {
+    "id": "dawn_launcher",
+    "简介": "Dawn Launcher（开源快捷启动工具，Windows 安装包；对应 GitHub OSS 分支）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/fanchenio/DawnLauncher/releases",
+    "repo_path": "fanchenio/DawnLauncher",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Dawn.Launcher-",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      ".7z",
+      ".blockmap",
+      ".yml",
+      "arm64"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Dawn.Launcher-{ver}.exe"
+    ],
+    "save_name": "Dawn.Launcher-{ver}.exe",
+    "process_name": "Dawn Launcher.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "aliases": [
+      "Dawn Launcher",
+      "DawnLauncher"
+    ]
   }
 ]

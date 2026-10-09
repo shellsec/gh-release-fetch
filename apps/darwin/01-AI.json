@@ -4168,5 +4168,42 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "codex_claude_cursor_signal",
+    "简介": "Codex Claude Cursor Signal（Codex/Claude Code/Cursor 会话红绿灯状态指示，菜单栏+置顶面板；macOS universal zip）",
+    "分类": "AI",
+    "aliases": [
+      "ccc-signal",
+      "agent signal",
+      "红绿灯"
+    ],
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/sxlisme/codex-claude-cursor-signal/releases",
+    "repo_path": "sxlisme/codex-claude-cursor-signal",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "CodexClaudeCursorSignal-macOS-universal",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "Windows",
+      "linux",
+      "x64.zip"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "use_download_filename": true,
+    "download_names": [
+      "CodexClaudeCursorSignal-macOS-universal.zip"
+    ],
+    "save_name": "CodexClaudeCursorSignal-macOS-universal.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

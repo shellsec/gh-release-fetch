@@ -1163,5 +1163,214 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "viap",
+    "简介": "Viap（Windows 应用与数据迁移；NTFS Junction/符号链接重定向，保留原路径；含卸载残留清理）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/Chunyu33/viap/releases",
+    "repo_path": "Chunyu33/viap",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "viap_",
+      "x64-setup.exe"
+    ],
+    "href_exclude_substrings": [
+      "offline-webview2",
+      "portable",
+      ".sig",
+      ".zip",
+      "arm64",
+      "darwin",
+      "linux",
+      "macos"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "viap_{ver}_x64-setup.exe"
+    ],
+    "save_name": "viap_{ver}_x64-setup.exe",
+    "process_name": "viap.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "aliases": [
+      "Viap",
+      "viap",
+      "应用迁移"
+    ]
+  },
+  {
+    "id": "czkawka",
+    "简介": "Czkawka/Krokiet（开源重复文件清理，Windows Krokiet skia_opengl）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/qarmin/czkawka/releases",
+    "repo_path": "qarmin/czkawka",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "windows_krokiet_on_windows_skia_opengl.exe"
+    ],
+    "href_exclude_substrings": [
+      "on_linux",
+      "all_backends",
+      "femtovg",
+      "vulkan",
+      "gtk",
+      "cli",
+      "linux_",
+      "mac_"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "windows_krokiet_on_windows_skia_opengl.exe"
+    ],
+    "save_name": "windows_krokiet_on_windows_skia_opengl.exe",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "aliases": [
+      "Czkawka",
+      "Krokiet"
+    ]
+  },
+  {
+    "id": "nomacs",
+    "简介": "nomacs（开源图像查看器，Windows x64 MSI）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/nomacs/nomacs/releases",
+    "repo_path": "nomacs/nomacs",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "nomacs-setup-x64.msi"
+    ],
+    "href_exclude_substrings": [
+      "portable",
+      "win7",
+      "AppImage",
+      ".dmg",
+      "linux",
+      "macOS"
+    ],
+    "windows_installer": true,
+    "installer_extensions": [
+      ".msi"
+    ],
+    "download_names": [
+      "nomacs-setup-x64.msi"
+    ],
+    "save_name": "nomacs-setup-x64.msi",
+    "process_name": "nomacs.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "use_download_filename": true,
+    "aliases": [
+      "nomacs"
+    ]
+  },
+  {
+    "id": "umi_ocr",
+    "简介": "Umi-OCR（离线开源 OCR，Windows Rapid 自解压包）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/hiroi-sora/Umi-OCR/releases",
+    "repo_path": "hiroi-sora/Umi-OCR",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Umi-OCR_Rapid_",
+      ".7z.exe"
+    ],
+    "href_exclude_substrings": [
+      "Paddle",
+      "Linux",
+      ".tar",
+      ".sha",
+      "Source"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Umi-OCR_Rapid_v{ver}.7z.exe"
+    ],
+    "save_name": "Umi-OCR_Rapid_v{ver}.7z.exe",
+    "process_name": "Umi-OCR.exe",
+    "kill_before_install": true,
+    "run_installer": false,
+    "aliases": [
+      "Umi-OCR",
+      "Umi OCR",
+      "umiocr"
+    ]
+  },
+  {
+    "id": "coolapk_desktop",
+    "简介": "酷安桌面客户端（非官方；Windows x64 安装包）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "portable",
+      "arm64",
+      "AppImage",
+      ".dmg",
+      ".deb",
+      ".rpm",
+      ".apk",
+      ".aab",
+      ".ipa",
+      ".sig",
+      ".tar.gz"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "coolapk-desktop_",
+      "x64-setup.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "coolapk",
+      "coolapk-desktop",
+      "酷安",
+      "酷安桌面"
+    ],
+    "releases_url": "https://bgithub.xyz/daimiaopeng/coolapk-desktop/releases",
+    "repo_path": "daimiaopeng/coolapk-desktop"
+  },
+  {
+    "id": "oldalmanac",
+    "简介": "老黄历 · 纸上光阴（静态网页；仓库无 GitHub Release 二进制，lookup 打开仓库，本地用浏览器打开 index.html）",
+    "分类": "工具",
+    "aliases": [
+      "OldAlmanac",
+      "old_almanac",
+      "老黄历",
+      "纸上光阴"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/jingguanzhang/OldAlmanac",
+    "url_hint": "oldalmanac OldAlmanac 老黄历 纸上光阴",
+    "releases_url": "https://bgithub.xyz/jingguanzhang/OldAlmanac/releases",
+    "repo_path": "jingguanzhang/OldAlmanac",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

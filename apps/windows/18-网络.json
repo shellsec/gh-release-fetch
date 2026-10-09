@@ -1057,5 +1057,36 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "foxpath",
+    "简介": "狐径 FoxPath（GitHub 直连助手，绿色单文件）",
+    "分类": "网络",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/kele551/FoxPath/releases",
+    "repo_path": "kele551/FoxPath",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "FoxPath.exe"
+    ],
+    "href_exclude_substrings": [
+      "version.json",
+      ".sha",
+      "src"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "FoxPath.exe"
+    ],
+    "save_name": "FoxPath.exe",
+    "process_name": "FoxPath.exe",
+    "kill_before_install": true,
+    "run_installer": false,
+    "aliases": [
+      "狐径",
+      "FoxPath"
+    ]
   }
 ]
