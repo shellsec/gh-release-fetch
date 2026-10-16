@@ -1071,5 +1071,241 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "hotkeyclash",
+    "简介": "HotkeyClash（macOS 快捷键冲突检测；dmg）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "HotkeyClash-",
+      ".dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "hotkeyclash",
+      "HotkeyClash"
+    ],
+    "releases_url": "https://bgithub.xyz/Wunderlandmedia/HotkeyClash/releases",
+    "repo_path": "Wunderlandmedia/HotkeyClash"
+  },
+  {
+    "id": "double_commander",
+    "简介": "Double Commander（双栏文件管理；macOS Apple Silicon dmg）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "x86_64",
+      "windows",
+      "gtk",
+      "qt"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "doublecmd-",
+      "cocoa.aarch64.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "double commander",
+      "Double Commander",
+      "doublecmd"
+    ],
+    "releases_url": "https://bgithub.xyz/doublecmd/doublecmd/releases",
+    "repo_path": "doublecmd/doublecmd"
+  },
+  {
+    "id": "trex",
+    "简介": "TRex（菜单栏离线 OCR；zip）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "TRex-",
+      ".zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "aliases": [
+      "trex",
+      "TRex"
+    ],
+    "releases_url": "https://bgithub.xyz/amebalabs/TRex/releases",
+    "repo_path": "amebalabs/TRex"
+  },
+  {
+    "id": "wailbrew",
+    "简介": "WailBrew（Homebrew 图形界面；zip）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "wailbrew-",
+      ".zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "aliases": [
+      "wailbrew",
+      "WailBrew"
+    ],
+    "releases_url": "https://bgithub.xyz/wickenico/WailBrew/releases",
+    "repo_path": "wickenico/WailBrew"
+  },
+  {
+    "id": "sourcecode_syntax_highlight",
+    "简介": "SourceCodeSyntaxHighlight（QuickLook 源代码高亮；zip）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Syntax.Highlight.zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "aliases": [
+      "sourcecode syntax highlight",
+      "Syntax Highlight",
+      "SourceCodeSyntaxHighlight"
+    ],
+    "releases_url": "https://bgithub.xyz/sbarex/SourceCodeSyntaxHighlight/releases",
+    "repo_path": "sbarex/SourceCodeSyntaxHighlight"
   }
 ]

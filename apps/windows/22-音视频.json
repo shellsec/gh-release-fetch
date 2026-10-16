@@ -1235,5 +1235,65 @@
       "3FUI",
       "FFmpeg Free UI"
     ]
+  },
+  {
+    "id": "freetube",
+    "简介": "FreeTube（桌面 YouTube 客户端；钉选 v0.25.3-beta；Windows x64 Setup）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "arm64",
+      "portable",
+      "linux",
+      "mac",
+      ".AppImage",
+      ".deb",
+      ".rpm",
+      ".pacman",
+      ".dmg",
+      ".zip",
+      ".7z",
+      ".zsync"
+    ],
+    "pinned_release_tag": "v0.25.3-beta",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "freetube-",
+      "-setup-x64.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "freetube",
+      "FreeTube",
+      "free tube"
+    ],
+    "releases_url": "https://bgithub.xyz/FreeTubeApp/FreeTube/releases",
+    "repo_path": "FreeTubeApp/FreeTube"
   }
 ]

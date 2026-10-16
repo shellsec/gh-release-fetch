@@ -363,6 +363,8 @@ python lookup_app.py drawio
 
 **两步交互：** 搜索 → 选序号（`1`、`1,3`、`a`，**回车**跳过）→ 选操作 **1**–**4**。短关键词如 `draw` 常出现 **三条**（darwin / linux / windows，同一 `id`）；选对平台，或用 `--platform windows drawio` 缩小范围。
 
+本地清单没有命中时，会按当前 `--platform`（缺省为本机）用 GitHub 仓库名再搜一次，比较时忽略大小写、`-`、`_` 和空格；只给出一条建议（仓库、版本、文件名、大小），回车下载、其它键取消，两个同样像的仓库或同一仓库多个合格安装包则改为编号选择。`--dry-run` 只打印不下载，`--no-prompt` 仅在仓库名对得上且只剩一个合格安装包时直接下载，`--save` 才把该仓库以 `enabled: false` 追加到最接近的分片（拿不准写入 `11-工具.json`，不重复 id）。
+
 ```text
 lookup_app.bat draw
 > 3          # 选 windows 行

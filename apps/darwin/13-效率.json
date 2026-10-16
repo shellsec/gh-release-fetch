@@ -2004,5 +2004,190 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "winmux",
+    "简介": "WinMux（macOS 项目工作区窗口管理；zip）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "appcast"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "WinMux-",
+      ".zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "aliases": [
+      "winmux",
+      "WinMux"
+    ],
+    "releases_url": "https://bgithub.xyz/ZimengXiong/WinMux/releases",
+    "repo_path": "ZimengXiong/WinMux"
+  },
+  {
+    "id": "loop",
+    "简介": "Loop（macOS 轻量窗口管理；app zip）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Loop.zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "aliases": [
+      "loop",
+      "Loop"
+    ],
+    "releases_url": "https://bgithub.xyz/mrkai77/Loop/releases",
+    "repo_path": "mrkai77/Loop"
+  },
+  {
+    "id": "swift_shift",
+    "简介": "Swift Shift（按住修饰键拖移窗口；app zip）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "SwiftShift.zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "aliases": [
+      "swift shift",
+      "Swift Shift",
+      "SwiftShift"
+    ],
+    "releases_url": "https://bgithub.xyz/pablopunk/SwiftShift/releases",
+    "repo_path": "pablopunk/SwiftShift"
+  },
+  {
+    "id": "keyboard_cowboy",
+    "简介": "Keyboard Cowboy（macOS 快捷键工作流；dmg）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Keyboard.Cowboy.",
+      ".dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "keyboard cowboy",
+      "Keyboard Cowboy",
+      "KeyboardCowboy"
+    ],
+    "releases_url": "https://bgithub.xyz/zenangst/KeyboardCowboy/releases",
+    "repo_path": "zenangst/KeyboardCowboy"
   }
 ]

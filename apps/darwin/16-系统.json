@@ -1571,5 +1571,245 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "mos",
+    "简介": "Mos（鼠标平滑滚动；app zip）",
+    "分类": "系统",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Mos.Versions.",
+      ".zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "aliases": [
+      "mos",
+      "Mos"
+    ],
+    "releases_url": "https://bgithub.xyz/Caldis/Mos/releases",
+    "repo_path": "Caldis/Mos"
+  },
+  {
+    "id": "aldente",
+    "简介": "AlDente（限制最大充电量；dmg）",
+    "分类": "系统",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "AlDente.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "aldente",
+      "AlDente"
+    ],
+    "releases_url": "https://bgithub.xyz/AppHouseKitchen/AlDente-Charge-Limiter/releases",
+    "repo_path": "AppHouseKitchen/AlDente-Charge-Limiter"
+  },
+  {
+    "id": "mountmate",
+    "简介": "MountMate（外置磁盘挂载管理；dmg）",
+    "分类": "系统",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "MountMate_",
+      ".dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "mountmate",
+      "MountMate"
+    ],
+    "releases_url": "https://bgithub.xyz/homielab/mountmate/releases",
+    "repo_path": "homielab/mountmate"
+  },
+  {
+    "id": "sloth",
+    "简介": "Sloth（lsof 图形界面，查看打开的文件与套接字；zip）",
+    "分类": "系统",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      ".src"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "sloth-",
+      ".zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "aliases": [
+      "sloth",
+      "Sloth"
+    ],
+    "releases_url": "https://bgithub.xyz/sveinbjornt/Sloth/releases",
+    "repo_path": "sveinbjornt/Sloth"
+  },
+  {
+    "id": "mangodisk",
+    "简介": "MangoDisk（磁盘清理、空间分析与隐私清理；macOS dmg）",
+    "分类": "系统",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "-windows",
+      "-linux",
+      "-macos-cli",
+      ".exe",
+      ".AppImage",
+      ".deb",
+      ".tar.gz",
+      "arm64"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "MangoDisk-",
+      "-macos.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "mangodisk",
+      "MangoDisk",
+      "芒果磁盘"
+    ],
+    "releases_url": "https://bgithub.xyz/harry0703/MangoDisk/releases",
+    "repo_path": "harry0703/MangoDisk"
   }
 ]

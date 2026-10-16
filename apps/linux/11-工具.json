@@ -649,5 +649,58 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "double_commander",
+    "简介": "Double Commander（双栏文件管理；Linux x64 Qt6 tar.xz）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "aarch64",
+      "i386",
+      "gtk",
+      "windows",
+      "cocoa",
+      "AppImage"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "doublecmd-",
+      "qt6.x86_64.tar.xz"
+    ],
+    "installer_extensions": [
+      ".tar.xz"
+    ],
+    "aliases": [
+      "double commander",
+      "Double Commander",
+      "doublecmd"
+    ],
+    "releases_url": "https://bgithub.xyz/doublecmd/doublecmd/releases",
+    "repo_path": "doublecmd/doublecmd"
   }
 ]

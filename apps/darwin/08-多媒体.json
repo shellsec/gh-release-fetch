@@ -1102,5 +1102,50 @@
     ],
     "releases_url": "https://bgithub.xyz/lihaoyun6/QuickRecorder/releases",
     "repo_path": "lihaoyun6/QuickRecorder"
+  },
+  {
+    "id": "aerial",
+    "简介": "Aerial（苹果风格动态屏保；saver zip）",
+    "分类": "多媒体",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Aerial.saver.zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "aliases": [
+      "aerial",
+      "Aerial"
+    ],
+    "releases_url": "https://bgithub.xyz/JohnCoates/Aerial/releases",
+    "repo_path": "JohnCoates/Aerial"
   }
 ]

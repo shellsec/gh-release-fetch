@@ -400,5 +400,102 @@
     ],
     "releases_url": "https://bgithub.xyz/dbgate/dbgate/releases",
     "repo_path": "dbgate/dbgate"
+  },
+  {
+    "id": "sequel_ace",
+    "简介": "Sequel Ace（MySQL/MariaDB 客户端；app zip）",
+    "分类": "数据库",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Sequel-Ace-",
+      ".zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "aliases": [
+      "sequel ace",
+      "Sequel Ace",
+      "Sequel-Ace"
+    ],
+    "releases_url": "https://bgithub.xyz/Sequel-Ace/Sequel-Ace/releases",
+    "repo_path": "Sequel-Ace/Sequel-Ace"
+  },
+  {
+    "id": "another_redis_desktop_manager",
+    "简介": "Another Redis Desktop Manager（Redis 桌面客户端；macOS Apple Silicon dmg）",
+    "分类": "数据库",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "x64",
+      "windows",
+      "linux",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Another-Redis-Desktop-Manager-mac-",
+      "-arm64.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "another redis desktop manager",
+      "Another Redis Desktop Manager"
+    ],
+    "releases_url": "https://bgithub.xyz/qishibo/AnotherRedisDesktopManager/releases",
+    "repo_path": "qishibo/AnotherRedisDesktopManager"
   }
 ]

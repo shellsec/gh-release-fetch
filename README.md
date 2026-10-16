@@ -310,6 +310,8 @@ Non-interactive:    lookup_app -y --download drawio
 
 **Two-step flow:** search → pick row (`1`, `1,3`, `a`, or **Enter** to skip) → pick action **1**–**4**. Short keywords like `draw` often match **three rows** (darwin / linux / windows with the same `id`); pick the right platform or narrow with `--platform windows drawio`.
 
+If the local catalog has no hit, lookup searches GitHub by repository name for the current `--platform` (this machine when omitted), ignoring case, `-`, `_`, and spaces. It shows one suggestion (repo, version, filename, size): Enter downloads, any other key cancels; equally similar repos or several qualified assets use a numbered choice. `--dry-run` only prints, `--no-prompt` downloads only when the repo name matches and exactly one installer qualifies, and `--save` appends that repo as `enabled: false` to the closest shard (`11-工具.json` when unsure, without duplicating an id).
+
 ```text
 lookup_app.bat draw
 > 3          # windows row

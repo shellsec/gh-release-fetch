@@ -421,5 +421,54 @@
     ],
     "releases_url": "https://bgithub.xyz/grafana/k6/releases",
     "repo_path": "grafana/k6"
+  },
+  {
+    "id": "sniffnet",
+    "简介": "Sniffnet（网络流量监控；Windows x64 msi）",
+    "分类": "可观测",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "arm64",
+      "x86.msi",
+      "linux",
+      "mac"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Sniffnet_Windows_x64.msi"
+    ],
+    "installer_extensions": [
+      ".msi"
+    ],
+    "aliases": [
+      "sniffnet",
+      "Sniffnet"
+    ],
+    "releases_url": "https://bgithub.xyz/GyulyVGC/sniffnet/releases",
+    "repo_path": "GyulyVGC/sniffnet"
   }
 ]

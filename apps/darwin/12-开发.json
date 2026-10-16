@@ -1233,5 +1233,141 @@
     ],
     "releases_url": "https://bgithub.xyz/mountain-loop/yaak/releases",
     "repo_path": "mountain-loop/yaak"
+  },
+  {
+    "id": "gitup",
+    "简介": "GitUp（macOS Git 客户端；zip）",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "GitUp.zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "aliases": [
+      "gitup",
+      "GitUp"
+    ],
+    "releases_url": "https://bgithub.xyz/git-up/GitUp/releases",
+    "repo_path": "git-up/GitUp"
+  },
+  {
+    "id": "phpmon",
+    "简介": "PHP Monitor（macOS PHP 版本切换；zip）",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "phpmon.zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "aliases": [
+      "phpmon",
+      "PHP Monitor",
+      "php monitor"
+    ],
+    "releases_url": "https://bgithub.xyz/nicoverbruggen/phpmon/releases",
+    "repo_path": "nicoverbruggen/phpmon"
+  },
+  {
+    "id": "minisim",
+    "简介": "MiniSim（菜单栏模拟器启动器；app zip）",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "MiniSim.app.zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "aliases": [
+      "minisim",
+      "MiniSim"
+    ],
+    "releases_url": "https://bgithub.xyz/okwasniewski/MiniSim/releases",
+    "repo_path": "okwasniewski/MiniSim"
   }
 ]

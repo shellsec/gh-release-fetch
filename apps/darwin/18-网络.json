@@ -701,5 +701,99 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "netnewswire",
+    "简介": "NetNewsWire（macOS RSS 阅读器；app zip）",
+    "分类": "网络",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "ios"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "NetNewsWire",
+      ".zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "aliases": [
+      "netnewswire",
+      "NetNewsWire"
+    ],
+    "releases_url": "https://bgithub.xyz/Ranchero-Software/NetNewsWire/releases",
+    "repo_path": "Ranchero-Software/NetNewsWire"
+  },
+  {
+    "id": "browserosaurus",
+    "简介": "Browserosaurus（按规则选择浏览器；Apple Silicon zip）",
+    "分类": "网络",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "x64"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Browserosaurus-darwin-arm64-",
+      ".zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "aliases": [
+      "browserosaurus",
+      "Browserosaurus"
+    ],
+    "releases_url": "https://bgithub.xyz/will-stone/browserosaurus/releases",
+    "repo_path": "will-stone/browserosaurus"
   }
 ]

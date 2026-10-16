@@ -366,5 +366,55 @@
     ],
     "releases_url": "https://bgithub.xyz/afadil/wealthfolio/releases",
     "repo_path": "afadil/wealthfolio"
+  },
+  {
+    "id": "fishing_funds",
+    "简介": "Fishing Funds（基金涨跌状态栏；Linux x64 AppImage）",
+    "分类": "金融与股票",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "arm64",
+      "windows",
+      "dmg",
+      "Setup"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Fishing-Funds-",
+      ".AppImage"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "aliases": [
+      "fishing funds",
+      "Fishing Funds"
+    ],
+    "releases_url": "https://bgithub.xyz/1zilc/fishing-funds/releases",
+    "repo_path": "1zilc/fishing-funds"
   }
 ]

@@ -36,7 +36,10 @@ function Build-One($Name, $Entry, [string[]]$More = @()) {
 }
 
 Build-One "auto_update" "auto_update.py"
-Build-One "lookup_app" "lookup_app.py"
+Build-One "lookup_app" "lookup_app.py" @(
+    "--hidden-import", "tools.lookup_github_suggest",
+    "--hidden-import", "auto_update"
+)
 Build-One "run_saved_apps" "tools\run_saved_apps.py"
 Build-One "search_soft_pages" "tools\soft_page_check\search_pages.py" @(
     "--paths", $SoftCheck,

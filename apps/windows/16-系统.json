@@ -2048,5 +2048,61 @@
     "aliases": [
       "WinTune"
     ]
+  },
+  {
+    "id": "mangodisk",
+    "简介": "MangoDisk（磁盘清理、空间分析与隐私清理；Windows NSIS 安装包）",
+    "分类": "系统",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "-windows-cli",
+      "-windows-portable",
+      "-macos",
+      "-linux",
+      ".dmg",
+      ".AppImage",
+      ".deb",
+      ".tar.gz",
+      "arm64"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "MangoDisk-",
+      "-windows.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "mangodisk",
+      "MangoDisk",
+      "芒果磁盘"
+    ],
+    "releases_url": "https://bgithub.xyz/harry0703/MangoDisk/releases",
+    "repo_path": "harry0703/MangoDisk"
   }
 ]

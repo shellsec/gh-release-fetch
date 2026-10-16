@@ -382,5 +382,51 @@
     ],
     "releases_url": "https://bgithub.xyz/borgbase/vorta/releases",
     "repo_path": "borgbase/vorta"
+  },
+  {
+    "id": "rsyncui",
+    "简介": "RsyncUI（Rsync 图形界面；Apple Silicon dmg）",
+    "分类": "备份",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "RsyncUI.",
+      "arm64.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "rsyncui",
+      "RsyncUI"
+    ],
+    "releases_url": "https://bgithub.xyz/rsyncOSX/RsyncUI/releases",
+    "repo_path": "rsyncOSX/RsyncUI"
   }
 ]

@@ -409,5 +409,55 @@
     ],
     "releases_url": "https://bgithub.xyz/dbgate/dbgate/releases",
     "repo_path": "dbgate/dbgate"
+  },
+  {
+    "id": "another_redis_desktop_manager",
+    "简介": "Another Redis Desktop Manager（Redis 桌面客户端；Linux x64 AppImage）",
+    "分类": "数据库",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "arm64",
+      "windows",
+      "mac",
+      ".deb"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Another-Redis-Desktop-Manager-linux-",
+      "-x86_64.AppImage"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "aliases": [
+      "another redis desktop manager",
+      "Another Redis Desktop Manager"
+    ],
+    "releases_url": "https://bgithub.xyz/qishibo/AnotherRedisDesktopManager/releases",
+    "repo_path": "qishibo/AnotherRedisDesktopManager"
   }
 ]

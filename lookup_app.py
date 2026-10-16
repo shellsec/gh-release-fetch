@@ -18,6 +18,11 @@
   python lookup_app.py --save cherrytree     # 选中后可用操作 3 加入列表
   python lookup_app.py -y --download drawio  # 全部匹配项：立刻下载（不改 enabled）
   python lookup_app.py --download termux     # 交互选中后默认操作 1 立刻下载
+
+本地清单零命中时改为 GitHub 仓库搜索（不先访问 GitHub）：
+  只建议一条安装包，回车下载、其它键取消；并列仓库或多个合格包则编号选择。
+  --dry-run 只打印；--no-prompt 仅在仓库名一致且只有一个合格包时下载。
+  --save 才把该仓库以 enabled=false 追加到 apps 分片（拿不准写入 11-工具.json）。
 """
 
 from __future__ import annotations
@@ -553,12 +558,12 @@ def main() -> int:
     parser.add_argument(
         "--dry-run",
         action="store_true",
-        help="只显示结果，不写 JSON（与 --yes 联用时仅预览）",
+        help="只显示结果，不写 JSON、不下载（GitHub 建议时只打印将下载的仓库和文件）",
     )
     parser.add_argument(
         "--no-prompt",
         action="store_true",
-        help="只查询，不交互",
+        help="不交互。本地命中时只查询；GitHub 建议仅在仓库名一致且只有一个合格安装包时直接下载，否则列出结果并返回非 0",
     )
     parser.add_argument(
         "--platform",
@@ -582,7 +587,7 @@ def main() -> int:
         const="",
         default=None,
         metavar="FILE",
-        help="将选中项加入根目录更新列表（默认 saved_apps_<平台>.json）；与 -y 联用则对全部匹配项加入",
+        help="本地命中：将选中项加入更新列表（默认 saved_apps_<平台>.json）。本地未命中的 GitHub 建议：追加一条 enabled=false 到 apps 分片（不重复 id；--dry-run 不写）",
     )
     parser.add_argument(
         "--no-save-prompt",
@@ -623,8 +628,17 @@ def main() -> int:
     if args.platform:
         hits = [h for h in hits if h["platform"] == args.platform]
     if not hits:
-        print("未找到匹配项。可尝试更短关键词或调低 --min-score。")
-        return 2
+        from tools.lookup_github_suggest import run_github_suggest
+
+        return run_github_suggest(
+            query=query,
+            apps_dir=apps_dir,
+            platform=args.platform,
+            dry_run=args.dry_run,
+            no_prompt=args.no_prompt,
+            save=args.save is not None,
+            insecure=args.insecure,
+        )
 
     print_hits(hits)
 

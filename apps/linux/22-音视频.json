@@ -976,5 +976,67 @@
     ],
     "releases_url": "https://bgithub.xyz/jub0t/Concat/releases",
     "repo_path": "jub0t/Concat"
+  },
+  {
+    "id": "freetube",
+    "简介": "FreeTube（桌面 YouTube 客户端；钉选 v0.25.3-beta；Linux x64 AppImage）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "arm64",
+      "armv7",
+      "portable",
+      "windows",
+      "mac",
+      "setup",
+      ".deb",
+      ".rpm",
+      ".pacman",
+      ".dmg",
+      ".exe",
+      ".zip",
+      ".7z",
+      ".zsync"
+    ],
+    "pinned_release_tag": "v0.25.3-beta",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "freetube-",
+      "-amd64.AppImage"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "aliases": [
+      "freetube",
+      "FreeTube",
+      "free tube"
+    ],
+    "releases_url": "https://bgithub.xyz/FreeTubeApp/FreeTube/releases",
+    "repo_path": "FreeTubeApp/FreeTube"
   }
 ]
