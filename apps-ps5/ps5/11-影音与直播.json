@@ -1,0 +1,740 @@
+[
+  {
+    "id": "native-ppsa74126",
+    "简介": "Stremio Plus（PS5 影音与直播）",
+    "分类": "影音与直播",
+    "aliases": [
+      "Stremio Plus",
+      "PPSA74126",
+      "Stremio-Plus",
+      "视频",
+      "播放器",
+      "影音"
+    ],
+    "enabled": false,
+    "repo_path": "LoZazaMastro/Stremio-Plus",
+    "releases_url": "https://github.com/LoZazaMastro/Stremio-Plus/releases/tag/0.5.11",
+    "title_id": "PPSA74126",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA74126.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "9f9ecb9c8b87d01a4eb5969f7ea8af853d20d37165afd6d8081a525487bcf990",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/LoZazaMastro/Stremio-Plus/releases/tag/0.5.11",
+      "发布标签": "0.5.11"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "0.5.11",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PPSA74126.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PPSA74126.zip",
+    "save_subdir": "native-ppsa74126",
+    "download_url_templates": [
+      "https://github.com/LoZazaMastro/Stremio-Plus/releases/download/0.5.11/PPSA74126.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa77711",
+    "简介": "Stremio（PS5 影音与直播）",
+    "分类": "影音与直播",
+    "aliases": [
+      "Stremio",
+      "PPSA77711",
+      "unofficial-stremio-ps5-port",
+      "视频",
+      "播放器",
+      "影音"
+    ],
+    "enabled": false,
+    "repo_path": "Sp9nky/unofficial-stremio-ps5-port",
+    "releases_url": "https://github.com/Sp9nky/unofficial-stremio-ps5-port/releases/tag/v1.2",
+    "title_id": "PPSA77711",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA77711.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "eec6ef7d9a173fce4e0fdca8521e57a9d789742cb1257262d23bc834c3ef4fa7",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/Sp9nky/unofficial-stremio-ps5-port/releases/tag/v1.2",
+      "发布标签": "v1.2"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "v1.2",
+    "installer_extensions": [
+      ".ffpfsc"
+    ],
+    "installer_markers": [
+      "PPSA77711.ffpfsc"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PPSA77711.ffpfsc",
+    "save_subdir": "native-ppsa77711",
+    "download_url_templates": [
+      "https://github.com/Sp9nky/unofficial-stremio-ps5-port/releases/download/v1.2/PPSA77711.ffpfsc"
+    ]
+  },
+  {
+    "id": "native-ppsa85300",
+    "简介": "VLC（PS5 影音与直播）",
+    "分类": "影音与直播",
+    "aliases": [
+      "VLC",
+      "PPSA85300",
+      "VLC",
+      "视频",
+      "播放器",
+      "影音"
+    ],
+    "enabled": false,
+    "repo_path": "ZiZc3/VLC",
+    "releases_url": "https://github.com/ZiZc3/VLC/releases/tag/v0.4.6",
+    "title_id": "PPSA85300",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA85300.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "3fd59590181813e68cbc9e77cf88d6d48ed675d21628640887a0dc20dfafc1fb",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/ZiZc3/VLC/releases/tag/v0.4.6",
+      "发布标签": "v0.4.6"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "v0.4.6",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PPSA85300.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PPSA85300.zip",
+    "save_subdir": "native-ppsa85300",
+    "download_url_templates": [
+      "https://github.com/ZiZc3/VLC/releases/download/v0.4.6/PPSA85300.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99003",
+    "简介": "ProsperoTV（PS5 影音与直播）",
+    "分类": "影音与直播",
+    "aliases": [
+      "ProsperoTV",
+      "PPSA99003",
+      "ProsperoTV",
+      "视频",
+      "播放器",
+      "影音"
+    ],
+    "enabled": false,
+    "repo_path": "ThatGuyKalvin/ProsperoTV",
+    "releases_url": "https://github.com/ThatGuyKalvin/ProsperoTV/releases/tag/01.000.080",
+    "title_id": "PPSA99003",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99003.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "8a6b89d82c25c3c22a866633312aebc29d8d026c01c791e3934a11ba70c4c064",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/ThatGuyKalvin/ProsperoTV/releases/tag/01.000.080",
+      "发布标签": "01.000.080"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "01.000.080",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PPSA99003.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PPSA99003.zip",
+    "save_subdir": "native-ppsa99003",
+    "download_url_templates": [
+      "https://github.com/ThatGuyKalvin/ProsperoTV/releases/download/01.000.080/PPSA99003.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99015",
+    "简介": "Media Player Classic PS5（PS5 影音与直播）",
+    "分类": "影音与直播",
+    "aliases": [
+      "Media Player Classic PS5",
+      "PPSA99015",
+      "MediaPlayerClassicPS5",
+      "视频",
+      "播放器",
+      "影音"
+    ],
+    "enabled": false,
+    "repo_path": "MisterTemaki/MediaPlayerClassicPS5",
+    "releases_url": "https://github.com/MisterTemaki/MediaPlayerClassicPS5/releases/tag/v1.2.3",
+    "title_id": "PPSA99015",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99015.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "c0d0324735867aa1b921f34709c3e1a81758d2ce2d099373d2d11cd5d912df76",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/MisterTemaki/MediaPlayerClassicPS5/releases/tag/v1.2.3",
+      "发布标签": "v1.2.3"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "v1.2.3",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "MediaPlayerClassicPS5-v1.2.3-PPSA99015.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "MediaPlayerClassicPS5-v1.2.3-PPSA99015.zip",
+    "save_subdir": "native-ppsa99015",
+    "download_url_templates": [
+      "https://github.com/MisterTemaki/MediaPlayerClassicPS5/releases/download/v1.2.3/MediaPlayerClassicPS5-v1.2.3-PPSA99015.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99039",
+    "简介": "EVO Player（PS5 影音与直播）",
+    "分类": "影音与直播",
+    "aliases": [
+      "EVO Player",
+      "PPSA99039",
+      "EVO-PLAYER-PS5",
+      "视频",
+      "播放器",
+      "影音"
+    ],
+    "enabled": false,
+    "repo_path": "sainsaji/EVO-PLAYER-PS5",
+    "releases_url": "https://github.com/sainsaji/EVO-PLAYER-PS5/releases/tag/v0.12.0",
+    "title_id": "PPSA99039",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99039.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "98788be10b3d2fe2909f6e353e2e09409ad29e46c2bc37112e2f35d9baa00d8a",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/sainsaji/EVO-PLAYER-PS5/releases/tag/v0.12.0",
+      "发布标签": "v0.12.0"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "v0.12.0",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "EVOPlayer-v0.12.0-PPSA99039.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "EVOPlayer-v0.12.0-PPSA99039.zip",
+    "save_subdir": "native-ppsa99039",
+    "download_url_templates": [
+      "https://github.com/sainsaji/EVO-PLAYER-PS5/releases/download/v0.12.0/EVOPlayer-v0.12.0-PPSA99039.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99141",
+    "简介": "Mortalfin（PS5 影音与直播）",
+    "分类": "影音与直播",
+    "aliases": [
+      "Mortalfin",
+      "PPSA99141",
+      "mortalfin",
+      "视频",
+      "播放器",
+      "影音"
+    ],
+    "enabled": false,
+    "repo_path": "mortaljinx/mortalfin",
+    "releases_url": "https://github.com/mortaljinx/mortalfin/releases/tag/1.0.0-beta.5",
+    "title_id": "PPSA99141",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99141.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "acaba3bb0d14acbff26a8a66982e1c2727e2fe342d8078e36ecdb69c1e49abfe",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/mortaljinx/mortalfin/releases/tag/1.0.0-beta.5",
+      "发布标签": "1.0.0-beta.5"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "1.0.0-beta.5",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "Mortalfin-1.0.0-beta.5.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "Mortalfin-1.0.0-beta.5.zip",
+    "save_subdir": "native-ppsa99141",
+    "download_url_templates": [
+      "https://github.com/mortaljinx/mortalfin/releases/download/1.0.0-beta.5/Mortalfin-1.0.0-beta.5.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99288",
+    "简介": "Nuvio Max'd（PS5 影音与直播）",
+    "分类": "影音与直播",
+    "aliases": [
+      "Nuvio Max'd",
+      "PPSA99288",
+      "Nuvio-maxd-releases",
+      "视频",
+      "播放器",
+      "影音"
+    ],
+    "enabled": false,
+    "repo_path": "HandshakeHackin/Nuvio-maxd-releases",
+    "releases_url": "https://github.com/HandshakeHackin/Nuvio-maxd-releases/releases/tag/v0.5.34-native-experimental",
+    "title_id": "PPSA99288",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99288.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "88173ce44ee4e0f7145d241a539deb767b9fc05d60b0d1d71a77194ff623b46d",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/HandshakeHackin/Nuvio-maxd-releases/releases/tag/v0.5.34-native-experimental",
+      "发布标签": "v0.5.34-native-experimental"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "v0.5.34-native-experimental",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PPSA99288.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PPSA99288.zip",
+    "save_subdir": "native-ppsa99288",
+    "download_url_templates": [
+      "https://github.com/HandshakeHackin/Nuvio-maxd-releases/releases/download/v0.5.34-native-experimental/PPSA99288.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99420",
+    "简介": "PS5MC（PS5 影音与直播）",
+    "分类": "影音与直播",
+    "aliases": [
+      "PS5MC",
+      "PPSA99420",
+      "PS5MC",
+      "视频",
+      "播放器",
+      "影音"
+    ],
+    "enabled": false,
+    "repo_path": "VivaLaVent/PS5MC",
+    "releases_url": "https://github.com/VivaLaVent/PS5MC/releases/tag/1.2",
+    "title_id": "PPSA99420",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99420.json",
+    "_许可": "GPL-2.0-or-later",
+    "_上游sha256": "5a9eeff4a0024a341a4924b8d283fe65b4ff94d7f5dbea446c8a677c4db157b6",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/VivaLaVent/PS5MC/releases/tag/1.2",
+      "发布标签": "1.2"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "1.2",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PS5MC-1.2-kodi22-PPSA99420.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PS5MC-1.2-kodi22-PPSA99420.zip",
+    "save_subdir": "native-ppsa99420",
+    "download_url_templates": [
+      "https://github.com/VivaLaVent/PS5MC/releases/download/1.2/PS5MC-1.2-kodi22-PPSA99420.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99474",
+    "简介": "Twispero（PS5 影音与直播）",
+    "分类": "影音与直播",
+    "aliases": [
+      "Twispero",
+      "PPSA99474",
+      "twispero",
+      "视频",
+      "播放器",
+      "影音"
+    ],
+    "enabled": false,
+    "repo_path": "unicxrn/twispero",
+    "releases_url": "https://github.com/unicxrn/twispero/releases/tag/v1.0.0",
+    "title_id": "PPSA99474",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99474.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "6b478353e6f69afa6171a0ca5e8c7e13e6cf352d07b3e7d514c5abe922d8d4ba",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/unicxrn/twispero/releases/tag/v1.0.0",
+      "发布标签": "v1.0.0"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "v1.0.0",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PPSA99474.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PPSA99474.zip",
+    "save_subdir": "native-ppsa99474",
+    "download_url_templates": [
+      "https://github.com/unicxrn/twispero/releases/download/v1.0.0/PPSA99474.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99505",
+    "简介": "Jelly5（PS5 影音与直播）",
+    "分类": "影音与直播",
+    "aliases": [
+      "Jelly5",
+      "PPSA99505",
+      "Jelly5",
+      "视频",
+      "播放器",
+      "影音",
+      "Jellyfin"
+    ],
+    "enabled": false,
+    "repo_path": "02dnot/Jelly5",
+    "releases_url": "https://github.com/02dnot/Jelly5/releases/tag/v0.7.0",
+    "title_id": "PPSA99505",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99505.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "559e067239646ba160be370b9b91de2bee69565c154584f00de2a87adae95a57",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/02dnot/Jelly5/releases/tag/v0.7.0",
+      "发布标签": "v0.7.0"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "v0.7.0",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "Jelly5-00.007.000.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "Jelly5-00.007.000.zip",
+    "save_subdir": "native-ppsa99505",
+    "download_url_templates": [
+      "https://github.com/02dnot/Jelly5/releases/download/v0.7.0/Jelly5-00.007.000.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99515",
+    "简介": "Emby5（PS5 影音与直播）",
+    "分类": "影音与直播",
+    "aliases": [
+      "Emby5",
+      "PPSA99515",
+      "Emby5",
+      "视频",
+      "播放器",
+      "影音",
+      "Emby",
+      "Jellyfin"
+    ],
+    "enabled": false,
+    "repo_path": "bornaradusin/Emby5",
+    "releases_url": "https://github.com/bornaradusin/Emby5/releases/tag/1.2.5",
+    "title_id": "PPSA99515",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99515.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "84eb60b06df40873bbea3e4bb99208df653ffde3f3c8931813c1834966a0dbed",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/bornaradusin/Emby5/releases/tag/1.2.5",
+      "发布标签": "1.2.5"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "1.2.5",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "Emby5-1.2.5.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "Emby5-1.2.5.zip",
+    "save_subdir": "native-ppsa99515",
+    "download_url_templates": [
+      "https://github.com/bornaradusin/Emby5/releases/download/1.2.5/Emby5-1.2.5.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99520",
+    "简介": "Régie5（PS5 影音与直播）",
+    "分类": "影音与直播",
+    "aliases": [
+      "Régie5",
+      "PPSA99520",
+      "regie5",
+      "视频",
+      "播放器",
+      "影音"
+    ],
+    "enabled": false,
+    "repo_path": "viviandsx/regie5",
+    "releases_url": "https://github.com/viviandsx/regie5/releases/tag/v0.7.0",
+    "title_id": "PPSA99520",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99520.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "c54af57f7c6fe7ff8a2322be5a09e0620f51c8c10473d5b58908fa84d6a3e023",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/viviandsx/regie5/releases/tag/v0.7.0",
+      "发布标签": "v0.7.0"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "v0.7.0",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PPSA99520.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PPSA99520.zip",
+    "save_subdir": "native-ppsa99520",
+    "download_url_templates": [
+      "https://github.com/viviandsx/regie5/releases/download/v0.7.0/PPSA99520.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99991",
+    "简介": "YouTube Max’d（PS5 影音与直播）",
+    "分类": "影音与直播",
+    "aliases": [
+      "YouTube Max’d",
+      "PPSA99991",
+      "youtube-maxd",
+      "视频",
+      "播放器",
+      "影音"
+    ],
+    "enabled": false,
+    "repo_path": "HandshakeHackin/youtube-maxd",
+    "releases_url": "https://github.com/HandshakeHackin/youtube-maxd/releases/tag/v1.3.0-preview.1",
+    "title_id": "PPSA99991",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99991.json",
+    "_许可": "GPL-3.0-or-later",
+    "_上游sha256": "22b4bf2c8b7fa67f3e11198645fab9746f7381170b12dfc82ce709814792e593",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/HandshakeHackin/youtube-maxd/releases/tag/v1.3.0-preview.1",
+      "发布标签": "v1.3.0-preview.1"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "v1.3.0-preview.1",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PPSA99991.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PPSA99991.zip",
+    "save_subdir": "native-ppsa99991",
+    "download_url_templates": [
+      "https://github.com/HandshakeHackin/youtube-maxd/releases/download/v1.3.0-preview.1/PPSA99991.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99997",
+    "简介": "Nuvio PS5（PS5 影音与直播）",
+    "分类": "影音与直播",
+    "aliases": [
+      "Nuvio PS5",
+      "PPSA99997",
+      "nuvio-ps5-homebrew",
+      "视频",
+      "播放器",
+      "影音"
+    ],
+    "enabled": false,
+    "repo_path": "bilawalriaz/nuvio-ps5-homebrew",
+    "releases_url": "https://github.com/bilawalriaz/nuvio-ps5-homebrew/releases/tag/v0.1.0-alpha.7",
+    "title_id": "PPSA99997",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99997.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "8c56ca5149d39fab1e4e4f8650f25e20d49e655374769765dca8c30ae2385eca",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/bilawalriaz/nuvio-ps5-homebrew/releases/tag/v0.1.0-alpha.7",
+      "发布标签": "v0.1.0-alpha.7"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "v0.1.0-alpha.7",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PPSA99997.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PPSA99997.zip",
+    "save_subdir": "native-ppsa99997",
+    "download_url_templates": [
+      "https://github.com/bilawalriaz/nuvio-ps5-homebrew/releases/download/v0.1.0-alpha.7/PPSA99997.zip"
+    ]
+  }
+]

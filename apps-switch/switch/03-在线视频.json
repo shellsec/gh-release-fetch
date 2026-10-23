@@ -1,0 +1,554 @@
+[
+  {
+    "id": "wiliwili",
+    "简介": "B 站客户端",
+    "分类": "在线视频",
+    "enabled": false,
+    "aliases": [
+      "wiliwili",
+      "哔哩哔哩",
+      "B站"
+    ],
+    "repo_path": "xfangfang/wiliwili",
+    "releases_url": "https://github.com/xfangfang/wiliwili/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "wiliwili",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "wiliwili-NintendoSwitch",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "wiliwili.zip",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "windows",
+      "Windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Overlay",
+      "overlay",
+      "debug",
+      "Debug"
+    ],
+    "使用说明": "完整保留压缩包中的 SD 卡目录布局，具体依赖与启动方式见项目说明。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/xfangfang/wiliwili/releases/tag/v1.6.0",
+      "状态": "release",
+      "发布标签": "v1.6.0",
+      "发布时间": "2026-04-25T07:39:58Z"
+    },
+    "download_names": [
+      "wiliwili-NintendoSwitch.zip"
+    ]
+  },
+  {
+    "id": "switch-newpipe",
+    "简介": "YouTube 客户端",
+    "分类": "在线视频",
+    "enabled": false,
+    "aliases": [
+      "switch-newpipe",
+      "YouTube",
+      "油管"
+    ],
+    "repo_path": "mirusu400/switch-newpipe",
+    "releases_url": "https://github.com/mirusu400/switch-newpipe/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "switch-newpipe",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".nro"
+    ],
+    "installer_markers": [
+      "switch_newpipe",
+      ".nro"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "switch-newpipe.nro",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "windows",
+      "Windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Overlay",
+      "overlay",
+      "debug",
+      "Debug"
+    ],
+    "使用说明": "仅下载主机端文件；放置路径、资源依赖及启动方式见项目说明。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/mirusu400/switch-newpipe/releases/tag/v0.0.5",
+      "状态": "release",
+      "发布标签": "v0.0.5",
+      "发布时间": "2026-08-19T01:39:45Z"
+    },
+    "download_names": [
+      "switch_newpipe.nro"
+    ]
+  },
+  {
+    "id": "switch-hongguo",
+    "简介": "红果短剧客户端",
+    "分类": "在线视频",
+    "enabled": false,
+    "aliases": [
+      "switch-hongguo",
+      "红果",
+      "短剧"
+    ],
+    "repo_path": "ZYP-INre/switch-hongguo",
+    "releases_url": "https://github.com/ZYP-INre/switch-hongguo/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "switch-hongguo",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".nro"
+    ],
+    "installer_markers": [
+      "hongguo",
+      ".nro"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "switch-hongguo.nro",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "windows",
+      "Windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Overlay",
+      "overlay",
+      "debug",
+      "Debug"
+    ],
+    "使用说明": "仅下载主机端文件；放置路径、资源依赖及启动方式见项目说明。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/ZYP-INre/switch-hongguo/releases/tag/v0.3.0",
+      "状态": "release",
+      "发布标签": "v0.3.0",
+      "发布时间": "2026-10-16T15:30:15Z"
+    },
+    "download_names": [
+      "hongguo.nro"
+    ]
+  },
+  {
+    "id": "switchtvbox",
+    "简介": "影视客户端",
+    "分类": "在线视频",
+    "enabled": false,
+    "aliases": [
+      "SwitchTVBox",
+      "影视",
+      "TVBox"
+    ],
+    "repo_path": "lGuann/SwitchTVBox",
+    "releases_url": "https://github.com/lGuann/SwitchTVBox/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "switchtvbox",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "SwitchTVBox",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "switchtvbox.zip",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "windows",
+      "Windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Overlay",
+      "overlay",
+      "debug",
+      "Debug"
+    ],
+    "使用说明": "完整保留压缩包中的 SD 卡目录布局，具体依赖与启动方式见项目说明。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/lGuann/SwitchTVBox/releases/tag/v0.4.52",
+      "状态": "release",
+      "发布标签": "v0.4.52",
+      "发布时间": "2026-10-18T07:07:18Z"
+    }
+  },
+  {
+    "id": "tikzen",
+    "简介": "视频客户端",
+    "分类": "在线视频",
+    "enabled": false,
+    "aliases": [
+      "Tikzen",
+      "影视"
+    ],
+    "repo_path": "lGuann/Tikzen",
+    "releases_url": "https://github.com/lGuann/Tikzen/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "tikzen",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "TikZen",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "tikzen.zip",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "windows",
+      "Windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Overlay",
+      "overlay",
+      "debug",
+      "Debug"
+    ],
+    "使用说明": "完整保留压缩包中的 SD 卡目录布局，具体依赖与启动方式见项目说明。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/lGuann/Tikzen/releases/tag/tikzen-v1.0.5",
+      "状态": "release",
+      "发布标签": "tikzen-v1.0.5",
+      "发布时间": "2026-10-17T10:08:56Z"
+    }
+  },
+  {
+    "id": "hongguo-switch",
+    "简介": "红果短剧客户端",
+    "分类": "在线视频",
+    "enabled": false,
+    "aliases": [
+      "hongguo-switch",
+      "红果",
+      "短剧"
+    ],
+    "repo_path": "dongrez1990-cloud/hongguo-switch",
+    "releases_url": "https://github.com/dongrez1990-cloud/hongguo-switch/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "hongguo-switch",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".nsp"
+    ],
+    "installer_markers": [
+      "hongguo-build",
+      ".nsp"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "hongguo-switch.nsp",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "windows",
+      "Windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Overlay",
+      "overlay",
+      "debug",
+      "Debug"
+    ],
+    "使用说明": "仅下载主机端文件；放置路径、资源依赖及启动方式见项目说明。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/dongrez1990-cloud/hongguo-switch/releases/tag/v1.1.0",
+      "状态": "release",
+      "发布标签": "v1.1.0",
+      "发布时间": "2026-10-18T11:40:10Z"
+    }
+  },
+  {
+    "id": "streamfin",
+    "简介": "流媒体客户端",
+    "分类": "在线视频",
+    "enabled": false,
+    "aliases": [
+      "StreamFin",
+      "Stremio"
+    ],
+    "repo_path": "scamNscoot/StreamFin",
+    "releases_url": "https://github.com/scamNscoot/StreamFin/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "streamfin",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".nro"
+    ],
+    "installer_markers": [
+      "StreamFin",
+      ".nro"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "streamfin.nro",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "windows",
+      "Windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Overlay",
+      "overlay",
+      "debug",
+      "Debug"
+    ],
+    "使用说明": "仅下载主机端文件；放置路径、资源依赖及启动方式见项目说明。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/scamNscoot/StreamFin/releases/tag/v0.3.0",
+      "状态": "release",
+      "发布标签": "v0.3.0",
+      "发布时间": "2026-07-16T15:03:24Z"
+    },
+    "download_names": [
+      "StreamFin.nro"
+    ]
+  },
+  {
+    "id": "stremnx",
+    "简介": "流媒体客户端",
+    "分类": "在线视频",
+    "enabled": false,
+    "aliases": [
+      "StremNX",
+      "Stremio"
+    ],
+    "repo_path": "denpingus/StremNX",
+    "releases_url": "https://github.com/denpingus/StremNX/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "stremnx",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".nro"
+    ],
+    "installer_markers": [
+      "stremnx",
+      ".nro"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "stremnx.nro",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "windows",
+      "Windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Overlay",
+      "overlay",
+      "debug",
+      "Debug"
+    ],
+    "使用说明": "仅下载主机端文件；放置路径、资源依赖及启动方式见项目说明。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/denpingus/StremNX/releases/tag/v0.3.0-beta",
+      "状态": "release",
+      "发布标签": "v0.3.0-beta",
+      "发布时间": "2026-10-18T19:56:46Z"
+    },
+    "download_names": [
+      "stremnx.nro"
+    ]
+  },
+  {
+    "id": "twinx",
+    "简介": "Twitch 直播客户端",
+    "分类": "在线视频",
+    "enabled": false,
+    "aliases": [
+      "twiNX",
+      "Twitch",
+      "直播"
+    ],
+    "repo_path": "DomazinUS/twiNX",
+    "releases_url": "https://github.com/DomazinUS/twiNX/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "twinx",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "twiNX",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "twinx.zip",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "windows",
+      "Windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Overlay",
+      "overlay",
+      "debug",
+      "Debug"
+    ],
+    "使用说明": "完整保留压缩包中的 SD 卡目录布局，具体依赖与启动方式见项目说明。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/DomazinUS/twiNX/releases/tag/v0.9.1",
+      "状态": "release",
+      "发布标签": "v0.9.1",
+      "发布时间": "2026-08-03T21:33:59Z"
+    }
+  },
+  {
+    "id": "ytb-player",
+    "简介": "YouTube 客户端",
+    "分类": "在线视频",
+    "enabled": false,
+    "aliases": [
+      "ytb-player",
+      "YouTube",
+      "油管"
+    ],
+    "repo_path": "murat303/ytb-player",
+    "releases_url": "https://github.com/murat303/ytb-player/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "ytb-player",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".nro"
+    ],
+    "installer_markers": [
+      "ytb-player",
+      ".nro"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "ytb-player.nro",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "windows",
+      "Windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Overlay",
+      "overlay",
+      "debug",
+      "Debug"
+    ],
+    "使用说明": "仅下载主机端文件；放置路径、资源依赖及启动方式见项目说明。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/murat303/ytb-player/releases/tag/v1.1.0",
+      "状态": "release",
+      "发布标签": "v1.1.0",
+      "发布时间": "2026-09-26T20:06:01Z"
+    },
+    "download_names": [
+      "ytb-player.nro"
+    ]
+  },
+  {
+    "id": "nxtube",
+    "简介": "NxTube：YouTube App 补丁介绍",
+    "分类": "在线视频",
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.gamebrew.org/wiki/NxTube_Switch",
+    "run_installer": false,
+    "aliases": [
+      "YouTube补丁"
+    ],
+    "使用说明": "仅提供补丁介绍页面；补丁版本与官方 YouTube App 的兼容性以项目说明为准。"
+  },
+  {
+    "id": "youtube-switch",
+    "简介": "YouTube 官方 Switch App",
+    "分类": "在线视频",
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.nintendo.com/us/store/products/youtube-switch/",
+    "run_installer": false,
+    "aliases": [
+      "YouTube",
+      "油管"
+    ],
+    "使用说明": "官方商店分发，不是 GitHub Release；安装要求以任天堂商店说明为准。"
+  }
+]

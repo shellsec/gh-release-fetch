@@ -1,0 +1,52 @@
+[
+  {
+    "id": "itemzflow",
+    "简介": "Itemzflow 应用管理",
+    "分类": "文件与存档",
+    "aliases": [
+      "游戏管理",
+      "应用管理"
+    ],
+    "enabled": false,
+    "repo_path": "LightningMods/Itemzflow",
+    "releases_url": "https://github.com/LightningMods/Itemzflow/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "应用/外部分发",
+    "固件要求": "按项目 README 与当前发布说明核对。",
+    "使用说明": "本次最新 Release 未提供附件；仓库包含 PS4/PS5 相关内容，保留作者页面并按其说明选择 PS5 分发。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release-without-assets",
+      "来源": "https://github.com/LightningMods/Itemzflow/releases/tag/1.08"
+    },
+    "open_page_only": true,
+    "open_page_url": "https://github.com/LightningMods/Itemzflow",
+    "_下载说明": "本次最新 Release 未提供附件；仓库包含 PS4/PS5 相关内容，保留作者页面并按其说明选择 PS5 分发。"
+  },
+  {
+    "id": "apollo-ps5",
+    "简介": "Apollo PS5 存档工具项目",
+    "分类": "文件与存档",
+    "aliases": [
+      "存档",
+      "Apollo"
+    ],
+    "enabled": false,
+    "repo_path": "bucanero/apollo-ps5",
+    "releases_url": "https://github.com/bucanero/apollo-ps5/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "源码项目",
+    "固件要求": "按项目 README 与当前发布说明核对。",
+    "使用说明": "本次未发现稳定 Release；保留源码页面，不表示已经提供可安装 PS5 包。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "no-stable-release",
+      "来源": "https://github.com/bucanero/apollo-ps5/releases"
+    },
+    "open_page_only": true,
+    "open_page_url": "https://github.com/bucanero/apollo-ps5",
+    "_下载说明": "本次未发现稳定 Release；保留源码页面，不表示已经提供可安装 PS5 包。"
+  }
+]

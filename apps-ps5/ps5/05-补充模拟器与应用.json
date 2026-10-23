@@ -1,0 +1,200 @@
+[
+  {
+    "id": "psp5",
+    "简介": "PSP5 原生 PSP 模拟器",
+    "分类": "补充模拟器与应用",
+    "aliases": [
+      "PSP",
+      "PPSSPP",
+      "模拟器"
+    ],
+    "enabled": false,
+    "repo_path": "tsuramatsu1/psp5",
+    "releases_url": "https://github.com/tsuramatsu1/psp5/releases/tag/v1.000.100",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按项目 README 与当前发布说明核对。",
+    "使用说明": "基于 PPSSPP；所需游戏数据和兼容性查看作者说明。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/tsuramatsu1/psp5/releases/tag/v1.000.100",
+      "发布标签": "v1.000.100"
+    },
+    "title_id": "PPSA99131",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PPSA99131.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PPSA99131.zip",
+    "save_subdir": "psp5",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "SHA256",
+      "debug",
+      "Debug"
+    ],
+    "pinned_release_tag": "v1.000.100",
+    "download_url_templates": [
+      "https://github.com/tsuramatsu1/psp5/releases/download/v1.000.100/PPSA99131.zip"
+    ]
+  },
+  {
+    "id": "retroarch-websrv-engine",
+    "简介": "RetroArch websrv 前端与资源",
+    "分类": "补充模拟器与应用",
+    "aliases": [
+      "RetroArch",
+      "模拟器",
+      "前端"
+    ],
+    "enabled": false,
+    "repo_path": "avoidik/ps5-retroarch",
+    "releases_url": "https://github.com/avoidik/ps5-retroarch/releases/tag/v1.0.1",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "websrv 应用",
+    "固件要求": "按项目 README 与当前发布说明核对。",
+    "使用说明": "与 retroarch-websrv-cores 配套；这是 websrv 布局，与 native RetroArch 标题分开。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/avoidik/ps5-retroarch/releases/tag/v1.0.1",
+      "发布标签": "v1.0.1"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "RetroArch-PS5-engine.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "RetroArch-PS5-engine.zip",
+    "save_subdir": "retroarch-websrv-engine",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "SHA256",
+      "debug",
+      "Debug"
+    ],
+    "pinned_release_tag": "v1.0.1",
+    "download_url_templates": [
+      "https://github.com/avoidik/ps5-retroarch/releases/download/v1.0.1/RetroArch-PS5-engine.zip"
+    ]
+  },
+  {
+    "id": "retroarch-websrv-cores",
+    "简介": "RetroArch websrv 模拟器核心",
+    "分类": "补充模拟器与应用",
+    "aliases": [
+      "RetroArch",
+      "核心",
+      "模拟器"
+    ],
+    "enabled": false,
+    "repo_path": "avoidik/ps5-retroarch",
+    "releases_url": "https://github.com/avoidik/ps5-retroarch/releases/tag/v1.0.1",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "websrv 资源",
+    "固件要求": "按项目 README 与当前发布说明核对。",
+    "使用说明": "需匹配的 RetroArch websrv 前端；BIOS 与游戏数据按核心说明准备。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/avoidik/ps5-retroarch/releases/tag/v1.0.1",
+      "发布标签": "v1.0.1"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "RetroArch-PS5-cores.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "RetroArch-PS5-cores.zip",
+    "save_subdir": "retroarch-websrv-cores",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "SHA256",
+      "debug",
+      "Debug"
+    ],
+    "pinned_release_tag": "v1.0.1",
+    "download_url_templates": [
+      "https://github.com/avoidik/ps5-retroarch/releases/download/v1.0.1/RetroArch-PS5-cores.zip"
+    ]
+  },
+  {
+    "id": "ytps5",
+    "简介": "ytps5 YouTube 客户端",
+    "分类": "补充模拟器与应用",
+    "aliases": [
+      "YouTube",
+      "油管",
+      "视频"
+    ],
+    "enabled": false,
+    "repo_path": "haasele/ytps5",
+    "releases_url": "https://github.com/haasele/ytps5/releases/tag/01.000.005",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按项目 README 与当前发布说明核对。",
+    "使用说明": "原生标题包；与其他项目是否使用同一 Title ID 需核对，安装前看作者 README。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/haasele/ytps5/releases/tag/01.000.005",
+      "发布标签": "01.000.005"
+    },
+    "title_id": "PPSA99350",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PPSA99350.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PPSA99350.zip",
+    "save_subdir": "ytps5",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "SHA256",
+      "debug",
+      "Debug"
+    ],
+    "pinned_release_tag": "01.000.005",
+    "download_url_templates": [
+      "https://github.com/haasele/ytps5/releases/download/01.000.005/PPSA99350.zip"
+    ]
+  }
+]

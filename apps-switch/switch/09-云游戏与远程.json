@@ -1,0 +1,261 @@
+[
+  {
+    "id": "uuremote-ns",
+    "简介": "UU 远程客户端",
+    "分类": "云游戏与远程",
+    "enabled": false,
+    "aliases": [
+      "UURemote-ns",
+      "UU远程",
+      "网易UU"
+    ],
+    "repo_path": "Antman2023/UURemote-ns",
+    "releases_url": "https://github.com/Antman2023/UURemote-ns/releases/tag/v0.1.6",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "uuremote-ns",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "save_name": "uuremote-ns.zip",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "UURemote-ns-0.1.6-switch.zip"
+    ],
+    "installer_markers_match_all": true,
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "Windows",
+      "windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Debug",
+      "debug"
+    ],
+    "pinned_release_tag": "v0.1.6",
+    "使用说明": "预发布固定版本；下载 Switch 完整 ZIP，配对和服务要求见 README，后续版本需人工复核 tag。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/Antman2023/UURemote-ns/releases/tag/v0.1.6",
+      "状态": "prerelease",
+      "发布标签": "v0.1.6"
+    },
+    "download_url_templates": [
+      "https://github.com/Antman2023/UURemote-ns/releases/download/v0.1.6/UURemote-ns-0.1.6-switch.zip"
+    ]
+  },
+  {
+    "id": "opennow-switch",
+    "简介": "GeForce NOW 云游戏客户端",
+    "分类": "云游戏与远程",
+    "enabled": false,
+    "aliases": [
+      "OpenNOW-Switch",
+      "GeForce NOW",
+      "GFN",
+      "云游戏"
+    ],
+    "repo_path": "OpenCloudGaming/OpenNOW-Switch",
+    "releases_url": "https://github.com/OpenCloudGaming/OpenNOW-Switch/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "opennow-switch",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "SwitchNOW",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "opennow-switch.zip",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "windows",
+      "Windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Overlay",
+      "overlay",
+      "debug",
+      "Debug"
+    ],
+    "使用说明": "完整保留压缩包中的 SD 卡目录布局，具体依赖与启动方式见项目说明。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/OpenCloudGaming/OpenNOW-Switch/releases/tag/v0.0.10",
+      "状态": "release",
+      "发布标签": "v0.0.10",
+      "发布时间": "2026-10-15T20:01:30Z"
+    }
+  },
+  {
+    "id": "zerodroid",
+    "简介": "Boosteroid 云游戏客户端",
+    "分类": "云游戏与远程",
+    "enabled": false,
+    "aliases": [
+      "ZERODROID",
+      "Boosteroid",
+      "云游戏"
+    ],
+    "repo_path": "elzerdodata/ZERODROID",
+    "releases_url": "https://github.com/elzerdodata/ZERODROID/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "zerodroid",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".nro"
+    ],
+    "installer_markers": [
+      "ZERODROID",
+      ".nro"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "zerodroid.nro",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "windows",
+      "Windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Overlay",
+      "overlay",
+      "debug",
+      "Debug"
+    ],
+    "使用说明": "仅下载主机端文件；放置路径、资源依赖及启动方式见项目说明。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/elzerdodata/ZERODROID/releases/tag/v1.0.1",
+      "状态": "release",
+      "发布标签": "v1.0.1",
+      "发布时间": "2026-08-07T10:20:06Z"
+    }
+  },
+  {
+    "id": "halyard",
+    "简介": "Shadow 云电脑客户端",
+    "分类": "云游戏与远程",
+    "enabled": false,
+    "aliases": [
+      "Halyard",
+      "Shadow",
+      "云电脑"
+    ],
+    "repo_path": "Wasabules/Halyard",
+    "releases_url": "https://github.com/Wasabules/Halyard/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "halyard",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".nro"
+    ],
+    "installer_markers": [
+      "halyard",
+      ".nro"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "halyard.nro",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "windows",
+      "Windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Overlay",
+      "overlay",
+      "debug",
+      "Debug"
+    ],
+    "使用说明": "仅下载主机端文件；放置路径、资源依赖及启动方式见项目说明。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/Wasabules/Halyard/releases/tag/v0.1.0",
+      "状态": "release",
+      "发布标签": "v0.1.0",
+      "发布时间": "2026-09-26T12:39:52Z"
+    },
+    "download_names": [
+      "halyard.nro"
+    ]
+  },
+  {
+    "id": "nsteamlink",
+    "简介": "Steam 远程串流",
+    "分类": "云游戏与远程",
+    "enabled": false,
+    "aliases": [
+      "nsteamlink",
+      "Steam串流",
+      "Steam Link"
+    ],
+    "repo_path": "kxn/nsteamlink",
+    "releases_url": "https://github.com/kxn/nsteamlink/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "nsteamlink",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".nro"
+    ],
+    "installer_markers": [
+      "NSteamLink",
+      ".nro"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "nsteamlink.nro",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "windows",
+      "Windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Overlay",
+      "overlay",
+      "debug",
+      "Debug"
+    ],
+    "使用说明": "仅下载主机端文件；放置路径、资源依赖及启动方式见项目说明。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/kxn/nsteamlink/releases/tag/v0.5.0",
+      "状态": "release",
+      "发布标签": "v0.5.0",
+      "发布时间": "2026-10-19T02:39:21Z"
+    }
+  }
+]

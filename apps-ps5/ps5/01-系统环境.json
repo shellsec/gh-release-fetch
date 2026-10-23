@@ -1,0 +1,165 @@
+[
+  {
+    "id": "relapse-exploit",
+    "简介": "Relapse PS5 入口项目",
+    "分类": "系统环境",
+    "aliases": [
+      "Relapse",
+      "系统环境"
+    ],
+    "enabled": false,
+    "repo_path": "ntfargo/Relapse-Exploit",
+    "releases_url": "https://github.com/ntfargo/Relapse-Exploit/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "浏览器入口/源码",
+    "固件要求": "项目 README 列出 7.00–13.60；其范围不等于各载荷与应用的范围。",
+    "使用说明": "浏览器入口/自托管源码，保留项目页面；不把整个源码仓库当作主机安装包。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "no-stable-release",
+      "来源": "https://github.com/ntfargo/Relapse-Exploit/releases"
+    },
+    "open_page_only": true,
+    "open_page_url": "https://github.com/ntfargo/Relapse-Exploit",
+    "_下载说明": "浏览器入口/自托管源码，保留项目页面；不把整个源码仓库当作主机安装包。"
+  },
+  {
+    "id": "etahen",
+    "简介": "etaHEN 官方自制运行环境",
+    "分类": "系统环境",
+    "aliases": [
+      "HEN",
+      "工具箱",
+      "插件"
+    ],
+    "enabled": false,
+    "repo_path": "etaHEN/etaHEN",
+    "releases_url": "https://github.com/etaHEN/etaHEN/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "ELF/载荷",
+    "固件要求": "按项目 README 与当前发布说明核对。",
+    "使用说明": "官方分发；不能把第三方新版分支的支持范围套用于本条。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/etaHEN/etaHEN/releases/tag/2.5B",
+      "发布标签": "2.5B"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".bin"
+    ],
+    "installer_markers": [
+      "etaHEN-"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "etaHEN-2.5B.bin",
+    "save_subdir": "etahen",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "SHA256",
+      "debug",
+      "Debug"
+    ]
+  },
+  {
+    "id": "etahen-community-11-13",
+    "简介": "etaHEN 11.00–13.60 第三方移植",
+    "分类": "系统环境",
+    "aliases": [
+      "etaHEN",
+      "新版",
+      "13.60",
+      "11.00"
+    ],
+    "enabled": false,
+    "repo_path": "GronedWaffel/etahen-11.00-13.60",
+    "releases_url": "https://github.com/GronedWaffel/etahen-11.00-13.60/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "ELF/载荷",
+    "固件要求": "作者标示 11.00–13.60；具体依赖与硬件测试范围以分支 README 为准。",
+    "使用说明": "非官方分支，与官方 etaHEN 分开维护；需要匹配的入口和 ELF 加载环境，稳定性查看发布说明。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/GronedWaffel/etahen-11.00-13.60/releases/tag/v2.5B-unified.1",
+      "发布标签": "v2.5B-unified.1"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".elf"
+    ],
+    "installer_markers": [
+      "etaHEN-11.00-13.60.elf"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "etaHEN-11.00-13.60.elf",
+    "save_subdir": "etahen-community-11-13",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "SHA256",
+      "debug",
+      "Debug"
+    ]
+  },
+  {
+    "id": "onionhen",
+    "简介": "OnionHEN 社区运行环境",
+    "分类": "系统环境",
+    "aliases": [
+      "OnionHEN",
+      "插件"
+    ],
+    "enabled": false,
+    "repo_path": "aydencharles/onionHEN",
+    "releases_url": "https://github.com/aydencharles/onionHEN/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "ELF/载荷",
+    "固件要求": "按项目 README 与当前发布说明核对。",
+    "使用说明": "与 etaHEN 为不同环境选择，不自动同时加载。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/aydencharles/onionHEN/releases/tag/v0.9.0",
+      "发布标签": "v0.9.0"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".elf"
+    ],
+    "installer_markers": [
+      "OnionHEN.elf"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "OnionHEN.elf",
+    "save_subdir": "onionhen",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "SHA256",
+      "debug",
+      "Debug"
+    ],
+    "download_names": [
+      "OnionHEN.elf"
+    ]
+  }
+]

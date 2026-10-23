@@ -1,0 +1,1274 @@
+[
+  {
+    "id": "jksv",
+    "简介": "存档备份和还原",
+    "分类": "日常工具",
+    "enabled": false,
+    "aliases": [
+      "JKSV",
+      "存档备份",
+      "存档还原"
+    ],
+    "repo_path": "J-D-K/JKSV",
+    "releases_url": "https://github.com/J-D-K/JKSV/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "jksv",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".nro"
+    ],
+    "installer_markers": [
+      "JKSV",
+      ".nro"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "jksv.nro",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "windows",
+      "Windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Overlay",
+      "overlay",
+      "debug",
+      "Debug"
+    ],
+    "使用说明": "仅下载主机端文件；放置路径、资源依赖及启动方式见项目说明。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/J-D-K/JKSV/releases/tag/12/02/2025",
+      "状态": "release",
+      "发布标签": "12/02/2025",
+      "发布时间": "2025-12-02T14:08:19Z"
+    },
+    "download_names": [
+      "JKSV.nro"
+    ]
+  },
+  {
+    "id": "sys-clk",
+    "简介": "频率调节",
+    "分类": "日常工具",
+    "enabled": false,
+    "aliases": [
+      "sys-clk",
+      "超频",
+      "降频"
+    ],
+    "repo_path": "retronx-team/sys-clk",
+    "releases_url": "https://github.com/retronx-team/sys-clk/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "sys-clk",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "sys-clk",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "sys-clk.zip",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "windows",
+      "Windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Overlay",
+      "overlay",
+      "debug",
+      "Debug"
+    ],
+    "使用说明": "完整保留压缩包中的 SD 卡目录布局，具体依赖与启动方式见项目说明。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/retronx-team/sys-clk/releases/tag/2.0.1",
+      "状态": "release",
+      "发布标签": "2.0.1",
+      "发布时间": "2024-10-14T22:30:13Z"
+    }
+  },
+  {
+    "id": "missioncontrol",
+    "简介": "第三方手柄连接",
+    "分类": "日常工具",
+    "enabled": false,
+    "aliases": [
+      "MissionControl",
+      "蓝牙手柄",
+      "PS手柄",
+      "Xbox手柄"
+    ],
+    "repo_path": "ndeadly/MissionControl",
+    "releases_url": "https://github.com/ndeadly/MissionControl/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "missioncontrol",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "MissionControl",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "missioncontrol.zip",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "windows",
+      "Windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Overlay",
+      "overlay",
+      "debug",
+      "Debug"
+    ],
+    "使用说明": "完整保留压缩包中的 SD 卡目录布局，具体依赖与启动方式见项目说明。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/ndeadly/MissionControl/releases/tag/v0.16.0",
+      "状态": "release",
+      "发布标签": "v0.16.0",
+      "发布时间": "2026-10-02T10:17:17Z"
+    }
+  },
+  {
+    "id": "ftpd",
+    "简介": "FTP 无线传文件",
+    "分类": "日常工具",
+    "enabled": false,
+    "aliases": [
+      "ftpd",
+      "FTP",
+      "无线传输"
+    ],
+    "repo_path": "mtheall/ftpd",
+    "releases_url": "https://github.com/mtheall/ftpd/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "ftpd",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".nro"
+    ],
+    "installer_markers": [
+      "ftpd.nro"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "ftpd.nro",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "windows",
+      "Windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Overlay",
+      "overlay",
+      "debug",
+      "Debug"
+    ],
+    "使用说明": "仅下载主机端文件；放置路径、资源依赖及启动方式见项目说明。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/mtheall/ftpd/releases/tag/v3.2.1",
+      "状态": "release",
+      "发布标签": "v3.2.1",
+      "发布时间": "2024-11-17T07:29:51Z"
+    },
+    "download_names": [
+      "ftpd.nro"
+    ]
+  },
+  {
+    "id": "tesla-menu",
+    "简介": "游戏内悬浮菜单（配合 nx-ovlloader）",
+    "分类": "日常工具",
+    "enabled": false,
+    "aliases": [
+      "Tesla-Menu",
+      "Tesla",
+      "特斯拉",
+      "悬浮菜单"
+    ],
+    "repo_path": "WerWolv/Tesla-Menu",
+    "releases_url": "https://github.com/WerWolv/Tesla-Menu/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "tesla-menu",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "ovlmenu",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "tesla-menu.zip",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "windows",
+      "Windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Overlay",
+      "overlay",
+      "debug",
+      "Debug"
+    ],
+    "使用说明": "原版 Tesla 菜单，配合 nx-ovlloader；与 Ultrahand 同属菜单方案，安装前按各项目说明选择。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/WerWolv/Tesla-Menu/releases/tag/v1.2.3",
+      "状态": "release",
+      "发布标签": "v1.2.3",
+      "发布时间": "2023-05-27T12:55:49Z"
+    },
+    "download_names": [
+      "ovlmenu.zip"
+    ]
+  },
+  {
+    "id": "nx-ovlloader",
+    "简介": "悬浮菜单加载器（配合 Tesla-Menu）",
+    "分类": "日常工具",
+    "enabled": false,
+    "aliases": [
+      "nx-ovlloader",
+      "悬浮加载器"
+    ],
+    "repo_path": "WerWolv/nx-ovlloader",
+    "releases_url": "https://github.com/WerWolv/nx-ovlloader/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "nx-ovlloader",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "nx-ovlloader",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "nx-ovlloader.zip",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "windows",
+      "Windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Overlay",
+      "overlay",
+      "debug",
+      "Debug"
+    ],
+    "使用说明": "悬浮插件加载器；菜单与插件的系统兼容性以对应项目说明为准。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/WerWolv/nx-ovlloader/releases/tag/v1.0.7",
+      "状态": "release",
+      "发布标签": "v1.0.7",
+      "发布时间": "2023-05-05T14:37:42Z"
+    },
+    "download_names": [
+      "nx-ovlloader.zip"
+    ]
+  },
+  {
+    "id": "nx-shell",
+    "简介": "文件管理器",
+    "分类": "日常工具",
+    "enabled": false,
+    "aliases": [
+      "NX-Shell",
+      "文件管理"
+    ],
+    "repo_path": "joel16/NX-Shell",
+    "releases_url": "https://github.com/joel16/NX-Shell/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "nx-shell",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".nro"
+    ],
+    "installer_markers": [
+      "NX-Shell",
+      ".nro"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "nx-shell.nro",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "windows",
+      "Windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Overlay",
+      "overlay",
+      "debug",
+      "Debug"
+    ],
+    "使用说明": "仅下载主机端文件；放置路径、资源依赖及启动方式见项目说明。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/joel16/NX-Shell/releases/tag/4.01",
+      "状态": "release",
+      "发布标签": "4.01",
+      "发布时间": "2022-08-07T18:32:20Z"
+    },
+    "download_names": [
+      "NX-Shell.nro"
+    ]
+  },
+  {
+    "id": "edizon",
+    "简介": "存档编辑与金手指工具",
+    "分类": "日常工具",
+    "enabled": false,
+    "aliases": [
+      "EdiZon",
+      "金手指",
+      "存档修改"
+    ],
+    "repo_path": "WerWolv/EdiZon",
+    "releases_url": "https://github.com/WerWolv/EdiZon/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "edizon",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".nro"
+    ],
+    "installer_markers": [
+      "EdiZon",
+      ".nro"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "edizon.nro",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "windows",
+      "Windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Overlay",
+      "overlay",
+      "debug",
+      "Debug"
+    ],
+    "使用说明": "仅下载主机端文件；放置路径、资源依赖及启动方式见项目说明。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/WerWolv/EdiZon/releases/tag/v3.1.0",
+      "状态": "release",
+      "发布标签": "v3.1.0",
+      "发布时间": "2022-01-16T00:39:01Z"
+    },
+    "download_names": [
+      "EdiZon.nro"
+    ]
+  },
+  {
+    "id": "homeguard",
+    "简介": "HOME 键控制工具",
+    "分类": "日常工具",
+    "enabled": false,
+    "aliases": [
+      "HomeGuard",
+      "HOME键",
+      "防误触"
+    ],
+    "repo_path": "Aster145/HomeGuard",
+    "releases_url": "https://github.com/Aster145/HomeGuard/releases/tag/v0.1.1",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "homeguard",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "save_name": "homeguard.zip",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "HomeGuard-0.1.1-icon.zip"
+    ],
+    "installer_markers_match_all": true,
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "Windows",
+      "windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Debug",
+      "debug"
+    ],
+    "pinned_release_tag": "v0.1.1",
+    "使用说明": "预发布固定版本；先阅读 README 的启动与限制说明，后续版本需人工复核 tag。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/Aster145/HomeGuard/releases/tag/v0.1.1",
+      "状态": "prerelease",
+      "发布标签": "v0.1.1"
+    },
+    "download_url_templates": [
+      "https://github.com/Aster145/HomeGuard/releases/download/v0.1.1/HomeGuard-0.1.1-icon.zip"
+    ]
+  },
+  {
+    "id": "dbi",
+    "repo_path": "rashevskyv/dbi",
+    "releases_url": "https://github.com/rashevskyv/dbi/releases",
+    "简介": "DBI 文件管理与 USB/MTP 工具",
+    "分类": "日常工具",
+    "enabled": false,
+    "aliases": [
+      "DBI",
+      "MTP",
+      "USB传输"
+    ],
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "dbi",
+    "use_download_filename": true,
+    "save_name": "dbi.nro",
+    "installer_extensions": [
+      ".nro"
+    ],
+    "installer_markers": [
+      "DBI.nro"
+    ],
+    "installer_markers_match_all": true,
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "Windows",
+      "windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Debug",
+      "debug"
+    ],
+    "使用说明": "只下载主机端 DBI.nro；dbi.config 及电脑端后端程序可从同一发布页按需获取。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/rashevskyv/dbi/releases/tag/912ru",
+      "状态": "release",
+      "发布标签": "912ru",
+      "发布时间": "2026-09-18T07:14:24Z"
+    },
+    "download_names": [
+      "DBI.nro"
+    ]
+  },
+  {
+    "id": "hb-appstore",
+    "repo_path": "fortheusers/hb-appstore",
+    "releases_url": "https://github.com/fortheusers/hb-appstore/releases",
+    "简介": "Homebrew App Store 自制应用商店",
+    "分类": "日常工具",
+    "enabled": false,
+    "aliases": [
+      "自制商店",
+      "应用商店",
+      "HB商店"
+    ],
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "hb-appstore",
+    "use_download_filename": true,
+    "save_name": "hb-appstore.zip",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "switch-extracttosd.zip"
+    ],
+    "installer_markers_match_all": true,
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "Windows",
+      "windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Debug",
+      "debug"
+    ],
+    "使用说明": "下载 switch-extracttosd.zip，包含完整资源；不下载 Wii U 文件。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/fortheusers/hb-appstore/releases/tag/v2.3.2",
+      "状态": "release",
+      "发布标签": "v2.3.2",
+      "发布时间": "2023-03-23T15:54:19Z"
+    },
+    "download_names": [
+      "switch-extracttosd.zip"
+    ]
+  },
+  {
+    "id": "aio-switch-updater",
+    "repo_path": "HamletDuFromage/aio-switch-updater",
+    "releases_url": "https://github.com/HamletDuFromage/aio-switch-updater/releases",
+    "简介": "AIO Switch Updater 系统组件更新工具",
+    "分类": "日常工具",
+    "enabled": false,
+    "aliases": [
+      "一体更新",
+      "更新工具"
+    ],
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "aio-switch-updater",
+    "use_download_filename": true,
+    "save_name": "aio-switch-updater.zip",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "aio-switch-updater.zip"
+    ],
+    "installer_markers_match_all": true,
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "Windows",
+      "windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Debug",
+      "debug"
+    ],
+    "使用说明": "完整保留压缩包中的 SD 卡目录布局，具体依赖与启动方式见项目说明。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/HamletDuFromage/aio-switch-updater/releases/tag/2.23.3",
+      "状态": "release",
+      "发布标签": "2.23.3",
+      "发布时间": "2025-11-17T21:59:08Z"
+    },
+    "download_names": [
+      "aio-switch-updater.zip"
+    ]
+  },
+  {
+    "id": "ultrahand-overlay",
+    "repo_path": "ppkantorski/Ultrahand-Overlay",
+    "releases_url": "https://github.com/ppkantorski/Ultrahand-Overlay/releases",
+    "简介": "Ultrahand 悬浮菜单与脚本工具",
+    "分类": "日常工具",
+    "enabled": false,
+    "aliases": [
+      "Ultrahand",
+      "特斯拉菜单",
+      "悬浮菜单"
+    ],
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "ultrahand-overlay",
+    "use_download_filename": true,
+    "save_name": "ultrahand-overlay.zip",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "sdout.zip"
+    ],
+    "installer_markers_match_all": true,
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "Windows",
+      "windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Debug",
+      "debug"
+    ],
+    "使用说明": "选择 sdout.zip 完整 SD 布局包；依赖与放置方式见项目说明，勿只复制 ovlmenu.ovl 而漏掉资源。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/ppkantorski/Ultrahand-Overlay/releases/tag/v2.5.3",
+      "状态": "release",
+      "发布标签": "v2.5.3",
+      "发布时间": "2026-07-17T23:18:58Z"
+    },
+    "download_names": [
+      "sdout.zip"
+    ]
+  },
+  {
+    "id": "emuiibo",
+    "repo_path": "XorTroll/emuiibo",
+    "releases_url": "https://github.com/XorTroll/emuiibo/releases",
+    "简介": "emuiibo 虚拟 amiibo 系统模块",
+    "分类": "日常工具",
+    "enabled": false,
+    "aliases": [
+      "amiibo",
+      "阿米宝"
+    ],
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "emuiibo",
+    "use_download_filename": true,
+    "save_name": "emuiibo.zip",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "emuiibo.zip"
+    ],
+    "installer_markers_match_all": true,
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "Windows",
+      "windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Debug",
+      "debug"
+    ],
+    "使用说明": "ZIP 为 Switch 系统模块；桌面端 emuiigen.jar 不属于本条下载内容。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/XorTroll/emuiibo/releases/tag/1.1.3",
+      "状态": "release",
+      "发布标签": "1.1.3",
+      "发布时间": "2026-03-14T21:52:14Z"
+    },
+    "download_names": [
+      "emuiibo.zip"
+    ]
+  },
+  {
+    "id": "sys-con",
+    "repo_path": "cathery/sys-con",
+    "releases_url": "https://github.com/cathery/sys-con/releases",
+    "简介": "sys-con USB 有线手柄支持模块",
+    "分类": "日常工具",
+    "enabled": false,
+    "aliases": [
+      "有线手柄",
+      "USB手柄"
+    ],
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "sys-con",
+    "use_download_filename": true,
+    "save_name": "sys-con.zip",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "sys-con-"
+    ],
+    "installer_markers_match_all": true,
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "Windows",
+      "windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Debug",
+      "debug"
+    ],
+    "使用说明": "旧版 USB 手柄模块；使用前核对当前系统与 Atmosphere 兼容性，不代表支持所有手柄。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/cathery/sys-con/releases/tag/v0.6.5",
+      "状态": "release",
+      "发布标签": "v0.6.5",
+      "发布时间": "2024-11-06T19:16:48Z"
+    }
+  },
+  {
+    "id": "fastcfwswitch",
+    "repo_path": "Hartie95/fastCFWswitch",
+    "releases_url": "https://github.com/Hartie95/fastCFWswitch/releases",
+    "简介": "fastCFWswitch 启动载荷切换悬浮插件",
+    "分类": "日常工具",
+    "enabled": false,
+    "aliases": [
+      "重启",
+      "载荷切换"
+    ],
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "fastcfwswitch",
+    "use_download_filename": true,
+    "save_name": "fastcfwswitch.zip",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "fastCFWswitch_"
+    ],
+    "installer_markers_match_all": true,
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "Windows",
+      "windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Debug",
+      "debug"
+    ],
+    "使用说明": "悬浮插件，需要配置目标 payload 路径。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/Hartie95/fastCFWswitch/releases/tag/v1.3.2",
+      "状态": "release",
+      "发布标签": "v1.3.2",
+      "发布时间": "2025-11-15T23:26:44Z"
+    }
+  },
+  {
+    "id": "awoo-installer",
+    "简介": "Awoo Installer 主机端安装工具",
+    "分类": "日常工具",
+    "enabled": false,
+    "aliases": [
+      "游戏安装",
+      "Awoo"
+    ],
+    "repo_path": "Huntereb/Awoo-Installer",
+    "releases_url": "https://github.com/Huntereb/Awoo-Installer/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "使用说明": "主机端 ZIP；电脑端配套工具见 ns-usbloader，不将电脑程序复制为 NRO。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/Huntereb/Awoo-Installer/releases/tag/1.3.6",
+      "发布标签": "1.3.6",
+      "发布时间": "2025-11-15T15:38:59Z"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "Awoo-Installer.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "awoo-installer.zip",
+    "save_subdir": "awoo-installer",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "debug",
+      "Debug"
+    ],
+    "download_names": [
+      "Awoo-Installer.zip"
+    ]
+  },
+  {
+    "id": "ascent-toolbox",
+    "简介": "Ascent Toolbox 系统模块管理",
+    "分类": "日常工具",
+    "enabled": false,
+    "aliases": [
+      "深海工具箱",
+      "插件管理"
+    ],
+    "repo_path": "exploitz86/Ascent-Toolbox",
+    "releases_url": "https://github.com/exploitz86/Ascent-Toolbox/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "使用说明": "Ascent Toolbox，与 DeepSea 分支分开收录；按对应项目确认设备和重启支持。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/exploitz86/Ascent-Toolbox/releases/tag/1.1.0",
+      "发布标签": "1.1.0",
+      "发布时间": "2025-11-18T00:43:47Z"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".nro"
+    ],
+    "installer_markers": [
+      "Ascent-Toolbox.nro"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "ascent-toolbox.nro",
+    "save_subdir": "ascent-toolbox",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "debug",
+      "Debug"
+    ],
+    "download_names": [
+      "Ascent-Toolbox.nro"
+    ]
+  },
+  {
+    "id": "deepsea-toolbox",
+    "简介": "DeepSea Toolbox 深海工具箱",
+    "分类": "日常工具",
+    "enabled": false,
+    "aliases": [
+      "深海工具箱",
+      "插件管理"
+    ],
+    "repo_path": "Team-Neptune/DeepSea-Toolbox",
+    "releases_url": "https://github.com/Team-Neptune/DeepSea-Toolbox/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "使用说明": "原 DeepSea 分支；实际发布文件名为 DeepSeaToolbox.nro，不与 Ascent 版本混写。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/Team-Neptune/DeepSea-Toolbox/releases/tag/v4.04",
+      "发布标签": "v4.04",
+      "发布时间": "2023-10-08T20:50:31Z"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".nro"
+    ],
+    "installer_markers": [
+      "DeepSeaToolbox.nro"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "deepsea-toolbox.nro",
+    "save_subdir": "deepsea-toolbox",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "debug",
+      "Debug"
+    ],
+    "download_names": [
+      "DeepSeaToolbox.nro"
+    ]
+  },
+  {
+    "id": "edizon-se",
+    "简介": "EdiZon SE 存档与金手指工具",
+    "分类": "日常工具",
+    "enabled": false,
+    "aliases": [
+      "金手指",
+      "Edizon.nro"
+    ],
+    "repo_path": "tomvita/EdiZon-SE",
+    "releases_url": "https://github.com/tomvita/EdiZon-SE/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "使用说明": "选择 edizon.zip 标准包；同页 EdiZon_alt.zip 是另一版本，使用差异以项目说明为准。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/tomvita/EdiZon-SE/releases/tag/3.8.37a",
+      "发布标签": "3.8.37a",
+      "发布时间": "2025-12-10T10:38:46Z"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "edizon.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "edizon-se.zip",
+    "save_subdir": "edizon-se",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "debug",
+      "Debug"
+    ],
+    "download_names": [
+      "edizon.zip"
+    ]
+  },
+  {
+    "id": "linkalho",
+    "简介": "Linkalho 离线账号关联工具",
+    "分类": "日常工具",
+    "enabled": false,
+    "aliases": [
+      "账号关联"
+    ],
+    "repo_path": "impeeza/linkalho",
+    "releases_url": "https://github.com/impeeza/linkalho/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "使用说明": "离线账号关联工具；功能与当前系统支持范围查看项目说明。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/impeeza/linkalho/releases/tag/v2.0.2",
+      "发布标签": "v2.0.2",
+      "发布时间": "2025-11-17T22:15:17Z"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "linkalho-v",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "linkalho.zip",
+    "save_subdir": "linkalho",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "debug",
+      "Debug"
+    ]
+  },
+  {
+    "id": "nx-activity-log-zdm",
+    "简介": "游戏游玩时间记录汉化版",
+    "分类": "日常工具",
+    "enabled": false,
+    "aliases": [
+      "游玩时间",
+      "游戏时长"
+    ],
+    "repo_path": "zdm65477730/NX-Activity-Log",
+    "releases_url": "https://github.com/zdm65477730/NX-Activity-Log/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "使用说明": "游玩时间记录工具汉化分支；主机端 NRO。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/zdm65477730/NX-Activity-Log/releases/tag/v1.5.9",
+      "发布标签": "v1.5.9",
+      "发布时间": "2026-08-24T08:28:23Z"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".nro"
+    ],
+    "installer_markers": [
+      "NX-Activity-Log.nro"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "nx-activity-log-zdm.nro",
+    "save_subdir": "nx-activity-log-zdm",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "debug",
+      "Debug"
+    ],
+    "download_names": [
+      "NX-Activity-Log.nro"
+    ]
+  },
+  {
+    "id": "sphaira",
+    "简介": "Sphaira 自制菜单与文件管理",
+    "分类": "日常工具",
+    "enabled": false,
+    "aliases": [
+      "hbmenu替代",
+      "文件管理",
+      "前端"
+    ],
+    "repo_path": "ITotalJustice/sphaira",
+    "releases_url": "https://github.com/ITotalJustice/sphaira/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "使用说明": "完整 ZIP；按 README 确认替换 hbmenu.nro 的方式与功能，保留所需资源。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/NaGaa95/sphaira/releases/tag/1.0.8",
+      "发布标签": "1.0.8",
+      "发布时间": "2026-10-06T20:07:08Z"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "sphaira.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "sphaira.zip",
+    "save_subdir": "sphaira",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "debug",
+      "Debug"
+    ],
+    "download_names": [
+      "sphaira.zip"
+    ]
+  },
+  {
+    "id": "switch-time",
+    "简介": "Switch Time 网络校时工具",
+    "分类": "日常工具",
+    "enabled": false,
+    "aliases": [
+      "联网校时",
+      "校准时钟",
+      "switchtime"
+    ],
+    "repo_path": "3096/switch-time",
+    "releases_url": "https://github.com/3096/switch-time/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "使用说明": "网络校时 NRO；联网条件与系统设置要求查看 README。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/3096/switch-time/releases/tag/0.1.6",
+      "发布标签": "0.1.6",
+      "发布时间": "2026-01-05T06:45:13Z"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".nro"
+    ],
+    "installer_markers": [
+      "switch-time.nro"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "switch-time.nro",
+    "save_subdir": "switch-time",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "debug",
+      "Debug"
+    ],
+    "download_names": [
+      "switch-time.nro"
+    ]
+  },
+  {
+    "id": "tencent-switcher-gui",
+    "简介": "Tencent Switcher GUI 系统区域切换",
+    "分类": "日常工具",
+    "enabled": false,
+    "aliases": [
+      "国行",
+      "区域切换",
+      "腾讯"
+    ],
+    "repo_path": "CaiMiao/Tencent-switcher-GUI",
+    "releases_url": "https://github.com/CaiMiao/Tencent-switcher-GUI/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "使用说明": "系统区域切换工具；本次 latest 标签为 0.1.1，未将用户参考 0.1.2 写成已核实版本。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/CaiMiao/Tencent-switcher-GUI/releases/tag/0.1.1",
+      "发布标签": "0.1.1",
+      "发布时间": "2021-01-21T07:21:25Z"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".nro"
+    ],
+    "installer_markers": [
+      "tencent-switcher-gui.nro"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "tencent-switcher-gui.nro",
+    "save_subdir": "tencent-switcher-gui",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "debug",
+      "Debug"
+    ],
+    "download_names": [
+      "tencent-switcher-gui.nro"
+    ]
+  },
+  {
+    "id": "tinwoo",
+    "简介": "TinWoo 主机端安装工具",
+    "分类": "日常工具",
+    "enabled": false,
+    "aliases": [
+      "游戏安装"
+    ],
+    "repo_path": "mrdude2478/Tinwoo-Release",
+    "releases_url": "https://github.com/mrdude2478/Tinwoo-Release/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "使用说明": "主机端完整 ZIP；使用方式与前端要求查看发布说明。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/mrdude2478/Tinwoo-Release/releases/tag/1.0.28",
+      "发布标签": "1.0.28",
+      "发布时间": "2024-08-21T03:44:05Z"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "Tinwoo-Installer.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "tinwoo.zip",
+    "save_subdir": "tinwoo",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "debug",
+      "Debug"
+    ],
+    "download_names": [
+      "Tinwoo-Installer.zip"
+    ]
+  }
+]

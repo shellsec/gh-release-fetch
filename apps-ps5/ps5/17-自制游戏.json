@@ -1,0 +1,49 @@
+[
+  {
+    "id": "native-ppsa28319",
+    "简介": "Middle Ages Ping Pong（PS5 自制游戏）",
+    "分类": "自制游戏",
+    "aliases": [
+      "Middle Ages Ping Pong",
+      "PPSA28319",
+      "MedievalTennis",
+      "自制游戏"
+    ],
+    "enabled": false,
+    "repo_path": "STL1te/MedievalTennis",
+    "releases_url": "https://github.com/STL1te/MedievalTennis/releases/tag/01.000.000",
+    "title_id": "PPSA28319",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA28319.json",
+    "_许可": "MIT",
+    "_上游sha256": "6426468091b42f6512a456004e47a0807ae83fc2af82a4408bef8a51103fbd48",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/STL1te/MedievalTennis/releases/tag/01.000.000",
+      "发布标签": "01.000.000"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "01.000.000",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PPSA28319.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PPSA28319.zip",
+    "save_subdir": "native-ppsa28319",
+    "download_url_templates": [
+      "https://github.com/STL1te/MedievalTennis/releases/download/01.000.000/PPSA28319.zip"
+    ]
+  }
+]

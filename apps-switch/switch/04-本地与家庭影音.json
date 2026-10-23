@@ -1,0 +1,166 @@
+[
+  {
+    "id": "switchfin",
+    "简介": "Jellyfin / Emby 客户端",
+    "分类": "本地与家庭影音",
+    "enabled": false,
+    "aliases": [
+      "switchfin",
+      "Jellyfin",
+      "Emby",
+      "媒体库"
+    ],
+    "repo_path": "dragonflylee/switchfin",
+    "releases_url": "https://github.com/dragonflylee/switchfin/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "switchfin",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".nro"
+    ],
+    "installer_markers": [
+      "Switchfin",
+      ".nro"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "switchfin.nro",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "windows",
+      "Windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Overlay",
+      "overlay",
+      "debug",
+      "Debug"
+    ],
+    "使用说明": "仅下载主机端文件；放置路径、资源依赖及启动方式见项目说明。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/dragonflylee/switchfin/releases/tag/0.9.4",
+      "状态": "release",
+      "发布标签": "0.9.4",
+      "发布时间": "2026-08-25T16:39:52Z"
+    },
+    "download_names": [
+      "Switchfin.nro"
+    ]
+  },
+  {
+    "id": "nxmp",
+    "简介": "本地及网络视频播放器",
+    "分类": "本地与家庭影音",
+    "enabled": false,
+    "aliases": [
+      "nxmp",
+      "本地视频",
+      "NAS",
+      "SMB",
+      "播放器"
+    ],
+    "repo_path": "proconsule/nxmp",
+    "releases_url": "https://github.com/proconsule/nxmp/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "nxmp",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "nxmp",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "nxmp.zip",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "windows",
+      "Windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Overlay",
+      "overlay",
+      "debug",
+      "Debug"
+    ],
+    "使用说明": "完整保留压缩包中的 SD 卡目录布局，具体依赖与启动方式见项目说明。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/proconsule/nxmp/releases/tag/v0.9.3",
+      "状态": "release",
+      "发布标签": "v0.9.3",
+      "发布时间": "2025-12-17T09:24:48Z"
+    }
+  },
+  {
+    "id": "nx-cast",
+    "简介": "DLNA / AirPlay 投屏与 IPTV",
+    "分类": "本地与家庭影音",
+    "enabled": false,
+    "aliases": [
+      "NX-Cast",
+      "投屏",
+      "DLNA",
+      "AirPlay",
+      "IPTV"
+    ],
+    "repo_path": "Ode1l/NX-Cast",
+    "releases_url": "https://github.com/Ode1l/NX-Cast/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "nx-cast",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "NX-Cast-sdmc",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "nx-cast.zip",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "windows",
+      "Windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Overlay",
+      "overlay",
+      "debug",
+      "Debug"
+    ],
+    "使用说明": "使用 NX-Cast-sdmc.zip，保留目录结构复制到 SD 根目录；hbmenu 启动，手机和 Switch 连同一局域网，具体投屏能力以 README 为准。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/Ode1l/NX-Cast/releases/tag/v0.3.2",
+      "状态": "release",
+      "发布标签": "v0.3.2",
+      "发布时间": "2026-10-03T20:44:54Z"
+    },
+    "download_names": [
+      "NX-Cast-sdmc.zip"
+    ]
+  }
+]

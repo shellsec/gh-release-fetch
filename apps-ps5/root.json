@@ -1,0 +1,18 @@
+{
+  "platform_keys": [
+    "ps5"
+  ],
+  "download_dir": ".",
+  "download_subdir_by_platform": true,
+  "ssl_verify": true,
+  "_说明": {
+    "简介": "PS5 独立清单，与电脑、移动和 Switch 清单分开。",
+    "查找": "lookup_ps5.bat <关键词>；主菜单选择 5：PS5。",
+    "下载": "python auto_update.py --apps-dir apps-ps5 --platform ps5 <id ...>",
+    "目录": "按附件原文件名保存到 ps5/<id>/；仅下载，不安装、解压或发送载荷。",
+    "兼容性": "入口、自制环境、ELF 服务、websrv 应用和原生标题分别核对固件与依赖；不能共用一个系统支持范围。",
+    "更新": "基础工具跟随最新稳定 Release；社区原生应用按核查标签固定，运行 python tools/import_ps5_community_catalog.py --refresh 刷新目录并核查作者附件。",
+    "索引": "python tools/generate_ps5_catalog_index.py 生成 CATALOG.ps5.md。",
+    "入口": "根目录 lookup_app.exe / auto_update.exe / run_saved_apps.exe 已重新打包支持 Switch 和 PS5。BAT 在 Python 依赖齐全且源码存在时使用源码，否则使用 EXE。"
+  }
+}

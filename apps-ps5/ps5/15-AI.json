@@ -1,0 +1,130 @@
+[
+  {
+    "id": "native-ppsa99004",
+    "简介": "ProsperoAI（PS5 AI）",
+    "分类": "AI",
+    "aliases": [
+      "ProsperoAI",
+      "PPSA99004",
+      "ProsperoAI",
+      "AI",
+      "人工智能"
+    ],
+    "enabled": false,
+    "repo_path": "blackbearreloaded/ProsperoAI",
+    "releases_url": "https://github.com/blackbearreloaded/ProsperoAI/releases",
+    "title_id": "PPSA99004",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。目录记录的附件当前未核实可用，保留作者页面入口。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99004.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "8b2241e003a22bffccee23e9424991533047e633e5ce337af60281b96868439e",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "missing-asset",
+      "来源": "https://github.com/blackbearreloaded/ProsperoAI/releases/tag/01.006.000"
+    },
+    "open_page_only": true,
+    "open_page_url": "https://github.com/blackbearreloaded/ProsperoAI",
+    "_下载说明": "目录记录的附件当前未核实可用，保留作者页面入口。"
+  },
+  {
+    "id": "native-ppsa99575",
+    "简介": "PS5LM（PS5 AI）",
+    "分类": "AI",
+    "aliases": [
+      "PS5LM",
+      "PPSA99575",
+      "PS5LM",
+      "AI",
+      "人工智能"
+    ],
+    "enabled": false,
+    "repo_path": "cobanov/PS5LM",
+    "releases_url": "https://github.com/cobanov/PS5LM/releases/tag/v0.9.0",
+    "title_id": "PPSA99575",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99575.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "f4b19ffaa5389536da30dc706ce3967cc0d7bb559508d451e033c205d93af504",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/cobanov/PS5LM/releases/tag/v0.9.0",
+      "发布标签": "v0.9.0"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "v0.9.0",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "ps5lm-app-v0.9.0.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "ps5lm-app-v0.9.0.zip",
+    "save_subdir": "native-ppsa99575",
+    "download_url_templates": [
+      "https://github.com/cobanov/PS5LM/releases/download/v0.9.0/ps5lm-app-v0.9.0.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99581",
+    "简介": "PS5LM Plus（PS5 AI）",
+    "分类": "AI",
+    "aliases": [
+      "PS5LM Plus",
+      "PPSA99581",
+      "PS5LM-Plus",
+      "AI",
+      "人工智能"
+    ],
+    "enabled": false,
+    "repo_path": "abhi245y/PS5LM-Plus",
+    "releases_url": "https://github.com/abhi245y/PS5LM-Plus/releases/tag/v0.8.4",
+    "title_id": "PPSA99581",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99581.json",
+    "_许可": "GPL-3.0-or-later",
+    "_上游sha256": "5f4b4aad87c3b9e4b29a9bafd056e510e7805cf87522af1a34a4d01be1b628d2",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/abhi245y/PS5LM-Plus/releases/tag/v0.8.4",
+      "发布标签": "v0.8.4"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "v0.8.4",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "ps5lm-plus-v0.8.4.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "ps5lm-plus-v0.8.4.zip",
+    "save_subdir": "native-ppsa99581",
+    "download_url_templates": [
+      "https://github.com/abhi245y/PS5LM-Plus/releases/download/v0.8.4/ps5lm-plus-v0.8.4.zip"
+    ]
+  }
+]

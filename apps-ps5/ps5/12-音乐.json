@@ -1,0 +1,243 @@
+[
+  {
+    "id": "native-ppsa01153",
+    "简介": "OliSe Player（PS5 音乐）",
+    "分类": "音乐",
+    "aliases": [
+      "OliSe Player",
+      "PPSA01153",
+      "OliSePlayer",
+      "音乐",
+      "音频"
+    ],
+    "enabled": false,
+    "repo_path": "Marice/OliSePlayer",
+    "releases_url": "https://github.com/Marice/OliSePlayer/releases/tag/02.001.000",
+    "title_id": "PPSA01153",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA01153.json",
+    "_许可": "GPL-3.0-or-later",
+    "_上游sha256": "3711b359f91fb572acd9385c4a027f5324da0d9d8734c382080073a2a7f68c7b",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/Marice/OliSePlayer/releases/tag/02.001.000",
+      "发布标签": "02.001.000"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "02.001.000",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PPSA01153.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PPSA01153.zip",
+    "save_subdir": "native-ppsa01153",
+    "download_url_templates": [
+      "https://github.com/Marice/OliSePlayer/releases/download/02.001.000/PPSA01153.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa17641",
+    "简介": "SymphonyStation5（PS5 音乐）",
+    "分类": "音乐",
+    "aliases": [
+      "SymphonyStation5",
+      "PPSA17641",
+      "SymphonyStation5",
+      "音乐",
+      "音频"
+    ],
+    "enabled": false,
+    "repo_path": "TsvetomirGT/SymphonyStation5",
+    "releases_url": "https://github.com/TsvetomirGT/SymphonyStation5/releases/tag/v0.1.0",
+    "title_id": "PPSA17641",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA17641.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "5327e36b9a57776a7bb7a32a16865d54b28be3b1622280c4dbc9e6ee469e2993",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/TsvetomirGT/SymphonyStation5/releases/tag/v0.1.0",
+      "发布标签": "v0.1.0"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "v0.1.0",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "SymphonyStation5-v0.1.0.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "SymphonyStation5-v0.1.0.zip",
+    "save_subdir": "native-ppsa17641",
+    "download_url_templates": [
+      "https://github.com/TsvetomirGT/SymphonyStation5/releases/download/v0.1.0/SymphonyStation5-v0.1.0.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa47770",
+    "简介": "Afterglow（PS5 音乐）",
+    "分类": "音乐",
+    "aliases": [
+      "Afterglow",
+      "PPSA47770",
+      "afterglow",
+      "音乐",
+      "音频"
+    ],
+    "enabled": false,
+    "repo_path": "DevvNirvana/afterglow",
+    "releases_url": "https://github.com/DevvNirvana/afterglow/releases/tag/01.000.006",
+    "title_id": "PPSA47770",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA47770.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "3c6d57ab42829577ccfde9a7f530ec8e3860e456f1c1244f93a1341d4969e47f",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/DevvNirvana/afterglow/releases/tag/01.000.006",
+      "发布标签": "01.000.006"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "01.000.006",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PPSA47770.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PPSA47770.zip",
+    "save_subdir": "native-ppsa47770",
+    "download_url_templates": [
+      "https://github.com/DevvNirvana/afterglow/releases/download/01.000.006/PPSA47770.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa98427",
+    "简介": "CD Player（PS5 音乐）",
+    "分类": "音乐",
+    "aliases": [
+      "CD Player",
+      "PPSA98427",
+      "CD-Player",
+      "音乐",
+      "音频"
+    ],
+    "enabled": false,
+    "repo_path": "LoZazaMastro/CD-Player",
+    "releases_url": "https://github.com/LoZazaMastro/CD-Player/releases/tag/v1.1.1",
+    "title_id": "PPSA98427",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA98427.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "a2e44a6211260b1dca2c0d42736143c8c563acc6ff9a42e0c1671477c96de45b",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/LoZazaMastro/CD-Player/releases/tag/v1.1.1",
+      "发布标签": "v1.1.1"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "v1.1.1",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PPSA98427.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PPSA98427.zip",
+    "save_subdir": "native-ppsa98427",
+    "download_url_templates": [
+      "https://github.com/LoZazaMastro/CD-Player/releases/download/v1.1.1/PPSA98427.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99061",
+    "简介": "Spot5（PS5 音乐）",
+    "分类": "音乐",
+    "aliases": [
+      "Spot5",
+      "PPSA99061",
+      "spot5",
+      "音乐",
+      "音频",
+      "Spotify"
+    ],
+    "enabled": false,
+    "repo_path": "abhi245y/spot5",
+    "releases_url": "https://github.com/abhi245y/spot5/releases/tag/v1.1.0",
+    "title_id": "PPSA99061",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99061.json",
+    "_许可": "GPL-3.0-or-later",
+    "_上游sha256": "af10d43f274db036ba2835dbc5f429cab416c028a6247023c8f6bd7076600c6c",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/abhi245y/spot5/releases/tag/v1.1.0",
+      "发布标签": "v1.1.0"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "v1.1.0",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PPSA99061.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PPSA99061.zip",
+    "save_subdir": "native-ppsa99061",
+    "download_url_templates": [
+      "https://github.com/abhi245y/spot5/releases/download/v1.1.0/PPSA99061.zip"
+    ]
+  }
+]

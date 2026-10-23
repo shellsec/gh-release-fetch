@@ -1,0 +1,88 @@
+[
+  {
+    "id": "overdrive",
+    "简介": "Overdrive 原发布仓库客户端",
+    "分类": "商店客户端",
+    "aliases": [
+      "Overdrive",
+      "游戏商店",
+      "商店",
+      "PPSA99058"
+    ],
+    "enabled": false,
+    "repo_path": "overdriveps5/overdrive-releases",
+    "releases_url": "https://github.com/overdriveps5/overdrive-releases/releases",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "Overdrive-PPSA99058.exfat.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "Overdrive-PPSA99058.exfat.zip",
+    "download_names": [
+      "Overdrive-PPSA99058.exfat.zip"
+    ],
+    "save_subdir": "overdrive",
+    "run_installer": false,
+    "kill_before_install": false,
+    "process_name": "",
+    "title_id": "PPSA99058",
+    "运行方式": "商店客户端 / exFAT 标题",
+    "固件要求": "按对应分支 README 核对入口、自制运行环境和镜像加载支持，不沿用其他商店的要求。",
+    "使用说明": "当前发布仓库 README 指定的 exFAT ZIP 包；客户端与服务可用性分别确认，部署依赖按仓库说明核对。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/overdriveps5/overdrive-releases/releases/tag/v0.2.5",
+      "发布标签": "v0.2.5"
+    }
+  },
+  {
+    "id": "overdrive-community",
+    "简介": "Overdrive MyLuxy 社区重建客户端",
+    "分类": "商店客户端",
+    "aliases": [
+      "Overdrive",
+      "游戏商店",
+      "商店",
+      "PPSA99058"
+    ],
+    "enabled": false,
+    "repo_path": "MyLuxy/overdrive",
+    "releases_url": "https://github.com/MyLuxy/overdrive/releases",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "installer_extensions": [
+      ".exfat"
+    ],
+    "installer_markers": [
+      "Overdrive.exfat"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "Overdrive.exfat",
+    "download_names": [
+      "Overdrive.exfat"
+    ],
+    "save_subdir": "overdrive-community",
+    "run_installer": false,
+    "kill_before_install": false,
+    "process_name": "",
+    "title_id": "PPSA99058",
+    "运行方式": "商店客户端 / exFAT 标题",
+    "固件要求": "按对应分支 README 核对入口、自制运行环境和镜像加载支持，不沿用其他商店的要求。",
+    "使用说明": "第三方重建分支；裸 exFAT 镜像，不是 ZIP，勿更改扩展名。ShadowMount+ 等前置环境查看该分支 README。与原发布版使用同一 Title ID，是替代版本。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/MyLuxy/overdrive/releases/tag/v1.0.7",
+      "发布标签": "v1.0.7"
+    }
+  }
+]

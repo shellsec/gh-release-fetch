@@ -48,7 +48,7 @@ Write-Host "Copy exes and bats..."
 foreach ($name in $exes) {
     Copy-Item (Join-Path $ExeDir $name) (Join-Path $Stage $name) -Force
 }
-$bats = @("lookup_app.bat", "lookup_mobile.bat", "lookup_ios.bat", "open_catalog.bat", "run_saved_apps.bat", "search_soft_pages.bat", "search_games.bat", "run_update.bat")
+$bats = @("lookup_app.bat", "lookup_mobile.bat", "lookup_ios.bat", "lookup_switch.bat", "lookup_ps5.bat", "open_catalog.bat", "run_saved_apps.bat", "search_soft_pages.bat", "search_games.bat", "run_update.bat")
 foreach ($name in $bats) {
     Copy-Item (Join-Path $Root $name) (Join-Path $Stage $name) -Force
 }
@@ -57,6 +57,18 @@ Write-Host "Copy apps/ apps-mobile/ ..."
 Copy-Item (Join-Path $Root "apps") (Join-Path $Stage "apps") -Recurse -Force
 if (Test-Path (Join-Path $Root "apps-mobile")) {
     Copy-Item (Join-Path $Root "apps-mobile") (Join-Path $Stage "apps-mobile") -Recurse -Force
+}
+
+foreach ($catalogDir in @("apps-switch", "apps-ps5")) {
+    $catalogSrc = Join-Path $Root $catalogDir
+    if (Test-Path -LiteralPath $catalogSrc) {
+        Copy-Item -LiteralPath $catalogSrc -Destination (Join-Path $Stage $catalogDir) -Recurse -Force
+    }
+}
+$catalogToolsDst = Join-Path $Stage "tools"
+New-Item -ItemType Directory -Force -Path $catalogToolsDst | Out-Null
+foreach ($catalogTool in @("generate_switch_catalog_index.py", "generate_ps5_catalog_index.py", "import_ps5_community_catalog.py")) {
+    Copy-Item -LiteralPath (Join-Path $Root "tools\$catalogTool") -Destination (Join-Path $catalogToolsDst $catalogTool) -Force
 }
 
 $manifestSrc = Join-Path $Root "VibeCodingToolsDown\dist\vibecoding"
@@ -90,6 +102,8 @@ $docs = @(
     "catalog.html",
     "CATALOG.md",
     "CATALOG.mobile.md",
+    "CATALOG.switch.md",
+    "CATALOG.ps5.md",
     "RECOMMENDED.zh-CN.md",
     "RECOMMENDED.md"
 )

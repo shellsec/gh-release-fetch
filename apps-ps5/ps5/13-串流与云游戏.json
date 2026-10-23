@@ -1,0 +1,300 @@
+[
+  {
+    "id": "native-ppsa39410",
+    "简介": "VITA5（PS5 串流与云游戏）",
+    "分类": "串流与云游戏",
+    "aliases": [
+      "VITA5",
+      "PPSA39410",
+      "VITA5",
+      "串流",
+      "云游戏",
+      "远程"
+    ],
+    "enabled": false,
+    "repo_path": "StonedModder/VITA5",
+    "releases_url": "https://github.com/StonedModder/VITA5/releases/tag/v1.0.0",
+    "title_id": "PPSA39410",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA39410.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "d4e23aa6e511c2d9b7905174b11f0a4a70cf7d0a457ec0a1772b02d5d7e6ea09",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/StonedModder/VITA5/releases/tag/v1.0.0",
+      "发布标签": "v1.0.0"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "v1.0.0",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PPSA17035.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PPSA17035.zip",
+    "save_subdir": "native-ppsa39410",
+    "download_url_templates": [
+      "https://github.com/StonedModder/VITA5/releases/download/v1.0.0/PPSA17035.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99002",
+    "简介": "ProsperoLight（PS5 串流与云游戏）",
+    "分类": "串流与云游戏",
+    "aliases": [
+      "ProsperoLight",
+      "PPSA99002",
+      "ProsperoLight",
+      "串流",
+      "云游戏",
+      "远程",
+      "Moonlight",
+      "月光"
+    ],
+    "enabled": false,
+    "repo_path": "LedyBacer/ProsperoLight",
+    "releases_url": "https://github.com/LedyBacer/ProsperoLight/releases/tag/01.000.110",
+    "title_id": "PPSA99002",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99002.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "f29935f3bd9d61926c1ea63f8d34019fff19ee993e8d030ee373c004efd974ba",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/LedyBacer/ProsperoLight/releases/tag/01.000.110",
+      "发布标签": "01.000.110"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "01.000.110",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PPSA99002.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PPSA99002.zip",
+    "save_subdir": "native-ppsa99002",
+    "download_url_templates": [
+      "https://github.com/LedyBacer/ProsperoLight/releases/download/01.000.110/PPSA99002.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99082",
+    "简介": "OpenNOW PS5 - Prototype（PS5 串流与云游戏）",
+    "分类": "串流与云游戏",
+    "aliases": [
+      "OpenNOW PS5 - Prototype",
+      "PPSA99082",
+      "OpenNOW-PS5",
+      "串流",
+      "云游戏",
+      "远程"
+    ],
+    "enabled": false,
+    "repo_path": "Portablelle/OpenNOW-PS5",
+    "releases_url": "https://github.com/Portablelle/OpenNOW-PS5/releases/tag/0.1",
+    "title_id": "PPSA99082",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99082.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "34c773dedda97d1503144eee50f9234ff1b4170a6ff68ed0bb0f59dd2ba87309",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/Portablelle/OpenNOW-PS5/releases/tag/0.1",
+      "发布标签": "0.1"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "0.1",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "OpenNOW-PS5-0.1.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "OpenNOW-PS5-0.1.zip",
+    "save_subdir": "native-ppsa99082",
+    "download_url_templates": [
+      "https://github.com/Portablelle/OpenNOW-PS5/releases/download/0.1/OpenNOW-PS5-0.1.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99350",
+    "简介": "Steam Remote Play（PS5 串流与云游戏）",
+    "分类": "串流与云游戏",
+    "aliases": [
+      "Steam Remote Play",
+      "PPSA99350",
+      "Steam-Link-PS5",
+      "串流",
+      "云游戏",
+      "远程",
+      "Steam Link",
+      "Steam串流"
+    ],
+    "enabled": false,
+    "repo_path": "jmelovich/Steam-Link-PS5",
+    "releases_url": "https://github.com/jmelovich/Steam-Link-PS5/releases/tag/v1.0.0",
+    "title_id": "PPSA99350",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99350.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "a955665b3b14a70e43fd55c9f333f4fd81854bb09155245e2e2593cb6e95fcd2",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/jmelovich/Steam-Link-PS5/releases/tag/v1.0.0",
+      "发布标签": "v1.0.0"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "v1.0.0",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PPSA99350.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PPSA99350.zip",
+    "save_subdir": "native-ppsa99350",
+    "download_url_templates": [
+      "https://github.com/jmelovich/Steam-Link-PS5/releases/download/v1.0.0/PPSA99350.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99600",
+    "简介": "Cloud Play（PS5 串流与云游戏）",
+    "分类": "串流与云游戏",
+    "aliases": [
+      "Cloud Play",
+      "PPSA99600",
+      "ps5-cloud-play",
+      "串流",
+      "云游戏",
+      "远程"
+    ],
+    "enabled": false,
+    "repo_path": "tertiumndatur/ps5-cloud-play",
+    "releases_url": "https://github.com/tertiumndatur/ps5-cloud-play/releases/tag/v1.0.0",
+    "title_id": "PPSA99600",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99600.json",
+    "_许可": "GPL-3.0-or-later",
+    "_上游sha256": "fa47dd13c4ec4c8f1acf8ae41cc38f1411710b40c4853cddd65b135dc45ebb70",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/tertiumndatur/ps5-cloud-play/releases/tag/v1.0.0",
+      "发布标签": "v1.0.0"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "v1.0.0",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "CloudPlay-PS5.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "CloudPlay-PS5.zip",
+    "save_subdir": "native-ppsa99600",
+    "download_url_templates": [
+      "https://github.com/tertiumndatur/ps5-cloud-play/releases/download/v1.0.0/CloudPlay-PS5.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99810",
+    "简介": "PSBox Cloud Gaming（PS5 串流与云游戏）",
+    "分类": "串流与云游戏",
+    "aliases": [
+      "PSBox Cloud Gaming",
+      "PPSA99810",
+      "xbox-cloud-gaming-ps5",
+      "串流",
+      "云游戏",
+      "远程"
+    ],
+    "enabled": false,
+    "repo_path": "RafaelNGP/xbox-cloud-gaming-ps5",
+    "releases_url": "https://github.com/RafaelNGP/xbox-cloud-gaming-ps5/releases/tag/v1.3.0",
+    "title_id": "PPSA99810",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99810.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "ad63a8704fb6f5e6797f7657f6fb2b7a7b14795ae063112a1222814cf0736299",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/RafaelNGP/xbox-cloud-gaming-ps5/releases/tag/v1.3.0",
+      "发布标签": "v1.3.0"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "v1.3.0",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PPSA99810.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PPSA99810.zip",
+    "save_subdir": "native-ppsa99810",
+    "download_url_templates": [
+      "https://github.com/RafaelNGP/xbox-cloud-gaming-ps5/releases/download/v1.3.0/PPSA99810.zip"
+    ]
+  }
+]

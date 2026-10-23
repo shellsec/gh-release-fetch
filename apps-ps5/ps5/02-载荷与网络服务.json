@@ -1,0 +1,144 @@
+[
+  {
+    "id": "elfldr",
+    "简介": "ELF Loader PS5 载荷加载器",
+    "分类": "载荷与网络服务",
+    "aliases": [
+      "ELF",
+      "加载器"
+    ],
+    "enabled": false,
+    "repo_path": "ps5-payload-dev/elfldr",
+    "releases_url": "https://github.com/ps5-payload-dev/elfldr/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "ELF/载荷",
+    "固件要求": "按项目 README 与当前发布说明核对。",
+    "使用说明": "选择 PS5 ELF 加载器，供其他载荷使用。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/ps5-payload-dev/elfldr/releases/tag/v0.26",
+      "发布标签": "v0.26"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".elf"
+    ],
+    "installer_markers": [
+      "elfldr-ps5.elf"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "elfldr-ps5.elf",
+    "save_subdir": "elfldr",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "SHA256",
+      "debug",
+      "Debug"
+    ],
+    "download_names": [
+      "elfldr-ps5.elf"
+    ]
+  },
+  {
+    "id": "ftpsrv",
+    "简介": "PS5 FTP 文件传输服务",
+    "分类": "载荷与网络服务",
+    "aliases": [
+      "FTP",
+      "文件传输"
+    ],
+    "enabled": false,
+    "repo_path": "ps5-payload-dev/ftpsrv",
+    "releases_url": "https://github.com/ps5-payload-dev/ftpsrv/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "ELF/载荷",
+    "固件要求": "按项目 README 与当前发布说明核对。",
+    "使用说明": "选择常规 ftpsrv-ps5.elf；同页 PS4 与 install 变体不混用。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/ps5-payload-dev/ftpsrv/releases/tag/v0.21.1",
+      "发布标签": "v0.21.1"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".elf"
+    ],
+    "installer_markers": [
+      "ftpsrv-ps5.elf"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "ftpsrv-ps5.elf",
+    "save_subdir": "ftpsrv",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "SHA256",
+      "debug",
+      "Debug"
+    ],
+    "download_names": [
+      "ftpsrv-ps5.elf"
+    ]
+  },
+  {
+    "id": "websrv",
+    "简介": "PS5 网页服务与 Homebrew Launcher",
+    "分类": "载荷与网络服务",
+    "aliases": [
+      "网页服务",
+      "启动器",
+      "Homebrew Launcher"
+    ],
+    "enabled": false,
+    "repo_path": "ps5-payload-dev/websrv",
+    "releases_url": "https://github.com/ps5-payload-dev/websrv/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "ELF/载荷",
+    "固件要求": "按项目 README 与当前发布说明核对。",
+    "使用说明": "websrv ZIP 应用需要此类环境；不要将 websrv 包、原生标题和 PS4 PKG 视为同一种包。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/ps5-payload-dev/websrv/releases/tag/v0.34",
+      "发布标签": "v0.34"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".elf"
+    ],
+    "installer_markers": [
+      "websrv-ps5.elf"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "websrv-ps5.elf",
+    "save_subdir": "websrv",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "SHA256",
+      "debug",
+      "Debug"
+    ],
+    "download_names": [
+      "websrv-ps5.elf"
+    ]
+  }
+]

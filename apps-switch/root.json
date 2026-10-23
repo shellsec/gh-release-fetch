@@ -1,0 +1,20 @@
+{
+  "platform_keys": [
+    "switch"
+  ],
+  "download_dir": ".",
+  "download_subdir_by_platform": true,
+  "ssl_verify": true,
+  "_说明": {
+    "简介": "Switch 独立清单，与电脑端 apps/、移动端 apps-mobile/ 分离；按用途维护分类分片。",
+    "用法": "python auto_update.py --apps-dir apps-switch --platform switch [id ...]",
+    "查找": "lookup_switch.bat <关键词>",
+    "扩展": "switch/ 下的 JSON 数组按文件名排序合并；后续可新增分类分片，同一平台 id 不可重复。",
+    "索引": "CATALOG.switch.md；修改分类分片后执行 python tools/generate_switch_catalog_index.py",
+    "核查": "release-check.json 保存本次公开发布页、标签与附件名快照，不代表实机测试。",
+    "预发布": "pinned_release_tag 固定已核查测试版；后续版本需人工核对并更新标签。",
+    "下载格式": "NRO、OVL、NSP、BIN、ZIP、7z、RAR 等仅下载，按原附件名保存到 switch/<id>/；不会安装、解压或刷写。",
+    "组件对照": "COMPONENTS.md 对照用户提供的三件套、汉化悬浮插件、相册应用、载荷及芯片固件清单。",
+    "入口": "根目录 lookup_app.exe / auto_update.exe / run_saved_apps.exe 已重新打包支持 Switch 和 PS5。BAT 在 Python 依赖齐全且源码存在时使用源码，否则使用 EXE。"
+  }
+}

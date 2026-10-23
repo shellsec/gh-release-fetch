@@ -1,0 +1,45 @@
+[
+  {
+    "id": "ips-patch-creator",
+    "简介": "IPS Patch Creator 补丁制作工具",
+    "分类": "配套资料与电脑工具",
+    "enabled": false,
+    "aliases": [
+      "IPS",
+      "签名补丁制作"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://gbatemp.net/download/ips-patch-creator.39133/",
+    "run_installer": false,
+    "使用说明": "电脑端制作工具页面；不作为 Switch NRO 下载或执行。"
+  },
+  {
+    "id": "sigpatch-database",
+    "简介": "Switch Ghidra 签名补丁数据库",
+    "分类": "配套资料与电脑工具",
+    "enabled": false,
+    "aliases": [
+      "签名补丁数据库",
+      "patch_database"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://github.com/borntohonk/Switch-Ghidra-Guides/tree/master/patch_database",
+    "run_installer": false,
+    "使用说明": "仓库中的补丁数据库目录，手动查阅与选择。"
+  },
+  {
+    "id": "ns-usbloader",
+    "简介": "NS-USBloader 电脑端传输工具",
+    "分类": "配套资料与电脑工具",
+    "enabled": false,
+    "aliases": [
+      "USB安装",
+      "Awoo配套",
+      "电脑端"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://github.com/developersu/ns-usbloader/releases",
+    "run_installer": false,
+    "使用说明": "电脑端配套 Awoo 等主机应用；在发布页选择本机系统及 Java 版本对应文件，不复制到 Switch 作为 NRO。"
+  }
+]

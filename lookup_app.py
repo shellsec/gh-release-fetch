@@ -10,8 +10,8 @@
   python lookup_app.py --apps-dir VibeCodingToolsDown warp
   python lookup_app.py --yes drawio          # 匹配项全部开启，不询问
   python lookup_app.py --dry-run drawio      # 只查询，不写文件
-  无参数：先选清单（桌面 / Android / iOS）再输入关键词。
-  Windows 快捷入口：lookup_mobile.bat / lookup_ios.bat
+  无参数：先选清单（桌面 / Android / iOS / Switch / PS5）再输入关键词。
+  Windows 快捷入口：lookup_mobile.bat / lookup_ios.bat / lookup_switch.bat / lookup_ps5.bat
 
 加入更新列表（根目录 saved_apps_<平台>.json，配合 run_saved_apps.bat 一键更新）：
   python lookup_app.py cherrytree            # 交互：1立刻下载 / 2加入并下载 / 3加入列表 / 4启用
@@ -42,7 +42,7 @@ if SCRIPT_DIR not in sys.path:
 from tools.ghrf_runtime import resolve_auto_update_argv  # noqa: E402
 
 DEFAULT_APPS_DIR = os.path.join(SCRIPT_DIR, "apps")
-PLATFORMS = ("windows", "darwin", "linux", "android", "ios")
+PLATFORMS = ("windows", "darwin", "linux", "android", "ios", "switch", "ps5")
 DESKTOP_PLATFORMS = ("windows", "darwin", "linux")
 SHARD_RE = re.compile(r"^\d+-(.+)\.json$", re.UNICODE)
 
@@ -503,8 +503,10 @@ def prompt_catalog_and_query() -> bool:
     print("  1  桌面（Windows / macOS / Linux）")
     print("  2  Android APK")
     print("  3  iOS App Store")
+    print("  4  Switch")
+    print("  5  PS5")
     try:
-        choice = input("请选择 (1/2/3，回车=桌面): ").strip().lower()
+        choice = input("请选择 (1/2/3/4/5，回车=桌面): ").strip().lower()
     except (EOFError, KeyboardInterrupt):
         print("\n已取消。")
         return False
@@ -517,6 +519,12 @@ def prompt_catalog_and_query() -> bool:
     elif choice in ("3", "ios"):
         extra = ["--apps-dir", "apps-mobile", "--platform", "ios"]
         print("清单: iOS")
+    elif choice in ("4", "switch"):
+        extra = ["--apps-dir", "apps-switch", "--platform", "switch"]
+        print("清单: Switch")
+    elif choice in ("5", "ps5"):
+        extra = ["--apps-dir", "apps-ps5", "--platform", "ps5"]
+        print("清单: PS5")
     else:
         print("无效选择，已退出。")
         return False

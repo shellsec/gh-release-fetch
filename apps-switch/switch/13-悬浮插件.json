@@ -1,0 +1,273 @@
+[
+  {
+    "id": "nx-ovlloader-zdm",
+    "简介": "nx-ovlloader 汉化分支",
+    "分类": "悬浮插件",
+    "enabled": false,
+    "aliases": [
+      "Tesla启动器",
+      "汉化加载器"
+    ],
+    "repo_path": "zdm65477730/nx-ovlloader",
+    "releases_url": "https://github.com/zdm65477730/nx-ovlloader/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "使用说明": "汉化分支的 overlay 加载器；按 ZIP 目录放置，与所选菜单及当前系统版本配套。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/zdm65477730/nx-ovlloader/releases/tag/1.0.7",
+      "发布标签": "1.0.7",
+      "发布时间": "2026-06-19T04:11:18Z"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "nx-ovlloader.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "nx-ovlloader-zdm.zip",
+    "save_subdir": "nx-ovlloader-zdm",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "debug",
+      "Debug"
+    ],
+    "download_names": [
+      "nx-ovlloader.zip"
+    ]
+  },
+  {
+    "id": "ultrahand-zdm",
+    "简介": "Ultrahand 汉化菜单",
+    "分类": "悬浮插件",
+    "enabled": false,
+    "aliases": [
+      "Tesla菜单",
+      "汉化菜单"
+    ],
+    "repo_path": "zdm65477730/Ultrahand-Overlay",
+    "releases_url": "https://github.com/zdm65477730/Ultrahand-Overlay/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "使用说明": "汉化分支完整菜单包；与原版 Tesla/Ultrahand 是替代选择，避免同时覆盖同名菜单文件。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/zdm65477730/Ultrahand-Overlay/releases/tag/2.5.3",
+      "发布标签": "2.5.3",
+      "发布时间": "2026-08-23T07:14:50Z"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "Ultrahand.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "ultrahand-zdm.zip",
+    "save_subdir": "ultrahand-zdm",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "debug",
+      "Debug"
+    ],
+    "download_names": [
+      "Ultrahand.zip"
+    ]
+  },
+  {
+    "id": "ovl-sysmodules-zdm",
+    "简介": "系统模块管理悬浮插件",
+    "分类": "悬浮插件",
+    "enabled": false,
+    "aliases": [
+      "系统模块管理",
+      "插件开关"
+    ],
+    "repo_path": "zdm65477730/ovl-sysmodules",
+    "releases_url": "https://github.com/zdm65477730/ovl-sysmodules/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "使用说明": "系统模块开关悬浮插件；需要 overlay 加载器与菜单。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/zdm65477730/ovl-sysmodules/releases/tag/v1.3.2",
+      "发布标签": "v1.3.2",
+      "发布时间": "2026-06-19T04:14:54Z"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "ovl-sysmodules.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "ovl-sysmodules-zdm.zip",
+    "save_subdir": "ovl-sysmodules-zdm",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "debug",
+      "Debug"
+    ],
+    "download_names": [
+      "ovl-sysmodules.zip"
+    ]
+  },
+  {
+    "id": "edizon-overlay-zdm",
+    "简介": "EdiZon 汉化金手指悬浮插件",
+    "分类": "悬浮插件",
+    "enabled": false,
+    "aliases": [
+      "金手指",
+      "EdiZon.ovl",
+      "Edizon.nro"
+    ],
+    "repo_path": "zdm65477730/EdiZon-Overlay",
+    "releases_url": "https://github.com/zdm65477730/EdiZon-Overlay/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "使用说明": "下载 EdiZon.zip 套件；NRO/OVL 以压缩包实际内容为准，不把单独的 overlay 描述成独立 NRO。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/zdm65477730/EdiZon-Overlay/releases/tag/v1.0.8",
+      "发布标签": "v1.0.8",
+      "发布时间": "2026-06-19T04:16:05Z"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "EdiZon.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "edizon-overlay-zdm.zip",
+    "save_subdir": "edizon-overlay-zdm",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "debug",
+      "Debug"
+    ],
+    "download_names": [
+      "EdiZon.zip"
+    ]
+  },
+  {
+    "id": "sys-clk-zdm",
+    "简介": "sys-clk 汉化超频套件",
+    "分类": "悬浮插件",
+    "enabled": false,
+    "aliases": [
+      "超频插件",
+      "sys-clk.ovl"
+    ],
+    "repo_path": "zdm65477730/sys-clk",
+    "releases_url": "https://github.com/zdm65477730/sys-clk/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "使用说明": "下载 sys-clk.zip 主机端套件；需要模块与菜单配套，支持频率以设备和项目说明为准。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/zdm65477730/sys-clk/releases/tag/v1.0.2",
+      "发布标签": "v1.0.2",
+      "发布时间": "2026-06-19T04:13:58Z"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "sys-clk.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "sys-clk-zdm.zip",
+    "save_subdir": "sys-clk-zdm",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "debug",
+      "Debug"
+    ],
+    "download_names": [
+      "sys-clk.zip"
+    ]
+  },
+  {
+    "id": "status-monitor-zdm",
+    "简介": "Status Monitor 汉化监控悬浮插件",
+    "分类": "悬浮插件",
+    "enabled": false,
+    "aliases": [
+      "实时监控",
+      "StatusMonitor.ovl"
+    ],
+    "repo_path": "zdm65477730/Status-Monitor-Overlay",
+    "releases_url": "https://github.com/zdm65477730/Status-Monitor-Overlay/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "使用说明": "下载 StatusMonitor.zip；退出快捷键和资源依赖以所下载分支说明为准。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/zdm65477730/Status-Monitor-Overlay/releases/tag/v1.3.2",
+      "发布标签": "v1.3.2",
+      "发布时间": "2026-04-05T11:13:44Z"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "StatusMonitor.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "status-monitor-zdm.zip",
+    "save_subdir": "status-monitor-zdm",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "debug",
+      "Debug"
+    ],
+    "download_names": [
+      "StatusMonitor.zip"
+    ]
+  }
+]

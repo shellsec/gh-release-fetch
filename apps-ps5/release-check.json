@@ -1,0 +1,377 @@
+{
+  "checked_on": "2026-10-19",
+  "说明": "公开发布页及附件名核查；不表示已下载并校验摘要或已在主机运行。",
+  "releases": [
+    {
+      "repo": "etaHEN/etaHEN",
+      "release_url": "https://github.com/etaHEN/etaHEN/releases/tag/2.5B",
+      "tag": "2.5B",
+      "published_at": "2025-12-25T05:31:40Z",
+      "assets": [
+        {
+          "name": "etaHEN-2.5B.bin",
+          "url": "https://github.com/etaHEN/etaHEN/releases/download/2.5B/etaHEN-2.5B.bin"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "GronedWaffel/etahen-11.00-13.60",
+      "release_url": "https://github.com/GronedWaffel/etahen-11.00-13.60/releases/tag/v2.5B-unified.1",
+      "tag": "v2.5B-unified.1",
+      "published_at": "2026-10-05T16:00:19Z",
+      "assets": [
+        {
+          "name": "etahen-11.00-13.60-SHA256SUMS.txt",
+          "url": "https://github.com/GronedWaffel/etahen-11.00-13.60/releases/download/v2.5B-unified.1/etahen-11.00-13.60-SHA256SUMS.txt"
+        },
+        {
+          "name": "etaHEN-11.00-13.60-source.zip",
+          "url": "https://github.com/GronedWaffel/etahen-11.00-13.60/releases/download/v2.5B-unified.1/etaHEN-11.00-13.60-source.zip"
+        },
+        {
+          "name": "etaHEN-11.00-13.60.elf",
+          "url": "https://github.com/GronedWaffel/etahen-11.00-13.60/releases/download/v2.5B-unified.1/etaHEN-11.00-13.60.elf"
+        },
+        {
+          "name": "etaHEN-release-manifest.json",
+          "url": "https://github.com/GronedWaffel/etahen-11.00-13.60/releases/download/v2.5B-unified.1/etaHEN-release-manifest.json"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "ps5-payload-dev/elfldr",
+      "release_url": "https://github.com/ps5-payload-dev/elfldr/releases/tag/v0.26",
+      "tag": "v0.26",
+      "published_at": "2026-08-29T17:31:18Z",
+      "assets": [
+        {
+          "name": "elfldr-ps5.elf",
+          "url": "https://github.com/ps5-payload-dev/elfldr/releases/download/v0.26/elfldr-ps5.elf"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "ps5-payload-dev/ftpsrv",
+      "release_url": "https://github.com/ps5-payload-dev/ftpsrv/releases/tag/v0.21.1",
+      "tag": "v0.21.1",
+      "published_at": "2026-08-20T17:02:45Z",
+      "assets": [
+        {
+          "name": "ftpsrv-ps4.elf",
+          "url": "https://github.com/ps5-payload-dev/ftpsrv/releases/download/v0.21.1/ftpsrv-ps4.elf"
+        },
+        {
+          "name": "ftpsrv-ps5-install.elf",
+          "url": "https://github.com/ps5-payload-dev/ftpsrv/releases/download/v0.21.1/ftpsrv-ps5-install.elf"
+        },
+        {
+          "name": "ftpsrv-ps5.elf",
+          "url": "https://github.com/ps5-payload-dev/ftpsrv/releases/download/v0.21.1/ftpsrv-ps5.elf"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "ps5-payload-dev/websrv",
+      "release_url": "https://github.com/ps5-payload-dev/websrv/releases/tag/v0.34",
+      "tag": "v0.34",
+      "published_at": "2026-08-02T19:51:42Z",
+      "assets": [
+        {
+          "name": "CrispyDoom.zip",
+          "url": "https://github.com/ps5-payload-dev/websrv/releases/download/v0.34/CrispyDoom.zip"
+        },
+        {
+          "name": "DevilutionX.zip",
+          "url": "https://github.com/ps5-payload-dev/websrv/releases/download/v0.34/DevilutionX.zip"
+        },
+        {
+          "name": "EDuke32.zip",
+          "url": "https://github.com/ps5-payload-dev/websrv/releases/download/v0.34/EDuke32.zip"
+        },
+        {
+          "name": "FBNeo.zip",
+          "url": "https://github.com/ps5-payload-dev/websrv/releases/download/v0.34/FBNeo.zip"
+        },
+        {
+          "name": "FFplay.zip",
+          "url": "https://github.com/ps5-payload-dev/websrv/releases/download/v0.34/FFplay.zip"
+        },
+        {
+          "name": "LakeSnes.zip",
+          "url": "https://github.com/ps5-payload-dev/websrv/releases/download/v0.34/LakeSnes.zip"
+        },
+        {
+          "name": "LinkDev.zip",
+          "url": "https://github.com/ps5-payload-dev/websrv/releases/download/v0.34/LinkDev.zip"
+        },
+        {
+          "name": "Mari0.zip",
+          "url": "https://github.com/ps5-payload-dev/websrv/releases/download/v0.34/Mari0.zip"
+        },
+        {
+          "name": "Mednafen.zip",
+          "url": "https://github.com/ps5-payload-dev/websrv/releases/download/v0.34/Mednafen.zip"
+        },
+        {
+          "name": "OffAct.zip",
+          "url": "https://github.com/ps5-payload-dev/websrv/releases/download/v0.34/OffAct.zip"
+        },
+        {
+          "name": "Omnispeak.zip",
+          "url": "https://github.com/ps5-payload-dev/websrv/releases/download/v0.34/Omnispeak.zip"
+        },
+        {
+          "name": "OpenJazz.zip",
+          "url": "https://github.com/ps5-payload-dev/websrv/releases/download/v0.34/OpenJazz.zip"
+        },
+        {
+          "name": "pfbneo-7.1_ps5.zip",
+          "url": "https://github.com/ps5-payload-dev/websrv/releases/download/v0.34/pfbneo-7.1_ps5.zip"
+        },
+        {
+          "name": "pgba-7.1_ps5.zip",
+          "url": "https://github.com/ps5-payload-dev/websrv/releases/download/v0.34/pgba-7.1_ps5.zip"
+        },
+        {
+          "name": "pgen-7.1_ps5.zip",
+          "url": "https://github.com/ps5-payload-dev/websrv/releases/download/v0.34/pgen-7.1_ps5.zip"
+        },
+        {
+          "name": "PKGInstall.zip",
+          "url": "https://github.com/ps5-payload-dev/websrv/releases/download/v0.34/PKGInstall.zip"
+        },
+        {
+          "name": "pnes-7.1_ps5.zip",
+          "url": "https://github.com/ps5-payload-dev/websrv/releases/download/v0.34/pnes-7.1_ps5.zip"
+        },
+        {
+          "name": "psnes-7.1_ps5.zip",
+          "url": "https://github.com/ps5-payload-dev/websrv/releases/download/v0.34/psnes-7.1_ps5.zip"
+        },
+        {
+          "name": "RetroArch.zip",
+          "url": "https://github.com/ps5-payload-dev/websrv/releases/download/v0.34/RetroArch.zip"
+        },
+        {
+          "name": "ScummVM.zip",
+          "url": "https://github.com/ps5-payload-dev/websrv/releases/download/v0.34/ScummVM.zip"
+        },
+        {
+          "name": "SverigesRadio.zip",
+          "url": "https://github.com/ps5-payload-dev/websrv/releases/download/v0.34/SverigesRadio.zip"
+        },
+        {
+          "name": "SVTplay.zip",
+          "url": "https://github.com/ps5-payload-dev/websrv/releases/download/v0.34/SVTplay.zip"
+        },
+        {
+          "name": "TVHeadend.zip",
+          "url": "https://github.com/ps5-payload-dev/websrv/releases/download/v0.34/TVHeadend.zip"
+        },
+        {
+          "name": "VVVVVV.zip",
+          "url": "https://github.com/ps5-payload-dev/websrv/releases/download/v0.34/VVVVVV.zip"
+        },
+        {
+          "name": "websrv-ps5.elf",
+          "url": "https://github.com/ps5-payload-dev/websrv/releases/download/v0.34/websrv-ps5.elf"
+        },
+        {
+          "name": "Wolf4SDL.zip",
+          "url": "https://github.com/ps5-payload-dev/websrv/releases/download/v0.34/Wolf4SDL.zip"
+        },
+        {
+          "name": "YQuake2.zip",
+          "url": "https://github.com/ps5-payload-dev/websrv/releases/download/v0.34/YQuake2.zip"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "ps5-payload-dev/sdk",
+      "release_url": "https://github.com/ps5-payload-dev/sdk/releases/tag/v0.44",
+      "tag": "v0.44",
+      "published_at": "2026-10-10T16:00:28Z",
+      "assets": [
+        {
+          "name": "ps5-payload-sdk.zip",
+          "url": "https://github.com/ps5-payload-dev/sdk/releases/download/v0.44/ps5-payload-sdk.zip"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "LightningMods/Itemzflow",
+      "release_url": "https://github.com/LightningMods/Itemzflow/releases/tag/1.08",
+      "tag": "1.08",
+      "published_at": "2026-05-31T22:08:52Z",
+      "assets": [],
+      "status": "release-without-assets",
+      "project_url": "https://github.com/LightningMods/Itemzflow",
+      "archived": false,
+      "project_exists": true
+    },
+    {
+      "repo": "bucanero/apollo-ps5",
+      "release_url": "https://github.com/bucanero/apollo-ps5/releases",
+      "status": "no-stable-release",
+      "project_url": "https://github.com/bucanero/apollo-ps5",
+      "archived": false,
+      "project_exists": true
+    },
+    {
+      "repo": "ntfargo/Relapse-Exploit",
+      "release_url": "https://github.com/ntfargo/Relapse-Exploit/releases",
+      "status": "no-stable-release",
+      "project_url": "https://github.com/ntfargo/Relapse-Exploit",
+      "archived": false,
+      "project_exists": true
+    },
+    {
+      "repo": "aydencharles/onionHEN",
+      "release_url": "https://github.com/aydencharles/onionHEN/releases/tag/v0.9.0",
+      "tag": "v0.9.0",
+      "published_at": "2026-10-15T07:42:25Z",
+      "assets": [
+        {
+          "name": "OnionHEN.elf",
+          "url": "https://github.com/aydencharles/onionHEN/releases/download/v0.9.0/OnionHEN.elf"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "tsuramatsu1/psp5",
+      "release_url": "https://github.com/tsuramatsu1/psp5/releases/tag/v1.000.100",
+      "tag": "v1.000.100",
+      "published_at": "2026-10-12T15:26:25Z",
+      "assets": [
+        {
+          "name": "PPSA99131.zip",
+          "url": "https://github.com/tsuramatsu1/psp5/releases/download/v1.000.100/PPSA99131.zip"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "avoidik/ps5-retroarch",
+      "release_url": "https://github.com/avoidik/ps5-retroarch/releases/tag/v1.0.1",
+      "tag": "v1.0.1",
+      "published_at": "2026-10-05T18:07:42Z",
+      "assets": [
+        {
+          "name": "RetroArch-PS5-cores.zip",
+          "url": "https://github.com/avoidik/ps5-retroarch/releases/download/v1.0.1/RetroArch-PS5-cores.zip"
+        },
+        {
+          "name": "RetroArch-PS5-engine.zip",
+          "url": "https://github.com/avoidik/ps5-retroarch/releases/download/v1.0.1/RetroArch-PS5-engine.zip"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "haasele/ytps5",
+      "release_url": "https://github.com/haasele/ytps5/releases/tag/01.000.005",
+      "tag": "01.000.005",
+      "published_at": "2026-10-11T14:14:18Z",
+      "assets": [
+        {
+          "name": "PPSA99350.zip",
+          "url": "https://github.com/haasele/ytps5/releases/download/01.000.005/PPSA99350.zip"
+        },
+        {
+          "name": "SHA256SUMS",
+          "url": "https://github.com/haasele/ytps5/releases/download/01.000.005/SHA256SUMS"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "ps5-linux/ps5-linux-loader",
+      "release_url": "https://github.com/ps5-linux/ps5-linux-loader/releases/tag/v2.5",
+      "tag": "v2.5",
+      "published_at": "2026-09-05T08:40:09Z",
+      "assets": [
+        {
+          "name": "ps5-linux-loader.elf",
+          "url": "https://github.com/ps5-linux/ps5-linux-loader/releases/download/v2.5/ps5-linux-loader.elf"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "ps5-linux/ps5-linux-image",
+      "release_url": "https://github.com/ps5-linux/ps5-linux-image/releases/tag/latest",
+      "tag": "latest",
+      "published_at": "2026-08-29T19:59:38Z",
+      "assets": [],
+      "status": "release-without-assets",
+      "project_url": "https://github.com/ps5-linux/ps5-linux-image",
+      "archived": false,
+      "project_exists": true
+    },
+    {
+      "repo": "ps5-linux/ps5-linux-tools",
+      "release_url": "https://github.com/ps5-linux/ps5-linux-tools/releases",
+      "status": "no-stable-release",
+      "project_url": "https://github.com/ps5-linux/ps5-linux-tools",
+      "archived": false,
+      "project_exists": true
+    },
+    {
+      "repo": "overdriveps5/overdrive-releases",
+      "release_url": "https://github.com/overdriveps5/overdrive-releases/releases/tag/v0.2.5",
+      "tag": "v0.2.5",
+      "published_at": "2026-10-13T12:55:31Z",
+      "assets": [
+        {
+          "name": "Overdrive-PPSA99058.exfat.zip",
+          "url": "https://github.com/overdriveps5/overdrive-releases/releases/download/v0.2.5/Overdrive-PPSA99058.exfat.zip"
+        },
+        {
+          "name": "Overdrive-PPSA99058.zip",
+          "url": "https://github.com/overdriveps5/overdrive-releases/releases/download/v0.2.5/Overdrive-PPSA99058.zip"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "MyLuxy/overdrive",
+      "release_url": "https://github.com/MyLuxy/overdrive/releases/tag/v1.0.7",
+      "tag": "v1.0.7",
+      "published_at": "2026-10-19T01:27:48Z",
+      "assets": [
+        {
+          "name": "Overdrive.exfat",
+          "url": "https://github.com/MyLuxy/overdrive/releases/download/v1.0.7/Overdrive.exfat"
+        },
+        {
+          "name": "update.zip",
+          "url": "https://github.com/MyLuxy/overdrive/releases/download/v1.0.7/update.zip"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "robofighter/over-drive",
+      "release_url": "https://github.com/robofighter/over-drive/releases",
+      "status": "no-stable-release",
+      "project_url": "https://github.com/robofighter/over-drive",
+      "archived": false,
+      "project_exists": true
+    },
+    {
+      "repo": "dlaurora/testingps",
+      "release_url": "https://github.com/dlaurora/testingps/releases",
+      "status": "no-stable-release",
+      "project_url": "https://github.com/dlaurora/testingps",
+      "archived": false,
+      "project_exists": true
+    }
+  ]
+}

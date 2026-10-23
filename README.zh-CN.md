@@ -359,7 +359,7 @@ python lookup_app.py drawio
 跳过交互: lookup_app -y --download drawio
 ```
 
-**无参数：** 直接运行 `lookup_app.bat` / `lookup_app.exe` 会先问搜桌面还是 Android / iOS，再输入关键词。搜 APK 也可直接 `lookup_mobile.bat termux`。
+**无参数：** 直接运行 `lookup_app.bat` / `lookup_app.exe` 会先问搜桌面、Android、iOS、Switch 或 PS5，再输入关键词。搜 APK 也可直接 `lookup_mobile.bat termux`。
 
 **两步交互：** 搜索 → 选序号（`1`、`1,3`、`a`，**回车**跳过）→ 选操作 **1**–**4**。短关键词如 `draw` 常出现 **三条**（darwin / linux / windows，同一 `id`）；选对平台，或用 `--platform windows drawio` 缩小范围。
 
@@ -693,3 +693,17 @@ search_soft_pages.bat 7zip
 ### 介绍页监控（soft_page_check）
 
 详见 [`tools/soft_page_check/README.md`](tools/soft_page_check/README.md)。常用：`monthly_check.bat`、`monthly_check_site.bat`、`open_changed_site.bat`、`refresh_urls.bat`、`search_soft_pages.bat`（根目录）、`fetch_github_on_changes.bat`。
+
+## Switch 独立清单
+
+Switch 与电脑端、移动端独立维护，见 [Switch 清单与使用说明](CATALOG.switch.md)。
+运行 `python lookup_app.py` 后选择 **4：Switch**，或运行 `lookup_switch.bat <关键词>`。
+支持 NRO、OVL、NSP 与压缩包，仅下载至 `switch/<id>/`，不安装、不解压。
+源码入口需要 Python 及 `requirements.txt` 中的依赖；根目录 EXE 已重新打包，包含 Switch / PS5 选择菜单。
+
+## PS5 独立清单
+
+运行 `lookup_app.bat` 后选择 **5：PS5**，或运行 `lookup_ps5.bat <关键词>`。
+清单涵盖系统环境、ELF 服务、原生模拟器与应用、websrv 应用包和开发工具；见 [PS5 完整清单](CATALOG.ps5.md)。
+仅下载到 `ps5/<id>/`；固件、启动器和额外资源要求分别查看各项目说明，根目录 EXE 已重新打包支持 PS5。
+社区原生应用可运行 `python tools/import_ps5_community_catalog.py --refresh` 刷新，再运行 `python tools/generate_ps5_catalog_index.py` 刷新索引。

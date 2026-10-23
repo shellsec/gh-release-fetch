@@ -1,0 +1,482 @@
+[
+  {
+    "id": "websrv-fbneo",
+    "简介": "FBNeo（websrv 包）",
+    "分类": "websrv模拟器",
+    "aliases": [
+      "FBNeo",
+      "模拟器"
+    ],
+    "enabled": false,
+    "repo_path": "ps5-payload-dev/websrv",
+    "releases_url": "https://github.com/ps5-payload-dev/websrv/releases/tag/v0.34",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "websrv 应用",
+    "固件要求": "按项目 README 与当前发布说明核对。",
+    "使用说明": "作者 websrv Release 中的独立应用包；按其 Homebrew Launcher 布局部署，游戏/BIOS/资源依赖按项目说明自行准备。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/ps5-payload-dev/websrv/releases/tag/v0.34",
+      "发布标签": "v0.34"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "FBNeo.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "FBNeo.zip",
+    "save_subdir": "websrv-fbneo",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "SHA256",
+      "debug",
+      "Debug"
+    ],
+    "pinned_release_tag": "v0.34",
+    "download_url_templates": [
+      "https://github.com/ps5-payload-dev/websrv/releases/download/v0.34/FBNeo.zip"
+    ]
+  },
+  {
+    "id": "websrv-lakesnes",
+    "简介": "LakeSnes（websrv 包）",
+    "分类": "websrv模拟器",
+    "aliases": [
+      "LakeSnes",
+      "模拟器"
+    ],
+    "enabled": false,
+    "repo_path": "ps5-payload-dev/websrv",
+    "releases_url": "https://github.com/ps5-payload-dev/websrv/releases/tag/v0.34",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "websrv 应用",
+    "固件要求": "按项目 README 与当前发布说明核对。",
+    "使用说明": "作者 websrv Release 中的独立应用包；按其 Homebrew Launcher 布局部署，游戏/BIOS/资源依赖按项目说明自行准备。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/ps5-payload-dev/websrv/releases/tag/v0.34",
+      "发布标签": "v0.34"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "LakeSnes.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "LakeSnes.zip",
+    "save_subdir": "websrv-lakesnes",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "SHA256",
+      "debug",
+      "Debug"
+    ],
+    "pinned_release_tag": "v0.34",
+    "download_url_templates": [
+      "https://github.com/ps5-payload-dev/websrv/releases/download/v0.34/LakeSnes.zip"
+    ]
+  },
+  {
+    "id": "websrv-mednafen",
+    "简介": "Mednafen（websrv 包）",
+    "分类": "websrv模拟器",
+    "aliases": [
+      "Mednafen",
+      "模拟器"
+    ],
+    "enabled": false,
+    "repo_path": "ps5-payload-dev/websrv",
+    "releases_url": "https://github.com/ps5-payload-dev/websrv/releases/tag/v0.34",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "websrv 应用",
+    "固件要求": "按项目 README 与当前发布说明核对。",
+    "使用说明": "作者 websrv Release 中的独立应用包；按其 Homebrew Launcher 布局部署，游戏/BIOS/资源依赖按项目说明自行准备。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/ps5-payload-dev/websrv/releases/tag/v0.34",
+      "发布标签": "v0.34"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "Mednafen.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "Mednafen.zip",
+    "save_subdir": "websrv-mednafen",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "SHA256",
+      "debug",
+      "Debug"
+    ],
+    "pinned_release_tag": "v0.34",
+    "download_url_templates": [
+      "https://github.com/ps5-payload-dev/websrv/releases/download/v0.34/Mednafen.zip"
+    ]
+  },
+  {
+    "id": "websrv-pfbneo-7-1-ps5",
+    "简介": "pfbneo-7.1_ps5（websrv 包）",
+    "分类": "websrv模拟器",
+    "aliases": [
+      "pfbneo-7.1_ps5",
+      "模拟器"
+    ],
+    "enabled": false,
+    "repo_path": "ps5-payload-dev/websrv",
+    "releases_url": "https://github.com/ps5-payload-dev/websrv/releases/tag/v0.34",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "websrv 应用",
+    "固件要求": "按项目 README 与当前发布说明核对。",
+    "使用说明": "作者 websrv Release 中的独立应用包；按其 Homebrew Launcher 布局部署，游戏/BIOS/资源依赖按项目说明自行准备。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/ps5-payload-dev/websrv/releases/tag/v0.34",
+      "发布标签": "v0.34"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "pfbneo-7.1_ps5.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "pfbneo-7.1_ps5.zip",
+    "save_subdir": "websrv-pfbneo-7-1-ps5",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "SHA256",
+      "debug",
+      "Debug"
+    ],
+    "pinned_release_tag": "v0.34",
+    "download_url_templates": [
+      "https://github.com/ps5-payload-dev/websrv/releases/download/v0.34/pfbneo-7.1_ps5.zip"
+    ]
+  },
+  {
+    "id": "websrv-pgba-7-1-ps5",
+    "简介": "pgba-7.1_ps5（websrv 包）",
+    "分类": "websrv模拟器",
+    "aliases": [
+      "pgba-7.1_ps5",
+      "模拟器"
+    ],
+    "enabled": false,
+    "repo_path": "ps5-payload-dev/websrv",
+    "releases_url": "https://github.com/ps5-payload-dev/websrv/releases/tag/v0.34",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "websrv 应用",
+    "固件要求": "按项目 README 与当前发布说明核对。",
+    "使用说明": "作者 websrv Release 中的独立应用包；按其 Homebrew Launcher 布局部署，游戏/BIOS/资源依赖按项目说明自行准备。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/ps5-payload-dev/websrv/releases/tag/v0.34",
+      "发布标签": "v0.34"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "pgba-7.1_ps5.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "pgba-7.1_ps5.zip",
+    "save_subdir": "websrv-pgba-7-1-ps5",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "SHA256",
+      "debug",
+      "Debug"
+    ],
+    "pinned_release_tag": "v0.34",
+    "download_url_templates": [
+      "https://github.com/ps5-payload-dev/websrv/releases/download/v0.34/pgba-7.1_ps5.zip"
+    ]
+  },
+  {
+    "id": "websrv-pgen-7-1-ps5",
+    "简介": "pgen-7.1_ps5（websrv 包）",
+    "分类": "websrv模拟器",
+    "aliases": [
+      "pgen-7.1_ps5",
+      "模拟器"
+    ],
+    "enabled": false,
+    "repo_path": "ps5-payload-dev/websrv",
+    "releases_url": "https://github.com/ps5-payload-dev/websrv/releases/tag/v0.34",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "websrv 应用",
+    "固件要求": "按项目 README 与当前发布说明核对。",
+    "使用说明": "作者 websrv Release 中的独立应用包；按其 Homebrew Launcher 布局部署，游戏/BIOS/资源依赖按项目说明自行准备。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/ps5-payload-dev/websrv/releases/tag/v0.34",
+      "发布标签": "v0.34"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "pgen-7.1_ps5.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "pgen-7.1_ps5.zip",
+    "save_subdir": "websrv-pgen-7-1-ps5",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "SHA256",
+      "debug",
+      "Debug"
+    ],
+    "pinned_release_tag": "v0.34",
+    "download_url_templates": [
+      "https://github.com/ps5-payload-dev/websrv/releases/download/v0.34/pgen-7.1_ps5.zip"
+    ]
+  },
+  {
+    "id": "websrv-pnes-7-1-ps5",
+    "简介": "pnes-7.1_ps5（websrv 包）",
+    "分类": "websrv模拟器",
+    "aliases": [
+      "pnes-7.1_ps5",
+      "模拟器"
+    ],
+    "enabled": false,
+    "repo_path": "ps5-payload-dev/websrv",
+    "releases_url": "https://github.com/ps5-payload-dev/websrv/releases/tag/v0.34",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "websrv 应用",
+    "固件要求": "按项目 README 与当前发布说明核对。",
+    "使用说明": "作者 websrv Release 中的独立应用包；按其 Homebrew Launcher 布局部署，游戏/BIOS/资源依赖按项目说明自行准备。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/ps5-payload-dev/websrv/releases/tag/v0.34",
+      "发布标签": "v0.34"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "pnes-7.1_ps5.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "pnes-7.1_ps5.zip",
+    "save_subdir": "websrv-pnes-7-1-ps5",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "SHA256",
+      "debug",
+      "Debug"
+    ],
+    "pinned_release_tag": "v0.34",
+    "download_url_templates": [
+      "https://github.com/ps5-payload-dev/websrv/releases/download/v0.34/pnes-7.1_ps5.zip"
+    ]
+  },
+  {
+    "id": "websrv-psnes-7-1-ps5",
+    "简介": "psnes-7.1_ps5（websrv 包）",
+    "分类": "websrv模拟器",
+    "aliases": [
+      "psnes-7.1_ps5",
+      "模拟器"
+    ],
+    "enabled": false,
+    "repo_path": "ps5-payload-dev/websrv",
+    "releases_url": "https://github.com/ps5-payload-dev/websrv/releases/tag/v0.34",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "websrv 应用",
+    "固件要求": "按项目 README 与当前发布说明核对。",
+    "使用说明": "作者 websrv Release 中的独立应用包；按其 Homebrew Launcher 布局部署，游戏/BIOS/资源依赖按项目说明自行准备。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/ps5-payload-dev/websrv/releases/tag/v0.34",
+      "发布标签": "v0.34"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "psnes-7.1_ps5.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "psnes-7.1_ps5.zip",
+    "save_subdir": "websrv-psnes-7-1-ps5",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "SHA256",
+      "debug",
+      "Debug"
+    ],
+    "pinned_release_tag": "v0.34",
+    "download_url_templates": [
+      "https://github.com/ps5-payload-dev/websrv/releases/download/v0.34/psnes-7.1_ps5.zip"
+    ]
+  },
+  {
+    "id": "websrv-retroarch",
+    "简介": "RetroArch（websrv 包）",
+    "分类": "websrv模拟器",
+    "aliases": [
+      "RetroArch",
+      "模拟器"
+    ],
+    "enabled": false,
+    "repo_path": "ps5-payload-dev/websrv",
+    "releases_url": "https://github.com/ps5-payload-dev/websrv/releases/tag/v0.34",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "websrv 应用",
+    "固件要求": "按项目 README 与当前发布说明核对。",
+    "使用说明": "作者 websrv Release 中的独立应用包；按其 Homebrew Launcher 布局部署，游戏/BIOS/资源依赖按项目说明自行准备。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/ps5-payload-dev/websrv/releases/tag/v0.34",
+      "发布标签": "v0.34"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "RetroArch.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "RetroArch.zip",
+    "save_subdir": "websrv-retroarch",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "SHA256",
+      "debug",
+      "Debug"
+    ],
+    "pinned_release_tag": "v0.34",
+    "download_url_templates": [
+      "https://github.com/ps5-payload-dev/websrv/releases/download/v0.34/RetroArch.zip"
+    ]
+  },
+  {
+    "id": "websrv-scummvm",
+    "简介": "ScummVM（websrv 包）",
+    "分类": "websrv模拟器",
+    "aliases": [
+      "ScummVM",
+      "模拟器"
+    ],
+    "enabled": false,
+    "repo_path": "ps5-payload-dev/websrv",
+    "releases_url": "https://github.com/ps5-payload-dev/websrv/releases/tag/v0.34",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "websrv 应用",
+    "固件要求": "按项目 README 与当前发布说明核对。",
+    "使用说明": "作者 websrv Release 中的独立应用包；按其 Homebrew Launcher 布局部署，游戏/BIOS/资源依赖按项目说明自行准备。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/ps5-payload-dev/websrv/releases/tag/v0.34",
+      "发布标签": "v0.34"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "ScummVM.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "ScummVM.zip",
+    "save_subdir": "websrv-scummvm",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "SHA256",
+      "debug",
+      "Debug"
+    ],
+    "pinned_release_tag": "v0.34",
+    "download_url_templates": [
+      "https://github.com/ps5-payload-dev/websrv/releases/download/v0.34/ScummVM.zip"
+    ]
+  }
+]

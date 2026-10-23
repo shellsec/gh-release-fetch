@@ -1,0 +1,104 @@
+[
+  {
+    "id": "switify",
+    "简介": "Spotify 客户端",
+    "分类": "音乐",
+    "enabled": false,
+    "aliases": [
+      "Switify",
+      "Spotify",
+      "音乐"
+    ],
+    "repo_path": "DomazinUS/Switify",
+    "releases_url": "https://github.com/DomazinUS/Switify/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "switify",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "Switify",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "switify.zip",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "windows",
+      "Windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Overlay",
+      "overlay",
+      "debug",
+      "Debug"
+    ],
+    "使用说明": "完整保留压缩包中的 SD 卡目录布局，具体依赖与启动方式见项目说明。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/DomazinUS/Switify/releases/tag/v0.7.1",
+      "状态": "release",
+      "发布标签": "v0.7.1",
+      "发布时间": "2026-08-20T01:53:29Z"
+    }
+  },
+  {
+    "id": "nasswitch",
+    "简介": "NAS 音乐播放",
+    "分类": "音乐",
+    "enabled": false,
+    "aliases": [
+      "nasswitch",
+      "NAS音乐",
+      "后台音乐"
+    ],
+    "repo_path": "hlhlhl231/nasswitch",
+    "releases_url": "https://github.com/hlhlhl231/nasswitch/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "nasswitch",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "nasswitch",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "nasswitch.zip",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "windows",
+      "Windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Overlay",
+      "overlay",
+      "debug",
+      "Debug"
+    ],
+    "使用说明": "完整保留压缩包中的 SD 卡目录布局，具体依赖与启动方式见项目说明。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/hlhlhl231/nasswitch/releases/tag/v3.0.0",
+      "状态": "release",
+      "发布标签": "v3.0.0",
+      "发布时间": "2026-08-03T12:40:10Z"
+    }
+  }
+]

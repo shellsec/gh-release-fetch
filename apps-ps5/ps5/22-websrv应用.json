@@ -1,0 +1,331 @@
+[
+  {
+    "id": "websrv-ffplay",
+    "简介": "FFplay（websrv 包）",
+    "分类": "websrv应用",
+    "aliases": [
+      "FFplay"
+    ],
+    "enabled": false,
+    "repo_path": "ps5-payload-dev/websrv",
+    "releases_url": "https://github.com/ps5-payload-dev/websrv/releases/tag/v0.34",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "websrv 应用",
+    "固件要求": "按项目 README 与当前发布说明核对。",
+    "使用说明": "作者 websrv Release 中的独立应用包；按其 Homebrew Launcher 布局部署，游戏/BIOS/资源依赖按项目说明自行准备。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/ps5-payload-dev/websrv/releases/tag/v0.34",
+      "发布标签": "v0.34"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "FFplay.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "FFplay.zip",
+    "save_subdir": "websrv-ffplay",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "SHA256",
+      "debug",
+      "Debug"
+    ],
+    "pinned_release_tag": "v0.34",
+    "download_url_templates": [
+      "https://github.com/ps5-payload-dev/websrv/releases/download/v0.34/FFplay.zip"
+    ]
+  },
+  {
+    "id": "websrv-linkdev",
+    "简介": "LinkDev（websrv 包）",
+    "分类": "websrv应用",
+    "aliases": [
+      "LinkDev"
+    ],
+    "enabled": false,
+    "repo_path": "ps5-payload-dev/websrv",
+    "releases_url": "https://github.com/ps5-payload-dev/websrv/releases/tag/v0.34",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "websrv 应用",
+    "固件要求": "按项目 README 与当前发布说明核对。",
+    "使用说明": "作者 websrv Release 中的独立应用包；按其 Homebrew Launcher 布局部署，游戏/BIOS/资源依赖按项目说明自行准备。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/ps5-payload-dev/websrv/releases/tag/v0.34",
+      "发布标签": "v0.34"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "LinkDev.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "LinkDev.zip",
+    "save_subdir": "websrv-linkdev",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "SHA256",
+      "debug",
+      "Debug"
+    ],
+    "pinned_release_tag": "v0.34",
+    "download_url_templates": [
+      "https://github.com/ps5-payload-dev/websrv/releases/download/v0.34/LinkDev.zip"
+    ]
+  },
+  {
+    "id": "websrv-offact",
+    "简介": "OffAct（websrv 包）",
+    "分类": "websrv应用",
+    "aliases": [
+      "OffAct"
+    ],
+    "enabled": false,
+    "repo_path": "ps5-payload-dev/websrv",
+    "releases_url": "https://github.com/ps5-payload-dev/websrv/releases/tag/v0.34",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "websrv 应用",
+    "固件要求": "按项目 README 与当前发布说明核对。",
+    "使用说明": "作者 websrv Release 中的独立应用包；按其 Homebrew Launcher 布局部署，游戏/BIOS/资源依赖按项目说明自行准备。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/ps5-payload-dev/websrv/releases/tag/v0.34",
+      "发布标签": "v0.34"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "OffAct.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "OffAct.zip",
+    "save_subdir": "websrv-offact",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "SHA256",
+      "debug",
+      "Debug"
+    ],
+    "pinned_release_tag": "v0.34",
+    "download_url_templates": [
+      "https://github.com/ps5-payload-dev/websrv/releases/download/v0.34/OffAct.zip"
+    ]
+  },
+  {
+    "id": "websrv-pkginstall",
+    "简介": "PKGInstall（websrv 包）",
+    "分类": "websrv应用",
+    "aliases": [
+      "PKGInstall"
+    ],
+    "enabled": false,
+    "repo_path": "ps5-payload-dev/websrv",
+    "releases_url": "https://github.com/ps5-payload-dev/websrv/releases/tag/v0.34",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "websrv 应用",
+    "固件要求": "按项目 README 与当前发布说明核对。",
+    "使用说明": "作者 websrv Release 中的独立应用包；按其 Homebrew Launcher 布局部署，游戏/BIOS/资源依赖按项目说明自行准备。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/ps5-payload-dev/websrv/releases/tag/v0.34",
+      "发布标签": "v0.34"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PKGInstall.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PKGInstall.zip",
+    "save_subdir": "websrv-pkginstall",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "SHA256",
+      "debug",
+      "Debug"
+    ],
+    "pinned_release_tag": "v0.34",
+    "download_url_templates": [
+      "https://github.com/ps5-payload-dev/websrv/releases/download/v0.34/PKGInstall.zip"
+    ]
+  },
+  {
+    "id": "websrv-sverigesradio",
+    "简介": "SverigesRadio（websrv 包）",
+    "分类": "websrv应用",
+    "aliases": [
+      "SverigesRadio"
+    ],
+    "enabled": false,
+    "repo_path": "ps5-payload-dev/websrv",
+    "releases_url": "https://github.com/ps5-payload-dev/websrv/releases/tag/v0.34",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "websrv 应用",
+    "固件要求": "按项目 README 与当前发布说明核对。",
+    "使用说明": "作者 websrv Release 中的独立应用包；按其 Homebrew Launcher 布局部署，游戏/BIOS/资源依赖按项目说明自行准备。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/ps5-payload-dev/websrv/releases/tag/v0.34",
+      "发布标签": "v0.34"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "SverigesRadio.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "SverigesRadio.zip",
+    "save_subdir": "websrv-sverigesradio",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "SHA256",
+      "debug",
+      "Debug"
+    ],
+    "pinned_release_tag": "v0.34",
+    "download_url_templates": [
+      "https://github.com/ps5-payload-dev/websrv/releases/download/v0.34/SverigesRadio.zip"
+    ]
+  },
+  {
+    "id": "websrv-svtplay",
+    "简介": "SVTplay（websrv 包）",
+    "分类": "websrv应用",
+    "aliases": [
+      "SVTplay"
+    ],
+    "enabled": false,
+    "repo_path": "ps5-payload-dev/websrv",
+    "releases_url": "https://github.com/ps5-payload-dev/websrv/releases/tag/v0.34",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "websrv 应用",
+    "固件要求": "按项目 README 与当前发布说明核对。",
+    "使用说明": "作者 websrv Release 中的独立应用包；按其 Homebrew Launcher 布局部署，游戏/BIOS/资源依赖按项目说明自行准备。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/ps5-payload-dev/websrv/releases/tag/v0.34",
+      "发布标签": "v0.34"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "SVTplay.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "SVTplay.zip",
+    "save_subdir": "websrv-svtplay",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "SHA256",
+      "debug",
+      "Debug"
+    ],
+    "pinned_release_tag": "v0.34",
+    "download_url_templates": [
+      "https://github.com/ps5-payload-dev/websrv/releases/download/v0.34/SVTplay.zip"
+    ]
+  },
+  {
+    "id": "websrv-tvheadend",
+    "简介": "TVHeadend（websrv 包）",
+    "分类": "websrv应用",
+    "aliases": [
+      "TVHeadend"
+    ],
+    "enabled": false,
+    "repo_path": "ps5-payload-dev/websrv",
+    "releases_url": "https://github.com/ps5-payload-dev/websrv/releases/tag/v0.34",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "websrv 应用",
+    "固件要求": "按项目 README 与当前发布说明核对。",
+    "使用说明": "作者 websrv Release 中的独立应用包；按其 Homebrew Launcher 布局部署，游戏/BIOS/资源依赖按项目说明自行准备。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/ps5-payload-dev/websrv/releases/tag/v0.34",
+      "发布标签": "v0.34"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "TVHeadend.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "TVHeadend.zip",
+    "save_subdir": "websrv-tvheadend",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "SHA256",
+      "debug",
+      "Debug"
+    ],
+    "pinned_release_tag": "v0.34",
+    "download_url_templates": [
+      "https://github.com/ps5-payload-dev/websrv/releases/download/v0.34/TVHeadend.zip"
+    ]
+  }
+]

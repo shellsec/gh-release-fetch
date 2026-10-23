@@ -1,0 +1,237 @@
+[
+  {
+    "id": "native-ppsa69420",
+    "简介": "ScreenTester5（PS5 测试工具）",
+    "分类": "测试工具",
+    "aliases": [
+      "ScreenTester5",
+      "PPSA69420",
+      "ScreenTester5",
+      "测试工具"
+    ],
+    "enabled": false,
+    "repo_path": "Marice/ScreenTester5",
+    "releases_url": "https://github.com/Marice/ScreenTester5/releases/tag/01.000.000",
+    "title_id": "PPSA69420",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA69420.json",
+    "_许可": "GPL-3.0-or-later",
+    "_上游sha256": "49a5c6d7bbb08f5a1539feb65b7fd2b537b6d7b304bdd3eed1c923e4ccbec8fd",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/Marice/ScreenTester5/releases/tag/01.000.000",
+      "发布标签": "01.000.000"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "01.000.000",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PPSA69420.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PPSA69420.zip",
+    "save_subdir": "native-ppsa69420",
+    "download_url_templates": [
+      "https://github.com/Marice/ScreenTester5/releases/download/01.000.000/PPSA69420.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa98766",
+    "简介": "DriftCheck（PS5 测试工具）",
+    "分类": "测试工具",
+    "aliases": [
+      "DriftCheck",
+      "PPSA98766",
+      "driftcheck5",
+      "测试工具"
+    ],
+    "enabled": false,
+    "repo_path": "felipemelchior/driftcheck5",
+    "releases_url": "https://github.com/felipemelchior/driftcheck5/releases/tag/01.000.000",
+    "title_id": "PPSA98766",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA98766.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "06fa838c0747ea25075876e28df9c684d17988938b82707c9592f1d2c217c86c",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/felipemelchior/driftcheck5/releases/tag/01.000.000",
+      "发布标签": "01.000.000"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "01.000.000",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PPSA98766.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PPSA98766.zip",
+    "save_subdir": "native-ppsa98766",
+    "download_url_templates": [
+      "https://github.com/felipemelchior/driftcheck5/releases/download/01.000.000/PPSA98766.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99051",
+    "简介": "Surround Sound Studio（PS5 测试工具）",
+    "分类": "测试工具",
+    "aliases": [
+      "Surround Sound Studio",
+      "PPSA99051",
+      "PS5-Audio-Passthrough-Research",
+      "测试工具"
+    ],
+    "enabled": false,
+    "repo_path": "sainsaji/PS5-Audio-Passthrough-Research",
+    "releases_url": "https://github.com/sainsaji/PS5-Audio-Passthrough-Research/releases/tag/01.000.003",
+    "title_id": "PPSA99051",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99051.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "fcb4e3cb794d36b30b9dee9ed86f0eea317e7c0071d193c18d9a07734e7beb69",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/sainsaji/PS5-Audio-Passthrough-Research/releases/tag/01.000.003",
+      "发布标签": "01.000.003"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "01.000.003",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PPSA99051.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PPSA99051.zip",
+    "save_subdir": "native-ppsa99051",
+    "download_url_templates": [
+      "https://github.com/sainsaji/PS5-Audio-Passthrough-Research/releases/download/01.000.003/PPSA99051.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99510",
+    "简介": "GyroAim（PS5 测试工具）",
+    "分类": "测试工具",
+    "aliases": [
+      "GyroAim",
+      "PPSA99510",
+      "ps5-gyroaim",
+      "测试工具"
+    ],
+    "enabled": false,
+    "repo_path": "jmelovich/ps5-gyroaim",
+    "releases_url": "https://github.com/jmelovich/ps5-gyroaim/releases/tag/v1.0.2",
+    "title_id": "PPSA99510",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99510.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "b748ef79e0296fc33ef2b648d6ee4d6e70c622b708a629ca076ac8e9aeec243a",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/jmelovich/ps5-gyroaim/releases/tag/v1.0.2",
+      "发布标签": "v1.0.2"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "v1.0.2",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PPSA99510.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PPSA99510.zip",
+    "save_subdir": "native-ppsa99510",
+    "download_url_templates": [
+      "https://github.com/jmelovich/ps5-gyroaim/releases/download/v1.0.2/PPSA99510.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99920",
+    "简介": "Prospero Vibrate（PS5 测试工具）",
+    "分类": "测试工具",
+    "aliases": [
+      "Prospero Vibrate",
+      "PPSA99920",
+      "Prospero-Vibrate",
+      "测试工具"
+    ],
+    "enabled": false,
+    "repo_path": "SvenGDK/Prospero-Vibrate",
+    "releases_url": "https://github.com/SvenGDK/Prospero-Vibrate/releases/tag/v1.0",
+    "title_id": "PPSA99920",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99920.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "c48443aa779f682426b1ea94c669370d3ec10aeb70974f18bea7269745b90051",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/SvenGDK/Prospero-Vibrate/releases/tag/v1.0",
+      "发布标签": "v1.0"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "v1.0",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PPSA99920.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PPSA99920.zip",
+    "save_subdir": "native-ppsa99920",
+    "download_url_templates": [
+      "https://github.com/SvenGDK/Prospero-Vibrate/releases/download/v1.0/PPSA99920.zip"
+    ]
+  }
+]

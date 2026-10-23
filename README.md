@@ -543,3 +543,17 @@ See [`tools/soft_page_check/README.md`](tools/soft_page_check/README.md). Common
 ---
 
 *Former working title: **GithubWinDownTools** — renamed for clarity now that darwin/linux catalogs are first-class.*
+
+## Switch catalog
+
+Switch has a separate catalog from desktop and mobile: [catalog and usage](CATALOG.switch.md).
+Run `python lookup_app.py` and select **4: Switch**, or use `lookup_switch.bat <query>`.
+NRO, OVL, NSP and archive assets are downloaded to `switch/<id>/` without installation or extraction.
+Use Python with the dependencies in `requirements.txt`; the root EXE builds now include Switch and PS5 menus.
+
+## PS5 catalog
+
+Run `lookup_app.bat`, select **5: PS5**, or use `lookup_ps5.bat <query>`.
+The separate [PS5 catalog](CATALOG.ps5.md) covers environments, ELF services, native emulators and apps, websrv packs, and developer tools.
+Files are downloaded to `ps5/<id>/`. Check each project's firmware and runtime requirements; the root EXE builds now include PS5 support.
+Refresh native app records with `python tools/import_ps5_community_catalog.py --refresh`, then regenerate the index with `python tools/generate_ps5_catalog_index.py`.

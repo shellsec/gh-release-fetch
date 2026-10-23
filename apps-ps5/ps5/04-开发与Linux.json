@@ -1,0 +1,148 @@
+[
+  {
+    "id": "ps5-payload-sdk",
+    "简介": "PS5 Payload SDK 电脑端开发工具",
+    "分类": "开发与Linux",
+    "aliases": [
+      "SDK",
+      "编译",
+      "开发"
+    ],
+    "enabled": false,
+    "repo_path": "ps5-payload-dev/sdk",
+    "releases_url": "https://github.com/ps5-payload-dev/sdk/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "电脑端 SDK",
+    "固件要求": "按项目 README 与当前发布说明核对。",
+    "使用说明": "运行在电脑的开发 SDK，不是复制到主机直接运行的应用。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/ps5-payload-dev/sdk/releases/tag/v0.44",
+      "发布标签": "v0.44"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "ps5-payload-sdk.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "ps5-payload-sdk.zip",
+    "save_subdir": "ps5-payload-sdk",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "SHA256",
+      "debug",
+      "Debug"
+    ],
+    "download_names": [
+      "ps5-payload-sdk.zip"
+    ]
+  },
+  {
+    "id": "ps5-linux-loader",
+    "简介": "PS5 Linux 启动载荷",
+    "分类": "开发与Linux",
+    "aliases": [
+      "Linux",
+      "Linux启动"
+    ],
+    "enabled": false,
+    "repo_path": "ps5-linux/ps5-linux-loader",
+    "releases_url": "https://github.com/ps5-linux/ps5-linux-loader/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "ELF/载荷",
+    "固件要求": "仅作者 README 列出的 Phat/Slim 机型及 3.00–7.61 内具体版本；不是整个区间通用，也不继承 Relapse 支持范围。",
+    "使用说明": "需要对应固件和外部存储等前置条件；按项目 README 配置，本工具只下载。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/ps5-linux/ps5-linux-loader/releases/tag/v2.5",
+      "发布标签": "v2.5"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".elf"
+    ],
+    "installer_markers": [
+      "ps5-linux-loader.elf"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "ps5-linux-loader.elf",
+    "save_subdir": "ps5-linux-loader",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "SHA256",
+      "debug",
+      "Debug"
+    ],
+    "download_names": [
+      "ps5-linux-loader.elf"
+    ]
+  },
+  {
+    "id": "ps5-linux-image",
+    "简介": "PS5 Linux 镜像构建项目",
+    "分类": "开发与Linux",
+    "aliases": [
+      "Linux",
+      "系统镜像"
+    ],
+    "enabled": false,
+    "repo_path": "ps5-linux/ps5-linux-image",
+    "releases_url": "https://github.com/ps5-linux/ps5-linux-image/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "电脑端镜像构建",
+    "固件要求": "仅作者 README 列出的 Phat/Slim 机型及 3.00–7.61 内具体版本；不是整个区间通用，也不继承 Relapse 支持范围。",
+    "使用说明": "本次 Release 无可下载镜像附件；保留构建项目页面。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release-without-assets",
+      "来源": "https://github.com/ps5-linux/ps5-linux-image/releases/tag/latest"
+    },
+    "open_page_only": true,
+    "open_page_url": "https://github.com/ps5-linux/ps5-linux-image",
+    "_下载说明": "本次 Release 无可下载镜像附件；保留构建项目页面。"
+  },
+  {
+    "id": "ps5-linux-tools",
+    "简介": "PS5 Linux 配套工具",
+    "分类": "开发与Linux",
+    "aliases": [
+      "Linux",
+      "风扇",
+      "系统工具"
+    ],
+    "enabled": false,
+    "repo_path": "ps5-linux/ps5-linux-tools",
+    "releases_url": "https://github.com/ps5-linux/ps5-linux-tools/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "Linux 工具源码",
+    "固件要求": "仅作者 README 列出的 Phat/Slim 机型及 3.00–7.61 内具体版本；不是整个区间通用，也不继承 Relapse 支持范围。",
+    "使用说明": "源码工具项目，需在相应 Linux 环境按 README 构建使用。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "no-stable-release",
+      "来源": "https://github.com/ps5-linux/ps5-linux-tools/releases"
+    },
+    "open_page_only": true,
+    "open_page_url": "https://github.com/ps5-linux/ps5-linux-tools",
+    "_下载说明": "源码工具项目，需在相应 Linux 环境按 README 构建使用。"
+  }
+]

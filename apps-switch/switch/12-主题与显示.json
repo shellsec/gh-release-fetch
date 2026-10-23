@@ -1,0 +1,201 @@
+[
+  {
+    "id": "nxthemes-installer",
+    "repo_path": "exelix11/SwitchThemeInjector",
+    "releases_url": "https://github.com/exelix11/SwitchThemeInjector/releases",
+    "简介": "NXThemes Installer Switch 主题安装器",
+    "分类": "主题与显示",
+    "enabled": false,
+    "aliases": [
+      "主题",
+      "主题安装"
+    ],
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "nxthemes-installer",
+    "use_download_filename": true,
+    "save_name": "nxthemes-installer.nro",
+    "installer_extensions": [
+      ".nro"
+    ],
+    "installer_markers": [
+      "NXThemesInstaller.nro"
+    ],
+    "installer_markers_match_all": true,
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "Windows",
+      "windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Debug",
+      "debug"
+    ],
+    "使用说明": "仅下载主机端 NRO，不下载电脑端 NxThemeTool.zip；主题需与当前系统适配。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/exelix11/SwitchThemeInjector/releases/tag/nxt-3.0.2",
+      "状态": "release",
+      "发布标签": "nxt-3.0.2",
+      "发布时间": "2026-09-22T20:47:51Z"
+    },
+    "download_names": [
+      "NXThemesInstaller.nro"
+    ]
+  },
+  {
+    "id": "fizeau",
+    "repo_path": "averne/Fizeau",
+    "releases_url": "https://github.com/averne/Fizeau/releases",
+    "简介": "Fizeau 屏幕色温与色彩调节",
+    "分类": "主题与显示",
+    "enabled": false,
+    "aliases": [
+      "色温",
+      "护眼",
+      "色彩"
+    ],
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "fizeau",
+    "use_download_filename": true,
+    "save_name": "fizeau.zip",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "Fizeau-"
+    ],
+    "installer_markers_match_all": true,
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "Windows",
+      "windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Debug",
+      "debug"
+    ],
+    "使用说明": "完整保留压缩包中的 SD 卡目录布局，具体依赖与启动方式见项目说明。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/averne/Fizeau/releases/tag/v2.8.3",
+      "状态": "release",
+      "发布标签": "v2.8.3",
+      "发布时间": "2026-08-07T19:37:05Z"
+    }
+  },
+  {
+    "id": "status-monitor-overlay",
+    "repo_path": "masagrator/Status-Monitor-Overlay",
+    "releases_url": "https://github.com/masagrator/Status-Monitor-Overlay/releases",
+    "简介": "Status Monitor 性能与硬件状态悬浮窗",
+    "分类": "主题与显示",
+    "enabled": false,
+    "aliases": [
+      "性能监控",
+      "温度",
+      "帧率监控"
+    ],
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "status-monitor-overlay",
+    "use_download_filename": true,
+    "save_name": "status-monitor-overlay.zip",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "Status-Monitor-Overlay.zip"
+    ],
+    "installer_markers_match_all": true,
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "Windows",
+      "windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Debug",
+      "debug"
+    ],
+    "使用说明": "悬浮窗需兼容的菜单与 overlay 加载器。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/masagrator/Status-Monitor-Overlay/releases/tag/1.4.1",
+      "状态": "release",
+      "发布标签": "1.4.1",
+      "发布时间": "2026-05-19T09:06:24Z"
+    },
+    "download_names": [
+      "Status-Monitor-Overlay.zip"
+    ]
+  },
+  {
+    "id": "fpslocker",
+    "repo_path": "masagrator/FPSLocker",
+    "releases_url": "https://github.com/masagrator/FPSLocker/releases",
+    "简介": "FPSLocker 帧率控制悬浮插件",
+    "分类": "主题与显示",
+    "enabled": false,
+    "aliases": [
+      "帧率",
+      "锁帧"
+    ],
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "fpslocker",
+    "use_download_filename": true,
+    "save_name": "fpslocker.ovl",
+    "installer_extensions": [
+      ".ovl"
+    ],
+    "installer_markers": [
+      "FPSLocker.ovl"
+    ],
+    "installer_markers_match_all": true,
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "Windows",
+      "windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Debug",
+      "debug"
+    ],
+    "使用说明": "悬浮插件需配套环境及游戏设置；操作要求查看项目说明。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/masagrator/FPSLocker/releases/tag/3.5.0",
+      "状态": "release",
+      "发布标签": "3.5.0",
+      "发布时间": "2026-10-03T13:22:10Z"
+    },
+    "download_names": [
+      "FPSLocker.ovl"
+    ]
+  }
+]

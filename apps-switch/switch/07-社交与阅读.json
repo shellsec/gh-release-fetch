@@ -1,0 +1,258 @@
+[
+  {
+    "id": "telegramnx",
+    "简介": "Telegram 客户端",
+    "分类": "社交与阅读",
+    "enabled": false,
+    "aliases": [
+      "TelegramNX",
+      "Telegram",
+      "电报"
+    ],
+    "repo_path": "CostelaCNX/TelegramNX",
+    "releases_url": "https://github.com/CostelaCNX/TelegramNX/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "telegramnx",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "TelegramNX",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "telegramnx.zip",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "windows",
+      "Windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Overlay",
+      "overlay",
+      "debug",
+      "Debug"
+    ],
+    "使用说明": "完整保留压缩包中的 SD 卡目录布局，具体依赖与启动方式见项目说明。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/CostelaCNX/TelegramNX/releases/tag/v1.0.0",
+      "状态": "release",
+      "发布标签": "v1.0.0",
+      "发布时间": "2026-08-02T03:18:10Z"
+    }
+  },
+  {
+    "id": "sporegram",
+    "简介": "Telegram 客户端",
+    "分类": "社交与阅读",
+    "enabled": false,
+    "aliases": [
+      "sporegram",
+      "Telegram",
+      "电报"
+    ],
+    "repo_path": "fungalspores/sporegram",
+    "releases_url": "https://github.com/fungalspores/sporegram/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "sporegram",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".nro"
+    ],
+    "installer_markers": [
+      "sporegram",
+      ".nro"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "sporegram.nro",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "windows",
+      "Windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Overlay",
+      "overlay",
+      "debug",
+      "Debug"
+    ],
+    "使用说明": "仅下载主机端文件；放置路径、资源依赖及启动方式见项目说明。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/fungalspores/sporegram/releases/tag/v1.0",
+      "状态": "release",
+      "发布标签": "v1.0",
+      "发布时间": "2026-09-17T13:16:12Z"
+    },
+    "download_names": [
+      "sporegram.nro"
+    ]
+  },
+  {
+    "id": "qq-for-switch",
+    "简介": "实验性 QQ 客户端",
+    "分类": "社交与阅读",
+    "enabled": false,
+    "aliases": [
+      "QQ-for-Switch",
+      "QQ"
+    ],
+    "repo_path": "shuiwen879867/QQ-for-Switch",
+    "releases_url": "https://github.com/shuiwen879867/QQ-for-Switch/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "qq-for-switch",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".nro"
+    ],
+    "installer_markers": [
+      "QQ-for-Switch",
+      ".nro"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "qq-for-switch.nro",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "windows",
+      "Windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Overlay",
+      "overlay",
+      "debug",
+      "Debug"
+    ],
+    "使用说明": "仅下载主机端文件；放置路径、资源依赖及启动方式见项目说明。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/shuiwen879867/QQ-for-Switch/releases/tag/v0.5.75",
+      "状态": "release",
+      "发布标签": "v0.5.75",
+      "发布时间": "2026-10-10T17:03:41Z"
+    }
+  },
+  {
+    "id": "koreader-switch",
+    "简介": "实验性电子书阅读器移植",
+    "分类": "社交与阅读",
+    "enabled": false,
+    "aliases": [
+      "KOReader-Switch",
+      "电子书",
+      "阅读器"
+    ],
+    "repo_path": "miikearthur/KOReader-Switch",
+    "releases_url": "https://github.com/miikearthur/KOReader-Switch/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "koreader-switch",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".nro"
+    ],
+    "installer_markers": [
+      "koreader-switch",
+      ".nro"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "koreader-switch.nro",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "windows",
+      "Windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Overlay",
+      "overlay",
+      "debug",
+      "Debug"
+    ],
+    "使用说明": "实验性移植；提供 NRO 不等于已验证实机全部功能，兼容性与启动方式以项目说明为准。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/miikearthur/KOReader-Switch/releases/tag/v0.3.3",
+      "状态": "release",
+      "发布标签": "v0.3.3",
+      "发布时间": "2026-09-16T10:31:03Z"
+    }
+  },
+  {
+    "id": "switch-dit",
+    "简介": "Reddit 客户端",
+    "分类": "社交与阅读",
+    "enabled": false,
+    "aliases": [
+      "switch-dit",
+      "Reddit"
+    ],
+    "repo_path": "mena-works/switch-dit",
+    "releases_url": "https://github.com/mena-works/switch-dit/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "switch-dit",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "switch-dit",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "switch-dit.zip",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "windows",
+      "Windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Overlay",
+      "overlay",
+      "debug",
+      "Debug"
+    ],
+    "使用说明": "完整保留压缩包中的 SD 卡目录布局，具体依赖与启动方式见项目说明。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/mena-works/switch-dit/releases/tag/v1.0.0",
+      "状态": "release",
+      "发布标签": "v1.0.0",
+      "发布时间": "2026-08-07T23:58:21Z"
+    }
+  }
+]

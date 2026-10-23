@@ -1,0 +1,1396 @@
+[
+  {
+    "id": "native-ppsa19111",
+    "简介": "XashPS5（PS5 游戏移植）",
+    "分类": "游戏移植",
+    "aliases": [
+      "XashPS5",
+      "PPSA19111",
+      "xash3d-ps5",
+      "游戏移植"
+    ],
+    "enabled": false,
+    "repo_path": "GordonProsperoMan/xash3d-ps5",
+    "releases_url": "https://github.com/GordonProsperoMan/xash3d-ps5/releases/tag/v1.3",
+    "title_id": "PPSA19111",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。所需 BIOS、游戏或商业运行库需按作者说明自行准备。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA19111.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "1bb8f143016c51d0fac8e1621e95c65aa6cf143ee7eeb03b4ab3febe5c294670",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/GordonProsperoMan/xash3d-ps5/releases/tag/v1.3",
+      "发布标签": "v1.3"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "v1.3",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PPSA19111.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PPSA19111.zip",
+    "save_subdir": "native-ppsa19111",
+    "download_url_templates": [
+      "https://github.com/GordonProsperoMan/xash3d-ps5/releases/download/v1.3/PPSA19111.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa47402",
+    "简介": "Syobon Action（PS5 游戏移植）",
+    "分类": "游戏移植",
+    "aliases": [
+      "Syobon Action",
+      "PPSA47402",
+      "syobon-action-ps5",
+      "游戏移植"
+    ],
+    "enabled": false,
+    "repo_path": "kvaps/syobon-action-ps5",
+    "releases_url": "https://github.com/kvaps/syobon-action-ps5/releases/tag/01.001.000",
+    "title_id": "PPSA47402",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。所需 BIOS、游戏或商业运行库需按作者说明自行准备。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA47402.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "86e763fac842e90c48e54ddb4915ef517c5c17f37d4506574848e4e0a8aa51f5",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/kvaps/syobon-action-ps5/releases/tag/01.001.000",
+      "发布标签": "01.001.000"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "01.001.000",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PPSA47402.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PPSA47402.zip",
+    "save_subdir": "native-ppsa47402",
+    "download_url_templates": [
+      "https://github.com/kvaps/syobon-action-ps5/releases/download/01.001.000/PPSA47402.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa59322",
+    "简介": "ccleste（PS5 游戏移植）",
+    "分类": "游戏移植",
+    "aliases": [
+      "ccleste",
+      "PPSA59322",
+      "PS5_Celeste",
+      "游戏移植"
+    ],
+    "enabled": false,
+    "repo_path": "darkxex/PS5_Celeste",
+    "releases_url": "https://github.com/darkxex/PS5_Celeste/releases/tag/1.00",
+    "title_id": "PPSA59322",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。所需 BIOS、游戏或商业运行库需按作者说明自行准备。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA59322.json",
+    "_许可": "MIT",
+    "_上游sha256": "96861b81c1fbaac818080d1bf958b575e6b44d2c258684e1931f2940cee2fb43",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/darkxex/PS5_Celeste/releases/tag/1.00",
+      "发布标签": "1.00"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "1.00",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PPSA59322.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PPSA59322.zip",
+    "save_subdir": "native-ppsa59322",
+    "download_url_templates": [
+      "https://github.com/darkxex/PS5_Celeste/releases/download/1.00/PPSA59322.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa69421",
+    "简介": "SuperTuxKart（PS5 游戏移植）",
+    "分类": "游戏移植",
+    "aliases": [
+      "SuperTuxKart",
+      "PPSA69421",
+      "stk-ps5",
+      "游戏移植"
+    ],
+    "enabled": false,
+    "repo_path": "Marice/stk-ps5",
+    "releases_url": "https://github.com/Marice/stk-ps5/releases/tag/00.001.000",
+    "title_id": "PPSA69421",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。所需 BIOS、游戏或商业运行库需按作者说明自行准备。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA69421.json",
+    "_许可": "GPL-3.0-or-later",
+    "_上游sha256": "f2240bf0e67cf585ae7c6acc16068e1b8bef5e3c1b5f7e8ae550053d937b712a",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/Marice/stk-ps5/releases/tag/00.001.000",
+      "发布标签": "00.001.000"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "00.001.000",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PPSA69421.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PPSA69421.zip",
+    "save_subdir": "native-ppsa69421",
+    "download_url_templates": [
+      "https://github.com/Marice/stk-ps5/releases/download/00.001.000/PPSA69421.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa69423",
+    "简介": "Rush 2 Recompiled（PS5 游戏移植）",
+    "分类": "游戏移植",
+    "aliases": [
+      "Rush 2 Recompiled",
+      "PPSA69423",
+      "rush2-ps5",
+      "游戏移植"
+    ],
+    "enabled": false,
+    "repo_path": "Marice/rush2-ps5",
+    "releases_url": "https://github.com/Marice/rush2-ps5/releases/tag/v00.003.000",
+    "title_id": "PPSA69423",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。所需 BIOS、游戏或商业运行库需按作者说明自行准备。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA69423.json",
+    "_许可": "GPL-3.0-or-later",
+    "_上游sha256": "4293eb3f48cc42abc5bdc1baffb6246fc43705aa10446821a3c685b20300b453",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/Marice/rush2-ps5/releases/tag/v00.003.000",
+      "发布标签": "v00.003.000"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "v00.003.000",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "Rush2Recompiled-PS5-00.003.000.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "Rush2Recompiled-PS5-00.003.000.zip",
+    "save_subdir": "native-ppsa69423",
+    "download_url_templates": [
+      "https://github.com/Marice/rush2-ps5/releases/download/v00.003.000/Rush2Recompiled-PS5-00.003.000.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa69424",
+    "简介": "Wave Race 64 Recompiled（PS5 游戏移植）",
+    "分类": "游戏移植",
+    "aliases": [
+      "Wave Race 64 Recompiled",
+      "PPSA69424",
+      "wave-race-64-ps5",
+      "游戏移植"
+    ],
+    "enabled": false,
+    "repo_path": "Marice/wave-race-64-ps5",
+    "releases_url": "https://github.com/Marice/wave-race-64-ps5/releases/tag/v00.001.000",
+    "title_id": "PPSA69424",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。所需 BIOS、游戏或商业运行库需按作者说明自行准备。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA69424.json",
+    "_许可": "GPL-3.0-or-later",
+    "_上游sha256": "db05bfaa4937bb6adbbbf1de87f4c181fbd85b5250164332121454681e1a0820",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/Marice/wave-race-64-ps5/releases/tag/v00.001.000",
+      "发布标签": "v00.001.000"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "v00.001.000",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "WaveRace64Recompiled-PS5-00.001.000.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "WaveRace64Recompiled-PS5-00.001.000.zip",
+    "save_subdir": "native-ppsa69424",
+    "download_url_templates": [
+      "https://github.com/Marice/wave-race-64-ps5/releases/download/v00.001.000/WaveRace64Recompiled-PS5-00.001.000.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa74207",
+    "简介": "The Simpsons Game（PS5 游戏移植）",
+    "分类": "游戏移植",
+    "aliases": [
+      "The Simpsons Game",
+      "PPSA74207",
+      "TheSimpsonsGame-PS5-Builder",
+      "游戏移植"
+    ],
+    "enabled": false,
+    "repo_path": "LoZazaMastro/TheSimpsonsGame-PS5-Builder",
+    "releases_url": "https://github.com/LoZazaMastro/TheSimpsonsGame-PS5-Builder/releases",
+    "title_id": "PPSA74207",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。所需 BIOS、游戏或商业运行库需按作者说明自行准备。目录链接是源码/构建器包，保留作者页面，不作为主机可运行程序下载。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA74207.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "af518c36ba5f7dfd3ed7f37238fa53c7b031e1002863ec4c88f1821943ce86f1",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/LoZazaMastro/TheSimpsonsGame-PS5-Builder/releases/tag/v3.10.6"
+    },
+    "open_page_only": true,
+    "open_page_url": "https://github.com/LoZazaMastro/TheSimpsonsGame-PS5-Builder",
+    "_下载说明": "目录链接是源码/构建器包，保留作者页面，不作为主机可运行程序下载。"
+  },
+  {
+    "id": "native-ppsa94002",
+    "简介": "Raptor: Call of the Shadows (PS5)（PS5 游戏移植）",
+    "分类": "游戏移植",
+    "aliases": [
+      "Raptor: Call of the Shadows (PS5)",
+      "PPSA94002",
+      "RaptorPS5",
+      "游戏移植"
+    ],
+    "enabled": false,
+    "repo_path": "ChaDea1/RaptorPS5",
+    "releases_url": "https://github.com/ChaDea1/RaptorPS5/releases/tag/v1.0.0-rc.2",
+    "title_id": "PPSA94002",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。所需 BIOS、游戏或商业运行库需按作者说明自行准备。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA94002.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "b6620582b5561f36fe1cfbb8f2866f88c9670c850beef1bc9270b1eb3b0106f6",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/ChaDea1/RaptorPS5/releases/tag/v1.0.0-rc.2",
+      "发布标签": "v1.0.0-rc.2"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "v1.0.0-rc.2",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "raptor-ps5-v1.0.0-rc.2.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "raptor-ps5-v1.0.0-rc.2.zip",
+    "save_subdir": "native-ppsa94002",
+    "download_url_templates": [
+      "https://github.com/ChaDea1/RaptorPS5/releases/download/v1.0.0-rc.2/raptor-ps5-v1.0.0-rc.2.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa98001",
+    "简介": "PokeMMO Prospero（PS5 游戏移植）",
+    "分类": "游戏移植",
+    "aliases": [
+      "PokeMMO Prospero",
+      "PPSA98001",
+      "PokeMMO-Prospero",
+      "游戏移植"
+    ],
+    "enabled": false,
+    "repo_path": "Shabbypenguin/PokeMMO-Prospero",
+    "releases_url": "https://github.com/Shabbypenguin/PokeMMO-Prospero/releases/tag/v1.0.2",
+    "title_id": "PPSA98001",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。所需 BIOS、游戏或商业运行库需按作者说明自行准备。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA98001.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "1927587707eee86681677fb2ddadcc53c5be0c4f1696da41ad11d92dbc42662e",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/Shabbypenguin/PokeMMO-Prospero/releases/tag/v1.0.2",
+      "发布标签": "v1.0.2"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "v1.0.2",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PPSA98001.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PPSA98001.zip",
+    "save_subdir": "native-ppsa98001",
+    "download_url_templates": [
+      "https://github.com/Shabbypenguin/PokeMMO-Prospero/releases/download/v1.0.2/PPSA98001.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa98511",
+    "简介": "ReKHCoM（PS5 游戏移植）",
+    "分类": "游戏移植",
+    "aliases": [
+      "ReKHCoM",
+      "PPSA98511",
+      "ReKHCom-PS5",
+      "游戏移植"
+    ],
+    "enabled": false,
+    "repo_path": "darkxex/ReKHCom-PS5",
+    "releases_url": "https://github.com/darkxex/ReKHCom-PS5/releases/tag/ps5-v1.0.6",
+    "title_id": "PPSA98511",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。所需 BIOS、游戏或商业运行库需按作者说明自行准备。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA98511.json",
+    "_许可": "CC0-1.0",
+    "_上游sha256": "00a769c0256b36af3c7d3a30f23922b30068b98060b345a5e6ed07b02267b8d4",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/darkxex/ReKHCom-PS5/releases/tag/ps5-v1.0.6",
+      "发布标签": "ps5-v1.0.6"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "ps5-v1.0.6",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PPSA98511.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PPSA98511.zip",
+    "save_subdir": "native-ppsa98511",
+    "download_url_templates": [
+      "https://github.com/darkxex/ReKHCom-PS5/releases/download/ps5-v1.0.6/PPSA98511.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99010",
+    "简介": "vkQuake（PS5 游戏移植）",
+    "分类": "游戏移植",
+    "aliases": [
+      "vkQuake",
+      "PPSA99010",
+      "PS5_vkQuake",
+      "游戏移植"
+    ],
+    "enabled": false,
+    "repo_path": "mihawk-99/PS5_vkQuake",
+    "releases_url": "https://github.com/mihawk-99/PS5_vkQuake/releases/tag/1.0",
+    "title_id": "PPSA99010",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。所需 BIOS、游戏或商业运行库需按作者说明自行准备。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99010.json",
+    "_许可": "GPL-3.0-or-later",
+    "_上游sha256": "aeabf17512eada3e96c18fb2d842b7e077ffea2fbb65caf93276cc0b2797b0e6",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/mihawk-99/PS5_vkQuake/releases/tag/1.0",
+      "发布标签": "1.0"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "1.0",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PPSA99010.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PPSA99010.zip",
+    "save_subdir": "native-ppsa99010",
+    "download_url_templates": [
+      "https://github.com/mihawk-99/PS5_vkQuake/releases/download/1.0/PPSA99010.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99300",
+    "简介": "Spider-Man: Edge of Time（PS5 游戏移植）",
+    "分类": "游戏移植",
+    "aliases": [
+      "Spider-Man: Edge of Time",
+      "PPSA99300",
+      "PS5_EdgeOfTimeTitle",
+      "游戏移植"
+    ],
+    "enabled": false,
+    "repo_path": "KongaTime/PS5_EdgeOfTimeTitle",
+    "releases_url": "https://github.com/KongaTime/PS5_EdgeOfTimeTitle/releases/tag/V.1.1.1",
+    "title_id": "PPSA99300",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。所需 BIOS、游戏或商业运行库需按作者说明自行准备。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99300.json",
+    "_许可": "MIT",
+    "_上游sha256": "efed4c5f81c9ae9160e3830bd7385e96f89e499b0135d7655c762f80399b37ba",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/KongaTime/PS5_EdgeOfTimeTitle/releases/tag/V.1.1.1",
+      "发布标签": "V.1.1.1"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "V.1.1.1",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "Spider.Man.Edge.Of.Time.V.1.1.1.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "Spider.Man.Edge.Of.Time.V.1.1.1.zip",
+    "save_subdir": "native-ppsa99300",
+    "download_url_templates": [
+      "https://github.com/KongaTime/PS5_EdgeOfTimeTitle/releases/download/V.1.1.1/Spider.Man.Edge.Of.Time.V.1.1.1.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99303",
+    "简介": "Quake3e（PS5 游戏移植）",
+    "分类": "游戏移植",
+    "aliases": [
+      "Quake3e",
+      "PPSA99303",
+      "PS5_Quake3e",
+      "游戏移植"
+    ],
+    "enabled": false,
+    "repo_path": "griches/PS5_Quake3e",
+    "releases_url": "https://github.com/griches/PS5_Quake3e/releases/tag/v1.2.0",
+    "title_id": "PPSA99303",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。所需 BIOS、游戏或商业运行库需按作者说明自行准备。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99303.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "ce5ac7291cf90bfbd167a4b2f55cc071879f8ef45ade054227ac9c5bfe155cbe",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/griches/PS5_Quake3e/releases/tag/v1.2.0",
+      "发布标签": "v1.2.0"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "v1.2.0",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "Quake3-PS5-v1.2.0.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "Quake3-PS5-v1.2.0.zip",
+    "save_subdir": "native-ppsa99303",
+    "download_url_templates": [
+      "https://github.com/griches/PS5_Quake3e/releases/download/v1.2.0/Quake3-PS5-v1.2.0.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99305",
+    "简介": "Dusklight（PS5 游戏移植）",
+    "分类": "游戏移植",
+    "aliases": [
+      "Dusklight",
+      "PPSA99305",
+      "PS5_Dusklight",
+      "游戏移植"
+    ],
+    "enabled": false,
+    "repo_path": "griches/PS5_Dusklight",
+    "releases_url": "https://github.com/griches/PS5_Dusklight/releases/tag/v1.0.0",
+    "title_id": "PPSA99305",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。所需 BIOS、游戏或商业运行库需按作者说明自行准备。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99305.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "343f8829803ecba03e8cf3168f543543771e6511dfec4e6761c60bb6f4ab8e8d",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/griches/PS5_Dusklight/releases/tag/v1.0.0",
+      "发布标签": "v1.0.0"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "v1.0.0",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "Dusklight-PS5-v1.0.0.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "Dusklight-PS5-v1.0.0.zip",
+    "save_subdir": "native-ppsa99305",
+    "download_url_templates": [
+      "https://github.com/griches/PS5_Dusklight/releases/download/v1.0.0/Dusklight-PS5-v1.0.0.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99309",
+    "简介": "Wind Waker（PS5 游戏移植）",
+    "分类": "游戏移植",
+    "aliases": [
+      "Wind Waker",
+      "PPSA99309",
+      "PS5_SwitchWaker",
+      "游戏移植"
+    ],
+    "enabled": false,
+    "repo_path": "griches/PS5_SwitchWaker",
+    "releases_url": "https://github.com/griches/PS5_SwitchWaker/releases/tag/v1.0.3",
+    "title_id": "PPSA99309",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。所需 BIOS、游戏或商业运行库需按作者说明自行准备。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99309.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "441b71e09441518ce8357aeec3cb0f994d19dbf47b316cffa2d268cdca25fc10",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/griches/PS5_SwitchWaker/releases/tag/v1.0.3",
+      "发布标签": "v1.0.3"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "v1.0.3",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "WindWaker-PS5-v1.0.3.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "WindWaker-PS5-v1.0.3.zip",
+    "save_subdir": "native-ppsa99309",
+    "download_url_templates": [
+      "https://github.com/griches/PS5_SwitchWaker/releases/download/v1.0.3/WindWaker-PS5-v1.0.3.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99310",
+    "简介": "Mario 64（PS5 游戏移植）",
+    "分类": "游戏移植",
+    "aliases": [
+      "Mario 64",
+      "PPSA99310",
+      "PS5_Ghostship",
+      "游戏移植"
+    ],
+    "enabled": false,
+    "repo_path": "griches/PS5_Ghostship",
+    "releases_url": "https://github.com/griches/PS5_Ghostship/releases/tag/v1.0.1",
+    "title_id": "PPSA99310",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。所需 BIOS、游戏或商业运行库需按作者说明自行准备。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99310.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "87ebee05437a3d28afe7c9fffd83bcc5d000e5fa5e0202e5c799ec2e8eac40fb",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/griches/PS5_Ghostship/releases/tag/v1.0.1",
+      "发布标签": "v1.0.1"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "v1.0.1",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "Mario64-PS5-v1.0.1.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "Mario64-PS5-v1.0.1.zip",
+    "save_subdir": "native-ppsa99310",
+    "download_url_templates": [
+      "https://github.com/griches/PS5_Ghostship/releases/download/v1.0.1/Mario64-PS5-v1.0.1.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99312",
+    "简介": "Super Mario Sunshine（PS5 游戏移植）",
+    "分类": "游戏移植",
+    "aliases": [
+      "Super Mario Sunshine",
+      "PPSA99312",
+      "PS5_Sunshine",
+      "游戏移植"
+    ],
+    "enabled": false,
+    "repo_path": "griches/PS5_Sunshine",
+    "releases_url": "https://github.com/griches/PS5_Sunshine/releases/tag/v0.10.0",
+    "title_id": "PPSA99312",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。所需 BIOS、游戏或商业运行库需按作者说明自行准备。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99312.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "854c4a5d853ffb4e1061f76afd3bba2dd6cca0daa09ffe6dfadc38271042bb99",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/griches/PS5_Sunshine/releases/tag/v0.10.0",
+      "发布标签": "v0.10.0"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "v0.10.0",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "Sunshine-PS5-v0.10.0.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "Sunshine-PS5-v0.10.0.zip",
+    "save_subdir": "native-ppsa99312",
+    "download_url_templates": [
+      "https://github.com/griches/PS5_Sunshine/releases/download/v0.10.0/Sunshine-PS5-v0.10.0.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99313",
+    "简介": "Doom 3 BFG（PS5 游戏移植）",
+    "分类": "游戏移植",
+    "aliases": [
+      "Doom 3 BFG",
+      "PPSA99313",
+      "PS5_Doom3",
+      "游戏移植"
+    ],
+    "enabled": false,
+    "repo_path": "griches/PS5_Doom3",
+    "releases_url": "https://github.com/griches/PS5_Doom3/releases/tag/v1.0",
+    "title_id": "PPSA99313",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。所需 BIOS、游戏或商业运行库需按作者说明自行准备。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99313.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "f73a3870839fc1730ba389e29cd7a930def4132c29552543e8f10af1ae3364dc",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/griches/PS5_Doom3/releases/tag/v1.0",
+      "发布标签": "v1.0"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "v1.0",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "Doom3BFG-PS5-v1.0.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "Doom3BFG-PS5-v1.0.zip",
+    "save_subdir": "native-ppsa99313",
+    "download_url_templates": [
+      "https://github.com/griches/PS5_Doom3/releases/download/v1.0/Doom3BFG-PS5-v1.0.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99314",
+    "简介": "Eternal Darkness（PS5 游戏移植）",
+    "分类": "游戏移植",
+    "aliases": [
+      "Eternal Darkness",
+      "PPSA99314",
+      "PS5_EternalDarkness",
+      "游戏移植"
+    ],
+    "enabled": false,
+    "repo_path": "griches/PS5_EternalDarkness",
+    "releases_url": "https://github.com/griches/PS5_EternalDarkness/releases/tag/v0.9.3",
+    "title_id": "PPSA99314",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。所需 BIOS、游戏或商业运行库需按作者说明自行准备。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99314.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "c27fbbe97676d134aafad749d325670cc380b23e21d966c25a1f040565c9f1a0",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/griches/PS5_EternalDarkness/releases/tag/v0.9.3",
+      "发布标签": "v0.9.3"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "v0.9.3",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "EternalDarkness-PS5-0.9.3.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "EternalDarkness-PS5-0.9.3.zip",
+    "save_subdir": "native-ppsa99314",
+    "download_url_templates": [
+      "https://github.com/griches/PS5_EternalDarkness/releases/download/v0.9.3/EternalDarkness-PS5-0.9.3.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99320",
+    "简介": "Ship of Harkinian (Vulkan)（PS5 游戏移植）",
+    "分类": "游戏移植",
+    "aliases": [
+      "Ship of Harkinian (Vulkan)",
+      "PPSA99320",
+      "PS5_Shipwright",
+      "游戏移植"
+    ],
+    "enabled": false,
+    "repo_path": "damiantw/PS5_Shipwright",
+    "releases_url": "https://github.com/damiantw/PS5_Shipwright/releases/tag/01.000.000",
+    "title_id": "PPSA99320",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。所需 BIOS、游戏或商业运行库需按作者说明自行准备。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99320.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "82782f43c5951e0fd82b97d6580f60a75ee2d1d1ad74816594d1652bb72a0a24",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/damiantw/PS5_Shipwright/releases/tag/01.000.000",
+      "发布标签": "01.000.000"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "01.000.000",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PPSA99320.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PPSA99320.zip",
+    "save_subdir": "native-ppsa99320",
+    "download_url_templates": [
+      "https://github.com/damiantw/PS5_Shipwright/releases/download/01.000.000/PPSA99320.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99403",
+    "简介": "NFS Black Box（PS5 游戏移植）",
+    "分类": "游戏移植",
+    "aliases": [
+      "NFS Black Box",
+      "PPSA99403",
+      "nfs-blackbox-ps5",
+      "游戏移植"
+    ],
+    "enabled": false,
+    "repo_path": "lavavex/nfs-blackbox-ps5",
+    "releases_url": "https://github.com/lavavex/nfs-blackbox-ps5/releases/tag/01.000.000",
+    "title_id": "PPSA99403",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。所需 BIOS、游戏或商业运行库需按作者说明自行准备。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99403.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "03a69011cfd999b0128799dfd15ae675a251ce79ae803c6230932619f40fe840",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/lavavex/nfs-blackbox-ps5/releases/tag/01.000.000",
+      "发布标签": "01.000.000"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "01.000.000",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PPSA99403.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PPSA99403.zip",
+    "save_subdir": "native-ppsa99403",
+    "download_url_templates": [
+      "https://github.com/lavavex/nfs-blackbox-ps5/releases/download/01.000.000/PPSA99403.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99620",
+    "简介": "Ship of Harkinian (Ocarina of Time)（PS5 游戏移植）",
+    "分类": "游戏移植",
+    "aliases": [
+      "Ship of Harkinian (Ocarina of Time)",
+      "PPSA99620",
+      "oot64-ps5",
+      "游戏移植"
+    ],
+    "enabled": false,
+    "repo_path": "mshivam019/oot64-ps5",
+    "releases_url": "https://github.com/mshivam019/oot64-ps5/releases/tag/v1.2.0",
+    "title_id": "PPSA99620",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。所需 BIOS、游戏或商业运行库需按作者说明自行准备。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99620.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "ec67bdd356f57fbf8766771ef410243feb41072a07f04822a67f2b2aa603e119",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/mshivam019/oot64-ps5/releases/tag/v1.2.0",
+      "发布标签": "v1.2.0"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "v1.2.0",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PPSA99620.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PPSA99620.zip",
+    "save_subdir": "native-ppsa99620",
+    "download_url_templates": [
+      "https://github.com/mshivam019/oot64-ps5/releases/download/v1.2.0/PPSA99620.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99621",
+    "简介": "2 Ship 2 Harkinian (Majora's Mask)（PS5 游戏移植）",
+    "分类": "游戏移植",
+    "aliases": [
+      "2 Ship 2 Harkinian (Majora's Mask)",
+      "PPSA99621",
+      "tmm64-ps5",
+      "游戏移植"
+    ],
+    "enabled": false,
+    "repo_path": "mshivam019/tmm64-ps5",
+    "releases_url": "https://github.com/mshivam019/tmm64-ps5/releases/tag/v1.1.0",
+    "title_id": "PPSA99621",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。所需 BIOS、游戏或商业运行库需按作者说明自行准备。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99621.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "1b53678522e2c2f453c186ecb7af863abdf27a8b2515f8af4f1b43c8fcb17722",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/mshivam019/tmm64-ps5/releases/tag/v1.1.0",
+      "发布标签": "v1.1.0"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "v1.1.0",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PPSA99621.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PPSA99621.zip",
+    "save_subdir": "native-ppsa99621",
+    "download_url_templates": [
+      "https://github.com/mshivam019/tmm64-ps5/releases/download/v1.1.0/PPSA99621.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99630",
+    "简介": "Morrowind (OpenMW)（PS5 游戏移植）",
+    "分类": "游戏移植",
+    "aliases": [
+      "Morrowind (OpenMW)",
+      "PPSA99630",
+      "morrowind-ps5",
+      "游戏移植"
+    ],
+    "enabled": false,
+    "repo_path": "mshivam019/morrowind-ps5",
+    "releases_url": "https://github.com/mshivam019/morrowind-ps5/releases/tag/v1.0.1",
+    "title_id": "PPSA99630",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。所需 BIOS、游戏或商业运行库需按作者说明自行准备。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99630.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "0b50f2e63660db79724022e90575910728800feb0699d254a36f3c66af971b5c",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/mshivam019/morrowind-ps5/releases/tag/v1.0.1",
+      "发布标签": "v1.0.1"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "v1.0.1",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PPSA99630.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PPSA99630.zip",
+    "save_subdir": "native-ppsa99630",
+    "download_url_templates": [
+      "https://github.com/mshivam019/morrowind-ps5/releases/download/v1.0.1/PPSA99630.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99640",
+    "简介": "Twilight Princess (Dusklight)（PS5 游戏移植）",
+    "分类": "游戏移植",
+    "aliases": [
+      "Twilight Princess (Dusklight)",
+      "PPSA99640",
+      "dusklight-ps5",
+      "游戏移植"
+    ],
+    "enabled": false,
+    "repo_path": "mshivam019/dusklight-ps5",
+    "releases_url": "https://github.com/mshivam019/dusklight-ps5/releases/tag/ps5-v0.1.0",
+    "title_id": "PPSA99640",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。所需 BIOS、游戏或商业运行库需按作者说明自行准备。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99640.json",
+    "_许可": "CC0-1.0",
+    "_上游sha256": "df097143111f3758b195ce21e2051b8c4f7ef78a2f392d88b3b5fb12d9780a4b",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/mshivam019/dusklight-ps5/releases/tag/ps5-v0.1.0",
+      "发布标签": "ps5-v0.1.0"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "ps5-v0.1.0",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PPSA99640.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PPSA99640.zip",
+    "save_subdir": "native-ppsa99640",
+    "download_url_templates": [
+      "https://github.com/mshivam019/dusklight-ps5/releases/download/ps5-v0.1.0/PPSA99640.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99641",
+    "简介": "Wind Waker HD（PS5 游戏移植）",
+    "分类": "游戏移植",
+    "aliases": [
+      "Wind Waker HD",
+      "PPSA99641",
+      "ww-ps5",
+      "游戏移植"
+    ],
+    "enabled": false,
+    "repo_path": "mshivam019/ww-ps5",
+    "releases_url": "https://github.com/mshivam019/ww-ps5/releases/tag/ps5-v0.1.2",
+    "title_id": "PPSA99641",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。所需 BIOS、游戏或商业运行库需按作者说明自行准备。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99641.json",
+    "_许可": "MPL-2.0",
+    "_上游sha256": "8c04cb3d4e8c4158b79bfd27e63670c15433f596e1c362090ef56c20d6cd1ac1",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/mshivam019/ww-ps5/releases/tag/ps5-v0.1.2",
+      "发布标签": "ps5-v0.1.2"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "ps5-v0.1.2",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PPSA99641.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PPSA99641.zip",
+    "save_subdir": "native-ppsa99641",
+    "download_url_templates": [
+      "https://github.com/mshivam019/ww-ps5/releases/download/ps5-v0.1.2/PPSA99641.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99660",
+    "简介": "Animal Crossing for PS5（PS5 游戏移植）",
+    "分类": "游戏移植",
+    "aliases": [
+      "Animal Crossing for PS5",
+      "PPSA99660",
+      "ac-ps5",
+      "游戏移植"
+    ],
+    "enabled": false,
+    "repo_path": "mshivam019/ac-ps5",
+    "releases_url": "https://github.com/mshivam019/ac-ps5/releases/tag/v1.0.0",
+    "title_id": "PPSA99660",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。所需 BIOS、游戏或商业运行库需按作者说明自行准备。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99660.json",
+    "_许可": "GPL-3.0-or-later",
+    "_上游sha256": "0ee4300fe53d94111a485d062b4bc6f8c00b252238606fa9cfbaed66472223d2",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/mshivam019/ac-ps5/releases/tag/v1.0.0",
+      "发布标签": "v1.0.0"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "v1.0.0",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PPSA99660.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PPSA99660.zip",
+    "save_subdir": "native-ppsa99660",
+    "download_url_templates": [
+      "https://github.com/mshivam019/ac-ps5/releases/download/v1.0.0/PPSA99660.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99666",
+    "简介": "DOOM Native Port（PS5 游戏移植）",
+    "分类": "游戏移植",
+    "aliases": [
+      "DOOM Native Port",
+      "PPSA99666",
+      "ps5-doom",
+      "游戏移植"
+    ],
+    "enabled": false,
+    "repo_path": "lowbit/ps5-doom",
+    "releases_url": "https://github.com/lowbit/ps5-doom/releases/tag/v1.1.1",
+    "title_id": "PPSA99666",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。所需 BIOS、游戏或商业运行库需按作者说明自行准备。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99666.json",
+    "_许可": "GPL-2.0",
+    "_上游sha256": "4d8e5b785b61696fbf1988c2d0d87c5c977734ff60b1ce11cc49134b0e711b5f",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/lowbit/ps5-doom/releases/tag/v1.1.1",
+      "发布标签": "v1.1.1"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "v1.1.1",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PPSA99666.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PPSA99666.zip",
+    "save_subdir": "native-ppsa99666",
+    "download_url_templates": [
+      "https://github.com/lowbit/ps5-doom/releases/download/v1.1.1/PPSA99666.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99670",
+    "简介": "Link’s Awakening for PS5（PS5 游戏移植）",
+    "分类": "游戏移植",
+    "aliases": [
+      "Link’s Awakening for PS5",
+      "PPSA99670",
+      "la-ps5",
+      "游戏移植"
+    ],
+    "enabled": false,
+    "repo_path": "mshivam019/la-ps5",
+    "releases_url": "https://github.com/mshivam019/la-ps5/releases/tag/v0.1.0",
+    "title_id": "PPSA99670",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。所需 BIOS、游戏或商业运行库需按作者说明自行准备。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99670.json",
+    "_许可": "MIT",
+    "_上游sha256": "fa46808a12b972909050617dfc99e92bbe77a67265abf0108fc475670f01d53a",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/mshivam019/la-ps5/releases/tag/v0.1.0",
+      "发布标签": "v0.1.0"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "v0.1.0",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PPSA99670.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PPSA99670.zip",
+    "save_subdir": "native-ppsa99670",
+    "download_url_templates": [
+      "https://github.com/mshivam019/la-ps5/releases/download/v0.1.0/PPSA99670.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99728",
+    "简介": "OpenRCT2 Native Port（PS5 游戏移植）",
+    "分类": "游戏移植",
+    "aliases": [
+      "OpenRCT2 Native Port",
+      "PPSA99728",
+      "ps5-openrct2",
+      "游戏移植"
+    ],
+    "enabled": false,
+    "repo_path": "lowbit/ps5-openrct2",
+    "releases_url": "https://github.com/lowbit/ps5-openrct2/releases/tag/v1.0.0",
+    "title_id": "PPSA99728",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。所需 BIOS、游戏或商业运行库需按作者说明自行准备。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99728.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "f5c3d0a2168b5527a08ab2f335ab89057ab93082cde08813b6567b156fb1667e",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/lowbit/ps5-openrct2/releases/tag/v1.0.0",
+      "发布标签": "v1.0.0"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "v1.0.0",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PPSA99728.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PPSA99728.zip",
+    "save_subdir": "native-ppsa99728",
+    "download_url_templates": [
+      "https://github.com/lowbit/ps5-openrct2/releases/download/v1.0.0/PPSA99728.zip"
+    ]
+  }
+]

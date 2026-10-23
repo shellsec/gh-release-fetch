@@ -4,8 +4,8 @@ set PYTHONIOENCODING=utf-8
 set PYTHONUTF8=1
 cd /d "%~dp0"
 
-python --version >nul 2>&1
-if not errorlevel 1 (
+python -c "import requests, bs4" >nul 2>&1
+if not errorlevel 1 if exist "%~dp0lookup_app.py" (
     python lookup_app.py %*
     goto finish
 )

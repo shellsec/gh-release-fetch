@@ -1,0 +1,265 @@
+[
+  {
+    "id": "commonproblemresolver",
+    "简介": "主题与插件启动故障排查载荷",
+    "分类": "引导与维护载荷",
+    "enabled": false,
+    "aliases": [
+      "关闭插件",
+      "删除主题",
+      "启动修复"
+    ],
+    "repo_path": "zdm65477730/CommonProblemResolver",
+    "releases_url": "https://github.com/zdm65477730/CommonProblemResolver/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "使用说明": "Hekate 下运行的维护载荷；.bin 放入 SD:/bootloader/payloads/。功能及支持机型查看发布说明。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/zdm65477730/CommonProblemResolver/releases/tag/0.3.4",
+      "发布标签": "0.3.4",
+      "发布时间": "2025-11-21T15:31:24Z"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".bin"
+    ],
+    "installer_markers": [
+      "CommonProblemResolver.bin"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "commonproblemresolver.bin",
+    "save_subdir": "commonproblemresolver",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "debug",
+      "Debug"
+    ],
+    "download_names": [
+      "CommonProblemResolver.bin"
+    ]
+  },
+  {
+    "id": "lockpick-rcm",
+    "简介": "Lockpick RCM 主机密钥导出载荷",
+    "分类": "引导与维护载荷",
+    "enabled": false,
+    "aliases": [
+      "密钥导出",
+      "prod.keys"
+    ],
+    "repo_path": "impeeza/Lockpick_RCMDecScots",
+    "releases_url": "https://github.com/impeeza/Lockpick_RCMDecScots/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "使用说明": "选择 _Hekate.zip 版本；解压后按包内说明放置载荷，导出文件位置以项目说明为准。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/impeeza/Lockpick_RCMDecScots/releases/tag/v2.0.1",
+      "发布标签": "v2.0.1",
+      "发布时间": "2026-09-10T22:33:43Z"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "Lockpick_RCM-",
+      "_Hekate.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "lockpick-rcm.zip",
+    "save_subdir": "lockpick-rcm",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "debug",
+      "Debug"
+    ]
+  },
+  {
+    "id": "tegraexplorer-ext",
+    "简介": "TegraExplorer Ext 文件管理载荷",
+    "分类": "引导与维护载荷",
+    "enabled": false,
+    "aliases": [
+      "TE脚本",
+      "载荷文件管理"
+    ],
+    "repo_path": "sthetix/TegraExplorer-Ext",
+    "releases_url": "https://github.com/sthetix/TegraExplorer-Ext/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "使用说明": "Hekate 下运行的文件管理载荷包；保留包内目录结构，额外 TE 脚本按项目说明放置。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/sthetix/TegraExplorer-Ext/releases/tag/v4.2.2",
+      "发布标签": "v4.2.2",
+      "发布时间": "2026-02-26T12:01:29Z"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "TegraExplorer-Ext-",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "tegraexplorer-ext.zip",
+    "save_subdir": "tegraexplorer-ext",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "debug",
+      "Debug"
+    ]
+  },
+  {
+    "id": "hwfly-toolbox",
+    "简介": "HWFLY 工具箱载荷",
+    "分类": "引导与维护载荷",
+    "enabled": false,
+    "aliases": [
+      "硬破",
+      "HWFLY工具箱"
+    ],
+    "repo_path": "hwfly-nx/hwfly-toolbox",
+    "releases_url": "https://github.com/hwfly-nx/hwfly-toolbox/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "使用说明": "HWFLY 工具箱 .bin，放入 bootloader/payloads/；仅用于与项目匹配的芯片，不执行刷写。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/hwfly-nx/hwfly-toolbox/releases/tag/1.1.1",
+      "发布标签": "1.1.1",
+      "发布时间": "2022-05-09T17:31:48Z"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".bin"
+    ],
+    "installer_markers": [
+      "hwfly_toolbox.bin"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "hwfly-toolbox.bin",
+    "save_subdir": "hwfly-toolbox",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "debug",
+      "Debug"
+    ],
+    "download_names": [
+      "hwfly_toolbox.bin"
+    ]
+  },
+  {
+    "id": "downgradefixer",
+    "简介": "系统降级故障修复载荷",
+    "分类": "引导与维护载荷",
+    "enabled": false,
+    "aliases": [
+      "降级修复",
+      "2162-0002"
+    ],
+    "repo_path": "sthetix/DowngradeFixer",
+    "releases_url": "https://github.com/sthetix/DowngradeFixer/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "使用说明": "Hekate 下运行的故障修复载荷包；具体可修复问题与系统条件查看项目说明，不自动运行。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/sthetix/DowngradeFixer/releases/tag/1.0.1",
+      "发布标签": "1.0.1",
+      "发布时间": "2026-04-24T23:24:11Z"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "DowngradeFixer-",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "downgradefixer.zip",
+    "save_subdir": "downgradefixer",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "debug",
+      "Debug"
+    ]
+  },
+  {
+    "id": "warmboot-extractor",
+    "简介": "Mariko Warmboot 补丁提取载荷",
+    "分类": "引导与维护载荷",
+    "enabled": false,
+    "aliases": [
+      "休眠修复",
+      "warmboot_mariko"
+    ],
+    "repo_path": "sthetix/Warmboot-Extractor",
+    "releases_url": "https://github.com/sthetix/Warmboot-Extractor/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "使用说明": "Warmboot 提取载荷包；适用机型和提取前提查看 README，不将它视为全机型通用。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/sthetix/Warmboot-Extractor/releases/tag/1.1.0",
+      "发布标签": "1.1.0",
+      "发布时间": "2026-09-10T08:32:58Z"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "Warmboot_Extractor-",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "warmboot-extractor.zip",
+    "save_subdir": "warmboot-extractor",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "debug",
+      "Debug"
+    ]
+  }
+]

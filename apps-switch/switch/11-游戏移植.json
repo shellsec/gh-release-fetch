@@ -1,0 +1,308 @@
+[
+  {
+    "id": "touhou-switch",
+    "简介": "东方系列移植（自备游戏文件）",
+    "分类": "游戏移植",
+    "enabled": false,
+    "aliases": [
+      "touhou-switch",
+      "东方"
+    ],
+    "repo_path": "saekaze/touhou-switch",
+    "releases_url": "https://github.com/saekaze/touhou-switch/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "touhou-switch",
+    "open_page_only": true,
+    "open_page_url": "https://github.com/saekaze/touhou-switch",
+    "_下载说明": "当前未发现公开 Release；查看仓库构建说明，游戏数据需自备。",
+    "使用说明": "当前未发现公开 Release；查看仓库构建说明，游戏数据需自备。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/saekaze/touhou-switch/releases",
+      "状态": "no-stable-release"
+    }
+  },
+  {
+    "id": "sh3-nx",
+    "简介": "寂静岭 3 移植（自备游戏文件）",
+    "分类": "游戏移植",
+    "enabled": false,
+    "aliases": [
+      "sh3-nx",
+      "寂静岭3"
+    ],
+    "repo_path": "cutarev/sh3-nx",
+    "releases_url": "https://github.com/cutarev/sh3-nx/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "sh3-nx",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".nro"
+    ],
+    "installer_markers": [
+      "sh",
+      ".nro"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "sh3-nx.nro",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "windows",
+      "Windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Overlay",
+      "overlay",
+      "debug",
+      "Debug"
+    ],
+    "使用说明": "只提供移植程序，游戏数据需按项目说明自行准备。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/cutarev/sh3-nx/releases/tag/v0.04",
+      "状态": "release",
+      "发布标签": "v0.04",
+      "发布时间": "2026-10-17T13:09:28Z"
+    }
+  },
+  {
+    "id": "zomboid-switch",
+    "简介": "僵尸毁灭工程移植（自备游戏文件）",
+    "分类": "游戏移植",
+    "enabled": false,
+    "aliases": [
+      "zomboid-switch",
+      "僵尸毁灭工程"
+    ],
+    "repo_path": "etonedemid/zomboid-switch",
+    "releases_url": "https://github.com/etonedemid/zomboid-switch/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "zomboid-switch",
+    "open_page_only": true,
+    "open_page_url": "https://github.com/etonedemid/zomboid-switch",
+    "_下载说明": "当前未发现公开 Release；查看仓库说明，游戏数据需自备。",
+    "使用说明": "当前未发现公开 Release；查看仓库说明，游戏数据需自备。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/etonedemid/zomboid-switch/releases",
+      "状态": "no-stable-release"
+    }
+  },
+  {
+    "id": "sms-switch",
+    "简介": "超级马里奥阳光移植（自备游戏文件）",
+    "分类": "游戏移植",
+    "enabled": false,
+    "aliases": [
+      "sms-switch",
+      "超级马里奥阳光"
+    ],
+    "repo_path": "chasem-dev/sms-switch",
+    "releases_url": "https://github.com/chasem-dev/sms-switch/releases/tag/v0.3.0",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "sms-switch",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "save_name": "sms-switch.zip",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "sms-switch.zip"
+    ],
+    "installer_markers_match_all": true,
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "Windows",
+      "windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Debug",
+      "debug"
+    ],
+    "pinned_release_tag": "v0.3.0",
+    "使用说明": "预发布固定版本，选择 sms-switch.zip；需要自备游戏数据，后续版本需人工复核 tag。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/chasem-dev/sms-switch/releases/tag/v0.3.0",
+      "状态": "prerelease",
+      "发布标签": "v0.3.0"
+    },
+    "download_url_templates": [
+      "https://github.com/chasem-dev/sms-switch/releases/download/v0.3.0/sms-switch.zip"
+    ]
+  },
+  {
+    "id": "megamanx-nx",
+    "简介": "洛克人 X 移植（自备游戏文件）",
+    "分类": "游戏移植",
+    "enabled": false,
+    "aliases": [
+      "MegaManX-NX",
+      "洛克人X"
+    ],
+    "repo_path": "Thorhax/MegaManX-NX",
+    "releases_url": "https://github.com/Thorhax/MegaManX-NX/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "megamanx-nx",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "MegaManX-NX",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "megamanx-nx.zip",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "windows",
+      "Windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Overlay",
+      "overlay",
+      "debug",
+      "Debug"
+    ],
+    "使用说明": "优先完整 ZIP；所需游戏资源按项目说明准备。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/Thorhax/MegaManX-NX/releases/tag/v1.1.0",
+      "状态": "release",
+      "发布标签": "v1.1.0",
+      "发布时间": "2026-10-16T11:06:26Z"
+    },
+    "download_names": [
+      "MegaManX-NX.zip"
+    ]
+  },
+  {
+    "id": "ikemen-nx",
+    "简介": "兼容 MUGEN 的格斗游戏引擎",
+    "分类": "游戏移植",
+    "enabled": false,
+    "aliases": [
+      "ikemen-nx",
+      "MUGEN",
+      "格斗引擎"
+    ],
+    "repo_path": "juanp9180-cmyk/ikemen-nx",
+    "releases_url": "https://github.com/juanp9180-cmyk/ikemen-nx/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "ikemen-nx",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "ikemen-nx",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "ikemen-nx.zip",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "windows",
+      "Windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Overlay",
+      "overlay",
+      "debug",
+      "Debug"
+    ],
+    "使用说明": "优先 sd.zip 完整包；不要只取辅助 nxconfig.nro 而遗漏主程序与资源。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/juanp9180-cmyk/ikemen-nx/releases/tag/v0.3.0",
+      "状态": "release",
+      "发布标签": "v0.3.0",
+      "发布时间": "2026-10-16T15:59:38Z"
+    }
+  },
+  {
+    "id": "portnx",
+    "简介": "游戏移植项目浏览工具",
+    "分类": "游戏移植",
+    "enabled": false,
+    "aliases": [
+      "PortNX",
+      "移植商店"
+    ],
+    "repo_path": "CostelaCNX/PortNX",
+    "releases_url": "https://github.com/CostelaCNX/PortNX/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "portnx",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PortNX",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "portnx.zip",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "windows",
+      "Windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Overlay",
+      "overlay",
+      "debug",
+      "Debug"
+    ],
+    "使用说明": "用于浏览移植项目；各游戏的数据与使用要求以对应项目说明为准。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/CostelaCNX/PortNX/releases/tag/v2.2.0",
+      "状态": "release",
+      "发布标签": "v2.2.0",
+      "发布时间": "2026-10-12T14:56:58Z"
+    }
+  }
+]

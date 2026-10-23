@@ -1,0 +1,551 @@
+[
+  {
+    "id": "locals-nx",
+    "简介": "LocalSend 无线传文件",
+    "分类": "文件与存档",
+    "enabled": false,
+    "aliases": [
+      "LocalS-NX",
+      "LocalSend",
+      "局域网传输"
+    ],
+    "repo_path": "z3lc/LocalS-NX",
+    "releases_url": "https://github.com/z3lc/LocalS-NX/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "locals-nx",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "LocalS-NX",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "locals-nx.zip",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "windows",
+      "Windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Overlay",
+      "overlay",
+      "debug",
+      "Debug"
+    ],
+    "使用说明": "完整保留压缩包中的 SD 卡目录布局，具体依赖与启动方式见项目说明。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/z3lc/LocalS-NX/releases/tag/v1.0.0",
+      "状态": "release",
+      "发布标签": "v1.0.0",
+      "发布时间": "2026-09-22T00:02:51Z"
+    },
+    "download_names": [
+      "LocalS-NX.zip"
+    ]
+  },
+  {
+    "id": "minfs",
+    "简介": "通过浏览器管理 SD 卡",
+    "分类": "文件与存档",
+    "enabled": false,
+    "aliases": [
+      "minFS",
+      "SD卡管理",
+      "网页文件管理"
+    ],
+    "repo_path": "minbbb/minFS",
+    "releases_url": "https://github.com/minbbb/minFS/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "minfs",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "minFS",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "minfs.zip",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "windows",
+      "Windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Overlay",
+      "overlay",
+      "debug",
+      "Debug"
+    ],
+    "使用说明": "完整保留压缩包中的 SD 卡目录布局，具体依赖与启动方式见项目说明。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/minbbb/minFS/releases/tag/v1.0.0",
+      "状态": "release",
+      "发布标签": "v1.0.0",
+      "发布时间": "2026-09-24T22:38:27Z"
+    }
+  },
+  {
+    "id": "switchsavesync",
+    "简介": "存档同步到 Google Drive",
+    "分类": "文件与存档",
+    "enabled": false,
+    "aliases": [
+      "SwitchSaveSync",
+      "存档同步",
+      "Google Drive"
+    ],
+    "repo_path": "NspxMiguel/SwitchSaveSync",
+    "releases_url": "https://github.com/NspxMiguel/SwitchSaveSync/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "switchsavesync",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".ovl"
+    ],
+    "installer_markers": [
+      "SwitchSaveSync",
+      ".ovl"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "switchsavesync.ovl",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "windows",
+      "Windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Overlay",
+      "overlay",
+      "debug",
+      "Debug"
+    ],
+    "使用说明": "发布物为 .ovl 插件，另需 overlay 环境及 Google Drive 授权配置；详见项目说明。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/NspxMiguel/SwitchSaveSync/releases/tag/v0.4.0",
+      "状态": "release",
+      "发布标签": "v0.4.0",
+      "发布时间": "2026-08-12T03:30:21Z"
+    },
+    "download_names": [
+      "SwitchSaveSync.ovl"
+    ]
+  },
+  {
+    "id": "pkhex-nx",
+    "简介": "宝可梦存档编辑",
+    "分类": "文件与存档",
+    "enabled": false,
+    "aliases": [
+      "PKHeX-NX",
+      "宝可梦",
+      "朱紫",
+      "存档编辑"
+    ],
+    "repo_path": "cbreezy210/PKHeX-NX",
+    "releases_url": "https://github.com/cbreezy210/PKHeX-NX/releases/tag/v0.9.5-beta",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "pkhex-nx",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "save_name": "pkhex-nx.zip",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PKHeX-NX-Beta-v0.9.5.zip"
+    ],
+    "installer_markers_match_all": true,
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "Windows",
+      "windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Debug",
+      "debug"
+    ],
+    "pinned_release_tag": "v0.9.5-beta",
+    "使用说明": "Beta 固定版本，下载包含应用与资源的标准 ZIP；按发布说明用完整内存模式启动，后续版本需人工复核 tag。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/cbreezy210/PKHeX-NX/releases/tag/v0.9.5-beta",
+      "状态": "prerelease",
+      "发布标签": "v0.9.5-beta"
+    },
+    "download_url_templates": [
+      "https://github.com/cbreezy210/PKHeX-NX/releases/download/v0.9.5-beta/PKHeX-NX-Beta-v0.9.5.zip"
+    ]
+  },
+  {
+    "id": "nxshare",
+    "简介": "通过网页浏览及下载相册截图和视频",
+    "分类": "文件与存档",
+    "enabled": false,
+    "aliases": [
+      "NXShare",
+      "相册",
+      "截图",
+      "视频导出"
+    ],
+    "repo_path": "musebrot1/NXShare",
+    "releases_url": "https://github.com/musebrot1/NXShare/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "nxshare",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".nro"
+    ],
+    "installer_markers": [
+      "NXShare",
+      ".nro"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "nxshare.nro",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "windows",
+      "Windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Overlay",
+      "overlay",
+      "debug",
+      "Debug"
+    ],
+    "使用说明": "仅下载主机端文件；放置路径、资源依赖及启动方式见项目说明。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/musebrot1/NXShare/releases/tag/1.9.0",
+      "状态": "release",
+      "发布标签": "1.9.0",
+      "发布时间": "2026-08-06T11:29:57Z"
+    },
+    "download_names": [
+      "NXShare.nro"
+    ]
+  },
+  {
+    "id": "checkpoint",
+    "repo_path": "BernardoGiordano/Checkpoint",
+    "releases_url": "https://github.com/BernardoGiordano/Checkpoint/releases",
+    "简介": "Checkpoint 存档备份与还原",
+    "分类": "文件与存档",
+    "enabled": false,
+    "aliases": [
+      "存档备份",
+      "检查点"
+    ],
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "checkpoint",
+    "use_download_filename": true,
+    "save_name": "checkpoint.nro",
+    "installer_extensions": [
+      ".nro"
+    ],
+    "installer_markers": [
+      "Checkpoint.nro"
+    ],
+    "installer_markers_match_all": true,
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "Windows",
+      "windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Debug",
+      "debug"
+    ],
+    "使用说明": "只选择 Switch 的 Checkpoint.nro，排除 3DS 文件与调试 ELF。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/BernardoGiordano/Checkpoint/releases/tag/v5.3.0",
+      "状态": "release",
+      "发布标签": "v5.3.0",
+      "发布时间": "2026-10-13T19:22:44Z"
+    },
+    "download_names": [
+      "Checkpoint.nro"
+    ]
+  },
+  {
+    "id": "nxdumptool",
+    "repo_path": "DarkMatterCore/nxdumptool",
+    "releases_url": "https://github.com/DarkMatterCore/nxdumptool/releases",
+    "简介": "NXDumpTool 自有游戏与内容导出",
+    "分类": "文件与存档",
+    "enabled": false,
+    "aliases": [
+      "游戏备份",
+      "导出"
+    ],
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "nxdumptool",
+    "use_download_filename": true,
+    "save_name": "nxdumptool.nro",
+    "installer_extensions": [
+      ".nro"
+    ],
+    "installer_markers": [
+      "nxdumptool.nro"
+    ],
+    "installer_markers_match_all": true,
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "Windows",
+      "windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Debug",
+      "debug"
+    ],
+    "使用说明": "仅下载主机端文件；放置路径、资源依赖及启动方式见项目说明。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/DarkMatterCore/nxdumptool/releases/tag/v1.1.15",
+      "状态": "release",
+      "发布标签": "v1.1.15",
+      "发布时间": "2022-02-26T00:40:09Z"
+    },
+    "download_names": [
+      "nxdumptool.nro"
+    ]
+  },
+  {
+    "id": "goldleaf",
+    "repo_path": "XorTroll/Goldleaf",
+    "releases_url": "https://github.com/XorTroll/Goldleaf/releases",
+    "简介": "Goldleaf 文件与内容管理",
+    "分类": "文件与存档",
+    "enabled": false,
+    "aliases": [
+      "金叶",
+      "文件管理"
+    ],
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "goldleaf",
+    "use_download_filename": true,
+    "save_name": "goldleaf.nro",
+    "installer_extensions": [
+      ".nro"
+    ],
+    "installer_markers": [
+      "Goldleaf.nro"
+    ],
+    "installer_markers_match_all": true,
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "Windows",
+      "windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Debug",
+      "debug"
+    ],
+    "使用说明": "仅下载主机端文件；放置路径、资源依赖及启动方式见项目说明。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/XorTroll/Goldleaf/releases/tag/1.2.1",
+      "状态": "release",
+      "发布标签": "1.2.1",
+      "发布时间": "2026-09-22T18:32:34Z"
+    },
+    "download_names": [
+      "Goldleaf.nro"
+    ]
+  },
+  {
+    "id": "dbipatcher",
+    "简介": "DBI 补丁与翻译发行包",
+    "分类": "文件与存档",
+    "enabled": false,
+    "aliases": [
+      "DBI英文版",
+      "DBI汉化",
+      "DBI翻译"
+    ],
+    "repo_path": "rashevskyv/DBIPatcher",
+    "releases_url": "https://github.com/rashevskyv/DBIPatcher/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "使用说明": "配套 dbi-translation-zhcn；必须使用同一发布版本的 DBI.nro 与翻译文件。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/rashevskyv/DBIPatcher/releases/tag/912",
+      "发布标签": "912",
+      "发布时间": "2026-10-15T13:45:42Z"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".nro"
+    ],
+    "installer_markers": [
+      "DBI.nro"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "dbipatcher.nro",
+    "save_subdir": "dbipatcher",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "debug",
+      "Debug"
+    ],
+    "download_names": [
+      "DBI.nro"
+    ]
+  },
+  {
+    "id": "n-xplorer",
+    "简介": "N-Xplorer 文本编辑与文件管理",
+    "分类": "文件与存档",
+    "enabled": false,
+    "aliases": [
+      "文本编辑",
+      "文件管理"
+    ],
+    "repo_path": "Craftyawesome/N-Xplorer",
+    "releases_url": "https://github.com/Craftyawesome/N-Xplorer/releases/tag/0.7.1-crash-fix",
+    "run_installer": false,
+    "kill_before_install": false,
+    "使用说明": "当前仅发现预发布 N-Xplorer.nro，固定到已核查 tag，后续需人工更新。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "prerelease",
+      "来源": "https://github.com/Craftyawesome/N-Xplorer/releases/tag/0.7.1-crash-fix",
+      "发布标签": "0.7.1-crash-fix"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".nro"
+    ],
+    "installer_markers": [
+      "N-Xplorer.nro"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "n-xplorer.nro",
+    "save_subdir": "n-xplorer",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "debug",
+      "Debug"
+    ],
+    "download_names": [
+      "N-Xplorer.nro"
+    ],
+    "pinned_release_tag": "0.7.1-crash-fix",
+    "download_url_templates": [
+      "https://github.com/Craftyawesome/N-Xplorer/releases/download/0.7.1-crash-fix/N-Xplorer.nro"
+    ]
+  },
+  {
+    "id": "dbi-translation-zhcn",
+    "简介": "DBI 简体中文翻译文件",
+    "分类": "文件与存档",
+    "enabled": false,
+    "aliases": [
+      "DBI汉化",
+      "translation.bin",
+      "简体中文"
+    ],
+    "repo_path": "rashevskyv/DBIPatcher",
+    "releases_url": "https://github.com/rashevskyv/DBIPatcher/releases",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".bin"
+    ],
+    "installer_markers": [
+      "translation_zhcn.bin"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "translation_zhcn.bin",
+    "download_names": [
+      "translation_zhcn.bin"
+    ],
+    "save_subdir": "dbi-translation-zhcn",
+    "使用说明": "下载 translation_zhcn.bin，手动重命名为 translation.bin，与本清单 dbipatcher 的同一发布版本 DBI.nro 放入同一个 SD 卡文件夹；不要混用其他版本的 DBI。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/rashevskyv/DBIPatcher/releases/tag/912",
+      "发布标签": "912"
+    }
+  }
+]

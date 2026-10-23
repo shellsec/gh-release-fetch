@@ -1,0 +1,134 @@
+[
+  {
+    "id": "retroarch",
+    "简介": "模拟器前端",
+    "分类": "游戏与串流",
+    "enabled": false,
+    "aliases": [
+      "RetroArch",
+      "模拟器",
+      "全能模拟器"
+    ],
+    "repo_path": "libretro/RetroArch",
+    "releases_url": "https://github.com/libretro/RetroArch/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "retroarch",
+    "open_page_only": true,
+    "open_page_url": "https://www.retroarch.com/?page=platforms",
+    "_下载说明": "该 GitHub 最新 Release 只有源码包；Switch 构建从官方平台下载页获取。",
+    "使用说明": "该 GitHub 最新 Release 只有源码包；Switch 构建从官方平台下载页获取。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/libretro/RetroArch/releases/tag/v1.22.2",
+      "状态": "release",
+      "发布标签": "v1.22.2",
+      "发布时间": "2025-11-20T03:12:17Z"
+    }
+  },
+  {
+    "id": "moonlight-switch",
+    "简介": "电脑游戏和画面串流",
+    "分类": "游戏与串流",
+    "enabled": false,
+    "aliases": [
+      "Moonlight-Switch",
+      "月光",
+      "电脑串流"
+    ],
+    "repo_path": "XITRIX/Moonlight-Switch",
+    "releases_url": "https://github.com/XITRIX/Moonlight-Switch/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "moonlight-switch",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".nro"
+    ],
+    "installer_markers": [
+      "Moonlight-Switch",
+      ".nro"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "moonlight-switch.nro",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "windows",
+      "Windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Overlay",
+      "overlay",
+      "debug",
+      "Debug"
+    ],
+    "使用说明": "仅下载主机端文件；放置路径、资源依赖及启动方式见项目说明。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/XITRIX/Moonlight-Switch/releases/tag/v1.5.0",
+      "状态": "release",
+      "发布标签": "v1.5.0",
+      "发布时间": "2026-05-24T20:04:16Z"
+    },
+    "download_names": [
+      "Moonlight-Switch.nro"
+    ]
+  },
+  {
+    "id": "corkdeck",
+    "简介": "实验性 Windows 游戏运行项目",
+    "分类": "游戏与串流",
+    "enabled": false,
+    "aliases": [
+      "CorkDeck"
+    ],
+    "repo_path": "plv890/CorkDeck",
+    "releases_url": "https://github.com/plv890/CorkDeck/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "corkdeck",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "CorkDeck",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "corkdeck.zip",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "windows",
+      "Windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Overlay",
+      "overlay",
+      "debug",
+      "Debug"
+    ],
+    "使用说明": "实验性 Windows 游戏运行环境；所需游戏数据需自行准备，兼容性以项目说明为准。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/plv890/CorkDeck/releases/tag/v0.3e",
+      "状态": "release",
+      "发布标签": "v0.3e",
+      "发布时间": "2026-10-11T17:41:14Z"
+    }
+  }
+]

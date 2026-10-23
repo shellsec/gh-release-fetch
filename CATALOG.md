@@ -74,6 +74,8 @@ Markdown 全分类导读：[`RECOMMENDED.zh-CN.md`](RECOMMENDED.zh-CN.md)（Wind
 
 | 目录 | 用途 |
 |------|------|
+| [`apps-ps5/`](apps-ps5/) | PS5 独立清单；`lookup_ps5.bat`；[使用说明](CATALOG.ps5.md) |
+| [`apps-switch/`](apps-switch/) | Switch 独立清单；`lookup_switch.bat`；[使用说明](CATALOG.switch.md) |
 | [`apps-mobile/`](apps-mobile/) | Android APK / iOS 占位；`lookup_mobile.bat` / `lookup_ios.bat` |
 | [`VibeCodingToolsDown/`](VibeCodingToolsDown/) | AI 编程 IDE 等，manifest 由脚本生成 |
 | [`GiteeExploreHot/catalog/`](GiteeExploreHot/catalog/) | Gitee 仓库分类与 Release 附件索引 |

@@ -1,0 +1,193 @@
+[
+  {
+    "id": "switch-dsh-client",
+    "简介": "DeepSeek AI 聊天",
+    "分类": "AI与自动化",
+    "enabled": false,
+    "aliases": [
+      "switch-dsh-client",
+      "DeepSeek",
+      "深度求索",
+      "AI聊天"
+    ],
+    "repo_path": "ArakiW/switch-dsh-client",
+    "releases_url": "https://github.com/ArakiW/switch-dsh-client/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "switch-dsh-client",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".nro"
+    ],
+    "installer_markers": [
+      "switch-dsh-client",
+      ".nro"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "switch-dsh-client.nro",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "windows",
+      "Windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Overlay",
+      "overlay",
+      "debug",
+      "Debug"
+    ],
+    "使用说明": "仅下载主机端文件；放置路径、资源依赖及启动方式见项目说明。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/ArakiW/switch-dsh-client/releases/tag/v0.1.0",
+      "状态": "release",
+      "发布标签": "v0.1.0",
+      "发布时间": "2026-08-18T10:25:14Z"
+    },
+    "download_names": [
+      "switch-dsh-client.nro"
+    ]
+  },
+  {
+    "id": "nxcourier",
+    "简介": "局域网控制、状态读取与截图",
+    "分类": "AI与自动化",
+    "enabled": false,
+    "aliases": [
+      "nxcourier",
+      "远程控制",
+      "AI自动化"
+    ],
+    "repo_path": "granule256/nxcourier",
+    "releases_url": "https://github.com/granule256/nxcourier/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "nxcourier",
+    "open_page_only": true,
+    "open_page_url": "https://github.com/granule256/nxcourier",
+    "_下载说明": "已有 Release 标签但没有附件；需按 README 自行构建或配置电脑端工具。",
+    "使用说明": "已有 Release 标签但没有附件；需按 README 自行构建或配置电脑端工具。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/granule256/nxcourier/releases/tag/v1.0.0",
+      "状态": "release-without-assets",
+      "发布标签": "v1.0.0",
+      "发布时间": "2026-10-07T07:10:30Z"
+    }
+  },
+  {
+    "id": "claude-code-switch",
+    "简介": "AI 聊天客户端",
+    "分类": "AI与自动化",
+    "enabled": false,
+    "aliases": [
+      "claude-code-switch",
+      "Claude",
+      "AI聊天"
+    ],
+    "repo_path": "CommunityPokeOrg/claude-code-switch",
+    "releases_url": "https://github.com/CommunityPokeOrg/claude-code-switch/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "claude-code-switch",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".nro"
+    ],
+    "installer_markers": [
+      "claude-code-switch",
+      ".nro"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "claude-code-switch.nro",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "windows",
+      "Windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Overlay",
+      "overlay",
+      "debug",
+      "Debug"
+    ],
+    "使用说明": "仅下载主机端文件；放置路径、资源依赖及启动方式见项目说明。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/CommunityPokeOrg/claude-code-switch/releases/tag/v0.2.1",
+      "状态": "release",
+      "发布标签": "v0.2.1",
+      "发布时间": "2026-10-02T16:06:24Z"
+    },
+    "download_names": [
+      "claude-code-switch.nro"
+    ]
+  },
+  {
+    "id": "chatnx",
+    "简介": "AI 聊天客户端",
+    "分类": "AI与自动化",
+    "enabled": false,
+    "aliases": [
+      "ChatNX",
+      "AI聊天"
+    ],
+    "repo_path": "Jonathan8520/ChatNX",
+    "releases_url": "https://github.com/Jonathan8520/ChatNX/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "save_subdir": "chatnx",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".nro"
+    ],
+    "installer_markers": [
+      "ChatNX",
+      ".nro"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "chatnx.nro",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "windows",
+      "Windows",
+      "linux",
+      "Linux",
+      "macOS",
+      "Overlay",
+      "overlay",
+      "debug",
+      "Debug"
+    ],
+    "使用说明": "仅下载主机端文件；放置路径、资源依赖及启动方式见项目说明。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "来源": "https://github.com/Jonathan8520/ChatNX/releases/tag/v1.0.1",
+      "状态": "release",
+      "发布标签": "v1.0.1",
+      "发布时间": "2026-09-09T22:34:27Z"
+    },
+    "download_names": [
+      "ChatNX.nro"
+    ]
+  }
+]

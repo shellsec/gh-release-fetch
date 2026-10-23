@@ -1,0 +1,3532 @@
+{
+  "source": "https://github.com/darkxex/ps5-homebrew-catalog",
+  "checked_on": "2026-10-19",
+  "说明": "仅核查目录和作者附件存在性；未下载程序、未核对字节摘要、未实机测试。",
+  "records": [
+    {
+      "path": "apps/PPSA01153.json",
+      "record": {
+        "titleid": "PPSA01153",
+        "name": "OliSe Player",
+        "category": "music",
+        "license": "GPL-3.0-or-later",
+        "version": "02.001.000",
+        "source_repo": "https://github.com/Marice/OliSePlayer",
+        "artifact_url": "https://github.com/Marice/OliSePlayer/releases/download/02.001.000/PPSA01153.zip",
+        "sha256": "3711b359f91fb572acd9385c4a027f5324da0d9d8734c382080073a2a7f68c7b"
+      },
+      "check": {
+        "path": "apps/PPSA01153.json",
+        "status": "verified",
+        "repo": "Marice/OliSePlayer",
+        "tag": "02.001.000",
+        "filename": "PPSA01153.zip",
+        "release_url": "https://github.com/Marice/OliSePlayer/releases/tag/02.001.000",
+        "assets": [
+          {
+            "name": "eboot.bin",
+            "url": "https://github.com/Marice/OliSePlayer/releases/download/02.001.000/eboot.bin"
+          },
+          {
+            "name": "OliSePlayer-presets.zip",
+            "url": "https://github.com/Marice/OliSePlayer/releases/download/02.001.000/OliSePlayer-presets.zip"
+          },
+          {
+            "name": "PPSA01153.zip",
+            "url": "https://github.com/Marice/OliSePlayer/releases/download/02.001.000/PPSA01153.zip"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA06464.json",
+      "record": {
+        "titleid": "PPSA06464",
+        "name": "PS64",
+        "category": "emulators",
+        "license": "GPL-3.0",
+        "version": "01.000.000",
+        "source_repo": "https://github.com/dantaipan/PS64",
+        "artifact_url": "https://github.com/dantaipan/PS64/releases/download/01.000.000/PPSA06464.zip",
+        "sha256": "c9927e906e0631d1e62fe99f48e56e21a6f055e340b85699eaba1ac3ce4b3f0f"
+      },
+      "check": {
+        "path": "apps/PPSA06464.json",
+        "status": "verified",
+        "repo": "dantaipan/PS64",
+        "tag": "01.000.000",
+        "filename": "PPSA06464.zip",
+        "release_url": "https://github.com/dantaipan/PS64/releases/tag/01.000.000",
+        "assets": [
+          {
+            "name": "PPSA06464.zip",
+            "url": "https://github.com/dantaipan/PS64/releases/download/01.000.000/PPSA06464.zip"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA17641.json",
+      "record": {
+        "titleid": "PPSA17641",
+        "name": "SymphonyStation5",
+        "category": "music",
+        "license": "GPL-3.0",
+        "version": "v0.1.0",
+        "source_repo": "https://github.com/TsvetomirGT/SymphonyStation5",
+        "artifact_url": "https://github.com/TsvetomirGT/SymphonyStation5/releases/download/v0.1.0/SymphonyStation5-v0.1.0.zip",
+        "sha256": "5327e36b9a57776a7bb7a32a16865d54b28be3b1622280c4dbc9e6ee469e2993"
+      },
+      "check": {
+        "path": "apps/PPSA17641.json",
+        "status": "verified",
+        "repo": "TsvetomirGT/SymphonyStation5",
+        "tag": "v0.1.0",
+        "filename": "SymphonyStation5-v0.1.0.zip",
+        "release_url": "https://github.com/TsvetomirGT/SymphonyStation5/releases/tag/v0.1.0",
+        "assets": [
+          {
+            "name": "libc.prx",
+            "url": "https://github.com/TsvetomirGT/SymphonyStation5/releases/download/v0.1.0/libc.prx"
+          },
+          {
+            "name": "SHA256SUMS",
+            "url": "https://github.com/TsvetomirGT/SymphonyStation5/releases/download/v0.1.0/SHA256SUMS"
+          },
+          {
+            "name": "SymphonyStation5-v0.1.0.zip",
+            "url": "https://github.com/TsvetomirGT/SymphonyStation5/releases/download/v0.1.0/SymphonyStation5-v0.1.0.zip"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA19111.json",
+      "record": {
+        "titleid": "PPSA19111",
+        "name": "XashPS5",
+        "category": "pc-ports",
+        "license": "GPL-3.0",
+        "version": "1.3",
+        "source_repo": "https://github.com/GordonProsperoMan/xash3d-ps5",
+        "artifact_url": "https://github.com/GordonProsperoMan/xash3d-ps5/releases/download/v1.3/PPSA19111.zip",
+        "sha256": "1bb8f143016c51d0fac8e1621e95c65aa6cf143ee7eeb03b4ab3febe5c294670"
+      },
+      "check": {
+        "path": "apps/PPSA19111.json",
+        "status": "verified",
+        "repo": "GordonProsperoMan/xash3d-ps5",
+        "tag": "v1.3",
+        "filename": "PPSA19111.zip",
+        "release_url": "https://github.com/GordonProsperoMan/xash3d-ps5/releases/tag/v1.3",
+        "assets": [
+          {
+            "name": "PPSA19111.zip",
+            "url": "https://github.com/GordonProsperoMan/xash3d-ps5/releases/download/v1.3/PPSA19111.zip"
+          },
+          {
+            "name": "PPSA19111.zip.sha256",
+            "url": "https://github.com/GordonProsperoMan/xash3d-ps5/releases/download/v1.3/PPSA19111.zip.sha256"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA28319.json",
+      "record": {
+        "titleid": "PPSA28319",
+        "name": "Middle Ages Ping Pong",
+        "category": "homebrew-games",
+        "license": "MIT",
+        "version": "01.000.000",
+        "source_repo": "https://github.com/STL1te/MedievalTennis",
+        "artifact_url": "https://github.com/STL1te/MedievalTennis/releases/download/01.000.000/PPSA28319.zip",
+        "sha256": "6426468091b42f6512a456004e47a0807ae83fc2af82a4408bef8a51103fbd48"
+      },
+      "check": {
+        "path": "apps/PPSA28319.json",
+        "status": "verified",
+        "repo": "STL1te/MedievalTennis",
+        "tag": "01.000.000",
+        "filename": "PPSA28319.zip",
+        "release_url": "https://github.com/STL1te/MedievalTennis/releases/tag/01.000.000",
+        "assets": [
+          {
+            "name": "PPSA28319.zip",
+            "url": "https://github.com/STL1te/MedievalTennis/releases/download/01.000.000/PPSA28319.zip"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA39410.json",
+      "record": {
+        "titleid": "PPSA39410",
+        "name": "VITA5",
+        "category": "streaming",
+        "license": "GPL-3.0",
+        "version": "1.0.0",
+        "source_repo": "https://github.com/StonedModder/VITA5",
+        "artifact_url": "https://github.com/StonedModder/VITA5/releases/download/v1.0.0/PPSA17035.zip",
+        "sha256": "d4e23aa6e511c2d9b7905174b11f0a4a70cf7d0a457ec0a1772b02d5d7e6ea09"
+      },
+      "check": {
+        "path": "apps/PPSA39410.json",
+        "status": "verified",
+        "repo": "StonedModder/VITA5",
+        "tag": "v1.0.0",
+        "filename": "PPSA17035.zip",
+        "release_url": "https://github.com/StonedModder/VITA5/releases/tag/v1.0.0",
+        "assets": [
+          {
+            "name": "input_receiver.skprx",
+            "url": "https://github.com/StonedModder/VITA5/releases/download/v1.0.0/input_receiver.skprx"
+          },
+          {
+            "name": "PPSA17035.zip",
+            "url": "https://github.com/StonedModder/VITA5/releases/download/v1.0.0/PPSA17035.zip"
+          },
+          {
+            "name": "VITA5-payload.elf",
+            "url": "https://github.com/StonedModder/VITA5/releases/download/v1.0.0/VITA5-payload.elf"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA47402.json",
+      "record": {
+        "titleid": "PPSA47402",
+        "name": "Syobon Action",
+        "category": "pc-ports",
+        "license": "GPL-3.0",
+        "version": "01.001.000",
+        "source_repo": "https://github.com/kvaps/syobon-action-ps5",
+        "artifact_url": "https://github.com/kvaps/syobon-action-ps5/releases/download/01.001.000/PPSA47402.zip",
+        "sha256": "86e763fac842e90c48e54ddb4915ef517c5c17f37d4506574848e4e0a8aa51f5"
+      },
+      "check": {
+        "path": "apps/PPSA47402.json",
+        "status": "verified",
+        "repo": "kvaps/syobon-action-ps5",
+        "tag": "01.001.000",
+        "filename": "PPSA47402.zip",
+        "release_url": "https://github.com/kvaps/syobon-action-ps5/releases/tag/01.001.000",
+        "assets": [
+          {
+            "name": "PPSA47402.zip",
+            "url": "https://github.com/kvaps/syobon-action-ps5/releases/download/01.001.000/PPSA47402.zip"
+          },
+          {
+            "name": "SHA256SUMS",
+            "url": "https://github.com/kvaps/syobon-action-ps5/releases/download/01.001.000/SHA256SUMS"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA47770.json",
+      "record": {
+        "titleid": "PPSA47770",
+        "name": "Afterglow",
+        "category": "music",
+        "license": "GPL-3.0",
+        "version": "01.000.006",
+        "source_repo": "https://github.com/DevvNirvana/afterglow",
+        "artifact_url": "https://github.com/DevvNirvana/afterglow/releases/download/01.000.006/PPSA47770.zip",
+        "sha256": "3c6d57ab42829577ccfde9a7f530ec8e3860e456f1c1244f93a1341d4969e47f"
+      },
+      "check": {
+        "path": "apps/PPSA47770.json",
+        "status": "verified",
+        "repo": "DevvNirvana/afterglow",
+        "tag": "01.000.006",
+        "filename": "PPSA47770.zip",
+        "release_url": "https://github.com/DevvNirvana/afterglow/releases/tag/01.000.006",
+        "assets": [
+          {
+            "name": "PPSA47770.zip",
+            "url": "https://github.com/DevvNirvana/afterglow/releases/download/01.000.006/PPSA47770.zip"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA59322.json",
+      "record": {
+        "titleid": "PPSA59322",
+        "name": "ccleste",
+        "category": "pc-ports",
+        "license": "MIT",
+        "version": "1.00",
+        "source_repo": "https://github.com/darkxex/PS5_Celeste",
+        "artifact_url": "https://github.com/darkxex/PS5_Celeste/releases/download/1.00/PPSA59322.zip",
+        "sha256": "96861b81c1fbaac818080d1bf958b575e6b44d2c258684e1931f2940cee2fb43"
+      },
+      "check": {
+        "path": "apps/PPSA59322.json",
+        "status": "verified",
+        "repo": "darkxex/PS5_Celeste",
+        "tag": "1.00",
+        "filename": "PPSA59322.zip",
+        "release_url": "https://github.com/darkxex/PS5_Celeste/releases/tag/1.00",
+        "assets": [
+          {
+            "name": "ccleste_PPSA59322.exfat",
+            "url": "https://github.com/darkxex/PS5_Celeste/releases/download/1.00/ccleste_PPSA59322.exfat"
+          },
+          {
+            "name": "PPSA59322.zip",
+            "url": "https://github.com/darkxex/PS5_Celeste/releases/download/1.00/PPSA59322.zip"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA68091.json",
+      "record": {
+        "titleid": "PPSA68091",
+        "name": "Ruffle Flash",
+        "category": "emulators",
+        "license": "GPL-3.0",
+        "version": "1.2.0",
+        "source_repo": "https://github.com/ZiZc3/Ruffle-Flash-PS5",
+        "artifact_url": "https://github.com/ZiZc3/Ruffle-Flash-PS5/releases/download/1.2.0/PPSA68091.zip",
+        "sha256": "b34b40b69da30dafce4ea67ee312a55b6bd9b07b59849741253b2c46147076be"
+      },
+      "check": {
+        "path": "apps/PPSA68091.json",
+        "status": "verified",
+        "repo": "ZiZc3/Ruffle-Flash-PS5",
+        "tag": "1.2.0",
+        "filename": "PPSA68091.zip",
+        "release_url": "https://github.com/ZiZc3/Ruffle-Flash-PS5/releases/tag/1.2.0",
+        "assets": [
+          {
+            "name": "helper.elf",
+            "url": "https://github.com/ZiZc3/Ruffle-Flash-PS5/releases/download/1.2.0/helper.elf"
+          },
+          {
+            "name": "PPSA68091.zip",
+            "url": "https://github.com/ZiZc3/Ruffle-Flash-PS5/releases/download/1.2.0/PPSA68091.zip"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA69420.json",
+      "record": {
+        "titleid": "PPSA69420",
+        "name": "ScreenTester5",
+        "category": "tools",
+        "license": "GPL-3.0-or-later",
+        "version": "01.000.000",
+        "source_repo": "https://github.com/Marice/ScreenTester5",
+        "artifact_url": "https://github.com/Marice/ScreenTester5/releases/download/01.000.000/PPSA69420.zip",
+        "sha256": "49a5c6d7bbb08f5a1539feb65b7fd2b537b6d7b304bdd3eed1c923e4ccbec8fd"
+      },
+      "check": {
+        "path": "apps/PPSA69420.json",
+        "status": "verified",
+        "repo": "Marice/ScreenTester5",
+        "tag": "01.000.000",
+        "filename": "PPSA69420.zip",
+        "release_url": "https://github.com/Marice/ScreenTester5/releases/tag/01.000.000",
+        "assets": [
+          {
+            "name": "PPSA69420.zip",
+            "url": "https://github.com/Marice/ScreenTester5/releases/download/01.000.000/PPSA69420.zip"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA69421.json",
+      "record": {
+        "titleid": "PPSA69421",
+        "name": "SuperTuxKart",
+        "category": "pc-ports",
+        "license": "GPL-3.0-or-later",
+        "version": "00.001.000",
+        "source_repo": "https://github.com/Marice/stk-ps5",
+        "artifact_url": "https://github.com/Marice/stk-ps5/releases/download/00.001.000/PPSA69421.zip",
+        "sha256": "f2240bf0e67cf585ae7c6acc16068e1b8bef5e3c1b5f7e8ae550053d937b712a"
+      },
+      "check": {
+        "path": "apps/PPSA69421.json",
+        "status": "verified",
+        "repo": "Marice/stk-ps5",
+        "tag": "00.001.000",
+        "filename": "PPSA69421.zip",
+        "release_url": "https://github.com/Marice/stk-ps5/releases/tag/00.001.000",
+        "assets": [
+          {
+            "name": "PPSA69421.zip",
+            "url": "https://github.com/Marice/stk-ps5/releases/download/00.001.000/PPSA69421.zip"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA69423.json",
+      "record": {
+        "titleid": "PPSA69423",
+        "name": "Rush 2 Recompiled",
+        "category": "console-ports",
+        "license": "GPL-3.0-or-later",
+        "version": "00.003.000",
+        "source_repo": "https://github.com/Marice/rush2-ps5",
+        "artifact_url": "https://github.com/Marice/rush2-ps5/releases/download/v00.003.000/Rush2Recompiled-PS5-00.003.000.zip",
+        "sha256": "4293eb3f48cc42abc5bdc1baffb6246fc43705aa10446821a3c685b20300b453"
+      },
+      "check": {
+        "path": "apps/PPSA69423.json",
+        "status": "verified",
+        "repo": "Marice/rush2-ps5",
+        "tag": "v00.003.000",
+        "filename": "Rush2Recompiled-PS5-00.003.000.zip",
+        "release_url": "https://github.com/Marice/rush2-ps5/releases/tag/v00.003.000",
+        "assets": [
+          {
+            "name": "Rush2Recompiled-PS5-00.003.000.zip",
+            "url": "https://github.com/Marice/rush2-ps5/releases/download/v00.003.000/Rush2Recompiled-PS5-00.003.000.zip"
+          },
+          {
+            "name": "Rush2Recompiled-PS5-00.003.000.zip.sha256",
+            "url": "https://github.com/Marice/rush2-ps5/releases/download/v00.003.000/Rush2Recompiled-PS5-00.003.000.zip.sha256"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA69424.json",
+      "record": {
+        "titleid": "PPSA69424",
+        "name": "Wave Race 64 Recompiled",
+        "category": "console-ports",
+        "license": "GPL-3.0-or-later",
+        "version": "00.001.000",
+        "source_repo": "https://github.com/Marice/wave-race-64-ps5",
+        "artifact_url": "https://github.com/Marice/wave-race-64-ps5/releases/download/v00.001.000/WaveRace64Recompiled-PS5-00.001.000.zip",
+        "sha256": "db05bfaa4937bb6adbbbf1de87f4c181fbd85b5250164332121454681e1a0820"
+      },
+      "check": {
+        "path": "apps/PPSA69424.json",
+        "status": "verified",
+        "repo": "Marice/wave-race-64-ps5",
+        "tag": "v00.001.000",
+        "filename": "WaveRace64Recompiled-PS5-00.001.000.zip",
+        "release_url": "https://github.com/Marice/wave-race-64-ps5/releases/tag/v00.001.000",
+        "assets": [
+          {
+            "name": "WaveRace64Recompiled-PS5-00.001.000.zip",
+            "url": "https://github.com/Marice/wave-race-64-ps5/releases/download/v00.001.000/WaveRace64Recompiled-PS5-00.001.000.zip"
+          },
+          {
+            "name": "WaveRace64Recompiled-PS5-00.001.000.zip.sha256",
+            "url": "https://github.com/Marice/wave-race-64-ps5/releases/download/v00.001.000/WaveRace64Recompiled-PS5-00.001.000.zip.sha256"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA69426.json",
+      "record": {
+        "titleid": "PPSA69426",
+        "name": "Signal Companion",
+        "category": "utilities",
+        "license": "GPL-3.0-or-later",
+        "version": "00.003.000",
+        "source_repo": "https://github.com/Marice/ps5-signal-companion",
+        "artifact_url": "https://github.com/Marice/ps5-signal-companion/releases/download/v00.003.000/SignalCompanion-PS5-00.003.000.zip",
+        "sha256": "39e501e83b7fb52b510c4d818d063bc952c37fd521b06fa28854a49a9816232a"
+      },
+      "check": {
+        "path": "apps/PPSA69426.json",
+        "status": "verified",
+        "repo": "Marice/ps5-signal-companion",
+        "tag": "v00.003.000",
+        "filename": "SignalCompanion-PS5-00.003.000.zip",
+        "release_url": "https://github.com/Marice/ps5-signal-companion/releases/tag/v00.003.000",
+        "assets": [
+          {
+            "name": "SHA256SUMS",
+            "url": "https://github.com/Marice/ps5-signal-companion/releases/download/v00.003.000/SHA256SUMS"
+          },
+          {
+            "name": "SignalCompanion-PS5-00.003.000.zip",
+            "url": "https://github.com/Marice/ps5-signal-companion/releases/download/v00.003.000/SignalCompanion-PS5-00.003.000.zip"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA74126.json",
+      "record": {
+        "titleid": "PPSA74126",
+        "name": "Stremio Plus",
+        "category": "video",
+        "license": "GPL-3.0",
+        "version": "0.5.11",
+        "source_repo": "https://github.com/LoZazaMastro/Stremio-Plus",
+        "artifact_url": "https://github.com/LoZazaMastro/Stremio-Plus/releases/download/0.5.11/PPSA74126.zip",
+        "sha256": "9f9ecb9c8b87d01a4eb5969f7ea8af853d20d37165afd6d8081a525487bcf990"
+      },
+      "check": {
+        "path": "apps/PPSA74126.json",
+        "status": "verified",
+        "repo": "LoZazaMastro/Stremio-Plus",
+        "tag": "0.5.11",
+        "filename": "PPSA74126.zip",
+        "release_url": "https://github.com/LoZazaMastro/Stremio-Plus/releases/tag/0.5.11",
+        "assets": [
+          {
+            "name": "PPSA74126.ffpfsc",
+            "url": "https://github.com/LoZazaMastro/Stremio-Plus/releases/download/0.5.11/PPSA74126.ffpfsc"
+          },
+          {
+            "name": "PPSA74126.zip",
+            "url": "https://github.com/LoZazaMastro/Stremio-Plus/releases/download/0.5.11/PPSA74126.zip"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA74207.json",
+      "record": {
+        "titleid": "PPSA74207",
+        "name": "The Simpsons Game",
+        "category": "console-ports",
+        "license": "GPL-3.0",
+        "version": "3.10.6",
+        "source_repo": "https://github.com/LoZazaMastro/TheSimpsonsGame-PS5-Builder",
+        "artifact_url": "https://github.com/LoZazaMastro/TheSimpsonsGame-PS5-Builder/releases/download/v3.10.6/TheSimpsonsGame-PS5-Builder-v3.10.6-Source.zip",
+        "sha256": "af518c36ba5f7dfd3ed7f37238fa53c7b031e1002863ec4c88f1821943ce86f1"
+      },
+      "check": {
+        "path": "apps/PPSA74207.json",
+        "status": "verified",
+        "repo": "LoZazaMastro/TheSimpsonsGame-PS5-Builder",
+        "tag": "v3.10.6",
+        "filename": "TheSimpsonsGame-PS5-Builder-v3.10.6-Source.zip",
+        "release_url": "https://github.com/LoZazaMastro/TheSimpsonsGame-PS5-Builder/releases/tag/v3.10.6",
+        "assets": [
+          {
+            "name": "SHA256SUMS-v3.10.6.txt",
+            "url": "https://github.com/LoZazaMastro/TheSimpsonsGame-PS5-Builder/releases/download/v3.10.6/SHA256SUMS-v3.10.6.txt"
+          },
+          {
+            "name": "TheSimpsonsGame-PS5-Builder-v3.10.6-Source.zip",
+            "url": "https://github.com/LoZazaMastro/TheSimpsonsGame-PS5-Builder/releases/download/v3.10.6/TheSimpsonsGame-PS5-Builder-v3.10.6-Source.zip"
+          },
+          {
+            "name": "TheSimpsonsGame-PS5-Builder.exe",
+            "url": "https://github.com/LoZazaMastro/TheSimpsonsGame-PS5-Builder/releases/download/v3.10.6/TheSimpsonsGame-PS5-Builder.exe"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA75837.json",
+      "record": {
+        "titleid": "PPSA75837",
+        "name": "Jewel Case",
+        "category": "utilities",
+        "license": "GPL-3.0",
+        "version": "1.1",
+        "source_repo": "https://github.com/SkaRift/JewelCase",
+        "artifact_url": "https://github.com/SkaRift/JewelCase/releases/download/v1.1/PPSA75837.zip",
+        "sha256": "e6831366698d5ebf41a3bf05105782376281768e950b56857e96a9a3b1e43ff5"
+      },
+      "check": {
+        "path": "apps/PPSA75837.json",
+        "status": "verified",
+        "repo": "SkaRift/JewelCase",
+        "tag": "v1.1",
+        "filename": "PPSA75837.zip",
+        "release_url": "https://github.com/SkaRift/JewelCase/releases/tag/v1.1",
+        "assets": [
+          {
+            "name": "PPSA75837.zip",
+            "url": "https://github.com/SkaRift/JewelCase/releases/download/v1.1/PPSA75837.zip"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA76677.json",
+      "record": {
+        "titleid": "PPSA76677",
+        "name": "RommPS",
+        "category": "utilities",
+        "license": "GPL-3.0",
+        "version": "1.2.1",
+        "source_repo": "https://github.com/s0liton/RommPS",
+        "artifact_url": "https://github.com/s0liton/RommPS/releases/download/v1.2.1/PPSA76677.zip",
+        "sha256": "afd77993de68e18eaa5b52b4b08ac7cdbc081c6af7f10a0720e0c580ac0d9645"
+      },
+      "check": {
+        "path": "apps/PPSA76677.json",
+        "status": "verified",
+        "repo": "s0liton/RommPS",
+        "tag": "v1.2.1",
+        "filename": "PPSA76677.zip",
+        "release_url": "https://github.com/s0liton/RommPS/releases/tag/v1.2.1",
+        "assets": [
+          {
+            "name": "manifest-ps4.json",
+            "url": "https://github.com/s0liton/RommPS/releases/download/v1.2.1/manifest-ps4.json"
+          },
+          {
+            "name": "manifest-ps4.sig",
+            "url": "https://github.com/s0liton/RommPS/releases/download/v1.2.1/manifest-ps4.sig"
+          },
+          {
+            "name": "manifest.json",
+            "url": "https://github.com/s0liton/RommPS/releases/download/v1.2.1/manifest.json"
+          },
+          {
+            "name": "manifest.sig",
+            "url": "https://github.com/s0liton/RommPS/releases/download/v1.2.1/manifest.sig"
+          },
+          {
+            "name": "PPSA76677.zip",
+            "url": "https://github.com/s0liton/RommPS/releases/download/v1.2.1/PPSA76677.zip"
+          },
+          {
+            "name": "romm-sync-ps4.elf",
+            "url": "https://github.com/s0liton/RommPS/releases/download/v1.2.1/romm-sync-ps4.elf"
+          },
+          {
+            "name": "romm-sync-ps4.pkg",
+            "url": "https://github.com/s0liton/RommPS/releases/download/v1.2.1/romm-sync-ps4.pkg"
+          },
+          {
+            "name": "romm-sync.elf",
+            "url": "https://github.com/s0liton/RommPS/releases/download/v1.2.1/romm-sync.elf"
+          },
+          {
+            "name": "SHA256SUMS",
+            "url": "https://github.com/s0liton/RommPS/releases/download/v1.2.1/SHA256SUMS"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA77711.json",
+      "record": {
+        "titleid": "PPSA77711",
+        "name": "Stremio",
+        "category": "video",
+        "license": "GPL-3.0",
+        "version": "1.2",
+        "source_repo": "https://github.com/Sp9nky/unofficial-stremio-ps5-port",
+        "artifact_url": "https://github.com/Sp9nky/unofficial-stremio-ps5-port/releases/download/v1.2/PPSA77711.ffpfsc",
+        "sha256": "eec6ef7d9a173fce4e0fdca8521e57a9d789742cb1257262d23bc834c3ef4fa7"
+      },
+      "check": {
+        "path": "apps/PPSA77711.json",
+        "status": "verified",
+        "repo": "Sp9nky/unofficial-stremio-ps5-port",
+        "tag": "v1.2",
+        "filename": "PPSA77711.ffpfsc",
+        "release_url": "https://github.com/Sp9nky/unofficial-stremio-ps5-port/releases/tag/v1.2",
+        "assets": [
+          {
+            "name": "PPSA77711.ffpfsc",
+            "url": "https://github.com/Sp9nky/unofficial-stremio-ps5-port/releases/download/v1.2/PPSA77711.ffpfsc"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA85300.json",
+      "record": {
+        "titleid": "PPSA85300",
+        "name": "VLC",
+        "category": "video",
+        "license": "GPL-3.0",
+        "version": "0.4.6",
+        "source_repo": "https://github.com/ZiZc3/VLC",
+        "artifact_url": "https://github.com/ZiZc3/VLC/releases/download/v0.4.6/PPSA85300.zip",
+        "sha256": "3fd59590181813e68cbc9e77cf88d6d48ed675d21628640887a0dc20dfafc1fb"
+      },
+      "check": {
+        "path": "apps/PPSA85300.json",
+        "status": "verified",
+        "repo": "ZiZc3/VLC",
+        "tag": "v0.4.6",
+        "filename": "PPSA85300.zip",
+        "release_url": "https://github.com/ZiZc3/VLC/releases/tag/v0.4.6",
+        "assets": [
+          {
+            "name": "PPSA85300.zip",
+            "url": "https://github.com/ZiZc3/VLC/releases/download/v0.4.6/PPSA85300.zip"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA90210.json",
+      "record": {
+        "titleid": "PPSA90210",
+        "name": "Prospero Themes",
+        "category": "utilities",
+        "license": "GPL-3.0",
+        "version": "01.000.008",
+        "source_repo": "https://github.com/Darkatek7/ProsperoThemes",
+        "artifact_url": "https://github.com/Darkatek7/ProsperoThemes/releases/download/01.000.008/PPSA90210.zip",
+        "sha256": "6abe1f3ec3b9c2f63ecee0284e6cf07b4ed4c8d9a0356b7f8b75e2ccdfc8dd77"
+      },
+      "check": {
+        "path": "apps/PPSA90210.json",
+        "status": "verified",
+        "repo": "Darkatek7/ProsperoThemes",
+        "tag": "01.000.008",
+        "filename": "PPSA90210.zip",
+        "release_url": "https://github.com/Darkatek7/ProsperoThemes/releases/tag/01.000.008",
+        "assets": [
+          {
+            "name": "PPSA90210.zip",
+            "url": "https://github.com/Darkatek7/ProsperoThemes/releases/download/01.000.008/PPSA90210.zip"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA92280.json",
+      "record": {
+        "titleid": "PPSA92280",
+        "name": "Capy Mobile",
+        "category": "emulators",
+        "license": "GPL-3.0",
+        "version": "0.5.0",
+        "source_repo": "https://github.com/khalifa007/CapyMobile",
+        "artifact_url": "https://github.com/khalifa007/CapyMobile/releases/download/v0.5.0/CapyMobile-00.005.000.zip",
+        "sha256": "80b14507838cd835fca794a493cde6b4cf0e7ca923afafaa1bc37c08f8fca6ec"
+      },
+      "check": {
+        "path": "apps/PPSA92280.json",
+        "status": "verified",
+        "repo": "khalifa007/CapyMobile",
+        "tag": "v0.5.0",
+        "filename": "CapyMobile-00.005.000.zip",
+        "release_url": "https://github.com/khalifa007/CapyMobile/releases/tag/v0.5.0",
+        "assets": [
+          {
+            "name": "CapyMobile-00.005.000.zip",
+            "url": "https://github.com/khalifa007/CapyMobile/releases/download/v0.5.0/CapyMobile-00.005.000.zip"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA94002.json",
+      "record": {
+        "titleid": "PPSA94002",
+        "name": "Raptor: Call of the Shadows (PS5)",
+        "category": "pc-ports",
+        "license": "GPL-3.0",
+        "version": "v1.0.0-rc.2",
+        "source_repo": "https://github.com/ChaDea1/RaptorPS5",
+        "artifact_url": "https://github.com/ChaDea1/RaptorPS5/releases/download/v1.0.0-rc.2/raptor-ps5-v1.0.0-rc.2.zip",
+        "sha256": "b6620582b5561f36fe1cfbb8f2866f88c9670c850beef1bc9270b1eb3b0106f6"
+      },
+      "check": {
+        "path": "apps/PPSA94002.json",
+        "status": "verified",
+        "repo": "ChaDea1/RaptorPS5",
+        "tag": "v1.0.0-rc.2",
+        "filename": "raptor-ps5-v1.0.0-rc.2.zip",
+        "release_url": "https://github.com/ChaDea1/RaptorPS5/releases/tag/v1.0.0-rc.2",
+        "assets": [
+          {
+            "name": "MIGRATION.md",
+            "url": "https://github.com/ChaDea1/RaptorPS5/releases/download/v1.0.0-rc.2/MIGRATION.md"
+          },
+          {
+            "name": "raptor-ps5-v1.0.0-rc.2-source.tar.gz",
+            "url": "https://github.com/ChaDea1/RaptorPS5/releases/download/v1.0.0-rc.2/raptor-ps5-v1.0.0-rc.2-source.tar.gz"
+          },
+          {
+            "name": "raptor-ps5-v1.0.0-rc.2.zip",
+            "url": "https://github.com/ChaDea1/RaptorPS5/releases/download/v1.0.0-rc.2/raptor-ps5-v1.0.0-rc.2.zip"
+          },
+          {
+            "name": "SHA256SUMS",
+            "url": "https://github.com/ChaDea1/RaptorPS5/releases/download/v1.0.0-rc.2/SHA256SUMS"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA97358.json",
+      "record": {
+        "titleid": "PPSA97358",
+        "name": "XPSemu",
+        "category": "emulators",
+        "license": "GPL-2.0",
+        "version": "Alpha-2.1",
+        "source_repo": "https://github.com/ZiZc3/XPSemu",
+        "artifact_url": "https://github.com/ZiZc3/XPSemu/releases/download/Alpha-2.1/PPSA97358.zip",
+        "sha256": "494682ff5073985422fd8961cc617b8e3bdbdb2dedd85b69dadbd06f709953e9"
+      },
+      "check": {
+        "path": "apps/PPSA97358.json",
+        "status": "verified",
+        "repo": "ZiZc3/XPSemu",
+        "tag": "Alpha-2.1",
+        "filename": "PPSA97358.zip",
+        "release_url": "https://github.com/ZiZc3/XPSemu/releases/tag/Alpha-2.1",
+        "assets": [
+          {
+            "name": "helper.elf",
+            "url": "https://github.com/ZiZc3/XPSemu/releases/download/Alpha-2.1/helper.elf"
+          },
+          {
+            "name": "PPSA97358.zip",
+            "url": "https://github.com/ZiZc3/XPSemu/releases/download/Alpha-2.1/PPSA97358.zip"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA97510.json",
+      "record": {
+        "titleid": "PPSA97510",
+        "name": "PSXS5",
+        "category": "emulators",
+        "license": "GPL-3.0",
+        "version": "2.2.0",
+        "source_repo": "https://github.com/SynoPiia/PSXS5",
+        "artifact_url": "https://github.com/SynoPiia/PSXS5/releases/download/v2.2.0/PSXS5-v2.2.0.zip",
+        "sha256": "8904a734f99ecd837071f78167214cb2fa867870936afe996f6f3c95f7b4af60"
+      },
+      "check": {
+        "path": "apps/PPSA97510.json",
+        "status": "verified",
+        "repo": "SynoPiia/PSXS5",
+        "tag": "v2.2.0",
+        "filename": "PSXS5-v2.2.0.zip",
+        "release_url": "https://github.com/SynoPiia/PSXS5/releases/tag/v2.2.0",
+        "assets": [
+          {
+            "name": "PSXS5-symbols.txt",
+            "url": "https://github.com/SynoPiia/PSXS5/releases/download/v2.2.0/PSXS5-symbols.txt"
+          },
+          {
+            "name": "PSXS5-v2.2.0.zip",
+            "url": "https://github.com/SynoPiia/PSXS5/releases/download/v2.2.0/PSXS5-v2.2.0.zip"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA98001.json",
+      "record": {
+        "titleid": "PPSA98001",
+        "name": "PokeMMO Prospero",
+        "category": "pc-ports",
+        "license": "GPL-3.0",
+        "version": "1.0.2",
+        "source_repo": "https://github.com/Shabbypenguin/PokeMMO-Prospero",
+        "artifact_url": "https://github.com/Shabbypenguin/PokeMMO-Prospero/releases/download/v1.0.2/PPSA98001.zip",
+        "sha256": "1927587707eee86681677fb2ddadcc53c5be0c4f1696da41ad11d92dbc42662e"
+      },
+      "check": {
+        "path": "apps/PPSA98001.json",
+        "status": "verified",
+        "repo": "Shabbypenguin/PokeMMO-Prospero",
+        "tag": "v1.0.2",
+        "filename": "PPSA98001.zip",
+        "release_url": "https://github.com/Shabbypenguin/PokeMMO-Prospero/releases/tag/v1.0.2",
+        "assets": [
+          {
+            "name": "PPSA98001.ffpfsc",
+            "url": "https://github.com/Shabbypenguin/PokeMMO-Prospero/releases/download/v1.0.2/PPSA98001.ffpfsc"
+          },
+          {
+            "name": "PPSA98001.zip",
+            "url": "https://github.com/Shabbypenguin/PokeMMO-Prospero/releases/download/v1.0.2/PPSA98001.zip"
+          },
+          {
+            "name": "SHA256SUMS.txt",
+            "url": "https://github.com/Shabbypenguin/PokeMMO-Prospero/releases/download/v1.0.2/SHA256SUMS.txt"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA98427.json",
+      "record": {
+        "titleid": "PPSA98427",
+        "name": "CD Player",
+        "category": "music",
+        "license": "GPL-3.0",
+        "version": "1.1.1",
+        "source_repo": "https://github.com/LoZazaMastro/CD-Player",
+        "artifact_url": "https://github.com/LoZazaMastro/CD-Player/releases/download/v1.1.1/PPSA98427.zip",
+        "sha256": "a2e44a6211260b1dca2c0d42736143c8c563acc6ff9a42e0c1671477c96de45b"
+      },
+      "check": {
+        "path": "apps/PPSA98427.json",
+        "status": "verified",
+        "repo": "LoZazaMastro/CD-Player",
+        "tag": "v1.1.1",
+        "filename": "PPSA98427.zip",
+        "release_url": "https://github.com/LoZazaMastro/CD-Player/releases/tag/v1.1.1",
+        "assets": [
+          {
+            "name": "PPSA98427.zip",
+            "url": "https://github.com/LoZazaMastro/CD-Player/releases/download/v1.1.1/PPSA98427.zip"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA98510.json",
+      "record": {
+        "titleid": "PPSA98510",
+        "name": "SwanStationPS5",
+        "category": "emulators",
+        "license": "GPL-3.0-or-later",
+        "version": "1.4.2",
+        "source_repo": "https://github.com/darkxex/SwanStationPS5",
+        "artifact_url": "https://github.com/darkxex/SwanStationPS5/releases/download/1.4.2/PPSA98510.zip",
+        "sha256": "19e024135f7303d5928d93b3742707e14552abf1c5051b3f6dfa212be4bf4cf8"
+      },
+      "check": {
+        "path": "apps/PPSA98510.json",
+        "status": "verified",
+        "repo": "darkxex/SwanStationPS5",
+        "tag": "1.4.2",
+        "filename": "PPSA98510.zip",
+        "release_url": "https://github.com/darkxex/SwanStationPS5/releases/tag/1.4.2",
+        "assets": [
+          {
+            "name": "PPSA98510.zip",
+            "url": "https://github.com/darkxex/SwanStationPS5/releases/download/1.4.2/PPSA98510.zip"
+          },
+          {
+            "name": "SwanStationPS5-DiscDaemon.elf",
+            "url": "https://github.com/darkxex/SwanStationPS5/releases/download/1.4.2/SwanStationPS5-DiscDaemon.elf"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA98511.json",
+      "record": {
+        "titleid": "PPSA98511",
+        "name": "ReKHCoM",
+        "category": "console-ports",
+        "license": "CC0-1.0",
+        "version": "ps5-v1.0.6",
+        "source_repo": "https://github.com/darkxex/ReKHCom-PS5",
+        "artifact_url": "https://github.com/darkxex/ReKHCom-PS5/releases/download/ps5-v1.0.6/PPSA98511.zip",
+        "sha256": "00a769c0256b36af3c7d3a30f23922b30068b98060b345a5e6ed07b02267b8d4"
+      },
+      "check": {
+        "path": "apps/PPSA98511.json",
+        "status": "verified",
+        "repo": "darkxex/ReKHCom-PS5",
+        "tag": "ps5-v1.0.6",
+        "filename": "PPSA98511.zip",
+        "release_url": "https://github.com/darkxex/ReKHCom-PS5/releases/tag/ps5-v1.0.6",
+        "assets": [
+          {
+            "name": "PPSA98511.zip",
+            "url": "https://github.com/darkxex/ReKHCom-PS5/releases/download/ps5-v1.0.6/PPSA98511.zip"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA98766.json",
+      "record": {
+        "titleid": "PPSA98766",
+        "name": "DriftCheck",
+        "category": "tools",
+        "license": "GPL-3.0",
+        "version": "01.000.000",
+        "source_repo": "https://github.com/felipemelchior/driftcheck5",
+        "artifact_url": "https://github.com/felipemelchior/driftcheck5/releases/download/01.000.000/PPSA98766.zip",
+        "sha256": "06fa838c0747ea25075876e28df9c684d17988938b82707c9592f1d2c217c86c"
+      },
+      "check": {
+        "path": "apps/PPSA98766.json",
+        "status": "verified",
+        "repo": "felipemelchior/driftcheck5",
+        "tag": "01.000.000",
+        "filename": "PPSA98766.zip",
+        "release_url": "https://github.com/felipemelchior/driftcheck5/releases/tag/01.000.000",
+        "assets": [
+          {
+            "name": "DriftCheck.elf",
+            "url": "https://github.com/felipemelchior/driftcheck5/releases/download/01.000.000/DriftCheck.elf"
+          },
+          {
+            "name": "PPSA98766.zip",
+            "url": "https://github.com/felipemelchior/driftcheck5/releases/download/01.000.000/PPSA98766.zip"
+          },
+          {
+            "name": "SHA256SUMS",
+            "url": "https://github.com/felipemelchior/driftcheck5/releases/download/01.000.000/SHA256SUMS"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99000.json",
+      "record": {
+        "titleid": "PPSA99000",
+        "name": "ProsperoStore",
+        "category": "utilities",
+        "license": "GPL-3.0",
+        "version": "1.000.101",
+        "source_repo": "https://github.com/darkxex/ProsperoStore",
+        "artifact_url": "https://github.com/darkxex/ProsperoStore/releases/download/v1.000.101/PPSA99000.zip",
+        "sha256": "94ae4a33018e6d0b26fce53fb4067360622e4f06681df98c3b341dee4b016221"
+      },
+      "check": {
+        "path": "apps/PPSA99000.json",
+        "status": "verified",
+        "repo": "darkxex/ProsperoStore",
+        "tag": "v1.000.101",
+        "filename": "PPSA99000.zip",
+        "release_url": "https://github.com/darkxex/ProsperoStore/releases/tag/v1.000.101",
+        "assets": [
+          {
+            "name": "PPSA99000.zip",
+            "url": "https://github.com/darkxex/ProsperoStore/releases/download/v1.000.101/PPSA99000.zip"
+          },
+          {
+            "name": "SHA256SUMS",
+            "url": "https://github.com/darkxex/ProsperoStore/releases/download/v1.000.101/SHA256SUMS"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99002.json",
+      "record": {
+        "titleid": "PPSA99002",
+        "name": "ProsperoLight",
+        "category": "streaming",
+        "license": "GPL-3.0",
+        "version": "01.000.110",
+        "source_repo": "https://github.com/LedyBacer/ProsperoLight",
+        "artifact_url": "https://github.com/LedyBacer/ProsperoLight/releases/download/01.000.110/PPSA99002.zip",
+        "sha256": "f29935f3bd9d61926c1ea63f8d34019fff19ee993e8d030ee373c004efd974ba"
+      },
+      "check": {
+        "path": "apps/PPSA99002.json",
+        "status": "verified",
+        "repo": "LedyBacer/ProsperoLight",
+        "tag": "01.000.110",
+        "filename": "PPSA99002.zip",
+        "release_url": "https://github.com/LedyBacer/ProsperoLight/releases/tag/01.000.110",
+        "assets": [
+          {
+            "name": "PPSA99002.zip",
+            "url": "https://github.com/LedyBacer/ProsperoLight/releases/download/01.000.110/PPSA99002.zip"
+          },
+          {
+            "name": "SHA256SUMS",
+            "url": "https://github.com/LedyBacer/ProsperoLight/releases/download/01.000.110/SHA256SUMS"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99003.json",
+      "record": {
+        "titleid": "PPSA99003",
+        "name": "ProsperoTV",
+        "category": "video",
+        "license": "GPL-3.0",
+        "version": "01.000.080",
+        "source_repo": "https://github.com/ThatGuyKalvin/ProsperoTV",
+        "artifact_url": "https://github.com/ThatGuyKalvin/ProsperoTV/releases/download/01.000.080/PPSA99003.zip",
+        "sha256": "8a6b89d82c25c3c22a866633312aebc29d8d026c01c791e3934a11ba70c4c064"
+      },
+      "check": {
+        "path": "apps/PPSA99003.json",
+        "status": "verified",
+        "repo": "ThatGuyKalvin/ProsperoTV",
+        "tag": "01.000.080",
+        "filename": "PPSA99003.zip",
+        "release_url": "https://github.com/ThatGuyKalvin/ProsperoTV/releases/tag/01.000.080",
+        "assets": [
+          {
+            "name": "PPSA99003.zip",
+            "url": "https://github.com/ThatGuyKalvin/ProsperoTV/releases/download/01.000.080/PPSA99003.zip"
+          },
+          {
+            "name": "SHA256SUMS",
+            "url": "https://github.com/ThatGuyKalvin/ProsperoTV/releases/download/01.000.080/SHA256SUMS"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99004.json",
+      "record": {
+        "titleid": "PPSA99004",
+        "name": "ProsperoAI",
+        "category": "ai",
+        "license": "GPL-3.0",
+        "version": "01.006.000",
+        "source_repo": "https://github.com/blackbearreloaded/ProsperoAI",
+        "artifact_url": "https://github.com/blackbearreloaded/ProsperoAI/releases/download/01.006.000/PPSA99004.zip",
+        "sha256": "8b2241e003a22bffccee23e9424991533047e633e5ce337af60281b96868439e"
+      },
+      "check": {
+        "path": "apps/PPSA99004.json",
+        "status": "missing-asset",
+        "repo": "blackbearreloaded/ProsperoAI",
+        "tag": "01.006.000",
+        "filename": "PPSA99004.zip",
+        "release_url": "https://github.com/blackbearreloaded/ProsperoAI/releases/tag/01.006.000",
+        "assets": [
+          {
+            "name": "PPSA99004.zip",
+            "url": "https://github.com/quatrixone/ProsperoAI/releases/download/01.006.000/PPSA99004.zip"
+          },
+          {
+            "name": "SHA256SUMS",
+            "url": "https://github.com/quatrixone/ProsperoAI/releases/download/01.006.000/SHA256SUMS"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99008.json",
+      "record": {
+        "titleid": "PPSA99008",
+        "name": "ProsperoEden",
+        "category": "emulators",
+        "license": "GPL-3.0",
+        "version": "1.005.000",
+        "source_repo": "https://github.com/blackbearreloaded/ProsperoEden",
+        "artifact_url": "https://github.com/blackbearreloaded/ProsperoEden/releases/download/v1.005.000/ProsperoEden-v1.005.000.zip",
+        "sha256": "9a726c3a4238bfc9651a8c2bd3952cf07972495a3f930cc6d0a5b487140a5991"
+      },
+      "check": {
+        "path": "apps/PPSA99008.json",
+        "status": "missing-asset",
+        "repo": "blackbearreloaded/ProsperoEden",
+        "tag": "v1.005.000",
+        "filename": "ProsperoEden-v1.005.000.zip",
+        "release_url": "https://github.com/blackbearreloaded/ProsperoEden/releases/tag/v1.005.000",
+        "assets": [
+          {
+            "name": "ProsperoEden-v1.005.000.zip",
+            "url": "https://github.com/Swordpdf/ProsperoEden/releases/download/v1.005.000/ProsperoEden-v1.005.000.zip"
+          },
+          {
+            "name": "SHA256SUMS",
+            "url": "https://github.com/Swordpdf/ProsperoEden/releases/download/v1.005.000/SHA256SUMS"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99010.json",
+      "record": {
+        "titleid": "PPSA99010",
+        "name": "vkQuake",
+        "category": "pc-ports",
+        "license": "GPL-3.0-or-later",
+        "version": "1.0",
+        "source_repo": "https://github.com/mihawk-99/PS5_vkQuake",
+        "artifact_url": "https://github.com/mihawk-99/PS5_vkQuake/releases/download/1.0/PPSA99010.zip",
+        "sha256": "aeabf17512eada3e96c18fb2d842b7e077ffea2fbb65caf93276cc0b2797b0e6"
+      },
+      "check": {
+        "path": "apps/PPSA99010.json",
+        "status": "verified",
+        "repo": "mihawk-99/PS5_vkQuake",
+        "tag": "1.0",
+        "filename": "PPSA99010.zip",
+        "release_url": "https://github.com/mihawk-99/PS5_vkQuake/releases/tag/1.0",
+        "assets": [
+          {
+            "name": "PPSA99010.zip",
+            "url": "https://github.com/mihawk-99/PS5_vkQuake/releases/download/1.0/PPSA99010.zip"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99015.json",
+      "record": {
+        "titleid": "PPSA99015",
+        "name": "Media Player Classic PS5",
+        "category": "video",
+        "license": "GPL-3.0",
+        "version": "1.2.3",
+        "source_repo": "https://github.com/MisterTemaki/MediaPlayerClassicPS5",
+        "artifact_url": "https://github.com/MisterTemaki/MediaPlayerClassicPS5/releases/download/v1.2.3/MediaPlayerClassicPS5-v1.2.3-PPSA99015.zip",
+        "sha256": "c0d0324735867aa1b921f34709c3e1a81758d2ce2d099373d2d11cd5d912df76"
+      },
+      "check": {
+        "path": "apps/PPSA99015.json",
+        "status": "verified",
+        "repo": "MisterTemaki/MediaPlayerClassicPS5",
+        "tag": "v1.2.3",
+        "filename": "MediaPlayerClassicPS5-v1.2.3-PPSA99015.zip",
+        "release_url": "https://github.com/MisterTemaki/MediaPlayerClassicPS5/releases/tag/v1.2.3",
+        "assets": [
+          {
+            "name": "MediaPlayerClassicPS5-v1.2.3-PPSA99015.zip",
+            "url": "https://github.com/MisterTemaki/MediaPlayerClassicPS5/releases/download/v1.2.3/MediaPlayerClassicPS5-v1.2.3-PPSA99015.zip"
+          },
+          {
+            "name": "MediaPlayerClassicPS5-v1.2.3.elf",
+            "url": "https://github.com/MisterTemaki/MediaPlayerClassicPS5/releases/download/v1.2.3/MediaPlayerClassicPS5-v1.2.3.elf"
+          },
+          {
+            "name": "mpc-ps5-v1.2.3-src.zip",
+            "url": "https://github.com/MisterTemaki/MediaPlayerClassicPS5/releases/download/v1.2.3/mpc-ps5-v1.2.3-src.zip"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99030.json",
+      "record": {
+        "titleid": "PPSA99030",
+        "name": "Forever Launcher",
+        "category": "utilities",
+        "license": "GPL-3.0",
+        "version": "01.000.014",
+        "source_repo": "https://github.com/bizkut/ps5-forever",
+        "artifact_url": "https://github.com/bizkut/ps5-forever/releases/download/01.000.014/PPSA99030.zip",
+        "sha256": "6624e047aa8aed5f5c35e73f5ab3f81189446cc318f3e67a6da3d8947a5b90ec"
+      },
+      "check": {
+        "path": "apps/PPSA99030.json",
+        "status": "verified",
+        "repo": "bizkut/ps5-forever",
+        "tag": "01.000.014",
+        "filename": "PPSA99030.zip",
+        "release_url": "https://github.com/bizkut/ps5-forever/releases/tag/01.000.014",
+        "assets": [
+          {
+            "name": "PPSA99030.zip",
+            "url": "https://github.com/bizkut/ps5-forever/releases/download/01.000.014/PPSA99030.zip"
+          },
+          {
+            "name": "PPSA99030.zip.sha256",
+            "url": "https://github.com/bizkut/ps5-forever/releases/download/01.000.014/PPSA99030.zip.sha256"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99039.json",
+      "record": {
+        "titleid": "PPSA99039",
+        "name": "EVO Player",
+        "category": "video",
+        "license": "GPL-3.0",
+        "version": "0.12.0",
+        "source_repo": "https://github.com/sainsaji/EVO-PLAYER-PS5",
+        "artifact_url": "https://github.com/sainsaji/EVO-PLAYER-PS5/releases/download/v0.12.0/EVOPlayer-v0.12.0-PPSA99039.zip",
+        "sha256": "98788be10b3d2fe2909f6e353e2e09409ad29e46c2bc37112e2f35d9baa00d8a"
+      },
+      "check": {
+        "path": "apps/PPSA99039.json",
+        "status": "verified",
+        "repo": "sainsaji/EVO-PLAYER-PS5",
+        "tag": "v0.12.0",
+        "filename": "EVOPlayer-v0.12.0-PPSA99039.zip",
+        "release_url": "https://github.com/sainsaji/EVO-PLAYER-PS5/releases/tag/v0.12.0",
+        "assets": [
+          {
+            "name": "EVOPlayer-v0.12.0-PPSA99039.ffpfsc",
+            "url": "https://github.com/sainsaji/EVO-PLAYER-PS5/releases/download/v0.12.0/EVOPlayer-v0.12.0-PPSA99039.ffpfsc"
+          },
+          {
+            "name": "EVOPlayer-v0.12.0-PPSA99039.zip",
+            "url": "https://github.com/sainsaji/EVO-PLAYER-PS5/releases/download/v0.12.0/EVOPlayer-v0.12.0-PPSA99039.zip"
+          },
+          {
+            "name": "SHA256SUMS.txt",
+            "url": "https://github.com/sainsaji/EVO-PLAYER-PS5/releases/download/v0.12.0/SHA256SUMS.txt"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99051.json",
+      "record": {
+        "titleid": "PPSA99051",
+        "name": "Surround Sound Studio",
+        "category": "tools",
+        "license": "GPL-3.0",
+        "version": "01.000.003",
+        "source_repo": "https://github.com/sainsaji/PS5-Audio-Passthrough-Research",
+        "artifact_url": "https://github.com/sainsaji/PS5-Audio-Passthrough-Research/releases/download/01.000.003/PPSA99051.zip",
+        "sha256": "fcb4e3cb794d36b30b9dee9ed86f0eea317e7c0071d193c18d9a07734e7beb69"
+      },
+      "check": {
+        "path": "apps/PPSA99051.json",
+        "status": "verified",
+        "repo": "sainsaji/PS5-Audio-Passthrough-Research",
+        "tag": "01.000.003",
+        "filename": "PPSA99051.zip",
+        "release_url": "https://github.com/sainsaji/PS5-Audio-Passthrough-Research/releases/tag/01.000.003",
+        "assets": [
+          {
+            "name": "PPSA99051.ffpfsc",
+            "url": "https://github.com/sainsaji/PS5-Audio-Passthrough-Research/releases/download/01.000.003/PPSA99051.ffpfsc"
+          },
+          {
+            "name": "PPSA99051.zip",
+            "url": "https://github.com/sainsaji/PS5-Audio-Passthrough-Research/releases/download/01.000.003/PPSA99051.zip"
+          },
+          {
+            "name": "SHA256SUMS",
+            "url": "https://github.com/sainsaji/PS5-Audio-Passthrough-Research/releases/download/01.000.003/SHA256SUMS"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99061.json",
+      "record": {
+        "titleid": "PPSA99061",
+        "name": "Spot5",
+        "category": "music",
+        "license": "GPL-3.0-or-later",
+        "version": "1.1.0",
+        "source_repo": "https://github.com/abhi245y/spot5",
+        "artifact_url": "https://github.com/abhi245y/spot5/releases/download/v1.1.0/PPSA99061.zip",
+        "sha256": "af10d43f274db036ba2835dbc5f429cab416c028a6247023c8f6bd7076600c6c"
+      },
+      "check": {
+        "path": "apps/PPSA99061.json",
+        "status": "verified",
+        "repo": "abhi245y/spot5",
+        "tag": "v1.1.0",
+        "filename": "PPSA99061.zip",
+        "release_url": "https://github.com/abhi245y/spot5/releases/tag/v1.1.0",
+        "assets": [
+          {
+            "name": "PPSA99061.zip",
+            "url": "https://github.com/abhi245y/spot5/releases/download/v1.1.0/PPSA99061.zip"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99082.json",
+      "record": {
+        "titleid": "PPSA99082",
+        "name": "OpenNOW PS5 - Prototype",
+        "category": "streaming",
+        "license": "GPL-3.0",
+        "version": "0.1",
+        "source_repo": "https://github.com/Portablelle/OpenNOW-PS5",
+        "artifact_url": "https://github.com/Portablelle/OpenNOW-PS5/releases/download/0.1/OpenNOW-PS5-0.1.zip",
+        "sha256": "34c773dedda97d1503144eee50f9234ff1b4170a6ff68ed0bb0f59dd2ba87309"
+      },
+      "check": {
+        "path": "apps/PPSA99082.json",
+        "status": "verified",
+        "repo": "Portablelle/OpenNOW-PS5",
+        "tag": "0.1",
+        "filename": "OpenNOW-PS5-0.1.zip",
+        "release_url": "https://github.com/Portablelle/OpenNOW-PS5/releases/tag/0.1",
+        "assets": [
+          {
+            "name": "OpenNOW-PS5-0.1-source.tar.gz",
+            "url": "https://github.com/Portablelle/OpenNOW-PS5/releases/download/0.1/OpenNOW-PS5-0.1-source.tar.gz"
+          },
+          {
+            "name": "OpenNOW-PS5-0.1.manifest.json",
+            "url": "https://github.com/Portablelle/OpenNOW-PS5/releases/download/0.1/OpenNOW-PS5-0.1.manifest.json"
+          },
+          {
+            "name": "OpenNOW-PS5-0.1.zip",
+            "url": "https://github.com/Portablelle/OpenNOW-PS5/releases/download/0.1/OpenNOW-PS5-0.1.zip"
+          },
+          {
+            "name": "SHA256SUMS",
+            "url": "https://github.com/Portablelle/OpenNOW-PS5/releases/download/0.1/SHA256SUMS"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99109.json",
+      "record": {
+        "titleid": "PPSA99109",
+        "name": "Prospero Explorer",
+        "category": "utilities",
+        "license": "GPL-3.0",
+        "version": "1.0",
+        "source_repo": "https://github.com/SvenGDK/Prospero-Explorer",
+        "artifact_url": "https://github.com/SvenGDK/Prospero-Explorer/releases/download/v1.0/ProsperoExplorer-v1.zip",
+        "sha256": "3eaee706e8aca772fce734b494e56729ddedec218597ab9baf940094a0cdfc7e"
+      },
+      "check": {
+        "path": "apps/PPSA99109.json",
+        "status": "verified",
+        "repo": "SvenGDK/Prospero-Explorer",
+        "tag": "v1.0",
+        "filename": "ProsperoExplorer-v1.zip",
+        "release_url": "https://github.com/SvenGDK/Prospero-Explorer/releases/tag/v1.0",
+        "assets": [
+          {
+            "name": "ProsperoExplorer-v1.zip",
+            "url": "https://github.com/SvenGDK/Prospero-Explorer/releases/download/v1.0/ProsperoExplorer-v1.zip"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99110.json",
+      "record": {
+        "titleid": "PPSA99110",
+        "name": "Prospero Multi Tools",
+        "category": "utilities",
+        "license": "GPL-3.0",
+        "version": "1",
+        "source_repo": "https://github.com/SvenGDK/Prospero-Multi-Tools",
+        "artifact_url": "https://github.com/SvenGDK/Prospero-Multi-Tools/releases/download/v1/ProsperoMultiTools.zip",
+        "sha256": "0e7c60d0e860cd0cafb939f668ccae57f53503f2c2371b4193a81ab306346d6b"
+      },
+      "check": {
+        "path": "apps/PPSA99110.json",
+        "status": "verified",
+        "repo": "SvenGDK/Prospero-Multi-Tools",
+        "tag": "v1",
+        "filename": "ProsperoMultiTools.zip",
+        "release_url": "https://github.com/SvenGDK/Prospero-Multi-Tools/releases/tag/v1",
+        "assets": [
+          {
+            "name": "EmulatorPack.zip",
+            "url": "https://github.com/SvenGDK/Prospero-Multi-Tools/releases/download/v1/EmulatorPack.zip"
+          },
+          {
+            "name": "ProsperoMultiTools.zip",
+            "url": "https://github.com/SvenGDK/Prospero-Multi-Tools/releases/download/v1/ProsperoMultiTools.zip"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99141.json",
+      "record": {
+        "titleid": "PPSA99141",
+        "name": "Mortalfin",
+        "category": "video",
+        "license": "GPL-3.0",
+        "version": "1.0.0-beta.5",
+        "source_repo": "https://github.com/mortaljinx/mortalfin",
+        "artifact_url": "https://github.com/mortaljinx/mortalfin/releases/download/1.0.0-beta.5/Mortalfin-1.0.0-beta.5.zip",
+        "sha256": "acaba3bb0d14acbff26a8a66982e1c2727e2fe342d8078e36ecdb69c1e49abfe"
+      },
+      "check": {
+        "path": "apps/PPSA99141.json",
+        "status": "verified",
+        "repo": "mortaljinx/mortalfin",
+        "tag": "1.0.0-beta.5",
+        "filename": "Mortalfin-1.0.0-beta.5.zip",
+        "release_url": "https://github.com/mortaljinx/mortalfin/releases/tag/1.0.0-beta.5",
+        "assets": [
+          {
+            "name": "Mortalfin-1.0.0-beta.5.zip",
+            "url": "https://github.com/mortaljinx/mortalfin/releases/download/1.0.0-beta.5/Mortalfin-1.0.0-beta.5.zip"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99142.json",
+      "record": {
+        "titleid": "PPSA99142",
+        "name": "Seedee5",
+        "category": "emulators",
+        "license": "GPL-3.0",
+        "version": "1.21",
+        "source_repo": "https://github.com/mortaljinx/Seedee5",
+        "artifact_url": "https://github.com/mortaljinx/Seedee5/releases/download/v1.21/Seedee5-1.21.zip",
+        "sha256": "df06ad7a4c0b03f0dc80a9251138d613793f5425bc4a6ab8cac3b02188b3efbb"
+      },
+      "check": {
+        "path": "apps/PPSA99142.json",
+        "status": "verified",
+        "repo": "mortaljinx/Seedee5",
+        "tag": "v1.21",
+        "filename": "Seedee5-1.21.zip",
+        "release_url": "https://github.com/mortaljinx/Seedee5/releases/tag/v1.21",
+        "assets": [
+          {
+            "name": "libnfs-57adf647289d-changes.patch",
+            "url": "https://github.com/mortaljinx/Seedee5/releases/download/v1.21/libnfs-57adf647289d-changes.patch"
+          },
+          {
+            "name": "libnfs-57adf647289d-source.tar.gz",
+            "url": "https://github.com/mortaljinx/Seedee5/releases/download/v1.21/libnfs-57adf647289d-source.tar.gz"
+          },
+          {
+            "name": "same_cdi-ff9bb99a50d5-changes.patch",
+            "url": "https://github.com/mortaljinx/Seedee5/releases/download/v1.21/same_cdi-ff9bb99a50d5-changes.patch"
+          },
+          {
+            "name": "same_cdi-ff9bb99a50d5-source.tar.gz",
+            "url": "https://github.com/mortaljinx/Seedee5/releases/download/v1.21/same_cdi-ff9bb99a50d5-source.tar.gz"
+          },
+          {
+            "name": "Seedee5-1.21-source.tar.gz",
+            "url": "https://github.com/mortaljinx/Seedee5/releases/download/v1.21/Seedee5-1.21-source.tar.gz"
+          },
+          {
+            "name": "Seedee5-1.21.zip",
+            "url": "https://github.com/mortaljinx/Seedee5/releases/download/v1.21/Seedee5-1.21.zip"
+          },
+          {
+            "name": "SHA256SUMS",
+            "url": "https://github.com/mortaljinx/Seedee5/releases/download/v1.21/SHA256SUMS"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99169.json",
+      "record": {
+        "titleid": "PPSA99169",
+        "name": "RetroArch",
+        "category": "emulators",
+        "license": "GPL-3.0-or-later",
+        "version": "3.0.0-beta-3",
+        "source_repo": "https://github.com/mihawk-99/PS5_RetroArch",
+        "artifact_url": "https://github.com/mihawk-99/PS5_RetroArch/releases/download/v3.0.0-beta-3/PS5_RetroArch-v3.0.0-beta-3.zip",
+        "sha256": "121786b162652dfe08a0d3fc98015e57d782d06ba6680f4d032b078e6a621a5a"
+      },
+      "check": {
+        "path": "apps/PPSA99169.json",
+        "status": "verified",
+        "repo": "mihawk-99/PS5_RetroArch",
+        "tag": "v3.0.0-beta-3",
+        "filename": "PS5_RetroArch-v3.0.0-beta-3.zip",
+        "release_url": "https://github.com/mihawk-99/PS5_RetroArch/releases/tag/v3.0.0-beta-3",
+        "assets": [
+          {
+            "name": "PS5_RetroArch-v3.0.0-beta-3.zip",
+            "url": "https://github.com/mihawk-99/PS5_RetroArch/releases/download/v3.0.0-beta-3/PS5_RetroArch-v3.0.0-beta-3.zip"
+          },
+          {
+            "name": "PS5_RetroArch-v3.0.0-beta-3.zip.sha256",
+            "url": "https://github.com/mihawk-99/PS5_RetroArch/releases/download/v3.0.0-beta-3/PS5_RetroArch-v3.0.0-beta-3.zip.sha256"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99186.json",
+      "record": {
+        "titleid": "PPSA99186",
+        "name": "ProsperoEden Switch UI",
+        "category": "emulators",
+        "license": "GPL-3.0",
+        "version": null,
+        "source_repo": null,
+        "artifact_url": null,
+        "sha256": null
+      },
+      "check": {
+        "path": "apps/PPSA99186.json",
+        "status": "unpublished"
+      }
+    },
+    {
+      "path": "apps/PPSA99203.json",
+      "record": {
+        "titleid": "PPSA99203",
+        "name": "PS5SX2",
+        "category": "emulators",
+        "license": "GPL-3.0",
+        "version": "vk-285-171",
+        "source_repo": "https://github.com/Swordpdf/PS5SX2",
+        "artifact_url": "https://github.com/Swordpdf/PS5SX2/releases/download/vk-285-171/PS5SX2-vk-285-171.zip",
+        "sha256": "226ac24866f0b94566c0680c3b99c0d5abfe8030723f5b28dae20af039c76963"
+      },
+      "check": {
+        "path": "apps/PPSA99203.json",
+        "status": "verified",
+        "repo": "Swordpdf/PS5SX2",
+        "tag": "vk-285-171",
+        "filename": "PS5SX2-vk-285-171.zip",
+        "release_url": "https://github.com/Swordpdf/PS5SX2/releases/tag/vk-285-171",
+        "assets": [
+          {
+            "name": "PS5SX2-vk-285-171.zip",
+            "url": "https://github.com/Swordpdf/PS5SX2/releases/download/vk-285-171/PS5SX2-vk-285-171.zip"
+          },
+          {
+            "name": "PS5SX2Installer.elf",
+            "url": "https://github.com/Swordpdf/PS5SX2/releases/download/vk-285-171/PS5SX2Installer.elf"
+          },
+          {
+            "name": "PS5SXHelper-no-data-mount.elf",
+            "url": "https://github.com/Swordpdf/PS5SX2/releases/download/vk-285-171/PS5SXHelper-no-data-mount.elf"
+          },
+          {
+            "name": "PS5SXHelper.elf",
+            "url": "https://github.com/Swordpdf/PS5SX2/releases/download/vk-285-171/PS5SXHelper.elf"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99247.json",
+      "record": {
+        "titleid": "PPSA99247",
+        "name": "PSFlyCast",
+        "category": "emulators",
+        "license": "GPL-2.0-only",
+        "version": "1.2.0",
+        "source_repo": "https://github.com/Press5elect/PSFlycast",
+        "artifact_url": "https://github.com/Press5elect/PSFlycast/releases/download/v1.2.0/PSFlyCast-v1.2.0.zip",
+        "sha256": "4685e6fe23c80c860e45202d3dbba6bc31f6a3e8e331383e810db6d2b8787c06"
+      },
+      "check": {
+        "path": "apps/PPSA99247.json",
+        "status": "verified",
+        "repo": "Press5elect/PSFlycast",
+        "tag": "v1.2.0",
+        "filename": "PSFlyCast-v1.2.0.zip",
+        "release_url": "https://github.com/Press5elect/PSFlycast/releases/tag/v1.2.0",
+        "assets": [
+          {
+            "name": "ffmpeg-946fcce07b6d.tar.xz",
+            "url": "https://github.com/Press5elect/PSFlycast/releases/download/v1.2.0/ffmpeg-946fcce07b6d.tar.xz"
+          },
+          {
+            "name": "libretro-database-cht-dreamcast-d5bae90b2201.tar.xz",
+            "url": "https://github.com/Press5elect/PSFlycast/releases/download/v1.2.0/libretro-database-cht-dreamcast-d5bae90b2201.tar.xz"
+          },
+          {
+            "name": "libsmb2-7e4ff97cf00e.tar.xz",
+            "url": "https://github.com/Press5elect/PSFlycast/releases/download/v1.2.0/libsmb2-7e4ff97cf00e.tar.xz"
+          },
+          {
+            "name": "PS5_Mesa-72a093bb4593.tar.xz",
+            "url": "https://github.com/Press5elect/PSFlycast/releases/download/v1.2.0/PS5_Mesa-72a093bb4593.tar.xz"
+          },
+          {
+            "name": "PS5_PayloadSDK-b5efad528e0a.tar.xz",
+            "url": "https://github.com/Press5elect/PSFlycast/releases/download/v1.2.0/PS5_PayloadSDK-b5efad528e0a.tar.xz"
+          },
+          {
+            "name": "PS5_PayloadSDK-b83202be73e9.tar.xz",
+            "url": "https://github.com/Press5elect/PSFlycast/releases/download/v1.2.0/PS5_PayloadSDK-b83202be73e9.tar.xz"
+          },
+          {
+            "name": "PS5_Vulkan-953189e39a9b.tar.xz",
+            "url": "https://github.com/Press5elect/PSFlycast/releases/download/v1.2.0/PS5_Vulkan-953189e39a9b.tar.xz"
+          },
+          {
+            "name": "PSFlyCast-v1.2.0-source.tar.xz",
+            "url": "https://github.com/Press5elect/PSFlycast/releases/download/v1.2.0/PSFlyCast-v1.2.0-source.tar.xz"
+          },
+          {
+            "name": "PSFlyCast-v1.2.0.zip",
+            "url": "https://github.com/Press5elect/PSFlycast/releases/download/v1.2.0/PSFlyCast-v1.2.0.zip"
+          },
+          {
+            "name": "SHA256SUMS",
+            "url": "https://github.com/Press5elect/PSFlycast/releases/download/v1.2.0/SHA256SUMS"
+          },
+          {
+            "name": "SOURCES.txt",
+            "url": "https://github.com/Press5elect/PSFlycast/releases/download/v1.2.0/SOURCES.txt"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99248.json",
+      "record": {
+        "titleid": "PPSA99248",
+        "name": "PSSwanStation",
+        "category": "emulators",
+        "license": "GPL-3.0-or-later",
+        "version": "build24",
+        "source_repo": "https://github.com/Press5elect/PSSwanStation",
+        "artifact_url": "https://github.com/Press5elect/PSSwanStation/releases/download/build24/PSSwanStation-PS5-PPSA99248-build24.zip",
+        "sha256": "7366078ce4f8c31fb6137ab9059c2886902315d432ee56662ed6ba246b32a53f"
+      },
+      "check": {
+        "path": "apps/PPSA99248.json",
+        "status": "verified",
+        "repo": "Press5elect/PSSwanStation",
+        "tag": "build24",
+        "filename": "PSSwanStation-PS5-PPSA99248-build24.zip",
+        "release_url": "https://github.com/Press5elect/PSSwanStation/releases/tag/build24",
+        "assets": [
+          {
+            "name": "ffmpeg-946fcce07b6d.tar.gz",
+            "url": "https://github.com/Press5elect/PSSwanStation/releases/download/build24/ffmpeg-946fcce07b6d.tar.gz"
+          },
+          {
+            "name": "gamedb-bf825e3ec48d.tar.gz",
+            "url": "https://github.com/Press5elect/PSSwanStation/releases/download/build24/gamedb-bf825e3ec48d.tar.gz"
+          },
+          {
+            "name": "glslang-e1b562a8bed2.tar.gz",
+            "url": "https://github.com/Press5elect/PSSwanStation/releases/download/build24/glslang-e1b562a8bed2.tar.gz"
+          },
+          {
+            "name": "lapy-c3bdfe3a3993.tar.gz",
+            "url": "https://github.com/Press5elect/PSSwanStation/releases/download/build24/lapy-c3bdfe3a3993.tar.gz"
+          },
+          {
+            "name": "libnfs-2d368ade3e30.tar.gz",
+            "url": "https://github.com/Press5elect/PSSwanStation/releases/download/build24/libnfs-2d368ade3e30.tar.gz"
+          },
+          {
+            "name": "libretro-cheats-bf825e3ec48d.tar.gz",
+            "url": "https://github.com/Press5elect/PSSwanStation/releases/download/build24/libretro-cheats-bf825e3ec48d.tar.gz"
+          },
+          {
+            "name": "libsmb2-437d579de843.tar.gz",
+            "url": "https://github.com/Press5elect/PSSwanStation/releases/download/build24/libsmb2-437d579de843.tar.gz"
+          },
+          {
+            "name": "mbedtls-068ff080b369.tar.gz",
+            "url": "https://github.com/Press5elect/PSSwanStation/releases/download/build24/mbedtls-068ff080b369.tar.gz"
+          },
+          {
+            "name": "platform-b5efad528e0a.tar.gz",
+            "url": "https://github.com/Press5elect/PSSwanStation/releases/download/build24/platform-b5efad528e0a.tar.gz"
+          },
+          {
+            "name": "ps5-vkhomebrewui-ea00f4febd38.tar.gz",
+            "url": "https://github.com/Press5elect/PSSwanStation/releases/download/build24/ps5-vkhomebrewui-ea00f4febd38.tar.gz"
+          },
+          {
+            "name": "ps5-vulkan-c8f6c948846f.tar.gz",
+            "url": "https://github.com/Press5elect/PSSwanStation/releases/download/build24/ps5-vulkan-c8f6c948846f.tar.gz"
+          },
+          {
+            "name": "psswanstation-c3f9b279146b.tar.gz",
+            "url": "https://github.com/Press5elect/PSSwanStation/releases/download/build24/psswanstation-c3f9b279146b.tar.gz"
+          },
+          {
+            "name": "PSSwanStation-PS5-PPSA99248-build24.zip",
+            "url": "https://github.com/Press5elect/PSSwanStation/releases/download/build24/PSSwanStation-PS5-PPSA99248-build24.zip"
+          },
+          {
+            "name": "PSSwanStation-PS5-PPSA99248-build24.zip.sha256",
+            "url": "https://github.com/Press5elect/PSSwanStation/releases/download/build24/PSSwanStation-PS5-PPSA99248-build24.zip.sha256"
+          },
+          {
+            "name": "radv-14c2f4498512.tar.gz",
+            "url": "https://github.com/Press5elect/PSSwanStation/releases/download/build24/radv-14c2f4498512.tar.gz"
+          },
+          {
+            "name": "radv-sdk-b83202be73e9.tar.gz",
+            "url": "https://github.com/Press5elect/PSSwanStation/releases/download/build24/radv-sdk-b83202be73e9.tar.gz"
+          },
+          {
+            "name": "rcheevos-1433173220a7.tar.gz",
+            "url": "https://github.com/Press5elect/PSSwanStation/releases/download/build24/rcheevos-1433173220a7.tar.gz"
+          },
+          {
+            "name": "SHA256SUMS",
+            "url": "https://github.com/Press5elect/PSSwanStation/releases/download/build24/SHA256SUMS"
+          },
+          {
+            "name": "slang-shaders-e1d75632a205.tar.gz",
+            "url": "https://github.com/Press5elect/PSSwanStation/releases/download/build24/slang-shaders-e1d75632a205.tar.gz"
+          },
+          {
+            "name": "SOURCES.txt",
+            "url": "https://github.com/Press5elect/PSSwanStation/releases/download/build24/SOURCES.txt"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99288.json",
+      "record": {
+        "titleid": "PPSA99288",
+        "name": "Nuvio Max'd",
+        "category": "video",
+        "license": "GPL-3.0",
+        "version": "0.5.34-native-experimental",
+        "source_repo": "https://github.com/HandshakeHackin/Nuvio-maxd-releases",
+        "artifact_url": "https://github.com/HandshakeHackin/Nuvio-maxd-releases/releases/download/v0.5.34-native-experimental/PPSA99288.zip",
+        "sha256": "88173ce44ee4e0f7145d241a539deb767b9fc05d60b0d1d71a77194ff623b46d"
+      },
+      "check": {
+        "path": "apps/PPSA99288.json",
+        "status": "verified",
+        "repo": "HandshakeHackin/Nuvio-maxd-releases",
+        "tag": "v0.5.34-native-experimental",
+        "filename": "PPSA99288.zip",
+        "release_url": "https://github.com/HandshakeHackin/Nuvio-maxd-releases/releases/tag/v0.5.34-native-experimental",
+        "assets": [
+          {
+            "name": "catalog-scan.log",
+            "url": "https://github.com/HandshakeHackin/Nuvio-maxd-releases/releases/download/v0.5.34-native-experimental/catalog-scan.log"
+          },
+          {
+            "name": "native-validation.json",
+            "url": "https://github.com/HandshakeHackin/Nuvio-maxd-releases/releases/download/v0.5.34-native-experimental/native-validation.json"
+          },
+          {
+            "name": "NuvioMaxd-0.5.34-native.ffpfsc",
+            "url": "https://github.com/HandshakeHackin/Nuvio-maxd-releases/releases/download/v0.5.34-native-experimental/NuvioMaxd-0.5.34-native.ffpfsc"
+          },
+          {
+            "name": "NuvioMaxd-0.5.34-source.tar.gz",
+            "url": "https://github.com/HandshakeHackin/Nuvio-maxd-releases/releases/download/v0.5.34-native-experimental/NuvioMaxd-0.5.34-source.tar.gz"
+          },
+          {
+            "name": "PPSA99288.zip",
+            "url": "https://github.com/HandshakeHackin/Nuvio-maxd-releases/releases/download/v0.5.34-native-experimental/PPSA99288.zip"
+          },
+          {
+            "name": "RELEASE_NOTES.md",
+            "url": "https://github.com/HandshakeHackin/Nuvio-maxd-releases/releases/download/v0.5.34-native-experimental/RELEASE_NOTES.md"
+          },
+          {
+            "name": "SHA256SUMS",
+            "url": "https://github.com/HandshakeHackin/Nuvio-maxd-releases/releases/download/v0.5.34-native-experimental/SHA256SUMS"
+          },
+          {
+            "name": "TESTING.txt",
+            "url": "https://github.com/HandshakeHackin/Nuvio-maxd-releases/releases/download/v0.5.34-native-experimental/TESTING.txt"
+          },
+          {
+            "name": "TEST_RESULTS.txt",
+            "url": "https://github.com/HandshakeHackin/Nuvio-maxd-releases/releases/download/v0.5.34-native-experimental/TEST_RESULTS.txt"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99300.json",
+      "record": {
+        "titleid": "PPSA99300",
+        "name": "Spider-Man: Edge of Time",
+        "category": "console-ports",
+        "license": "MIT",
+        "version": "V.1.1.1",
+        "source_repo": "https://github.com/KongaTime/PS5_EdgeOfTimeTitle",
+        "artifact_url": "https://github.com/KongaTime/PS5_EdgeOfTimeTitle/releases/download/V.1.1.1/Spider.Man.Edge.Of.Time.V.1.1.1.zip",
+        "sha256": "efed4c5f81c9ae9160e3830bd7385e96f89e499b0135d7655c762f80399b37ba"
+      },
+      "check": {
+        "path": "apps/PPSA99300.json",
+        "status": "verified",
+        "repo": "KongaTime/PS5_EdgeOfTimeTitle",
+        "tag": "V.1.1.1",
+        "filename": "Spider.Man.Edge.Of.Time.V.1.1.1.zip",
+        "release_url": "https://github.com/KongaTime/PS5_EdgeOfTimeTitle/releases/tag/V.1.1.1",
+        "assets": [
+          {
+            "name": "Spider.Man.Edge.Of.Time.V.1.1.1.zip",
+            "url": "https://github.com/KongaTime/PS5_EdgeOfTimeTitle/releases/download/V.1.1.1/Spider.Man.Edge.Of.Time.V.1.1.1.zip"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99303.json",
+      "record": {
+        "titleid": "PPSA99303",
+        "name": "Quake3e",
+        "category": "pc-ports",
+        "license": "GPL-3.0",
+        "version": "1.2.0",
+        "source_repo": "https://github.com/griches/PS5_Quake3e",
+        "artifact_url": "https://github.com/griches/PS5_Quake3e/releases/download/v1.2.0/Quake3-PS5-v1.2.0.zip",
+        "sha256": "ce5ac7291cf90bfbd167a4b2f55cc071879f8ef45ade054227ac9c5bfe155cbe"
+      },
+      "check": {
+        "path": "apps/PPSA99303.json",
+        "status": "verified",
+        "repo": "griches/PS5_Quake3e",
+        "tag": "v1.2.0",
+        "filename": "Quake3-PS5-v1.2.0.zip",
+        "release_url": "https://github.com/griches/PS5_Quake3e/releases/tag/v1.2.0",
+        "assets": [
+          {
+            "name": "Quake3-PS5-v1.2.0.zip",
+            "url": "https://github.com/griches/PS5_Quake3e/releases/download/v1.2.0/Quake3-PS5-v1.2.0.zip"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99305.json",
+      "record": {
+        "titleid": "PPSA99305",
+        "name": "Dusklight",
+        "category": "console-ports",
+        "license": "GPL-3.0",
+        "version": "1.0.0",
+        "source_repo": "https://github.com/griches/PS5_Dusklight",
+        "artifact_url": "https://github.com/griches/PS5_Dusklight/releases/download/v1.0.0/Dusklight-PS5-v1.0.0.zip",
+        "sha256": "343f8829803ecba03e8cf3168f543543771e6511dfec4e6761c60bb6f4ab8e8d"
+      },
+      "check": {
+        "path": "apps/PPSA99305.json",
+        "status": "verified",
+        "repo": "griches/PS5_Dusklight",
+        "tag": "v1.0.0",
+        "filename": "Dusklight-PS5-v1.0.0.zip",
+        "release_url": "https://github.com/griches/PS5_Dusklight/releases/tag/v1.0.0",
+        "assets": [
+          {
+            "name": "Dusklight-PS5-v1.0.0.zip",
+            "url": "https://github.com/griches/PS5_Dusklight/releases/download/v1.0.0/Dusklight-PS5-v1.0.0.zip"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99309.json",
+      "record": {
+        "titleid": "PPSA99309",
+        "name": "Wind Waker",
+        "category": "console-ports",
+        "license": "GPL-3.0",
+        "version": "1.0.3",
+        "source_repo": "https://github.com/griches/PS5_SwitchWaker",
+        "artifact_url": "https://github.com/griches/PS5_SwitchWaker/releases/download/v1.0.3/WindWaker-PS5-v1.0.3.zip",
+        "sha256": "441b71e09441518ce8357aeec3cb0f994d19dbf47b316cffa2d268cdca25fc10"
+      },
+      "check": {
+        "path": "apps/PPSA99309.json",
+        "status": "verified",
+        "repo": "griches/PS5_SwitchWaker",
+        "tag": "v1.0.3",
+        "filename": "WindWaker-PS5-v1.0.3.zip",
+        "release_url": "https://github.com/griches/PS5_SwitchWaker/releases/tag/v1.0.3",
+        "assets": [
+          {
+            "name": "WindWaker-PS5-v1.0.3.zip",
+            "url": "https://github.com/griches/PS5_SwitchWaker/releases/download/v1.0.3/WindWaker-PS5-v1.0.3.zip"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99310.json",
+      "record": {
+        "titleid": "PPSA99310",
+        "name": "Mario 64",
+        "category": "console-ports",
+        "license": "GPL-3.0",
+        "version": "1.0.1",
+        "source_repo": "https://github.com/griches/PS5_Ghostship",
+        "artifact_url": "https://github.com/griches/PS5_Ghostship/releases/download/v1.0.1/Mario64-PS5-v1.0.1.zip",
+        "sha256": "87ebee05437a3d28afe7c9fffd83bcc5d000e5fa5e0202e5c799ec2e8eac40fb"
+      },
+      "check": {
+        "path": "apps/PPSA99310.json",
+        "status": "verified",
+        "repo": "griches/PS5_Ghostship",
+        "tag": "v1.0.1",
+        "filename": "Mario64-PS5-v1.0.1.zip",
+        "release_url": "https://github.com/griches/PS5_Ghostship/releases/tag/v1.0.1",
+        "assets": [
+          {
+            "name": "Mario64-PS5-v1.0.1.zip",
+            "url": "https://github.com/griches/PS5_Ghostship/releases/download/v1.0.1/Mario64-PS5-v1.0.1.zip"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99312.json",
+      "record": {
+        "titleid": "PPSA99312",
+        "name": "Super Mario Sunshine",
+        "category": "console-ports",
+        "license": "GPL-3.0",
+        "version": "0.10.0",
+        "source_repo": "https://github.com/griches/PS5_Sunshine",
+        "artifact_url": "https://github.com/griches/PS5_Sunshine/releases/download/v0.10.0/Sunshine-PS5-v0.10.0.zip",
+        "sha256": "854c4a5d853ffb4e1061f76afd3bba2dd6cca0daa09ffe6dfadc38271042bb99"
+      },
+      "check": {
+        "path": "apps/PPSA99312.json",
+        "status": "verified",
+        "repo": "griches/PS5_Sunshine",
+        "tag": "v0.10.0",
+        "filename": "Sunshine-PS5-v0.10.0.zip",
+        "release_url": "https://github.com/griches/PS5_Sunshine/releases/tag/v0.10.0",
+        "assets": [
+          {
+            "name": "Sunshine-PS5-v0.10.0.zip",
+            "url": "https://github.com/griches/PS5_Sunshine/releases/download/v0.10.0/Sunshine-PS5-v0.10.0.zip"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99313.json",
+      "record": {
+        "titleid": "PPSA99313",
+        "name": "Doom 3 BFG",
+        "category": "pc-ports",
+        "license": "GPL-3.0",
+        "version": "1.0",
+        "source_repo": "https://github.com/griches/PS5_Doom3",
+        "artifact_url": "https://github.com/griches/PS5_Doom3/releases/download/v1.0/Doom3BFG-PS5-v1.0.zip",
+        "sha256": "f73a3870839fc1730ba389e29cd7a930def4132c29552543e8f10af1ae3364dc"
+      },
+      "check": {
+        "path": "apps/PPSA99313.json",
+        "status": "verified",
+        "repo": "griches/PS5_Doom3",
+        "tag": "v1.0",
+        "filename": "Doom3BFG-PS5-v1.0.zip",
+        "release_url": "https://github.com/griches/PS5_Doom3/releases/tag/v1.0",
+        "assets": [
+          {
+            "name": "Doom3BFG-PS5-v1.0.zip",
+            "url": "https://github.com/griches/PS5_Doom3/releases/download/v1.0/Doom3BFG-PS5-v1.0.zip"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99314.json",
+      "record": {
+        "titleid": "PPSA99314",
+        "name": "Eternal Darkness",
+        "category": "console-ports",
+        "license": "GPL-3.0",
+        "version": "0.9.3",
+        "source_repo": "https://github.com/griches/PS5_EternalDarkness",
+        "artifact_url": "https://github.com/griches/PS5_EternalDarkness/releases/download/v0.9.3/EternalDarkness-PS5-0.9.3.zip",
+        "sha256": "c27fbbe97676d134aafad749d325670cc380b23e21d966c25a1f040565c9f1a0"
+      },
+      "check": {
+        "path": "apps/PPSA99314.json",
+        "status": "verified",
+        "repo": "griches/PS5_EternalDarkness",
+        "tag": "v0.9.3",
+        "filename": "EternalDarkness-PS5-0.9.3.zip",
+        "release_url": "https://github.com/griches/PS5_EternalDarkness/releases/tag/v0.9.3",
+        "assets": [
+          {
+            "name": "EternalDarkness-PS5-0.9.3.zip",
+            "url": "https://github.com/griches/PS5_EternalDarkness/releases/download/v0.9.3/EternalDarkness-PS5-0.9.3.zip"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99320.json",
+      "record": {
+        "titleid": "PPSA99320",
+        "name": "Ship of Harkinian (Vulkan)",
+        "category": "console-ports",
+        "license": "GPL-3.0",
+        "version": "01.000.000",
+        "source_repo": "https://github.com/damiantw/PS5_Shipwright",
+        "artifact_url": "https://github.com/damiantw/PS5_Shipwright/releases/download/01.000.000/PPSA99320.zip",
+        "sha256": "82782f43c5951e0fd82b97d6580f60a75ee2d1d1ad74816594d1652bb72a0a24"
+      },
+      "check": {
+        "path": "apps/PPSA99320.json",
+        "status": "verified",
+        "repo": "damiantw/PS5_Shipwright",
+        "tag": "01.000.000",
+        "filename": "PPSA99320.zip",
+        "release_url": "https://github.com/damiantw/PS5_Shipwright/releases/tag/01.000.000",
+        "assets": [
+          {
+            "name": "PPSA99320.zip",
+            "url": "https://github.com/damiantw/PS5_Shipwright/releases/download/01.000.000/PPSA99320.zip"
+          },
+          {
+            "name": "PPSA99320.zip.sha256",
+            "url": "https://github.com/damiantw/PS5_Shipwright/releases/download/01.000.000/PPSA99320.zip.sha256"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99350.json",
+      "record": {
+        "titleid": "PPSA99350",
+        "name": "Steam Remote Play",
+        "category": "streaming",
+        "license": "GPL-3.0",
+        "version": "1.0.0",
+        "source_repo": "https://github.com/jmelovich/Steam-Link-PS5",
+        "artifact_url": "https://github.com/jmelovich/Steam-Link-PS5/releases/download/v1.0.0/PPSA99350.zip",
+        "sha256": "a955665b3b14a70e43fd55c9f333f4fd81854bb09155245e2e2593cb6e95fcd2"
+      },
+      "check": {
+        "path": "apps/PPSA99350.json",
+        "status": "verified",
+        "repo": "jmelovich/Steam-Link-PS5",
+        "tag": "v1.0.0",
+        "filename": "PPSA99350.zip",
+        "release_url": "https://github.com/jmelovich/Steam-Link-PS5/releases/tag/v1.0.0",
+        "assets": [
+          {
+            "name": "LICENSE",
+            "url": "https://github.com/jmelovich/Steam-Link-PS5/releases/download/v1.0.0/LICENSE"
+          },
+          {
+            "name": "PPSA99350.zip",
+            "url": "https://github.com/jmelovich/Steam-Link-PS5/releases/download/v1.0.0/PPSA99350.zip"
+          },
+          {
+            "name": "THIRD_PARTY_NOTICES.md",
+            "url": "https://github.com/jmelovich/Steam-Link-PS5/releases/download/v1.0.0/THIRD_PARTY_NOTICES.md"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99360.json",
+      "record": {
+        "titleid": "PPSA99360",
+        "name": "PS5CEMU-HAR",
+        "category": "emulators",
+        "license": "GPL-3.0",
+        "version": "4.0.1",
+        "source_repo": "https://github.com/premohq/PS5CEMU-HAR",
+        "artifact_url": "https://github.com/premohq/PS5CEMU-HAR/releases/download/v4.0.1/PS5CEMU-HAR-v4.0.1.zip",
+        "sha256": "5d441d73957276e0d2f92bd2f56c70e33020a75483075aaf03cea9ae05028816"
+      },
+      "check": {
+        "path": "apps/PPSA99360.json",
+        "status": "verified",
+        "repo": "premohq/PS5CEMU-HAR",
+        "tag": "v4.0.1",
+        "filename": "PS5CEMU-HAR-v4.0.1.zip",
+        "release_url": "https://github.com/premohq/PS5CEMU-HAR/releases/tag/v4.0.1",
+        "assets": [
+          {
+            "name": "PS5CEMU-HAR-v4.0.1.zip",
+            "url": "https://github.com/premohq/PS5CEMU-HAR/releases/download/v4.0.1/PS5CEMU-HAR-v4.0.1.zip"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99403.json",
+      "record": {
+        "titleid": "PPSA99403",
+        "name": "NFS Black Box",
+        "category": "pc-ports",
+        "license": "GPL-3.0",
+        "version": "01.000.000",
+        "source_repo": "https://github.com/lavavex/nfs-blackbox-ps5",
+        "artifact_url": "https://github.com/lavavex/nfs-blackbox-ps5/releases/download/01.000.000/PPSA99403.zip",
+        "sha256": "03a69011cfd999b0128799dfd15ae675a251ce79ae803c6230932619f40fe840"
+      },
+      "check": {
+        "path": "apps/PPSA99403.json",
+        "status": "verified",
+        "repo": "lavavex/nfs-blackbox-ps5",
+        "tag": "01.000.000",
+        "filename": "PPSA99403.zip",
+        "release_url": "https://github.com/lavavex/nfs-blackbox-ps5/releases/tag/01.000.000",
+        "assets": [
+          {
+            "name": "PPSA99403.zip",
+            "url": "https://github.com/lavavex/nfs-blackbox-ps5/releases/download/01.000.000/PPSA99403.zip"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99420.json",
+      "record": {
+        "titleid": "PPSA99420",
+        "name": "PS5MC",
+        "category": "video",
+        "license": "GPL-2.0-or-later",
+        "version": "1.2",
+        "source_repo": "https://github.com/VivaLaVent/PS5MC",
+        "artifact_url": "https://github.com/VivaLaVent/PS5MC/releases/download/1.2/PS5MC-1.2-kodi22-PPSA99420.zip",
+        "sha256": "5a9eeff4a0024a341a4924b8d283fe65b4ff94d7f5dbea446c8a677c4db157b6"
+      },
+      "check": {
+        "path": "apps/PPSA99420.json",
+        "status": "verified",
+        "repo": "VivaLaVent/PS5MC",
+        "tag": "1.2",
+        "filename": "PS5MC-1.2-kodi22-PPSA99420.zip",
+        "release_url": "https://github.com/VivaLaVent/PS5MC/releases/tag/1.2",
+        "assets": [
+          {
+            "name": "PS5MC-1.2-kodi21-PPSA99421.exfat",
+            "url": "https://github.com/VivaLaVent/PS5MC/releases/download/1.2/PS5MC-1.2-kodi21-PPSA99421.exfat"
+          },
+          {
+            "name": "PS5MC-1.2-kodi21-PPSA99421.zip",
+            "url": "https://github.com/VivaLaVent/PS5MC/releases/download/1.2/PS5MC-1.2-kodi21-PPSA99421.zip"
+          },
+          {
+            "name": "PS5MC-1.2-kodi22-PPSA99420.exfat",
+            "url": "https://github.com/VivaLaVent/PS5MC/releases/download/1.2/PS5MC-1.2-kodi22-PPSA99420.exfat"
+          },
+          {
+            "name": "PS5MC-1.2-kodi22-PPSA99420.zip",
+            "url": "https://github.com/VivaLaVent/PS5MC/releases/download/1.2/PS5MC-1.2-kodi22-PPSA99420.zip"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99429.json",
+      "record": {
+        "titleid": "PPSA99429",
+        "name": "APRICOT",
+        "category": "console-ports",
+        "license": null,
+        "version": null,
+        "source_repo": null,
+        "artifact_url": null,
+        "sha256": null
+      },
+      "check": {
+        "path": "apps/PPSA99429.json",
+        "status": "unpublished"
+      }
+    },
+    {
+      "path": "apps/PPSA99474.json",
+      "record": {
+        "titleid": "PPSA99474",
+        "name": "Twispero",
+        "category": "video",
+        "license": "GPL-3.0",
+        "version": "1.0.0",
+        "source_repo": "https://github.com/unicxrn/twispero",
+        "artifact_url": "https://github.com/unicxrn/twispero/releases/download/v1.0.0/PPSA99474.zip",
+        "sha256": "6b478353e6f69afa6171a0ca5e8c7e13e6cf352d07b3e7d514c5abe922d8d4ba"
+      },
+      "check": {
+        "path": "apps/PPSA99474.json",
+        "status": "verified",
+        "repo": "unicxrn/twispero",
+        "tag": "v1.0.0",
+        "filename": "PPSA99474.zip",
+        "release_url": "https://github.com/unicxrn/twispero/releases/tag/v1.0.0",
+        "assets": [
+          {
+            "name": "PPSA99474.zip",
+            "url": "https://github.com/unicxrn/twispero/releases/download/v1.0.0/PPSA99474.zip"
+          },
+          {
+            "name": "SHA256SUMS",
+            "url": "https://github.com/unicxrn/twispero/releases/download/v1.0.0/SHA256SUMS"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99505.json",
+      "record": {
+        "titleid": "PPSA99505",
+        "name": "Jelly5",
+        "category": "video",
+        "license": "GPL-3.0",
+        "version": "0.7.0",
+        "source_repo": "https://github.com/02dnot/Jelly5",
+        "artifact_url": "https://github.com/02dnot/Jelly5/releases/download/v0.7.0/Jelly5-00.007.000.zip",
+        "sha256": "559e067239646ba160be370b9b91de2bee69565c154584f00de2a87adae95a57"
+      },
+      "check": {
+        "path": "apps/PPSA99505.json",
+        "status": "verified",
+        "repo": "02dnot/Jelly5",
+        "tag": "v0.7.0",
+        "filename": "Jelly5-00.007.000.zip",
+        "release_url": "https://github.com/02dnot/Jelly5/releases/tag/v0.7.0",
+        "assets": [
+          {
+            "name": "Jelly5-00.007.000.zip",
+            "url": "https://github.com/02dnot/Jelly5/releases/download/v0.7.0/Jelly5-00.007.000.zip"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99510.json",
+      "record": {
+        "titleid": "PPSA99510",
+        "name": "GyroAim",
+        "category": "tools",
+        "license": "GPL-3.0",
+        "version": "1.0.2",
+        "source_repo": "https://github.com/jmelovich/ps5-gyroaim",
+        "artifact_url": "https://github.com/jmelovich/ps5-gyroaim/releases/download/v1.0.2/PPSA99510.zip",
+        "sha256": "b748ef79e0296fc33ef2b648d6ee4d6e70c622b708a629ca076ac8e9aeec243a"
+      },
+      "check": {
+        "path": "apps/PPSA99510.json",
+        "status": "verified",
+        "repo": "jmelovich/ps5-gyroaim",
+        "tag": "v1.0.2",
+        "filename": "PPSA99510.zip",
+        "release_url": "https://github.com/jmelovich/ps5-gyroaim/releases/tag/v1.0.2",
+        "assets": [
+          {
+            "name": "LICENSE",
+            "url": "https://github.com/jmelovich/ps5-gyroaim/releases/download/v1.0.2/LICENSE"
+          },
+          {
+            "name": "PPSA99510.zip",
+            "url": "https://github.com/jmelovich/ps5-gyroaim/releases/download/v1.0.2/PPSA99510.zip"
+          },
+          {
+            "name": "THIRD_PARTY_NOTICES.md",
+            "url": "https://github.com/jmelovich/ps5-gyroaim/releases/download/v1.0.2/THIRD_PARTY_NOTICES.md"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99515.json",
+      "record": {
+        "titleid": "PPSA99515",
+        "name": "Emby5",
+        "category": "video",
+        "license": "GPL-3.0",
+        "version": "1.2.5",
+        "source_repo": "https://github.com/bornaradusin/Emby5",
+        "artifact_url": "https://github.com/bornaradusin/Emby5/releases/download/1.2.5/Emby5-1.2.5.zip",
+        "sha256": "84eb60b06df40873bbea3e4bb99208df653ffde3f3c8931813c1834966a0dbed"
+      },
+      "check": {
+        "path": "apps/PPSA99515.json",
+        "status": "verified",
+        "repo": "bornaradusin/Emby5",
+        "tag": "1.2.5",
+        "filename": "Emby5-1.2.5.zip",
+        "release_url": "https://github.com/bornaradusin/Emby5/releases/tag/1.2.5",
+        "assets": [
+          {
+            "name": "Emby5-1.2.5.zip",
+            "url": "https://github.com/bornaradusin/Emby5/releases/download/1.2.5/Emby5-1.2.5.zip"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99520.json",
+      "record": {
+        "titleid": "PPSA99520",
+        "name": "Régie5",
+        "category": "video",
+        "license": "GPL-3.0",
+        "version": "0.7.0",
+        "source_repo": "https://github.com/viviandsx/regie5",
+        "artifact_url": "https://github.com/viviandsx/regie5/releases/download/v0.7.0/PPSA99520.zip",
+        "sha256": "c54af57f7c6fe7ff8a2322be5a09e0620f51c8c10473d5b58908fa84d6a3e023"
+      },
+      "check": {
+        "path": "apps/PPSA99520.json",
+        "status": "verified",
+        "repo": "viviandsx/regie5",
+        "tag": "v0.7.0",
+        "filename": "PPSA99520.zip",
+        "release_url": "https://github.com/viviandsx/regie5/releases/tag/v0.7.0",
+        "assets": [
+          {
+            "name": "PPSA99520.zip",
+            "url": "https://github.com/viviandsx/regie5/releases/download/v0.7.0/PPSA99520.zip"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99555.json",
+      "record": {
+        "titleid": "PPSA99555",
+        "name": "TokenStation5",
+        "category": "ai",
+        "license": "GPL-3.0",
+        "version": null,
+        "source_repo": null,
+        "artifact_url": null,
+        "sha256": null
+      },
+      "check": {
+        "path": "apps/PPSA99555.json",
+        "status": "unpublished"
+      }
+    },
+    {
+      "path": "apps/PPSA99573.json",
+      "record": {
+        "titleid": "PPSA99573",
+        "name": "Foxhollow PS5",
+        "category": "console-ports",
+        "license": null,
+        "version": null,
+        "source_repo": null,
+        "artifact_url": null,
+        "sha256": null
+      },
+      "check": {
+        "path": "apps/PPSA99573.json",
+        "status": "unpublished"
+      }
+    },
+    {
+      "path": "apps/PPSA99575.json",
+      "record": {
+        "titleid": "PPSA99575",
+        "name": "PS5LM",
+        "category": "ai",
+        "license": "GPL-3.0",
+        "version": "0.9.0",
+        "source_repo": "https://github.com/cobanov/PS5LM",
+        "artifact_url": "https://github.com/cobanov/PS5LM/releases/download/v0.9.0/ps5lm-app-v0.9.0.zip",
+        "sha256": "f4b19ffaa5389536da30dc706ce3967cc0d7bb559508d451e033c205d93af504"
+      },
+      "check": {
+        "path": "apps/PPSA99575.json",
+        "status": "verified",
+        "repo": "cobanov/PS5LM",
+        "tag": "v0.9.0",
+        "filename": "ps5lm-app-v0.9.0.zip",
+        "release_url": "https://github.com/cobanov/PS5LM/releases/tag/v0.9.0",
+        "assets": [
+          {
+            "name": "ps5lm-app-v0.9.0.zip",
+            "url": "https://github.com/cobanov/PS5LM/releases/download/v0.9.0/ps5lm-app-v0.9.0.zip"
+          },
+          {
+            "name": "ps5lm-app-v0.9.0.zip.sha256",
+            "url": "https://github.com/cobanov/PS5LM/releases/download/v0.9.0/ps5lm-app-v0.9.0.zip.sha256"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99581.json",
+      "record": {
+        "titleid": "PPSA99581",
+        "name": "PS5LM Plus",
+        "category": "ai",
+        "license": "GPL-3.0-or-later",
+        "version": "0.8.4",
+        "source_repo": "https://github.com/abhi245y/PS5LM-Plus",
+        "artifact_url": "https://github.com/abhi245y/PS5LM-Plus/releases/download/v0.8.4/ps5lm-plus-v0.8.4.zip",
+        "sha256": "5f4b4aad87c3b9e4b29a9bafd056e510e7805cf87522af1a34a4d01be1b628d2"
+      },
+      "check": {
+        "path": "apps/PPSA99581.json",
+        "status": "verified",
+        "repo": "abhi245y/PS5LM-Plus",
+        "tag": "v0.8.4",
+        "filename": "ps5lm-plus-v0.8.4.zip",
+        "release_url": "https://github.com/abhi245y/PS5LM-Plus/releases/tag/v0.8.4",
+        "assets": [
+          {
+            "name": "ps5lm-plus-v0.8.4.zip",
+            "url": "https://github.com/abhi245y/PS5LM-Plus/releases/download/v0.8.4/ps5lm-plus-v0.8.4.zip"
+          },
+          {
+            "name": "ps5lm-plus-v0.8.4.zip.sha256",
+            "url": "https://github.com/abhi245y/PS5LM-Plus/releases/download/v0.8.4/ps5lm-plus-v0.8.4.zip.sha256"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99600.json",
+      "record": {
+        "titleid": "PPSA99600",
+        "name": "Cloud Play",
+        "category": "streaming",
+        "license": "GPL-3.0-or-later",
+        "version": "1.0.0",
+        "source_repo": "https://github.com/tertiumndatur/ps5-cloud-play",
+        "artifact_url": "https://github.com/tertiumndatur/ps5-cloud-play/releases/download/v1.0.0/CloudPlay-PS5.zip",
+        "sha256": "fa47dd13c4ec4c8f1acf8ae41cc38f1411710b40c4853cddd65b135dc45ebb70"
+      },
+      "check": {
+        "path": "apps/PPSA99600.json",
+        "status": "verified",
+        "repo": "tertiumndatur/ps5-cloud-play",
+        "tag": "v1.0.0",
+        "filename": "CloudPlay-PS5.zip",
+        "release_url": "https://github.com/tertiumndatur/ps5-cloud-play/releases/tag/v1.0.0",
+        "assets": [
+          {
+            "name": "CloudPlay-PS5.ffpfsc",
+            "url": "https://github.com/tertiumndatur/ps5-cloud-play/releases/download/v1.0.0/CloudPlay-PS5.ffpfsc"
+          },
+          {
+            "name": "CloudPlay-PS5.ffpkg",
+            "url": "https://github.com/tertiumndatur/ps5-cloud-play/releases/download/v1.0.0/CloudPlay-PS5.ffpkg"
+          },
+          {
+            "name": "CloudPlay-PS5.zip",
+            "url": "https://github.com/tertiumndatur/ps5-cloud-play/releases/download/v1.0.0/CloudPlay-PS5.zip"
+          },
+          {
+            "name": "PS5-SHA256SUMS",
+            "url": "https://github.com/tertiumndatur/ps5-cloud-play/releases/download/v1.0.0/PS5-SHA256SUMS"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99620.json",
+      "record": {
+        "titleid": "PPSA99620",
+        "name": "Ship of Harkinian (Ocarina of Time)",
+        "category": "console-ports",
+        "license": "GPL-3.0",
+        "version": "v1.2.0",
+        "source_repo": "https://github.com/mshivam019/oot64-ps5",
+        "artifact_url": "https://github.com/mshivam019/oot64-ps5/releases/download/v1.2.0/PPSA99620.zip",
+        "sha256": "ec67bdd356f57fbf8766771ef410243feb41072a07f04822a67f2b2aa603e119"
+      },
+      "check": {
+        "path": "apps/PPSA99620.json",
+        "status": "verified",
+        "repo": "mshivam019/oot64-ps5",
+        "tag": "v1.2.0",
+        "filename": "PPSA99620.zip",
+        "release_url": "https://github.com/mshivam019/oot64-ps5/releases/tag/v1.2.0",
+        "assets": [
+          {
+            "name": "PPSA99620.zip",
+            "url": "https://github.com/mshivam019/oot64-ps5/releases/download/v1.2.0/PPSA99620.zip"
+          },
+          {
+            "name": "PPSA99620.zip.sha256",
+            "url": "https://github.com/mshivam019/oot64-ps5/releases/download/v1.2.0/PPSA99620.zip.sha256"
+          },
+          {
+            "name": "PS5-Install-Helper-v1.0.0.zip",
+            "url": "https://github.com/mshivam019/oot64-ps5/releases/download/v1.2.0/PS5-Install-Helper-v1.0.0.zip"
+          },
+          {
+            "name": "PS5-Install-Helper-v1.0.0.zip.sha256",
+            "url": "https://github.com/mshivam019/oot64-ps5/releases/download/v1.2.0/PS5-Install-Helper-v1.0.0.zip.sha256"
+          },
+          {
+            "name": "PS5-Install-Helper-v1.1.0.zip",
+            "url": "https://github.com/mshivam019/oot64-ps5/releases/download/v1.2.0/PS5-Install-Helper-v1.1.0.zip"
+          },
+          {
+            "name": "PS5-Install-Helper-v1.1.0.zip.sha256",
+            "url": "https://github.com/mshivam019/oot64-ps5/releases/download/v1.2.0/PS5-Install-Helper-v1.1.0.zip.sha256"
+          },
+          {
+            "name": "PS5-Install-Helper-v1.2.0.zip",
+            "url": "https://github.com/mshivam019/oot64-ps5/releases/download/v1.2.0/PS5-Install-Helper-v1.2.0.zip"
+          },
+          {
+            "name": "PS5-Install-Helper-v1.2.0.zip.sha256",
+            "url": "https://github.com/mshivam019/oot64-ps5/releases/download/v1.2.0/PS5-Install-Helper-v1.2.0.zip.sha256"
+          },
+          {
+            "name": "soh-ps5-2160p120-camera-controls-v1.2.0-linux.zip",
+            "url": "https://github.com/mshivam019/oot64-ps5/releases/download/v1.2.0/soh-ps5-2160p120-camera-controls-v1.2.0-linux.zip"
+          },
+          {
+            "name": "soh-ps5-2160p120-camera-controls-v1.2.0-linux.zip.sha256",
+            "url": "https://github.com/mshivam019/oot64-ps5/releases/download/v1.2.0/soh-ps5-2160p120-camera-controls-v1.2.0-linux.zip.sha256"
+          },
+          {
+            "name": "soh-ps5-2160p120-camera-controls-v1.2.0-windows.zip",
+            "url": "https://github.com/mshivam019/oot64-ps5/releases/download/v1.2.0/soh-ps5-2160p120-camera-controls-v1.2.0-windows.zip"
+          },
+          {
+            "name": "soh-ps5-2160p120-camera-controls-v1.2.0-windows.zip.sha256",
+            "url": "https://github.com/mshivam019/oot64-ps5/releases/download/v1.2.0/soh-ps5-2160p120-camera-controls-v1.2.0-windows.zip.sha256"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99621.json",
+      "record": {
+        "titleid": "PPSA99621",
+        "name": "2 Ship 2 Harkinian (Majora's Mask)",
+        "category": "console-ports",
+        "license": "GPL-3.0",
+        "version": "v1.1.0",
+        "source_repo": "https://github.com/mshivam019/tmm64-ps5",
+        "artifact_url": "https://github.com/mshivam019/tmm64-ps5/releases/download/v1.1.0/PPSA99621.zip",
+        "sha256": "1b53678522e2c2f453c186ecb7af863abdf27a8b2515f8af4f1b43c8fcb17722"
+      },
+      "check": {
+        "path": "apps/PPSA99621.json",
+        "status": "verified",
+        "repo": "mshivam019/tmm64-ps5",
+        "tag": "v1.1.0",
+        "filename": "PPSA99621.zip",
+        "release_url": "https://github.com/mshivam019/tmm64-ps5/releases/tag/v1.1.0",
+        "assets": [
+          {
+            "name": "PPSA99621.zip",
+            "url": "https://github.com/mshivam019/tmm64-ps5/releases/download/v1.1.0/PPSA99621.zip"
+          },
+          {
+            "name": "PPSA99621.zip.sha256",
+            "url": "https://github.com/mshivam019/tmm64-ps5/releases/download/v1.1.0/PPSA99621.zip.sha256"
+          },
+          {
+            "name": "PS5-Install-Helper-v1.0.0.zip",
+            "url": "https://github.com/mshivam019/tmm64-ps5/releases/download/v1.1.0/PS5-Install-Helper-v1.0.0.zip"
+          },
+          {
+            "name": "PS5-Install-Helper-v1.0.0.zip.sha256",
+            "url": "https://github.com/mshivam019/tmm64-ps5/releases/download/v1.1.0/PS5-Install-Helper-v1.0.0.zip.sha256"
+          },
+          {
+            "name": "PS5-Install-Helper-v1.1.0.zip",
+            "url": "https://github.com/mshivam019/tmm64-ps5/releases/download/v1.1.0/PS5-Install-Helper-v1.1.0.zip"
+          },
+          {
+            "name": "PS5-Install-Helper-v1.1.0.zip.sha256",
+            "url": "https://github.com/mshivam019/tmm64-ps5/releases/download/v1.1.0/PS5-Install-Helper-v1.1.0.zip.sha256"
+          },
+          {
+            "name": "PS5-Install-Helper-v1.2.0.zip",
+            "url": "https://github.com/mshivam019/tmm64-ps5/releases/download/v1.1.0/PS5-Install-Helper-v1.2.0.zip"
+          },
+          {
+            "name": "PS5-Install-Helper-v1.2.0.zip.sha256",
+            "url": "https://github.com/mshivam019/tmm64-ps5/releases/download/v1.1.0/PS5-Install-Helper-v1.2.0.zip.sha256"
+          },
+          {
+            "name": "tmm-ps5-2160p120-v1.1.0-camera-controls-linux.zip",
+            "url": "https://github.com/mshivam019/tmm64-ps5/releases/download/v1.1.0/tmm-ps5-2160p120-v1.1.0-camera-controls-linux.zip"
+          },
+          {
+            "name": "tmm-ps5-2160p120-v1.1.0-camera-controls-linux.zip.sha256",
+            "url": "https://github.com/mshivam019/tmm64-ps5/releases/download/v1.1.0/tmm-ps5-2160p120-v1.1.0-camera-controls-linux.zip.sha256"
+          },
+          {
+            "name": "tmm-ps5-2160p120-v1.1.0-camera-controls-windows.zip",
+            "url": "https://github.com/mshivam019/tmm64-ps5/releases/download/v1.1.0/tmm-ps5-2160p120-v1.1.0-camera-controls-windows.zip"
+          },
+          {
+            "name": "tmm-ps5-2160p120-v1.1.0-camera-controls-windows.zip.sha256",
+            "url": "https://github.com/mshivam019/tmm64-ps5/releases/download/v1.1.0/tmm-ps5-2160p120-v1.1.0-camera-controls-windows.zip.sha256"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99630.json",
+      "record": {
+        "titleid": "PPSA99630",
+        "name": "Morrowind (OpenMW)",
+        "category": "pc-ports",
+        "license": "GPL-3.0",
+        "version": "v1.0.1",
+        "source_repo": "https://github.com/mshivam019/morrowind-ps5",
+        "artifact_url": "https://github.com/mshivam019/morrowind-ps5/releases/download/v1.0.1/PPSA99630.zip",
+        "sha256": "0b50f2e63660db79724022e90575910728800feb0699d254a36f3c66af971b5c"
+      },
+      "check": {
+        "path": "apps/PPSA99630.json",
+        "status": "verified",
+        "repo": "mshivam019/morrowind-ps5",
+        "tag": "v1.0.1",
+        "filename": "PPSA99630.zip",
+        "release_url": "https://github.com/mshivam019/morrowind-ps5/releases/tag/v1.0.1",
+        "assets": [
+          {
+            "name": "morrowind-ps5-1080p-v1.0.1-linux.zip",
+            "url": "https://github.com/mshivam019/morrowind-ps5/releases/download/v1.0.1/morrowind-ps5-1080p-v1.0.1-linux.zip"
+          },
+          {
+            "name": "morrowind-ps5-1080p-v1.0.1-linux.zip.sha256",
+            "url": "https://github.com/mshivam019/morrowind-ps5/releases/download/v1.0.1/morrowind-ps5-1080p-v1.0.1-linux.zip.sha256"
+          },
+          {
+            "name": "morrowind-ps5-1080p-v1.0.1-windows.zip",
+            "url": "https://github.com/mshivam019/morrowind-ps5/releases/download/v1.0.1/morrowind-ps5-1080p-v1.0.1-windows.zip"
+          },
+          {
+            "name": "morrowind-ps5-1080p-v1.0.1-windows.zip.sha256",
+            "url": "https://github.com/mshivam019/morrowind-ps5/releases/download/v1.0.1/morrowind-ps5-1080p-v1.0.1-windows.zip.sha256"
+          },
+          {
+            "name": "morrowind-ps5-v1.0.1-source-manifest.json",
+            "url": "https://github.com/mshivam019/morrowind-ps5/releases/download/v1.0.1/morrowind-ps5-v1.0.1-source-manifest.json"
+          },
+          {
+            "name": "morrowind-ps5-v1.0.1-source.tar.gz",
+            "url": "https://github.com/mshivam019/morrowind-ps5/releases/download/v1.0.1/morrowind-ps5-v1.0.1-source.tar.gz"
+          },
+          {
+            "name": "morrowind-ps5-v1.0.1-source.tar.gz.sha256",
+            "url": "https://github.com/mshivam019/morrowind-ps5/releases/download/v1.0.1/morrowind-ps5-v1.0.1-source.tar.gz.sha256"
+          },
+          {
+            "name": "PPSA99630.zip",
+            "url": "https://github.com/mshivam019/morrowind-ps5/releases/download/v1.0.1/PPSA99630.zip"
+          },
+          {
+            "name": "PPSA99630.zip.sha256",
+            "url": "https://github.com/mshivam019/morrowind-ps5/releases/download/v1.0.1/PPSA99630.zip.sha256"
+          },
+          {
+            "name": "PS5-Install-Helper-v1.0.0.zip",
+            "url": "https://github.com/mshivam019/morrowind-ps5/releases/download/v1.0.1/PS5-Install-Helper-v1.0.0.zip"
+          },
+          {
+            "name": "PS5-Install-Helper-v1.0.0.zip.sha256",
+            "url": "https://github.com/mshivam019/morrowind-ps5/releases/download/v1.0.1/PS5-Install-Helper-v1.0.0.zip.sha256"
+          },
+          {
+            "name": "PS5-Install-Helper-v1.1.0.zip",
+            "url": "https://github.com/mshivam019/morrowind-ps5/releases/download/v1.0.1/PS5-Install-Helper-v1.1.0.zip"
+          },
+          {
+            "name": "PS5-Install-Helper-v1.1.0.zip.sha256",
+            "url": "https://github.com/mshivam019/morrowind-ps5/releases/download/v1.0.1/PS5-Install-Helper-v1.1.0.zip.sha256"
+          },
+          {
+            "name": "PS5-Install-Helper-v1.2.0.zip",
+            "url": "https://github.com/mshivam019/morrowind-ps5/releases/download/v1.0.1/PS5-Install-Helper-v1.2.0.zip"
+          },
+          {
+            "name": "PS5-Install-Helper-v1.2.0.zip.sha256",
+            "url": "https://github.com/mshivam019/morrowind-ps5/releases/download/v1.0.1/PS5-Install-Helper-v1.2.0.zip.sha256"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99640.json",
+      "record": {
+        "titleid": "PPSA99640",
+        "name": "Twilight Princess (Dusklight)",
+        "category": "console-ports",
+        "license": "CC0-1.0",
+        "version": "ps5-v0.1.0",
+        "source_repo": "https://github.com/mshivam019/dusklight-ps5",
+        "artifact_url": "https://github.com/mshivam019/dusklight-ps5/releases/download/ps5-v0.1.0/PPSA99640.zip",
+        "sha256": "df097143111f3758b195ce21e2051b8c4f7ef78a2f392d88b3b5fb12d9780a4b"
+      },
+      "check": {
+        "path": "apps/PPSA99640.json",
+        "status": "verified",
+        "repo": "mshivam019/dusklight-ps5",
+        "tag": "ps5-v0.1.0",
+        "filename": "PPSA99640.zip",
+        "release_url": "https://github.com/mshivam019/dusklight-ps5/releases/tag/ps5-v0.1.0",
+        "assets": [
+          {
+            "name": "dusklight-ps5-v0.1.0-linux.zip",
+            "url": "https://github.com/mshivam019/dusklight-ps5/releases/download/ps5-v0.1.0/dusklight-ps5-v0.1.0-linux.zip"
+          },
+          {
+            "name": "dusklight-ps5-v0.1.0-source.tar.gz",
+            "url": "https://github.com/mshivam019/dusklight-ps5/releases/download/ps5-v0.1.0/dusklight-ps5-v0.1.0-source.tar.gz"
+          },
+          {
+            "name": "dusklight-ps5-v0.1.0-windows.zip",
+            "url": "https://github.com/mshivam019/dusklight-ps5/releases/download/ps5-v0.1.0/dusklight-ps5-v0.1.0-windows.zip"
+          },
+          {
+            "name": "llvm-project-18.1.8.src.tar.xz",
+            "url": "https://github.com/mshivam019/dusklight-ps5/releases/download/ps5-v0.1.0/llvm-project-18.1.8.src.tar.xz"
+          },
+          {
+            "name": "PPSA99640.zip",
+            "url": "https://github.com/mshivam019/dusklight-ps5/releases/download/ps5-v0.1.0/PPSA99640.zip"
+          },
+          {
+            "name": "PPSA99640.zip.sha256",
+            "url": "https://github.com/mshivam019/dusklight-ps5/releases/download/ps5-v0.1.0/PPSA99640.zip.sha256"
+          },
+          {
+            "name": "PS5-Install-Helper-v1.0.0.zip",
+            "url": "https://github.com/mshivam019/dusklight-ps5/releases/download/ps5-v0.1.0/PS5-Install-Helper-v1.0.0.zip"
+          },
+          {
+            "name": "PS5-Install-Helper-v1.0.0.zip.sha256",
+            "url": "https://github.com/mshivam019/dusklight-ps5/releases/download/ps5-v0.1.0/PS5-Install-Helper-v1.0.0.zip.sha256"
+          },
+          {
+            "name": "PS5-Install-Helper-v1.1.0.zip",
+            "url": "https://github.com/mshivam019/dusklight-ps5/releases/download/ps5-v0.1.0/PS5-Install-Helper-v1.1.0.zip"
+          },
+          {
+            "name": "PS5-Install-Helper-v1.1.0.zip.sha256",
+            "url": "https://github.com/mshivam019/dusklight-ps5/releases/download/ps5-v0.1.0/PS5-Install-Helper-v1.1.0.zip.sha256"
+          },
+          {
+            "name": "PS5-Install-Helper-v1.2.0.zip",
+            "url": "https://github.com/mshivam019/dusklight-ps5/releases/download/ps5-v0.1.0/PS5-Install-Helper-v1.2.0.zip"
+          },
+          {
+            "name": "PS5-Install-Helper-v1.2.0.zip.sha256",
+            "url": "https://github.com/mshivam019/dusklight-ps5/releases/download/ps5-v0.1.0/PS5-Install-Helper-v1.2.0.zip.sha256"
+          },
+          {
+            "name": "SHA256SUMS",
+            "url": "https://github.com/mshivam019/dusklight-ps5/releases/download/ps5-v0.1.0/SHA256SUMS"
+          },
+          {
+            "name": "SOURCES.json",
+            "url": "https://github.com/mshivam019/dusklight-ps5/releases/download/ps5-v0.1.0/SOURCES.json"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99641.json",
+      "record": {
+        "titleid": "PPSA99641",
+        "name": "Wind Waker HD",
+        "category": "console-ports",
+        "license": "MPL-2.0",
+        "version": "ps5-v0.1.2",
+        "source_repo": "https://github.com/mshivam019/ww-ps5",
+        "artifact_url": "https://github.com/mshivam019/ww-ps5/releases/download/ps5-v0.1.2/PPSA99641.zip",
+        "sha256": "8c04cb3d4e8c4158b79bfd27e63670c15433f596e1c362090ef56c20d6cd1ac1"
+      },
+      "check": {
+        "path": "apps/PPSA99641.json",
+        "status": "verified",
+        "repo": "mshivam019/ww-ps5",
+        "tag": "ps5-v0.1.2",
+        "filename": "PPSA99641.zip",
+        "release_url": "https://github.com/mshivam019/ww-ps5/releases/tag/ps5-v0.1.2",
+        "assets": [
+          {
+            "name": "PPSA99641.zip",
+            "url": "https://github.com/mshivam019/ww-ps5/releases/download/ps5-v0.1.2/PPSA99641.zip"
+          },
+          {
+            "name": "PS5-Install-Helper-v1.0.0.zip",
+            "url": "https://github.com/mshivam019/ww-ps5/releases/download/ps5-v0.1.2/PS5-Install-Helper-v1.0.0.zip"
+          },
+          {
+            "name": "PS5-Install-Helper-v1.0.0.zip.sha256",
+            "url": "https://github.com/mshivam019/ww-ps5/releases/download/ps5-v0.1.2/PS5-Install-Helper-v1.0.0.zip.sha256"
+          },
+          {
+            "name": "PS5-Install-Helper-v1.1.0.zip",
+            "url": "https://github.com/mshivam019/ww-ps5/releases/download/ps5-v0.1.2/PS5-Install-Helper-v1.1.0.zip"
+          },
+          {
+            "name": "PS5-Install-Helper-v1.1.0.zip.sha256",
+            "url": "https://github.com/mshivam019/ww-ps5/releases/download/ps5-v0.1.2/PS5-Install-Helper-v1.1.0.zip.sha256"
+          },
+          {
+            "name": "PS5-Install-Helper-v1.2.0.zip",
+            "url": "https://github.com/mshivam019/ww-ps5/releases/download/ps5-v0.1.2/PS5-Install-Helper-v1.2.0.zip"
+          },
+          {
+            "name": "PS5-Install-Helper-v1.2.0.zip.sha256",
+            "url": "https://github.com/mshivam019/ww-ps5/releases/download/ps5-v0.1.2/PS5-Install-Helper-v1.2.0.zip.sha256"
+          },
+          {
+            "name": "SHA256SUMS",
+            "url": "https://github.com/mshivam019/ww-ps5/releases/download/ps5-v0.1.2/SHA256SUMS"
+          },
+          {
+            "name": "Wind-Waker-HD-PS5-v0.1.2-dependency-sources.tar.gz",
+            "url": "https://github.com/mshivam019/ww-ps5/releases/download/ps5-v0.1.2/Wind-Waker-HD-PS5-v0.1.2-dependency-sources.tar.gz"
+          },
+          {
+            "name": "Wind-Waker-HD-PS5-v0.1.2-setup.zip",
+            "url": "https://github.com/mshivam019/ww-ps5/releases/download/ps5-v0.1.2/Wind-Waker-HD-PS5-v0.1.2-setup.zip"
+          },
+          {
+            "name": "Wind-Waker-HD-PS5-v0.1.2-source-setup.zip",
+            "url": "https://github.com/mshivam019/ww-ps5/releases/download/ps5-v0.1.2/Wind-Waker-HD-PS5-v0.1.2-source-setup.zip"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99660.json",
+      "record": {
+        "titleid": "PPSA99660",
+        "name": "Animal Crossing for PS5",
+        "category": "console-ports",
+        "license": "GPL-3.0-or-later",
+        "version": "v1.0.0",
+        "source_repo": "https://github.com/mshivam019/ac-ps5",
+        "artifact_url": "https://github.com/mshivam019/ac-ps5/releases/download/v1.0.0/PPSA99660.zip",
+        "sha256": "0ee4300fe53d94111a485d062b4bc6f8c00b252238606fa9cfbaed66472223d2"
+      },
+      "check": {
+        "path": "apps/PPSA99660.json",
+        "status": "verified",
+        "repo": "mshivam019/ac-ps5",
+        "tag": "v1.0.0",
+        "filename": "PPSA99660.zip",
+        "release_url": "https://github.com/mshivam019/ac-ps5/releases/tag/v1.0.0",
+        "assets": [
+          {
+            "name": "animal-crossing-ps5-2160p60-v1.0.0-linux.zip",
+            "url": "https://github.com/mshivam019/ac-ps5/releases/download/v1.0.0/animal-crossing-ps5-2160p60-v1.0.0-linux.zip"
+          },
+          {
+            "name": "animal-crossing-ps5-2160p60-v1.0.0-linux.zip.sha256",
+            "url": "https://github.com/mshivam019/ac-ps5/releases/download/v1.0.0/animal-crossing-ps5-2160p60-v1.0.0-linux.zip.sha256"
+          },
+          {
+            "name": "animal-crossing-ps5-2160p60-v1.0.0-windows.zip",
+            "url": "https://github.com/mshivam019/ac-ps5/releases/download/v1.0.0/animal-crossing-ps5-2160p60-v1.0.0-windows.zip"
+          },
+          {
+            "name": "animal-crossing-ps5-2160p60-v1.0.0-windows.zip.sha256",
+            "url": "https://github.com/mshivam019/ac-ps5/releases/download/v1.0.0/animal-crossing-ps5-2160p60-v1.0.0-windows.zip.sha256"
+          },
+          {
+            "name": "animal-crossing-ps5-v1.0.0-source-manifest.json",
+            "url": "https://github.com/mshivam019/ac-ps5/releases/download/v1.0.0/animal-crossing-ps5-v1.0.0-source-manifest.json"
+          },
+          {
+            "name": "animal-crossing-ps5-v1.0.0-source.tar.gz",
+            "url": "https://github.com/mshivam019/ac-ps5/releases/download/v1.0.0/animal-crossing-ps5-v1.0.0-source.tar.gz"
+          },
+          {
+            "name": "animal-crossing-ps5-v1.0.0-source.tar.gz.sha256",
+            "url": "https://github.com/mshivam019/ac-ps5/releases/download/v1.0.0/animal-crossing-ps5-v1.0.0-source.tar.gz.sha256"
+          },
+          {
+            "name": "MANIFEST.json",
+            "url": "https://github.com/mshivam019/ac-ps5/releases/download/v1.0.0/MANIFEST.json"
+          },
+          {
+            "name": "PPSA99660.zip",
+            "url": "https://github.com/mshivam019/ac-ps5/releases/download/v1.0.0/PPSA99660.zip"
+          },
+          {
+            "name": "PPSA99660.zip.sha256",
+            "url": "https://github.com/mshivam019/ac-ps5/releases/download/v1.0.0/PPSA99660.zip.sha256"
+          },
+          {
+            "name": "PS5-Install-Helper-v1.0.0.zip",
+            "url": "https://github.com/mshivam019/ac-ps5/releases/download/v1.0.0/PS5-Install-Helper-v1.0.0.zip"
+          },
+          {
+            "name": "PS5-Install-Helper-v1.0.0.zip.sha256",
+            "url": "https://github.com/mshivam019/ac-ps5/releases/download/v1.0.0/PS5-Install-Helper-v1.0.0.zip.sha256"
+          },
+          {
+            "name": "PS5-Install-Helper-v1.1.0.zip",
+            "url": "https://github.com/mshivam019/ac-ps5/releases/download/v1.0.0/PS5-Install-Helper-v1.1.0.zip"
+          },
+          {
+            "name": "PS5-Install-Helper-v1.1.0.zip.sha256",
+            "url": "https://github.com/mshivam019/ac-ps5/releases/download/v1.0.0/PS5-Install-Helper-v1.1.0.zip.sha256"
+          },
+          {
+            "name": "PS5-Install-Helper-v1.2.0.zip",
+            "url": "https://github.com/mshivam019/ac-ps5/releases/download/v1.0.0/PS5-Install-Helper-v1.2.0.zip"
+          },
+          {
+            "name": "PS5-Install-Helper-v1.2.0.zip.sha256",
+            "url": "https://github.com/mshivam019/ac-ps5/releases/download/v1.0.0/PS5-Install-Helper-v1.2.0.zip.sha256"
+          },
+          {
+            "name": "SHA256SUMS",
+            "url": "https://github.com/mshivam019/ac-ps5/releases/download/v1.0.0/SHA256SUMS"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99666.json",
+      "record": {
+        "titleid": "PPSA99666",
+        "name": "DOOM Native Port",
+        "category": "pc-ports",
+        "license": "GPL-2.0",
+        "version": "1.1.1",
+        "source_repo": "https://github.com/lowbit/ps5-doom",
+        "artifact_url": "https://github.com/lowbit/ps5-doom/releases/download/v1.1.1/PPSA99666.zip",
+        "sha256": "4d8e5b785b61696fbf1988c2d0d87c5c977734ff60b1ce11cc49134b0e711b5f"
+      },
+      "check": {
+        "path": "apps/PPSA99666.json",
+        "status": "verified",
+        "repo": "lowbit/ps5-doom",
+        "tag": "v1.1.1",
+        "filename": "PPSA99666.zip",
+        "release_url": "https://github.com/lowbit/ps5-doom/releases/tag/v1.1.1",
+        "assets": [
+          {
+            "name": "PPSA99666.zip",
+            "url": "https://github.com/lowbit/ps5-doom/releases/download/v1.1.1/PPSA99666.zip"
+          },
+          {
+            "name": "PPSA99666.zip.sha256",
+            "url": "https://github.com/lowbit/ps5-doom/releases/download/v1.1.1/PPSA99666.zip.sha256"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99670.json",
+      "record": {
+        "titleid": "PPSA99670",
+        "name": "Link’s Awakening for PS5",
+        "category": "console-ports",
+        "license": "MIT",
+        "version": "v0.1.0",
+        "source_repo": "https://github.com/mshivam019/la-ps5",
+        "artifact_url": "https://github.com/mshivam019/la-ps5/releases/download/v0.1.0/PPSA99670.zip",
+        "sha256": "fa46808a12b972909050617dfc99e92bbe77a67265abf0108fc475670f01d53a"
+      },
+      "check": {
+        "path": "apps/PPSA99670.json",
+        "status": "verified",
+        "repo": "mshivam019/la-ps5",
+        "tag": "v0.1.0",
+        "filename": "PPSA99670.zip",
+        "release_url": "https://github.com/mshivam019/la-ps5/releases/tag/v0.1.0",
+        "assets": [
+          {
+            "name": "Links-Awakening-PS5-v0.1.0-dependency-sources.tar.gz",
+            "url": "https://github.com/mshivam019/la-ps5/releases/download/v0.1.0/Links-Awakening-PS5-v0.1.0-dependency-sources.tar.gz"
+          },
+          {
+            "name": "Links-Awakening-PS5-v0.1.0-dependency-sources.tar.gz.manifest.json",
+            "url": "https://github.com/mshivam019/la-ps5/releases/download/v0.1.0/Links-Awakening-PS5-v0.1.0-dependency-sources.tar.gz.manifest.json"
+          },
+          {
+            "name": "Links-Awakening-PS5-v0.1.0-setup-linux.zip",
+            "url": "https://github.com/mshivam019/la-ps5/releases/download/v0.1.0/Links-Awakening-PS5-v0.1.0-setup-linux.zip"
+          },
+          {
+            "name": "PPSA99670.zip",
+            "url": "https://github.com/mshivam019/la-ps5/releases/download/v0.1.0/PPSA99670.zip"
+          },
+          {
+            "name": "PS5-Install-Helper-v1.0.0.zip",
+            "url": "https://github.com/mshivam019/la-ps5/releases/download/v0.1.0/PS5-Install-Helper-v1.0.0.zip"
+          },
+          {
+            "name": "PS5-Install-Helper-v1.0.0.zip.sha256",
+            "url": "https://github.com/mshivam019/la-ps5/releases/download/v0.1.0/PS5-Install-Helper-v1.0.0.zip.sha256"
+          },
+          {
+            "name": "PS5-Install-Helper-v1.1.0.zip",
+            "url": "https://github.com/mshivam019/la-ps5/releases/download/v0.1.0/PS5-Install-Helper-v1.1.0.zip"
+          },
+          {
+            "name": "PS5-Install-Helper-v1.1.0.zip.sha256",
+            "url": "https://github.com/mshivam019/la-ps5/releases/download/v0.1.0/PS5-Install-Helper-v1.1.0.zip.sha256"
+          },
+          {
+            "name": "PS5-Install-Helper-v1.2.0.zip",
+            "url": "https://github.com/mshivam019/la-ps5/releases/download/v0.1.0/PS5-Install-Helper-v1.2.0.zip"
+          },
+          {
+            "name": "PS5-Install-Helper-v1.2.0.zip.sha256",
+            "url": "https://github.com/mshivam019/la-ps5/releases/download/v0.1.0/PS5-Install-Helper-v1.2.0.zip.sha256"
+          },
+          {
+            "name": "SHA256SUMS",
+            "url": "https://github.com/mshivam019/la-ps5/releases/download/v0.1.0/SHA256SUMS"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99728.json",
+      "record": {
+        "titleid": "PPSA99728",
+        "name": "OpenRCT2 Native Port",
+        "category": "pc-ports",
+        "license": "GPL-3.0",
+        "version": "1.0.0",
+        "source_repo": "https://github.com/lowbit/ps5-openrct2",
+        "artifact_url": "https://github.com/lowbit/ps5-openrct2/releases/download/v1.0.0/PPSA99728.zip",
+        "sha256": "f5c3d0a2168b5527a08ab2f335ab89057ab93082cde08813b6567b156fb1667e"
+      },
+      "check": {
+        "path": "apps/PPSA99728.json",
+        "status": "verified",
+        "repo": "lowbit/ps5-openrct2",
+        "tag": "v1.0.0",
+        "filename": "PPSA99728.zip",
+        "release_url": "https://github.com/lowbit/ps5-openrct2/releases/tag/v1.0.0",
+        "assets": [
+          {
+            "name": "PPSA99728.zip",
+            "url": "https://github.com/lowbit/ps5-openrct2/releases/download/v1.0.0/PPSA99728.zip"
+          },
+          {
+            "name": "PPSA99728.zip.sha256",
+            "url": "https://github.com/lowbit/ps5-openrct2/releases/download/v1.0.0/PPSA99728.zip.sha256"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99731.json",
+      "record": {
+        "titleid": "PPSA99731",
+        "name": "PRIMEPHAZON PS5",
+        "category": "console-ports",
+        "license": null,
+        "version": "00.000.001",
+        "source_repo": null,
+        "artifact_url": null,
+        "sha256": null
+      },
+      "check": {
+        "path": "apps/PPSA99731.json",
+        "status": "unpublished"
+      }
+    },
+    {
+      "path": "apps/PPSA99732.json",
+      "record": {
+        "titleid": "PPSA99732",
+        "name": "OpenSA2B PS5",
+        "category": "console-ports",
+        "license": null,
+        "version": null,
+        "source_repo": null,
+        "artifact_url": null,
+        "sha256": null
+      },
+      "check": {
+        "path": "apps/PPSA99732.json",
+        "status": "unpublished"
+      }
+    },
+    {
+      "path": "apps/PPSA99764.json",
+      "record": {
+        "titleid": "PPSA99764",
+        "name": "Porpoise",
+        "category": "emulators",
+        "license": "GPL-3.0",
+        "version": "3.0",
+        "source_repo": "https://github.com/elripalda/Porpoise-Dolphin-Emulator-for-PS5",
+        "artifact_url": "https://github.com/elripalda/Porpoise-Dolphin-Emulator-for-PS5/releases/download/v3.0/Porpoise-3.0.zip",
+        "sha256": "889bc738624c1c1abe5be304e3e78604f5cd66068473b5eeaef6c77e7677513e"
+      },
+      "check": {
+        "path": "apps/PPSA99764.json",
+        "status": "verified",
+        "repo": "elripalda/Porpoise-Dolphin-Emulator-for-PS5",
+        "tag": "v3.0",
+        "filename": "Porpoise-3.0.zip",
+        "release_url": "https://github.com/elripalda/Porpoise-Dolphin-Emulator-for-PS5/releases/tag/v3.0",
+        "assets": [
+          {
+            "name": "Porpoise-3.0.zip",
+            "url": "https://github.com/elripalda/Porpoise-Dolphin-Emulator-for-PS5/releases/download/v3.0/Porpoise-3.0.zip"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99773.json",
+      "record": {
+        "titleid": "PPSA99773",
+        "name": "PShare",
+        "category": "utilities",
+        "license": "GPL-3.0",
+        "version": "1.0",
+        "source_repo": "https://github.com/StonedModder/PShare",
+        "artifact_url": "https://github.com/StonedModder/PShare/releases/download/1.0/PPSA99773.zip",
+        "sha256": "a9a07cdeac7b6ab6d6ce5faebb1e128d232ce9c173b976170a77abecdb8be807"
+      },
+      "check": {
+        "path": "apps/PPSA99773.json",
+        "status": "verified",
+        "repo": "StonedModder/PShare",
+        "tag": "1.0",
+        "filename": "PPSA99773.zip",
+        "release_url": "https://github.com/StonedModder/PShare/releases/tag/1.0",
+        "assets": [
+          {
+            "name": "PPSA99773.zip",
+            "url": "https://github.com/StonedModder/PShare/releases/download/1.0/PPSA99773.zip"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99808.json",
+      "record": {
+        "titleid": "PPSA99808",
+        "name": "PICO-8 for PS5",
+        "category": "emulators",
+        "license": "GPL-3.0",
+        "version": "0.1.2",
+        "source_repo": "https://github.com/RafaelNGP/pico8-ps5",
+        "artifact_url": "https://github.com/RafaelNGP/pico8-ps5/releases/download/v0.1.2/PPSA99808.zip",
+        "sha256": "d76e2bd55ea3cb465da4943938bbeb575abde54fdd3ecefa09fb251f58e1382d"
+      },
+      "check": {
+        "path": "apps/PPSA99808.json",
+        "status": "verified",
+        "repo": "RafaelNGP/pico8-ps5",
+        "tag": "v0.1.2",
+        "filename": "PPSA99808.zip",
+        "release_url": "https://github.com/RafaelNGP/pico8-ps5/releases/tag/v0.1.2",
+        "assets": [
+          {
+            "name": "PPSA99808.zip",
+            "url": "https://github.com/RafaelNGP/pico8-ps5/releases/download/v0.1.2/PPSA99808.zip"
+          },
+          {
+            "name": "PPSA99808.zip.sha256",
+            "url": "https://github.com/RafaelNGP/pico8-ps5/releases/download/v0.1.2/PPSA99808.zip.sha256"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99810.json",
+      "record": {
+        "titleid": "PPSA99810",
+        "name": "PSBox Cloud Gaming",
+        "category": "streaming",
+        "license": "GPL-3.0",
+        "version": "1.3.0",
+        "source_repo": "https://github.com/RafaelNGP/xbox-cloud-gaming-ps5",
+        "artifact_url": "https://github.com/RafaelNGP/xbox-cloud-gaming-ps5/releases/download/v1.3.0/PPSA99810.zip",
+        "sha256": "ad63a8704fb6f5e6797f7657f6fb2b7a7b14795ae063112a1222814cf0736299"
+      },
+      "check": {
+        "path": "apps/PPSA99810.json",
+        "status": "verified",
+        "repo": "RafaelNGP/xbox-cloud-gaming-ps5",
+        "tag": "v1.3.0",
+        "filename": "PPSA99810.zip",
+        "release_url": "https://github.com/RafaelNGP/xbox-cloud-gaming-ps5/releases/tag/v1.3.0",
+        "assets": [
+          {
+            "name": "PPSA99810.zip",
+            "url": "https://github.com/RafaelNGP/xbox-cloud-gaming-ps5/releases/download/v1.3.0/PPSA99810.zip"
+          },
+          {
+            "name": "PPSA99810.zip.sha256",
+            "url": "https://github.com/RafaelNGP/xbox-cloud-gaming-ps5/releases/download/v1.3.0/PPSA99810.zip.sha256"
+          },
+          {
+            "name": "PPSA99810.zip.sig",
+            "url": "https://github.com/RafaelNGP/xbox-cloud-gaming-ps5/releases/download/v1.3.0/PPSA99810.zip.sig"
+          },
+          {
+            "name": "PSBox-v1.3.0-linux-x86_64.tar.gz",
+            "url": "https://github.com/RafaelNGP/xbox-cloud-gaming-ps5/releases/download/v1.3.0/PSBox-v1.3.0-linux-x86_64.tar.gz"
+          },
+          {
+            "name": "PSBox-v1.3.0-linux-x86_64.tar.gz.sha256",
+            "url": "https://github.com/RafaelNGP/xbox-cloud-gaming-ps5/releases/download/v1.3.0/PSBox-v1.3.0-linux-x86_64.tar.gz.sha256"
+          },
+          {
+            "name": "PSBox-v1.3.0-linux-x86_64.tar.gz.sig",
+            "url": "https://github.com/RafaelNGP/xbox-cloud-gaming-ps5/releases/download/v1.3.0/PSBox-v1.3.0-linux-x86_64.tar.gz.sig"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99874.json",
+      "record": {
+        "titleid": "PPSA99874",
+        "name": "PS5 Minecraft Java",
+        "category": "pc-ports",
+        "license": null,
+        "version": null,
+        "source_repo": null,
+        "artifact_url": null,
+        "sha256": null
+      },
+      "check": {
+        "path": "apps/PPSA99874.json",
+        "status": "unpublished"
+      }
+    },
+    {
+      "path": "apps/PPSA99920.json",
+      "record": {
+        "titleid": "PPSA99920",
+        "name": "Prospero Vibrate",
+        "category": "tools",
+        "license": "GPL-3.0",
+        "version": "1.0",
+        "source_repo": "https://github.com/SvenGDK/Prospero-Vibrate",
+        "artifact_url": "https://github.com/SvenGDK/Prospero-Vibrate/releases/download/v1.0/PPSA99920.zip",
+        "sha256": "c48443aa779f682426b1ea94c669370d3ec10aeb70974f18bea7269745b90051"
+      },
+      "check": {
+        "path": "apps/PPSA99920.json",
+        "status": "verified",
+        "repo": "SvenGDK/Prospero-Vibrate",
+        "tag": "v1.0",
+        "filename": "PPSA99920.zip",
+        "release_url": "https://github.com/SvenGDK/Prospero-Vibrate/releases/tag/v1.0",
+        "assets": [
+          {
+            "name": "PPSA99920.zip",
+            "url": "https://github.com/SvenGDK/Prospero-Vibrate/releases/download/v1.0/PPSA99920.zip"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99921.json",
+      "record": {
+        "titleid": "PPSA99921",
+        "name": "Genesis Plus GX PS5",
+        "category": "emulators",
+        "license": null,
+        "version": null,
+        "source_repo": null,
+        "artifact_url": null,
+        "sha256": null
+      },
+      "check": {
+        "path": "apps/PPSA99921.json",
+        "status": "unpublished"
+      }
+    },
+    {
+      "path": "apps/PPSA99922.json",
+      "record": {
+        "titleid": "PPSA99922",
+        "name": "Snes9x PS5",
+        "category": "emulators",
+        "license": null,
+        "version": null,
+        "source_repo": null,
+        "artifact_url": null,
+        "sha256": null
+      },
+      "check": {
+        "path": "apps/PPSA99922.json",
+        "status": "unpublished"
+      }
+    },
+    {
+      "path": "apps/PPSA99924.json",
+      "record": {
+        "titleid": "PPSA99924",
+        "name": "FBNeo PS5",
+        "category": "emulators",
+        "license": null,
+        "version": null,
+        "source_repo": null,
+        "artifact_url": null,
+        "sha256": null
+      },
+      "check": {
+        "path": "apps/PPSA99924.json",
+        "status": "unpublished"
+      }
+    },
+    {
+      "path": "apps/PPSA99925.json",
+      "record": {
+        "titleid": "PPSA99925",
+        "name": "Beetle PCE PS5",
+        "category": "emulators",
+        "license": null,
+        "version": null,
+        "source_repo": null,
+        "artifact_url": null,
+        "sha256": null
+      },
+      "check": {
+        "path": "apps/PPSA99925.json",
+        "status": "unpublished"
+      }
+    },
+    {
+      "path": "apps/PPSA99930.json",
+      "record": {
+        "titleid": "PPSA99930",
+        "name": "Forwarder Manager",
+        "category": "utilities",
+        "license": "GPL-3.0",
+        "version": "00.001.004",
+        "source_repo": "https://github.com/heydemoura/ps5-forwarder-manager",
+        "artifact_url": "https://github.com/heydemoura/ps5-forwarder-manager/releases/download/00.001.004/PPSA99930.zip",
+        "sha256": "07f536bd2718dd36efe862b82b1d830d7fbcb6c0079fbe4059765e380a1cf45b"
+      },
+      "check": {
+        "path": "apps/PPSA99930.json",
+        "status": "verified",
+        "repo": "heydemoura/ps5-forwarder-manager",
+        "tag": "00.001.004",
+        "filename": "PPSA99930.zip",
+        "release_url": "https://github.com/heydemoura/ps5-forwarder-manager/releases/tag/00.001.004",
+        "assets": [
+          {
+            "name": "PPSA99930.zip",
+            "url": "https://github.com/heydemoura/ps5-forwarder-manager/releases/download/00.001.004/PPSA99930.zip"
+          },
+          {
+            "name": "SHA256SUMS",
+            "url": "https://github.com/heydemoura/ps5-forwarder-manager/releases/download/00.001.004/SHA256SUMS"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99991.json",
+      "record": {
+        "titleid": "PPSA99991",
+        "name": "YouTube Max’d",
+        "category": "video",
+        "license": "GPL-3.0-or-later",
+        "version": "1.3.0-preview.1",
+        "source_repo": "https://github.com/HandshakeHackin/youtube-maxd",
+        "artifact_url": "https://github.com/HandshakeHackin/youtube-maxd/releases/download/v1.3.0-preview.1/PPSA99991.zip",
+        "sha256": "22b4bf2c8b7fa67f3e11198645fab9746f7381170b12dfc82ce709814792e593"
+      },
+      "check": {
+        "path": "apps/PPSA99991.json",
+        "status": "verified",
+        "repo": "HandshakeHackin/youtube-maxd",
+        "tag": "v1.3.0-preview.1",
+        "filename": "PPSA99991.zip",
+        "release_url": "https://github.com/HandshakeHackin/youtube-maxd/releases/tag/v1.3.0-preview.1",
+        "assets": [
+          {
+            "name": "catalog-scan.txt",
+            "url": "https://github.com/HandshakeHackin/youtube-maxd/releases/download/v1.3.0-preview.1/catalog-scan.txt"
+          },
+          {
+            "name": "native-validation.json",
+            "url": "https://github.com/HandshakeHackin/youtube-maxd/releases/download/v1.3.0-preview.1/native-validation.json"
+          },
+          {
+            "name": "PPSA99991.zip",
+            "url": "https://github.com/HandshakeHackin/youtube-maxd/releases/download/v1.3.0-preview.1/PPSA99991.zip"
+          },
+          {
+            "name": "RELEASE_NOTES.md",
+            "url": "https://github.com/HandshakeHackin/youtube-maxd/releases/download/v1.3.0-preview.1/RELEASE_NOTES.md"
+          },
+          {
+            "name": "SHA256SUMS",
+            "url": "https://github.com/HandshakeHackin/youtube-maxd/releases/download/v1.3.0-preview.1/SHA256SUMS"
+          },
+          {
+            "name": "TESTING.txt",
+            "url": "https://github.com/HandshakeHackin/youtube-maxd/releases/download/v1.3.0-preview.1/TESTING.txt"
+          },
+          {
+            "name": "TEST_RESULTS.txt",
+            "url": "https://github.com/HandshakeHackin/youtube-maxd/releases/download/v1.3.0-preview.1/TEST_RESULTS.txt"
+          },
+          {
+            "name": "YouTube-Maxd-icon.png",
+            "url": "https://github.com/HandshakeHackin/youtube-maxd/releases/download/v1.3.0-preview.1/YouTube-Maxd-icon.png"
+          },
+          {
+            "name": "YouTube-Maxd-source.zip",
+            "url": "https://github.com/HandshakeHackin/youtube-maxd/releases/download/v1.3.0-preview.1/YouTube-Maxd-source.zip"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99993.json",
+      "record": {
+        "titleid": "PPSA99993",
+        "name": "Pulse",
+        "category": "homebrew-games",
+        "license": "GPL-3.0",
+        "version": null,
+        "source_repo": null,
+        "artifact_url": null,
+        "sha256": null
+      },
+      "check": {
+        "path": "apps/PPSA99993.json",
+        "status": "unpublished"
+      }
+    },
+    {
+      "path": "apps/PPSA99995.json",
+      "record": {
+        "titleid": "PPSA99995",
+        "name": "Prospero Win",
+        "category": "utilities",
+        "license": "LGPL-2.1",
+        "version": "0.2.0",
+        "source_repo": "https://github.com/mpereiraesaa/prospero-win",
+        "artifact_url": "https://github.com/mpereiraesaa/prospero-win/releases/download/v0.2.0/prospero-win-v0.2.0.zip",
+        "sha256": "7585efc624c2f8077c0d579a045ef808129a7b0bc525a9dd9c5c6db0c51626ca"
+      },
+      "check": {
+        "path": "apps/PPSA99995.json",
+        "status": "verified",
+        "repo": "mpereiraesaa/prospero-win",
+        "tag": "v0.2.0",
+        "filename": "prospero-win-v0.2.0.zip",
+        "release_url": "https://github.com/mpereiraesaa/prospero-win/releases/tag/v0.2.0",
+        "assets": [
+          {
+            "name": "prospero-win-v0.2.0.zip",
+            "url": "https://github.com/mpereiraesaa/prospero-win/releases/download/v0.2.0/prospero-win-v0.2.0.zip"
+          },
+          {
+            "name": "SHA256SUMS",
+            "url": "https://github.com/mpereiraesaa/prospero-win/releases/download/v0.2.0/SHA256SUMS"
+          }
+        ]
+      }
+    },
+    {
+      "path": "apps/PPSA99997.json",
+      "record": {
+        "titleid": "PPSA99997",
+        "name": "Nuvio PS5",
+        "category": "video",
+        "license": "GPL-3.0",
+        "version": "0.1.0-alpha.7",
+        "source_repo": "https://github.com/bilawalriaz/nuvio-ps5-homebrew",
+        "artifact_url": "https://github.com/bilawalriaz/nuvio-ps5-homebrew/releases/download/v0.1.0-alpha.7/PPSA99997.zip",
+        "sha256": "8c56ca5149d39fab1e4e4f8650f25e20d49e655374769765dca8c30ae2385eca"
+      },
+      "check": {
+        "path": "apps/PPSA99997.json",
+        "status": "verified",
+        "repo": "bilawalriaz/nuvio-ps5-homebrew",
+        "tag": "v0.1.0-alpha.7",
+        "filename": "PPSA99997.zip",
+        "release_url": "https://github.com/bilawalriaz/nuvio-ps5-homebrew/releases/tag/v0.1.0-alpha.7",
+        "assets": [
+          {
+            "name": "nuvio-ps5-0.1.0-alpha.7.zip",
+            "url": "https://github.com/bilawalriaz/nuvio-ps5-homebrew/releases/download/v0.1.0-alpha.7/nuvio-ps5-0.1.0-alpha.7.zip"
+          },
+          {
+            "name": "PPSA99997.zip",
+            "url": "https://github.com/bilawalriaz/nuvio-ps5-homebrew/releases/download/v0.1.0-alpha.7/PPSA99997.zip"
+          },
+          {
+            "name": "SHA256SUMS",
+            "url": "https://github.com/bilawalriaz/nuvio-ps5-homebrew/releases/download/v0.1.0-alpha.7/SHA256SUMS"
+          }
+        ]
+      }
+    }
+  ]
+}

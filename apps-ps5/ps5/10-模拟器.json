@@ -1,0 +1,703 @@
+[
+  {
+    "id": "native-ppsa06464",
+    "简介": "PS64（PS5 模拟器）",
+    "分类": "模拟器",
+    "aliases": [
+      "PS64",
+      "PPSA06464",
+      "PS64",
+      "模拟器"
+    ],
+    "enabled": false,
+    "repo_path": "dantaipan/PS64",
+    "releases_url": "https://github.com/dantaipan/PS64/releases/tag/01.000.000",
+    "title_id": "PPSA06464",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。所需 BIOS、游戏或商业运行库需按作者说明自行准备。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA06464.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "c9927e906e0631d1e62fe99f48e56e21a6f055e340b85699eaba1ac3ce4b3f0f",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/dantaipan/PS64/releases/tag/01.000.000",
+      "发布标签": "01.000.000"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "01.000.000",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PPSA06464.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PPSA06464.zip",
+    "save_subdir": "native-ppsa06464",
+    "download_url_templates": [
+      "https://github.com/dantaipan/PS64/releases/download/01.000.000/PPSA06464.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa68091",
+    "简介": "Ruffle Flash（PS5 模拟器）",
+    "分类": "模拟器",
+    "aliases": [
+      "Ruffle Flash",
+      "PPSA68091",
+      "Ruffle-Flash-PS5",
+      "模拟器"
+    ],
+    "enabled": false,
+    "repo_path": "ZiZc3/Ruffle-Flash-PS5",
+    "releases_url": "https://github.com/ZiZc3/Ruffle-Flash-PS5/releases/tag/1.2.0",
+    "title_id": "PPSA68091",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。所需 BIOS、游戏或商业运行库需按作者说明自行准备。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA68091.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "b34b40b69da30dafce4ea67ee312a55b6bd9b07b59849741253b2c46147076be",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/ZiZc3/Ruffle-Flash-PS5/releases/tag/1.2.0",
+      "发布标签": "1.2.0"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "1.2.0",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PPSA68091.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PPSA68091.zip",
+    "save_subdir": "native-ppsa68091",
+    "download_url_templates": [
+      "https://github.com/ZiZc3/Ruffle-Flash-PS5/releases/download/1.2.0/PPSA68091.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa92280",
+    "简介": "Capy Mobile（PS5 模拟器）",
+    "分类": "模拟器",
+    "aliases": [
+      "Capy Mobile",
+      "PPSA92280",
+      "CapyMobile",
+      "模拟器"
+    ],
+    "enabled": false,
+    "repo_path": "khalifa007/CapyMobile",
+    "releases_url": "https://github.com/khalifa007/CapyMobile/releases/tag/v0.5.0",
+    "title_id": "PPSA92280",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。所需 BIOS、游戏或商业运行库需按作者说明自行准备。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA92280.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "80b14507838cd835fca794a493cde6b4cf0e7ca923afafaa1bc37c08f8fca6ec",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/khalifa007/CapyMobile/releases/tag/v0.5.0",
+      "发布标签": "v0.5.0"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "v0.5.0",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "CapyMobile-00.005.000.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "CapyMobile-00.005.000.zip",
+    "save_subdir": "native-ppsa92280",
+    "download_url_templates": [
+      "https://github.com/khalifa007/CapyMobile/releases/download/v0.5.0/CapyMobile-00.005.000.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa97358",
+    "简介": "XPSemu（PS5 模拟器）",
+    "分类": "模拟器",
+    "aliases": [
+      "XPSemu",
+      "PPSA97358",
+      "XPSemu",
+      "模拟器"
+    ],
+    "enabled": false,
+    "repo_path": "ZiZc3/XPSemu",
+    "releases_url": "https://github.com/ZiZc3/XPSemu/releases/tag/Alpha-2.1",
+    "title_id": "PPSA97358",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。所需 BIOS、游戏或商业运行库需按作者说明自行准备。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA97358.json",
+    "_许可": "GPL-2.0",
+    "_上游sha256": "494682ff5073985422fd8961cc617b8e3bdbdb2dedd85b69dadbd06f709953e9",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/ZiZc3/XPSemu/releases/tag/Alpha-2.1",
+      "发布标签": "Alpha-2.1"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "Alpha-2.1",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PPSA97358.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PPSA97358.zip",
+    "save_subdir": "native-ppsa97358",
+    "download_url_templates": [
+      "https://github.com/ZiZc3/XPSemu/releases/download/Alpha-2.1/PPSA97358.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa97510",
+    "简介": "PSXS5（PS5 模拟器）",
+    "分类": "模拟器",
+    "aliases": [
+      "PSXS5",
+      "PPSA97510",
+      "PSXS5",
+      "模拟器"
+    ],
+    "enabled": false,
+    "repo_path": "SynoPiia/PSXS5",
+    "releases_url": "https://github.com/SynoPiia/PSXS5/releases/tag/v2.2.0",
+    "title_id": "PPSA97510",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。所需 BIOS、游戏或商业运行库需按作者说明自行准备。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA97510.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "8904a734f99ecd837071f78167214cb2fa867870936afe996f6f3c95f7b4af60",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/SynoPiia/PSXS5/releases/tag/v2.2.0",
+      "发布标签": "v2.2.0"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "v2.2.0",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PSXS5-v2.2.0.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PSXS5-v2.2.0.zip",
+    "save_subdir": "native-ppsa97510",
+    "download_url_templates": [
+      "https://github.com/SynoPiia/PSXS5/releases/download/v2.2.0/PSXS5-v2.2.0.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa98510",
+    "简介": "SwanStationPS5（PS5 模拟器）",
+    "分类": "模拟器",
+    "aliases": [
+      "SwanStationPS5",
+      "PPSA98510",
+      "SwanStationPS5",
+      "模拟器",
+      "PS1",
+      "PSX"
+    ],
+    "enabled": false,
+    "repo_path": "darkxex/SwanStationPS5",
+    "releases_url": "https://github.com/darkxex/SwanStationPS5/releases/tag/1.4.2",
+    "title_id": "PPSA98510",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。所需 BIOS、游戏或商业运行库需按作者说明自行准备。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA98510.json",
+    "_许可": "GPL-3.0-or-later",
+    "_上游sha256": "19e024135f7303d5928d93b3742707e14552abf1c5051b3f6dfa212be4bf4cf8",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/darkxex/SwanStationPS5/releases/tag/1.4.2",
+      "发布标签": "1.4.2"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "1.4.2",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PPSA98510.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PPSA98510.zip",
+    "save_subdir": "native-ppsa98510",
+    "download_url_templates": [
+      "https://github.com/darkxex/SwanStationPS5/releases/download/1.4.2/PPSA98510.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99008",
+    "简介": "ProsperoEden（PS5 模拟器）",
+    "分类": "模拟器",
+    "aliases": [
+      "ProsperoEden",
+      "PPSA99008",
+      "ProsperoEden",
+      "模拟器"
+    ],
+    "enabled": false,
+    "repo_path": "blackbearreloaded/ProsperoEden",
+    "releases_url": "https://github.com/blackbearreloaded/ProsperoEden/releases",
+    "title_id": "PPSA99008",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。所需 BIOS、游戏或商业运行库需按作者说明自行准备。目录记录的附件当前未核实可用，保留作者页面入口。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99008.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "9a726c3a4238bfc9651a8c2bd3952cf07972495a3f930cc6d0a5b487140a5991",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "missing-asset",
+      "来源": "https://github.com/blackbearreloaded/ProsperoEden/releases/tag/v1.005.000"
+    },
+    "open_page_only": true,
+    "open_page_url": "https://github.com/blackbearreloaded/ProsperoEden",
+    "_下载说明": "目录记录的附件当前未核实可用，保留作者页面入口。"
+  },
+  {
+    "id": "native-ppsa99142",
+    "简介": "Seedee5（PS5 模拟器）",
+    "分类": "模拟器",
+    "aliases": [
+      "Seedee5",
+      "PPSA99142",
+      "Seedee5",
+      "模拟器"
+    ],
+    "enabled": false,
+    "repo_path": "mortaljinx/Seedee5",
+    "releases_url": "https://github.com/mortaljinx/Seedee5/releases/tag/v1.21",
+    "title_id": "PPSA99142",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。所需 BIOS、游戏或商业运行库需按作者说明自行准备。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99142.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "df06ad7a4c0b03f0dc80a9251138d613793f5425bc4a6ab8cac3b02188b3efbb",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/mortaljinx/Seedee5/releases/tag/v1.21",
+      "发布标签": "v1.21"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "v1.21",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "Seedee5-1.21.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "Seedee5-1.21.zip",
+    "save_subdir": "native-ppsa99142",
+    "download_url_templates": [
+      "https://github.com/mortaljinx/Seedee5/releases/download/v1.21/Seedee5-1.21.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99169",
+    "简介": "RetroArch（PS5 模拟器）",
+    "分类": "模拟器",
+    "aliases": [
+      "RetroArch",
+      "PPSA99169",
+      "PS5_RetroArch",
+      "模拟器",
+      "RetroArch",
+      "全能模拟器"
+    ],
+    "enabled": false,
+    "repo_path": "mihawk-99/PS5_RetroArch",
+    "releases_url": "https://github.com/mihawk-99/PS5_RetroArch/releases/tag/v3.0.0-beta-3",
+    "title_id": "PPSA99169",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。所需 BIOS、游戏或商业运行库需按作者说明自行准备。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99169.json",
+    "_许可": "GPL-3.0-or-later",
+    "_上游sha256": "121786b162652dfe08a0d3fc98015e57d782d06ba6680f4d032b078e6a621a5a",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/mihawk-99/PS5_RetroArch/releases/tag/v3.0.0-beta-3",
+      "发布标签": "v3.0.0-beta-3"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "v3.0.0-beta-3",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PS5_RetroArch-v3.0.0-beta-3.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PS5_RetroArch-v3.0.0-beta-3.zip",
+    "save_subdir": "native-ppsa99169",
+    "download_url_templates": [
+      "https://github.com/mihawk-99/PS5_RetroArch/releases/download/v3.0.0-beta-3/PS5_RetroArch-v3.0.0-beta-3.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99203",
+    "简介": "PS5SX2（PS5 模拟器）",
+    "分类": "模拟器",
+    "aliases": [
+      "PS5SX2",
+      "PPSA99203",
+      "PS5SX2",
+      "模拟器",
+      "PS2",
+      "PCSX2"
+    ],
+    "enabled": false,
+    "repo_path": "Swordpdf/PS5SX2",
+    "releases_url": "https://github.com/Swordpdf/PS5SX2/releases/tag/vk-285-171",
+    "title_id": "PPSA99203",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。所需 BIOS、游戏或商业运行库需按作者说明自行准备。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99203.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "226ac24866f0b94566c0680c3b99c0d5abfe8030723f5b28dae20af039c76963",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/Swordpdf/PS5SX2/releases/tag/vk-285-171",
+      "发布标签": "vk-285-171"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "vk-285-171",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PS5SX2-vk-285-171.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PS5SX2-vk-285-171.zip",
+    "save_subdir": "native-ppsa99203",
+    "download_url_templates": [
+      "https://github.com/Swordpdf/PS5SX2/releases/download/vk-285-171/PS5SX2-vk-285-171.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99247",
+    "简介": "PSFlyCast（PS5 模拟器）",
+    "分类": "模拟器",
+    "aliases": [
+      "PSFlyCast",
+      "PPSA99247",
+      "PSFlycast",
+      "模拟器",
+      "Dreamcast",
+      "DC"
+    ],
+    "enabled": false,
+    "repo_path": "Press5elect/PSFlycast",
+    "releases_url": "https://github.com/Press5elect/PSFlycast/releases/tag/v1.2.0",
+    "title_id": "PPSA99247",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。所需 BIOS、游戏或商业运行库需按作者说明自行准备。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99247.json",
+    "_许可": "GPL-2.0-only",
+    "_上游sha256": "4685e6fe23c80c860e45202d3dbba6bc31f6a3e8e331383e810db6d2b8787c06",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/Press5elect/PSFlycast/releases/tag/v1.2.0",
+      "发布标签": "v1.2.0"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "v1.2.0",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PSFlyCast-v1.2.0.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PSFlyCast-v1.2.0.zip",
+    "save_subdir": "native-ppsa99247",
+    "download_url_templates": [
+      "https://github.com/Press5elect/PSFlycast/releases/download/v1.2.0/PSFlyCast-v1.2.0.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99248",
+    "简介": "PSSwanStation（PS5 模拟器）",
+    "分类": "模拟器",
+    "aliases": [
+      "PSSwanStation",
+      "PPSA99248",
+      "PSSwanStation",
+      "模拟器",
+      "PS1",
+      "PSX"
+    ],
+    "enabled": false,
+    "repo_path": "Press5elect/PSSwanStation",
+    "releases_url": "https://github.com/Press5elect/PSSwanStation/releases/tag/build24",
+    "title_id": "PPSA99248",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。所需 BIOS、游戏或商业运行库需按作者说明自行准备。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99248.json",
+    "_许可": "GPL-3.0-or-later",
+    "_上游sha256": "7366078ce4f8c31fb6137ab9059c2886902315d432ee56662ed6ba246b32a53f",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/Press5elect/PSSwanStation/releases/tag/build24",
+      "发布标签": "build24"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "build24",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PSSwanStation-PS5-PPSA99248-build24.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PSSwanStation-PS5-PPSA99248-build24.zip",
+    "save_subdir": "native-ppsa99248",
+    "download_url_templates": [
+      "https://github.com/Press5elect/PSSwanStation/releases/download/build24/PSSwanStation-PS5-PPSA99248-build24.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99360",
+    "简介": "PS5CEMU-HAR（PS5 模拟器）",
+    "分类": "模拟器",
+    "aliases": [
+      "PS5CEMU-HAR",
+      "PPSA99360",
+      "PS5CEMU-HAR",
+      "模拟器",
+      "Cemu",
+      "Wii U"
+    ],
+    "enabled": false,
+    "repo_path": "premohq/PS5CEMU-HAR",
+    "releases_url": "https://github.com/premohq/PS5CEMU-HAR/releases/tag/v4.0.1",
+    "title_id": "PPSA99360",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。所需 BIOS、游戏或商业运行库需按作者说明自行准备。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99360.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "5d441d73957276e0d2f92bd2f56c70e33020a75483075aaf03cea9ae05028816",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/premohq/PS5CEMU-HAR/releases/tag/v4.0.1",
+      "发布标签": "v4.0.1"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "v4.0.1",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PS5CEMU-HAR-v4.0.1.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PS5CEMU-HAR-v4.0.1.zip",
+    "save_subdir": "native-ppsa99360",
+    "download_url_templates": [
+      "https://github.com/premohq/PS5CEMU-HAR/releases/download/v4.0.1/PS5CEMU-HAR-v4.0.1.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99764",
+    "简介": "Porpoise（PS5 模拟器）",
+    "分类": "模拟器",
+    "aliases": [
+      "Porpoise",
+      "PPSA99764",
+      "Porpoise-Dolphin-Emulator-for-PS5",
+      "模拟器"
+    ],
+    "enabled": false,
+    "repo_path": "elripalda/Porpoise-Dolphin-Emulator-for-PS5",
+    "releases_url": "https://github.com/elripalda/Porpoise-Dolphin-Emulator-for-PS5/releases/tag/v3.0",
+    "title_id": "PPSA99764",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。所需 BIOS、游戏或商业运行库需按作者说明自行准备。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99764.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "889bc738624c1c1abe5be304e3e78604f5cd66068473b5eeaef6c77e7677513e",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/elripalda/Porpoise-Dolphin-Emulator-for-PS5/releases/tag/v3.0",
+      "发布标签": "v3.0"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "v3.0",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "Porpoise-3.0.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "Porpoise-3.0.zip",
+    "save_subdir": "native-ppsa99764",
+    "download_url_templates": [
+      "https://github.com/elripalda/Porpoise-Dolphin-Emulator-for-PS5/releases/download/v3.0/Porpoise-3.0.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99808",
+    "简介": "PICO-8 for PS5（PS5 模拟器）",
+    "分类": "模拟器",
+    "aliases": [
+      "PICO-8 for PS5",
+      "PPSA99808",
+      "pico8-ps5",
+      "模拟器"
+    ],
+    "enabled": false,
+    "repo_path": "RafaelNGP/pico8-ps5",
+    "releases_url": "https://github.com/RafaelNGP/pico8-ps5/releases/tag/v0.1.2",
+    "title_id": "PPSA99808",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。所需 BIOS、游戏或商业运行库需按作者说明自行准备。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99808.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "d76e2bd55ea3cb465da4943938bbeb575abde54fdd3ecefa09fb251f58e1382d",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/RafaelNGP/pico8-ps5/releases/tag/v0.1.2",
+      "发布标签": "v0.1.2"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "v0.1.2",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PPSA99808.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PPSA99808.zip",
+    "save_subdir": "native-ppsa99808",
+    "download_url_templates": [
+      "https://github.com/RafaelNGP/pico8-ps5/releases/download/v0.1.2/PPSA99808.zip"
+    ]
+  }
+]

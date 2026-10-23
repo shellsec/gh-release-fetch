@@ -7,7 +7,7 @@ import json
 import os
 from datetime import datetime, timezone
 
-PLATFORMS = ("windows", "darwin", "linux", "android", "ios")
+PLATFORMS = ("windows", "darwin", "linux", "android", "ios", "switch", "ps5")
 MOBILE_PLATFORMS = ("android", "ios")
 
 

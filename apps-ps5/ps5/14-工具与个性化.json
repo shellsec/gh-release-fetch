@@ -1,0 +1,522 @@
+[
+  {
+    "id": "native-ppsa69426",
+    "简介": "Signal Companion（PS5 工具与个性化）",
+    "分类": "工具与个性化",
+    "aliases": [
+      "Signal Companion",
+      "PPSA69426",
+      "ps5-signal-companion",
+      "工具"
+    ],
+    "enabled": false,
+    "repo_path": "Marice/ps5-signal-companion",
+    "releases_url": "https://github.com/Marice/ps5-signal-companion/releases/tag/v00.003.000",
+    "title_id": "PPSA69426",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA69426.json",
+    "_许可": "GPL-3.0-or-later",
+    "_上游sha256": "39e501e83b7fb52b510c4d818d063bc952c37fd521b06fa28854a49a9816232a",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/Marice/ps5-signal-companion/releases/tag/v00.003.000",
+      "发布标签": "v00.003.000"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "v00.003.000",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "SignalCompanion-PS5-00.003.000.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "SignalCompanion-PS5-00.003.000.zip",
+    "save_subdir": "native-ppsa69426",
+    "download_url_templates": [
+      "https://github.com/Marice/ps5-signal-companion/releases/download/v00.003.000/SignalCompanion-PS5-00.003.000.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa75837",
+    "简介": "Jewel Case（PS5 工具与个性化）",
+    "分类": "工具与个性化",
+    "aliases": [
+      "Jewel Case",
+      "PPSA75837",
+      "JewelCase",
+      "工具"
+    ],
+    "enabled": false,
+    "repo_path": "SkaRift/JewelCase",
+    "releases_url": "https://github.com/SkaRift/JewelCase/releases/tag/v1.1",
+    "title_id": "PPSA75837",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA75837.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "e6831366698d5ebf41a3bf05105782376281768e950b56857e96a9a3b1e43ff5",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/SkaRift/JewelCase/releases/tag/v1.1",
+      "发布标签": "v1.1"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "v1.1",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PPSA75837.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PPSA75837.zip",
+    "save_subdir": "native-ppsa75837",
+    "download_url_templates": [
+      "https://github.com/SkaRift/JewelCase/releases/download/v1.1/PPSA75837.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa76677",
+    "简介": "RommPS（PS5 工具与个性化）",
+    "分类": "工具与个性化",
+    "aliases": [
+      "RommPS",
+      "PPSA76677",
+      "RommPS",
+      "工具"
+    ],
+    "enabled": false,
+    "repo_path": "s0liton/RommPS",
+    "releases_url": "https://github.com/s0liton/RommPS/releases/tag/v1.2.1",
+    "title_id": "PPSA76677",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA76677.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "afd77993de68e18eaa5b52b4b08ac7cdbc081c6af7f10a0720e0c580ac0d9645",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/s0liton/RommPS/releases/tag/v1.2.1",
+      "发布标签": "v1.2.1"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "v1.2.1",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PPSA76677.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PPSA76677.zip",
+    "save_subdir": "native-ppsa76677",
+    "download_url_templates": [
+      "https://github.com/s0liton/RommPS/releases/download/v1.2.1/PPSA76677.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa90210",
+    "简介": "Prospero Themes（PS5 工具与个性化）",
+    "分类": "工具与个性化",
+    "aliases": [
+      "Prospero Themes",
+      "PPSA90210",
+      "ProsperoThemes",
+      "工具"
+    ],
+    "enabled": false,
+    "repo_path": "Darkatek7/ProsperoThemes",
+    "releases_url": "https://github.com/Darkatek7/ProsperoThemes/releases/tag/01.000.008",
+    "title_id": "PPSA90210",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA90210.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "6abe1f3ec3b9c2f63ecee0284e6cf07b4ed4c8d9a0356b7f8b75e2ccdfc8dd77",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/Darkatek7/ProsperoThemes/releases/tag/01.000.008",
+      "发布标签": "01.000.008"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "01.000.008",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PPSA90210.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PPSA90210.zip",
+    "save_subdir": "native-ppsa90210",
+    "download_url_templates": [
+      "https://github.com/Darkatek7/ProsperoThemes/releases/download/01.000.008/PPSA90210.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99000",
+    "简介": "ProsperoStore（PS5 工具与个性化）",
+    "分类": "工具与个性化",
+    "aliases": [
+      "ProsperoStore",
+      "PPSA99000",
+      "ProsperoStore",
+      "工具",
+      "自制商店",
+      "应用商店"
+    ],
+    "enabled": false,
+    "repo_path": "darkxex/ProsperoStore",
+    "releases_url": "https://github.com/darkxex/ProsperoStore/releases/tag/v1.000.101",
+    "title_id": "PPSA99000",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99000.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "94ae4a33018e6d0b26fce53fb4067360622e4f06681df98c3b341dee4b016221",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/darkxex/ProsperoStore/releases/tag/v1.000.101",
+      "发布标签": "v1.000.101"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "v1.000.101",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PPSA99000.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PPSA99000.zip",
+    "save_subdir": "native-ppsa99000",
+    "download_url_templates": [
+      "https://github.com/darkxex/ProsperoStore/releases/download/v1.000.101/PPSA99000.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99030",
+    "简介": "Forever Launcher（PS5 工具与个性化）",
+    "分类": "工具与个性化",
+    "aliases": [
+      "Forever Launcher",
+      "PPSA99030",
+      "ps5-forever",
+      "工具"
+    ],
+    "enabled": false,
+    "repo_path": "bizkut/ps5-forever",
+    "releases_url": "https://github.com/bizkut/ps5-forever/releases/tag/01.000.014",
+    "title_id": "PPSA99030",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99030.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "6624e047aa8aed5f5c35e73f5ab3f81189446cc318f3e67a6da3d8947a5b90ec",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/bizkut/ps5-forever/releases/tag/01.000.014",
+      "发布标签": "01.000.014"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "01.000.014",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PPSA99030.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PPSA99030.zip",
+    "save_subdir": "native-ppsa99030",
+    "download_url_templates": [
+      "https://github.com/bizkut/ps5-forever/releases/download/01.000.014/PPSA99030.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99109",
+    "简介": "Prospero Explorer（PS5 工具与个性化）",
+    "分类": "工具与个性化",
+    "aliases": [
+      "Prospero Explorer",
+      "PPSA99109",
+      "Prospero-Explorer",
+      "工具",
+      "文件管理"
+    ],
+    "enabled": false,
+    "repo_path": "SvenGDK/Prospero-Explorer",
+    "releases_url": "https://github.com/SvenGDK/Prospero-Explorer/releases/tag/v1.0",
+    "title_id": "PPSA99109",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99109.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "3eaee706e8aca772fce734b494e56729ddedec218597ab9baf940094a0cdfc7e",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/SvenGDK/Prospero-Explorer/releases/tag/v1.0",
+      "发布标签": "v1.0"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "v1.0",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "ProsperoExplorer-v1.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "ProsperoExplorer-v1.zip",
+    "save_subdir": "native-ppsa99109",
+    "download_url_templates": [
+      "https://github.com/SvenGDK/Prospero-Explorer/releases/download/v1.0/ProsperoExplorer-v1.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99110",
+    "简介": "Prospero Multi Tools（PS5 工具与个性化）",
+    "分类": "工具与个性化",
+    "aliases": [
+      "Prospero Multi Tools",
+      "PPSA99110",
+      "Prospero-Multi-Tools",
+      "工具"
+    ],
+    "enabled": false,
+    "repo_path": "SvenGDK/Prospero-Multi-Tools",
+    "releases_url": "https://github.com/SvenGDK/Prospero-Multi-Tools/releases/tag/v1",
+    "title_id": "PPSA99110",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99110.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "0e7c60d0e860cd0cafb939f668ccae57f53503f2c2371b4193a81ab306346d6b",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/SvenGDK/Prospero-Multi-Tools/releases/tag/v1",
+      "发布标签": "v1"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "v1",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "ProsperoMultiTools.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "ProsperoMultiTools.zip",
+    "save_subdir": "native-ppsa99110",
+    "download_url_templates": [
+      "https://github.com/SvenGDK/Prospero-Multi-Tools/releases/download/v1/ProsperoMultiTools.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99773",
+    "简介": "PShare（PS5 工具与个性化）",
+    "分类": "工具与个性化",
+    "aliases": [
+      "PShare",
+      "PPSA99773",
+      "PShare",
+      "工具"
+    ],
+    "enabled": false,
+    "repo_path": "StonedModder/PShare",
+    "releases_url": "https://github.com/StonedModder/PShare/releases/tag/1.0",
+    "title_id": "PPSA99773",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99773.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "a9a07cdeac7b6ab6d6ce5faebb1e128d232ce9c173b976170a77abecdb8be807",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/StonedModder/PShare/releases/tag/1.0",
+      "发布标签": "1.0"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "1.0",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PPSA99773.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PPSA99773.zip",
+    "save_subdir": "native-ppsa99773",
+    "download_url_templates": [
+      "https://github.com/StonedModder/PShare/releases/download/1.0/PPSA99773.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99930",
+    "简介": "Forwarder Manager（PS5 工具与个性化）",
+    "分类": "工具与个性化",
+    "aliases": [
+      "Forwarder Manager",
+      "PPSA99930",
+      "ps5-forwarder-manager",
+      "工具"
+    ],
+    "enabled": false,
+    "repo_path": "heydemoura/ps5-forwarder-manager",
+    "releases_url": "https://github.com/heydemoura/ps5-forwarder-manager/releases/tag/00.001.004",
+    "title_id": "PPSA99930",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99930.json",
+    "_许可": "GPL-3.0",
+    "_上游sha256": "07f536bd2718dd36efe862b82b1d830d7fbcb6c0079fbe4059765e380a1cf45b",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/heydemoura/ps5-forwarder-manager/releases/tag/00.001.004",
+      "发布标签": "00.001.004"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "00.001.004",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "PPSA99930.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "PPSA99930.zip",
+    "save_subdir": "native-ppsa99930",
+    "download_url_templates": [
+      "https://github.com/heydemoura/ps5-forwarder-manager/releases/download/00.001.004/PPSA99930.zip"
+    ]
+  },
+  {
+    "id": "native-ppsa99995",
+    "简介": "Prospero Win（PS5 工具与个性化）",
+    "分类": "工具与个性化",
+    "aliases": [
+      "Prospero Win",
+      "PPSA99995",
+      "prospero-win",
+      "工具"
+    ],
+    "enabled": false,
+    "repo_path": "mpereiraesaa/prospero-win",
+    "releases_url": "https://github.com/mpereiraesaa/prospero-win/releases/tag/v0.2.0",
+    "title_id": "PPSA99995",
+    "run_installer": false,
+    "kill_before_install": false,
+    "运行方式": "原生标题",
+    "固件要求": "按作者 README 与发布说明核对，未统一核定。",
+    "使用说明": "原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。",
+    "_目录来源": "https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99995.json",
+    "_许可": "LGPL-2.1",
+    "_上游sha256": "7585efc624c2f8077c0d579a045ef808129a7b0bc525a9dd9c5c6db0c51626ca",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "verified",
+      "来源": "https://github.com/mpereiraesaa/prospero-win/releases/tag/v0.2.0",
+      "发布标签": "v0.2.0"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "pinned_release_tag": "v0.2.0",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "prospero-win-v0.2.0.zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "prospero-win-v0.2.0.zip",
+    "save_subdir": "native-ppsa99995",
+    "download_url_templates": [
+      "https://github.com/mpereiraesaa/prospero-win/releases/download/v0.2.0/prospero-win-v0.2.0.zip"
+    ]
+  }
+]

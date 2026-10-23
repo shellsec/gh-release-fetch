@@ -1,0 +1,1887 @@
+{
+  "checked_on": "2026-10-19",
+  "说明": "仅核查公开发布页及附件规则；不表示已在实机运行。测试版固定 tag，需要人工复核后更新。",
+  "releases": [
+    {
+      "repo": "3096/switch-time",
+      "release_url": "https://github.com/3096/switch-time/releases/tag/0.1.6",
+      "tag": "0.1.6",
+      "published_at": "2026-01-05T06:45:13Z",
+      "assets": [
+        {
+          "name": "switch-time.nro",
+          "url": "https://github.com/3096/switch-time/releases/download/0.1.6/switch-time.nro"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "Ansem-SoD/Picofly",
+      "release_url": "https://github.com/Ansem-SoD/Picofly/releases",
+      "status": "no-stable-release",
+      "project_url": "https://github.com/Ansem-SoD/Picofly",
+      "archived": false,
+      "project_exists": true
+    },
+    {
+      "repo": "Antman2023/UURemote-ns",
+      "tag": "v0.1.6",
+      "release_url": "https://github.com/Antman2023/UURemote-ns/releases/tag/v0.1.6",
+      "status": "prerelease",
+      "assets": [
+        {
+          "name": "SHA256SUMS",
+          "url": "https://github.com/Antman2023/UURemote-ns/releases/download/v0.1.6/SHA256SUMS"
+        },
+        {
+          "name": "UURemote-ns-0.1.6-switch.zip",
+          "url": "https://github.com/Antman2023/UURemote-ns/releases/download/v0.1.6/UURemote-ns-0.1.6-switch.zip"
+        },
+        {
+          "name": "UURemote-ns.nro",
+          "url": "https://github.com/Antman2023/UURemote-ns/releases/download/v0.1.6/UURemote-ns.nro"
+        }
+      ]
+    },
+    {
+      "repo": "ArakiW/switch-dsh-client",
+      "release_url": "https://github.com/ArakiW/switch-dsh-client/releases/tag/v0.1.0",
+      "tag": "v0.1.0",
+      "published_at": "2026-08-18T10:25:14Z",
+      "assets": [
+        {
+          "name": "switch-dsh-client.nro",
+          "url": "https://github.com/ArakiW/switch-dsh-client/releases/download/v0.1.0/switch-dsh-client.nro"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "Aster145/HomeGuard",
+      "tag": "v0.1.1",
+      "release_url": "https://github.com/Aster145/HomeGuard/releases/tag/v0.1.1",
+      "status": "prerelease",
+      "assets": [
+        {
+          "name": "HomeGuard-0.1.1-icon.nro",
+          "url": "https://github.com/Aster145/HomeGuard/releases/download/v0.1.1/HomeGuard-0.1.1-icon.nro"
+        },
+        {
+          "name": "HomeGuard-0.1.1-icon.zip",
+          "url": "https://github.com/Aster145/HomeGuard/releases/download/v0.1.1/HomeGuard-0.1.1-icon.zip"
+        }
+      ]
+    },
+    {
+      "repo": "Atmosphere-NX/Atmosphere",
+      "release_url": "https://github.com/Atmosphere-NX/Atmosphere/releases/tag/1.12.1",
+      "tag": "1.12.1",
+      "published_at": "2026-10-16T00:05:51Z",
+      "assets": [
+        {
+          "name": "atmosphere-1.12.1-master-6b0c077b4+hbl-2.4.5+hbmenu-3.6.1.zip",
+          "url": "https://github.com/Atmosphere-NX/Atmosphere/releases/download/1.12.1/atmosphere-1.12.1-master-6b0c077b4+hbl-2.4.5+hbmenu-3.6.1.zip"
+        },
+        {
+          "name": "fusee.bin",
+          "url": "https://github.com/Atmosphere-NX/Atmosphere/releases/download/1.12.1/fusee.bin"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "BernardoGiordano/Checkpoint",
+      "release_url": "https://github.com/BernardoGiordano/Checkpoint/releases/tag/v5.3.0",
+      "tag": "v5.3.0",
+      "published_at": "2026-10-13T19:22:44Z",
+      "assets": [
+        {
+          "name": "Checkpoint.3dsx",
+          "url": "https://github.com/BernardoGiordano/Checkpoint/releases/download/v5.3.0/Checkpoint.3dsx"
+        },
+        {
+          "name": "Checkpoint.3dsx.elf",
+          "url": "https://github.com/BernardoGiordano/Checkpoint/releases/download/v5.3.0/Checkpoint.3dsx.elf"
+        },
+        {
+          "name": "Checkpoint.cia",
+          "url": "https://github.com/BernardoGiordano/Checkpoint/releases/download/v5.3.0/Checkpoint.cia"
+        },
+        {
+          "name": "Checkpoint.nro",
+          "url": "https://github.com/BernardoGiordano/Checkpoint/releases/download/v5.3.0/Checkpoint.nro"
+        },
+        {
+          "name": "Checkpoint.nro.elf",
+          "url": "https://github.com/BernardoGiordano/Checkpoint/releases/download/v5.3.0/Checkpoint.nro.elf"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "CTCaer/hekate",
+      "release_url": "https://github.com/CTCaer/hekate/releases/tag/v6.5.4",
+      "tag": "v6.5.4",
+      "published_at": "2026-09-28T00:06:10Z",
+      "assets": [
+        {
+          "name": "hekate_ctcaer_6.5.4.bin",
+          "url": "https://github.com/CTCaer/hekate/releases/download/v6.5.4/hekate_ctcaer_6.5.4.bin"
+        },
+        {
+          "name": "hekate_ctcaer_6.5.4_Nyx_1.9.4.zip",
+          "url": "https://github.com/CTCaer/hekate/releases/download/v6.5.4/hekate_ctcaer_6.5.4_Nyx_1.9.4.zip"
+        },
+        {
+          "name": "hekate_ctcaer_6.5.4__ram8GB.bin",
+          "url": "https://github.com/CTCaer/hekate/releases/download/v6.5.4/hekate_ctcaer_6.5.4__ram8GB.bin"
+        },
+        {
+          "name": "joiner_scripts_for_windows_linux_macos.zip",
+          "url": "https://github.com/CTCaer/hekate/releases/download/v6.5.4/joiner_scripts_for_windows_linux_macos.zip"
+        },
+        {
+          "name": "nyx_usb_max_rate__run_only_once_per_windows_pc.reg",
+          "url": "https://github.com/CTCaer/hekate/releases/download/v6.5.4/nyx_usb_max_rate__run_only_once_per_windows_pc.reg"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "CaiMiao/Tencent-switcher-GUI",
+      "release_url": "https://github.com/CaiMiao/Tencent-switcher-GUI/releases/tag/0.1.1",
+      "tag": "0.1.1",
+      "published_at": "2021-01-21T07:21:25Z",
+      "assets": [
+        {
+          "name": "tencent-switcher-gui.nro",
+          "url": "https://github.com/CaiMiao/Tencent-switcher-GUI/releases/download/0.1.1/tencent-switcher-gui.nro"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "CommunityPokeOrg/claude-code-switch",
+      "release_url": "https://github.com/CommunityPokeOrg/claude-code-switch/releases/tag/v0.2.1",
+      "tag": "v0.2.1",
+      "published_at": "2026-10-02T16:06:24Z",
+      "assets": [
+        {
+          "name": "claude-code-switch.nro",
+          "url": "https://github.com/CommunityPokeOrg/claude-code-switch/releases/download/v0.2.1/claude-code-switch.nro"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "CostelaCNX/PortNX",
+      "release_url": "https://github.com/CostelaCNX/PortNX/releases/tag/v2.2.0",
+      "tag": "v2.2.0",
+      "published_at": "2026-10-12T14:56:58Z",
+      "assets": [
+        {
+          "name": "PortNX-v2.2.0.zip",
+          "url": "https://github.com/CostelaCNX/PortNX/releases/download/v2.2.0/PortNX-v2.2.0.zip"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "CostelaCNX/TelegramNX",
+      "release_url": "https://github.com/CostelaCNX/TelegramNX/releases/tag/v1.0.0",
+      "tag": "v1.0.0",
+      "published_at": "2026-08-02T03:18:10Z",
+      "assets": [
+        {
+          "name": "TelegramNX-1.0.0.zip",
+          "url": "https://github.com/CostelaCNX/TelegramNX/releases/download/v1.0.0/TelegramNX-1.0.0.zip"
+        },
+        {
+          "name": "telegramnx.nro",
+          "url": "https://github.com/CostelaCNX/TelegramNX/releases/download/v1.0.0/telegramnx.nro"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "Craftyawesome/N-Xplorer",
+      "status": "prerelease",
+      "tag": "0.7.1-crash-fix",
+      "release_url": "https://github.com/Craftyawesome/N-Xplorer/releases/tag/0.7.1-crash-fix",
+      "assets": [
+        {
+          "name": "N-Xplorer.nro",
+          "url": "https://github.com/Craftyawesome/N-Xplorer/releases/download/0.7.1-crash-fix/N-Xplorer.nro"
+        }
+      ]
+    },
+    {
+      "repo": "DarkMatterCore/nxdumptool",
+      "release_url": "https://github.com/DarkMatterCore/nxdumptool/releases/tag/v1.1.15",
+      "tag": "v1.1.15",
+      "published_at": "2022-02-26T00:40:09Z",
+      "assets": [
+        {
+          "name": "nxdumptool.nro",
+          "url": "https://github.com/DarkMatterCore/nxdumptool/releases/download/v1.1.15/nxdumptool.nro"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "DomazinUS/Switify",
+      "release_url": "https://github.com/DomazinUS/Switify/releases/tag/v0.7.1",
+      "tag": "v0.7.1",
+      "published_at": "2026-08-20T01:53:29Z",
+      "assets": [
+        {
+          "name": "SHA256SUMS.txt",
+          "url": "https://github.com/DomazinUS/Switify/releases/download/v0.7.1/SHA256SUMS.txt"
+        },
+        {
+          "name": "Switify-0.7.1.zip",
+          "url": "https://github.com/DomazinUS/Switify/releases/download/v0.7.1/Switify-0.7.1.zip"
+        },
+        {
+          "name": "Switify-Overlay-0.5.0.zip",
+          "url": "https://github.com/DomazinUS/Switify/releases/download/v0.7.1/Switify-Overlay-0.5.0.zip"
+        },
+        {
+          "name": "Switify-source-0.7.1.zip",
+          "url": "https://github.com/DomazinUS/Switify/releases/download/v0.7.1/Switify-source-0.7.1.zip"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "DomazinUS/twiNX",
+      "release_url": "https://github.com/DomazinUS/twiNX/releases/tag/v0.9.1",
+      "tag": "v0.9.1",
+      "published_at": "2026-08-03T21:33:59Z",
+      "assets": [
+        {
+          "name": "SHA256SUMS.txt",
+          "url": "https://github.com/DomazinUS/twiNX/releases/download/v0.9.1/SHA256SUMS.txt"
+        },
+        {
+          "name": "twiNX-0.9.1-Switch.zip",
+          "url": "https://github.com/DomazinUS/twiNX/releases/download/v0.9.1/twiNX-0.9.1-Switch.zip"
+        },
+        {
+          "name": "twiNX.nro",
+          "url": "https://github.com/DomazinUS/twiNX/releases/download/v0.9.1/twiNX.nro"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "FlagBrew/Checkpoint",
+      "release_url": "https://github.com/BernardoGiordano/Checkpoint/releases/tag/v5.3.0",
+      "tag": "v5.3.0",
+      "published_at": "2026-10-13T19:22:44Z",
+      "assets": [
+        {
+          "name": "Checkpoint.3dsx",
+          "url": "https://github.com/BernardoGiordano/Checkpoint/releases/download/v5.3.0/Checkpoint.3dsx"
+        },
+        {
+          "name": "Checkpoint.3dsx.elf",
+          "url": "https://github.com/BernardoGiordano/Checkpoint/releases/download/v5.3.0/Checkpoint.3dsx.elf"
+        },
+        {
+          "name": "Checkpoint.cia",
+          "url": "https://github.com/BernardoGiordano/Checkpoint/releases/download/v5.3.0/Checkpoint.cia"
+        },
+        {
+          "name": "Checkpoint.nro",
+          "url": "https://github.com/BernardoGiordano/Checkpoint/releases/download/v5.3.0/Checkpoint.nro"
+        },
+        {
+          "name": "Checkpoint.nro.elf",
+          "url": "https://github.com/BernardoGiordano/Checkpoint/releases/download/v5.3.0/Checkpoint.nro.elf"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "HamletDuFromage/aio-switch-updater",
+      "release_url": "https://github.com/HamletDuFromage/aio-switch-updater/releases/tag/2.23.3",
+      "tag": "2.23.3",
+      "published_at": "2025-11-17T21:59:08Z",
+      "assets": [
+        {
+          "name": "aio-switch-updater.zip",
+          "url": "https://github.com/HamletDuFromage/aio-switch-updater/releases/download/2.23.3/aio-switch-updater.zip"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "Hartie95/fastCFWswitch",
+      "release_url": "https://github.com/Hartie95/fastCFWswitch/releases/tag/v1.3.2",
+      "tag": "v1.3.2",
+      "published_at": "2025-11-15T23:26:44Z",
+      "assets": [
+        {
+          "name": "fastCFWswitch_1.3.2.zip",
+          "url": "https://github.com/Hartie95/fastCFWswitch/releases/download/v1.3.2/fastCFWswitch_1.3.2.zip"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "Huntereb/Awoo-Installer",
+      "release_url": "https://github.com/Huntereb/Awoo-Installer/releases/tag/1.3.6",
+      "tag": "1.3.6",
+      "published_at": "2025-11-15T15:38:59Z",
+      "assets": [
+        {
+          "name": "Awoo-Installer.zip",
+          "url": "https://github.com/Huntereb/Awoo-Installer/releases/download/1.3.6/Awoo-Installer.zip"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "ITotalJustice/sphaira",
+      "release_url": "https://github.com/NaGaa95/sphaira/releases/tag/1.0.8",
+      "tag": "1.0.8",
+      "published_at": "2026-10-06T20:07:08Z",
+      "assets": [
+        {
+          "name": "sphaira.zip",
+          "url": "https://github.com/NaGaa95/sphaira/releases/download/1.0.8/sphaira.zip"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "J-D-K/JKSV",
+      "release_url": "https://github.com/J-D-K/JKSV/releases/tag/12/02/2025",
+      "tag": "12/02/2025",
+      "published_at": "2025-12-02T14:08:19Z",
+      "assets": [
+        {
+          "name": "JKSV.nro",
+          "url": "https://github.com/J-D-K/JKSV/releases/download/12%2F02%2F2025/JKSV.nro"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "Jonathan8520/ChatNX",
+      "release_url": "https://github.com/Jonathan8520/ChatNX/releases/tag/v1.0.1",
+      "tag": "v1.0.1",
+      "published_at": "2026-09-09T22:34:27Z",
+      "assets": [
+        {
+          "name": "ChatNX.nro",
+          "url": "https://github.com/Jonathan8520/ChatNX/releases/download/v1.0.1/ChatNX.nro"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "NspxMiguel/SwitchSaveSync",
+      "release_url": "https://github.com/NspxMiguel/SwitchSaveSync/releases/tag/v0.4.0",
+      "tag": "v0.4.0",
+      "published_at": "2026-08-12T03:30:21Z",
+      "assets": [
+        {
+          "name": "install.bat",
+          "url": "https://github.com/NspxMiguel/SwitchSaveSync/releases/download/v0.4.0/install.bat"
+        },
+        {
+          "name": "install.ps1",
+          "url": "https://github.com/NspxMiguel/SwitchSaveSync/releases/download/v0.4.0/install.ps1"
+        },
+        {
+          "name": "install.sh",
+          "url": "https://github.com/NspxMiguel/SwitchSaveSync/releases/download/v0.4.0/install.sh"
+        },
+        {
+          "name": "SwitchSaveSync.ovl",
+          "url": "https://github.com/NspxMiguel/SwitchSaveSync/releases/download/v0.4.0/SwitchSaveSync.ovl"
+        },
+        {
+          "name": "toolbox.json",
+          "url": "https://github.com/NspxMiguel/SwitchSaveSync/releases/download/v0.4.0/toolbox.json"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "Ode1l/NX-Cast",
+      "release_url": "https://github.com/Ode1l/NX-Cast/releases/tag/v0.3.2",
+      "tag": "v0.3.2",
+      "published_at": "2026-10-03T20:44:54Z",
+      "assets": [
+        {
+          "name": "NX-Cast-sdmc.zip",
+          "url": "https://github.com/Ode1l/NX-Cast/releases/download/v0.3.2/NX-Cast-sdmc.zip"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "OpenCloudGaming/OpenNOW-Switch",
+      "release_url": "https://github.com/OpenCloudGaming/OpenNOW-Switch/releases/tag/v0.0.10",
+      "tag": "v0.0.10",
+      "published_at": "2026-10-15T20:01:30Z",
+      "assets": [
+        {
+          "name": "SwitchNOW-0.0.10.nro",
+          "url": "https://github.com/OpenCloudGaming/OpenNOW-Switch/releases/download/v0.0.10/SwitchNOW-0.0.10.nro"
+        },
+        {
+          "name": "SwitchNOW-0.0.10.zip",
+          "url": "https://github.com/OpenCloudGaming/OpenNOW-Switch/releases/download/v0.0.10/SwitchNOW-0.0.10.zip"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "Team-Neptune/DeepSea-Toolbox",
+      "release_url": "https://github.com/Team-Neptune/DeepSea-Toolbox/releases/tag/v4.04",
+      "tag": "v4.04",
+      "published_at": "2023-10-08T20:50:31Z",
+      "assets": [
+        {
+          "name": "DeepSeaToolbox.nro",
+          "url": "https://github.com/Team-Neptune/DeepSea-Toolbox/releases/download/v4.04/DeepSeaToolbox.nro"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "Thorhax/MegaManX-NX",
+      "release_url": "https://github.com/Thorhax/MegaManX-NX/releases/tag/v1.1.0",
+      "tag": "v1.1.0",
+      "published_at": "2026-10-16T11:06:26Z",
+      "assets": [
+        {
+          "name": "MegaManX-NX.zip",
+          "url": "https://github.com/Thorhax/MegaManX-NX/releases/download/v1.1.0/MegaManX-NX.zip"
+        },
+        {
+          "name": "MegaManX.nro",
+          "url": "https://github.com/Thorhax/MegaManX-NX/releases/download/v1.1.0/MegaManX.nro"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "Wasabules/Halyard",
+      "release_url": "https://github.com/Wasabules/Halyard/releases/tag/v0.1.0",
+      "tag": "v0.1.0",
+      "published_at": "2026-09-26T12:39:52Z",
+      "assets": [
+        {
+          "name": "corresponding-source.tar.gz",
+          "url": "https://github.com/Wasabules/Halyard/releases/download/v0.1.0/corresponding-source.tar.gz"
+        },
+        {
+          "name": "halyard.nro",
+          "url": "https://github.com/Wasabules/Halyard/releases/download/v0.1.0/halyard.nro"
+        },
+        {
+          "name": "halyard.vpk",
+          "url": "https://github.com/Wasabules/Halyard/releases/download/v0.1.0/halyard.vpk"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "WerWolv/EdiZon",
+      "release_url": "https://github.com/WerWolv/EdiZon/releases/tag/v3.1.0",
+      "tag": "v3.1.0",
+      "published_at": "2022-01-16T00:39:01Z",
+      "assets": [
+        {
+          "name": "EdiZon.nro",
+          "url": "https://github.com/WerWolv/EdiZon/releases/download/v3.1.0/EdiZon.nro"
+        },
+        {
+          "name": "ovlEdiZon.ovl",
+          "url": "https://github.com/WerWolv/EdiZon/releases/download/v3.1.0/ovlEdiZon.ovl"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "WerWolv/Tesla-Menu",
+      "release_url": "https://github.com/WerWolv/Tesla-Menu/releases/tag/v1.2.3",
+      "tag": "v1.2.3",
+      "published_at": "2023-05-27T12:55:49Z",
+      "assets": [
+        {
+          "name": "ovlmenu.zip",
+          "url": "https://github.com/WerWolv/Tesla-Menu/releases/download/v1.2.3/ovlmenu.zip"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "WerWolv/nx-ovlloader",
+      "release_url": "https://github.com/WerWolv/nx-ovlloader/releases/tag/v1.0.7",
+      "tag": "v1.0.7",
+      "published_at": "2023-05-05T14:37:42Z",
+      "assets": [
+        {
+          "name": "nx-ovlloader.zip",
+          "url": "https://github.com/WerWolv/nx-ovlloader/releases/download/v1.0.7/nx-ovlloader.zip"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "XITRIX/Moonlight-Switch",
+      "release_url": "https://github.com/XITRIX/Moonlight-Switch/releases/tag/v1.5.0",
+      "tag": "v1.5.0",
+      "published_at": "2026-05-24T20:04:16Z",
+      "assets": [
+        {
+          "name": "Debug.elf",
+          "url": "https://github.com/XITRIX/Moonlight-Switch/releases/download/v1.5.0/Debug.elf"
+        },
+        {
+          "name": "moonlight-app-release.apk",
+          "url": "https://github.com/XITRIX/Moonlight-Switch/releases/download/v1.5.0/moonlight-app-release.apk"
+        },
+        {
+          "name": "Moonlight-Switch.nro",
+          "url": "https://github.com/XITRIX/Moonlight-Switch/releases/download/v1.5.0/Moonlight-Switch.nro"
+        },
+        {
+          "name": "Moonlight-windows-clangarm64.zip",
+          "url": "https://github.com/XITRIX/Moonlight-Switch/releases/download/v1.5.0/Moonlight-windows-clangarm64.zip"
+        },
+        {
+          "name": "Moonlight-windows-ucrt64.zip",
+          "url": "https://github.com/XITRIX/Moonlight-Switch/releases/download/v1.5.0/Moonlight-windows-ucrt64.zip"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "XorTroll/Goldleaf",
+      "release_url": "https://github.com/XorTroll/Goldleaf/releases/tag/1.2.1",
+      "tag": "1.2.1",
+      "published_at": "2026-09-22T18:32:34Z",
+      "assets": [
+        {
+          "name": "Goldleaf.nro",
+          "url": "https://github.com/XorTroll/Goldleaf/releases/download/1.2.1/Goldleaf.nro"
+        },
+        {
+          "name": "Quark.jar",
+          "url": "https://github.com/XorTroll/Goldleaf/releases/download/1.2.1/Quark.jar"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "XorTroll/emuiibo",
+      "release_url": "https://github.com/XorTroll/emuiibo/releases/tag/1.1.3",
+      "tag": "1.1.3",
+      "published_at": "2026-03-14T21:52:14Z",
+      "assets": [
+        {
+          "name": "emuiibo.zip",
+          "url": "https://github.com/XorTroll/emuiibo/releases/download/1.1.3/emuiibo.zip"
+        },
+        {
+          "name": "emuiigen.jar",
+          "url": "https://github.com/XorTroll/emuiibo/releases/download/1.1.3/emuiigen.jar"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "ZYP-INre/switch-hongguo",
+      "release_url": "https://github.com/ZYP-INre/switch-hongguo/releases/tag/v0.3.0",
+      "tag": "v0.3.0",
+      "published_at": "2026-10-16T15:30:15Z",
+      "assets": [
+        {
+          "name": "hongguo.nro",
+          "url": "https://github.com/ZYP-INre/switch-hongguo/releases/download/v0.3.0/hongguo.nro"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "averne/Fizeau",
+      "release_url": "https://github.com/averne/Fizeau/releases/tag/v2.8.3",
+      "tag": "v2.8.3",
+      "published_at": "2026-08-07T19:37:05Z",
+      "assets": [
+        {
+          "name": "Fizeau-2.8.3-5bf3f0d.zip",
+          "url": "https://github.com/averne/Fizeau/releases/download/v2.8.3/Fizeau-2.8.3-5bf3f0d.zip"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "borntohonk/Switch-Ghidra-Guides",
+      "release_url": "https://github.com/borntohonk/Switch-Ghidra-Guides/releases",
+      "status": "no-stable-release",
+      "project_url": "https://github.com/borntohonk/Switch-Ghidra-Guides",
+      "archived": false,
+      "project_exists": true
+    },
+    {
+      "repo": "cathery/sys-con",
+      "release_url": "https://github.com/cathery/sys-con/releases/tag/v0.6.5",
+      "tag": "v0.6.5",
+      "published_at": "2024-11-06T19:16:48Z",
+      "assets": [
+        {
+          "name": "sys-con-0.6.5.zip",
+          "url": "https://github.com/cathery/sys-con/releases/download/v0.6.5/sys-con-0.6.5.zip"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "cbreezy210/PKHeX-NX",
+      "tag": "v0.9.5-beta",
+      "release_url": "https://github.com/cbreezy210/PKHeX-NX/releases/tag/v0.9.5-beta",
+      "status": "prerelease",
+      "assets": [
+        {
+          "name": "PKHeX-NX-Beta-v0.9.5.zip",
+          "url": "https://github.com/cbreezy210/PKHeX-NX/releases/download/v0.9.5-beta/PKHeX-NX-Beta-v0.9.5.zip"
+        },
+        {
+          "name": "PKHeX-NX-DBI-v0.9.5.zip",
+          "url": "https://github.com/cbreezy210/PKHeX-NX/releases/download/v0.9.5-beta/PKHeX-NX-DBI-v0.9.5.zip"
+        }
+      ]
+    },
+    {
+      "repo": "chasem-dev/sms-switch",
+      "tag": "v0.3.0",
+      "release_url": "https://github.com/chasem-dev/sms-switch/releases/tag/v0.3.0",
+      "status": "prerelease",
+      "assets": [
+        {
+          "name": "gx_selftest.nro",
+          "url": "https://github.com/chasem-dev/sms-switch/releases/download/v0.3.0/gx_selftest.nro"
+        },
+        {
+          "name": "sms-eclipse.nro",
+          "url": "https://github.com/chasem-dev/sms-switch/releases/download/v0.3.0/sms-eclipse.nro"
+        },
+        {
+          "name": "sms-switch.zip",
+          "url": "https://github.com/chasem-dev/sms-switch/releases/download/v0.3.0/sms-switch.zip"
+        },
+        {
+          "name": "sms.nro",
+          "url": "https://github.com/chasem-dev/sms-switch/releases/download/v0.3.0/sms.nro"
+        }
+      ]
+    },
+    {
+      "repo": "cutarev/sh3-nx",
+      "release_url": "https://github.com/cutarev/sh3-nx/releases/tag/v0.04",
+      "tag": "v0.04",
+      "published_at": "2026-10-17T13:09:28Z",
+      "assets": [
+        {
+          "name": "sh3-nx.nro",
+          "url": "https://github.com/cutarev/sh3-nx/releases/download/v0.04/sh3-nx.nro"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "denpingus/StremNX",
+      "release_url": "https://github.com/denpingus/StremNX/releases/tag/v0.3.0-beta",
+      "tag": "v0.3.0-beta",
+      "published_at": "2026-10-18T19:56:46Z",
+      "assets": [
+        {
+          "name": "stremnx.nro",
+          "url": "https://github.com/denpingus/StremNX/releases/download/v0.3.0-beta/stremnx.nro"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "developersu/ns-usbloader",
+      "status": "release",
+      "tag": "v7.3",
+      "release_url": "https://github.com/developersu/ns-usbloader/releases/tag/v7.3",
+      "assets": [
+        {
+          "name": "Installer-7.3.exe",
+          "url": "https://github.com/developersu/ns-usbloader/releases/download/v7.3/Installer-7.3.exe"
+        },
+        {
+          "name": "Installer-legacy-7.3.exe",
+          "url": "https://github.com/developersu/ns-usbloader/releases/download/v7.3/Installer-legacy-7.3.exe"
+        },
+        {
+          "name": "ns-usbloader-7.3-legacy.jar",
+          "url": "https://github.com/developersu/ns-usbloader/releases/download/v7.3/ns-usbloader-7.3-legacy.jar"
+        },
+        {
+          "name": "ns-usbloader-7.3-m1.jar",
+          "url": "https://github.com/developersu/ns-usbloader/releases/download/v7.3/ns-usbloader-7.3-m1.jar"
+        },
+        {
+          "name": "ns-usbloader-7.3.jar",
+          "url": "https://github.com/developersu/ns-usbloader/releases/download/v7.3/ns-usbloader-7.3.jar"
+        }
+      ]
+    },
+    {
+      "repo": "dongrez1990-cloud/hongguo-switch",
+      "release_url": "https://github.com/dongrez1990-cloud/hongguo-switch/releases/tag/v1.1.0",
+      "tag": "v1.1.0",
+      "published_at": "2026-10-18T11:40:10Z",
+      "assets": [
+        {
+          "name": "hongguo-build181.nsp",
+          "url": "https://github.com/dongrez1990-cloud/hongguo-switch/releases/download/v1.1.0/hongguo-build181.nsp"
+        },
+        {
+          "name": "RELEASE-v1.1.0.md",
+          "url": "https://github.com/dongrez1990-cloud/hongguo-switch/releases/download/v1.1.0/RELEASE-v1.1.0.md"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "dragonflylee/switchfin",
+      "release_url": "https://github.com/dragonflylee/switchfin/releases/tag/0.9.4",
+      "tag": "0.9.4",
+      "published_at": "2026-08-25T16:39:52Z",
+      "assets": [
+        {
+          "name": "IV0001-SFIN00000_00-SFIN000000009400.pkg",
+          "url": "https://github.com/dragonflylee/switchfin/releases/download/0.9.4/IV0001-SFIN00000_00-SFIN000000009400.pkg"
+        },
+        {
+          "name": "switchfin-0.9.4-1-x86_64.pkg.tar.zst",
+          "url": "https://github.com/dragonflylee/switchfin/releases/download/0.9.4/switchfin-0.9.4-1-x86_64.pkg.tar.zst"
+        },
+        {
+          "name": "Switchfin-arm64-v8a.apk",
+          "url": "https://github.com/dragonflylee/switchfin/releases/download/0.9.4/Switchfin-arm64-v8a.apk"
+        },
+        {
+          "name": "Switchfin-armeabi-v7a.apk",
+          "url": "https://github.com/dragonflylee/switchfin/releases/download/0.9.4/Switchfin-armeabi-v7a.apk"
+        },
+        {
+          "name": "Switchfin-Linux-aarch64-gl.flatpak",
+          "url": "https://github.com/dragonflylee/switchfin/releases/download/0.9.4/Switchfin-Linux-aarch64-gl.flatpak"
+        },
+        {
+          "name": "Switchfin-Linux-aarch64-gles2.flatpak",
+          "url": "https://github.com/dragonflylee/switchfin/releases/download/0.9.4/Switchfin-Linux-aarch64-gles2.flatpak"
+        },
+        {
+          "name": "Switchfin-Linux-x86_64-gl.flatpak",
+          "url": "https://github.com/dragonflylee/switchfin/releases/download/0.9.4/Switchfin-Linux-x86_64-gl.flatpak"
+        },
+        {
+          "name": "Switchfin-macOS-Intel.dmg",
+          "url": "https://github.com/dragonflylee/switchfin/releases/download/0.9.4/Switchfin-macOS-Intel.dmg"
+        },
+        {
+          "name": "Switchfin-macOS-Silicon.dmg",
+          "url": "https://github.com/dragonflylee/switchfin/releases/download/0.9.4/Switchfin-macOS-Silicon.dmg"
+        },
+        {
+          "name": "Switchfin-windows-arm64.zip",
+          "url": "https://github.com/dragonflylee/switchfin/releases/download/0.9.4/Switchfin-windows-arm64.zip"
+        },
+        {
+          "name": "Switchfin-windows-x64.zip",
+          "url": "https://github.com/dragonflylee/switchfin/releases/download/0.9.4/Switchfin-windows-x64.zip"
+        },
+        {
+          "name": "Switchfin-windows-x86.zip",
+          "url": "https://github.com/dragonflylee/switchfin/releases/download/0.9.4/Switchfin-windows-x86.zip"
+        },
+        {
+          "name": "Switchfin.nro",
+          "url": "https://github.com/dragonflylee/switchfin/releases/download/0.9.4/Switchfin.nro"
+        },
+        {
+          "name": "Switchfin.vpk",
+          "url": "https://github.com/dragonflylee/switchfin/releases/download/0.9.4/Switchfin.vpk"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "easyworld/hekate",
+      "release_url": "https://github.com/easyworld/hekate/releases/tag/v6.5.4",
+      "tag": "v6.5.4",
+      "published_at": "2026-09-28T00:45:13Z",
+      "assets": [
+        {
+          "name": "hekate_ctcaer_6.5.4_Nyx_1.9.4_sc.zip",
+          "url": "https://github.com/easyworld/hekate/releases/download/v6.5.4/hekate_ctcaer_6.5.4_Nyx_1.9.4_sc.zip"
+        },
+        {
+          "name": "hekate_ctcaer_6.5.4_Nyx_1.9.4_tc.zip",
+          "url": "https://github.com/easyworld/hekate/releases/download/v6.5.4/hekate_ctcaer_6.5.4_Nyx_1.9.4_tc.zip"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "elzerdodata/ZERODROID",
+      "release_url": "https://github.com/elzerdodata/ZERODROID/releases/tag/v1.0.1",
+      "tag": "v1.0.1",
+      "published_at": "2026-08-07T10:20:06Z",
+      "assets": [
+        {
+          "name": "ZERODROID_v1.0.1.nro",
+          "url": "https://github.com/elzerdodata/ZERODROID/releases/download/v1.0.1/ZERODROID_v1.0.1.nro"
+        },
+        {
+          "name": "ZERODROID_v1.0.1.sha256",
+          "url": "https://github.com/elzerdodata/ZERODROID/releases/download/v1.0.1/ZERODROID_v1.0.1.sha256"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "etonedemid/zomboid-switch",
+      "release_url": "https://github.com/etonedemid/zomboid-switch/releases",
+      "status": "no-stable-release",
+      "project_url": "https://github.com/etonedemid/zomboid-switch",
+      "archived": false,
+      "project_exists": true
+    },
+    {
+      "repo": "exelix11/SwitchThemeInjector",
+      "release_url": "https://github.com/exelix11/SwitchThemeInjector/releases/tag/nxt-3.0.2",
+      "tag": "nxt-3.0.2",
+      "published_at": "2026-09-22T20:47:51Z",
+      "assets": [
+        {
+          "name": "NXThemesInstaller.nro",
+          "url": "https://github.com/exelix11/SwitchThemeInjector/releases/download/nxt-3.0.2/NXThemesInstaller.nro"
+        },
+        {
+          "name": "NxThemeTool.zip",
+          "url": "https://github.com/exelix11/SwitchThemeInjector/releases/download/nxt-3.0.2/NxThemeTool.zip"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "exploitz86/Ascent-Toolbox",
+      "release_url": "https://github.com/exploitz86/Ascent-Toolbox/releases/tag/1.1.0",
+      "tag": "1.1.0",
+      "published_at": "2025-11-18T00:43:47Z",
+      "assets": [
+        {
+          "name": "Ascent-Toolbox.nro",
+          "url": "https://github.com/exploitz86/Ascent-Toolbox/releases/download/1.1.0/Ascent-Toolbox.nro"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "fortheusers/hb-appstore",
+      "release_url": "https://github.com/fortheusers/hb-appstore/releases/tag/v2.3.2",
+      "tag": "v2.3.2",
+      "published_at": "2023-03-23T15:54:19Z",
+      "assets": [
+        {
+          "name": "appstore.nro",
+          "url": "https://github.com/fortheusers/hb-appstore/releases/download/v2.3.2/appstore.nro"
+        },
+        {
+          "name": "appstore.rpx",
+          "url": "https://github.com/fortheusers/hb-appstore/releases/download/v2.3.2/appstore.rpx"
+        },
+        {
+          "name": "appstore.wuhb",
+          "url": "https://github.com/fortheusers/hb-appstore/releases/download/v2.3.2/appstore.wuhb"
+        },
+        {
+          "name": "switch-extracttosd.zip",
+          "url": "https://github.com/fortheusers/hb-appstore/releases/download/v2.3.2/switch-extracttosd.zip"
+        },
+        {
+          "name": "wiiu-extracttosd.zip",
+          "url": "https://github.com/fortheusers/hb-appstore/releases/download/v2.3.2/wiiu-extracttosd.zip"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "fungalspores/sporegram",
+      "release_url": "https://github.com/fungalspores/sporegram/releases/tag/v1.0",
+      "tag": "v1.0",
+      "published_at": "2026-09-17T13:16:12Z",
+      "assets": [
+        {
+          "name": "sporegram.nro",
+          "url": "https://github.com/fungalspores/sporegram/releases/download/v1.0/sporegram.nro"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "granule256/nxcourier",
+      "release_url": "https://github.com/granule256/nxcourier/releases/tag/v1.0.0",
+      "tag": "v1.0.0",
+      "published_at": "2026-10-07T07:10:30Z",
+      "assets": [],
+      "status": "release-without-assets",
+      "project_url": "https://github.com/granule256/nxcourier",
+      "archived": false,
+      "project_exists": true
+    },
+    {
+      "repo": "hlhlhl231/nasswitch",
+      "release_url": "https://github.com/hlhlhl231/nasswitch/releases/tag/v3.0.0",
+      "tag": "v3.0.0",
+      "published_at": "2026-08-03T12:40:10Z",
+      "assets": [
+        {
+          "name": "nasswitch.3.0.zip",
+          "url": "https://github.com/hlhlhl231/nasswitch/releases/download/v3.0.0/nasswitch.3.0.zip"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "hwfly-nx/firmware",
+      "release_url": "https://github.com/hwfly-nx/firmware/releases/tag/0.7.2",
+      "tag": "0.7.2",
+      "published_at": "2023-01-08T19:58:07Z",
+      "assets": [
+        {
+          "name": "release_072.zip",
+          "url": "https://github.com/hwfly-nx/firmware/releases/download/0.7.2/release_072.zip"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "hwfly-nx/hwfly-toolbox",
+      "release_url": "https://github.com/hwfly-nx/hwfly-toolbox/releases/tag/1.1.1",
+      "tag": "1.1.1",
+      "published_at": "2022-05-09T17:31:48Z",
+      "assets": [
+        {
+          "name": "hwfly_toolbox.bin",
+          "url": "https://github.com/hwfly-nx/hwfly-toolbox/releases/download/1.1.1/hwfly_toolbox.bin"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "impeeza/Lockpick_RCMDecScots",
+      "release_url": "https://github.com/impeeza/Lockpick_RCMDecScots/releases/tag/v2.0.1",
+      "tag": "v2.0.1",
+      "published_at": "2026-09-10T22:33:43Z",
+      "assets": [
+        {
+          "name": "Lockpick_RCM-2.0.1.zip",
+          "url": "https://github.com/impeeza/Lockpick_RCMDecScots/releases/download/v2.0.1/Lockpick_RCM-2.0.1.zip"
+        },
+        {
+          "name": "Lockpick_RCM-2.0.1_Hekate.zip",
+          "url": "https://github.com/impeeza/Lockpick_RCMDecScots/releases/download/v2.0.1/Lockpick_RCM-2.0.1_Hekate.zip"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "impeeza/linkalho",
+      "release_url": "https://github.com/impeeza/linkalho/releases/tag/v2.0.2",
+      "tag": "v2.0.2",
+      "published_at": "2025-11-17T22:15:17Z",
+      "assets": [
+        {
+          "name": "linkalho-v2.0.2.zip",
+          "url": "https://github.com/impeeza/linkalho/releases/download/v2.0.2/linkalho-v2.0.2.zip"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "impeeza/sys-patch",
+      "release_url": "https://github.com/impeeza/sys-patch/releases/tag/v1.6.3.0",
+      "tag": "v1.6.3.0",
+      "published_at": "2026-10-19T05:33:41Z",
+      "assets": [
+        {
+          "name": "sys-patch-v1.6.3.0.zip",
+          "url": "https://github.com/impeeza/sys-patch/releases/download/v1.6.3.0/sys-patch-v1.6.3.0.zip"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "joel16/NX-Shell",
+      "release_url": "https://github.com/joel16/NX-Shell/releases/tag/4.01",
+      "tag": "4.01",
+      "published_at": "2022-08-07T18:32:20Z",
+      "assets": [
+        {
+          "name": "NX-Shell.nro",
+          "url": "https://github.com/joel16/NX-Shell/releases/download/4.01/NX-Shell.nro"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "juanp9180-cmyk/ikemen-nx",
+      "release_url": "https://github.com/juanp9180-cmyk/ikemen-nx/releases/tag/v0.3.0",
+      "tag": "v0.3.0",
+      "published_at": "2026-10-16T15:59:38Z",
+      "assets": [
+        {
+          "name": "ikemen-nx-v0.3.0-sd.zip",
+          "url": "https://github.com/juanp9180-cmyk/ikemen-nx/releases/download/v0.3.0/ikemen-nx-v0.3.0-sd.zip"
+        },
+        {
+          "name": "ikemen.nro",
+          "url": "https://github.com/juanp9180-cmyk/ikemen-nx/releases/download/v0.3.0/ikemen.nro"
+        },
+        {
+          "name": "nxconfig.nro",
+          "url": "https://github.com/juanp9180-cmyk/ikemen-nx/releases/download/v0.3.0/nxconfig.nro"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "kxn/nsteamlink",
+      "release_url": "https://github.com/kxn/nsteamlink/releases/tag/v0.5.0",
+      "tag": "v0.5.0",
+      "published_at": "2026-10-19T02:39:21Z",
+      "assets": [
+        {
+          "name": "build_identity.json",
+          "url": "https://github.com/kxn/nsteamlink/releases/download/v0.5.0/build_identity.json"
+        },
+        {
+          "name": "devkitpro-packages.txt",
+          "url": "https://github.com/kxn/nsteamlink/releases/download/v0.5.0/devkitpro-packages.txt"
+        },
+        {
+          "name": "NSteamLink-0.5.0+09a9876.nro",
+          "url": "https://github.com/kxn/nsteamlink/releases/download/v0.5.0/NSteamLink-0.5.0+09a9876.nro"
+        },
+        {
+          "name": "opus-LICENSE.txt",
+          "url": "https://github.com/kxn/nsteamlink/releases/download/v0.5.0/opus-LICENSE.txt"
+        },
+        {
+          "name": "SHA256SUMS",
+          "url": "https://github.com/kxn/nsteamlink/releases/download/v0.5.0/SHA256SUMS"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "lGuann/SwitchTVBox",
+      "release_url": "https://github.com/lGuann/SwitchTVBox/releases/tag/v0.4.52",
+      "tag": "v0.4.52",
+      "published_at": "2026-10-18T07:07:18Z",
+      "assets": [
+        {
+          "name": "SwitchTVBox-v0.4.52.zip",
+          "url": "https://github.com/lGuann/SwitchTVBox/releases/download/v0.4.52/SwitchTVBox-v0.4.52.zip"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "lGuann/Tikzen",
+      "release_url": "https://github.com/lGuann/Tikzen/releases/tag/tikzen-v1.0.5",
+      "tag": "tikzen-v1.0.5",
+      "published_at": "2026-10-17T10:08:56Z",
+      "assets": [
+        {
+          "name": "TikZen-1.0.5.zip",
+          "url": "https://github.com/lGuann/Tikzen/releases/download/tikzen-v1.0.5/TikZen-1.0.5.zip"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "libretro/RetroArch",
+      "release_url": "https://github.com/libretro/RetroArch/releases/tag/v1.22.2",
+      "tag": "v1.22.2",
+      "published_at": "2025-11-20T03:12:17Z",
+      "assets": [
+        {
+          "name": "retroarch-sourceonly-1.22.2.tar.xz",
+          "url": "https://github.com/libretro/RetroArch/releases/download/v1.22.2/retroarch-sourceonly-1.22.2.tar.xz"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "masagrator/FPSLocker",
+      "release_url": "https://github.com/masagrator/FPSLocker/releases/tag/3.5.0",
+      "tag": "3.5.0",
+      "published_at": "2026-10-03T13:22:10Z",
+      "assets": [
+        {
+          "name": "Debug.zip",
+          "url": "https://github.com/masagrator/FPSLocker/releases/download/3.5.0/Debug.zip"
+        },
+        {
+          "name": "FPSLocker.ovl",
+          "url": "https://github.com/masagrator/FPSLocker/releases/download/3.5.0/FPSLocker.ovl"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "masagrator/Status-Monitor-Overlay",
+      "release_url": "https://github.com/masagrator/Status-Monitor-Overlay/releases/tag/1.4.1",
+      "tag": "1.4.1",
+      "published_at": "2026-05-19T09:06:24Z",
+      "assets": [
+        {
+          "name": "Debug.zip",
+          "url": "https://github.com/masagrator/Status-Monitor-Overlay/releases/download/1.4.1/Debug.zip"
+        },
+        {
+          "name": "Status-Monitor-Overlay.zip",
+          "url": "https://github.com/masagrator/Status-Monitor-Overlay/releases/download/1.4.1/Status-Monitor-Overlay.zip"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "mena-works/switch-dit",
+      "release_url": "https://github.com/mena-works/switch-dit/releases/tag/v1.0.0",
+      "tag": "v1.0.0",
+      "published_at": "2026-08-07T23:58:21Z",
+      "assets": [
+        {
+          "name": "switch-dit-v1.0.0.zip",
+          "url": "https://github.com/mena-works/switch-dit/releases/download/v1.0.0/switch-dit-v1.0.0.zip"
+        },
+        {
+          "name": "switch-reddit.nro",
+          "url": "https://github.com/mena-works/switch-dit/releases/download/v1.0.0/switch-reddit.nro"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "miikearthur/KOReader-Switch",
+      "release_url": "https://github.com/miikearthur/KOReader-Switch/releases/tag/v0.3.3",
+      "tag": "v0.3.3",
+      "published_at": "2026-09-16T10:31:03Z",
+      "assets": [
+        {
+          "name": "koreader-switch-v2026.07.2-161-g945470bf7_2026-09-14.nro",
+          "url": "https://github.com/miikearthur/KOReader-Switch/releases/download/v0.3.3/koreader-switch-v2026.07.2-161-g945470bf7_2026-09-14.nro"
+        },
+        {
+          "name": "koreader-switch-v2026.07.2-161-g945470bf7_2026-09-14.nsp",
+          "url": "https://github.com/miikearthur/KOReader-Switch/releases/download/v0.3.3/koreader-switch-v2026.07.2-161-g945470bf7_2026-09-14.nsp"
+        },
+        {
+          "name": "SHA256SUMS",
+          "url": "https://github.com/miikearthur/KOReader-Switch/releases/download/v0.3.3/SHA256SUMS"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "minbbb/minFS",
+      "release_url": "https://github.com/minbbb/minFS/releases/tag/v1.0.0",
+      "tag": "v1.0.0",
+      "published_at": "2026-09-24T22:38:27Z",
+      "assets": [
+        {
+          "name": "minFS_v1.0.0.zip",
+          "url": "https://github.com/minbbb/minFS/releases/download/v1.0.0/minFS_v1.0.0.zip"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "mirusu400/switch-newpipe",
+      "release_url": "https://github.com/mirusu400/switch-newpipe/releases/tag/v0.0.5",
+      "tag": "v0.0.5",
+      "published_at": "2026-08-19T01:39:45Z",
+      "assets": [
+        {
+          "name": "SHA256SUMS.txt",
+          "url": "https://github.com/mirusu400/switch-newpipe/releases/download/v0.0.5/SHA256SUMS.txt"
+        },
+        {
+          "name": "switch_newpipe.nro",
+          "url": "https://github.com/mirusu400/switch-newpipe/releases/download/v0.0.5/switch_newpipe.nro"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "mrdude2478/Tinwoo-Release",
+      "release_url": "https://github.com/mrdude2478/Tinwoo-Release/releases/tag/1.0.28",
+      "tag": "1.0.28",
+      "published_at": "2024-08-21T03:44:05Z",
+      "assets": [
+        {
+          "name": "Tinwoo-Installer.zip",
+          "url": "https://github.com/mrdude2478/Tinwoo-Release/releases/download/1.0.28/Tinwoo-Installer.zip"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "mtheall/ftpd",
+      "release_url": "https://github.com/mtheall/ftpd/releases/tag/v3.2.1",
+      "tag": "v3.2.1",
+      "published_at": "2024-11-17T07:29:51Z",
+      "assets": [
+        {
+          "name": "ftpd-classic.3dsx",
+          "url": "https://github.com/mtheall/ftpd/releases/download/v3.2.1/ftpd-classic.3dsx"
+        },
+        {
+          "name": "ftpd-classic.cia",
+          "url": "https://github.com/mtheall/ftpd/releases/download/v3.2.1/ftpd-classic.cia"
+        },
+        {
+          "name": "ftpd-classic.nro",
+          "url": "https://github.com/mtheall/ftpd/releases/download/v3.2.1/ftpd-classic.nro"
+        },
+        {
+          "name": "ftpd.3dsx",
+          "url": "https://github.com/mtheall/ftpd/releases/download/v3.2.1/ftpd.3dsx"
+        },
+        {
+          "name": "ftpd.cia",
+          "url": "https://github.com/mtheall/ftpd/releases/download/v3.2.1/ftpd.cia"
+        },
+        {
+          "name": "ftpd.nds",
+          "url": "https://github.com/mtheall/ftpd/releases/download/v3.2.1/ftpd.nds"
+        },
+        {
+          "name": "ftpd.nro",
+          "url": "https://github.com/mtheall/ftpd/releases/download/v3.2.1/ftpd.nro"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "murat303/ytb-player",
+      "release_url": "https://github.com/murat303/ytb-player/releases/tag/v1.1.0",
+      "tag": "v1.1.0",
+      "published_at": "2026-09-26T20:06:01Z",
+      "assets": [
+        {
+          "name": "SHA256SUMS.txt",
+          "url": "https://github.com/murat303/ytb-player/releases/download/v1.1.0/SHA256SUMS.txt"
+        },
+        {
+          "name": "ytb-player.nro",
+          "url": "https://github.com/murat303/ytb-player/releases/download/v1.1.0/ytb-player.nro"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "musebrot1/NXShare",
+      "release_url": "https://github.com/musebrot1/NXShare/releases/tag/1.9.0",
+      "tag": "1.9.0",
+      "published_at": "2026-08-06T11:29:57Z",
+      "assets": [
+        {
+          "name": "NXShare.nro",
+          "url": "https://github.com/musebrot1/NXShare/releases/download/1.9.0/NXShare.nro"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "ndeadly/MissionControl",
+      "release_url": "https://github.com/ndeadly/MissionControl/releases/tag/v0.16.0",
+      "tag": "v0.16.0",
+      "published_at": "2026-10-02T10:17:17Z",
+      "assets": [
+        {
+          "name": "MissionControl-0.16.0-master-71bbe2d4.zip",
+          "url": "https://github.com/ndeadly/MissionControl/releases/download/v0.16.0/MissionControl-0.16.0-master-71bbe2d4.zip"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "plv890/CorkDeck",
+      "release_url": "https://github.com/plv890/CorkDeck/releases/tag/v0.3e",
+      "tag": "v0.3e",
+      "published_at": "2026-10-11T17:41:14Z",
+      "assets": [
+        {
+          "name": "CorkDeck-0.3e.zip",
+          "url": "https://github.com/plv890/CorkDeck/releases/download/v0.3e/CorkDeck-0.3e.zip"
+        },
+        {
+          "name": "SHA256SUMS.txt",
+          "url": "https://github.com/plv890/CorkDeck/releases/download/v0.3e/SHA256SUMS.txt"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "ppkantorski/Ultrahand-Overlay",
+      "release_url": "https://github.com/ppkantorski/Ultrahand-Overlay/releases/tag/v2.5.3",
+      "tag": "v2.5.3",
+      "published_at": "2026-07-17T23:18:58Z",
+      "assets": [
+        {
+          "name": "lang.zip",
+          "url": "https://github.com/ppkantorski/Ultrahand-Overlay/releases/download/v2.5.3/lang.zip"
+        },
+        {
+          "name": "ovlmenu.ovl",
+          "url": "https://github.com/ppkantorski/Ultrahand-Overlay/releases/download/v2.5.3/ovlmenu.ovl"
+        },
+        {
+          "name": "sdout.zip",
+          "url": "https://github.com/ppkantorski/Ultrahand-Overlay/releases/download/v2.5.3/sdout.zip"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "proconsule/nxmp",
+      "release_url": "https://github.com/proconsule/nxmp/releases/tag/v0.9.3",
+      "tag": "v0.9.3",
+      "published_at": "2025-12-17T09:24:48Z",
+      "assets": [
+        {
+          "name": "nxmp-0.9.3.zip",
+          "url": "https://github.com/proconsule/nxmp/releases/download/v0.9.3/nxmp-0.9.3.zip"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "rashevskyv/DBIPatcher",
+      "release_url": "https://github.com/rashevskyv/DBIPatcher/releases/tag/912",
+      "tag": "912",
+      "published_at": "2026-10-15T13:45:42Z",
+      "assets": [
+        {
+          "name": "DBI.nro",
+          "url": "https://github.com/rashevskyv/DBIPatcher/releases/download/912/DBI.nro"
+        },
+        {
+          "name": "translation_be.bin",
+          "url": "https://github.com/rashevskyv/DBIPatcher/releases/download/912/translation_be.bin"
+        },
+        {
+          "name": "translation_de.bin",
+          "url": "https://github.com/rashevskyv/DBIPatcher/releases/download/912/translation_de.bin"
+        },
+        {
+          "name": "translation_en.bin",
+          "url": "https://github.com/rashevskyv/DBIPatcher/releases/download/912/translation_en.bin"
+        },
+        {
+          "name": "translation_engb.bin",
+          "url": "https://github.com/rashevskyv/DBIPatcher/releases/download/912/translation_engb.bin"
+        },
+        {
+          "name": "translation_es.bin",
+          "url": "https://github.com/rashevskyv/DBIPatcher/releases/download/912/translation_es.bin"
+        },
+        {
+          "name": "translation_es419.bin",
+          "url": "https://github.com/rashevskyv/DBIPatcher/releases/download/912/translation_es419.bin"
+        },
+        {
+          "name": "translation_et.bin",
+          "url": "https://github.com/rashevskyv/DBIPatcher/releases/download/912/translation_et.bin"
+        },
+        {
+          "name": "translation_fr.bin",
+          "url": "https://github.com/rashevskyv/DBIPatcher/releases/download/912/translation_fr.bin"
+        },
+        {
+          "name": "translation_frca.bin",
+          "url": "https://github.com/rashevskyv/DBIPatcher/releases/download/912/translation_frca.bin"
+        },
+        {
+          "name": "translation_id.bin",
+          "url": "https://github.com/rashevskyv/DBIPatcher/releases/download/912/translation_id.bin"
+        },
+        {
+          "name": "translation_it.bin",
+          "url": "https://github.com/rashevskyv/DBIPatcher/releases/download/912/translation_it.bin"
+        },
+        {
+          "name": "translation_jp.bin",
+          "url": "https://github.com/rashevskyv/DBIPatcher/releases/download/912/translation_jp.bin"
+        },
+        {
+          "name": "translation_kk.bin",
+          "url": "https://github.com/rashevskyv/DBIPatcher/releases/download/912/translation_kk.bin"
+        },
+        {
+          "name": "translation_kr.bin",
+          "url": "https://github.com/rashevskyv/DBIPatcher/releases/download/912/translation_kr.bin"
+        },
+        {
+          "name": "translation_lt.bin",
+          "url": "https://github.com/rashevskyv/DBIPatcher/releases/download/912/translation_lt.bin"
+        },
+        {
+          "name": "translation_lv.bin",
+          "url": "https://github.com/rashevskyv/DBIPatcher/releases/download/912/translation_lv.bin"
+        },
+        {
+          "name": "translation_nl.bin",
+          "url": "https://github.com/rashevskyv/DBIPatcher/releases/download/912/translation_nl.bin"
+        },
+        {
+          "name": "translation_pl.bin",
+          "url": "https://github.com/rashevskyv/DBIPatcher/releases/download/912/translation_pl.bin"
+        },
+        {
+          "name": "translation_pt.bin",
+          "url": "https://github.com/rashevskyv/DBIPatcher/releases/download/912/translation_pt.bin"
+        },
+        {
+          "name": "translation_ptbr.bin",
+          "url": "https://github.com/rashevskyv/DBIPatcher/releases/download/912/translation_ptbr.bin"
+        },
+        {
+          "name": "translation_tr.bin",
+          "url": "https://github.com/rashevskyv/DBIPatcher/releases/download/912/translation_tr.bin"
+        },
+        {
+          "name": "translation_ua.bin",
+          "url": "https://github.com/rashevskyv/DBIPatcher/releases/download/912/translation_ua.bin"
+        },
+        {
+          "name": "translation_zhcn.bin",
+          "url": "https://github.com/rashevskyv/DBIPatcher/releases/download/912/translation_zhcn.bin"
+        },
+        {
+          "name": "translation_zhtw.bin",
+          "url": "https://github.com/rashevskyv/DBIPatcher/releases/download/912/translation_zhtw.bin"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "rashevskyv/dbi",
+      "release_url": "https://github.com/rashevskyv/dbi/releases/tag/912ru",
+      "tag": "912ru",
+      "published_at": "2026-09-18T07:14:24Z",
+      "assets": [
+        {
+          "name": "dbi.config",
+          "url": "https://github.com/rashevskyv/dbi/releases/download/912ru/dbi.config"
+        },
+        {
+          "name": "DBI.nro",
+          "url": "https://github.com/rashevskyv/dbi/releases/download/912ru/DBI.nro"
+        },
+        {
+          "name": "dbibackend-qt.exe",
+          "url": "https://github.com/rashevskyv/dbi/releases/download/912ru/dbibackend-qt.exe"
+        },
+        {
+          "name": "dbibackend.exe",
+          "url": "https://github.com/rashevskyv/dbi/releases/download/912ru/dbibackend.exe"
+        },
+        {
+          "name": "dbibackend.tar.xz",
+          "url": "https://github.com/rashevskyv/dbi/releases/download/912ru/dbibackend.tar.xz"
+        },
+        {
+          "name": "latest.zip",
+          "url": "https://github.com/rashevskyv/dbi/releases/download/912ru/latest.zip"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "rehius/usk",
+      "release_url": "https://github.com/rehius/usk/releases/tag/PicoFly_2.80_2024.09.04_04-12",
+      "tag": "PicoFly_2.80_2024.09.04_04-12",
+      "published_at": "2024-09-04T04:12:04Z",
+      "assets": [
+        {
+          "name": "firmware.uf2",
+          "url": "https://github.com/rehius/usk/releases/download/PicoFly_2.80_2024.09.04_04-12/firmware.uf2"
+        },
+        {
+          "name": "update.bin",
+          "url": "https://github.com/rehius/usk/releases/download/PicoFly_2.80_2024.09.04_04-12/update.bin"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "retronx-team/sys-clk",
+      "release_url": "https://github.com/retronx-team/sys-clk/releases/tag/2.0.1",
+      "tag": "2.0.1",
+      "published_at": "2024-10-14T22:30:13Z",
+      "assets": [
+        {
+          "name": "sys-clk-2.0.1-21fix.zip",
+          "url": "https://github.com/retronx-team/sys-clk/releases/download/2.0.1/sys-clk-2.0.1-21fix.zip"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "rumla3434/Atmosphere-stable",
+      "release_url": "https://github.com/rumla3434/Atmosphere-stable/releases/tag/1.12.1",
+      "tag": "1.12.1",
+      "published_at": "2026-10-16T05:53:18Z",
+      "assets": [
+        {
+          "name": "AMS1.12.1-Stable-v261016.7z",
+          "url": "https://github.com/rumla3434/Atmosphere-Stable/releases/download/1.12.1/AMS1.12.1-Stable-v261016.7z"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "rumla3434/NX_Firmware",
+      "release_url": "https://github.com/rumla3434/NX_Firmware/releases/tag/23.0.1",
+      "tag": "23.0.1",
+      "published_at": "2026-10-01T07:37:21Z",
+      "assets": [
+        {
+          "name": "23.0.1.rar",
+          "url": "https://github.com/rumla3434/NX_Firmware/releases/download/23.0.1/23.0.1.rar"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "saekaze/touhou-switch",
+      "release_url": "https://github.com/saekaze/touhou-switch/releases",
+      "status": "no-stable-release",
+      "project_url": "https://github.com/saekaze/touhou-switch",
+      "archived": false,
+      "project_exists": true
+    },
+    {
+      "repo": "scamNscoot/StreamFin",
+      "release_url": "https://github.com/scamNscoot/StreamFin/releases/tag/v0.3.0",
+      "tag": "v0.3.0",
+      "published_at": "2026-07-16T15:03:24Z",
+      "assets": [
+        {
+          "name": "StreamFin.nro",
+          "url": "https://github.com/scamNscoot/StreamFin/releases/download/v0.3.0/StreamFin.nro"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "shuiwen879867/QQ-for-Switch",
+      "release_url": "https://github.com/shuiwen879867/QQ-for-Switch/releases/tag/v0.5.75",
+      "tag": "v0.5.75",
+      "published_at": "2026-10-10T17:03:41Z",
+      "assets": [
+        {
+          "name": "QQ-for-Switch-0.5.75-native4.nro",
+          "url": "https://github.com/shuiwen879867/QQ-for-Switch/releases/download/v0.5.75/QQ-for-Switch-0.5.75-native4.nro"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "sthetix/DowngradeFixer",
+      "release_url": "https://github.com/sthetix/DowngradeFixer/releases/tag/1.0.1",
+      "tag": "1.0.1",
+      "published_at": "2026-04-24T23:24:11Z",
+      "assets": [
+        {
+          "name": "DowngradeFixer-1.0.1.zip",
+          "url": "https://github.com/sthetix/DowngradeFixer/releases/download/1.0.1/DowngradeFixer-1.0.1.zip"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "sthetix/TegraExplorer-Ext",
+      "release_url": "https://github.com/sthetix/TegraExplorer-Ext/releases/tag/v4.2.2",
+      "tag": "v4.2.2",
+      "published_at": "2026-02-26T12:01:29Z",
+      "assets": [
+        {
+          "name": "TegraExplorer-Ext-4.2.2.zip",
+          "url": "https://github.com/sthetix/TegraExplorer-Ext/releases/download/v4.2.2/TegraExplorer-Ext-4.2.2.zip"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "sthetix/Warmboot-Extractor",
+      "release_url": "https://github.com/sthetix/Warmboot-Extractor/releases/tag/1.1.0",
+      "tag": "1.1.0",
+      "published_at": "2026-09-10T08:32:58Z",
+      "assets": [
+        {
+          "name": "Warmboot_Extractor-1.1.0.zip",
+          "url": "https://github.com/sthetix/Warmboot-Extractor/releases/download/1.1.0/Warmboot_Extractor-1.1.0.zip"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "switchbrew/nx-hbmenu",
+      "release_url": "https://github.com/switchbrew/nx-hbmenu/releases/tag/v3.6.1",
+      "tag": "v3.6.1",
+      "published_at": "2025-11-15T16:53:18Z",
+      "assets": [
+        {
+          "name": "nx-hbmenu_v3.6.1.zip",
+          "url": "https://github.com/switchbrew/nx-hbmenu/releases/download/v3.6.1/nx-hbmenu_v3.6.1.zip"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "tomvita/EdiZon-SE",
+      "release_url": "https://github.com/tomvita/EdiZon-SE/releases/tag/3.8.37a",
+      "tag": "3.8.37a",
+      "published_at": "2025-12-10T10:38:46Z",
+      "assets": [
+        {
+          "name": "edizon.zip",
+          "url": "https://github.com/tomvita/EdiZon-SE/releases/download/3.8.37a/edizon.zip"
+        },
+        {
+          "name": "EdiZon_alt.zip",
+          "url": "https://github.com/tomvita/EdiZon-SE/releases/download/3.8.37a/EdiZon_alt.zip"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "xfangfang/wiliwili",
+      "release_url": "https://github.com/xfangfang/wiliwili/releases/tag/v1.6.0",
+      "tag": "v1.6.0",
+      "published_at": "2026-04-25T07:39:58Z",
+      "assets": [
+        {
+          "name": "wiliwili-Linux-aarch64-gl.flatpak",
+          "url": "https://github.com/xfangfang/wiliwili/releases/download/v1.6.0/wiliwili-Linux-aarch64-gl.flatpak"
+        },
+        {
+          "name": "wiliwili-Linux-aarch64-gles2.flatpak",
+          "url": "https://github.com/xfangfang/wiliwili/releases/download/v1.6.0/wiliwili-Linux-aarch64-gles2.flatpak"
+        },
+        {
+          "name": "wiliwili-Linux-aarch64-switchroot-ubuntu.AppImage",
+          "url": "https://github.com/xfangfang/wiliwili/releases/download/v1.6.0/wiliwili-Linux-aarch64-switchroot-ubuntu.AppImage"
+        },
+        {
+          "name": "wiliwili-Linux-aarch64-switchroot-ubuntu.deb",
+          "url": "https://github.com/xfangfang/wiliwili/releases/download/v1.6.0/wiliwili-Linux-aarch64-switchroot-ubuntu.deb"
+        },
+        {
+          "name": "wiliwili-Linux-x86_64.flatpak",
+          "url": "https://github.com/xfangfang/wiliwili/releases/download/v1.6.0/wiliwili-Linux-x86_64.flatpak"
+        },
+        {
+          "name": "wiliwili-macOS-AppleSilicon.dmg",
+          "url": "https://github.com/xfangfang/wiliwili/releases/download/v1.6.0/wiliwili-macOS-AppleSilicon.dmg"
+        },
+        {
+          "name": "wiliwili-macOS-IntelChip.dmg",
+          "url": "https://github.com/xfangfang/wiliwili/releases/download/v1.6.0/wiliwili-macOS-IntelChip.dmg"
+        },
+        {
+          "name": "wiliwili-macOS-IntelChip_10.11.dmg",
+          "url": "https://github.com/xfangfang/wiliwili/releases/download/v1.6.0/wiliwili-macOS-IntelChip_10.11.dmg"
+        },
+        {
+          "name": "wiliwili-macOS-Universal.dmg",
+          "url": "https://github.com/xfangfang/wiliwili/releases/download/v1.6.0/wiliwili-macOS-Universal.dmg"
+        },
+        {
+          "name": "wiliwili-NintendoSwitch.zip",
+          "url": "https://github.com/xfangfang/wiliwili/releases/download/v1.6.0/wiliwili-NintendoSwitch.zip"
+        },
+        {
+          "name": "wiliwili-PS4.pkg",
+          "url": "https://github.com/xfangfang/wiliwili/releases/download/v1.6.0/wiliwili-PS4.pkg"
+        },
+        {
+          "name": "wiliwili-PSV.vpk",
+          "url": "https://github.com/xfangfang/wiliwili/releases/download/v1.6.0/wiliwili-PSV.vpk"
+        },
+        {
+          "name": "wiliwili-Windows-arm64.zip",
+          "url": "https://github.com/xfangfang/wiliwili/releases/download/v1.6.0/wiliwili-Windows-arm64.zip"
+        },
+        {
+          "name": "wiliwili-Windows-x86-OldGPU.zip",
+          "url": "https://github.com/xfangfang/wiliwili/releases/download/v1.6.0/wiliwili-Windows-x86-OldGPU.zip"
+        },
+        {
+          "name": "wiliwili-Windows-x86.zip",
+          "url": "https://github.com/xfangfang/wiliwili/releases/download/v1.6.0/wiliwili-Windows-x86.zip"
+        },
+        {
+          "name": "wiliwili-Windows-x86_64-OldGPU.zip",
+          "url": "https://github.com/xfangfang/wiliwili/releases/download/v1.6.0/wiliwili-Windows-x86_64-OldGPU.zip"
+        },
+        {
+          "name": "wiliwili-Windows-x86_64.zip",
+          "url": "https://github.com/xfangfang/wiliwili/releases/download/v1.6.0/wiliwili-Windows-x86_64.zip"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "z3lc/LocalS-NX",
+      "release_url": "https://github.com/z3lc/LocalS-NX/releases/tag/v1.0.0",
+      "tag": "v1.0.0",
+      "published_at": "2026-09-22T00:02:51Z",
+      "assets": [
+        {
+          "name": "LocalS-NX.zip",
+          "url": "https://github.com/z3lc/LocalS-NX/releases/download/v1.0.0/LocalS-NX.zip"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "zdm65477730/CommonProblemResolver",
+      "release_url": "https://github.com/zdm65477730/CommonProblemResolver/releases/tag/0.3.4",
+      "tag": "0.3.4",
+      "published_at": "2025-11-21T15:31:24Z",
+      "assets": [
+        {
+          "name": "CommonProblemResolver.bin",
+          "url": "https://github.com/zdm65477730/CommonProblemResolver/releases/download/0.3.4/CommonProblemResolver.bin"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "zdm65477730/EdiZon-Overlay",
+      "release_url": "https://github.com/zdm65477730/EdiZon-Overlay/releases/tag/v1.0.8",
+      "tag": "v1.0.8",
+      "published_at": "2026-06-19T04:16:05Z",
+      "assets": [
+        {
+          "name": "EdiZon.zip",
+          "url": "https://github.com/zdm65477730/EdiZon-Overlay/releases/download/v1.0.8/EdiZon.zip"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "zdm65477730/NX-Activity-Log",
+      "release_url": "https://github.com/zdm65477730/NX-Activity-Log/releases/tag/v1.5.9",
+      "tag": "v1.5.9",
+      "published_at": "2026-08-24T08:28:23Z",
+      "assets": [
+        {
+          "name": "NX-Activity-Log.nro",
+          "url": "https://github.com/zdm65477730/NX-Activity-Log/releases/download/v1.5.9/NX-Activity-Log.nro"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "zdm65477730/Status-Monitor-Overlay",
+      "release_url": "https://github.com/zdm65477730/Status-Monitor-Overlay/releases/tag/v1.3.2",
+      "tag": "v1.3.2",
+      "published_at": "2026-04-05T11:13:44Z",
+      "assets": [
+        {
+          "name": "StatusMonitor.zip",
+          "url": "https://github.com/zdm65477730/Status-Monitor-Overlay/releases/download/v1.3.2/StatusMonitor.zip"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "zdm65477730/Ultrahand-Overlay",
+      "release_url": "https://github.com/zdm65477730/Ultrahand-Overlay/releases/tag/2.5.3",
+      "tag": "2.5.3",
+      "published_at": "2026-08-23T07:14:50Z",
+      "assets": [
+        {
+          "name": "Ultrahand.zip",
+          "url": "https://github.com/zdm65477730/Ultrahand-Overlay/releases/download/2.5.3/Ultrahand.zip"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "zdm65477730/hekate",
+      "release_url": "https://github.com/zdm65477730/hekate/releases/tag/v6.5.3-CN",
+      "tag": "v6.5.3-CN",
+      "published_at": "2026-06-19T04:20:14Z",
+      "assets": [
+        {
+          "name": "nyx.bin",
+          "url": "https://github.com/zdm65477730/hekate/releases/download/v6.5.3-CN/nyx.bin"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "zdm65477730/nx-ovlloader",
+      "release_url": "https://github.com/zdm65477730/nx-ovlloader/releases/tag/1.0.7",
+      "tag": "1.0.7",
+      "published_at": "2026-06-19T04:11:18Z",
+      "assets": [
+        {
+          "name": "nx-ovlloader.zip",
+          "url": "https://github.com/zdm65477730/nx-ovlloader/releases/download/1.0.7/nx-ovlloader.zip"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "zdm65477730/ovl-sysmodules",
+      "release_url": "https://github.com/zdm65477730/ovl-sysmodules/releases/tag/v1.3.2",
+      "tag": "v1.3.2",
+      "published_at": "2026-06-19T04:14:54Z",
+      "assets": [
+        {
+          "name": "ovl-sysmodules.zip",
+          "url": "https://github.com/zdm65477730/ovl-sysmodules/releases/download/v1.3.2/ovl-sysmodules.zip"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "zdm65477730/sys-clk",
+      "release_url": "https://github.com/zdm65477730/sys-clk/releases/tag/v1.0.2",
+      "tag": "v1.0.2",
+      "published_at": "2026-06-19T04:13:58Z",
+      "assets": [
+        {
+          "name": "sys-clk.zip",
+          "url": "https://github.com/zdm65477730/sys-clk/releases/download/v1.0.2/sys-clk.zip"
+        }
+      ],
+      "status": "release"
+    }
+  ]
+}

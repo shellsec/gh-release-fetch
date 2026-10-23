@@ -1,0 +1,115 @@
+[
+  {
+    "id": "hwfly-firmware",
+    "简介": "HWFLY 固件与 SDLoader",
+    "分类": "芯片固件",
+    "enabled": false,
+    "aliases": [
+      "SDLoader",
+      "sdloader.enc"
+    ],
+    "repo_path": "hwfly-nx/firmware",
+    "releases_url": "https://github.com/hwfly-nx/firmware/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "使用说明": "完整固件 ZIP；按硬件版本与 README 选择其中的 firmware/SDLoader 文件，下载不会改名或刷写。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/hwfly-nx/firmware/releases/tag/0.7.2",
+      "发布标签": "0.7.2",
+      "发布时间": "2023-01-08T19:58:07Z"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      "release_",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "hwfly-firmware.zip",
+    "save_subdir": "hwfly-firmware",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "debug",
+      "Debug"
+    ]
+  },
+  {
+    "id": "picofly-firmwares",
+    "简介": "Picofly 固件与工具箱",
+    "分类": "芯片固件",
+    "enabled": false,
+    "aliases": [
+      "树莓派芯片",
+      "RP2040",
+      "picofly_toolbox.bin"
+    ],
+    "repo_path": "Ansem-SoD/Picofly",
+    "releases_url": "https://github.com/Ansem-SoD/Picofly/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "使用说明": "固件保存在仓库 Firmwares/，没有稳定 Release；保留目录页面入口，手动选择对应硬件文件。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "no-stable-release",
+      "来源": "https://github.com/Ansem-SoD/Picofly/releases"
+    },
+    "open_page_only": true,
+    "open_page_url": "https://github.com/Ansem-SoD/Picofly/tree/main/Firmwares",
+    "_下载说明": "固件保存在仓库 Firmwares/，没有稳定 Release；保留目录页面入口，手动选择对应硬件文件。"
+  },
+  {
+    "id": "picofly-usk",
+    "简介": "Picofly USK 固件项目",
+    "分类": "芯片固件",
+    "enabled": false,
+    "aliases": [
+      "树莓派固件",
+      "RP2040",
+      "update.bin"
+    ],
+    "repo_path": "rehius/usk",
+    "releases_url": "https://github.com/rehius/usk/releases",
+    "run_installer": false,
+    "kill_before_install": false,
+    "使用说明": "下载主机更新用 update.bin；同页 firmware.uf2 是另一分发形式，硬件与升级方式以项目说明为准。",
+    "_核查": {
+      "日期": "2026-10-19",
+      "状态": "release",
+      "来源": "https://github.com/rehius/usk/releases/tag/PicoFly_2.80_2024.09.04_04-12",
+      "发布标签": "PicoFly_2.80_2024.09.04_04-12",
+      "发布时间": "2024-09-04T04:12:04Z"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".bin"
+    ],
+    "installer_markers": [
+      "update.bin"
+    ],
+    "installer_markers_match_all": true,
+    "use_download_filename": true,
+    "save_name": "picofly-usk.bin",
+    "save_subdir": "picofly-usk",
+    "href_exclude_substrings": [
+      "source",
+      "Source",
+      "debug",
+      "Debug"
+    ],
+    "download_names": [
+      "update.bin"
+    ]
+  }
+]
