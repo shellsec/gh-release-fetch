@@ -114,9 +114,7 @@ _apk("graphene_camera", "05-办公与设计.json", "办公与设计", "GrapheneO
 _apk("termux_api", "06-命令行.json", "命令行", "termux/termux-api",
      "Termux:API（Termux 扩展）",
      ["termux-api-app_", ".apk"], ["bootstrap", "debug"])
-_apk("termux_widget", "06-命令行.json", "命令行", "termux/termux-widget",
-     "Termux:Widget（Termux 桌面小部件）",
-     ["termux-widget", ".apk"], ["debug"])
+# Termux:Widget is maintained in batch6 under 17-终端.json.
 
 # --- 07-备份 ---
 _apk("ente_photos", "07-备份.json", "备份", "ente-io/ente",

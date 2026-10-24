@@ -1,6 +1,6 @@
 # 移动端软件清单索引（apps-mobile）
 
-> 自动生成：`python tools/generate_mobile_catalog_index.py`。生成时间：**2026-09-20 03:09 UTC**
+> 自动生成：`python tools/generate_mobile_catalog_index.py`。生成时间：**2026-10-24 03:19 UTC**
 
 与桌面 [`apps/`](apps/) 分离。Android 走 GitHub Release APK；iOS 多为 App Store 占位。
 
@@ -34,11 +34,11 @@ python auto_update.py --apps-dir apps-mobile --platform android termux
 | `04-多媒体.json` | 多媒体 | 5 | 0 |
 | `05-办公与设计.json` | 办公与设计 | 4 | 0 |
 | `05-安全.json` | 安全 | 10 | 0 |
-| `06-命令行.json` | 命令行 | 3 | 0 |
+| `06-命令行.json` | 命令行 | 2 | 0 |
 | `06-网络.json` | 网络 | 6 | 0 |
 | `07-备份.json` | 备份 | 10 | 5 |
 | `07-笔记.json` | 笔记 | 3 | 0 |
-| `08-多媒体.json` | 多媒体 | 17 | 2 |
+| `08-多媒体.json` | 多媒体 | 18 | 2 |
 | `08-输入.json` | 输入 | 7 | 2 |
 | `09-多媒体与设计.json` | 多媒体与设计 | 3 | 0 |
 | `09-通讯.json` | 通讯 | 3 | 0 |
