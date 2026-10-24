@@ -2,6 +2,9 @@
 dist/exe/
 dist/release/
 build/pyinstaller/
+build/packaging-deps/
+build/pyinstaller-cache/
+build/packaging-user/
 /auto_update.exe
 /lookup_app.exe
 /run_saved_apps.exe
@@ -43,3 +46,22 @@ update_log.txt
 saved_apps_ps5.json
 
 saved_apps_switch.json
+
+# Additional platform downloads and personal update lists
+/android_tv/
+/linux_handheld/
+/ps4/
+/vita/
+/xbox/
+saved_apps_android.json
+saved_apps_ios.json
+saved_apps_android_tv.json
+saved_apps_linux_handheld.json
+saved_apps_ps4.json
+saved_apps_vita.json
+saved_apps_xbox.json
+
+# Personal custom entries, preferences and undo history; keep only the template.
+/apps-custom/*
+!/apps-custom/root.json
+/custom-catalog-export.json

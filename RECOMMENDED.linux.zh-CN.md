@@ -2450,7 +2450,7 @@ LMMS（数字音频工作站）
 
 洛雪音乐助手（桌面版；Linux x64 rpm）
 
-- 仓库：`lyswhut/lx-music-desktop` · 分片：`apps/linux/08-多媒体.json` · 配置：已配匹配规则
+- 仓库：`shellsec/lx-music-desktop-auto-source` · 分片：`apps/linux/08-多媒体.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform linux lx_music_desktop`
 
 ### MediaInfo（媒体元数据） · `mediainfo`

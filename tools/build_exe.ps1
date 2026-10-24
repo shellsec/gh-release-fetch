@@ -37,6 +37,7 @@ function Build-One($Name, $Entry, [string[]]$More = @()) {
 
 Build-One "auto_update" "auto_update.py"
 Build-One "lookup_app" "lookup_app.py" @(
+    "--hidden-import", "tools.custom_catalog",
     "--hidden-import", "tools.lookup_github_suggest",
     "--hidden-import", "auto_update"
 )

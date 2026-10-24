@@ -5,8 +5,8 @@ https://github.com/IgorMundstein/WinMemoryCleaner
 https://github.com/Raphire/Win11Debloat
 https://github.com/bruderstein/PythonScript/releases
 https://github.com/choyy/VirtualDesktopSwitcher
-https://github.com/lyswhut/lx-music-desktop/releases
-https://github.com/lyswhut/lx-music-mobile/releases
+https://github.com/shellsec/lx-music-desktop-auto-source/releases
+https://github.com/shellsec/lx-music-mobile-auto-source/releases
 https://github.com/sabrogden/Ditto
 https://github.com/scavin/Win11Debloat
 https://github.com/search?q=lx-music-source&type=repositories

@@ -55,7 +55,7 @@ A_PATTERNS: dict[str, list[str]] = {
     "CrystalDiskInfo": ["423down.com/5432", "crystaldiskinfo"],
     "lx-music-desktop": [
         "lx-music-desktop",
-        "lyswhut/lx-music-desktop",
+        "shellsec/lx-music-desktop-auto-source",
         "lx-music-source",
         "lx-music-mobile",
     ],

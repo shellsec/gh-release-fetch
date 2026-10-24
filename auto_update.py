@@ -640,6 +640,9 @@ def fetch_release_via_api(app, verify=True, version_hint=None):
             download_url = asset_url
             logger.info("[%s] 从 GitHub API 中找到下载链接: %s", app["id"], download_url)
             break
+    if app.get("custom_update_mode") == "github" and not download_url:
+        names = "、".join(str(a.get("name") or "") for a in (payload.get("assets") or [])[:12])
+        raise RuntimeError("[%s] 新 Release 没有匹配该平台/架构/安装包类型的附件；可能尚未发布，或文件名规则已变化。请到自定义管理中重新识别。现有附件：%s" % (app["id"], names or "无"))
     logger.info("[%s] 通过 GitHub API 找到最新版本: %s", app["id"], version)
     return version, download_url
 
@@ -756,6 +759,11 @@ def installer_extensions(app):
 
 
 def href_allowed_for_app(href, app):
+    pattern = app.get("installer_filename_regex")
+    if pattern:
+        filename = urllib.parse.unquote(urllib.parse.urlparse(href).path.rsplit("/", 1)[-1])
+        if not re.fullmatch(pattern, filename, re.IGNORECASE):
+            return False
     for sub in app.get("href_exclude_substrings") or []:
         if sub in href:
             return False
@@ -763,6 +771,8 @@ def href_allowed_for_app(href, app):
 
 
 def link_targets_app(href, text, app):
+    if app.get("installer_filename_regex"):
+        return href_allowed_for_app(href, app)
     markers = app.get("installer_markers") or []
     if not markers:
         return False
@@ -783,6 +793,8 @@ def link_targets_app(href, text, app):
 
 
 def check_latest_version(app, debug_html_path, verify=True, cfg=None, platform_key=None):
+    if app.get("fixed_download_url"):
+        return "fixed", app["fixed_download_url"]
     if uses_github_pages_manifest(app):
         plat = platform_key or detect_platform_key()
         return resolve_github_pages_manifest(app, verify, cfg, plat)
@@ -1001,6 +1013,24 @@ def normalize_download_url_list(parsed_url, fallback_urls):
     return deduped
 
 
+def describe_download_failure(error):
+    if isinstance(error, requests.exceptions.SSLError):
+        return "HTTPS 证书校验失败，请检查系统时间、证书或下载地址"
+    if isinstance(error, requests.exceptions.Timeout):
+        return "网络请求超时，请稍后重试或检查代理"
+    if isinstance(error, requests.exceptions.HTTPError):
+        response = error.response
+        status = response.status_code if response is not None else None
+        if status in (403, 429):
+            return "服务器拒绝访问或限流（HTTP %s），请稍后重试" % status
+        if status in (404, 410):
+            return "下载地址失效（HTTP %s），请在自定义管理中更新来源" % status
+        return "下载服务器返回 HTTP %s" % (status or "错误")
+    if isinstance(error, requests.exceptions.ConnectionError):
+        return "网络连接失败或中断，请检查网络和代理"
+    return str(error)
+
+
 def download_installer(
     version, parsed_url, app, local_filename, max_retries=3, verify=True, platform_key=None
 ):
@@ -1045,6 +1075,7 @@ def download_installer(
     if referer:
         headers["Referer"] = referer
 
+    failure_reasons = []
     for url_index, download_url in enumerate(download_urls):
         if download_url.startswith("https://gh-proxy"):
             if "https:/github.com" in download_url and "https://github.com" not in download_url:
@@ -1115,6 +1146,7 @@ def download_installer(
                 raise RuntimeError("文件不存在或为空")
 
             except requests.exceptions.RequestException as e:
+                failure_reasons.append(describe_download_failure(e))
                 logger.error("下载请求出错: %s", e)
                 if retries < max_retries - 1:
                     time.sleep(2**retries)
@@ -1123,6 +1155,7 @@ def download_installer(
                 logger.warning("当前下载源失败，尝试下一个")
                 break
             except Exception as e:
+                failure_reasons.append(describe_download_failure(e))
                 logger.error("下载安装程序时出错: %s", e)
                 import traceback
 
@@ -1130,6 +1163,8 @@ def download_installer(
                 logger.warning("当前下载源失败，尝试下一个")
                 break
 
+        if app.get("custom_update_mode") and os.path.exists(local_filename):
+            os.remove(local_filename)
         if os.path.exists(local_filename) and os.path.getsize(local_filename) > 0:
             file_size = os.path.getsize(local_filename)
             if file_size > 1000:
@@ -1140,7 +1175,8 @@ def download_installer(
             except OSError:
                 pass
 
-    raise RuntimeError(f"所有下载源均失败（共 {len(download_urls)} 个）")
+    details = "；".join(dict.fromkeys(failure_reasons))
+    raise RuntimeError(f"所有下载源均失败（共 {len(download_urls)} 个）" + ("：" + details if details else ""))
 
 
 def kill_process(process_name):
@@ -1399,7 +1435,7 @@ def main():
                 (" → " + url) if url else "（请用 lookup_app --open）",
             )
             continue
-        if uses_github_pages_manifest(app):
+        if uses_github_pages_manifest(app) or app.get("fixed_download_url"):
             missing = [k for k in ("id",) if not app.get(k)]
         else:
             missing = [k for k in ("id", "releases_url", "repo_path") if k not in app]

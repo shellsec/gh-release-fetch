@@ -1,0 +1,7 @@
+{
+  "platform_keys": [
+    "android_tv"
+  ],
+  "download_dir": ".",
+  "download_subdir_by_platform": true
+}

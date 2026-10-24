@@ -1,0 +1,18 @@
+[
+  {
+    "id": "bolemusic_ps4",
+    "简介": "波乐音乐（PS4；请在项目说明中核对平台支持及安装方式）",
+    "分类": "音乐",
+    "enabled": false,
+    "repo_path": "shellsec/bolemusic",
+    "releases_url": "https://github.com/shellsec/bolemusic/releases",
+    "aliases": [
+      "bolemusic_ps4",
+      "bolemusic"
+    ],
+    "run_installer": false,
+    "windows_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/shellsec/bolemusic/releases"
+  }
+]

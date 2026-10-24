@@ -1,0 +1,6 @@
+{
+  "platform_keys": ["windows", "darwin", "linux", "android", "android_tv", "ios", "switch", "ps4", "ps5", "vita", "xbox", "linux_handheld"],
+  "download_dir": ".",
+  "download_subdir_by_platform": true,
+  "ssl_verify": true
+}

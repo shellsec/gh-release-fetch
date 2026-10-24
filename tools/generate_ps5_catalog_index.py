@@ -27,7 +27,7 @@ def main() -> None:
         f"共 **{len(apps)} 项**：**{downloadable} 项有已核查下载附件**，"
         f"**{len(apps) - downloadable} 项为页面入口**。仅登记名称的 {len(unpublished)} 个项目未计入应用清单。", "",
         "## 搜索与下载", "",
-        "运行 `python lookup_app.py`，选择 **5：PS5**，再输入关键词、选择结果和操作；"
+        "运行 `python lookup_app.py`，选择 **PS5**，再输入关键词、选择结果和操作；"
         "也可直接运行 `lookup_ps5.bat`。", "",
         "```bat", "lookup_ps5.bat 模拟器", "lookup_ps5.bat PS2", "lookup_ps5.bat 播放器",
         "lookup_ps5.bat FTP", "python auto_update.py --apps-dir apps-ps5 --platform ps5 ftpsrv",

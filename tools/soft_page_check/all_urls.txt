@@ -18,8 +18,8 @@ https://gh-proxy.com/github.com/CrossPaste/crosspaste-desktop/releases/download/
 https://gh-proxy.com/github.com/Tyrrrz/LightBulb/releases/download/2.7.1/LightBulb.win-x64.zip
 https://gh-proxy.com/github.com/anilbeesetti/nextplayer/releases/download/v0.16.3/nextplayer-v0.16.3-universal.apk
 https://gh-proxy.com/github.com/irbis-sh/zen-desktop/releases/download/v0.22.0/Zen_windows_amd64.zip
-https://gh-proxy.com/github.com/lyswhut/lx-music-desktop/releases/download/v2.12.2/lx-music-desktop-v2.12.2-win_x64-green.7z
-https://gh-proxy.com/github.com/lyswhut/lx-music-mobile/releases/download/v1.8.4/lx-music-mobile-v1.8.4-arm64-v8a.apk
+https://gh-proxy.com/github.com/shellsec/lx-music-desktop-auto-source/releases/download/v2.12.6/lx-music-desktop-v2.12.6-win_x64-green.7z
+https://gh-proxy.com/github.com/shellsec/lx-music-mobile-auto-source/releases/download/v1.9.2/lx-music-mobile-v1.9.2-arm64-v8a.apk
 https://gh-proxy.com/github.com/microsoft/PowerToys/releases/download/v0.96.1/PowerToysUserSetup-0.96.1-x64.exe
 https://gh-proxy.com/github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.9.6/npp.8.9.6.portable.x64.zip
 https://gitee.com/cxasm/notepad--/releases/download/v3.7.2/Notepad--v3.7.2-win10-portable.zip
@@ -42,8 +42,8 @@ https://github.com/huanfeng/WindInput
 https://github.com/huiyadanli/PasteEx
 https://github.com/iDvel/rime-ice
 https://github.com/iDvel/rime-ice/releases/tag/nightly
-https://github.com/lyswhut/lx-music-desktop/releases
-https://github.com/lyswhut/lx-music-mobile/releases
+https://github.com/shellsec/lx-music-desktop-auto-source/releases
+https://github.com/shellsec/lx-music-mobile-auto-source/releases
 https://github.com/microsoft/PowerToys
 https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.9.6/npp.8.9.6.portable.x64.zip
 https://github.com/randyrants/sharpkeys

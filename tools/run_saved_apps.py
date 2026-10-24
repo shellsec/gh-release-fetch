@@ -98,12 +98,33 @@ def main() -> int:
 
     platform = infer_platform(data, default_plat)
     ids = sorted({(r.get("id") or "").strip() for r in items})
+    groups: dict[tuple[str, str], set[str]] = {}
+    for row in items:
+        source = args.apps_dir
+        if not source:
+            # Saved paths include the catalog root, e.g. apps-tv/android_tv/08-....json.
+            prefix = (row.get("path") or "").replace("\\", "/").split("/", 1)[0]
+            if prefix and os.path.isfile(os.path.join(SCRIPT_DIR, prefix, "root.json")):
+                source = prefix
+        row_platform = args.platform or row.get("platform") or platform
+        groups.setdefault((source, row_platform), set()).add(row["id"].strip())
+
+    commands = []
+    for (source, row_platform), group_ids in sorted(groups.items()):
+        command_args = ["--platform", row_platform, *sorted(group_ids)]
+        if source:
+            command_args.extend(["--apps-dir", source])
+        if args.insecure:
+            command_args.append("--insecure")
+        commands.append(resolve_auto_update_argv(SCRIPT_DIR, command_args))
     rel_list = os.path.relpath(list_path, SCRIPT_DIR)
     print("列表: %s（%d 条，平台 %s）" % (rel_list, len(ids), platform))
     print("应用 id:", ", ".join(ids))
 
     if args.dry_run:
-        print("（dry-run：将 apply enabled + auto_update --platform %s %d 个 id）" % (platform, len(ids)))
+        print("（dry-run：将 apply enabled，并按清单分别更新）")
+        for command in commands:
+            print("[dry-run] 将执行: %s" % " ".join(command))
         return 0
 
     if not args.skip_enable:
@@ -146,15 +167,13 @@ def main() -> int:
             if r.returncode != 0:
                 return r.returncode
 
-    upd = resolve_auto_update_argv(SCRIPT_DIR, ["--platform", platform, *ids])
-    if args.insecure:
-        upd.append("--insecure")
-    if args.apps_dir:
-        upd.extend(["--apps-dir", args.apps_dir])
-
     print("\n[2/2] 执行更新 …")
-    r = subprocess.run(upd, cwd=SCRIPT_DIR)
-    return r.returncode
+    exit_code = 0
+    for command in commands:
+        result = subprocess.run(command, cwd=SCRIPT_DIR)
+        if result.returncode:
+            exit_code = result.returncode
+    return exit_code
 
 
 if __name__ == "__main__":

@@ -709,8 +709,8 @@
     "installer_extensions": [
       ".rpm"
     ],
-    "releases_url": "https://bgithub.xyz/lyswhut/lx-music-desktop/releases",
-    "repo_path": "lyswhut/lx-music-desktop"
+    "releases_url": "https://bgithub.xyz/shellsec/lx-music-desktop-auto-source/releases",
+    "repo_path": "shellsec/lx-music-desktop-auto-source"
   },
   {
     "id": "listen1_desktop",

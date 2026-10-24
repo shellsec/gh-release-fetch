@@ -354,12 +354,43 @@ python lookup_app.py drawio
 示例: lookup_app drawio
       lookup_mobile.bat termux
       lookup_ios.bat 微信
-无参数: 先选清单（1 桌面 / 2 Android / 3 iOS）再输入关键词
+无参数: 先按平台选择清单，最后一项搜全部；回车默认 Windows
 选条目后: 1=立刻下载  2=加入并下载  3=加入列表  4=启用
 跳过交互: lookup_app -y --download drawio
 ```
 
-**无参数：** 直接运行 `lookup_app.bat` / `lookup_app.exe` 会先问搜桌面、Android、iOS、Switch 或 PS5，再输入关键词。搜 APK 也可直接 `lookup_mobile.bat termux`。
+**无参数：** 直接运行 `lookup_app.bat` / `lookup_app.exe`，按 Windows、macOS、Linux、Android、Android TV、iOS、Switch、PS4、PS5、Vita、Xbox、Linux掌机分别搜索，最后一项是「搜全部清单」；回车默认 Windows。搜 APK 也可直接 `lookup_mobile.bat termux`。
+
+新增内容按平台存放：`apps-tv/`（电视音乐、Jellyfin、SmartTube）、`apps-ps4/`（系统与 FTP）、`apps-vita/`（文件管理、应用管理、游戏移植）、`apps-xbox/`（串流、初代 Xbox 工具）、`apps-handheld/`（Decky、兼容层、模拟器、Xbox 串流）。波乐音乐也收录到对应主机音乐分类。不同代 Xbox、不同固件或掌机架构的要求见各条目和项目说明。
+
+```bat
+lookup_app.bat --apps-dir apps-tv --platform android_tv 洛雪
+lookup_app.bat --apps-dir apps-handheld --platform linux_handheld proton
+lookup_app.bat --all-catalogs music
+```
+
+结果显示平台；下载、开启条目与保存更新列表均按各自清单处理。Android TV 和 Linux掌机分别保存到 `saved_apps_android_tv.json`、`saved_apps_linux_handheld.json`。无合适附件规则的条目打开项目发布页。
+
+### 自定义软件
+
+主菜单选择「自定义清单」，可搜索、添加、管理、批量添加、导入/导出、撤销最近修改，以及设置平台/架构/版本类型偏好；「搜全部清单」也包含自定义内容。
+
+添加时可输入 `owner/repo`、GitHub 仓库/Release 地址、HTTP(S) 安装包直链或软件名称。程序读取附件，显示平台、架构和安装包类型；同一项目可勾选多个附件和平台。普通 APK 需确认手机或 Android TV，无法确认平台的压缩包需手选。预览名称、分类、来源和更新方式后，再选「仅保存」或「保存并下载」。
+
+```bat
+lookup_app.bat --custom
+lookup_app.bat --custom-add https://github.com/shellsec/bolemusic
+lookup_app.bat --custom-add https://example.org/app.exe --dry-run
+lookup_app.bat --apps-dir apps-custom --platform windows 软件名
+```
+
+- GitHub 条目按所选附件的文件名规则跟随最新稳定 Release；架构和包类型保持不变。附件命名变化时会提示在管理页重新识别，不会随意改选其它包。
+- 普通下载直链保存为「固定链接」，不自动检测新版本。安装包只下载，添加操作不会自动运行它。
+- 重复的同平台、同架构和包类型条目会在预览中提示更新；不同仓库或不同变体独立保存。管理中可修改名称/分类、重新识别来源/附件或删除。
+- 清单变更前自动备份，最多保留 20 次，可撤销添加、修改或删除。下载文件不随清单删除。
+- 平台、架构与绿色版/安装版偏好会在成功添加后记住，只影响下次推荐，仍需预览确认。也可手工修改或清除。
+- 批量添加支持每行一个来源，最后统一预览确认；JSON 导入也需确认，导出供备份或分享。导入时重新建立下载规则，新增条目默认不启用自动运行。
+- 条目、偏好和历史保存在 `apps-custom/`。便携包只携带空模板；分享个人清单请使用导出功能。
 
 **两步交互：** 搜索 → 选序号（`1`、`1,3`、`a`，**回车**跳过）→ 选操作 **1**–**4**。短关键词如 `draw` 常出现 **三条**（darwin / linux / windows，同一 `id`）；选对平台，或用 `--platform windows drawio` 缩小范围。
 
@@ -697,13 +728,13 @@ search_soft_pages.bat 7zip
 ## Switch 独立清单
 
 Switch 与电脑端、移动端独立维护，见 [Switch 清单与使用说明](CATALOG.switch.md)。
-运行 `python lookup_app.py` 后选择 **4：Switch**，或运行 `lookup_switch.bat <关键词>`。
+运行 `python lookup_app.py` 后选择 **Switch**，或运行 `lookup_switch.bat <关键词>`。
 支持 NRO、OVL、NSP 与压缩包，仅下载至 `switch/<id>/`，不安装、不解压。
 源码入口需要 Python 及 `requirements.txt` 中的依赖；根目录 EXE 已重新打包，包含 Switch / PS5 选择菜单。
 
 ## PS5 独立清单
 
-运行 `lookup_app.bat` 后选择 **5：PS5**，或运行 `lookup_ps5.bat <关键词>`。
+运行 `lookup_app.bat` 后选择 **PS5**，或运行 `lookup_ps5.bat <关键词>`。
 清单涵盖系统环境、ELF 服务、原生模拟器与应用、websrv 应用包和开发工具；见 [PS5 完整清单](CATALOG.ps5.md)。
 仅下载到 `ps5/<id>/`；固件、启动器和额外资源要求分别查看各项目说明，根目录 EXE 已重新打包支持 PS5。
 社区原生应用可运行 `python tools/import_ps5_community_catalog.py --refresh` 刷新，再运行 `python tools/generate_ps5_catalog_index.py` 刷新索引。

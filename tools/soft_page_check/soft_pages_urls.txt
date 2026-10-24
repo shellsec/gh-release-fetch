@@ -27,8 +27,8 @@ https://github.com/huanfeng/WindInput
 https://github.com/huiyadanli/PasteEx
 https://github.com/iDvel/rime-ice
 https://github.com/iDvel/rime-ice/releases/tag/nightly
-https://github.com/lyswhut/lx-music-desktop/releases
-https://github.com/lyswhut/lx-music-mobile/releases
+https://github.com/shellsec/lx-music-desktop-auto-source/releases
+https://github.com/shellsec/lx-music-mobile-auto-source/releases
 https://github.com/microsoft/PowerToys
 https://github.com/randyrants/sharpkeys
 https://github.com/sabrogden/Ditto

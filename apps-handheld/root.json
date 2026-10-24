@@ -1,0 +1,8 @@
+{
+  "platform_keys": [
+    "linux_handheld"
+  ],
+  "download_dir": ".",
+  "download_subdir_by_platform": true,
+  "ssl_verify": true
+}

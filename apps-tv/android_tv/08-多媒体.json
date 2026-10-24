@@ -1,0 +1,100 @@
+[
+  {
+    "id": "lx_music_tv",
+    "简介": "LX Music TV（洛雪音乐电视版；遥控器适配，手机扫码导入；小米电视、极米投影优先 universal）",
+    "分类": "Android TV · 音乐",
+    "aliases": [
+      "洛雪",
+      "电视",
+      "投影",
+      "Android TV"
+    ],
+    "enabled": false,
+    "repo_path": "bmizhou/lx-music-tv",
+    "releases_url": "https://github.com/bmizhou/lx-music-tv/releases",
+    "prefer_api_assets": true,
+    "installer_markers": [
+      "universal"
+    ],
+    "installer_extensions": [
+      ".apk"
+    ],
+    "use_download_filename": true,
+    "windows_installer": false,
+    "run_installer": false
+  },
+  {
+    "id": "music_tv",
+    "简介": "Music TV（电视音乐播放器）",
+    "分类": "Android TV · 音乐",
+    "aliases": [
+      "电视",
+      "Android TV"
+    ],
+    "enabled": false,
+    "repo_path": "boluofan/music-tv",
+    "open_page_only": true,
+    "open_page_url": "https://github.com/boluofan/music-tv"
+  },
+  {
+    "id": "songloft_tv",
+    "简介": "Songloft TV（电视音乐播放器）",
+    "分类": "Android TV · 音乐",
+    "aliases": [
+      "电视",
+      "Android TV"
+    ],
+    "enabled": false,
+    "repo_path": "songloft-org/songloft-tv",
+    "open_page_only": true,
+    "open_page_url": "https://github.com/songloft-org/songloft-tv"
+  },
+  {
+    "id": "jellyfin_androidtv",
+    "简介": "Jellyfin Android TV（电视端媒体库客户端）",
+    "分类": "家庭影音",
+    "enabled": false,
+    "repo_path": "jellyfin/jellyfin-androidtv",
+    "releases_url": "https://github.com/jellyfin/jellyfin-androidtv/releases",
+    "aliases": [
+      "jellyfin_androidtv",
+      "jellyfin-androidtv"
+    ],
+    "run_installer": false,
+    "windows_installer": false,
+    "prefer_api_assets": true,
+    "use_download_filename": true,
+    "installer_markers": [
+      "release.apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_extensions": [
+      ".apk"
+    ],
+    "save_subdir": "jellyfin_androidtv"
+  },
+  {
+    "id": "smarttube",
+    "简介": "SmartTube（Android TV 视频播放器；通用 APK）",
+    "分类": "在线视频",
+    "enabled": false,
+    "repo_path": "yuliskov/SmartTube",
+    "releases_url": "https://github.com/yuliskov/SmartTube/releases",
+    "aliases": [
+      "smarttube",
+      "SmartTube"
+    ],
+    "run_installer": false,
+    "windows_installer": false,
+    "prefer_api_assets": true,
+    "use_download_filename": true,
+    "installer_markers": [
+      "universal.apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_extensions": [
+      ".apk"
+    ],
+    "save_subdir": "smarttube"
+  }
+]

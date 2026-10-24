@@ -1,0 +1,50 @@
+[
+  {
+    "id": "goldhen",
+    "简介": "GoldHEN（PS4 自制应用环境；固件支持范围见发布说明）",
+    "分类": "系统工具",
+    "enabled": false,
+    "repo_path": "GoldHEN/GoldHEN",
+    "releases_url": "https://github.com/GoldHEN/GoldHEN/releases",
+    "aliases": [
+      "goldhen",
+      "GoldHEN"
+    ],
+    "run_installer": false,
+    "windows_installer": false,
+    "prefer_api_assets": true,
+    "use_download_filename": true,
+    "installer_markers": [
+      "GoldHEN"
+    ],
+    "installer_markers_match_all": true,
+    "installer_extensions": [
+      ".7z"
+    ],
+    "save_subdir": "goldhen"
+  },
+  {
+    "id": "ftpsrv_ps4",
+    "简介": "ftpsrv（PS4 FTP 文件服务；需要对应 ELF 加载环境）",
+    "分类": "文件管理",
+    "enabled": false,
+    "repo_path": "ps5-payload-dev/ftpsrv",
+    "releases_url": "https://github.com/ps5-payload-dev/ftpsrv/releases",
+    "aliases": [
+      "ftpsrv_ps4",
+      "ftpsrv"
+    ],
+    "run_installer": false,
+    "windows_installer": false,
+    "prefer_api_assets": true,
+    "use_download_filename": true,
+    "installer_markers": [
+      "ftpsrv-ps4.elf"
+    ],
+    "installer_markers_match_all": true,
+    "installer_extensions": [
+      ".elf"
+    ],
+    "save_subdir": "ftpsrv_ps4"
+  }
+]

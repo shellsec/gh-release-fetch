@@ -1,0 +1,8 @@
+{
+  "platform_keys": [
+    "ps4"
+  ],
+  "download_dir": ".",
+  "download_subdir_by_platform": true,
+  "ssl_verify": true
+}

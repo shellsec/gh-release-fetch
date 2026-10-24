@@ -1,0 +1,26 @@
+[
+  {
+    "id": "vitashell",
+    "简介": "VitaShell（PS Vita 文件管理器）",
+    "分类": "文件管理",
+    "enabled": false,
+    "repo_path": "TheOfficialFloW/VitaShell",
+    "releases_url": "https://github.com/TheOfficialFloW/VitaShell/releases",
+    "aliases": [
+      "vitashell",
+      "VitaShell"
+    ],
+    "run_installer": false,
+    "windows_installer": false,
+    "prefer_api_assets": true,
+    "use_download_filename": true,
+    "installer_markers": [
+      "VitaShell"
+    ],
+    "installer_markers_match_all": true,
+    "installer_extensions": [
+      ".vpk"
+    ],
+    "save_subdir": "vitashell"
+  }
+]

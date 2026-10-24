@@ -1,0 +1,18 @@
+[
+  {
+    "id": "decky_loader",
+    "简介": "Decky Loader（Steam Deck 插件加载器；安装步骤见项目说明）",
+    "分类": "系统与插件",
+    "enabled": false,
+    "repo_path": "SteamDeckHomebrew/decky-loader",
+    "releases_url": "https://github.com/SteamDeckHomebrew/decky-loader/releases",
+    "aliases": [
+      "decky_loader",
+      "decky-loader"
+    ],
+    "run_installer": false,
+    "windows_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/SteamDeckHomebrew/decky-loader/releases"
+  }
+]

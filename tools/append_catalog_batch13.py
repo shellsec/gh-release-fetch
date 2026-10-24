@@ -104,7 +104,7 @@ _win(
     "Cymusic（第三方音乐客户端）",
 )
 _desk(
-    "lyswhut/lx-music-desktop", "08-多媒体.json", "多媒体",
+    "shellsec/lx-music-desktop-auto-source", "08-多媒体.json", "多媒体",
     "洛雪音乐助手（桌面版）",
     id="lx_music_desktop",
     installer_markers_match_all=True,
@@ -113,7 +113,7 @@ _desk(
     installer_extensions=[".7z", ".exe"],
 )
 _apk(
-    "lyswhut/lx-music-mobile", "08-多媒体.json", "多媒体",
+    "shellsec/lx-music-mobile-auto-source", "08-多媒体.json", "多媒体",
     "洛雪音乐（Android）",
     ["lx-music-mobile", "arm64", ".apk"],
     ["x86", "universal"],

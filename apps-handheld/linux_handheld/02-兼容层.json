@@ -1,0 +1,26 @@
+[
+  {
+    "id": "protonup_qt",
+    "简介": "ProtonUp-Qt（Steam Deck 等 Linux 设备兼容层管理）",
+    "分类": "兼容层",
+    "enabled": false,
+    "repo_path": "DavidoTek/ProtonUp-Qt",
+    "releases_url": "https://github.com/DavidoTek/ProtonUp-Qt/releases",
+    "aliases": [
+      "protonup_qt",
+      "ProtonUp-Qt"
+    ],
+    "run_installer": false,
+    "windows_installer": false,
+    "prefer_api_assets": true,
+    "use_download_filename": true,
+    "installer_markers": [
+      "x86_64.AppImage"
+    ],
+    "installer_markers_match_all": true,
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "save_subdir": "protonup_qt"
+  }
+]

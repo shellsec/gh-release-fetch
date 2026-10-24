@@ -27,6 +27,8 @@ def is_app_downloadable(app: dict) -> bool:
     """是否应尝试走 auto_update 下载（而非仅打开页面）。"""
     if app.get("open_page_only") is True:
         return False
+    if app.get("fixed_download_url"):
+        return True
     if (app.get("manifest_item_id") or "").strip():
         return True
     if app.get("installer_markers") or app.get("download_names") or app.get("download_url_templates"):
@@ -46,6 +48,8 @@ def resolve_open_page_url(app: dict) -> str:
     explicit = (app.get("open_page_url") or "").strip()
     if explicit:
         return explicit
+    if app.get("fixed_download_url"):
+        return app["fixed_download_url"]
     releases = (app.get("releases_url") or "").strip()
     if releases:
         return releases.replace("bgithub.xyz", "github.com")

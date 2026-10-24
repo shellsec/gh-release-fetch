@@ -1,0 +1,22 @@
+[
+  {
+    "id": "moonlight_xbox",
+    "简介": "Moonlight Xbox（Xbox One / Series UWP 串流；依赖与开发者模式要求见项目说明）",
+    "分类": "串流",
+    "repo_path": "TheElixZammuto/moonlight-xbox",
+    "installer_markers": [
+      "moonlight-xbox-dx_"
+    ],
+    "installer_extensions": [
+      ".msixbundle"
+    ],
+    "enabled": false,
+    "prefer_api_assets": true,
+    "use_download_filename": true,
+    "installer_markers_match_all": true,
+    "run_installer": false,
+    "windows_installer": false,
+    "releases_url": "https://github.com/TheElixZammuto/moonlight-xbox/releases",
+    "save_subdir": "moonlight_xbox"
+  }
+]

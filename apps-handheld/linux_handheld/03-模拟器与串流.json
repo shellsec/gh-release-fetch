@@ -1,0 +1,50 @@
+[
+  {
+    "id": "emudeck",
+    "简介": "EmuDeck（模拟器配置工具；Linux x86_64 AppImage）",
+    "分类": "模拟器",
+    "enabled": false,
+    "repo_path": "EmuDeck/emudeck-electron",
+    "releases_url": "https://github.com/EmuDeck/emudeck-electron/releases",
+    "aliases": [
+      "emudeck",
+      "emudeck-electron"
+    ],
+    "run_installer": false,
+    "windows_installer": false,
+    "prefer_api_assets": true,
+    "use_download_filename": true,
+    "installer_markers": [
+      "x86_64.AppImage"
+    ],
+    "installer_markers_match_all": true,
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "save_subdir": "emudeck"
+  },
+  {
+    "id": "greenlight",
+    "简介": "Greenlight（Linux 掌机上的 Xbox 主机串流及 xCloud 客户端）",
+    "分类": "串流",
+    "enabled": false,
+    "repo_path": "unknownskl/greenlight",
+    "releases_url": "https://github.com/unknownskl/greenlight/releases",
+    "aliases": [
+      "greenlight",
+      "greenlight"
+    ],
+    "run_installer": false,
+    "windows_installer": false,
+    "prefer_api_assets": true,
+    "use_download_filename": true,
+    "installer_markers": [
+      "AppImage"
+    ],
+    "installer_markers_match_all": true,
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "save_subdir": "greenlight"
+  }
+]

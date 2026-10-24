@@ -10,7 +10,7 @@
   python lookup_app.py --apps-dir VibeCodingToolsDown warp
   python lookup_app.py --yes drawio          # 匹配项全部开启，不询问
   python lookup_app.py --dry-run drawio      # 只查询，不写文件
-  无参数：先选清单（桌面 / Android / iOS / Switch / PS5）再输入关键词。
+  无参数：先选平台清单（含 Android TV、主机、Linux掌机），最后一项搜索全部清单。
   Windows 快捷入口：lookup_mobile.bat / lookup_ios.bat / lookup_switch.bat / lookup_ps5.bat
 
 加入更新列表（根目录 saved_apps_<平台>.json，配合 run_saved_apps.bat 一键更新）：
@@ -42,7 +42,6 @@ if SCRIPT_DIR not in sys.path:
 from tools.ghrf_runtime import resolve_auto_update_argv  # noqa: E402
 
 DEFAULT_APPS_DIR = os.path.join(SCRIPT_DIR, "apps")
-PLATFORMS = ("windows", "darwin", "linux", "android", "ios", "switch", "ps5")
 DESKTOP_PLATFORMS = ("windows", "darwin", "linux")
 SHARD_RE = re.compile(r"^\d+-(.+)\.json$", re.UNICODE)
 
@@ -52,6 +51,8 @@ from tools.app_download import (  # noqa: E402
     resolve_open_page_url,
 )
 from tools.app_list import (  # noqa: E402
+    CATALOGS,
+    PLATFORMS,
     default_list_basename,
     default_list_path,
     save_hits_by_platform,
@@ -166,6 +167,7 @@ def search_apps(apps_dir: str, query: str, min_score: int = 40) -> list[dict]:
                     "platform": platform,
                     "path": rel,
                     "abspath": abspath,
+                    "apps_dir": apps_dir,
                     "shard": shard_name,
                     "shard_category": shard_cat,
                     "id": (app.get("id") or "").strip(),
@@ -397,10 +399,7 @@ def run_download_now(
 ) -> int:
     """按 id 调用 auto_update 下载；不可下载条目改为打开页面。"""
     page_only = [h for h in chosen if not h.get("downloadable")]
-    downloadable = [h for h in chosen if h.get("downloadable") and h.get("platform") != "ios"]
-    skipped_ios = len([h for h in chosen if h.get("platform") == "ios"])
-    if skipped_ios:
-        print("[提示] 跳过 %d 条 iOS 占位（无 GitHub 安装包）。" % skipped_ios)
+    downloadable = [h for h in chosen if h.get("downloadable")]
     if page_only:
         print("[提示] %d 条无安装包，将打开页面。" % len(page_only))
         run_open_pages(page_only, dry_run)
@@ -410,16 +409,15 @@ def run_download_now(
         print("没有可下载的条目。")
         return 1
 
-    by_plat: dict[str, list[str]] = {}
+    by_plat: dict[tuple[str, str], list[str]] = {}
     for h in downloadable:
-        by_plat.setdefault(h["platform"], []).append(h["id"])
+        by_plat.setdefault((h.get("apps_dir", apps_dir), h["platform"]), []).append(h["id"])
 
     exit_code = 0
-    extra = _apps_dir_cli_args(apps_dir)
-    if insecure:
-        extra.append("--insecure")
-
-    for plat, ids in sorted(by_plat.items()):
+    for (source_dir, plat), ids in sorted(by_plat.items()):
+        extra = _apps_dir_cli_args(source_dir)
+        if insecure:
+            extra.append("--insecure")
         ids = sorted(set(ids))
         cmd = resolve_auto_update_argv(
             SCRIPT_DIR, ["--platform", plat, *extra, *ids]
@@ -500,34 +498,29 @@ def prompt_catalog_and_query() -> bool:
     print("打开页面: lookup_app chatbox --open")
     print()
     print("搜哪个清单?")
-    print("  1  桌面（Windows / macOS / Linux）")
-    print("  2  Android APK")
-    print("  3  iOS App Store")
-    print("  4  Switch")
-    print("  5  PS5")
+    options = [
+        (label, ["--apps-dir", directory, "--platform", platform], (platform, *aliases))
+        for label, directory, platform, aliases in CATALOGS
+    ]
+    options.append(("自定义清单", ["--custom"], ("custom", "自定义")))
+    options.append(("搜全部清单", ["--all-catalogs"], ("all", "全部")))
+    for index, (label, _, _) in enumerate(options, 1):
+        print("  %d  %s" % (index, label))
     try:
-        choice = input("请选择 (1/2/3/4/5，回车=桌面): ").strip().lower()
+        choice = input("请选择 (1-%d，回车=Windows): " % len(options)).strip().lower() or "1"
     except (EOFError, KeyboardInterrupt):
         print("\n已取消。")
         return False
-    extra: list[str] = []
-    if choice in ("", "1", "desktop", "d"):
-        print("清单: 桌面")
-    elif choice in ("2", "android", "apk"):
-        extra = ["--apps-dir", "apps-mobile", "--platform", "android"]
-        print("清单: Android")
-    elif choice in ("3", "ios"):
-        extra = ["--apps-dir", "apps-mobile", "--platform", "ios"]
-        print("清单: iOS")
-    elif choice in ("4", "switch"):
-        extra = ["--apps-dir", "apps-switch", "--platform", "switch"]
-        print("清单: Switch")
-    elif choice in ("5", "ps5"):
-        extra = ["--apps-dir", "apps-ps5", "--platform", "ps5"]
-        print("清单: PS5")
+    for index, (label, extra, aliases) in enumerate(options, 1):
+        if choice == str(index) or choice in aliases:
+            print("清单: %s" % label)
+            break
     else:
         print("无效选择，已退出。")
         return False
+    if extra == ["--custom"]:
+        sys.argv[1:] = extra
+        return True
     try:
         text = input("请输入关键词: ").strip()
     except (EOFError, KeyboardInterrupt):
@@ -540,12 +533,16 @@ def prompt_catalog_and_query() -> bool:
     return True
 
 
-def main() -> int:
-    if not prompt_catalog_and_query():
+def main(argv: list[str] | None = None) -> int:
+    if argv is None and not prompt_catalog_and_query():
         return 0
 
     parser = argparse.ArgumentParser(description="在 apps 配置中模糊查找应用并可开启 enabled")
     parser.add_argument("query", nargs="*", help="关键词（如 drawio、v2ray）")
+    parser.add_argument("--all-catalogs", action="store_true", help="搜索全部平台清单")
+    custom_group = parser.add_mutually_exclusive_group()
+    custom_group.add_argument("--custom", action="store_true", help="自定义软件：搜索、添加、管理")
+    custom_group.add_argument("--custom-add", nargs="?", const="", metavar="SOURCE", help="添加 GitHub 仓库 / Release / 固定下载链接；可省略地址后交互输入")
     parser.add_argument(
         "--apps-dir",
         default=DEFAULT_APPS_DIR,
@@ -607,7 +604,19 @@ def main() -> int:
         action="store_true",
         help="对匹配项打开官网 / GitHub Releases 页面（不下载）",
     )
-    args = parser.parse_args()
+    args = parser.parse_args(argv)
+
+    if args.custom or args.custom_add is not None:
+        from tools.custom_catalog import CUSTOM_DIR, run_add, run_menu
+
+        custom_dir = os.path.join(SCRIPT_DIR, CUSTOM_DIR)
+        def download_custom(rows):
+            return run_download_now(rows, custom_dir, args.dry_run, insecure=args.insecure)
+
+        if args.custom_add is not None:
+            return run_add(custom_dir, source_text=args.custom_add, download=download_custom, dry_run=args.dry_run, insecure=args.insecure)
+        extra = (["--dry-run"] if args.dry_run else []) + (["--insecure"] if args.insecure else [])
+        return run_menu(custom_dir, search=lambda query: main(["--apps-dir", custom_dir, *extra, *shlex.split(query, posix=(os.name != "nt"))]), download=download_custom, dry_run=args.dry_run, insecure=args.insecure)
 
     if not args.query:
         from tools.ghrf_runtime import prompt_cli_line
@@ -615,8 +624,6 @@ def main() -> int:
         text = prompt_cli_line([], "请输入搜索关键词: ")
         if not text:
             return 0
-        import shlex
-
         args.query = shlex.split(text, posix=(os.name != "nt"))
     if not args.query:
         print("[ERROR] 需要至少一个关键词。", file=sys.stderr)
@@ -631,11 +638,22 @@ def main() -> int:
 
     query = " ".join(args.query).strip()
 
-    print("检索: %r  （目录: %s）" % (query, apps_dir))
-    hits = search_apps(apps_dir, query, min_score=args.min_score)
+    print("检索: %r  （清单: %s）" % (query, "全部平台" if args.all_catalogs else apps_dir))
+    if args.all_catalogs:
+        hits = []
+        for name in (*dict.fromkeys(row[1] for row in CATALOGS), "apps-custom"):
+            source_dir = os.path.join(SCRIPT_DIR, name)
+            if os.path.isdir(source_dir):
+                hits.extend(search_apps(source_dir, query, min_score=args.min_score))
+        hits.sort(key=lambda h: (-h["score"], h["platform"], h["id"]))
+    else:
+        hits = search_apps(apps_dir, query, min_score=args.min_score)
     if args.platform:
         hits = [h for h in hits if h["platform"] == args.platform]
     if not hits:
+        if os.path.basename(apps_dir) == "apps-custom" and not args.all_catalogs:
+            print("自定义清单中未找到匹配项。请在「自定义清单 → 添加软件」中收录，或使用 --custom-add。")
+            return 0
         from tools.lookup_github_suggest import run_github_suggest
 
         return run_github_suggest(

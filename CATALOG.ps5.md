@@ -2,11 +2,11 @@
 
 > 自动生成：`python tools/generate_ps5_catalog_index.py`。
 
-共 **136 项**：**128 项有已核查下载附件**，**8 项为页面入口**。仅登记名称的 12 个项目未计入应用清单。
+共 **137 项**：**128 项有已核查下载附件**，**9 项为页面入口**。仅登记名称的 12 个项目未计入应用清单。
 
 ## 搜索与下载
 
-运行 `python lookup_app.py`，选择 **5：PS5**，再输入关键词、选择结果和操作；也可直接运行 `lookup_ps5.bat`。
+运行 `python lookup_app.py`，选择 **PS5**，再输入关键词、选择结果和操作；也可直接运行 `lookup_ps5.bat`。
 
 ```bat
 lookup_ps5.bat 模拟器
@@ -43,7 +43,7 @@ Windows 可直接打开根目录 lookup_app.exe 选择 PS5；搜索、下载和�
 | 商店客户端 | 2 |
 | 模拟器 | 15 |
 | 影音与直播 | 15 |
-| 音乐 | 5 |
+| 音乐 | 6 |
 | 串流与云游戏 | 6 |
 | 工具与个性化 | 11 |
 | AI | 3 |
@@ -161,6 +161,7 @@ Windows 可直接打开根目录 lookup_app.exe 选择 PS5；搜索、下载和�
 | `native-ppsa47770` — [Afterglow（PS5 音乐）](https://github.com/DevvNirvana/afterglow/releases/tag/01.000.006) | 原生标题；.zip；固定 01.000.006 | 原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。 固件：按作者 README 与发布说明核对，未统一核定。 |
 | `native-ppsa98427` — [CD Player（PS5 音乐）](https://github.com/LoZazaMastro/CD-Player/releases/tag/v1.1.1) | 原生标题；.zip；固定 v1.1.1 | 原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。 固件：按作者 README 与发布说明核对，未统一核定。 |
 | `native-ppsa99061` — [Spot5（PS5 音乐）](https://github.com/abhi245y/spot5/releases/tag/v1.1.0) | 原生标题；.zip；固定 v1.1.0 | 原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。 固件：按作者 README 与发布说明核对，未统一核定。 |
+| `bolemusic_ps5` — [波乐音乐（ps5；平台支持与安装方式见项目说明）](https://github.com/shellsec/bolemusic/releases) | ；页面入口 |  固件：查看作者说明。 |
 
 ## 串流与云游戏
 

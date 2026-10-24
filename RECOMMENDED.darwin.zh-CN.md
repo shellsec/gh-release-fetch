@@ -2576,7 +2576,7 @@ LMMS（数字音频工作站）
 
 洛雪音乐助手（桌面版；macOS Apple Silicon dmg）
 
-- 仓库：`lyswhut/lx-music-desktop` · 分片：`apps/darwin/08-多媒体.json` · 配置：已配匹配规则
+- 仓库：`shellsec/lx-music-desktop-auto-source` · 分片：`apps/darwin/08-多媒体.json` · 配置：已配匹配规则
 - 查找：`python lookup_app.py --platform darwin lx_music_desktop`
 
 ### MediaInfo（媒体元数据） · `mediainfo`

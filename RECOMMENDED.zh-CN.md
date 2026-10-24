@@ -2478,7 +2478,7 @@ Listen 1（聚合音乐播放器）
 
 洛雪音乐助手（桌面版）
 
-- 仓库：`lyswhut/lx-music-desktop` · 分片：`apps/windows/08-多媒体.json` · 配置：已配匹配规则
+- 仓库：`shellsec/lx-music-desktop-auto-source` · 分片：`apps/windows/08-多媒体.json` · 配置：已配匹配规则
 - 查找：`lookup_app.bat --platform windows lx_music_desktop`
 
 ### 音视频元数据与技术信息查看 · `mediainfo`

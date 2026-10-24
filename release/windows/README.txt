@@ -5,7 +5,7 @@ GH Release Fetch — Windows 便携版（含 exe，无需安装 Python）
 
 日常用法（双击 bat，无参数时会提示输入关键词）
 ------------------------------------------------
-  lookup_app.bat          搜桌面清单（无参数时先选 桌面/Android/iOS）
+  lookup_app.bat          按平台搜清单（桌面/手机/电视/主机/掌机，最后一项搜全部）
   lookup_mobile.bat       搜 Android APK（GitHub 包可下载；闭源打开商店页）
   lookup_ios.bat          搜 iOS App Store 占位（只打开商店页）
   open_catalog.bat        用浏览器打开分类展示页 catalog.html
@@ -36,3 +36,6 @@ GH Release Fetch — Windows 便携版（含 exe，无需安装 Python）
   - 个人列表 saved_apps_windows.json 可在本目录新建，勿覆盖他人配置。
   - 下载的 exe/msi 会尝试自动运行安装程序；7z/zip 等压缩包不会自动解压，会打开所在目录（默认本目录下的 windows\）并选中文件。
   - 项目：https://github.com/shellsec/gh-release-fetch
+
+自定义：主菜单选择 自定义清单，可添加仓库/直链、管理、批量导入导出、撤销与设置偏好。
+也可运行 lookup_app.bat --custom；确认预览后保存，安装包不会自动运行。

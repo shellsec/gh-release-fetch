@@ -478,8 +478,8 @@
       ".apk"
     ],
     "save_name": "lx_music_mobile.apk",
-    "releases_url": "https://bgithub.xyz/lyswhut/lx-music-mobile/releases",
-    "repo_path": "lyswhut/lx-music-mobile"
+    "releases_url": "https://bgithub.xyz/shellsec/lx-music-mobile-auto-source/releases",
+    "repo_path": "shellsec/lx-music-mobile-auto-source"
   },
   {
     "id": "lx_music_eink",

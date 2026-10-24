@@ -404,7 +404,7 @@
 | `kdenlive` | - | `Kdenlive/kdenlive` |
 | `listen1_desktop` | Listen 1（聚合音乐播放器；Linux x64 AppImage） | `listen1/listen1_desktop` |
 | `lmms` | LMMS（数字音频工作站） | `LMMS/lmms` |
-| `lx_music_desktop` | 洛雪音乐助手（桌面版；Linux x64 rpm） | `lyswhut/lx-music-desktop` |
+| `lx_music_desktop` | 洛雪音乐助手（桌面版；Linux x64 rpm） | `shellsec/lx-music-desktop-auto-source` |
 | `mediainfo` | MediaInfo（媒体元数据） | `MediaArea/MediaInfo` |
 | `mixxx` | 开源免费 DJ 混音软件 Mixxx 2.5.2 中文多语免费版 | `mixxxdj/mixxx` |
 | `moekoe_music` | MoeKoe Music（酷狗音乐第三方桌面客户端；Linux x86_64 AppImage） | `MoeKoeMusic/MoeKoeMusic` |

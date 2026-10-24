@@ -158,14 +158,14 @@
     "software": [],
     "domain": "github"
   },
-  "https://github.com/lyswhut/lx-music-desktop/releases": {
+  "https://github.com/shellsec/lx-music-desktop-auto-source/releases": {
     "tier": "A",
     "software": [
       "lx-music-desktop"
     ],
     "domain": "github"
   },
-  "https://github.com/lyswhut/lx-music-mobile/releases": {
+  "https://github.com/shellsec/lx-music-mobile-auto-source/releases": {
     "tier": "A",
     "software": [
       "lx-music-desktop"

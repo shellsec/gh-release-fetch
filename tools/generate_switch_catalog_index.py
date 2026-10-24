@@ -41,7 +41,7 @@ def main() -> None:
         "",
         "## 使用入口",
         "",
-        "运行 `python lookup_app.py`，选择 **4：Switch**；也可直接搜索：",
+        "运行 `python lookup_app.py`，选择 **Switch**；也可直接搜索：",
         "",
         "```bat",
         "lookup_switch.bat 大气层",
@@ -57,7 +57,7 @@ def main() -> None:
         "附件保留原文件名，保存到 `switch/<id>/`。NRO、OVL、NSP、BIN 载荷与固件压缩包都只下载，"
         "安装和复制到 SD 卡需按项目说明进行。",
         "",
-        "Windows 可直接打开根目录 lookup_app.exe，选择 4：Switch；相关 EXE 已同步重打包。"
+        "Windows 可直接打开根目录 lookup_app.exe，选择 Switch；相关 EXE 已同步重打包。"
         "BAT 在 Python 依赖齐全且源码存在时使用源码，否则使用 EXE。"
         "Switch 搜索目前以本地清单为准，未命中时通用 GitHub 补搜不支持 Switch 附件筛选。",
         "",

@@ -408,7 +408,7 @@
 | `listen1_chrome_ext` | Listen 1（Chrome 扩展 crx 包，仅下载） | `listen1/listen1_chrome_extension` |
 | `listen1_desktop` | Listen 1（聚合音乐播放器） | `listen1/listen1_desktop` |
 | `lmms` | 数字音频工作站（DAW） | `LMMS/lmms` |
-| `lx_music_desktop` | 洛雪音乐助手（桌面版） | `lyswhut/lx-music-desktop` |
+| `lx_music_desktop` | 洛雪音乐助手（桌面版） | `shellsec/lx-music-desktop-auto-source` |
 | `mediainfo` | 音视频元数据与技术信息查看 | `MediaArea/MediaInfo` |
 | `mixxx` | 开源免费 DJ 混音软件 Mixxx 2.5.2 中文多语免费版 | `mixxxdj/mixxx` |
 | `moekoe_music` | MoeKoe Music（酷狗音乐第三方桌面客户端；Windows x64 安装包） | `MoeKoeMusic/MoeKoeMusic` |

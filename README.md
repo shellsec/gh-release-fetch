@@ -117,6 +117,10 @@ Categorized **Gitee** repos under [`GiteeExploreHot/catalog/`](GiteeExploreHot/c
 
 Separate from the GitHub **`apps/`** catalog: tracks **page titles** on dayanzai, appx64, 7xiazai, hybase, 423down, **gamer520** (games), tier-A install pages, etc. Use repo-root **[`search_soft_pages.bat`](search_soft_pages.bat)** to search ~5500+ indexed URLs and open matches in the browser. **Games:** [`search_games.bat`](search_games.bat) (gamer520; local recent list + **live site search fallback**). **No arguments:** prompts for keywords (same as `lookup_app.bat`).
 
+**Custom catalog:** Choose **Custom** before **Search all**, or run `lookup_app.bat --custom`. Add a GitHub repository name/URL, Release URL, fixed HTTP(S) package URL, or search by app name. Inspect assets, confirm ambiguous platforms (including phone vs Android TV), then preview and choose save-only or save-and-download. `--custom-add SOURCE` opens this flow directly; `--dry-run` previews without changing the catalog.
+
+Custom includes edit/delete, source re-detection, batch inputs, JSON import/export, 20-change undo history and remembered platform/architecture/package preferences. GitHub entries follow the selected asset filename pattern; ordinary URLs remain fixed. Missing variants and network failures explain what to check. Packages are not auto-run. Search all includes `apps-custom/`; portable builds include only its empty template. Export personal entries explicitly to share them.
+
 | Task | Entry |
 |------|--------|
 | Search titles / open URLs | **`search_soft_pages.bat`** or **`search_soft_pages.bat <keyword>`** (repo root) |
@@ -301,12 +305,12 @@ Usage: lookup_app [options and keywords...]
 Examples: lookup_app drawio
          lookup_mobile.bat termux
          lookup_ios.bat wechat
-No args: pick catalog (1 desktop / 2 Android / 3 iOS), then type a keyword
+No args: pick a platform catalog, or the final Search all option; Enter defaults to Windows
 After picking rows: 1=download now  2=save+download  3=save list  4=enable
 Non-interactive:    lookup_app -y --download drawio
 ```
 
-**No arguments:** `lookup_app.bat` / `lookup_app.exe` asks which catalog (desktop / Android / iOS), then a keyword. For APKs you can also run `lookup_mobile.bat termux`.
+**No arguments:** `lookup_app.bat` / `lookup_app.exe` offers Windows, macOS, Linux, Android, Android TV, iOS, Switch, PS4, PS5, Vita, Xbox, and Linux handhelds separately, followed by **Search all catalogs**. Enter defaults to Windows. Use `--all-catalogs music` to search all catalogs directly. Downloads and saved update lists retain the source catalog. New roots: `apps-tv/`, `apps-ps4/`, `apps-vita/`, `apps-xbox/`, and `apps-handheld/`. Entries without verified asset rules open the project release page. For APKs you can also run `lookup_mobile.bat termux`.
 
 **Two-step flow:** search → pick row (`1`, `1,3`, `a`, or **Enter** to skip) → pick action **1**–**4**. Short keywords like `draw` often match **three rows** (darwin / linux / windows with the same `id`); pick the right platform or narrow with `--platform windows drawio`.
 
@@ -547,13 +551,13 @@ See [`tools/soft_page_check/README.md`](tools/soft_page_check/README.md). Common
 ## Switch catalog
 
 Switch has a separate catalog from desktop and mobile: [catalog and usage](CATALOG.switch.md).
-Run `python lookup_app.py` and select **4: Switch**, or use `lookup_switch.bat <query>`.
+Run `python lookup_app.py` and select **Switch**, or use `lookup_switch.bat <query>`.
 NRO, OVL, NSP and archive assets are downloaded to `switch/<id>/` without installation or extraction.
 Use Python with the dependencies in `requirements.txt`; the root EXE builds now include Switch and PS5 menus.
 
 ## PS5 catalog
 
-Run `lookup_app.bat`, select **5: PS5**, or use `lookup_ps5.bat <query>`.
+Run `lookup_app.bat`, select **PS5**, or use `lookup_ps5.bat <query>`.
 The separate [PS5 catalog](CATALOG.ps5.md) covers environments, ELF services, native emulators and apps, websrv packs, and developer tools.
 Files are downloaded to `ps5/<id>/`. Check each project's firmware and runtime requirements; the root EXE builds now include PS5 support.
 Refresh native app records with `python tools/import_ps5_community_catalog.py --refresh`, then regenerate the index with `python tools/generate_ps5_catalog_index.py`.

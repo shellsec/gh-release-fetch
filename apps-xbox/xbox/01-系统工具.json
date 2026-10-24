@@ -1,0 +1,34 @@
+[
+  {
+    "id": "prometheos",
+    "简介": "PrometheOS（初代 Xbox 固件；仅提供发布页，按硬件核对）",
+    "分类": "初代 Xbox · 固件",
+    "enabled": false,
+    "repo_path": "Team-Resurgent/PrometheOS-Firmware",
+    "releases_url": "https://github.com/Team-Resurgent/PrometheOS-Firmware/releases",
+    "aliases": [
+      "prometheos",
+      "PrometheOS-Firmware"
+    ],
+    "run_installer": false,
+    "windows_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/Team-Resurgent/PrometheOS-Firmware/releases"
+  },
+  {
+    "id": "pandora",
+    "简介": "Pandora（初代 Xbox 工具；此项为电脑端配套工具）",
+    "分类": "电脑端配套工具",
+    "enabled": false,
+    "repo_path": "Team-Resurgent/Pandora",
+    "releases_url": "https://github.com/Team-Resurgent/Pandora/releases",
+    "aliases": [
+      "pandora",
+      "Pandora"
+    ],
+    "run_installer": false,
+    "windows_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/Team-Resurgent/Pandora/releases"
+  }
+]

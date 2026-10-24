@@ -1,0 +1,22 @@
+[
+  {
+    "id": "vitadb_downloader",
+    "简介": "VitaDB Downloader（PS Vita / PSTV 自制应用客户端；服务状态见项目说明）",
+    "分类": "应用管理",
+    "repo_path": "Rinnegatamante/VitaDB-Downloader",
+    "installer_markers": [
+      "VitaDB.vpk"
+    ],
+    "installer_extensions": [
+      ".vpk"
+    ],
+    "enabled": false,
+    "prefer_api_assets": true,
+    "use_download_filename": true,
+    "installer_markers_match_all": true,
+    "run_installer": false,
+    "windows_installer": false,
+    "releases_url": "https://github.com/Rinnegatamante/VitaDB-Downloader/releases",
+    "save_subdir": "vitadb_downloader"
+  }
+]

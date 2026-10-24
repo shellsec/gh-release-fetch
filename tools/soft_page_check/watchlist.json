@@ -95,8 +95,8 @@
       "https://www.423down.com/5432.html"
     ],
     "lx-music-desktop": [
-      "https://github.com/lyswhut/lx-music-desktop/releases",
-      "https://github.com/lyswhut/lx-music-mobile/releases",
+      "https://github.com/shellsec/lx-music-desktop-auto-source/releases",
+      "https://github.com/shellsec/lx-music-mobile-auto-source/releases",
       "https://github.com/search?q=lx-music-source&type=repositories"
     ],
     "typora": [
@@ -301,7 +301,7 @@
       "domain": "github"
     },
     {
-      "url": "https://github.com/lyswhut/lx-music-desktop/releases",
+      "url": "https://github.com/shellsec/lx-music-desktop-auto-source/releases",
       "tier": "A",
       "software": [
         "lx-music-desktop"
@@ -309,7 +309,7 @@
       "domain": "github"
     },
     {
-      "url": "https://github.com/lyswhut/lx-music-mobile/releases",
+      "url": "https://github.com/shellsec/lx-music-mobile-auto-source/releases",
       "tier": "A",
       "software": [
         "lx-music-desktop"

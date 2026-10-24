@@ -239,5 +239,21 @@
     "download_url_templates": [
       "https://github.com/abhi245y/spot5/releases/download/v1.1.0/PPSA99061.zip"
     ]
+  },
+  {
+    "id": "bolemusic_ps5",
+    "简介": "波乐音乐（ps5；平台支持与安装方式见项目说明）",
+    "分类": "音乐",
+    "enabled": false,
+    "repo_path": "shellsec/bolemusic",
+    "releases_url": "https://github.com/shellsec/bolemusic/releases",
+    "aliases": [
+      "bolemusic_ps5",
+      "bolemusic"
+    ],
+    "run_installer": false,
+    "windows_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/shellsec/bolemusic/releases"
   }
 ]

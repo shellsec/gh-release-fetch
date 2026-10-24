@@ -1,0 +1,34 @@
+[
+  {
+    "id": "vitaquake",
+    "简介": "vitaQuake（Quake 的 PS Vita 移植；游戏数据要求见项目说明）",
+    "分类": "游戏移植",
+    "enabled": false,
+    "repo_path": "Rinnegatamante/vitaQuake",
+    "releases_url": "https://github.com/Rinnegatamante/vitaQuake/releases",
+    "aliases": [
+      "vitaquake",
+      "vitaQuake"
+    ],
+    "run_installer": false,
+    "windows_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/Rinnegatamante/vitaQuake/releases"
+  },
+  {
+    "id": "vitaxash3d",
+    "简介": "vitaXash3D（PS Vita Xash3D 移植；需自行提供游戏数据）",
+    "分类": "游戏移植",
+    "enabled": false,
+    "repo_path": "fgsfdsfgs/vitaXash3D",
+    "releases_url": "https://github.com/fgsfdsfgs/vitaXash3D/releases",
+    "aliases": [
+      "vitaxash3d",
+      "vitaXash3D"
+    ],
+    "run_installer": false,
+    "windows_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/fgsfdsfgs/vitaXash3D/releases"
+  }
+]

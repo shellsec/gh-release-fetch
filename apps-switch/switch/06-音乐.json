@@ -100,5 +100,29 @@
       "发布标签": "v3.0.0",
       "发布时间": "2026-08-03T12:40:10Z"
     }
+  },
+  {
+    "id": "bolemusic_switch",
+    "简介": "波乐音乐（switch；平台支持与安装方式见项目说明）",
+    "分类": "音乐",
+    "enabled": false,
+    "repo_path": "shellsec/bolemusic",
+    "releases_url": "https://github.com/shellsec/bolemusic/releases",
+    "aliases": [
+      "bolemusic_switch",
+      "bolemusic"
+    ],
+    "run_installer": false,
+    "windows_installer": false,
+    "prefer_api_assets": true,
+    "use_download_filename": true,
+    "installer_markers": [
+      "bolemusic.nro"
+    ],
+    "installer_markers_match_all": true,
+    "installer_extensions": [
+      ".nro"
+    ],
+    "save_subdir": "bolemusic_switch"
   }
 ]

@@ -59,12 +59,15 @@ if (Test-Path (Join-Path $Root "apps-mobile")) {
     Copy-Item (Join-Path $Root "apps-mobile") (Join-Path $Stage "apps-mobile") -Recurse -Force
 }
 
-foreach ($catalogDir in @("apps-switch", "apps-ps5")) {
+foreach ($catalogDir in @("apps-switch", "apps-ps4", "apps-ps5", "apps-vita", "apps-xbox", "apps-tv", "apps-handheld")) {
     $catalogSrc = Join-Path $Root $catalogDir
     if (Test-Path -LiteralPath $catalogSrc) {
         Copy-Item -LiteralPath $catalogSrc -Destination (Join-Path $Stage $catalogDir) -Recurse -Force
     }
 }
+$customStage = Join-Path $Stage "apps-custom"
+New-Item -ItemType Directory -Force -Path $customStage | Out-Null
+Copy-Item -LiteralPath (Join-Path $Root "apps-custom\root.json") -Destination (Join-Path $customStage "root.json") -Force
 $catalogToolsDst = Join-Path $Stage "tools"
 New-Item -ItemType Directory -Force -Path $catalogToolsDst | Out-Null
 foreach ($catalogTool in @("generate_switch_catalog_index.py", "generate_ps5_catalog_index.py", "import_ps5_community_catalog.py")) {

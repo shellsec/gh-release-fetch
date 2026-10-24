@@ -7,7 +7,7 @@
   "ssl_verify": true,
   "_说明": {
     "简介": "PS5 独立清单，与电脑、移动和 Switch 清单分开。",
-    "查找": "lookup_ps5.bat <关键词>；主菜单选择 5：PS5。",
+    "查找": "lookup_ps5.bat <关键词>；主菜单选择 PS5。",
     "下载": "python auto_update.py --apps-dir apps-ps5 --platform ps5 <id ...>",
     "目录": "按附件原文件名保存到 ps5/<id>/；仅下载，不安装、解压或发送载荷。",
     "兼容性": "入口、自制环境、ELF 服务、websrv 应用和原生标题分别核对固件与依赖；不能共用一个系统支持范围。",

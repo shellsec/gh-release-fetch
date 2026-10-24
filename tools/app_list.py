@@ -7,7 +7,22 @@ import json
 import os
 from datetime import datetime, timezone
 
-PLATFORMS = ("windows", "darwin", "linux", "android", "ios", "switch", "ps5")
+# Menu order also defines the catalog roots searched by lookup_app --all-catalogs.
+CATALOGS = (
+    ("Windows", "apps", "windows", ("win",)),
+    ("macOS", "apps", "darwin", ("mac", "macos")),
+    ("Linux", "apps", "linux", ()),
+    ("Android", "apps-mobile", "android", ("apk",)),
+    ("Android TV", "apps-tv", "android_tv", ("tv", "android-tv", "androidtv")),
+    ("iOS App Store", "apps-mobile", "ios", ()),
+    ("Switch", "apps-switch", "switch", ()),
+    ("PS4", "apps-ps4", "ps4", ()),
+    ("PS5", "apps-ps5", "ps5", ()),
+    ("Vita", "apps-vita", "vita", ("psvita",)),
+    ("Xbox", "apps-xbox", "xbox", ()),
+    ("Linux掌机", "apps-handheld", "linux_handheld", ("handheld", "steamdeck", "linux-handheld")),
+)
+PLATFORMS = tuple(row[2] for row in CATALOGS)
 MOBILE_PLATFORMS = ("android", "ios")
 
 
@@ -30,6 +45,7 @@ def default_list_path(root: str, platform: str) -> str:
 
 def hit_to_item(hit: dict, apps_dir: str) -> dict:
     """lookup_app 命中项 → 快照条目（path 相对仓库根，供 apply_enabled_snapshot 使用）。"""
+    apps_dir = hit.get("apps_dir") or apps_dir
     rel = (hit.get("path") or "").replace("\\", "/")
     apps_prefix = os.path.relpath(apps_dir, os.path.dirname(apps_dir)).replace("\\", "/")
     if apps_prefix == ".":

@@ -4,13 +4,13 @@
 
 与电脑端 `apps/`、移动端 `apps-mobile/` 分开维护。仅下载，不安装、不解压、不刷写。
 
-共 **110 条**：**98 条可下载**、**12 条页面入口**。其中 5 条为固定 tag 的预发布版本。
+共 **111 条**：**99 条可下载**、**12 条页面入口**。其中 5 条为固定 tag 的预发布版本。
 
 逐项对照你提供的整合包组件，见 [组件对照表](apps-switch/COMPONENTS.md)。
 
 ## 使用入口
 
-运行 `python lookup_app.py`，选择 **4：Switch**；也可直接搜索：
+运行 `python lookup_app.py`，选择 **Switch**；也可直接搜索：
 
 ```bat
 lookup_switch.bat 大气层
@@ -24,7 +24,7 @@ python tools/run_saved_apps.py switch --apps-dir apps-switch
 
 附件保留原文件名，保存到 `switch/<id>/`。NRO、OVL、NSP、BIN 载荷与固件压缩包都只下载，安装和复制到 SD 卡需按项目说明进行。
 
-Windows 可直接打开根目录 lookup_app.exe，选择 4：Switch；相关 EXE 已同步重打包。BAT 在 Python 依赖齐全且源码存在时使用源码，否则使用 EXE。Switch 搜索目前以本地清单为准，未命中时通用 GitHub 补搜不支持 Switch 附件筛选。
+Windows 可直接打开根目录 lookup_app.exe，选择 Switch；相关 EXE 已同步重打包。BAT 在 Python 依赖齐全且源码存在时使用源码，否则使用 EXE。Switch 搜索目前以本地清单为准，未命中时通用 GitHub 补搜不支持 Switch 附件筛选。
 
 ## 分类概览
 
@@ -35,7 +35,7 @@ Windows 可直接打开根目录 lookup_app.exe，选择 4：Switch；相关 EXE
 | 在线视频 | 12 |
 | 本地与家庭影音 | 3 |
 | 游戏与串流 | 3 |
-| 音乐 | 2 |
+| 音乐 | 3 |
 | 社交与阅读 | 5 |
 | AI与自动化 | 4 |
 | 云游戏与远程 | 5 |
@@ -136,6 +136,7 @@ Windows 可直接打开根目录 lookup_app.exe，选择 4：Switch；相关 EXE
 |---|---|---|
 | `switify` — [Spotify 客户端](https://github.com/DomazinUS/Switify/releases) | .zip | 完整保留压缩包中的 SD 卡目录布局，具体依赖与启动方式见项目说明。 |
 | `nasswitch` — [NAS 音乐播放](https://github.com/hlhlhl231/nasswitch/releases) | .zip | 完整保留压缩包中的 SD 卡目录布局，具体依赖与启动方式见项目说明。 |
+| `bolemusic_switch` — [波乐音乐（switch；平台支持与安装方式见项目说明）](https://github.com/shellsec/bolemusic/releases) | .nro | 查看项目说明。 |
 
 ### 社交与阅读
 
