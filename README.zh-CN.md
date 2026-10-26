@@ -30,14 +30,14 @@
 | 平台 / 文件 | 加速下载（gh-proxy.com） | GitHub 原始下载 |
 | --- | --- | --- |
 | Windows x64 | [加速下载](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-windows-20261026-import-fix.zip) | [原始下载](https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-windows-20261026-import-fix.zip) |
-| macOS ARM64 / Apple Silicon | [加速下载](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-ed9f8c4-macos-arm64.tar.gz) | [原始下载](https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-ed9f8c4-macos-arm64.tar.gz) |
-| Linux x86_64 | [加速下载](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-ed9f8c4-linux-x86_64.tar.gz) | [原始下载](https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-ed9f8c4-linux-x86_64.tar.gz) |
-| Linux ARM64 | [加速下载](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-ed9f8c4-linux-arm64.tar.gz) | [原始下载](https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-ed9f8c4-linux-arm64.tar.gz) |
+| macOS ARM64 / Apple Silicon | [加速下载](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-34580b0-macos-arm64.tar.gz) | [原始下载](https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-34580b0-macos-arm64.tar.gz) |
+| Linux x86_64 | [加速下载](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-34580b0-linux-x86_64.tar.gz) | [原始下载](https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-34580b0-linux-x86_64.tar.gz) |
+| Linux ARM64 | [加速下载](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-34580b0-linux-arm64.tar.gz) | [原始下载](https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-34580b0-linux-arm64.tar.gz) |
 | SHA256SUMS | [加速下载](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/SHA256SUMS) | [原始下载](https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/SHA256SUMS) |
 
 请完整解压后使用。Windows 双击 `lookup_app.bat` 或 `lookup_app.exe`；macOS/Linux 进入解压目录运行 `./lookup_app`，包内已包含 Python。加速入口不可用时，可改用 GitHub 原始下载；`SHA256SUMS` 覆盖上述四个安装包。
 
-Windows 包包含启动修复；macOS/Linux 包仍基于 `ed9f8c4`。Linux 需要 glibc，尚未实机验证，具体版本与验证范围见发布说明。
+Windows、macOS/Linux 包均基于 `34580b0`，包含最新启动修复。Linux 需要 glibc，尚未实机验证，具体版本与验证范围见发布说明。
 
 | | |
 |:---|:---|
