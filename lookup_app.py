@@ -36,7 +36,7 @@ import subprocess
 import sys
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__)) if not getattr(sys, "frozen", False) else os.path.dirname(os.path.abspath(sys.executable))
-if SCRIPT_DIR not in sys.path:
+if not getattr(sys, "frozen", False) and SCRIPT_DIR not in sys.path:
     sys.path.insert(0, SCRIPT_DIR)
 
 from tools.ghrf_runtime import resolve_auto_update_argv  # noqa: E402

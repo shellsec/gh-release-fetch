@@ -22,7 +22,7 @@ if getattr(sys, "frozen", False):
 else:
     SCRIPT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-if SCRIPT_DIR not in sys.path:
+if not getattr(sys, "frozen", False) and SCRIPT_DIR not in sys.path:
     sys.path.insert(0, SCRIPT_DIR)
 
 from tools.ghrf_runtime import resolve_auto_update_argv  # noqa: E402

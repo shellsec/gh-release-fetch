@@ -25,15 +25,15 @@
 
 ## 下载与加速下载
 
-下载版本：**20261026-startup-fix** · [最新 Release](https://github.com/shellsec/gh-release-fetch/releases/latest) · [版本说明](https://github.com/shellsec/gh-release-fetch/releases/tag/20261026-startup-fix)
+下载版本：**20261026-import-fix** · [最新 Release](https://github.com/shellsec/gh-release-fetch/releases/latest) · [版本说明](https://github.com/shellsec/gh-release-fetch/releases/tag/20261026-import-fix)
 
 | 平台 / 文件 | 加速下载（gh-proxy.com） | GitHub 原始下载 |
 | --- | --- | --- |
-| Windows x64 | [加速下载](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261026-startup-fix/gh-release-fetch-windows-20261026-startup-fix.zip) | [原始下载](https://github.com/shellsec/gh-release-fetch/releases/download/20261026-startup-fix/gh-release-fetch-windows-20261026-startup-fix.zip) |
-| macOS ARM64 / Apple Silicon | [加速下载](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261026-startup-fix/gh-release-fetch-ed9f8c4-macos-arm64.tar.gz) | [原始下载](https://github.com/shellsec/gh-release-fetch/releases/download/20261026-startup-fix/gh-release-fetch-ed9f8c4-macos-arm64.tar.gz) |
-| Linux x86_64 | [加速下载](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261026-startup-fix/gh-release-fetch-ed9f8c4-linux-x86_64.tar.gz) | [原始下载](https://github.com/shellsec/gh-release-fetch/releases/download/20261026-startup-fix/gh-release-fetch-ed9f8c4-linux-x86_64.tar.gz) |
-| Linux ARM64 | [加速下载](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261026-startup-fix/gh-release-fetch-ed9f8c4-linux-arm64.tar.gz) | [原始下载](https://github.com/shellsec/gh-release-fetch/releases/download/20261026-startup-fix/gh-release-fetch-ed9f8c4-linux-arm64.tar.gz) |
-| SHA256SUMS | [加速下载](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261026-startup-fix/SHA256SUMS) | [原始下载](https://github.com/shellsec/gh-release-fetch/releases/download/20261026-startup-fix/SHA256SUMS) |
+| Windows x64 | [加速下载](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-windows-20261026-import-fix.zip) | [原始下载](https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-windows-20261026-import-fix.zip) |
+| macOS ARM64 / Apple Silicon | [加速下载](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-ed9f8c4-macos-arm64.tar.gz) | [原始下载](https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-ed9f8c4-macos-arm64.tar.gz) |
+| Linux x86_64 | [加速下载](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-ed9f8c4-linux-x86_64.tar.gz) | [原始下载](https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-ed9f8c4-linux-x86_64.tar.gz) |
+| Linux ARM64 | [加速下载](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-ed9f8c4-linux-arm64.tar.gz) | [原始下载](https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-ed9f8c4-linux-arm64.tar.gz) |
+| SHA256SUMS | [加速下载](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/SHA256SUMS) | [原始下载](https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/SHA256SUMS) |
 
 请完整解压后使用。Windows 双击 `lookup_app.bat` 或 `lookup_app.exe`；macOS/Linux 进入解压目录运行 `./lookup_app`，包内已包含 Python。加速入口不可用时，可改用 GitHub 原始下载；`SHA256SUMS` 覆盖上述四个安装包。
 
@@ -391,7 +391,7 @@ lookup_app.bat --all-catalogs music
 
 请完整解压发布包，保留清单目录，日常从 `lookup_app.bat` / `lookup_app.exe` 进入。`run_saved_apps` 需要先保存更新列表，`auto_update` 处理已启用或明确指定的条目；首次没有列表或启用项时不能直接批量更新。
 
-便携包的 BAT 先判断源码是否存在，源码缺失时直接运行 EXE，避免误调用本机 Python 或商店别名。直接双击 EXE 遇到错误时会保留窗口，按回车关闭；从命令行或其它程序调用不会额外等待。意外异常写入 `startup_error.log`，普通下载日志写入程序目录的 `update_log.txt`；目录不可写时保留控制台输出。
+打包后的 EXE 优先加载内置模块，即使同目录留有旧版 `tools/*.py` 也不会覆盖内置代码；清单仍从同级配置目录读取。便携包的 BAT 先判断源码是否存在，源码缺失时直接运行 EXE，避免误调用本机 Python 或商店别名。直接双击 EXE 遇到错误时会保留窗口，按回车关闭；从命令行或其它程序调用不会额外等待。意外异常写入 `startup_error.log`，普通下载日志写入程序目录的 `update_log.txt`；目录不可写时保留控制台输出。
 
 ### 自定义软件
 

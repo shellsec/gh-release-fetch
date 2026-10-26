@@ -102,6 +102,26 @@ class PortableBatTests(unittest.TestCase):
             if marker.exists():
                 marker.unlink()
 
+    def test_frozen_apps_ignore_legacy_python_modules_next_to_executables(self):
+        legacy = self.stage / "tools"
+        legacy.mkdir(exist_ok=True)
+        (legacy / "__init__.py").write_text("", encoding="utf-8")
+        shutil.copy2(ROOT / "tools/ghrf_runtime.py", legacy / "ghrf_runtime.py")
+        shutil.copy2(ROOT / "tools/app_download.py", legacy / "app_download.py")
+        (legacy / "app_list.py").write_text("PLATFORMS = ('windows',)\n# Legacy version without CATALOGS\n", encoding="utf-8")
+        channel = legacy / "soft_page_check"
+        channel.mkdir(exist_ok=True)
+        for name in ("list_scopes", "gamer520_live_search", "search_pages"):
+            (channel / (name + ".py")).write_text("raise RuntimeError('legacy external module loaded')\n", encoding="utf-8")
+        try:
+            for name in EXES:
+                with self.subTest(entry=name):
+                    result = subprocess.run([str(self.stage / (name + ".exe")), "--help"], cwd=self.stage, capture_output=True, timeout=20)
+                    self.assertEqual(result.returncode, 0, (name, result.stderr[-1800:]))
+                    self.assertIn(b"usage:", result.stdout.lower())
+        finally:
+            shutil.rmtree(legacy)
+
     def test_real_onefile_double_click_keeps_configuration_errors_visible(self):
         (self.stage / "apps").mkdir(exist_ok=True)
         (self.stage / "apps" / "root.json").write_text('{"platform_keys":["windows"]}', encoding="utf-8")

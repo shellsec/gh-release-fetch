@@ -18,6 +18,7 @@ GH Release Fetch — Windows 便携版（含 exe，无需安装 Python）
 启动与排错
 ----------
   - 请完整解压后运行，保留 apps、tools 等目录；日常主入口是 lookup_app.bat / lookup_app.exe。
+  - EXE 使用内置模块，同目录遗留的旧版 tools/*.py 不再覆盖程序代码。
   - 便携包内 BAT 会直接调用 EXE，不会因为电脑装过 Python 就误找缺失的源码。
   - run_saved_apps 需要先保存更新列表；auto_update 只更新已启用或明确指定的应用。
   - 直接双击 EXE 遇到错误时，窗口会保留错误信息，按回车关闭；命令行调用不等待。

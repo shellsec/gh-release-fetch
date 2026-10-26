@@ -18,13 +18,14 @@ if sys.platform == "win32":
     except (AttributeError, OSError):
         pass
 
-HERE = Path(__file__).resolve().parent
-if str(HERE) not in sys.path:
-    sys.path.insert(0, str(HERE))
+if not getattr(sys, "frozen", False):
+    HERE = Path(__file__).resolve().parent
+    if str(HERE) not in sys.path:
+        sys.path.insert(0, str(HERE))
 
-_REPO = Path(__file__).resolve().parents[2]
-if str(_REPO) not in sys.path:
-    sys.path.insert(0, str(_REPO))
+    _REPO = Path(__file__).resolve().parents[2]
+    if str(_REPO) not in sys.path:
+        sys.path.insert(0, str(_REPO))
 
 from tools.ghrf_runtime import argv_from_prompt  # noqa: E402
 

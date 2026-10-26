@@ -32,7 +32,7 @@ if getattr(sys, "frozen", False):
     _REPO = Path(sys.executable).resolve().parent
 else:
     _REPO = Path(__file__).resolve().parents[2]
-if str(_REPO) not in sys.path:
+if not getattr(sys, "frozen", False) and str(_REPO) not in sys.path:
     sys.path.insert(0, str(_REPO))
 
 from tools.ghrf_runtime import argv_from_prompt, soft_page_check_dir  # noqa: E402
@@ -41,7 +41,8 @@ HERE = Path(soft_page_check_dir(__file__))
 HISTORY = HERE / "history"
 LIST_DIR = HERE / "list"
 
-sys.path.insert(0, str(HERE))
+if not getattr(sys, "frozen", False):
+    sys.path.insert(0, str(HERE))
 from list_scopes import LIST_SCOPE_DEFS, read_url_list, scope_label  # noqa: E402
 
 SCOPE_LABELS = {
