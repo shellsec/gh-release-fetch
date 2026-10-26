@@ -23,6 +23,22 @@ Open source takes effort — sponsorship is welcome:
 
 # GH Release Fetch
 
+## Downloads and accelerated downloads
+
+Download version: **20261026-startup-fix** · [Latest Release](https://github.com/shellsec/gh-release-fetch/releases/latest) · [Release notes](https://github.com/shellsec/gh-release-fetch/releases/tag/20261026-startup-fix)
+
+| Platform / file | Accelerated download (gh-proxy.com) | GitHub direct |
+| --- | --- | --- |
+| Windows x64 | [Download](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261026-startup-fix/gh-release-fetch-windows-20261026-startup-fix.zip) | [Direct](https://github.com/shellsec/gh-release-fetch/releases/download/20261026-startup-fix/gh-release-fetch-windows-20261026-startup-fix.zip) |
+| macOS ARM64 / Apple Silicon | [Download](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261026-startup-fix/gh-release-fetch-ed9f8c4-macos-arm64.tar.gz) | [Direct](https://github.com/shellsec/gh-release-fetch/releases/download/20261026-startup-fix/gh-release-fetch-ed9f8c4-macos-arm64.tar.gz) |
+| Linux x86_64 | [Download](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261026-startup-fix/gh-release-fetch-ed9f8c4-linux-x86_64.tar.gz) | [Direct](https://github.com/shellsec/gh-release-fetch/releases/download/20261026-startup-fix/gh-release-fetch-ed9f8c4-linux-x86_64.tar.gz) |
+| Linux ARM64 | [Download](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261026-startup-fix/gh-release-fetch-ed9f8c4-linux-arm64.tar.gz) | [Direct](https://github.com/shellsec/gh-release-fetch/releases/download/20261026-startup-fix/gh-release-fetch-ed9f8c4-linux-arm64.tar.gz) |
+| SHA256SUMS | [Download](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261026-startup-fix/SHA256SUMS) | [Direct](https://github.com/shellsec/gh-release-fetch/releases/download/20261026-startup-fix/SHA256SUMS) |
+
+Extract the complete package. Windows: run `lookup_app.bat` or `lookup_app.exe`. macOS/Linux: enter the extracted folder and run `./lookup_app`. Python is bundled. If the accelerator is unavailable, use the GitHub direct link. `SHA256SUMS` covers all four packages.
+
+The Windows package includes the startup fix; macOS/Linux packages remain based on `ed9f8c4`. Linux requires glibc and has not been verified on a Linux machine; see the release notes for validation details.
+
 | | |
 |:---|:---|
 | **Project name (EN)** | **GH Release Fetch** |
