@@ -1,6 +1,6 @@
 # Configuration and maintenance reference
 
-[Back to the user guide](../README.md)
+[Back to the user guide](../README.en.md)
 
 ## Force a platform block
 

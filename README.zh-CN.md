@@ -1,4 +1,4 @@
-**语言 / Language:** 中文 | [English](README.md)
+**语言 / Language:** 中文 | [English](README.en.md)
 
 # GH Release Fetch
 

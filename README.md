@@ -1,78 +1,93 @@
-**Language / 语言:** [中文](README.zh-CN.md) | English
+**语言 / Language:** 中文 | [English](README.en.md)
 
 # GH Release Fetch
 
-Search software by platform, download GitHub Release assets, and keep personal lists for repeat updates. Includes built-in catalogs, custom sources, and separate web-page searches.
+按平台搜索软件、下载 GitHub Release 附件，并用个人更新列表重复获取所需软件。支持内置清单、自定义来源和独立的介绍页搜索。
 
-## Downloads
+## 下载与加速下载
 
-Current version: **20261026-import-fix** · [Release notes](https://github.com/shellsec/gh-release-fetch/releases/tag/20261026-import-fix) · [Latest Release](https://github.com/shellsec/gh-release-fetch/releases/latest)
+当前版本：**20261026-import-fix** · [版本说明](https://github.com/shellsec/gh-release-fetch/releases/tag/20261026-import-fix) · [最新 Release](https://github.com/shellsec/gh-release-fetch/releases/latest)
 
-| Host platform | Accelerated (gh-proxy.com) | GitHub direct |
+| 运行平台 | 加速下载（gh-proxy.com） | GitHub 原始下载 |
 | --- | --- | --- |
 | Windows x64 | [ZIP](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-windows-20261026-import-fix.zip) | [ZIP](https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-windows-20261026-import-fix.zip) |
 | macOS ARM64 / Apple Silicon | [tar.gz](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-34580b0-macos-arm64.tar.gz) | [tar.gz](https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-34580b0-macos-arm64.tar.gz) |
 | Linux x86_64 | [tar.gz](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-34580b0-linux-x86_64.tar.gz) | [tar.gz](https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-34580b0-linux-x86_64.tar.gz) |
 | Linux ARM64 | [tar.gz](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-34580b0-linux-arm64.tar.gz) | [tar.gz](https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-34580b0-linux-arm64.tar.gz) |
-| SHA256SUMS | [Checksums](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/SHA256SUMS) | [Checksums](https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/SHA256SUMS) |
+| SHA256SUMS | [校验文件](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/SHA256SUMS) | [校验文件](https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/SHA256SUMS) |
 
-All packages use source revision `34580b0` and bundle their runtime; no separate Python installation is needed. Use the direct link if the accelerator is unavailable. The macOS package is unsigned and not notarized. Linux requires glibc, does not support Alpine/musl, and has not been tested on a Linux machine. See the release notes for validation details.
+安装包均基于 `34580b0`，自带运行环境，无需另装 Python。加速入口不可用时，请使用原始下载。macOS 包未签名或公证；Linux 需要 glibc，不适用于 Alpine/musl，尚未实机验证。具体测试范围见版本说明。
 
-## Quick start
+## 快速开始
 
-1. Download the package for the **computer running this tool**. Extract the complete archive, keeping its catalog and data directories.
-2. On Windows, open `lookup_app.exe` or `lookup_app.bat`. On macOS/Linux, run `./lookup_app` from the extracted directory.
-3. Select the platform to search, then enter a name or keyword. Enter defaults to Windows; the last menu option searches all catalogs.
-4. Select result numbers, then choose an action.
+1. 下载适合**运行这套工具的电脑**的安装包，完整解压，保留包内清单和数据目录。
+2. Windows 双击 `lookup_app.exe` 或 `lookup_app.bat`；macOS/Linux 在解压目录执行 `./lookup_app`。
+3. 选择要搜索的平台，输入软件名或关键词。回车默认 Windows，最后一项可搜索全部清单。
+4. 选择结果序号，再选择下载、加入更新列表或启用。
 
-| Action | Behavior |
+| 操作 | 用途 |
 | --- | --- |
-| 1: Download now | Download, or open the page if no package is available, without changing the enabled state |
-| 2: Save and download | Add to the update list and download now |
-| 3: Save to list | Add to the update list for later |
-| 4: Enable | Set `enabled=true` for batch processing in that catalog |
-| 5: Open page | Open the website or GitHub Releases page |
+| 1：立刻下载 | 获取所选软件，无合适安装包时打开页面，不修改启用状态 |
+| 2：加入并下载 | 保存到更新列表，并立即下载 |
+| 3：加入列表 | 保存到更新列表，稍后统一下载 |
+| 4：启用 | 设置 `enabled=true`，参与对应清单的批量处理 |
+| 5：打开页面 | 打开官网或 GitHub Releases 页面 |
 
-Enter `1,3` for multiple results, `a` for all, or Enter to skip. Some entries open a website, store, or release page instead of downloading an asset. Downloading for another platform does not make that software runnable on your computer.
+多选可输入 `1,3`，`a` 选全部，回车跳过。部分条目提供官网、商店或发布页入口，无法直接下载安装包。跨平台下载不会让目标软件在当前电脑上运行。
 
-### Example session
+### 实际操作示例
 
-Search for UniClipboard on Windows using a partial name. The interface is in Chinese; this abbreviated transcript adds English explanations and omits timestamps and network logs. Versions and result counts may change.
+以 Windows 搜索 UniClipboard 为例，输入部分名称也能匹配。以下省略完整时间戳、网络探测和下载地址，仅展示操作过程；版本号和结果数量以实际运行为准。
 
 ```text
-lookup_app
-Select catalog: 1 (Windows)
-Keyword: unicli
+用法: lookup_app [选项与关键词...]
+示例: lookup_app drawio
+      lookup_mobile.bat termux
+      lookup_ios.bat 微信
+直接下载: lookup_app -y --download drawio
+打开页面: lookup_app chatbox --open
 
-2 matches:
-[1] windows  id=uniclipboard      enabled=no  [downloadable]
-[2] windows  id=uniclipboard_cli  enabled=no  [downloadable]
+搜哪个清单?
+  1 Windows       2 macOS          3 Linux
+  4 Android       5 Android TV     6 iOS App Store
+  7 Switch        8 PS4            9 PS5
+ 10 Vita         11 Xbox          12 Linux掌机
+ 13 自定义清单   14 搜全部清单
+请选择 (1-14，回车=Windows): 1
+请输入关键词: unicli
 
-Select entries: 1
-Select action: 1 (download now)
+共 2 条匹配：
+[1] windows  id=uniclipboard      enabled=否  [可下载]
+    简介: UniClipboard（跨平台剪贴板同步与管理，Rust + Tauri）
+[2] windows  id=uniclipboard_cli  enabled=否  [可下载]
+    简介: UniClipboard CLI（Windows x64 zip）
 
-[Download] windows: uniclipboard
-Latest version: v1.5.0
-Progress: 100.0% (25.1/25.1 MiB)
-Saved: <program directory>/windows/UniClipboard_1.5.0_x64-setup.exe
-Installer started
+请选择要操作的条目：
+  输入序号（如 1 或 1,3）| a=全部 | 回车=跳过
+> 1
+
+请选择操作：
+  1 = 立刻下载（无安装包则打开页面；不修改 enabled）
+  2 = 加入更新列表并立刻下载
+  3 = 加入更新列表 saved_apps_<平台>.json
+  4 = 设为 enabled=true
+  5 = 打开页面（官网 / GitHub Releases）
+> 1
+
+[下载] 平台 windows：uniclipboard
+找到最新版本: v1.5.0
+下载进度: 100.0% (25.1/25.1 MiB)
+安装包已下载: <程序目录>/windows/UniClipboard_1.5.0_x64-setup.exe
+安装程序已启动
 ```
 
-This entry has `run_installer` enabled, so its installer starts after downloading. Other entries follow their own settings. Action 1 does not change `enabled`; disabled entries can still be downloaded explicitly.
+此示例条目配置了 `run_installer`，所以下载后启动安装程序；其它条目是否启动取决于各自配置。操作 1 不修改 `enabled`，即使结果显示“未启用”也能直接下载。
 
-Shortcuts on Windows:
+## 按平台搜索
 
-```bat
-lookup_app.bat -y --download drawio
-lookup_app.bat chatbox --open
-lookup_ios.bat 微信
-```
+工具的运行平台是 Windows、macOS、Linux；**清单平台**是要查找的软件或设备类型，两者可以不同。
 
-## Platform catalogs
-
-The tool runs on Windows, macOS, and Linux. The **catalog platform** describes the software or device you are searching for; it can differ from the host platform.
-
-| Catalog | Directory | CLI platform |
+| 菜单分类 | 清单目录 | 命令行平台值 |
 | --- | --- | --- |
 | Windows | `apps/windows/` | `windows` |
 | macOS | `apps/darwin/` | `darwin` |
@@ -85,77 +100,77 @@ The tool runs on Windows, macOS, and Linux. The **catalog platform** describes t
 | PS5 | `apps-ps5/` | `ps5` |
 | Vita | `apps-vita/` | `vita` |
 | Xbox | `apps-xbox/` | `xbox` |
-| Linux handheld | `apps-handheld/` | `linux_handheld` |
-| Custom catalog | `apps-custom/` | Manage with `--custom` |
-| All catalogs | 上述平台及Custom catalog | `--all-catalogs` |
+| Linux 掌机 | `apps-handheld/` | `linux_handheld` |
+| 自定义清单 | `apps-custom/` | 通过 `--custom` 管理 |
+| 搜全部清单 | 上述平台及自定义清单 | `--all-catalogs` |
 
-Windows examples:
+Windows 示例：
 
 ```bat
 lookup_app.bat drawio
 lookup_mobile.bat termux
-lookup_app.bat --apps-dir apps-tv --platform android_tv music
+lookup_app.bat --apps-dir apps-tv --platform android_tv 洛雪
 lookup_app.bat --apps-dir apps-handheld --platform linux_handheld proton
 lookup_app.bat --all-catalogs music
 ```
 
-On macOS/Linux, replace `lookup_app.bat` with `./lookup_app`. Specify the platform when passing keywords, or use the menu with no arguments. Check each upstream project for console firmware, device architecture, and installation requirements.
+macOS/Linux 使用 `./lookup_app` 替换示例中的 `lookup_app.bat`。带关键词时可显式指定平台；无参数运行可从菜单选择。主机和掌机条目的固件、架构及安装要求以项目说明为准。
 
-Browse: [Desktop](CATALOG.md) · [Mobile](CATALOG.mobile.md) · [Switch](CATALOG.switch.md) · [PS5](CATALOG.ps5.md) · [Category page](catalog.html).
+浏览清单：[桌面](CATALOG.md) · [移动端](CATALOG.mobile.md) · [Switch](CATALOG.switch.md) · [PS5](CATALOG.ps5.md) · [分类展示页](catalog.html)。
 
-## Custom catalog
+## 自定义清单
 
-Choose the custom catalog in the main menu, or run `lookup_app.bat --custom` (`./lookup_app --custom` on macOS/Linux).
+主菜单选择「自定义清单」，或运行 `lookup_app.bat --custom`（macOS/Linux：`./lookup_app --custom`）。
 
-Adding an entry follows: **source → detect assets → select platform, architecture, and package type → preview → save or save and download**.
+添加流程：**输入来源 → 识别附件 → 选择平台/架构/包类型 → 预览 → 仅保存或保存并下载**。
 
-Accepted sources include `owner/repo`, GitHub repository or Release URLs, and HTTP(S) download links. A software name can also be used to find candidate projects. You can select multiple assets from one project. Confirm whether an APK targets Android phones or Android TV; select the platform manually for ambiguous archives.
+支持 `owner/repo`、GitHub 仓库或 Release 地址、HTTP(S) 下载直链，也可输入软件名查找候选项目。同一项目可选择多个附件；普通 APK 需确认 Android 手机或 Android TV，无法判断的压缩包需手动选择平台。
 
-- GitHub entries follow the latest stable Release using the selected asset rules. If names change, identify the assets again.
-- Direct URLs remain fixed links without automatic version detection. Adding an entry does not launch its installer.
-- Search, rename, categorize, identify assets again, delete, add in batches, and import/export JSON.
-- Changes create backups, keeping up to 20 revisions for undo. Removing an entry does not delete downloaded files.
-- Platform, architecture, and portable/installer preferences are remembered after a successful addition and can be changed or cleared.
+- GitHub 条目按所选附件规则跟随最新稳定 Release；命名变化时需重新识别附件。
+- 普通直链按固定链接保存，不自动判断新版本。添加操作不会自动运行安装包。
+- 支持搜索、修改名称/分类、重新识别、删除、批量添加、JSON 导入导出。
+- 变更前自动备份，最多保留 20 次，可撤销最近修改；删除条目不会删除下载文件。
+- 平台、架构和绿色版/安装版偏好会在成功添加后记住，可修改或清除。
 
-Personal entries, preferences, and history live in `apps-custom/`. Release packages include an empty template. Use export to share your list.
+个人条目、偏好和历史保存在 `apps-custom/`，发布包只附空模板。分享前请使用导出功能。
 
 ```bat
 lookup_app.bat --custom-add https://github.com/shellsec/bolemusic
 lookup_app.bat --custom-add https://example.org/app.exe --dry-run
 ```
 
-## Update lists and batch downloads
+## 更新列表与批量下载
 
-Search actions 2 and 3 save entries to `saved_apps_<platform>.json`. Run `run_saved_apps.bat` on Windows or `./run_saved_apps` on macOS/Linux, then select or specify a list.
+搜索后选择操作 2 或 3，会按平台保存 `saved_apps_<平台>.json`。Windows 运行 `run_saved_apps.bat`；macOS/Linux 运行 `./run_saved_apps`，按提示选择或指定列表。
 
-Without application IDs, `auto_update` only processes enabled entries in the selected catalog. **Explicit IDs do not require `enabled=true`.** Start with the search entry point if you have no saved list or enabled entries.
+`auto_update` 不带应用 ID 时，只处理对应清单中 `enabled: true` 的条目；**明确指定 ID 时不要求启用**。首次使用建议从搜索入口开始。
 
-Each catalog's `root.json` controls the download directory and related settings. Installer execution depends on the entry's `run_installer` setting; archives are not extracted automatically. Review the selected entries before batch processing.
+下载位置由各清单 `root.json` 的 `download_dir` 等设置决定。安装包是否运行取决于条目的 `run_installer`；压缩包不会自动解压。批量处理前先检查所选条目的下载与安装设置。
 
-## Web-page and game-channel searches
+## 介绍页与游戏频道搜索
 
-Use `search_soft_pages.bat` / `search_soft_pages.exe` for software introduction pages and `search_games.bat` / `search_games.exe` for game-channel pages. On macOS/Linux, use `./search_soft_pages` and `./search_games`.
+`search_soft_pages.bat` / `search_soft_pages.exe` 搜索介绍页标题；`search_games.bat` / `search_games.exe` 搜索游戏频道。macOS/Linux 对应入口为 `./search_soft_pages` 和 `./search_games`。
 
-These separate page indexes primarily open links. They are outside the main menu's all-catalog search. See the [channel tools guide](tools/soft_page_check/README.md) for index refresh and monitoring.
+这些是独立的页面索引，结果以打开链接为主，不属于「搜全部清单」的 GitHub 软件条目。索引刷新和监控见 [频道工具说明](tools/soft_page_check/README.md)。
 
-## Troubleshooting
+## 常见问题
 
-| Issue | What to check |
+| 问题 | 处理方式 |
 | --- | --- |
-| Windows reports a `CATALOGS` import error | Replace the old executables with the current release. Bundled modules are isolated from old adjacent `tools/*.py` files. Keep personal catalogs and settings. |
-| Catalogs are missing after copying one executable | Extract the entire package, including adjacent data directories. |
-| No saved list or enabled apps | Search with `lookup_app`, then save entries to a list or enable them. |
-| Download fails or no asset matches | Check the upstream release page, network, and asset rules. Some entries only provide a page link. |
-| Slow download or unavailable accelerator | Try the GitHub direct link. Application downloads also try fallback sources according to configuration. |
-| macOS cannot verify the developer | The package is unsigned and not notarized. Verify its source and follow the system's security settings. |
-| Linux cannot run the package | Check CPU architecture and glibc availability; Alpine/musl is unsupported. |
-| More error details needed | Run from a terminal. Download logs use `update_log.txt`; unexpected startup errors use `startup_error.log`. If the directory is unwritable, inspect console output. |
+| Windows 启动时报 `CATALOGS` 导入错误 | 使用本页最新修复包，覆盖旧 EXE。新版内置模块不会被旁边的旧 `tools/*.py` 覆盖，可保留个人清单和配置。 |
+| 只复制一个 EXE 后找不到清单 | 完整解压发布包，保留同级清单及数据目录。 |
+| 没有更新列表或启用项 | 先运行 `lookup_app` 搜索，选择加入列表或启用，再运行批量入口。 |
+| 下载失败、无合适附件 | 查看项目发布页、网络和附件命名规则；部分收录条目仅提供页面入口。 |
+| 下载慢或加速入口不可用 | 尝试 GitHub 原始链接；应用下载也会按配置尝试备用来源。 |
+| macOS 提示无法验证开发者 | 当前包未签名或公证；确认来源后，按系统安全设置提示处理。 |
+| Linux 无法运行 | 确认 CPU 架构和 glibc 环境；此包不适用于 Alpine/musl。 |
+| 想查看错误详情 | 在终端运行入口，查看程序目录的 `update_log.txt`；意外启动异常另写 `startup_error.log`，目录不可写时查看控制台输出。 |
 
-Catalog coverage is limited, and upstream changes can break existing entries. Add custom sources or update the relevant matching rules as needed.
+清单并不包含所有软件，已收录项目也可能因上游变更失效。可通过自定义清单补充来源，或维护对应条目的匹配规则。
 
-## Run from source and build
+## 从源码运行与打包
 
-Source execution requires Python 3.10 or newer. Release-package users can skip these steps.
+源码使用 Python 3.10 或更新版本。发布包用户无需执行以下步骤。
 
 ```bash
 git clone https://github.com/shellsec/gh-release-fetch.git
@@ -164,7 +179,7 @@ python -m pip install -r requirements.txt
 python lookup_app.py
 ```
 
-Common commands:
+常用命令：
 
 ```bash
 python lookup_app.py --platform windows --no-prompt drawio
@@ -173,12 +188,12 @@ python auto_update.py --platform windows drawio
 python tools/run_saved_apps.py --help
 ```
 
-On Windows, run `pack_windows_release.bat`; output is written to `dist/release/`. See [Windows packaging](release/windows/PACKAGING.md). Current macOS/Linux packages use a portable directory with bundled CPython; keep the runtime directory intact.
+Windows 打包运行 `pack_windows_release.bat`，输出位于 `dist/release/`。详见 [Windows 打包说明](release/windows/PACKAGING.md)。macOS/Linux 当前发布包采用自带 CPython 的便携目录格式，需完整保留运行时目录。
 
-See the [configuration and maintenance reference](docs/reference.en.md) for fields, mirrors, download paths, logs, and maintenance scripts. Desktop global settings are in [apps/root.json](apps/root.json). Application IDs must be unique within each platform's JSON shards.
+配置字段、镜像回退、下载目录、日志及维护脚本见 [配置与维护参考](docs/reference.zh-CN.md)。桌面全局配置见 [apps/root.json](apps/root.json)，同平台各 JSON 分片的应用 `id` 不可重复。
 
-## Related projects and support
+## 相关项目与支持
 
-[AI tools directory: aiv123.com](https://aiv123.com/) · [ofox.ai](https://ofox.io/x/aiv123) · [Buy me a Coke / Afdian](https://ifdian.net/a/shellsec)
+[AI 工具导航 aiv123.com](https://aiv123.com/) · [ofox.ai](https://ofox.io/x/aiv123) · [请我喝可乐 / 爱发电](https://ifdian.net/a/shellsec)
 
-Optional independent catalogs: [VibeCodingToolsDown](VibeCodingToolsDown/README.md) · [GiteeExploreHot](GiteeExploreHot/README.md). These are outside the main menu's all-catalog search.
+可选独立清单：[VibeCodingToolsDown](VibeCodingToolsDown/README.md) · [GiteeExploreHot](GiteeExploreHot/README.md)。它们不属于主菜单「搜全部清单」的默认范围。
