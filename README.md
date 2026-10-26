@@ -1,581 +1,150 @@
-**语言 / Language:** [中文](README.zh-CN.md) | English
-
-[aiv123.com](https://aiv123.com/) · AI tools directory, 600+ tools in one place
-
-## 🚀 Recommended: [ofox.ai](https://ofox.io/x/aiv123)
-
-> **In short**: One account for the latest GPT / Claude / Gemini and **100+** top models. First top-up gets an extra **$3** credit.
-
-Text, image, video, and embeddings in one place. Caching supported — repeat calls stay cheaper and faster.
-
-[👉 Sign up](https://ofox.io/x/aiv123) · Global dedicated lines · Enterprise SLA · No conversation retention
-
-| ⚡️ Faster & Leaner | 🧠 Models & Modalities | 🛡️ Privacy |
-|:---:|:---:|:---:|
-| Global lines, enterprise SLA, plus caching | 100+ models · text / image / video / embeddings | No conversation retention |
-
-## ☕ Buy Me a Coke
-
-Open source takes effort — sponsorship is welcome:  
-👉 [爱发电 / Afdian](https://ifdian.net/a/shellsec)
-
----
+**Language / 语言:** [中文](README.zh-CN.md) | English
 
 # GH Release Fetch
 
-## Downloads and accelerated downloads
+Search software by platform, download GitHub Release assets, and keep personal lists for repeat updates. Includes built-in catalogs, custom sources, and separate web-page searches.
 
-Download version: **20261026-import-fix** · [Latest Release](https://github.com/shellsec/gh-release-fetch/releases/latest) · [Release notes](https://github.com/shellsec/gh-release-fetch/releases/tag/20261026-import-fix)
+## Downloads
 
-| Platform / file | Accelerated download (gh-proxy.com) | GitHub direct |
+Current version: **20261026-import-fix** · [Release notes](https://github.com/shellsec/gh-release-fetch/releases/tag/20261026-import-fix) · [Latest Release](https://github.com/shellsec/gh-release-fetch/releases/latest)
+
+| Host platform | Accelerated (gh-proxy.com) | GitHub direct |
 | --- | --- | --- |
-| Windows x64 | [Download](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-windows-20261026-import-fix.zip) | [Direct](https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-windows-20261026-import-fix.zip) |
-| macOS ARM64 / Apple Silicon | [Download](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-34580b0-macos-arm64.tar.gz) | [Direct](https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-34580b0-macos-arm64.tar.gz) |
-| Linux x86_64 | [Download](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-34580b0-linux-x86_64.tar.gz) | [Direct](https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-34580b0-linux-x86_64.tar.gz) |
-| Linux ARM64 | [Download](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-34580b0-linux-arm64.tar.gz) | [Direct](https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-34580b0-linux-arm64.tar.gz) |
-| SHA256SUMS | [Download](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/SHA256SUMS) | [Direct](https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/SHA256SUMS) |
-
-Extract the complete package. Windows: run `lookup_app.bat` or `lookup_app.exe`. macOS/Linux: enter the extracted folder and run `./lookup_app`. Python is bundled. If the accelerator is unavailable, use the GitHub direct link. `SHA256SUMS` covers all four packages.
-
-Windows and macOS/Linux packages are all based on `34580b0` and include the latest startup fix. Linux requires glibc and has not been verified on a Linux machine; see the release notes for validation details.
-
-| | |
-|:---|:---|
-| **Project name (EN)** | **GH Release Fetch** |
-| **Project name (ZH)** | **GitHub 发行版拉取工具** |
-| **Repository** | [`shellsec/gh-release-fetch`](https://github.com/shellsec/gh-release-fetch) |
-| **Description (EN)** | **Search by name, download or update** — no hunting Release pages, version tags, or direct URLs. Curated JSON + scripts resolve the latest release, pick the right OS asset, download, and optionally install. Mirrors first, fallback to `github.com`. |
-| **Description (ZH)** | **按名字搜索即可下载/更新**——不必翻 Release 页、不必记版本号或找直链；`lookup_app.bat` 搜软件名，脚本自动解析最新包并匹配安装文件。 |
-
-### What you get
-
-| You **don’t** have to | The tool does |
-|------------------------|---------------|
-| Browse GitHub Releases and pick x64/dmg/AppImage links | Resolve the **latest tag** and filter assets by rules in the catalog |
-| Track “which version / which URL today” | Filenames usually include the **version** (`save_name` templates) |
-| Maintain hundreds of download URLs yourself | **700+** pre-catalogued entries (Windows); **fuzzy search** by app name |
-
-```bat
-lookup_app.bat drawio
-REM pick row → 1 download now (no enabled) → 2 save+download → 3 save only → 4 enable
-```
-
-**Limits:** Rules live in JSON (maintainer work). Some entries are placeholders. Non-GitHub distribution → **channel track** (`search_soft_pages.bat`).
-
-### Copy to GitHub «About»
-
-In the repo sidebar **About → ⚙**, paste:
-
-**Description (Chinese)**
-
-```
-GitHub 发行版拉取工具：700+ 开源软件清单（Windows），搜名字即可下载/更新，无需自己翻 Release 页或找下载链接。脚本自动解析最新版本并匹配 Win/macOS/Linux 安装包，支持 lookup 一键下载与批量更新。
-```
-
-**Description (English)**
-
-```
-GH Release Fetch: 700+ app catalog (Windows) — search by name, download/update without hunting Release pages or URLs. Auto-resolves latest assets for Windows/macOS/Linux. One-click lookup + batch updates.
-```
-
-**Website (optional)** `https://github.com/shellsec/gh-release-fetch#readme`
-
-**Topics (suggested)** `github-releases` `windows` `macos` `linux` `download-manager` `open-source-software` `automation` `python` `software-catalog`
-
----
-
-## Overview
-
-This repository is for **“search by name → resolve latest package → download (optional install)”**. Maintainers encode “how to find the right asset on GitHub/CDN” in JSON; **end users don’t hunt Release pages or copy URLs**.
-
-Under the hood it targets **GitHub Releases** (HTML + API) for Windows / macOS / Linux (optional Android APK download).
-
-### Design: two tracks
-
-| Track | When | In this repo |
-|-------|------|----------------|
-| **Git** | Open source with parseable GitHub/Gitee Releases | `apps/` + `lookup_app` → `run_saved_apps`; optional `GiteeExploreHot/`, `VibeCodingToolsDown/` |
-| **Channels** | Intro pages, mirrors, vendor CDN, non-Release distribution | `tools/soft_page_check/` periodic title checks; `search_soft_pages.bat`; manual download after changes |
-
-Open source on Git; everything else on monitored channels (scheduled checks). Do not force non-Git apps into `apps/`. Optional `tools/dayanzai_cache/` when running `import_dayanzai_windows.py` is local-only (gitignored) and safe to delete after import.
-
-**Core files**
-
-- [`auto_update.py`](auto_update.py) — loads merged config from [`apps/`](apps/) (or legacy root [`apps.json`](apps.json)), resolves latest release, downloads assets, optionally launches installers.
-- [`apps/`](apps/) — recommended layout: [`apps/root.json`](apps/root.json) + per-platform JSON shards under [`apps/windows/`](apps/windows/), [`apps/darwin/`](apps/darwin/), [`apps/linux/`](apps/linux/). Falls back to `apps/darwin.json` / `apps/linux.json` if shard dirs are empty. Monolith backup: `apps.json.monolith.bak`; optional backups after splitting: `apps/darwin.json.bak`, `apps/linux.json.bak`.
-- [`run_update.bat`](run_update.bat) — Windows shortcut: checks Python, installs deps, runs `python auto_update.py`.
-- [`lookup_app.py`](lookup_app.py) / [`lookup_app.bat`](lookup_app.bat) — fuzzy search → pick row → **1 download / 2 save+download / 3 save list / 4 enable** (see **§3**). APK: [`lookup_mobile.bat`](lookup_mobile.bat). iOS: [`lookup_ios.bat`](lookup_ios.bat).
-- [`search_soft_pages.bat`](search_soft_pages.bat) — search **intro page titles** from [`tools/soft_page_check/`](tools/soft_page_check/) and open URLs; no-arg run prompts for keywords; complements GitHub catalog lookup.
-- [`run_saved_apps.bat`](run_saved_apps.bat) — enable + run `auto_update.py` for all apps in that list.
-
-### Recommended apps (browse + Markdown)
-
-- **Local catalog page** (by platform/category, searchable, downloadable vs official-site): [`open_catalog.bat`](open_catalog.bat) or open [`catalog.html`](catalog.html)
-- **Markdown guides** (intro, repo, shard, lookup command):
-
-| Platform | Chinese | English table | Scale |
-|----------|---------|---------------|-------|
-| Windows | [`RECOMMENDED.zh-CN.md`](RECOMMENDED.zh-CN.md) | [`RECOMMENDED.md`](RECOMMENDED.md) | 823 |
-| macOS | [`RECOMMENDED.darwin.zh-CN.md`](RECOMMENDED.darwin.zh-CN.md) | [`RECOMMENDED.darwin.md`](RECOMMENDED.darwin.md) | 769 |
-| Linux | [`RECOMMENDED.linux.zh-CN.md`](RECOMMENDED.linux.zh-CN.md) | [`RECOMMENDED.linux.md`](RECOMMENDED.linux.md) | 697 |
-
-Regenerate: `python tools/generate_catalog_html.py` and `python tools/generate_recommended_md.py`. Stats: [`CATALOG.md`](CATALOG.md).
-
-**Optional second catalog: [`VibeCodingToolsDown/`](VibeCodingToolsDown/)**
-
-Separate from [`apps/`](apps/): AI-coding–oriented entries, `manifest.json` built by [`VibeCodingToolsDown/scripts/build_manifest.py`](VibeCodingToolsDown/scripts/build_manifest.py), consumed via `resolve_via=github_pages_manifest` and `vibecoding_manifest_url` in [`VibeCodingToolsDown/root.json`](VibeCodingToolsDown/root.json) (local path or HTTPS, e.g. raw GitHub). Windows: [`run_update_VibeCodingToolsDown.bat`](VibeCodingToolsDown/run_update_VibeCodingToolsDown.bat). Reset/restore `enabled` for this catalog only: [`VibeCodingToolsDown/tools/reset_enabled_json.bat`](VibeCodingToolsDown/tools/reset_enabled_json.bat) / [`apply_enabled_snapshot.bat`](VibeCodingToolsDown/tools/apply_enabled_snapshot.bat) (snapshots under that folder’s `tools/`). CLI: `python auto_update.py --apps-dir VibeCodingToolsDown` or `python vibe_update.py` from that folder. CI: copy [`VibeCodingToolsDown/ci/vibecodingtoolsdown-pages.monorepo.example.yml`](VibeCodingToolsDown/ci/vibecodingtoolsdown-pages.monorepo.example.yml) to `.github/workflows/` when your token can modify workflows (needs `workflow` scope for HTTPS PAT). See [`VibeCodingToolsDown/README.md`](VibeCodingToolsDown/README.md).
-
-**Optional Gitee bundle: [`GiteeExploreHot/`](GiteeExploreHot/)**
-
-Categorized **Gitee** repos under [`GiteeExploreHot/catalog/`](GiteeExploreHot/catalog/); [`GiteeExploreHot/scripts/fetch_explore_hot.py`](GiteeExploreHot/scripts/fetch_explore_hot.py) writes `hot_repos.json` plus **`gitee_downloads.json`** (Windows/macOS/Linux URLs from `releases/latest` attachments). [`GiteeExploreHot/scripts/gitee_download.py`](GiteeExploreHot/scripts/gitee_download.py) pulls binaries into `GiteeExploreHot/downloads/…`. Windows one-shot: [`GiteeExploreHot/run_sync_gitee.bat`](GiteeExploreHot/run_sync_gitee.bat) (optional first arg `windows`, `darwin`, or `linux` to download after sync). Not wired into `auto_update.py` (GitHub-focused). See [`GiteeExploreHot/README.md`](GiteeExploreHot/README.md).
-
-**Optional intro-page monitor: [`tools/soft_page_check/`](tools/soft_page_check/)**
-
-Separate from the GitHub **`apps/`** catalog: tracks **page titles** on dayanzai, appx64, 7xiazai, hybase, 423down, **gamer520** (games), tier-A install pages, etc. Use repo-root **[`search_soft_pages.bat`](search_soft_pages.bat)** to search ~5500+ indexed URLs and open matches in the browser. **Games:** [`search_games.bat`](search_games.bat) (gamer520; local recent list + **live site search fallback**). **No arguments:** prompts for keywords (same as `lookup_app.bat`).
-
-**Windows startup:** Extract the whole portable package and use `lookup_app.bat` / `lookup_app.exe` as the main entry. Saved-list updates require a saved list; bulk updates require enabled entries or explicit IDs. Frozen executables load their bundled modules even when legacy Python files remain beside them; catalogs still load from the adjacent configuration folders. Portable shortcuts use the EXE directly when source files are absent, without probing installed Python or Store aliases. Failures in a directly double-clicked EXE keep the console open; shell and automation calls do not pause. Unexpected exceptions are recorded in `startup_error.log`; an unwritable log directory no longer prevents startup.
-
-**Custom catalog:** Choose **Custom** before **Search all**, or run `lookup_app.bat --custom`. Add a GitHub repository name/URL, Release URL, fixed HTTP(S) package URL, or search by app name. Inspect assets, confirm ambiguous platforms (including phone vs Android TV), then preview and choose save-only or save-and-download. `--custom-add SOURCE` opens this flow directly; `--dry-run` previews without changing the catalog.
-
-Custom includes edit/delete, source re-detection, batch inputs, JSON import/export, 20-change undo history and remembered platform/architecture/package preferences. GitHub entries follow the selected asset filename pattern; ordinary URLs remain fixed. Missing variants and network failures explain what to check. Packages are not auto-run. Search all includes `apps-custom/`; portable builds include only its empty template. Export personal entries explicitly to share them.
-
-| Task | Entry |
-|------|--------|
-| Search titles / open URLs | **`search_soft_pages.bat`** or **`search_soft_pages.bat <keyword>`** (repo root) |
-| Search game pages (gamer520) | **`search_games.bat`** or **`search_games.bat <keyword>`** |
-| Monthly SOP | `tools\soft_page_check\monthly_sop.bat` |
-| **Monthly · tier A** (~42 pages, ~15s) | `tools\soft_page_check\monthly_check.bat` |
-| **Quarterly · all channels** (~2300+ pages, ~20–35 min; title diff only) | `tools\soft_page_check\monthly_check_full.bat` |
-| Per-site check / open changed URLs | `monthly_check_site.bat <site>` / `open_changed_site.bat <site>` (`423down` `7xiazai` `hybase` `dayanzai` `appx64` **`gamer520`**) |
-| List four sites batch | `tools\soft_page_check\monthly_check_list.bat` (7xiazai + hybase + dayanzai + appx64) |
-| Refresh URL lists | `tools\soft_page_check\refresh_urls.bat` |
-| Prune dated snapshots | `tools\soft_page_check\prune_artifacts.bat` |
-| HTML report | `tools\soft_page_check\open_report.bat` |
-| GitHub title change → Release fetch | `tools\soft_page_check\fetch_github_on_changes.bat` (read-only `apps/` + `auto_update.py`) |
-
-**vs `lookup_app`:** GitHub Releases catalog vs intro-page titles. This repo often has **no** `Lastb_soft_version.txt`; checks reuse cached URL lists under `soft_page_check/`. SoftGitUp-style `generate_and_push.bat` / `software/` sync is optional; the main gh-release-fetch flow uses `run_saved_apps.bat`, etc. Run tier-A check **twice** on first use for a diff baseline. Details: [`tools/soft_page_check/README.md`](tools/soft_page_check/README.md).
-
-**Approximate catalog size** (changes when you edit JSON): **823** Windows, **769** darwin, **697** linux entries across **30** shard files each (**excluding** `99-未匹配-windows分片.json` placeholders). See [`CATALOG.md`](CATALOG.md) for a per-shard table (`python tools/generate_catalog_index.py` to refresh). Confirm totals with the merge log line when you run the script. Mobile catalog (`apps-mobile/`): Android **252**, iOS **123** (App Store placeholders; [`CATALOG.mobile.md`](CATALOG.mobile.md)). Search: `lookup_mobile.bat` / `lookup_ios.bat`.
-
-Some AI IDE / CDN rows in main `apps/` (Cursor, VS Code, Trae, Windsurf, LM Studio, Antigravity, ZCode, etc.) use `resolve_via=github_pages_manifest` via `vibecoding_manifest_url` in [`apps/root.json`](apps/root.json) (default `./VibeCodingToolsDown/dist/vibecoding/manifest.json`). Root default **`refresh_manifest_before_resolve: true`**: before download, `auto_update` runs `build_manifest.py --only <id>` against the local snapshot (falls back to the cached file on failure). Portable zips without `VibeCodingToolsDown/scripts/` skip live refresh and use the bundled snapshot. Manual: `python VibeCodingToolsDown/scripts/build_manifest.py` (full) or `--only cursor,vscode`.
-
-**Duplicate `id`**: within one platform, each `id` must appear once across all shards (including `99-*`); remove stale placeholders if `auto_update.py` reports duplicates.
-
-Bulk extend from [dayanzai.me/windows](https://www.dayanzai.me/windows): `python tools/import_dayanzai_windows.py --apply` (Windows), then `python tools/sync_dayanzai_to_darwin_linux.py` for darwin/linux (API-first stubs; tune markers before enabling).
-
-**Scope**: entries target assets discoverable from **GitHub (or mirrors)**. **No** cracked software, piracy, or license circumvention. Some rows are stubs until you add full `installer_markers` / `download_names` / `save_name` rules.
-
----
-
-## Problems this solves
-
-- Release pages mix **many assets**; users just want the **latest installer**, not to hunt links and tags manually.
-- **Networks** block or throttle GitHub; you want **mirror → official → API** fallback.
-- Many tools ⇒ a **searchable catalog** beats bookmarking every Release page.
-
-The script handles **version resolution and asset matching**; you search by name or maintain a saved list.
-
----
-
-## Who it is for
-
-- **Install/update one app without opening GitHub:** `lookup_app.bat keyword` → **1 download now** (no `enabled` change).
-- **A personal set updated on a schedule:** options **2/3** → `saved_apps_*.json` → `run_saved_apps.bat`.
-- **Maintainers / cron:** curate JSON rules, set `enabled: true` for stable rows, run `auto_update.py` on a timer.
-- **Not ideal:** app-store-only apps, assets that cannot be matched by rules (use **channel track** / manual).
-
----
-
-## Versions: who cares about what
-
-| Role | What to watch |
-|------|----------------|
-| **Casual user** (lookup) | Usually **no** manual URLs or version tracking — search → download |
-| **Saved list user** | Which apps are in the list; whether batch update succeeded |
-| **Maintainer / cron** | Whether rules still match upstream renames; which entries are `enabled` |
-
-| Technical detail | Note |
-|------------------|------|
-| **“Latest” each run** | Re-resolved from page/API; `latest` usually skips drafts/prereleases. |
-| **Re-download** | Depends on `auto_update.py`; check logs and filenames. |
-| **Upstream renames** | Update JSON markers/templates (**maintainer**). |
-| **Rule quality** | Complete rules only for unattended runs. |
-
----
-
-## Requirements
-
-### Environment
-
-| Item | Detail |
-|------|--------|
-| **OS** | Script runs on **Windows, macOS, Linux**; `run_update.bat` is Windows-only. |
-| **Python** | **3.6+** (same as `run_update.bat` message); prefer a supported 3.x release. On Windows you can use **exe** instead (below). |
-| **pip** | `pip install -r requirements.txt` (skip if using exe only). |
-
-### No Python (Windows · optional exe)
-
-Pack **5 exe files** beside [`apps/`](apps/). Bats use **Python when installed**, otherwise **exe**. Double-clicking an exe also prompts for keywords when run with no args.
-
-| exe | bat | Role |
-|-----|-----|------|
-| `lookup_app.exe` | [`lookup_app.bat`](lookup_app.bat) | Desktop search → actions 1/2/3/4 (no args: pick catalog first) |
-| (same exe) | [`lookup_mobile.bat`](lookup_mobile.bat) | Search Android APKs |
-| (same exe) | [`lookup_ios.bat`](lookup_ios.bat) | Search iOS App Store stubs |
-| `run_saved_apps.exe` | [`run_saved_apps.bat`](run_saved_apps.bat) | Batch update from saved list |
-| `search_soft_pages.exe` | [`search_soft_pages.bat`](search_soft_pages.bat) | Search intro-page titles |
-| `search_games.exe` | [`search_games.bat`](search_games.bat) | Search gamer520 game pages (local index + live site fallback) |
-| `auto_update.exe` | [`run_update.bat`](run_update.bat) / lookup download | Download engine |
-
-Build (needs Python **once** on the build machine):
-
-```powershell
-powershell -ExecutionPolicy Bypass -File tools\build_exe.ps1
-```
-
-Output: `dist/exe/` — copy all **5 exe** files to the repo root. Maintainer scripts still need Python.
-
-**Windows Release zip** (exe + catalog + soft_page_check index, ready to unzip):
-
-```bat
-pack_windows_release.bat
-```
-
-Or:
-
-```powershell
-powershell -ExecutionPolicy Bypass -File tools\pack_windows_release.ps1 -Version 1.0.0
-```
-
-Output: `dist/release/gh-release-fetch-windows-<version>.zip`. Details: [`release/windows/PACKAGING.md`](release/windows/PACKAGING.md).
-
-### Dependencies (`requirements.txt`)
-
-When using the **Python path**, install:
-
-- `requests` (≥2.25.0) — HTTP and GitHub API.
-- `beautifulsoup4` (≥4.9.0) — parse GitHub release HTML.
-
-### Network
-
-| Item | Detail |
-|------|--------|
-| **GitHub** | Reach **`github.com`** and **`api.github.com`** (or get them via fallback). If `releases_url` uses a mirror (e.g. `bgithub.xyz`), the script can **fall back to official** release pages and then the **API**. |
-| **TLS** | Use `--insecure` or root [`apps/root.json`](apps/root.json) `"ssl_verify": false` only when needed (MITM risk); revert when certificates are fixed. |
-
-### Config layout
-
-| Item | Detail |
-|------|--------|
-| **Recommended** | [`apps/root.json`](apps/root.json) plus shard arrays under [`apps/windows/`](apps/windows/), [`apps/darwin/`](apps/darwin/), [`apps/linux/`](apps/linux/) (**unique `id` per platform**). Use `python tools/split_darwin_linux_to_dirs.py` to migrate legacy single-file darwin/linux lists. |
-| **Legacy** | Root [`apps.json`](apps.json) if `apps/root.json` is absent. |
-| **Per app** | At minimum: `id`, `releases_url`, `repo_path`. |
-
-### Preconditions
-
-- **Batch mode** (no ids on CLI) processes only **`enabled: true`** entries.
-- **Explicit ids** (`lookup_app` option 1, or `auto_update.py drawio`) **do not require** `enabled=true`.
-- **Data source** is primarily GitHub (some rows use CDN/manifest); other channels → **channel track**.
-
----
-
-## 1. Install dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
----
-
-## 2. Quick start
-
-**Windows (double-click)**  
-Run [`run_update.bat`](run_update.bat) — checks Python, installs requirements, runs `python auto_update.py`.
-
-**CLI (any OS)**
-
-```bash
-python auto_update.py
-```
-
-Default behavior: detect platform, merge `apps/` into `platforms.*`, process **only enabled** apps, try `releases_url` then official GitHub and API, prefer **tag-derived** versions when the page is ambiguous.
-
----
-
-## 3. Enable an app
-
-### Option A: lookup script (recommended)
+| Windows x64 | [ZIP](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-windows-20261026-import-fix.zip) | [ZIP](https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-windows-20261026-import-fix.zip) |
+| macOS ARM64 / Apple Silicon | [tar.gz](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-34580b0-macos-arm64.tar.gz) | [tar.gz](https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-34580b0-macos-arm64.tar.gz) |
+| Linux x86_64 | [tar.gz](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-34580b0-linux-x86_64.tar.gz) | [tar.gz](https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-34580b0-linux-x86_64.tar.gz) |
+| Linux ARM64 | [tar.gz](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-34580b0-linux-arm64.tar.gz) | [tar.gz](https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-34580b0-linux-arm64.tar.gz) |
+| SHA256SUMS | [Checksums](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/SHA256SUMS) | [Checksums](https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/SHA256SUMS) |
+
+All packages use source revision `34580b0` and bundle their runtime; no separate Python installation is needed. Use the direct link if the accelerator is unavailable. The macOS package is unsigned and not notarized. Linux requires glibc, does not support Alpine/musl, and has not been tested on a Linux machine. See the release notes for validation details.
+
+## Quick start
+
+1. Download the package for the **computer running this tool**. Extract the complete archive, keeping its catalog and data directories.
+2. On Windows, open `lookup_app.exe` or `lookup_app.bat`. On macOS/Linux, run `./lookup_app` from the extracted directory.
+3. Select the platform to search, then enter a name or keyword. Enter defaults to Windows; the last menu option searches all catalogs.
+4. Select result numbers, then choose an action.
+
+| Action | Behavior |
+| --- | --- |
+| 1: Download now | Download without changing the enabled state |
+| 2: Save and download | Add to the update list and download now |
+| 3: Save to list | Add to the update list for later |
+| 4: Enable | Set `enabled=true` for batch processing in that catalog |
+
+Enter `1,3` for multiple results, `a` for all, or Enter to skip. Some entries open a website, store, or release page instead of downloading an asset. Downloading for another platform does not make that software runnable on your computer.
+
+## Platform catalogs
+
+The tool runs on Windows, macOS, and Linux. The **catalog platform** describes the software or device you are searching for; it can differ from the host platform.
+
+| Catalog | Directory | CLI platform |
+| --- | --- | --- |
+| Windows | `apps/windows/` | `windows` |
+| macOS | `apps/darwin/` | `darwin` |
+| Linux | `apps/linux/` | `linux` |
+| Android | `apps-mobile/` | `android` |
+| Android TV | `apps-tv/` | `android_tv` |
+| iOS App Store | `apps-mobile/` | `ios` |
+| Switch | `apps-switch/` | `switch` |
+| PS4 | `apps-ps4/` | `ps4` |
+| PS5 | `apps-ps5/` | `ps5` |
+| Vita | `apps-vita/` | `vita` |
+| Xbox | `apps-xbox/` | `xbox` |
+| Linux handheld | `apps-handheld/` | `linux_handheld` |
+| Custom catalog | `apps-custom/` | Manage with `--custom` |
+| All catalogs | 上述平台及Custom catalog | `--all-catalogs` |
+
+Windows examples:
 
 ```bat
 lookup_app.bat drawio
 lookup_mobile.bat termux
-lookup_ios.bat wechat
+lookup_app.bat --apps-dir apps-tv --platform android_tv music
+lookup_app.bat --apps-dir apps-handheld --platform linux_handheld proton
+lookup_app.bat --all-catalogs music
 ```
 
-```bash
-python lookup_app.py drawio
-```
+On macOS/Linux, replace `lookup_app.bat` with `./lookup_app`. Specify the platform when passing keywords, or use the menu with no arguments. Check each upstream project for console firmware, device architecture, and installation requirements.
 
-**Quick reference** (matches the on-screen help when you run `lookup_app` with no arguments):
+Browse: [Desktop](CATALOG.md) · [Mobile](CATALOG.mobile.md) · [Switch](CATALOG.switch.md) · [PS5](CATALOG.ps5.md) · [Category page](catalog.html).
 
-```text
-Usage: lookup_app [options and keywords...]
-Examples: lookup_app drawio
-         lookup_mobile.bat termux
-         lookup_ios.bat wechat
-No args: pick a platform catalog, or the final Search all option; Enter defaults to Windows
-After picking rows: 1=download now  2=save+download  3=save list  4=enable
-Non-interactive:    lookup_app -y --download drawio
-```
+## Custom catalog
 
-**No arguments:** `lookup_app.bat` / `lookup_app.exe` offers Windows, macOS, Linux, Android, Android TV, iOS, Switch, PS4, PS5, Vita, Xbox, and Linux handhelds separately, followed by **Search all catalogs**. Enter defaults to Windows. Use `--all-catalogs music` to search all catalogs directly. Downloads and saved update lists retain the source catalog. New roots: `apps-tv/`, `apps-ps4/`, `apps-vita/`, `apps-xbox/`, and `apps-handheld/`. Entries without verified asset rules open the project release page. For APKs you can also run `lookup_mobile.bat termux`.
+Choose the custom catalog in the main menu, or run `lookup_app.bat --custom` (`./lookup_app --custom` on macOS/Linux).
 
-**Two-step flow:** search → pick row (`1`, `1,3`, `a`, or **Enter** to skip) → pick action **1**–**4**. Short keywords like `draw` often match **three rows** (darwin / linux / windows with the same `id`); pick the right platform or narrow with `--platform windows drawio`.
+Adding an entry follows: **source → detect assets → select platform, architecture, and package type → preview → save or save and download**.
 
-If the local catalog has no hit, lookup searches GitHub by repository name for the current `--platform` (this machine when omitted), ignoring case, `-`, `_`, and spaces. It shows one suggestion (repo, version, filename, size): Enter downloads, any other key cancels; equally similar repos or several qualified assets use a numbered choice. `--dry-run` only prints, `--no-prompt` downloads only when the repo name matches and exactly one installer qualifies, and `--save` appends that repo as `enabled: false` to the closest shard (`11-工具.json` when unsure, without duplicating an id).
+Accepted sources include `owner/repo`, GitHub repository or Release URLs, and HTTP(S) download links. A software name can also be used to find candidate projects. You can select multiple assets from one project. Confirm whether an APK targets Android phones or Android TV; select the platform manually for ambiguous archives.
 
-```text
-lookup_app.bat draw
-> 3          # windows row
-> 1          # download now (does not change enabled)
-```
+- GitHub entries follow the latest stable Release using the selected asset rules. If names change, identify the assets again.
+- Direct URLs remain fixed links without automatic version detection. Adding an entry does not launch its installer.
+- Search, rename, categorize, identify assets again, delete, add in batches, and import/export JSON.
+- Changes create backups, keeping up to 20 revisions for undo. Removing an entry does not delete downloaded files.
+- Platform, architecture, and portable/installer preferences are remembered after a successful addition and can be changed or cleared.
 
-Lists **platform**, **shard path**, **category**, and **enabled**. Interactive flow: **pick rows** → **pick action**:
-
-| Action | Meaning |
-|--------|---------|
-| **1** | Download now (**does not** change `enabled`) |
-| **2** | Add to saved list **and** download |
-| **3** | Add to saved list only |
-| **4** | Set `enabled=true` |
-
-| Flag | Meaning |
-|------|---------|
-| `--platform windows\|darwin\|linux\|android\|ios` | Filter to one platform (android/ios: `--apps-dir apps-mobile`, or `lookup_mobile.bat` / `lookup_ios.bat`) |
-| `--save [FILE]` | Add selection to update list (default `saved_apps_<platform>.json`) |
-| `--no-save-prompt` | Do not ask to add to list |
-| `--no-prompt` | Search only |
-| `--yes` / `-y` | Enable all matches |
-| `--download` / `-d` | Default action **1**; with `-y`, download all matches |
-| `--dry-run` | Preview only |
-| `--apps-dir VibeCodingToolsDown` | Search the separate catalog |
-| `--min-score N` | Match threshold (default 40) |
-
-At the row prompt: index `1` or `1,3`, `a` for all, **Enter** to skip.
-
-### Option A″: game channel search (gamer520)
-
-Search **game intro pages** on gamer520.com and open URLs in the browser. **Falls back to live site search** (`?s=query`, PC/Switch mixed, requires network) when the local index has no match. Does **not** download files. Open-source tools → `lookup_app`; utility intro pages → `search_soft_pages`.
+Personal entries, preferences, and history live in `apps-custom/`. Release packages include an empty template. Use export to share your list.
 
 ```bat
-search_games.bat
-search_games.bat 艾尔登
-search_games.bat 卡比
-search_games.bat --open 黑神话
-search_games.bat --stats
+lookup_app.bat --custom-add https://github.com/shellsec/bolemusic
+lookup_app.bat --custom-add https://example.org/app.exe --dry-run
 ```
 
-The local index covers **recent homepage listings** (`refresh_urls.bat gamer520`, **50 pages** by default, ~1000 URLs). Older posts may only appear via live site search (source label: `gamer520 · 游戏（站内搜索）`). Title check: `monthly_check_site.bat gamer520` (run twice for baseline).
+## Update lists and batch downloads
 
-### Option A′: intro-page title search (not the GitHub catalog)
+Search actions 2 and 3 save entries to `saved_apps_<platform>.json`. Run `run_saved_apps.bat` on Windows or `./run_saved_apps` on macOS/Linux, then select or specify a list.
 
-Search captured titles from download-site intro pages and open URLs. **No arguments:** `search_soft_pages.bat` prompts for keywords (like `lookup_app.bat`).
+Without application IDs, `auto_update` only processes enabled entries in the selected catalog. **Explicit IDs do not require `enabled=true`.** Start with the search entry point if you have no saved list or enabled entries.
 
-```bat
-search_soft_pages.bat
-search_soft_pages.bat 7zip
-search_soft_pages.bat --scope dayanzai WindowTabs
-search_soft_pages.bat --open github copilot
-search_soft_pages.bat --stats
-```
+Each catalog's `root.json` controls the download directory and related settings. Installer execution depends on the entry's `run_installer` setting; archives are not extracted automatically. Review the selected entries before batch processing.
 
-Flags: `--scope` (e.g. `dayanzai`, `a`), `--open` (open top matches without prompting), `--stats` (index size).
+## Web-page and game-channel searches
 
-### Closed loop: search → list → update
+Use `search_soft_pages.bat` / `search_soft_pages.exe` for software introduction pages and `search_games.bat` / `search_games.exe` for game-channel pages. On macOS/Linux, use `./search_soft_pages` and `./search_games`.
 
-```bat
-lookup_app.bat --platform windows cherrytree
-run_saved_apps.bat
-```
+These separate page indexes primarily open links. They are outside the main menu's all-catalog search. See the [channel tools guide](tools/soft_page_check/README.md) for index refresh and monitoring.
 
-Default list files: `saved_apps_windows.json` (or `_darwin` / `_linux`). Custom path:
+## Troubleshooting
 
-```bat
-lookup_app.bat --save lists\my.json joplin
-run_saved_apps.bat lists\my.json
-set SAVED_APPS_LIST=lists\my.json
-run_saved_apps.bat
-```
+| Issue | What to check |
+| --- | --- |
+| Windows reports a `CATALOGS` import error | Replace the old executables with the current release. Bundled modules are isolated from old adjacent `tools/*.py` files. Keep personal catalogs and settings. |
+| Catalogs are missing after copying one executable | Extract the entire package, including adjacent data directories. |
+| No saved list or enabled apps | Search with `lookup_app`, then save entries to a list or enable them. |
+| Download fails or no asset matches | Check the upstream release page, network, and asset rules. Some entries only provide a page link. |
+| Slow download or unavailable accelerator | Try the GitHub direct link. Application downloads also try fallback sources according to configuration. |
+| macOS cannot verify the developer | The package is unsigned and not notarized. Verify its source and follow the system's security settings. |
+| Linux cannot run the package | Check CPU architecture and glibc availability; Alpine/musl is unsupported. |
+| More error details needed | Run from a terminal. Download logs use `update_log.txt`; unexpected startup errors use `startup_error.log`. If the directory is unwritable, inspect console output. |
 
-Bulk catalog from [dayanzai.me/windows](https://www.dayanzai.me/windows): `python tools/import_dayanzai_windows.py --apply`; sync to darwin/linux: `python tools/sync_dayanzai_to_darwin_linux.py`.
+Catalog coverage is limited, and upstream changes can break existing entries. Add custom sources or update the relevant matching rules as needed.
 
-### Option B: edit JSON
+## Run from source and build
 
-In the relevant shard under [`apps/windows/`](apps/windows/) (or darwin/linux), set `"enabled": true`. Global options live in [`apps/root.json`](apps/root.json).
-
-### What the lookup searches (scope)
-
-| Scope | Included? |
-|--------|-----------|
-| Every app row in `apps/windows/`, `apps/darwin/`, `apps/linux/` `*.json` shards | **Yes** (same merge as `auto_update.py`) |
-| Fields matched | `id`, `简介`, `分类`, `repo_path`, `releases_url`, `url_hint` (case-insensitive fuzzy) |
-| [`apps/root.json`](apps/root.json) | **No** |
-| [`GiteeExploreHot/`](GiteeExploreHot/), [`VibeCodingToolsDown/`](VibeCodingToolsDown/) | **No** by default; use `--apps-dir VibeCodingToolsDown` for the latter |
-| Root `apps.json`, `*.json.bak` | **No** (falls back to `apps/<platform>.json` only if a platform has no shard directory) |
-| Built manifests (e.g. `dist/vibecoding/manifest.json`) | **No** |
-
-The same `id` on three platforms appears as **three lines**; you can enable one platform or all.
-
----
-
-## 4. Update specific apps
+Source execution requires Python 3.10 or newer. Release-package users can skip these steps.
 
 ```bash
-python auto_update.py obsidian vscodium nodejs
+git clone https://github.com/shellsec/gh-release-fetch.git
+cd gh-release-fetch
+python -m pip install -r requirements.txt
+python lookup_app.py
 ```
 
----
-
-## 5. Force a platform block
+Common commands:
 
 ```bash
-python auto_update.py --platform windows
-python auto_update.py nodejs --platform windows
+python lookup_app.py --platform windows --no-prompt drawio
+python lookup_app.py --all-catalogs --no-prompt music
+python auto_update.py --platform windows drawio
+python tools/run_saved_apps.py --help
 ```
 
----
+On Windows, run `pack_windows_release.bat`; output is written to `dist/release/`. See [Windows packaging](release/windows/PACKAGING.md). Current macOS/Linux packages use a portable directory with bundled CPython; keep the runtime directory intact.
 
-## 6. TLS issues
+See the [configuration and maintenance reference](docs/reference.en.md) for fields, mirrors, download paths, logs, and maintenance scripts. Desktop global settings are in [apps/root.json](apps/root.json). Application IDs must be unique within each platform's JSON shards.
 
-```bash
-python auto_update.py --insecure
-```
+## Related projects and support
 
-Or in [`apps/root.json`](apps/root.json): `"ssl_verify": false` (temporary).
+[AI tools directory: aiv123.com](https://aiv123.com/) · [ofox.ai](https://ofox.io/x/aiv123) · [Buy me a Coke / Afdian](https://ifdian.net/a/shellsec)
 
----
-
-## 7. Mirrors and fallback
-
-Order of operations (see [`auto_update.py`](auto_update.py) for details): entry `releases_url` → on failure, `https://github.com/<owner>/<repo>/releases` → optional API. Optional root `release_page_mirrors` list for extra release-page hosts.
-
----
-
-## 8. Download directory and per-platform folders
-
-`download_dir` in [`apps/root.json`](apps/root.json) sets the root (e.g. `"."` or `"downloads"`).
-
-If **`download_subdir_by_platform`** is `true` (default in this repo), files go under:
-
-`{download_dir}/{windows|darwin|linux}/…`
-
-Logs include **`[platform: …]`** and the resolved target directory. Large files via public proxies may be slow; the console shows **percent (with decimals) and MiB** to avoid a stuck “0%” display. Direct GitHub URLs are tried in the script’s mirror chain.
-
----
-
-## 9. Common app JSON fields
-
-Required: `id`, `releases_url`, `repo_path`.
-
-Useful optional fields: `enabled`, `installer_markers`, `download_names`, `download_url_templates`, `save_name`, `windows_installer`, `installer_extensions`, `process_name`, `kill_before_install`, `run_installer`, `url_hint`, `href_exclude_substrings`, `installer_markers_match_all`, `prefer_api_assets`, `version_tag_as_on_github`.
-
-Human-oriented field glossary: `_说明` inside [`apps/root.json`](apps/root.json) (keys starting with `_` are not consumed by the script).
-
-Root keys: `download_dir`, `ssl_verify`, `download_subdir_by_platform`, `release_page_mirrors`, etc.
-
----
-
-## 10. Caveats
-
-- Prefer **fully specified rules** before enabling many apps for cron; smoke-test single `id` first.
-- Archives (7z/zip/tar, etc.) are **not** auto-extracted or opened with their associated app; after download the folder is opened in the file manager (Windows selects the file). exe/msi still auto-run when `run_installer` is true.
-- Special cases (e.g. `nodejs`) may use extra official URLs — see script.
-- **Unauthenticated GitHub API** rate limits can return 403; retry later, use a proxy, or wire a token into your environment for `requests` (not built into this repo).
-- If **tag names and file names diverge** (e.g. `release-1.x` vs `1.x` in the asset), `{ver}` templates may need manual tuning.
-
----
-
-## 11. Common commands
-
-```bash
-pip install -r requirements.txt
-python auto_update.py
-python auto_update.py nodejs
-python auto_update.py --platform windows
-python auto_update.py --insecure
-lookup_app.bat drawio
-python lookup_app.py --no-prompt v2ray
-```bat
-search_soft_pages.bat
-search_soft_pages.bat --stats
-search_soft_pages.bat 7zip
-```
-
----
-
-## 12. Logs and troubleshooting
-
-- Log file: `update_log.txt`
-- Saved release HTML: `github_page_<platform>_<app_id>.html` (e.g. `github_page_windows_obsidian.html`)
-- On failure: check `releases_url`, fallbacks, markers / `download_url_templates` vs real asset names, TLS, API rate limits
-- **`enabled`**: **batch** `auto_update.py` (no ids) only runs `enabled: true` rows; **lookup options 1/2** or **`auto_update.py <id>`** do **not** require `enabled`
-- **Duplicate `id`**: same-platform duplicates fail merge; with `--platform windows` only **windows** shards load — duplicates on other platforms do not block that run. Remove stale rows from `99-未匹配-windows分片.json` if needed
-
----
-
-## 13. Maintenance scripts
-
-### Daily use
-
-| Goal | Command |
-|------|---------|
-| Fuzzy search GitHub catalog / saved list | `lookup_app.bat <keyword>` (§3) |
-| Search Android APK / iOS App Store | `lookup_mobile.bat` / `lookup_ios.bat` |
-| Search intro-page titles / open URLs | **`search_soft_pages.bat`** (no-arg interactive) |
-| Search game pages (gamer520) | **`search_games.bat`** |
-| Update from saved list | **`run_saved_apps.bat`** or `python tools/run_saved_apps.py` |
-| Build Windows exe (no Python for daily use) | `powershell -File tools\build_exe.ps1` → copy `dist/exe/*.exe` to repo root |
-| **Pack Release zip (one-click)** | **`pack_windows_release.bat`** or `tools\pack_windows_release.ps1` |
-| Regenerate RECOMMENDED*.md | `python tools/generate_recommended_md.py` |
-| Open local catalog page | **`open_catalog.bat`** ([`catalog.html`](catalog.html)) |
-| Regenerate [`catalog.html`](catalog.html) | `python tools/generate_catalog_html.py` |
-| Refresh [`CATALOG.md`](CATALOG.md) | `python tools/generate_catalog_index.py` |
-
-### enabled & layout
-
-- Reset all `enabled` to `false`: **`reset_enabled_json.bat`** at repo root, or `python tools/reset_enabled_json.py` (`--dry-run` to preview; snapshot defaults to `tools/last_enabled_before_reset.json`)
-- Restore `enabled` from snapshot: **`apply_enabled_snapshot.bat`** or `python tools/apply_enabled_snapshot.py`
-- Split legacy `apps/darwin.json` / `apps/linux.json` into shard dirs: `python tools/split_darwin_linux_to_dirs.py` (backs up `*.json.bak`)
-- Monolith vs `apps/` notes: [`apps/root.json`](apps/root.json) → `_说明`
-
-### Bulk catalog import (idempotent; do not re-run blindly)
-
-| Script | Purpose |
-|--------|---------|
-| `tools/import_dayanzai_windows.py --apply` | Import open-source GitHub rows from dayanzai.me/windows |
-| `tools/split_dayanzai_unmatched.py` | Move `99-未匹配` rows into category shards |
-| `tools/sync_dayanzai_to_darwin_linux.py` | Mirror new Windows rows to darwin/linux |
-| `tools/append_catalog_batch2.py` … `batch4.py` | Historical cross-platform batches |
-| `tools/append_catalog_batch5.py` … `batch11.py` | AI IDE、截图/OCR、跨平台缺口等（见 [`CATALOG.md`](CATALOG.md)） |
-
-### Intro-page monitoring
-
-See [`tools/soft_page_check/README.md`](tools/soft_page_check/README.md). Common entry points: `monthly_check.bat`, `monthly_check_site.bat`, `open_changed_site.bat`, `refresh_urls.bat`, root `search_soft_pages.bat`, `fetch_github_on_changes.bat`.
-
----
-
-*Former working title: **GithubWinDownTools** — renamed for clarity now that darwin/linux catalogs are first-class.*
-
-## Switch catalog
-
-Switch has a separate catalog from desktop and mobile: [catalog and usage](CATALOG.switch.md).
-Run `python lookup_app.py` and select **Switch**, or use `lookup_switch.bat <query>`.
-NRO, OVL, NSP and archive assets are downloaded to `switch/<id>/` without installation or extraction.
-Use Python with the dependencies in `requirements.txt`; the root EXE builds now include Switch and PS5 menus.
-
-## PS5 catalog
-
-Run `lookup_app.bat`, select **PS5**, or use `lookup_ps5.bat <query>`.
-The separate [PS5 catalog](CATALOG.ps5.md) covers environments, ELF services, native emulators and apps, websrv packs, and developer tools.
-Files are downloaded to `ps5/<id>/`. Check each project's firmware and runtime requirements; the root EXE builds now include PS5 support.
-Refresh native app records with `python tools/import_ps5_community_catalog.py --refresh`, then regenerate the index with `python tools/generate_ps5_catalog_index.py`.
+Optional independent catalogs: [VibeCodingToolsDown](VibeCodingToolsDown/README.md) · [GiteeExploreHot](GiteeExploreHot/README.md). These are outside the main menu's all-catalog search.
