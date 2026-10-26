@@ -4,12 +4,15 @@ set PYTHONIOENCODING=utf-8
 set PYTHONUTF8=1
 cd /d "%~dp0"
 
-python --version >nul 2>&1
-if not errorlevel 1 (
+if not exist "%~dp0tools\soft_page_check\search_games.py" goto try_exe
+
+python -c "import requests, bs4" >nul 2>&1
+if not errorlevel 1 if exist "%~dp0tools\soft_page_check\search_games.py" (
     python tools\soft_page_check\search_games.py %*
     goto finish
 )
 
+:try_exe
 if exist "%~dp0search_games.exe" (
     "%~dp0search_games.exe" %*
     goto finish

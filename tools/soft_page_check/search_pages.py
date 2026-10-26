@@ -442,4 +442,5 @@ def main() -> int:
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    from tools.ghrf_runtime import run_cli
+    raise SystemExit(run_cli(main))

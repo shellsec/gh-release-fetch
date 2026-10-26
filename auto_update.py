@@ -41,13 +41,20 @@ CONFIG_PATH = os.path.join(SCRIPT_DIR, "apps.json")
 APPS_DIR = os.path.join(SCRIPT_DIR, "apps")
 APPS_ROOT_FRAGMENT = os.path.join(APPS_DIR, "root.json")
 
+def _logging_handlers():
+    handlers = [logging.StreamHandler()]
+    try:
+        handlers.insert(0, logging.FileHandler(os.path.join(SCRIPT_DIR, "update_log.txt"), encoding="utf-8"))
+    except OSError:
+        # A read-only application directory must not prevent --help or startup.
+        pass
+    return handlers
+
+
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s",
-    handlers=[
-        logging.FileHandler("update_log.txt", encoding="utf-8"),
-        logging.StreamHandler(),
-    ],
+    handlers=_logging_handlers(),
 )
 logger = logging.getLogger(__name__)
 
@@ -1458,4 +1465,5 @@ def main():
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    from tools.ghrf_runtime import run_cli
+    sys.exit(run_cli(main))

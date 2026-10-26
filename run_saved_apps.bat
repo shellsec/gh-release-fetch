@@ -4,12 +4,15 @@ set PYTHONIOENCODING=utf-8
 set PYTHONUTF8=1
 cd /d "%~dp0"
 
+if not exist "%~dp0tools\run_saved_apps.py" goto try_exe
+
 python -c "import requests, bs4" >nul 2>&1
 if not errorlevel 1 if exist "%~dp0tools\run_saved_apps.py" (
     python tools\run_saved_apps.py %*
     goto finish
 )
 
+:try_exe
 if exist "%~dp0run_saved_apps.exe" (
     "%~dp0run_saved_apps.exe" %*
     goto finish

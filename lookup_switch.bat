@@ -7,12 +7,15 @@ cd /d "%~dp0"
 echo 清单: Switch  （apps-switch）
 echo.
 
+if not exist "%~dp0lookup_app.py" goto try_exe
+
 python -c "import requests, bs4" >nul 2>&1
 if not errorlevel 1 if exist "%~dp0lookup_app.py" (
     python lookup_app.py --apps-dir apps-switch --platform switch %*
     goto finish
 )
 
+:try_exe
 if exist "%~dp0lookup_app.exe" (
     "%~dp0lookup_app.exe" --apps-dir apps-switch --platform switch %*
     goto finish

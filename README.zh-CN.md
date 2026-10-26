@@ -371,6 +371,12 @@ lookup_app.bat --all-catalogs music
 
 结果显示平台；下载、开启条目与保存更新列表均按各自清单处理。Android TV 和 Linux掌机分别保存到 `saved_apps_android_tv.json`、`saved_apps_linux_handheld.json`。无合适附件规则的条目打开项目发布页。
 
+### Windows 启动与排错
+
+请完整解压发布包，保留清单目录，日常从 `lookup_app.bat` / `lookup_app.exe` 进入。`run_saved_apps` 需要先保存更新列表，`auto_update` 处理已启用或明确指定的条目；首次没有列表或启用项时不能直接批量更新。
+
+便携包的 BAT 先判断源码是否存在，源码缺失时直接运行 EXE，避免误调用本机 Python 或商店别名。直接双击 EXE 遇到错误时会保留窗口，按回车关闭；从命令行或其它程序调用不会额外等待。意外异常写入 `startup_error.log`，普通下载日志写入程序目录的 `update_log.txt`；目录不可写时保留控制台输出。
+
 ### 自定义软件
 
 主菜单选择「自定义清单」，可搜索、添加、管理、批量添加、导入/导出、撤销最近修改，以及设置平台/架构/版本类型偏好；「搜全部清单」也包含自定义内容。

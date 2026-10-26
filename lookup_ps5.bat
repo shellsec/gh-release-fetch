@@ -7,12 +7,15 @@ cd /d "%~dp0"
 echo 清单: PS5  （apps-ps5）
 echo.
 
+if not exist "%~dp0lookup_app.py" goto try_exe
+
 python -c "import requests, bs4" >nul 2>&1
 if not errorlevel 1 if exist "%~dp0lookup_app.py" (
     python lookup_app.py --apps-dir apps-ps5 --platform ps5 %*
     goto finish
 )
 
+:try_exe
 if exist "%~dp0lookup_app.exe" (
     "%~dp0lookup_app.exe" --apps-dir apps-ps5 --platform ps5 %*
     goto finish

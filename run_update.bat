@@ -7,9 +7,12 @@ cd /d "%~dp0"
 echo ===== GH Release Fetch - on-demand download / update =====
 echo.
 
-python --version >nul 2>&1
-if not errorlevel 1 goto run_py
+if not exist "%~dp0auto_update.py" goto check_exe
 
+python --version >nul 2>&1
+if not errorlevel 1 if exist "%~dp0auto_update.py" if exist "%~dp0requirements.txt" goto run_py
+
+:check_exe
 if exist "%~dp0auto_update.exe" goto run_exe
 
 echo [ERROR] 未找到 Python 或 auto_update.exe
@@ -22,7 +25,7 @@ exit /b 1
 echo [INFO] Python detected.
 echo.
 echo [INFO] Installing dependencies...
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
 if %errorlevel% neq 0 (
     echo [ERROR] pip install failed.
     pause
