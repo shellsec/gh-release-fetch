@@ -133,4 +133,3 @@ See [`tools/soft_page_check/README.md`](../tools/soft_page_check/README.md). Com
 ---
 
 *Former working title: **GithubWinDownTools** — renamed for clarity now that darwin/linux catalogs are first-class.*
-

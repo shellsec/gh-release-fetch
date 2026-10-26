@@ -198,4 +198,3 @@ search_soft_pages.bat 7zip
 ### 介绍页监控（soft_page_check）
 
 详见 [`tools/soft_page_check/README.md`](../tools/soft_page_check/README.md)。常用：`monthly_check.bat`、`monthly_check_site.bat`、`open_changed_site.bat`、`refresh_urls.bat`、`search_soft_pages.bat`（根目录）、`fetch_github_on_changes.bat`。
-
