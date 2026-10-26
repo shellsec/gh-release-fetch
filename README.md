@@ -27,12 +27,46 @@ All packages use source revision `34580b0` and bundle their runtime; no separate
 
 | Action | Behavior |
 | --- | --- |
-| 1: Download now | Download without changing the enabled state |
+| 1: Download now | Download, or open the page if no package is available, without changing the enabled state |
 | 2: Save and download | Add to the update list and download now |
 | 3: Save to list | Add to the update list for later |
 | 4: Enable | Set `enabled=true` for batch processing in that catalog |
+| 5: Open page | Open the website or GitHub Releases page |
 
 Enter `1,3` for multiple results, `a` for all, or Enter to skip. Some entries open a website, store, or release page instead of downloading an asset. Downloading for another platform does not make that software runnable on your computer.
+
+### Example session
+
+Search for UniClipboard on Windows using a partial name. The interface is in Chinese; this abbreviated transcript adds English explanations and omits timestamps and network logs. Versions and result counts may change.
+
+```text
+lookup_app
+Select catalog: 1 (Windows)
+Keyword: unicli
+
+2 matches:
+[1] windows  id=uniclipboard      enabled=no  [downloadable]
+[2] windows  id=uniclipboard_cli  enabled=no  [downloadable]
+
+Select entries: 1
+Select action: 1 (download now)
+
+[Download] windows: uniclipboard
+Latest version: v1.5.0
+Progress: 100.0% (25.1/25.1 MiB)
+Saved: <program directory>/windows/UniClipboard_1.5.0_x64-setup.exe
+Installer started
+```
+
+This entry has `run_installer` enabled, so its installer starts after downloading. Other entries follow their own settings. Action 1 does not change `enabled`; disabled entries can still be downloaded explicitly.
+
+Shortcuts on Windows:
+
+```bat
+lookup_app.bat -y --download drawio
+lookup_app.bat chatbox --open
+lookup_ios.bat 微信
+```
 
 ## Platform catalogs
 

@@ -27,12 +27,61 @@
 
 | 操作 | 用途 |
 | --- | --- |
-| 1：立刻下载 | 获取所选软件，不修改启用状态 |
+| 1：立刻下载 | 获取所选软件，无合适安装包时打开页面，不修改启用状态 |
 | 2：加入并下载 | 保存到更新列表，并立即下载 |
 | 3：加入列表 | 保存到更新列表，稍后统一下载 |
 | 4：启用 | 设置 `enabled=true`，参与对应清单的批量处理 |
+| 5：打开页面 | 打开官网或 GitHub Releases 页面 |
 
 多选可输入 `1,3`，`a` 选全部，回车跳过。部分条目提供官网、商店或发布页入口，无法直接下载安装包。跨平台下载不会让目标软件在当前电脑上运行。
+
+### 实际操作示例
+
+以 Windows 搜索 UniClipboard 为例，输入部分名称也能匹配。以下省略完整时间戳、网络探测和下载地址，仅展示操作过程；版本号和结果数量以实际运行为准。
+
+```text
+用法: lookup_app [选项与关键词...]
+示例: lookup_app drawio
+      lookup_mobile.bat termux
+      lookup_ios.bat 微信
+直接下载: lookup_app -y --download drawio
+打开页面: lookup_app chatbox --open
+
+搜哪个清单?
+  1 Windows       2 macOS          3 Linux
+  4 Android       5 Android TV     6 iOS App Store
+  7 Switch        8 PS4            9 PS5
+ 10 Vita         11 Xbox          12 Linux掌机
+ 13 自定义清单   14 搜全部清单
+请选择 (1-14，回车=Windows): 1
+请输入关键词: unicli
+
+共 2 条匹配：
+[1] windows  id=uniclipboard      enabled=否  [可下载]
+    简介: UniClipboard（跨平台剪贴板同步与管理，Rust + Tauri）
+[2] windows  id=uniclipboard_cli  enabled=否  [可下载]
+    简介: UniClipboard CLI（Windows x64 zip）
+
+请选择要操作的条目：
+  输入序号（如 1 或 1,3）| a=全部 | 回车=跳过
+> 1
+
+请选择操作：
+  1 = 立刻下载（无安装包则打开页面；不修改 enabled）
+  2 = 加入更新列表并立刻下载
+  3 = 加入更新列表 saved_apps_<平台>.json
+  4 = 设为 enabled=true
+  5 = 打开页面（官网 / GitHub Releases）
+> 1
+
+[下载] 平台 windows：uniclipboard
+找到最新版本: v1.5.0
+下载进度: 100.0% (25.1/25.1 MiB)
+安装包已下载: <程序目录>/windows/UniClipboard_1.5.0_x64-setup.exe
+安装程序已启动
+```
+
+此示例条目配置了 `run_installer`，所以下载后启动安装程序；其它条目是否启动取决于各自配置。操作 1 不修改 `enabled`，即使结果显示“未启用”也能直接下载。
 
 ## 按平台搜索
 
