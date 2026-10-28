@@ -2,7 +2,7 @@
 
 # GH Release Fetch
 
-按平台搜索软件、下载 GitHub Release 附件，并用个人更新列表重复获取所需软件。支持内置清单、自定义来源和独立的介绍页搜索。
+按平台搜索软件、下载 GitHub Release 附件，并用个人更新列表重复获取所需软件。支持内置清单、自定义来源和独立的介绍页搜索。交互界面跟随系统显示语言（简体中文、繁体中文、English、日本語、한국어），未能识别时仍使用简体中文。
 
 ## 下载与加速下载
 
@@ -53,8 +53,8 @@
   7 Switch        8 PS4            9 PS5
  10 Vita         11 Xbox          12 Linux掌机
  13 自定义清单   14 搜全部清单
-请选择 (1-14，回车=Windows): 1
-请输入关键词: unicli
+请选择 (1-14，回车=Windows，q=退出): 1
+请输入关键词（回车=返回清单）: unicli
 
 共 2 条匹配：
 [1] windows  id=uniclipboard      enabled=否  [可下载]
@@ -63,7 +63,7 @@
     简介: UniClipboard CLI（Windows x64 zip）
 
 请选择要操作的条目：
-  输入序号（如 1 或 1,3）| a=全部 | 回车=跳过
+  输入序号（如 1 或 1,3）| a=全部 | b/回车=返回 | q=退出
 > 1
 
 请选择操作：
@@ -72,6 +72,7 @@
   3 = 加入更新列表 saved_apps_<平台>.json
   4 = 设为 enabled=true
   5 = 打开页面（官网 / GitHub Releases）
+  b/回车 = 返回    q = 退出
 > 1
 
 [下载] 平台 windows：uniclipboard

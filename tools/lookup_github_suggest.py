@@ -17,6 +17,8 @@ from dataclasses import dataclass
 
 import requests
 
+from tools.ui_lang import join_items, t
+
 from auto_update import (
     api_latest_release_url,
     configure_insecure_requests,
@@ -306,7 +308,7 @@ def github_api_get(url: str, verify: bool, stage: str):
             continue
         if _is_rate_limited(response):
             saw_rate = True
-            errors.append("%s -> HTTP %s 限流" % (cand, response.status_code))
+            errors.append(t("gh.rate_line", cand, response.status_code))
             continue
         if response.status_code >= 400:
             snippet = (response.text or "").strip().replace("\n", " ")[:160]
@@ -315,7 +317,7 @@ def github_api_get(url: str, verify: bool, stage: str):
         try:
             payload = response.json()
         except ValueError:
-            errors.append("%s -> 响应不是 JSON" % cand)
+            errors.append(t("gh.not_json", cand))
             continue
         if isinstance(payload, dict) and payload.get("message") and "items" not in payload and "tag_name" not in payload and "assets" not in payload:
             message = str(payload.get("message"))
@@ -326,13 +328,11 @@ def github_api_get(url: str, verify: bool, stage: str):
         return payload
     if saw_rate:
         raise GitHubSuggestError(
-            "GitHub API 未登录额度已用完（搜索约 10 次/分钟）。"
-            "请稍后再试，或设置环境变量 GITHUB_TOKEN / GH_TOKEN 后重试。\n"
-            + "\n".join(errors[-4:]),
+            t("gh.rate", "\n".join(errors[-4:])),
             rate_limited=True,
         )
-    detail = "\n".join(errors) if errors else "无可用地址"
-    raise GitHubSuggestError("%s失败，未继续下载。\n%s" % (stage, detail))
+    detail = "\n".join(errors) if errors else t("gh.no_address")
+    raise GitHubSuggestError(t("gh.stage_fail", stage, detail))
 
 
 def _search_once(query: str, verify: bool, *, quoted: bool) -> list[dict]:
@@ -349,7 +349,7 @@ def _search_once(query: str, verify: bool, *, quoted: bool) -> list[dict]:
     cached = _cache_get(cache_key)
     if isinstance(cached, list):
         return cached
-    payload = github_api_get(url, verify, "GitHub 仓库搜索")
+    payload = github_api_get(url, verify, t("gh.stage_search"))
     items = []
     if isinstance(payload, dict):
         raw = payload.get("items") or []
@@ -429,7 +429,7 @@ def select_qualified_assets(assets: list[dict], platform: str) -> tuple[list[Ass
 
     if platform == "windows":
         picked = [a for a in rows if _arch_kind(a.name) != "other"]
-        reason = "没有合格的 Windows x64 安装包（exe/msi；旁边有安装包时不选便携 zip，源码包和校验文件已丢弃）"
+        reason = t("gh.reason_win")
     elif platform == "darwin":
         dmgs = rows
         explicit = [a for a in dmgs if _dmg_kind(a.name) in ("arm64", "universal")]
@@ -437,32 +437,32 @@ def select_qualified_assets(assets: list[dict], platform: str) -> tuple[list[Ass
             picked = explicit
         else:
             picked = [a for a in dmgs if _dmg_kind(a.name) == "unknown"]
-        reason = "没有合格的 macOS 安装包（只要 arm64 或 universal dmg；仅有 Intel dmg 时不选）"
+        reason = t("gh.reason_mac")
     elif platform == "linux":
         picked = [a for a in rows if _arch_kind(a.name) != "other"]
-        reason = "没有合格的 Linux x64 安装包（只要 AppImage 或 deb）"
+        reason = t("gh.reason_linux")
     else:
-        return [], "GitHub 补搜只按 Windows / macOS / Linux 安装包挑选"
+        return [], t("gh.reason_other")
 
     if picked:
         return picked, ""
     names = [(raw.get("name") or "?") for raw in assets if isinstance(raw, dict)]
-    shown = "、".join(names[:8]) if names else "（无附件）"
+    shown = join_items(names[:8]) if names else t("gh.no_files")
     if len(names) > 8:
-        shown += "（共 %d 个）" % len(names)
-    return [], "%s。现有文件：%s" % (reason, shown)
+        shown += t("gh.file_count", len(names))
+    return [], t("gh.files_now", reason, shown)
 
 
 def explain_empty_release(platform: str, tag: str, assets: list) -> str:
     _picked, reason = select_qualified_assets(assets if isinstance(assets, list) else [], platform)
     if tag:
-        return "版本 %s：%s" % (tag, reason)
+        return t("gh.version", tag, reason)
     return reason
 
 
 def format_size(size: int) -> str:
     if size <= 0:
-        return "大小未知"
+        return t("gh.size_unknown")
     if size < 1024:
         return "%d B" % size
     if size < 1024 * 1024:
@@ -524,10 +524,10 @@ def _fetch_latest_release(full_name: str, verify: bool) -> tuple[str, list]:
         return str(cached.get("tag") or ""), list(cached.get("assets") or [])
 
     app = {"id": full_name.split("/")[-1], "repo_path": full_name}
-    payload = github_api_get(api_latest_release_url(app), verify, "读取 %s 的 Release" % full_name)
+    payload = github_api_get(api_latest_release_url(app), verify, t("gh.stage_release", full_name))
     if payload is None:
         list_url = "https://api.github.com/repos/%s/releases?per_page=5" % full_name
-        listed = github_api_get(list_url, verify, "读取 %s 的 Release 列表" % full_name)
+        listed = github_api_get(list_url, verify, t("gh.stage_release_list", full_name))
         payload = None
         if isinstance(listed, list):
             for row in listed:
@@ -711,21 +711,21 @@ def save_catalog_entry(apps_dir: str, platform: str, choice: Choice, *, dry_run:
     app_id = entry["id"].lower()
     repo_key = choice.repo.full_name.lower()
     if app_id in ids or repo_key in repos:
-        print("[跳过写入] 平台 %s 已有相同 id 或仓库（%s），不重复追加。" % (platform, rel))
+        print(t("gh.skip_write", platform, rel))
         return None
     if dry_run:
-        print("[dry-run] 将追加 enabled=false 到 %s（id=%s），本次不写文件。" % (rel, entry["id"]))
+        print(t("gh.dry_append", rel, entry["id"]))
         return rel
     _append_json_item(shard_path, entry)
-    print("[已写入] %s  id=%s  enabled=false" % (rel, entry["id"]))
+    print(t("gh.wrote", rel, entry["id"]))
     return rel
 
 
 def _print_choice(choice: Choice, platform: str, index: int | None = None) -> None:
     prefix = "[%d] " % index if index else ""
     print(
-        "%s仓库: %s    版本: %s    文件: %s    大小: %s    star: %d"
-        % (
+        t(
+            "gh.choice",
             prefix,
             choice.repo.full_name,
             choice.version or "?",
@@ -735,11 +735,11 @@ def _print_choice(choice: Choice, platform: str, index: int | None = None) -> No
         )
     )
     if index is None:
-        print("    平台: %s" % platform)
+        print(t("gh.platform_line", platform))
 
 
 def _confirm_enter() -> bool:
-    print("回车下载，其它键取消")
+    print(t("gh.enter"))
     try:
         if os.name == "nt":
             import msvcrt
@@ -748,12 +748,12 @@ def _confirm_enter() -> bool:
             if ch in ("\x00", "\xe0"):
                 msvcrt.getwch()
                 print()
-                print("已取消。")
+                print(t("common.cancelled"))
                 return False
             print()
             if ch in ("\r", "\n"):
                 return True
-            print("已取消。")
+            print(t("common.cancelled"))
             return False
         if sys.stdin.isatty():
             import termios
@@ -769,27 +769,27 @@ def _confirm_enter() -> bool:
             print()
             if ch in ("\r", "\n"):
                 return True
-            print("已取消。")
+            print(t("common.cancelled"))
             return False
     except (EOFError, KeyboardInterrupt):
-        print("\n已取消。")
+        print("\n" + t("common.cancelled"))
         return False
-    print("当前不是交互终端，已取消。可加 --no-prompt（仅仓库名一致且只有一个合格包时会下载）。")
+    print(t("gh.not_tty"))
     return False
 
 
 def _prompt_index(count: int) -> int | None:
-    print("请输入编号（回车取消）")
+    print(t("gh.pick"))
     try:
         line = input("> ").strip()
     except (EOFError, KeyboardInterrupt):
-        print("\n已取消。")
+        print("\n" + t("common.cancelled"))
         return None
     if not line:
-        print("已取消。")
+        print(t("common.cancelled"))
         return None
     if not line.isdigit() or not (1 <= int(line) <= count):
-        print("无效编号，已取消。")
+        print(t("gh.bad_index"))
         return None
     return int(line) - 1
 
@@ -820,9 +820,9 @@ def _download_choice(choice: Choice, apps_dir: str, platform: str, verify: bool)
             platform_key=platform,
         )
     except Exception as exc:
-        print("[失败] 下载未完成：%s" % exc)
+        print(t("gh.fail", exc))
         return 1
-    print("[已下载] %s" % saved)
+    print(t("gh.saved", saved))
     reveal_in_file_manager(saved)
     return 0
 
@@ -842,18 +842,18 @@ def _build_choices(query: str, items: list[dict], verify: bool, platform: str) -
     choices: list[Choice] = []
     notes: list[str] = []
     if truncated:
-        notes.append("同一相似度的仓库超过 5 个，只检查了星标较高的 5 个。")
+        notes.append(t("gh.too_many"))
     for repo in group:
         try:
             tag, assets = _fetch_latest_release(repo.full_name, verify)
         except GitHubSuggestError:
             raise
         if not tag and not assets:
-            notes.append("%s：没有可用 Release。" % repo.full_name)
+            notes.append(t("gh.no_release", repo.full_name))
             continue
         picked, reason = select_qualified_assets(assets, platform)
         if not picked:
-            notes.append("%s：%s" % (repo.full_name, explain_empty_release(platform, tag, assets)))
+            notes.append(t("gh.note", repo.full_name, explain_empty_release(platform, tag, assets)))
             continue
         for asset in picked:
             choices.append(Choice(repo=repo, version=tag, asset=asset))
@@ -879,9 +879,9 @@ def run_github_suggest(
     insecure: bool,
 ) -> int:
     plat = (platform or detect_platform_key() or "windows").strip().lower()
-    print("本地清单未命中，改为 GitHub 仓库搜索（平台: %s）。" % plat)
+    print(t("gh.fallback", plat))
     if plat not in _PROBE:
-        print("GitHub 补搜只挑选 Windows / macOS / Linux 安装包，当前平台为 %s，已停止。" % plat)
+        print(t("gh.bad_platform", plat))
         return 2
 
     cfg = _load_root(apps_dir)
@@ -891,21 +891,21 @@ def run_github_suggest(
     try:
         items = search_repos(query, verify)
         if not items:
-            print("GitHub 上没有与 %r 相匹配的公开仓库，已停止。" % query)
+            print(t("gh.no_repo", query))
             return 2
         ranked, cracked = _rank_repos(query, items)
         exact_cracked = [full for score, full in cracked if score == 100]
         if exact_cracked and not any(row.likeness == 100 for row in ranked):
-            print("仓库名对得上的结果像破解或改包，已停止，不下载：%s" % "、".join(exact_cracked[:5]))
+            print(t("gh.exact_cracked", join_items(exact_cracked[:5])))
             return 2
         if not ranked:
             if cracked:
-                print("接近的仓库像破解或改包，已停止，不下载：%s" % "、".join(full for _score, full in cracked[:5]))
+                print(t("gh.near_cracked", join_items(full for _score, full in cracked[:5])))
                 return 2
             nearest = _closest_names(query, items)
-            print("没有仓库名与 %r 几乎一致（已忽略大小写、-、_、空格），已停止，不下载。" % query)
+            print(t("gh.no_match", query))
             if nearest:
-                print("最接近的是：%s" % "；".join(nearest))
+                print(t("gh.nearest", join_items(nearest, semi=True)))
             return 2
         choices, notes = _build_choices(query, items, verify, plat)
     except GitHubSuggestError as exc:
@@ -915,28 +915,28 @@ def run_github_suggest(
     for note in notes:
         print(note)
     if not choices:
-        print("没有合格安装包，已停止，不下载。")
+        print(t("gh.no_asset"))
         return 2
 
     unique = len(choices) == 1
     exact = unique and choices[0].repo.likeness == 100
     if unique:
-        print("建议：")
+        print(t("gh.suggest"))
         _print_choice(choices[0], plat)
     else:
         repos = {c.repo.full_name for c in choices}
         if len(repos) == 1:
-            print("仓库 %s 有 %d 个合格安装包，请编号选择，不会自动猜：" % (choices[0].repo.full_name, len(choices)))
+            print(t("gh.one_repo", choices[0].repo.full_name, len(choices)))
         else:
-            print("有 %d 个同样接近的结果，请编号选择，不会自动猜：" % len(choices))
+            print(t("gh.multi", len(choices)))
         for i, choice in enumerate(choices, 1):
             _print_choice(choice, plat, index=i)
 
     if dry_run:
         if not unique:
-            print("[dry-run] 没有唯一文件，不下载。")
+            print(t("gh.dry_ambiguous"))
             return 2
-        print("[dry-run] 将下载 %s 的 %s，本次不下载。" % (choices[0].repo.full_name, choices[0].asset.name))
+        print(t("gh.dry_would", choices[0].repo.full_name, choices[0].asset.name))
         if save:
             save_catalog_entry(apps_dir, plat, choices[0], dry_run=True)
         return 0
@@ -944,9 +944,9 @@ def run_github_suggest(
     if no_prompt:
         if not exact:
             if unique:
-                print("未自动下载：仓库名与输入不是完全一致（%s）。--no-prompt 不会猜。" % choices[0].repo.name)
+                print(t("gh.noprompt_name", choices[0].repo.name))
             else:
-                print("未自动下载：没有唯一的「仓库名一致且只有一个合格安装包」。--no-prompt 不会猜。")
+                print(t("gh.noprompt_unique"))
             return 2
         if save:
             save_catalog_entry(apps_dir, plat, choices[0], dry_run=False)

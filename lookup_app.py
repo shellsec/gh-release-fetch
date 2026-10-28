@@ -10,18 +10,19 @@
   python lookup_app.py --apps-dir VibeCodingToolsDown warp
   python lookup_app.py --yes drawio          # 匹配项全部开启，不询问
   python lookup_app.py --dry-run drawio      # 只查询，不写文件
-  无参数：先选平台清单（含 Android TV、主机、Linux掌机），最后一项搜索全部清单。
+  无参数：先选清单。关键词回车回清单；选条目 b/回车回关键词；操作 b/回车回条目。
+  下载/启用/加入列表/打开页面做完后仍留在条目列表。q 退出。带参数时关键词回车仍退出。
   Windows 快捷入口：lookup_mobile.bat / lookup_ios.bat / lookup_switch.bat / lookup_ps5.bat
 
 加入更新列表（根目录 saved_apps_<平台>.json，配合 run_saved_apps.bat 一键更新）：
-  python lookup_app.py cherrytree            # 交互：1立刻下载 / 2加入并下载 / 3加入列表 / 4启用
+  python lookup_app.py cherrytree            # 交互：1下载 / 2加入并下载 / 3加入列表 / 4启用 / 5打开页面
   python lookup_app.py --save cherrytree     # 选中后可用操作 3 加入列表
   python lookup_app.py -y --download drawio  # 全部匹配项：立刻下载（不改 enabled）
-  python lookup_app.py --download termux     # 交互选中后默认操作 1 立刻下载
+  python lookup_app.py --download termux     # 交互选中后默认操作 1，做完回到条目
 
 本地清单零命中时改为 GitHub 仓库搜索（不先访问 GitHub）：
   只建议一条安装包，回车下载、其它键取消；并列仓库或多个合格包则编号选择。
-  --dry-run 只打印；--no-prompt 仅在仓库名一致且只有一个合格包时下载。
+  交互时取消或完成后回到关键词。--dry-run 只打印；--no-prompt 仅在仓库名一致且只有一个合格包时下载。这两条不进入上述循环。
   --save 才把该仓库以 enabled=false 追加到 apps 分片（拿不准写入 11-工具.json）。
 """
 
@@ -40,6 +41,7 @@ if not getattr(sys, "frozen", False) and SCRIPT_DIR not in sys.path:
     sys.path.insert(0, SCRIPT_DIR)
 
 from tools.ghrf_runtime import resolve_auto_update_argv  # noqa: E402
+from tools.ui_lang import t  # noqa: E402
 
 DEFAULT_APPS_DIR = os.path.join(SCRIPT_DIR, "apps")
 DESKTOP_PLATFORMS = ("windows", "darwin", "linux")
@@ -152,7 +154,7 @@ def search_apps(apps_dir: str, query: str, min_score: int = 40) -> list[dict]:
         try:
             items = load_apps_array(abspath)
         except (OSError, json.JSONDecodeError, ValueError) as e:
-            print("[WARN] 跳过 %s: %s" % (rel, e), file=sys.stderr)
+            print(t("common.warn_skip", rel, e), file=sys.stderr)
             continue
         for app in items:
             if not isinstance(app, dict):
@@ -185,23 +187,23 @@ def search_apps(apps_dir: str, query: str, min_score: int = 40) -> list[dict]:
 
 def print_hits(hits: list[dict]) -> None:
     print()
-    print("共 %d 条匹配：" % len(hits))
+    print(t("hits.count", len(hits)))
     print("-" * 72)
     for i, h in enumerate(hits, 1):
-        en = "是" if h["enabled"] else "否"
+        en = t("hits.yes") if h["enabled"] else t("hits.no")
         brief = h["简介"]
         if len(brief) > 56:
             brief = brief[:53] + "..."
-        mode = "可下载" if h.get("downloadable") else "仅页面"
+        mode = t("hits.downloadable") if h.get("downloadable") else t("hits.page_only")
         print("[%d] %s  id=%s  enabled=%s  [%s]" % (i, h["platform"], h["id"], en, mode))
-        print("    分片: %s" % h["path"])
-        print("    分类: %s" % h["分类"])
+        print(t("hits.shard", h["path"]))
+        print(t("hits.category", h["分类"]))
         if h["repo_path"]:
-            print("    仓库: %s" % h["repo_path"])
+            print(t("hits.repo", h["repo_path"]))
         if (not h.get("downloadable")) and (h.get("open_page_url") or "").strip():
-            print("    页面: %s" % h["open_page_url"].strip())
+            print(t("hits.page", h["open_page_url"].strip()))
         if brief:
-            print("    简介: %s" % brief)
+            print(t("hits.brief", brief))
         print()
 
 
@@ -219,36 +221,58 @@ def set_enabled_in_file(abspath: str, app_id: str, enabled: bool) -> bool:
     return changed
 
 
-def prompt_choose_hits(hits: list[dict]) -> list[dict]:
-    """让用户勾选序号，回车跳过则返回空列表。"""
+_BACK = object()
+_QUIT = object()
+
+
+def _is_back_command(line: str) -> bool:
+    return line == "0" or line.lower() in ("b", "back", "返回")
+
+
+def _is_quit_command(line: str) -> bool:
+    return line.lower() == "q"
+
+
+def prompt_choose_hits(hits: list[dict]) -> list[dict] | object:
+    """勾选序号。b/回车返回关键词，q 退出。取消时返回空列表。"""
     if not hits:
         return []
-    print("请选择要操作的条目：")
-    print("  输入序号（如 1 或 1,3）| a=全部 | 回车=跳过")
-    try:
-        line = input("> ").strip()
-    except (EOFError, KeyboardInterrupt):
-        print("\n已取消。")
-        return []
-    if not line:
-        print("未选择。")
-        return []
-    if line.lower() in ("a", "all", "*"):
-        return list(hits)
-    indices: list[int] = []
-    for part in line.replace("，", ",").split(","):
-        part = part.strip()
-        if not part:
+    while True:
+        print(t("choose.title"))
+        print(t("choose.hint"))
+        try:
+            line = input("> ").strip()
+        except (EOFError, KeyboardInterrupt):
+            print("\n" + t("common.cancelled"))
+            return []
+        if line and _is_quit_command(line):
+            print(t("common.quit"))
+            return _QUIT
+        if not line or _is_back_command(line):
+            return _BACK
+        if line.lower() in ("a", "all", "*"):
+            return list(hits)
+        indices: list[int] = []
+        invalid = False
+        for part in line.replace("，", ",").split(","):
+            part = part.strip()
+            if not part:
+                continue
+            if not part.isdigit():
+                print(t("common.invalid_input", part))
+                invalid = True
+                break
+            idx = int(part)
+            if idx < 1 or idx > len(hits):
+                print(t("common.index_range", idx))
+                invalid = True
+                break
+            indices.append(idx - 1)
+        if invalid or not indices:
+            if not invalid:
+                print(t("common.invalid_input", line))
             continue
-        if not part.isdigit():
-            print("无效输入: %r" % part)
-            return []
-        idx = int(part)
-        if idx < 1 or idx > len(hits):
-            print("序号超出范围: %d" % idx)
-            return []
-        indices.append(idx - 1)
-    return [hits[i] for i in sorted(set(indices))]
+        return [hits[i] for i in sorted(set(indices))]
 
 
 def apply_enable(chosen: list[dict], dry_run: bool) -> int:
@@ -256,17 +280,18 @@ def apply_enable(chosen: list[dict], dry_run: bool) -> int:
     n = 0
     for h in chosen:
         if h["enabled"]:
-            print("[跳过] %s / %s 已是开启状态" % (h["platform"], h["id"]))
+            print(t("enable.skip", h["platform"], h["id"]))
             continue
         if dry_run:
-            print("[dry-run] 将开启 %s / %s → %s" % (h["platform"], h["id"], h["path"]))
+            print(t("enable.dry", h["platform"], h["id"], h["path"]))
             n += 1
             continue
         if set_enabled_in_file(h["abspath"], h["id"], True):
-            print("[已开启] %s / %s → %s" % (h["platform"], h["id"], h["path"]))
+            h["enabled"] = True
+            print(t("enable.done", h["platform"], h["id"], h["path"]))
             n += 1
         else:
-            print("[失败] 未在 %s 中找到 id=%s" % (h["path"], h["id"]))
+            print(t("enable.missing", h["path"], h["id"]))
     return n
 
 
@@ -274,7 +299,7 @@ def prompt_yes_no(question: str, default_no: bool = True) -> bool:
     try:
         line = input(question).strip().lower()
     except (EOFError, KeyboardInterrupt):
-        print("\n已取消。")
+        print("\n" + t("common.cancelled"))
         return False
     if not line:
         return not default_no
@@ -301,14 +326,14 @@ def prompt_add_to_saved_list(
     hint = save_path or _list_files_hint(chosen)
     if not auto:
         print()
-        print("是否加入到更新列表 %s ？" % hint)
-        print("（之后可运行 run_saved_apps.bat 一键开启并更新）")
+        print(t("save.ask", hint))
+        print(t("save.hint"))
         if not prompt_yes_no("> "):
-            print("未加入列表。")
+            print(t("save.skip"))
             return False
     if dry_run:
         for h in chosen:
-            print("[dry-run] 将加入列表 %s / %s" % (h["platform"], h["id"]))
+            print(t("save.dry", h["platform"], h["id"]))
         return True
     save_hits_by_platform(
         SCRIPT_DIR,
@@ -321,38 +346,40 @@ def prompt_add_to_saved_list(
 
 
 def prompt_action_mode() -> str | None:
-    """一次选择后续操作：1 下载/打开 | 2 加入并下载 | 3 加入列表 | 4 启用 | 5 打开页面 | 回车跳过。"""
-    print()
-    print("请选择操作：")
-    print("  1 = 立刻下载（无安装包则自动打开页面；不修改 enabled）")
-    print("  2 = 加入更新列表并立刻下载")
-    print("  3 = 加入更新列表 saved_apps_<平台>.json")
-    print("  4 = 设为 enabled=true")
-    print("  5 = 打开页面（官网 / GitHub Releases）")
-    print("  回车 = 跳过")
-    try:
-        line = input("> ").strip()
-    except (EOFError, KeyboardInterrupt):
-        print("\n已取消。")
-        return None
-    if not line:
-        print("未选择操作。")
-        return None
-    if line in ("1", "2", "3", "4", "5"):
-        return line
-    low = line.lower()
-    if low in ("d", "download", "下载", "down"):
-        return "1"
-    if low in ("o", "open", "打开", "页面", "url"):
-        return "5"
-    if low in ("sd", "save-download", "加入下载", "列表下载"):
-        return "2"
-    if low in ("s", "save", "list", "列表", "加入"):
-        return "3"
-    if low in ("e", "enable", "启用", "on"):
-        return "4"
-    print("无效输入: %r（请输入 1 / 2 / 3 / 4 / 5）" % line)
-    return None
+    """1 下载 | 2 加入并下载 | 3 加入列表 | 4 启用 | 5 打开页面 | b/回车返回条目 | q 退出。"""
+    while True:
+        print()
+        print(t("action.title"))
+        print(t("action.1"))
+        print(t("action.2"))
+        print(t("action.3"))
+        print(t("action.4"))
+        print(t("action.5"))
+        print(t("action.nav"))
+        try:
+            line = input("> ").strip()
+        except (EOFError, KeyboardInterrupt):
+            print("\n" + t("common.cancelled"))
+            return None
+        if line and _is_quit_command(line):
+            print(t("common.quit"))
+            return "quit"
+        if not line or _is_back_command(line):
+            return "back"
+        if line in ("1", "2", "3", "4", "5"):
+            return line
+        low = line.lower()
+        if low in ("d", "download", "下载", "down"):
+            return "1"
+        if low in ("o", "open", "打开", "页面", "url"):
+            return "5"
+        if low in ("sd", "save-download", "加入下载", "列表下载"):
+            return "2"
+        if low in ("s", "save", "list", "列表", "加入"):
+            return "3"
+        if low in ("e", "enable", "启用", "on"):
+            return "4"
+        print(t("action.invalid", line))
 
 
 def run_open_pages(chosen: list[dict], dry_run: bool) -> int:
@@ -363,18 +390,18 @@ def run_open_pages(chosen: list[dict], dry_run: bool) -> int:
     for h in chosen:
         url = (h.get("open_page_url") or "").strip()
         if not url:
-            print("[跳过] %s / %s：无可用页面 URL" % (h["platform"], h["id"]))
+            print(t("open.skip", h["platform"], h["id"]))
             continue
         print()
         if dry_run:
-            print("[dry-run] 将打开: %s  (%s / %s)" % (url, h["platform"], h["id"]))
+            print(t("open.dry", url, h["platform"], h["id"]))
             opened += 1
             continue
         if open_page(url):
-            print("[已打开] %s / %s → %s" % (h["platform"], h["id"], url))
+            print(t("open.done", h["platform"], h["id"], url))
             opened += 1
         else:
-            print("[失败] 无法打开浏览器: %s" % url)
+            print(t("open.fail", url))
     return 0 if opened else 1
 
 
@@ -401,12 +428,12 @@ def run_download_now(
     page_only = [h for h in chosen if not h.get("downloadable")]
     downloadable = [h for h in chosen if h.get("downloadable")]
     if page_only:
-        print("[提示] %d 条无安装包，将打开页面。" % len(page_only))
+        print(t("download.page_only", len(page_only)))
         run_open_pages(page_only, dry_run)
     if not downloadable:
         if page_only:
             return 0
-        print("没有可下载的条目。")
+        print(t("download.none"))
         return 1
 
     by_plat: dict[tuple[str, str], list[str]] = {}
@@ -423,9 +450,9 @@ def run_download_now(
             SCRIPT_DIR, ["--platform", plat, *extra, *ids]
         )
         print()
-        print("[下载] 平台 %s：%s" % (plat, ", ".join(ids)))
+        print(t("download.banner", plat, ", ".join(ids)))
         if dry_run:
-            print("[dry-run] 将执行: %s" % " ".join(cmd))
+            print(t("download.dry", " ".join(cmd)))
             continue
         r = subprocess.run(cmd, cwd=SCRIPT_DIR)
         if r.returncode != 0:
@@ -441,44 +468,52 @@ def run_interactive(
     save_path: str | None = None,
     prefer_download: bool = False,
     insecure: bool = False,
-) -> int:
-    chosen = prompt_choose_hits(hits)
-    if not chosen:
-        return 0
+) -> int | object:
+    while True:
+        chosen = prompt_choose_hits(hits)
+        if chosen is _BACK:
+            return _BACK
+        if chosen is _QUIT:
+            return _QUIT
+        if not chosen:
+            return 0
 
-    print("\n已选 %d 条。" % len(chosen))
+        print(t("action.selected", len(chosen)))
 
-    action: str | None
-    if prefer_download:
-        action = "1"
-        print("操作: 1（--download 立刻下载）")
-    else:
-        action = prompt_action_mode()
-    if not action:
-        return 0
+        action: str | None
+        if prefer_download:
+            action = "1"
+            print(t("action.download_flag"))
+        else:
+            action = prompt_action_mode()
+        if action == "quit":
+            return _QUIT
+        if not action:
+            return 0
+        if action == "back":
+            print_hits(hits)
+            continue
 
-    if action == "1":
-        return run_download_now(chosen, apps_dir, dry_run, insecure=insecure)
-    if action == "5":
-        return run_open_pages(chosen, dry_run)
-    if action == "2":
-        prompt_add_to_saved_list(
-            chosen, apps_dir, dry_run, auto=True, save_path=save_path
-        )
-        return run_download_now(chosen, apps_dir, dry_run, insecure=insecure)
-    if action == "3":
-        prompt_add_to_saved_list(
-            chosen, apps_dir, dry_run, auto=True, save_path=save_path
-        )
-        return 0
-    if action == "4":
-        n = apply_enable(chosen, dry_run)
-        if n:
-            print("共开启 %d 条。" % n)
-        elif all(h["enabled"] for h in chosen):
-            print("所选条目均已 enabled=true。")
-        return 0
-    return 0
+        if action == "1":
+            run_download_now(chosen, apps_dir, dry_run, insecure=insecure)
+        elif action == "5":
+            run_open_pages(chosen, dry_run)
+        elif action == "2":
+            prompt_add_to_saved_list(
+                chosen, apps_dir, dry_run, auto=True, save_path=save_path
+            )
+            run_download_now(chosen, apps_dir, dry_run, insecure=insecure)
+        elif action == "3":
+            prompt_add_to_saved_list(
+                chosen, apps_dir, dry_run, auto=True, save_path=save_path
+            )
+        elif action == "4":
+            n = apply_enable(chosen, dry_run)
+            if n:
+                print(t("enable.total", n))
+            elif all(h["enabled"] for h in chosen):
+                print(t("enable.already"))
+        print_hits(hits)
 
 
 def enable_all_matches(hits: list[dict], dry_run: bool) -> int:
@@ -486,57 +521,119 @@ def enable_all_matches(hits: list[dict], dry_run: bool) -> int:
 
 
 def prompt_catalog_and_query() -> bool:
-    """无参数启动：先选清单，再输入关键词。取消或空输入返回 False。"""
+    """无参数启动：先选清单，再输入关键词。空关键词回到清单；q 或取消则退出。"""
     if len(sys.argv) > 1:
         return True
-    print("用法: lookup_app [选项与关键词...]")
-    print("示例: lookup_app drawio")
-    print("      lookup_mobile.bat termux")
-    print("      lookup_ios.bat 微信")
-    print("交互选条目: 1=下载(无包则开页)  2=加入并下载  3=加入列表  4=启用  5=打开页面")
-    print("直接下载: lookup_app -y --download drawio")
-    print("打开页面: lookup_app chatbox --open")
+    print(t("usage.1"))
+    print(t("usage.2"))
+    print(t("usage.3"))
+    print(t("usage.4"))
+    print(t("usage.5"))
+    print(t("usage.6"))
+    print(t("usage.7"))
     print()
-    print("搜哪个清单?")
     options = [
-        (label, ["--apps-dir", directory, "--platform", platform], (platform, *aliases))
+        (t("catalog.handheld") if platform == "linux_handheld" else label, ["--apps-dir", directory, "--platform", platform], (platform, *aliases))
         for label, directory, platform, aliases in CATALOGS
     ]
-    options.append(("自定义清单", ["--custom"], ("custom", "自定义")))
-    options.append(("搜全部清单", ["--all-catalogs"], ("all", "全部")))
-    for index, (label, _, _) in enumerate(options, 1):
-        print("  %d  %s" % (index, label))
-    try:
-        choice = input("请选择 (1-%d，回车=Windows): " % len(options)).strip().lower() or "1"
-    except (EOFError, KeyboardInterrupt):
-        print("\n已取消。")
-        return False
-    for index, (label, extra, aliases) in enumerate(options, 1):
-        if choice == str(index) or choice in aliases:
-            print("清单: %s" % label)
-            break
-    else:
-        print("无效选择，已退出。")
-        return False
-    if extra == ["--custom"]:
-        sys.argv[1:] = extra
+    options.append((t("catalog.custom"), ["--custom"], ("custom", "自定义")))
+    options.append((t("catalog.all"), ["--all-catalogs"], ("all", "全部")))
+    while True:
+        print(t("catalog.which"))
+        for index, (label, _, _) in enumerate(options, 1):
+            print("  %d  %s" % (index, label))
+        try:
+            choice = input(t("catalog.prompt", len(options))).strip().lower() or "1"
+        except (EOFError, KeyboardInterrupt):
+            print("\n" + t("common.cancelled"))
+            return False
+        if choice == "q":
+            print(t("common.quit"))
+            return False
+        selected = None
+        for index, (label, extra, aliases) in enumerate(options, 1):
+            if choice == str(index) or choice in aliases:
+                selected = (label, extra)
+                break
+        if selected is None:
+            print(t("common.invalid_choice"))
+            continue
+        label, extra = selected
+        print(t("catalog.chosen", label))
+        if extra == ["--custom"]:
+            sys.argv[1:] = extra
+            return True
+        try:
+            text = input(t("catalog.keyword")).strip()
+        except (EOFError, KeyboardInterrupt):
+            print("\n" + t("common.cancelled"))
+            return False
+        if not text:
+            continue
+        try:
+            parts = shlex.split(text, posix=(os.name != "nt"))
+        except ValueError as exc:
+            print(t("common.invalid_text", exc))
+            continue
+        if not parts:
+            continue
+        sys.argv[1:] = extra + parts
         return True
-    try:
-        text = input("请输入关键词: ").strip()
-    except (EOFError, KeyboardInterrupt):
-        print("\n已取消。")
-        return False
-    if not text:
-        print("未输入，已退出。")
-        return False
-    sys.argv[1:] = extra + shlex.split(text, posix=(os.name != "nt"))
-    return True
+
+
+def _prompt_next_query(menu_mode: bool) -> list[str] | object | None:
+    """重新输入关键词。菜单模式下空输入返回 _BACK；否则空输入表示退出。"""
+    hint = t("catalog.hint_back") if menu_mode else t("catalog.hint_quit")
+    while True:
+        print()
+        print(t("catalog.keyword_again", hint))
+        try:
+            text = input("> ").strip()
+        except (EOFError, KeyboardInterrupt):
+            print("\n" + t("common.cancelled"))
+            return None
+        if not text:
+            return _BACK if menu_mode else None
+        try:
+            return shlex.split(text, posix=(os.name != "nt"))
+        except ValueError as exc:
+            print(t("common.invalid_text", exc))
+
+
+def _stay_in_session(args) -> bool:
+    """一次性参数做完即返回，不再问下一个关键词。"""
+    return not (args.dry_run or args.no_prompt or args.yes or args.open)
+
+
+def _resume_query(args, menu_mode: bool) -> int | object | None:
+    """再问关键词。None 表示已写回 args.query，调用方继续检索。"""
+    print(t("catalog.back_search"))
+    nxt = _prompt_next_query(menu_mode)
+    if nxt is _BACK:
+        return _BACK
+    if not nxt:
+        return 0
+    args.query = nxt
+    return None
 
 
 def main(argv: list[str] | None = None) -> int:
-    if argv is None and not prompt_catalog_and_query():
-        return 0
+    """无参数时关键词回车回到清单；q 或在清单上取消则退出。"""
+    menu_mode = argv is None and len(sys.argv) <= 1
+    while True:
+        if menu_mode:
+            sys.argv = [sys.argv[0]]
+            if not prompt_catalog_and_query():
+                return 0
+        result = _dispatch(None if menu_mode else argv, menu_mode=menu_mode)
+        if result is _BACK:
+            continue
+        if result is _QUIT:
+            return 0
+        return int(result or 0)
 
+
+def _dispatch(argv: list[str] | None = None, *, menu_mode: bool = False) -> int | object:
     parser = argparse.ArgumentParser(description="在 apps 配置中模糊查找应用并可开启 enabled")
     parser.add_argument("query", nargs="*", help="关键词（如 drawio、v2ray）")
     parser.add_argument("--all-catalogs", action="store_true", help="搜索全部平台清单")
@@ -607,7 +704,7 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
 
     if args.custom or args.custom_add is not None:
-        from tools.custom_catalog import CUSTOM_DIR, run_add, run_menu
+        from tools.custom_catalog import CUSTOM_DIR, MENU_BACK, MENU_QUIT, run_add, run_menu
 
         custom_dir = os.path.join(SCRIPT_DIR, CUSTOM_DIR)
         def download_custom(rows):
@@ -616,57 +713,47 @@ def main(argv: list[str] | None = None) -> int:
         if args.custom_add is not None:
             return run_add(custom_dir, source_text=args.custom_add, download=download_custom, dry_run=args.dry_run, insecure=args.insecure)
         extra = (["--dry-run"] if args.dry_run else []) + (["--insecure"] if args.insecure else [])
-        return run_menu(custom_dir, search=lambda query: main(["--apps-dir", custom_dir, *extra, *shlex.split(query, posix=(os.name != "nt"))]), download=download_custom, dry_run=args.dry_run, insecure=args.insecure)
+
+        def search_custom(query: str):
+            found = _dispatch(
+                ["--apps-dir", custom_dir, *extra, *shlex.split(query, posix=(os.name != "nt"))],
+                menu_mode=False,
+            )
+            if found is _QUIT:
+                return MENU_QUIT
+            if found is _BACK:
+                return 0
+            return int(found or 0)
+
+        result = run_menu(
+            custom_dir,
+            search=search_custom,
+            download=download_custom,
+            dry_run=args.dry_run,
+            insecure=args.insecure,
+            nested=menu_mode,
+        )
+        if result is MENU_BACK:
+            return _BACK
+        return result
 
     if not args.query:
         from tools.ghrf_runtime import prompt_cli_line
 
-        text = prompt_cli_line([], "请输入搜索关键词: ")
+        text = prompt_cli_line([], t("catalog.query_prompt"))
         if not text:
             return 0
         args.query = shlex.split(text, posix=(os.name != "nt"))
     if not args.query:
-        print("[ERROR] 需要至少一个关键词。", file=sys.stderr)
+        print(t("catalog.err_query"), file=sys.stderr)
         return 1
 
     apps_dir = args.apps_dir
     if not os.path.isabs(apps_dir):
         apps_dir = os.path.normpath(os.path.join(SCRIPT_DIR, apps_dir))
     if not os.path.isdir(apps_dir):
-        print("[ERROR] 目录不存在: %s" % apps_dir, file=sys.stderr)
+        print(t("catalog.err_dir", apps_dir), file=sys.stderr)
         return 1
-
-    query = " ".join(args.query).strip()
-
-    print("检索: %r  （清单: %s）" % (query, "全部平台" if args.all_catalogs else apps_dir))
-    if args.all_catalogs:
-        hits = []
-        for name in (*dict.fromkeys(row[1] for row in CATALOGS), "apps-custom"):
-            source_dir = os.path.join(SCRIPT_DIR, name)
-            if os.path.isdir(source_dir):
-                hits.extend(search_apps(source_dir, query, min_score=args.min_score))
-        hits.sort(key=lambda h: (-h["score"], h["platform"], h["id"]))
-    else:
-        hits = search_apps(apps_dir, query, min_score=args.min_score)
-    if args.platform:
-        hits = [h for h in hits if h["platform"] == args.platform]
-    if not hits:
-        if os.path.basename(apps_dir) == "apps-custom" and not args.all_catalogs:
-            print("自定义清单中未找到匹配项。请在「自定义清单 → 添加软件」中收录，或使用 --custom-add。")
-            return 0
-        from tools.lookup_github_suggest import run_github_suggest
-
-        return run_github_suggest(
-            query=query,
-            apps_dir=apps_dir,
-            platform=args.platform,
-            dry_run=args.dry_run,
-            no_prompt=args.no_prompt,
-            save=args.save is not None,
-            insecure=args.insecure,
-        )
-
-    print_hits(hits)
 
     save_path: str | None = None
     if args.save is not None:
@@ -675,42 +762,91 @@ def main(argv: list[str] | None = None) -> int:
         elif args.platform:
             save_path = default_list_path(SCRIPT_DIR, args.platform)
 
-    if args.open:
-        return run_open_pages(hits, args.dry_run)
+    while True:
+        query = " ".join(args.query).strip()
 
-    if args.no_prompt:
-        if args.download:
-            return run_download_now(hits, apps_dir, args.dry_run, insecure=args.insecure)
-        if args.save is not None:
-            prompt_add_to_saved_list(
-                hits, apps_dir, args.dry_run, auto=True, save_path=save_path
-            )
-        return 0
-
-    if args.yes:
-        exit_code = 0
-        if args.download:
-            exit_code = run_download_now(hits, apps_dir, args.dry_run, insecure=args.insecure)
+        print(t("catalog.searching", query, t("catalog.all_platforms") if args.all_catalogs else apps_dir))
+        if args.all_catalogs:
+            hits = []
+            for name in (*dict.fromkeys(row[1] for row in CATALOGS), "apps-custom"):
+                source_dir = os.path.join(SCRIPT_DIR, name)
+                if os.path.isdir(source_dir):
+                    hits.extend(search_apps(source_dir, query, min_score=args.min_score))
+            hits.sort(key=lambda h: (-h["score"], h["platform"], h["id"]))
         else:
-            n = enable_all_matches(hits, args.dry_run)
-            if n:
-                print("\n共开启 %d 条。" % n)
-        if args.save is not None and not args.download:
-            prompt_add_to_saved_list(
-                hits, apps_dir, args.dry_run, auto=True, save_path=save_path
-            )
-        elif not args.no_save_prompt and not args.download:
-            prompt_add_to_saved_list(hits, apps_dir, args.dry_run, auto=False)
-        return exit_code
+            hits = search_apps(apps_dir, query, min_score=args.min_score)
+        if args.platform:
+            hits = [h for h in hits if h["platform"] == args.platform]
+        if not hits:
+            if os.path.basename(apps_dir) == "apps-custom" and not args.all_catalogs:
+                print(t("catalog.custom_miss"))
+                if not _stay_in_session(args):
+                    return 0
+                resumed = _resume_query(args, menu_mode)
+                if resumed is not None:
+                    return resumed
+                continue
+            from tools.lookup_github_suggest import run_github_suggest
 
-    return run_interactive(
-        hits,
-        apps_dir,
-        args.dry_run,
-        save_path=save_path,
-        prefer_download=args.download,
-        insecure=args.insecure,
-    )
+            code = run_github_suggest(
+                query=query,
+                apps_dir=apps_dir,
+                platform=args.platform,
+                dry_run=args.dry_run,
+                no_prompt=args.no_prompt,
+                save=args.save is not None,
+                insecure=args.insecure,
+            )
+            if not _stay_in_session(args):
+                return code
+            resumed = _resume_query(args, menu_mode)
+            if resumed is not None:
+                return resumed
+            continue
+
+        print_hits(hits)
+
+        if args.open:
+            return run_open_pages(hits, args.dry_run)
+
+        if args.no_prompt:
+            if args.download:
+                return run_download_now(hits, apps_dir, args.dry_run, insecure=args.insecure)
+            if args.save is not None:
+                prompt_add_to_saved_list(
+                    hits, apps_dir, args.dry_run, auto=True, save_path=save_path
+                )
+            return 0
+
+        if args.yes:
+            exit_code = 0
+            if args.download:
+                exit_code = run_download_now(hits, apps_dir, args.dry_run, insecure=args.insecure)
+            else:
+                n = enable_all_matches(hits, args.dry_run)
+                if n:
+                    print(t("enable.total_nl", n))
+            if args.save is not None and not args.download:
+                prompt_add_to_saved_list(
+                    hits, apps_dir, args.dry_run, auto=True, save_path=save_path
+                )
+            elif not args.no_save_prompt and not args.download:
+                prompt_add_to_saved_list(hits, apps_dir, args.dry_run, auto=False)
+            return exit_code
+
+        result = run_interactive(
+            hits,
+            apps_dir,
+            args.dry_run,
+            save_path=save_path,
+            prefer_download=args.download,
+            insecure=args.insecure,
+        )
+        if result is not _BACK:
+            return result
+        resumed = _resume_query(args, menu_mode)
+        if resumed is not None:
+            return resumed
 
 
 if __name__ == "__main__":

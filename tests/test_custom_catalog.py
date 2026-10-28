@@ -284,5 +284,30 @@ class CustomCatalogTests(unittest.TestCase):
             thread.join(timeout=5)
 
 
+    def test_nested_menu_returns_to_caller_and_direct_zero_exits(self):
+        m = self.custom()
+        seen = []
+
+        def search(query):
+            seen.append(query)
+            return 7
+
+        with tempfile.TemporaryDirectory() as td, patch("builtins.input", side_effect=["1", "vlc"]), contextlib.redirect_stdout(io.StringIO()):
+            self.assertEqual(m.run_menu(td, search=search, download=lambda rows: 0), 7)
+        self.assertEqual(seen, ["vlc"])
+        seen.clear()
+        with tempfile.TemporaryDirectory() as td, patch("builtins.input", side_effect=["0"]), contextlib.redirect_stdout(io.StringIO()):
+            self.assertEqual(m.run_menu(td, search=search, download=lambda rows: 0), 0)
+        for token in ("0", "b", "返回", "back"):
+            seen.clear()
+            with tempfile.TemporaryDirectory() as td, patch("builtins.input", side_effect=["1", "", "9", token]), contextlib.redirect_stdout(io.StringIO()) as output:
+                result = m.run_menu(td, search=search, download=lambda rows: 0, nested=True)
+            self.assertIs(result, m.MENU_BACK)
+            self.assertEqual(seen, [])
+            self.assertIn("无效选择。", output.getvalue())
+        with tempfile.TemporaryDirectory() as td, patch("builtins.input", side_effect=["1", "vlc"]), contextlib.redirect_stdout(io.StringIO()):
+            self.assertEqual(m.run_menu(td, search=lambda query: m.MENU_QUIT, download=lambda rows: 0, nested=True), 0)
+
+
 if __name__ == "__main__":
     unittest.main()
