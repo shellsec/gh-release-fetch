@@ -2,21 +2,23 @@
 
 # GH Release Fetch
 
-Search software by platform, download GitHub Release assets, and keep personal lists for repeat updates. Includes built-in catalogs, custom sources, and separate web-page searches.
+Search software by platform, download GitHub Release assets, and keep personal lists for repeat updates. Includes built-in catalogs, custom sources, and separate web-page searches. Interactive prompts follow the system display language (Simplified Chinese, Traditional Chinese, English, Japanese, or Korean), falling back to Simplified Chinese.
 
 ## Downloads
 
-Current version: **20261026-import-fix** · [Release notes](https://github.com/shellsec/gh-release-fetch/releases/tag/20261026-import-fix) · [Latest Release](https://github.com/shellsec/gh-release-fetch/releases/latest)
+Current version: **20261028** · [Release notes](https://github.com/shellsec/gh-release-fetch/releases/tag/20261028) · [Latest Release](https://github.com/shellsec/gh-release-fetch/releases/latest)
 
 | Host platform | Accelerated (gh-proxy.com) | GitHub direct |
 | --- | --- | --- |
-| Windows x64 | [ZIP](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-windows-20261026-import-fix.zip) | [ZIP](https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-windows-20261026-import-fix.zip) |
-| macOS ARM64 / Apple Silicon | [tar.gz](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-34580b0-macos-arm64.tar.gz) | [tar.gz](https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-34580b0-macos-arm64.tar.gz) |
-| Linux x86_64 | [tar.gz](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-34580b0-linux-x86_64.tar.gz) | [tar.gz](https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-34580b0-linux-x86_64.tar.gz) |
-| Linux ARM64 | [tar.gz](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-34580b0-linux-arm64.tar.gz) | [tar.gz](https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-34580b0-linux-arm64.tar.gz) |
-| SHA256SUMS | [Checksums](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/SHA256SUMS) | [Checksums](https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/SHA256SUMS) |
+| Windows x64 | [ZIP](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-windows-6bd1991.zip) | [ZIP](https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-windows-6bd1991.zip) |
+| macOS ARM64 / Apple Silicon | [tar.gz](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-macos-arm64.tar.gz) | [tar.gz](https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-macos-arm64.tar.gz) |
+| Linux x86_64 | [tar.gz](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-linux-x86_64.tar.gz) | [tar.gz](https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-linux-x86_64.tar.gz) |
+| Linux ARM64 | [tar.gz](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-linux-arm64.tar.gz) | [tar.gz](https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-linux-arm64.tar.gz) |
+| SHA256SUMS | [Checksums](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261028/SHA256SUMS) | [Checksums](https://github.com/shellsec/gh-release-fetch/releases/download/20261028/SHA256SUMS) |
 
-All packages use source revision `34580b0` and bundle their runtime; no separate Python installation is needed. Use the direct link if the accelerator is unavailable. The macOS package is unsigned and not notarized. Linux requires glibc, does not support Alpine/musl, and has not been tested on a Linux machine. See the release notes for validation details.
+All packages use source revision `6bd1991` and bundle their runtime; no separate Python installation is needed. Use the direct link if the accelerator is unavailable. The macOS package is unsigned and not notarized. Linux requires glibc, does not support Alpine/musl, and has not been tested on a Linux machine. See the release notes for validation details.
+
+For upgrades in an existing complete Windows directory, the Release also provides five individual EXE files. For first-time use, download and extract the full ZIP; the EXE files require the catalog and data directories. SHA256SUMS covers all four packages and five EXE files.
 
 ## Quick start
 

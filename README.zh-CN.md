@@ -6,17 +6,19 @@
 
 ## 下载与加速下载
 
-当前版本：**20261026-import-fix** · [版本说明](https://github.com/shellsec/gh-release-fetch/releases/tag/20261026-import-fix) · [最新 Release](https://github.com/shellsec/gh-release-fetch/releases/latest)
+当前版本：**20261028** · [版本说明](https://github.com/shellsec/gh-release-fetch/releases/tag/20261028) · [最新 Release](https://github.com/shellsec/gh-release-fetch/releases/latest)
 
 | 运行平台 | 加速下载（gh-proxy.com） | GitHub 原始下载 |
 | --- | --- | --- |
-| Windows x64 | [ZIP](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-windows-20261026-import-fix.zip) | [ZIP](https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-windows-20261026-import-fix.zip) |
-| macOS ARM64 / Apple Silicon | [tar.gz](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-34580b0-macos-arm64.tar.gz) | [tar.gz](https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-34580b0-macos-arm64.tar.gz) |
-| Linux x86_64 | [tar.gz](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-34580b0-linux-x86_64.tar.gz) | [tar.gz](https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-34580b0-linux-x86_64.tar.gz) |
-| Linux ARM64 | [tar.gz](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-34580b0-linux-arm64.tar.gz) | [tar.gz](https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/gh-release-fetch-34580b0-linux-arm64.tar.gz) |
-| SHA256SUMS | [校验文件](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/SHA256SUMS) | [校验文件](https://github.com/shellsec/gh-release-fetch/releases/download/20261026-import-fix/SHA256SUMS) |
+| Windows x64 | [ZIP](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-windows-6bd1991.zip) | [ZIP](https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-windows-6bd1991.zip) |
+| macOS ARM64 / Apple Silicon | [tar.gz](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-macos-arm64.tar.gz) | [tar.gz](https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-macos-arm64.tar.gz) |
+| Linux x86_64 | [tar.gz](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-linux-x86_64.tar.gz) | [tar.gz](https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-linux-x86_64.tar.gz) |
+| Linux ARM64 | [tar.gz](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-linux-arm64.tar.gz) | [tar.gz](https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-linux-arm64.tar.gz) |
+| SHA256SUMS | [校验文件](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261028/SHA256SUMS) | [校验文件](https://github.com/shellsec/gh-release-fetch/releases/download/20261028/SHA256SUMS) |
 
-安装包均基于 `34580b0`，自带运行环境，无需另装 Python。加速入口不可用时，请使用原始下载。macOS 包未签名或公证；Linux 需要 glibc，不适用于 Alpine/musl，尚未实机验证。具体测试范围见版本说明。
+安装包均基于 `6bd1991`，自带运行环境，无需另装 Python。加速入口不可用时，请使用原始下载。macOS 包未签名或公证；Linux 需要 glibc，不适用于 Alpine/musl，尚未实机验证。具体测试范围见版本说明。
+
+已有完整 Windows 目录可从 Release 下载五个独立 EXE 替换升级；首次使用请下载并完整解压 ZIP，EXE 仍需要旁边的清单与数据目录。SHA256SUMS 覆盖四个安装包和五个 EXE。
 
 ## 快速开始
 
