@@ -14,8 +14,11 @@ from __future__ import annotations
 
 import argparse
 import os
+import re
 import subprocess
 import sys
+import tempfile
+from datetime import datetime
 
 if getattr(sys, "frozen", False):
     SCRIPT_DIR = os.path.dirname(os.path.abspath(sys.executable))
@@ -28,11 +31,15 @@ if not getattr(sys, "frozen", False) and SCRIPT_DIR not in sys.path:
 from tools.ghrf_runtime import resolve_auto_update_argv  # noqa: E402
 
 from tools.app_list import (  # noqa: E402
+    CATALOGS,
     PLATFORMS,
     default_list_basename,
     load_list,
+    remove_item,
     resolve_list_path,
+    save_hits_by_platform,
 )
+from tools.ui_lang import t  # noqa: E402
 
 
 def detect_platform() -> str:
@@ -55,7 +62,7 @@ def infer_platform(data: dict, fallback: str) -> str:
     return fallback
 
 
-def main() -> int:
+def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description="按 saved_apps_*.json 批量更新应用")
     ap.add_argument(
         "target",
@@ -69,11 +76,166 @@ def main() -> int:
     ap.add_argument("--dry-run", action="store_true", help="只预览，不修改 JSON、不下载")
     ap.add_argument("--insecure", action="store_true", help="传给 auto_update.py")
     ap.add_argument("--apps-dir", default="", help="传给 auto_update / apply 的配置目录")
-    args = ap.parse_args()
+    ap.add_argument("--manage", action="store_true", help="查看、移除或批量下载个人更新清单")
+    args = ap.parse_args(argv)
 
     default_plat = args.platform or detect_platform()
     list_arg = args.list_path or args.target
     list_path = resolve_list_path(SCRIPT_DIR, list_arg or None, default_plat)
+    if args.manage:
+        paths = [list_path] if list_arg else [
+            os.path.join(SCRIPT_DIR, default_list_basename(platform))
+            for platform in PLATFORMS
+        ]
+        if not list_arg and os.environ.get("SAVED_APPS_LIST", "").strip() and list_path not in paths:
+            paths.append(list_path)
+        args.skip_enable = True
+        return manage_lists(paths, args, default_plat)
+    return run_list(list_path, args, default_plat)
+
+
+def import_download_history(dry_run: bool) -> None:
+    from lookup_app import print_hits, prompt_choose_hits, search_apps
+
+    platforms_by_id = {}
+    downloaded = set()
+    start = re.compile(r" - INFO - === \[([^\]]+)\] 开始 === \[平台: ([^\]]+)\]")
+    success = re.compile(r" - INFO - \[([^\]]+)\] 安装包已下载: ")
+    try:
+        with open(os.path.join(SCRIPT_DIR, "update_log.txt"), encoding="utf-8", errors="replace") as log:
+            for line in log:
+                match = start.search(line)
+                if match:
+                    app_id, platform = match.groups()
+                    platforms_by_id.setdefault(app_id, set()).add(platform)
+                match = success.search(line)
+                if match:
+                    app_id = match[1]
+                    downloaded.add(app_id)
+    except FileNotFoundError:
+        print(t("saved.no_log"))
+        return
+    except OSError as error:
+        print(error, file=sys.stderr)
+        return
+
+    keys = {
+        (next(iter(platforms_by_id[app_id])), app_id)
+        for app_id in downloaded
+        if len(platforms_by_id.get(app_id, ())) == 1
+    }
+    matches = {}
+    for directory in dict.fromkeys([*(row[1] for row in CATALOGS), "apps-custom"]):
+        for hit in search_apps(os.path.join(SCRIPT_DIR, directory), "", min_score=0):
+            key = (hit["platform"], hit["id"])
+            if hit["downloadable"] and key in keys:
+                matches.setdefault(key, []).append(hit)
+    hits = [rows[0] for _, rows in sorted(matches.items()) if len(rows) == 1]
+    print(t("saved.history_result", len(hits), len(downloaded) - len(hits)))
+    if not hits:
+        return
+    print_hits(hits)
+    chosen = prompt_choose_hits(hits)
+    if not isinstance(chosen, list) or not chosen:
+        return
+    if dry_run:
+        print(t("saved.import_dry"))
+    else:
+        try:
+            save_hits_by_platform(SCRIPT_DIR, chosen, os.path.join(SCRIPT_DIR, "apps"))
+        except (OSError, ValueError) as error:
+            print(error, file=sys.stderr)
+
+
+def manage_lists(paths: list[str], args: argparse.Namespace, default_plat: str) -> int:
+    exit_code = 0
+    try:
+        while True:
+            available = [path for path in paths if os.path.isfile(path)]
+            if not available:
+                print(t("saved.empty"))
+            print("\n" + t("catalog.saved"))
+            for number, path in enumerate(available, 1):
+                print("  %d  %s" % (number, os.path.basename(path)))
+            choice = input(t("saved.lists")).strip().lower()
+            if choice in ("", "b", "q", "0"):
+                return exit_code
+            if choice == "i":
+                import_download_history(args.dry_run)
+                continue
+            if choice == "a" and available:
+                exit_code = download_batch(available, args, default_plat)
+                continue
+            if not choice.isdecimal() or not 1 <= int(choice) <= len(available):
+                print(t("common.invalid_choice"))
+                continue
+            path = available[int(choice) - 1]
+            while True:
+                try:
+                    items = load_list(path)["items"]
+                except (OSError, ValueError) as error:
+                    print(error, file=sys.stderr)
+                    break
+                print("\n" + os.path.basename(path))
+                for number, item in enumerate(items, 1):
+                    print("  %d  %s  %s" % (number, item.get("id", ""), item.get("简介", "")))
+                if not items:
+                    print(t("saved.no_items"))
+                    break
+                choice = input(t("saved.items")).strip().lower()
+                if choice in ("", "b", "0"):
+                    break
+                if choice == "q":
+                    return exit_code
+                if choice == "a":
+                    exit_code = download_batch([path], args, default_plat)
+                    continue
+                if not choice.isdecimal() or not 1 <= int(choice) <= len(items):
+                    print(t("common.invalid_choice"))
+                    continue
+                item = items[int(choice) - 1]
+                if input(t("saved.remove", item.get("id", ""))).strip().lower() != "y":
+                    continue
+                if args.dry_run:
+                    print(t("saved.remove_dry"))
+                    continue
+                try:
+                    if remove_item(path, item):
+                        print(t("saved.removed"))
+                except (OSError, ValueError) as error:
+                    print(error, file=sys.stderr)
+    except (EOFError, KeyboardInterrupt):
+        return exit_code
+
+
+def download_batch(paths: list[str], args: argparse.Namespace, default_plat: str) -> int:
+    root = os.path.join(SCRIPT_DIR, "batch_downloads")
+    if args.dry_run:
+        folder = os.path.join(root, "preview")
+    else:
+        os.makedirs(root, exist_ok=True)
+        prefix = datetime.now().strftime("%Y%m%d-%H%M%S-")
+        folder = tempfile.mkdtemp(prefix=prefix, dir=root)
+    results = [run_list(path, args, default_plat, batch_dir=folder) for path in paths]
+    print(t("saved.result", sum(code == 0 for code in results), len(results)))
+    if not args.dry_run:
+        if any(files for _, _, files in os.walk(folder)):
+            print(t("saved.folder", folder))
+            opener = {"win32": "explorer", "darwin": "open"}.get(sys.platform, "xdg-open")
+            try:
+                subprocess.Popen([opener, folder])
+            except OSError as error:
+                print(error, file=sys.stderr)
+        else:
+            for directory, _, _ in os.walk(folder, topdown=False):
+                try:
+                    os.rmdir(directory)
+                except OSError:
+                    pass
+    return int(any(results))
+
+
+def run_list(list_path: str, args: argparse.Namespace, default_plat: str, batch_dir: str = "") -> int:
 
     if not os.path.isfile(list_path):
         hint = default_list_basename(default_plat)
@@ -116,13 +278,15 @@ def main() -> int:
             command_args.extend(["--apps-dir", source])
         if args.insecure:
             command_args.append("--insecure")
+        if batch_dir:
+            command_args.extend(["--batch-download-dir", batch_dir])
         commands.append(resolve_auto_update_argv(SCRIPT_DIR, command_args))
-    rel_list = os.path.relpath(list_path, SCRIPT_DIR)
-    print("列表: %s（%d 条，平台 %s）" % (rel_list, len(ids), platform))
+    print("列表: %s（%d 条，平台 %s）" % (list_path, len(items), platform))
     print("应用 id:", ", ".join(ids))
 
     if args.dry_run:
-        print("（dry-run：将 apply enabled，并按清单分别更新）")
+        if not args.skip_enable:
+            print("（dry-run：将 apply enabled）")
         for command in commands:
             print("[dry-run] 将执行: %s" % " ".join(command))
         return 0

@@ -6,19 +6,19 @@
 
 ## 下载与加速下载
 
-当前版本：**20261028** · [版本说明](https://github.com/shellsec/gh-release-fetch/releases/tag/20261028) · [最新 Release](https://github.com/shellsec/gh-release-fetch/releases/latest)
+当前版本：**20261106-update-lists** · [版本说明](https://github.com/shellsec/gh-release-fetch/releases/tag/20261106-update-lists) · [最新 Release](https://github.com/shellsec/gh-release-fetch/releases/latest)
 
 | 运行平台 | 加速下载（gh-proxy.com） | GitHub 原始下载 |
 | --- | --- | --- |
-| Windows x64 | [ZIP](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-windows-6bd1991.zip) | [ZIP](https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-windows-6bd1991.zip) |
+| Windows x64 | [ZIP](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261106-update-lists/gh-release-fetch-windows-20261106-update-lists.zip) | [ZIP](https://github.com/shellsec/gh-release-fetch/releases/download/20261106-update-lists/gh-release-fetch-windows-20261106-update-lists.zip) |
 | macOS ARM64 / Apple Silicon | [tar.gz](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-macos-arm64.tar.gz) | [tar.gz](https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-macos-arm64.tar.gz) |
 | Linux x86_64 | [tar.gz](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-linux-x86_64.tar.gz) | [tar.gz](https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-linux-x86_64.tar.gz) |
 | Linux ARM64 | [tar.gz](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-linux-arm64.tar.gz) | [tar.gz](https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-linux-arm64.tar.gz) |
-| SHA256SUMS | [校验文件](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261028/SHA256SUMS) | [校验文件](https://github.com/shellsec/gh-release-fetch/releases/download/20261028/SHA256SUMS) |
+| macOS / Linux SHA256SUMS | [校验文件](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261028/SHA256SUMS) | [校验文件](https://github.com/shellsec/gh-release-fetch/releases/download/20261028/SHA256SUMS) |
 
-安装包均基于 `6bd1991`，自带运行环境，无需另装 Python。加速入口不可用时，请使用原始下载。macOS 包未签名或公证；Linux 需要 glibc，不适用于 Alpine/musl，尚未实机验证。具体测试范围见版本说明。
+macOS 和 Linux 安装包基于 `6bd1991`，自带运行环境，无需另装 Python。加速入口不可用时，请使用原始下载。macOS 包未签名或公证；Linux 需要 glibc，不适用于 Alpine/musl，尚未实机验证。具体测试范围见版本说明。
 
-已有完整 Windows 目录可从 Release 下载五个独立 EXE 替换升级；首次使用请下载并完整解压 ZIP，EXE 仍需要旁边的清单与数据目录。SHA256SUMS 覆盖四个安装包和五个 EXE。
+已有完整 Windows 目录可从 Release 下载五个独立 EXE 替换升级；首次使用请下载并完整解压 ZIP，EXE 仍需要旁边的清单与数据目录。校验文件见 [Windows SHA256SUMS](https://github.com/shellsec/gh-release-fetch/releases/download/20261106-update-lists/SHA256SUMS)。
 
 ## 快速开始
 
@@ -29,9 +29,9 @@
 
 | 操作 | 用途 |
 | --- | --- |
-| 1：立刻下载 | 获取所选软件，无合适安装包时打开页面，不修改启用状态 |
-| 2：加入并下载 | 保存到更新列表，并立即下载 |
-| 3：加入列表 | 保存到更新列表，稍后统一下载 |
+| 1：仅下载一次 | 获取所选软件，无合适安装包时打开页面 |
+| 2 或回车：加入并下载 | 保存可下载条目到更新列表，并立即下载 |
+| 3：只加入 | 保存到更新列表，稍后统一下载 |
 | 4：启用 | 设置 `enabled=true`，参与对应清单的批量处理 |
 | 5：打开页面 | 打开官网或 GitHub Releases 页面 |
 
@@ -74,7 +74,7 @@
   3 = 加入更新列表 saved_apps_<平台>.json
   4 = 设为 enabled=true
   5 = 打开页面（官网 / GitHub Releases）
-  b/回车 = 返回    q = 退出
+  回车 = 加入并下载    b = 返回    q = 退出
 > 1
 
 [下载] 平台 windows：uniclipboard
@@ -144,7 +144,11 @@ lookup_app.bat --custom-add https://example.org/app.exe --dry-run
 
 ## 更新列表与批量下载
 
-搜索后选择操作 2 或 3，会按平台保存 `saved_apps_<平台>.json`。Windows 运行 `run_saved_apps.bat`；macOS/Linux 运行 `./run_saved_apps`，按提示选择或指定列表。
+搜索后按回车或选择操作 2，会按平台保存 `saved_apps_<平台>.json` 并下载。只想先加入，选 3。
+
+在搜索主菜单进入「个人更新清单」，输入序号查看和移除条目，按 `a` 下载当前清单或所有清单。也可以运行 `lookup_app --manage-saved` 或 `run_saved_apps --manage`。按 `i` 可从 `update_log.txt` 导入能匹配到目录的成功下载记录，预览后输入序号或 `a` 全选。
+
+在管理菜单批量下载后，工具会打开一次 `batch_downloads` 下的本次目录，文件按平台存放。安装包需手动运行，便携包需手动解压替换。下载结果和失败原因可查 `update_log.txt`。
 
 `auto_update` 不带应用 ID 时，只处理对应清单中 `enabled: true` 的条目；**明确指定 ID 时不要求启用**。首次使用建议从搜索入口开始。
 

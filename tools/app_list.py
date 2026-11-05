@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import json
 import os
+import tempfile
 from datetime import datetime, timezone
 
 # Menu order also defines the catalog roots searched by lookup_app --all-catalogs.
@@ -27,9 +28,30 @@ MOBILE_PLATFORMS = ("android", "ios")
 
 
 def _dump(path: str, data) -> None:
-    with open(path, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
-        f.write("\n")
+    with tempfile.NamedTemporaryFile(
+        mode="w", encoding="utf-8", dir=os.path.dirname(path) or ".", delete=False
+    ) as f:
+        temp_path = f.name
+        try:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+            f.write("\n")
+            f.close()
+            os.replace(temp_path, path)
+        finally:
+            f.close()
+            if os.path.exists(temp_path):
+                os.unlink(temp_path)
+
+
+def remove_item(path: str, item: dict) -> bool:
+    data = load_list(path)
+    items = data["items"]
+    if item not in items:
+        return False
+    items.remove(item)
+    data.update(build_payload(data.get("platform") or "mixed", items))
+    _dump(path, data)
+    return True
 
 
 def default_list_basename(platform: str) -> str:
@@ -132,7 +154,7 @@ def save_hits(
             items = merge_items(old.get("items") or [], new_rows)
             if old.get("platform") and old.get("platform") != "mixed":
                 platform = old["platform"]
-        except (OSError, json.JSONDecodeError, ValueError):
+        except FileNotFoundError:
             pass
 
     list_rel = os.path.relpath(os.path.abspath(path), os.path.abspath(root)).replace("\\", "/")

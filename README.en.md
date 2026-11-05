@@ -6,19 +6,19 @@ Search software by platform, download GitHub Release assets, and keep personal l
 
 ## Downloads
 
-Current version: **20261028** · [Release notes](https://github.com/shellsec/gh-release-fetch/releases/tag/20261028) · [Latest Release](https://github.com/shellsec/gh-release-fetch/releases/latest)
+Current version: **20261106-update-lists** · [Release notes](https://github.com/shellsec/gh-release-fetch/releases/tag/20261106-update-lists) · [Latest Release](https://github.com/shellsec/gh-release-fetch/releases/latest)
 
 | Host platform | Accelerated (gh-proxy.com) | GitHub direct |
 | --- | --- | --- |
-| Windows x64 | [ZIP](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-windows-6bd1991.zip) | [ZIP](https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-windows-6bd1991.zip) |
+| Windows x64 | [ZIP](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261106-update-lists/gh-release-fetch-windows-20261106-update-lists.zip) | [ZIP](https://github.com/shellsec/gh-release-fetch/releases/download/20261106-update-lists/gh-release-fetch-windows-20261106-update-lists.zip) |
 | macOS ARM64 / Apple Silicon | [tar.gz](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-macos-arm64.tar.gz) | [tar.gz](https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-macos-arm64.tar.gz) |
 | Linux x86_64 | [tar.gz](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-linux-x86_64.tar.gz) | [tar.gz](https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-linux-x86_64.tar.gz) |
 | Linux ARM64 | [tar.gz](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-linux-arm64.tar.gz) | [tar.gz](https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-linux-arm64.tar.gz) |
-| SHA256SUMS | [Checksums](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261028/SHA256SUMS) | [Checksums](https://github.com/shellsec/gh-release-fetch/releases/download/20261028/SHA256SUMS) |
+| macOS / Linux SHA256SUMS | [Checksums](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261028/SHA256SUMS) | [Checksums](https://github.com/shellsec/gh-release-fetch/releases/download/20261028/SHA256SUMS) |
 
-All packages use source revision `6bd1991` and bundle their runtime; no separate Python installation is needed. Use the direct link if the accelerator is unavailable. The macOS package is unsigned and not notarized. Linux requires glibc, does not support Alpine/musl, and has not been tested on a Linux machine. See the release notes for validation details.
+The macOS and Linux packages use source revision `6bd1991` and bundle their runtime; no separate Python installation is needed. Use the direct link if the accelerator is unavailable. The macOS package is unsigned and not notarized. Linux requires glibc, does not support Alpine/musl, and has not been tested on a Linux machine. See the release notes for validation details.
 
-For upgrades in an existing complete Windows directory, the Release also provides five individual EXE files. For first-time use, download and extract the full ZIP; the EXE files require the catalog and data directories. SHA256SUMS covers all four packages and five EXE files.
+For upgrades in an existing complete Windows directory, the Release also provides five individual EXE files. For first-time use, download and extract the full ZIP; the EXE files require the catalog and data directories. See the [Windows checksums](https://github.com/shellsec/gh-release-fetch/releases/download/20261106-update-lists/SHA256SUMS).
 
 ## Quick start
 
@@ -29,8 +29,8 @@ For upgrades in an existing complete Windows directory, the Release also provide
 
 | Action | Behavior |
 | --- | --- |
-| 1: Download now | Download, or open the page if no package is available, without changing the enabled state |
-| 2: Save and download | Add to the update list and download now |
+| 1: Download once | Download, or open the page if no package is available |
+| 2 or Enter: Save and download | Save downloadable entries to the update list and download now |
 | 3: Save to list | Add to the update list for later |
 | 4: Enable | Set `enabled=true` for batch processing in that catalog |
 | 5: Open page | Open the website or GitHub Releases page |
@@ -128,7 +128,9 @@ lookup_app.bat --custom-add https://example.org/app.exe --dry-run
 
 ## Update lists and batch downloads
 
-Search actions 2 and 3 save entries to `saved_apps_<platform>.json`. Run `run_saved_apps.bat` on Windows or `./run_saved_apps` on macOS/Linux, then select or specify a list.
+Search actions 2 and 3 save entries to `saved_apps_<platform>.json`. Open **Saved update lists** from the search menu or run `run_saved_apps --manage`. Select a list to view or remove entries. Press `a` to download the current list or all lists from the main menu. Press `i` to select past successful downloads to import from `update_log.txt`.
+
+Batch downloads go into a new folder under `batch_downloads`, grouped by platform. The tool opens the batch folder once at the end. Run installers or extract portable archives yourself. See `update_log.txt` for download results.
 
 Without application IDs, `auto_update` only processes enabled entries in the selected catalog. **Explicit IDs do not require `enabled=true`.** Start with the search entry point if you have no saved list or enabled entries.
 

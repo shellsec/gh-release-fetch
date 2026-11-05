@@ -1317,7 +1317,7 @@ def select_apps(cfg, only_ids, platform_override=None):
     return picked
 
 
-def update_one(app, download_root, verify=True, platform_key=None, cfg=None):
+def update_one(app, download_root, verify=True, platform_key=None, cfg=None, download_only=False):
     cfg = cfg or {}
     aid = app["id"]
     plat = platform_key or detect_platform_key()
@@ -1353,6 +1353,8 @@ def update_one(app, download_root, verify=True, platform_key=None, cfg=None):
         version, dl_url, app, local_filename, verify=verify, platform_key=plat
     )
     logger.info("[%s] 安装包已下载: %s", aid, installer_path)
+    if download_only:
+        return 0
 
     ext = os.path.splitext(installer_path)[1].lower()
     archive = is_archive_filename(installer_path)
@@ -1398,6 +1400,10 @@ def main():
         metavar="DIR",
         help="替代默认 apps/：指定含 root.json 的目录（如 VibeCodingToolsDown，相对项目根目录）",
     )
+    parser.add_argument(
+        "--batch-download-dir",
+        help="仅下载到指定目录（按平台分组），不启动安装程序或打开文件管理器",
+    )
     args = parser.parse_args()
 
     platform_key = normalize_platform_arg(args.platform) or detect_platform_key()
@@ -1408,6 +1414,8 @@ def main():
         logger.error("%s", e)
         return 1
 
+    if args.batch_download_dir:
+        cfg = dict(cfg, download_dir=args.batch_download_dir, download_subdir_by_platform=True)
     download_root = resolve_download_root(cfg)
     apps = select_apps(cfg, args.app_id, args.platform)
     if not apps:
@@ -1432,7 +1440,7 @@ def main():
         else:
             logger.warning("网络探测无候选地址，仍将继续。")
 
-    exit_code = 0
+    exit_code = int(bool(args.batch_download_dir) and len(apps) != len(args.app_id))
     for app in apps:
         if app.get("open_page_only") is True:
             url = (app.get("open_page_url") or "").strip()
@@ -1457,6 +1465,7 @@ def main():
                 verify=verify,
                 platform_key=platform_key,
                 cfg=cfg,
+                download_only=bool(args.batch_download_dir),
             )
         except Exception as e:
             logger.error("[%s] 失败: %s", app.get("id"), e)

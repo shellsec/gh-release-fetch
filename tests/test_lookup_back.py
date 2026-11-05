@@ -44,15 +44,22 @@ class LookupBackTests(unittest.TestCase):
         with patch("builtins.input", side_effect=["1", "b", "q"]), patch.object(lookup_app, "print_hits") as printed:
             self.assertIs(lookup_app.run_interactive([HIT], "apps", True), lookup_app._QUIT)
         printed.assert_called_once()
-        with patch("builtins.input", side_effect=["1", "", "q"]), patch.object(lookup_app, "print_hits") as printed:
-            self.assertIs(lookup_app.run_interactive([HIT], "apps", True), lookup_app._QUIT)
-        printed.assert_called_once()
         with patch("builtins.input", side_effect=["nope", "b"]):
             self.assertEqual(lookup_app.prompt_action_mode(), "back")
         with patch("builtins.input", return_value=""):
-            self.assertEqual(lookup_app.prompt_action_mode(), "back")
+            self.assertEqual(lookup_app.prompt_action_mode(), "2")
         with patch("builtins.input", return_value="q"):
             self.assertEqual(lookup_app.prompt_action_mode(), "quit")
+
+    def test_default_download_and_save_only(self):
+        for action, downloads in (("", 1), ("3", 0), ("1", 1)):
+            with self.subTest(action=action), \
+                    patch("builtins.input", side_effect=["1", action, "q"]), \
+                    patch.object(lookup_app, "prompt_add_to_saved_list") as saved, \
+                    patch.object(lookup_app, "run_download_now") as download:
+                self.assertIs(lookup_app.run_interactive([HIT], "apps", True), lookup_app._QUIT)
+            self.assertEqual(saved.call_count, int(action != "1"))
+            self.assertEqual(download.call_count, downloads)
 
     def test_keyword_enter_back_or_exit(self):
         with patch("builtins.input", return_value=""):

@@ -49,6 +49,7 @@ saved_apps_ps5.json
 saved_apps_switch.json
 
 # Additional platform downloads and personal update lists
+/batch_downloads/
 /android_tv/
 /linux_handheld/
 /ps4/

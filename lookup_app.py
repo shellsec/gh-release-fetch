@@ -10,7 +10,7 @@
   python lookup_app.py --apps-dir VibeCodingToolsDown warp
   python lookup_app.py --yes drawio          # 匹配项全部开启，不询问
   python lookup_app.py --dry-run drawio      # 只查询，不写文件
-  无参数：先选清单。关键词回车回清单；选条目 b/回车回关键词；操作 b/回车回条目。
+  无参数：先选清单。关键词回车回清单；选条目 b/回车回关键词；操作回车加入并下载，b 回条目。
   下载/启用/加入列表/打开页面做完后仍留在条目列表。q 退出。带参数时关键词回车仍退出。
   Windows 快捷入口：lookup_mobile.bat / lookup_ios.bat / lookup_switch.bat / lookup_ps5.bat
 
@@ -346,7 +346,7 @@ def prompt_add_to_saved_list(
 
 
 def prompt_action_mode() -> str | None:
-    """1 下载 | 2 加入并下载 | 3 加入列表 | 4 启用 | 5 打开页面 | b/回车返回条目 | q 退出。"""
+    """回车加入并下载，b 返回条目，q 退出。"""
     while True:
         print()
         print(t("action.title"))
@@ -364,13 +364,15 @@ def prompt_action_mode() -> str | None:
         if line and _is_quit_command(line):
             print(t("common.quit"))
             return "quit"
-        if not line or _is_back_command(line):
+        if not line:
+            return "2"
+        if _is_back_command(line):
             return "back"
         if line in ("1", "2", "3", "4", "5"):
             return line
         low = line.lower()
         if low in ("d", "download", "下载", "down"):
-            return "1"
+            return "2"
         if low in ("o", "open", "打开", "页面", "url"):
             return "5"
         if low in ("sd", "save-download", "加入下载", "列表下载"):
@@ -499,9 +501,11 @@ def run_interactive(
         elif action == "5":
             run_open_pages(chosen, dry_run)
         elif action == "2":
-            prompt_add_to_saved_list(
-                chosen, apps_dir, dry_run, auto=True, save_path=save_path
-            )
+            downloadable = [hit for hit in chosen if hit.get("downloadable")]
+            if downloadable:
+                prompt_add_to_saved_list(
+                    downloadable, apps_dir, dry_run, auto=True, save_path=save_path
+                )
             run_download_now(chosen, apps_dir, dry_run, insecure=insecure)
         elif action == "3":
             prompt_add_to_saved_list(
@@ -538,6 +542,7 @@ def prompt_catalog_and_query() -> bool:
     ]
     options.append((t("catalog.custom"), ["--custom"], ("custom", "自定义")))
     options.append((t("catalog.all"), ["--all-catalogs"], ("all", "全部")))
+    options.append((t("catalog.saved"), ["--manage-saved"], ("saved",)))
     while True:
         print(t("catalog.which"))
         for index, (label, _, _) in enumerate(options, 1):
@@ -560,7 +565,7 @@ def prompt_catalog_and_query() -> bool:
             continue
         label, extra = selected
         print(t("catalog.chosen", label))
-        if extra == ["--custom"]:
+        if extra in (["--custom"], ["--manage-saved"]):
             sys.argv[1:] = extra
             return True
         try:
@@ -639,6 +644,7 @@ def _dispatch(argv: list[str] | None = None, *, menu_mode: bool = False) -> int 
     parser.add_argument("--all-catalogs", action="store_true", help="搜索全部平台清单")
     custom_group = parser.add_mutually_exclusive_group()
     custom_group.add_argument("--custom", action="store_true", help="自定义软件：搜索、添加、管理")
+    custom_group.add_argument("--manage-saved", action="store_true", help="查看、移除或批量下载个人更新清单")
     custom_group.add_argument("--custom-add", nargs="?", const="", metavar="SOURCE", help="添加 GitHub 仓库 / Release / 固定下载链接；可省略地址后交互输入")
     parser.add_argument(
         "--apps-dir",
@@ -702,6 +708,12 @@ def _dispatch(argv: list[str] | None = None, *, menu_mode: bool = False) -> int 
         help="对匹配项打开官网 / GitHub Releases 页面（不下载）",
     )
     args = parser.parse_args(argv)
+
+    if args.manage_saved:
+        from tools.run_saved_apps import main as saved_main
+
+        result = saved_main(["--manage", *(["--dry-run"] if args.dry_run else [])])
+        return _BACK if menu_mode else result
 
     if args.custom or args.custom_add is not None:
         from tools.custom_catalog import CUSTOM_DIR, MENU_BACK, MENU_QUIT, run_add, run_menu
