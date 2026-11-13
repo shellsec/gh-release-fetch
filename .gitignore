@@ -1,10 +1,11 @@
 # PyInstaller 输出
-dist/exe/
-dist/release/
-build/pyinstaller/
-build/packaging-deps/
-build/pyinstaller-cache/
-build/packaging-user/
+/dist/
+/build/
+/GHReleaseFetch.exe
+/GHReleaseFetch.exe.sha256
+/update_log.txt
+/startup_error.log
+/NUL
 /auto_update.exe
 /lookup_app.exe
 /run_saved_apps.exe
@@ -67,3 +68,10 @@ saved_apps_xbox.json
 /apps-custom/*
 !/apps-custom/root.json
 /custom-catalog-export.json
+
+# Generated static website and local browser verification artifacts
+/dist/site/
+/repository_downloads/
+/extension_downloads/
+/catalog_downloads/
+/website/.preview/

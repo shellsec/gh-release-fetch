@@ -5,6 +5,7 @@
 #   powershell -ExecutionPolicy Bypass -File tools\pack_windows_release.ps1 -SkipBuild
 param(
     [switch]$SkipBuild,
+    [switch]$Gui,
     [string]$Version = ""
 )
 
@@ -14,7 +15,7 @@ Set-Location $Root
 
 function Get-ReleaseVersion {
     param([string]$Explicit)
-    if ($Explicit) { return $Explicit.Trim() }
+    if ($Explicit) { if ($Explicit.Trim() -notmatch '^[a-zA-Z0-9][a-zA-Z0-9._-]*$') { throw "Invalid release version" }; return $Explicit.Trim() }
     $tag = git describe --tags --always 2>$null
     if ($LASTEXITCODE -eq 0 -and $tag) { return $tag -replace '[\\/:*?"<>|]', '-' }
     return (Get-Date -Format "yyyyMMdd")
@@ -29,11 +30,11 @@ $ZipPath = Join-Path $OutDir "$StageName.zip"
 Write-Host "== Pack Windows release: $StageName ==" -ForegroundColor Cyan
 
 if (-not $SkipBuild) {
-    & (Join-Path $Root "tools\build_exe.ps1")
+    & (Join-Path $Root "tools\build_exe.ps1") -Gui:$Gui
 }
 
 $ExeDir = Join-Path $Root "dist\exe"
-$exes = @("lookup_app.exe", "run_saved_apps.exe", "search_soft_pages.exe", "search_games.exe", "auto_update.exe")
+$exes = @("GHReleaseFetch.exe")
 foreach ($name in $exes) {
     $p = Join-Path $ExeDir $name
     if (-not (Test-Path $p)) {
@@ -41,91 +42,15 @@ foreach ($name in $exes) {
     }
 }
 
-if (Test-Path $Stage) { Remove-Item $Stage -Recurse -Force }
+if (Test-Path -LiteralPath $Stage) { throw "Output folder already exists: $Stage" }
 New-Item -ItemType Directory -Force -Path $Stage | Out-Null
 
-Write-Host "Copy exes and bats..."
+Write-Host "Copy GHReleaseFetch.exe..."
 foreach ($name in $exes) {
     Copy-Item (Join-Path $ExeDir $name) (Join-Path $Stage $name) -Force
 }
-$bats = @("lookup_app.bat", "lookup_mobile.bat", "lookup_ios.bat", "lookup_switch.bat", "lookup_ps5.bat", "open_catalog.bat", "run_saved_apps.bat", "search_soft_pages.bat", "search_games.bat", "run_update.bat")
-foreach ($name in $bats) {
-    Copy-Item (Join-Path $Root $name) (Join-Path $Stage $name) -Force
+& {
+    Compress-Archive -LiteralPath $Stage -DestinationPath $ZipPath -CompressionLevel Optimal -Force
+    Write-Host "Zip: $ZipPath"
+    return
 }
-
-Write-Host "Copy apps/ apps-mobile/ ..."
-Copy-Item (Join-Path $Root "apps") (Join-Path $Stage "apps") -Recurse -Force
-if (Test-Path (Join-Path $Root "apps-mobile")) {
-    Copy-Item (Join-Path $Root "apps-mobile") (Join-Path $Stage "apps-mobile") -Recurse -Force
-}
-
-foreach ($catalogDir in @("apps-switch", "apps-ps4", "apps-ps5", "apps-vita", "apps-xbox", "apps-tv", "apps-handheld")) {
-    $catalogSrc = Join-Path $Root $catalogDir
-    if (Test-Path -LiteralPath $catalogSrc) {
-        Copy-Item -LiteralPath $catalogSrc -Destination (Join-Path $Stage $catalogDir) -Recurse -Force
-    }
-}
-$customStage = Join-Path $Stage "apps-custom"
-New-Item -ItemType Directory -Force -Path $customStage | Out-Null
-Copy-Item -LiteralPath (Join-Path $Root "apps-custom\root.json") -Destination (Join-Path $customStage "root.json") -Force
-$catalogToolsDst = Join-Path $Stage "tools"
-New-Item -ItemType Directory -Force -Path $catalogToolsDst | Out-Null
-foreach ($catalogTool in @("generate_switch_catalog_index.py", "generate_ps5_catalog_index.py", "import_ps5_community_catalog.py")) {
-    Copy-Item -LiteralPath (Join-Path $Root "tools\$catalogTool") -Destination (Join-Path $catalogToolsDst $catalogTool) -Force
-}
-
-$manifestSrc = Join-Path $Root "VibeCodingToolsDown\dist\vibecoding"
-if (Test-Path $manifestSrc) {
-    Write-Host "Copy VibeCodingToolsDown/dist/vibecoding/ (manifest for VirtualBox etc.)..."
-    $manifestDst = Join-Path $Stage "VibeCodingToolsDown\dist\vibecoding"
-    New-Item -ItemType Directory -Force -Path (Split-Path $manifestDst) | Out-Null
-    Copy-Item $manifestSrc $manifestDst -Recurse -Force
-} else {
-    Write-Warning "Missing $manifestSrc — run: python VibeCodingToolsDown/scripts/build_manifest.py"
-}
-
-Write-Host "Copy soft_page_check index (search_soft_pages)..."
-$spcSrc = Join-Path $Root "tools\soft_page_check"
-$spcDst = Join-Path $Stage "tools\soft_page_check"
-New-Item -ItemType Directory -Force -Path $spcDst | Out-Null
-$spcItems = @("history", "list", "soft_pages_urls.txt", "watch_tier_a_urls.txt", "list_scopes.py", "423down_digest_urls.txt")
-foreach ($item in $spcItems) {
-    $src = Join-Path $spcSrc $item
-    if (-not (Test-Path $src)) { continue }
-    $dst = Join-Path $spcDst $item
-    if (Test-Path $src -PathType Container) {
-        Copy-Item $src $dst -Recurse -Force
-    } else {
-        Copy-Item $src $dst -Force
-    }
-}
-
-Write-Host "Copy docs..."
-$docs = @(
-    "catalog.html",
-    "CATALOG.md",
-    "CATALOG.mobile.md",
-    "CATALOG.switch.md",
-    "CATALOG.ps5.md",
-    "RECOMMENDED.zh-CN.md",
-    "RECOMMENDED.md"
-)
-foreach ($name in $docs) {
-    $src = Join-Path $Root $name
-    if (Test-Path $src) { Copy-Item $src (Join-Path $Stage $name) -Force }
-}
-
-Copy-Item (Join-Path $Root "release\windows\README.txt") (Join-Path $Stage "README.txt") -Force
-Copy-Item (Join-Path $Root "release\windows\saved_apps_windows.example.json") (Join-Path $Stage "saved_apps_windows.example.json") -Force
-Set-Content -Path (Join-Path $Stage "VERSION.txt") -Value $ver -Encoding utf8
-
-if (Test-Path $ZipPath) { Remove-Item $ZipPath -Force }
-Write-Host "Compress -> $ZipPath"
-Compress-Archive -Path $Stage -DestinationPath $ZipPath -CompressionLevel Optimal
-
-$sizeMb = [math]::Round((Get-Item $ZipPath).Length / 1MB, 2)
-Write-Host ""
-Write-Host "Done." -ForegroundColor Green
-Write-Host "  Folder: $Stage"
-Write-Host "  Zip:    $ZipPath  ($sizeMb MB)"
-Write-Host "  Upload the zip to GitHub Releases as Windows portable bundle."

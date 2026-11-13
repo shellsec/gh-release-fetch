@@ -1,33 +1,14 @@
 @echo off
-chcp 65001 >nul 2>&1
+setlocal
 set PYTHONIOENCODING=utf-8
 set PYTHONUTF8=1
+chcp 65001 >nul 2>&1
 cd /d "%~dp0"
-
-echo 清单: iOS App Store  （apps-mobile，打开商店页，不下载 IPA）
-echo.
-
-if not exist "%~dp0lookup_app.py" goto try_exe
-
-python -c "import requests, bs4" >nul 2>&1
-if not errorlevel 1 if exist "%~dp0lookup_app.py" (
-    python lookup_app.py --apps-dir apps-mobile --platform ios %*
-    goto finish
+set "GHRF_EXE=%~dp0GHReleaseFetch.exe"
+if not exist "%GHRF_EXE%" set "GHRF_EXE=%~dp0dist\exe\GHReleaseFetch.exe"
+if exist "%GHRF_EXE%" (
+    "%GHRF_EXE%" --gui-lookup --apps-dir apps-mobile --platform ios %*
+    exit /b
 )
-
-:try_exe
-if exist "%~dp0lookup_app.exe" (
-    "%~dp0lookup_app.exe" --apps-dir apps-mobile --platform ios %*
-    goto finish
-)
-
-echo [ERROR] 未找到 Python 或 lookup_app.exe
-echo   有 Python: 安装 Python 3 后直接运行本 bat
-echo   无 Python: powershell -File tools\build_exe.ps1 后复制 dist\exe\lookup_app.exe 到本目录
-pause
+echo [ERROR] GHReleaseFetch.exe was not found.
 exit /b 1
-
-:finish
-set EXITCODE=%ERRORLEVEL%
-if %EXITCODE% neq 0 pause
-exit /b %EXITCODE%

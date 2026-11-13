@@ -372,5 +372,101 @@
     "kill_before_install": false,
     "run_installer": false,
     "releases_url": "https://apps.apple.com/app/id951937596"
+  },
+  {
+    "id": "netnewswire_ios",
+    "简介": "NetNewsWire（RSS 订阅阅读器；App Store 中国区）",
+    "分类": "网络与通讯",
+    "enabled": false,
+    "aliases": [
+      "NetNewsWire"
+    ],
+    "repo_path": "Ranchero-Software/NetNewsWire",
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/cn/app/netnewswire-rss-reader/id1480640210",
+    "releases_url": "https://apps.apple.com/cn/app/netnewswire-rss-reader/id1480640210",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "使用说明": "已核对 App Store 中国区正式版，要求 iOS 17.0 或更新版本。",
+    "_核查": {
+      "日期": "2026-11-09",
+      "来源": "https://apps.apple.com/cn/app/netnewswire-rss-reader/id1480640210",
+      "状态": "app-store",
+      "发布版本": "7.2",
+      "发布日期": "2026-10-17"
+    }
+  },
+  {
+    "id": "ice_cubes_ios",
+    "简介": "Ice Cubes（Mastodon 客户端；App Store 中国区）",
+    "分类": "网络与通讯",
+    "enabled": false,
+    "aliases": [
+      "Ice Cubes"
+    ],
+    "repo_path": "Dimillian/IceCubesApp",
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/cn/app/ice-cubes-for-mastodon/id6444915884",
+    "releases_url": "https://apps.apple.com/cn/app/ice-cubes-for-mastodon/id6444915884",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "使用说明": "已核对 App Store 中国区正式版，要求 iOS 18.5 或更新版本。",
+    "_核查": {
+      "日期": "2026-11-09",
+      "来源": "https://apps.apple.com/cn/app/ice-cubes-for-mastodon/id6444915884",
+      "状态": "app-store",
+      "发布版本": "2.1.6",
+      "发布日期": "2026-10-15"
+    }
+  },
+  {
+    "id": "mlem_ios",
+    "简介": "Mlem（Lemmy 客户端；App Store 中国区）",
+    "分类": "网络与通讯",
+    "enabled": false,
+    "aliases": [
+      "Mlem"
+    ],
+    "repo_path": "mlemgroup/mlem",
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/cn/app/mlem-for-lemmy/id6450543782",
+    "releases_url": "https://apps.apple.com/cn/app/mlem-for-lemmy/id6450543782",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "使用说明": "已核对 App Store 中国区正式版，要求 iOS 26.0 或更新版本。",
+    "_核查": {
+      "日期": "2026-11-09",
+      "来源": "https://apps.apple.com/cn/app/mlem-for-lemmy/id6450543782",
+      "状态": "app-store",
+      "发布版本": "2.6.1",
+      "发布日期": "2026-10-20"
+    }
+  },
+  {
+    "id": "monal_ios",
+    "简介": "Monal（XMPP 即时通讯客户端；App Store 美国区）",
+    "分类": "网络与通讯",
+    "enabled": false,
+    "aliases": [
+      "Monal"
+    ],
+    "repo_path": "monal-im/Monal",
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/us/app/monal-xmpp-chat/id317711500",
+    "releases_url": "https://apps.apple.com/us/app/monal-xmpp-chat/id317711500",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "使用说明": "已核对 App Store 美国区正式版，要求 iOS 14.0 或更新版本。中国区未查到该条目。",
+    "_核查": {
+      "日期": "2026-11-09",
+      "来源": "https://apps.apple.com/us/app/monal-xmpp-chat/id317711500",
+      "状态": "app-store",
+      "发布版本": "6.4.24",
+      "发布日期": "2026-10-26"
+    }
   }
 ]

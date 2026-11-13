@@ -1,0 +1,26 @@
+[
+  {
+    "id": "twofas_ios",
+    "简介": "2FAS Auth（生成两步验证动态码；App Store 中国区）",
+    "分类": "安全",
+    "enabled": false,
+    "aliases": [
+      "2FAS Auth"
+    ],
+    "repo_path": "twofas/2fas-ios",
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/cn/app/2fa-authenticator-2fas/id1217793794",
+    "releases_url": "https://apps.apple.com/cn/app/2fa-authenticator-2fas/id1217793794",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "使用说明": "已核对 App Store 中国区正式版，要求 iOS 18.6 或更新版本。",
+    "_核查": {
+      "日期": "2026-11-09",
+      "来源": "https://apps.apple.com/cn/app/2fa-authenticator-2fas/id1217793794",
+      "状态": "app-store",
+      "发布版本": "6.0.2",
+      "发布日期": "2026-11-03"
+    }
+  }
+]

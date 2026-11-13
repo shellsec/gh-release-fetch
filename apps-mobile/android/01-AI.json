@@ -351,5 +351,67 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "lokalbot",
+    "简介": "LokalBot（桌面 LokalBot 的手机伴侣，可录制会议并交给配对电脑处理）",
+    "分类": "AI",
+    "enabled": false,
+    "aliases": [
+      "LokalBot"
+    ],
+    "repo_path": "stevyhacker/LokalBot",
+    "releases_url": "https://github.com/stevyhacker/LokalBot/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "run_installer": false,
+    "kill_before_install": false,
+    "use_download_filename": true,
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers": [
+      ".apk"
+    ],
+    "installer_filename_regex": "LokalBot\\-\\d+(?:\\.\\d+){0,3}\\-android\\.apk",
+    "使用说明": "Android 10+，需与桌面 LokalBot 配对；该发布说明标注手机录音仅在模拟器验证。",
+    "_核查": {
+      "日期": "2026-11-09",
+      "来源": "https://github.com/stevyhacker/LokalBot/releases/tag/v0.12.2",
+      "状态": "release",
+      "发布标签": "v0.12.2"
+    },
+    "download_names": [
+      "LokalBot-{ver_plain}-android.apk"
+    ]
+  },
+  {
+    "id": "kelivo",
+    "简介": "Kelivo（支持多个模型服务的 AI 对话客户端）",
+    "分类": "AI",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "Chevey339/kelivo",
+    "releases_url": "https://github.com/Chevey339/kelivo/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_filename_regex": "Kelivo_android_\\d+(?:\\.\\d+)+\\+\\d+_arm64\\-v8a\\.apk",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "download_names": [
+      "Kelivo_android_1.3.5+85_arm64-v8a.apk"
+    ],
+    "save_subdir": "kelivo",
+    "_核查": {
+      "日期": "2026-11-12",
+      "来源": "https://github.com/Chevey339/kelivo/releases/tag/v1.3.5",
+      "状态": "release",
+      "发布标签": "v1.3.5",
+      "发布日期": "2026-11-08"
+    }
   }
 ]

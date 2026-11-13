@@ -1424,5 +1424,29 @@
     ],
     "releases_url": "https://bgithub.xyz/doublecmd/doublecmd/releases",
     "repo_path": "doublecmd/doublecmd"
+  },
+  {
+    "id": "kensaku",
+    "简介": "Kensaku（在本地搜索文档、代码和截图，支持 OCR 与语义搜索；x64 .exe）",
+    "分类": "工具",
+    "enabled": false,
+    "releases_url": "https://github.com/yjid/kensaku/releases/latest",
+    "repo_path": "yjid/kensaku",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      ".exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "installer_filename_regex": "kensaku_\\d+(?:\\.\\d+){1,3}_x64-setup\\.exe",
+    "windows_installer": true,
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "aliases": [
+      "Kensaku"
+    ]
   }
 ]

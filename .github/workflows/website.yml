@@ -1,0 +1,65 @@
+name: Software directory website
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [master]
+    paths:
+      - 'website/**'
+      - 'apps/**'
+      - 'apps-mobile/**'
+      - 'apps-tv/**'
+      - 'apps-handheld/**'
+      - 'apps-switch/**'
+      - 'apps-ps4/**'
+      - 'apps-ps5/**'
+      - 'apps-vita/**'
+      - 'apps-xbox/**'
+      - 'tests/test_website.py'
+      - '.github/workflows/website.yml'
+  schedule:
+    - cron: '23 */6 * * *'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: software-directory-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test catalog, download matching and SEO
+        run: python -m unittest discover -s tests -p test_website.py
+      - name: Check browser script syntax
+        run: node --check website/assets/app.js
+      - name: Configure Pages
+        id: pages
+        uses: actions/configure-pages@v5
+      - name: Build website and resolve stable downloads
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          SITE_URL: ${{ vars.WEBSITE_SITE_URL || steps.pages.outputs.base_url }}
+        run: python -m website.build --site-url "$SITE_URL" --refresh-downloads
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist/site
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,7 +1,7 @@
 [
   {
     "id": "nx-ovlloader-zdm",
-    "简介": "nx-ovlloader 汉化分支",
+    "简介": "加载 zdm 分支支持的悬浮菜单插件",
     "分类": "悬浮插件",
     "enabled": false,
     "aliases": [
@@ -46,7 +46,7 @@
   },
   {
     "id": "ultrahand-zdm",
-    "简介": "Ultrahand 汉化菜单",
+    "简介": "用中文悬浮菜单打开插件和运行脚本",
     "分类": "悬浮插件",
     "enabled": false,
     "aliases": [
@@ -91,7 +91,7 @@
   },
   {
     "id": "ovl-sysmodules-zdm",
-    "简介": "系统模块管理悬浮插件",
+    "简介": "在中文悬浮菜单里启用或停用系统模块",
     "分类": "悬浮插件",
     "enabled": false,
     "aliases": [
@@ -136,7 +136,7 @@
   },
   {
     "id": "edizon-overlay-zdm",
-    "简介": "EdiZon 汉化金手指悬浮插件",
+    "简介": "在中文悬浮界面中管理金手指和修改数值",
     "分类": "悬浮插件",
     "enabled": false,
     "aliases": [
@@ -182,7 +182,7 @@
   },
   {
     "id": "sys-clk-zdm",
-    "简介": "sys-clk 汉化超频套件",
+    "简介": "用中文界面调整游戏运行频率",
     "分类": "悬浮插件",
     "enabled": false,
     "aliases": [
@@ -227,7 +227,7 @@
   },
   {
     "id": "status-monitor-zdm",
-    "简介": "Status Monitor 汉化监控悬浮插件",
+    "简介": "在中文悬浮界面中查看帧率和硬件状态",
     "分类": "悬浮插件",
     "enabled": false,
     "aliases": [

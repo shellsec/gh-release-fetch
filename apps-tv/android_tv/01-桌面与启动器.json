@@ -1,0 +1,142 @@
+[
+  {
+    "id": "aerial_tv",
+    "简介": "Aerial TV（面向国产电视的简洁电视桌面）",
+    "分类": "桌面与启动器",
+    "enabled": false,
+    "aliases": [
+      "Aerial TV"
+    ],
+    "repo_path": "pengchujin/aerial-tv",
+    "releases_url": "https://github.com/pengchujin/aerial-tv/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers": [
+      ".apk"
+    ],
+    "installer_filename_regex": "aerial\\-standard\\.apk",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "使用说明": "标准版要求 Android 5.0+；Lite、Guard 及各机型限制见作者说明。",
+    "_核查": {
+      "日期": "2026-11-09",
+      "来源": "https://github.com/pengchujin/aerial-tv/releases/tag/v1.89",
+      "状态": "release",
+      "发布标签": "v1.89",
+      "发布日期": "2026-11-09"
+    },
+    "download_names": [
+      "aerial-standard.apk"
+    ]
+  },
+  {
+    "id": "lounge_tv",
+    "简介": "Lounge（面向 Android TV 和 Google TV 的可定制电视桌面）",
+    "分类": "桌面与启动器",
+    "enabled": false,
+    "aliases": [
+      "Lounge"
+    ],
+    "repo_path": "Gingerbreadfork/lounge",
+    "releases_url": "https://github.com/Gingerbreadfork/lounge/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers": [
+      ".apk"
+    ],
+    "installer_filename_regex": "Lounge\\-\\d+(?:\\.\\d+){0,3}\\.apk",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "使用说明": "适用设备及桌面设置方式见作者说明。",
+    "_核查": {
+      "日期": "2026-11-09",
+      "来源": "https://github.com/Gingerbreadfork/lounge/releases/tag/v0.5.0",
+      "状态": "release",
+      "发布标签": "v0.5.0",
+      "发布日期": "2026-11-09"
+    },
+    "download_names": [
+      "Lounge-{ver_plain}.apk"
+    ]
+  },
+  {
+    "id": "rusttv",
+    "简介": "RustTV Launcher（用 Rust 和 Slint 构建的遥控器电视桌面）",
+    "分类": "桌面与启动器",
+    "enabled": false,
+    "aliases": [
+      "RustTV Launcher"
+    ],
+    "repo_path": "damienmiheev/rusttv",
+    "releases_url": "https://github.com/damienmiheev/rusttv/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers": [
+      ".apk"
+    ],
+    "installer_filename_regex": "rusttv\\-launcher\\-\\d+(?:\\.\\d+){0,3}\\-arm64\\-v8a\\.apk",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "使用说明": "此条是 arm64-v8a 电视 APK；32 位 ARM 和 x86_64 版见发布页。",
+    "_核查": {
+      "日期": "2026-11-09",
+      "来源": "https://github.com/damienmiheev/rusttv/releases/tag/v0.3.2",
+      "状态": "release",
+      "发布标签": "v0.3.2",
+      "发布日期": "2026-11-03"
+    },
+    "download_names": [
+      "rusttv-launcher-{ver_plain}-arm64-v8a.apk"
+    ]
+  },
+  {
+    "id": "luncher",
+    "简介": "Luncher（可离线使用的轻量电视桌面）",
+    "分类": "桌面与启动器",
+    "enabled": false,
+    "aliases": [
+      "Luncher"
+    ],
+    "repo_path": "CVasilakis/luncher",
+    "releases_url": "https://github.com/CVasilakis/luncher/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers": [
+      ".apk"
+    ],
+    "installer_filename_regex": "luncher\\-v?\\d+(?:\\.\\d+){0,3}\\.apk",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "使用说明": "使用 GitHub 正式 APK；更新时核对原安装渠道的签名。",
+    "_核查": {
+      "日期": "2026-11-09",
+      "来源": "https://github.com/CVasilakis/luncher/releases/tag/v1.0.0",
+      "状态": "release",
+      "发布标签": "v1.0.0",
+      "发布日期": "2026-11-01"
+    },
+    "download_url_templates": [
+      "https://github.com/CVasilakis/luncher/releases/download/{ver}/luncher-{ver}.apk"
+    ]
+  }
+]

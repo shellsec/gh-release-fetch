@@ -1,0 +1,1510 @@
+[
+  {
+    "id": "flowpick",
+    "简介": "FlowPick（媒体资源嗅探浏览器扩展，Chrome zip；小众软件推荐）",
+    "分类": "浏览器扩展",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": false,
+    "releases_url": "https://bgithub.xyz/ezwebtools/flowpick/releases",
+    "repo_path": "ezwebtools/flowpick",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "flowpick-",
+      "-chrome.zip"
+    ],
+    "href_exclude_substrings": [
+      "firefox",
+      "sources"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "use_download_filename": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "子分类": "下载与嗅探",
+    "chrome_source_repo": "ezwebtools/flowpick"
+  },
+  {
+    "id": "immersive_translate",
+    "简介": "沉浸式翻译（浏览器扩展离线包，Chrome zip；解压后开发者模式加载）",
+    "分类": "浏览器扩展",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/immersive-translate/immersive-translate/releases",
+    "repo_path": "immersive-translate/immersive-translate",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "chrome-immersive-translate-",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "firefox",
+      "user.js",
+      ".crx",
+      "safari"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "chrome-immersive-translate-{ver}.zip"
+    ],
+    "save_name": "chrome-immersive-translate-{ver}.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "子分类": "办公翻译"
+  },
+  {
+    "id": "ghproxy-extension-chromium",
+    "简介": "GitHub Accelerator（Chrome / Edge 111+，GitHub 下载加速，.zip；解压后在扩展管理页用开发者模式加载）",
+    "分类": "浏览器扩展",
+    "enabled": false,
+    "releases_url": "https://github.com/hubporg/ghproxy-extension/releases/latest",
+    "repo_path": "hubporg/ghproxy-extension",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      ".zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_filename_regex": "ghproxy-extension-chrome\\.zip",
+    "windows_installer": false,
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "aliases": [
+      "ghproxy-extension",
+      "GitHub 下载加速",
+      "Chrome / Edge 111+"
+    ],
+    "子分类": "下载与嗅探",
+    "chrome_source_repo": "hubporg/ghproxy-extension"
+  },
+  {
+    "id": "ghproxy-extension-firefox",
+    "简介": "GitHub Accelerator（Firefox 140+，GitHub 下载加速，.xpi；在 Firefox 中从文件安装）",
+    "分类": "浏览器扩展",
+    "enabled": false,
+    "releases_url": "https://github.com/hubporg/ghproxy-extension/releases/latest",
+    "repo_path": "hubporg/ghproxy-extension",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      ".xpi"
+    ],
+    "installer_extensions": [
+      ".xpi"
+    ],
+    "installer_filename_regex": "github_accelerator-\\d+\\.\\d+\\.\\d+\\.xpi",
+    "windows_installer": false,
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "aliases": [
+      "ghproxy-extension",
+      "GitHub 下载加速",
+      "Firefox 140+"
+    ],
+    "子分类": "下载与嗅探"
+  },
+  {
+    "id": "react-developer-tools",
+    "简介": "React Developer Tools（Chrome / Edge / Firefox）｜检查 React 组件、Props 与渲染性能",
+    "分类": "浏览器扩展",
+    "子分类": "开发调试",
+    "enabled": false,
+    "aliases": [
+      "React Developer Tools",
+      "开发调试"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://react.dev/learn/react-developer-tools",
+    "run_installer": false,
+    "chrome_source_repo": "facebook/react",
+    "chrome_store_url": "https://chromewebstore.google.com/detail/fmkadmapgofadopljbjfkapdkoienihi"
+  },
+  {
+    "id": "vue-devtools-extension",
+    "简介": "Vue DevTools（Chrome）｜调试 Vue 3 组件和状态",
+    "分类": "浏览器扩展",
+    "子分类": "开发调试",
+    "enabled": false,
+    "aliases": [
+      "Vue DevTools",
+      "开发调试"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://devtools.vuejs.org/guide/browser-extension",
+    "run_installer": false,
+    "chrome_source_repo": "vuejs/devtools",
+    "chrome_store_url": "https://chromewebstore.google.com/detail/nhdogjmejiglipccpnnnanhbledajbpd"
+  },
+  {
+    "id": "redux-devtools-extension",
+    "简介": "Redux DevTools（Chrome / Firefox）｜追踪 Redux 状态和动作",
+    "分类": "浏览器扩展",
+    "子分类": "开发调试",
+    "enabled": false,
+    "aliases": [
+      "Redux DevTools",
+      "开发调试"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://github.com/reduxjs/redux-devtools/tree/main/extension",
+    "run_installer": false,
+    "chrome_source_repo": "reduxjs/redux-devtools"
+  },
+  {
+    "id": "privacy-badger",
+    "简介": "Privacy Badger（Chrome / Edge / Firefox / Opera）｜拦截跨站跟踪器",
+    "分类": "浏览器扩展",
+    "子分类": "隐私防护",
+    "enabled": false,
+    "aliases": [
+      "Privacy Badger",
+      "隐私防护"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://privacybadger.org/",
+    "run_installer": false,
+    "chrome_source_repo": "EFForg/privacybadger",
+    "chrome_store_url": "https://chromewebstore.google.com/detail/pkehgijcmpdhfbdbbnkijodmdjhbjlgp"
+  },
+  {
+    "id": "ublock-origin-firefox",
+    "简介": "uBlock Origin（Firefox）｜按过滤规则拦截广告和跟踪请求",
+    "分类": "浏览器扩展",
+    "子分类": "广告拦截",
+    "enabled": false,
+    "aliases": [
+      "uBlock Origin",
+      "广告拦截"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://github.com/gorhill/uBlock#installation",
+    "run_installer": false
+  },
+  {
+    "id": "ublock-origin-lite",
+    "简介": "uBlock Origin Lite（Chrome / Edge / Firefox）｜使用 Manifest V3 规则过滤广告与追踪",
+    "分类": "浏览器扩展",
+    "子分类": "广告拦截",
+    "enabled": false,
+    "aliases": [
+      "uBlock Origin Lite",
+      "广告拦截"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://github.com/uBlockOrigin/uBOL-home/releases/latest#installation",
+    "run_installer": false,
+    "chrome_store_url": "https://chromewebstore.google.com/detail/ddkjiahejlhfcafbddmgiahcphecmpfh",
+    "chrome_source_repo": "uBlockOrigin/uBOL-home"
+  },
+  {
+    "id": "deepl-translate-extension",
+    "简介": "DeepL 浏览器扩展（Chrome）｜翻译网页选中文字",
+    "分类": "浏览器扩展",
+    "子分类": "办公翻译",
+    "enabled": false,
+    "aliases": [
+      "DeepL 浏览器扩展",
+      "办公翻译"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://www.deepl.com/en/chrome-extension",
+    "run_installer": false,
+    "chrome_store_url": "https://chromewebstore.google.com/detail/cofdbpoegempjloogbagkncekinflcnj"
+  },
+  {
+    "id": "saladict-extension",
+    "简介": "沙拉查词（Chrome / Edge / Firefox）｜多词典划词查询",
+    "分类": "浏览器扩展",
+    "子分类": "办公翻译",
+    "enabled": false,
+    "aliases": [
+      "沙拉查词",
+      "办公翻译"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://saladict.crimx.com/download.html",
+    "run_installer": false,
+    "chrome_source_repo": "crimx/ext-saladict"
+  },
+  {
+    "id": "zotero-connector",
+    "简介": "Zotero Connector（Chrome / Edge / Firefox）｜将网页文献元数据存入 Zotero",
+    "分类": "浏览器扩展",
+    "子分类": "学习科研",
+    "enabled": false,
+    "aliases": [
+      "Zotero Connector",
+      "学习科研",
+      "学生"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://www.zotero.org/download/#connectors",
+    "run_installer": false,
+    "chrome_store_url": "https://chromewebstore.google.com/detail/ekhagklcjbdpajgpjgmbionohlpdbjgc"
+  },
+  {
+    "id": "hypothesis-extension",
+    "简介": "Hypothesis（Chrome）｜对网页及 PDF 添加高亮和协作批注",
+    "分类": "浏览器扩展",
+    "子分类": "阅读研究",
+    "enabled": false,
+    "aliases": [
+      "Hypothesis",
+      "阅读研究",
+      "学生"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://chromewebstore.google.com/detail/bjfhmglciegochdpefhhlphglcehbmek",
+    "run_installer": false,
+    "chrome_source_repo": "hypothesis/browser-extension"
+  },
+  {
+    "id": "dark-reader-extension",
+    "简介": "Dark Reader（Chrome / Edge / Firefox）｜为网页生成暗色主题",
+    "分类": "浏览器扩展",
+    "子分类": "阅读研究",
+    "enabled": false,
+    "aliases": [
+      "Dark Reader",
+      "阅读研究",
+      "学生"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://darkreader.org/",
+    "run_installer": false,
+    "chrome_source_repo": "darkreader/darkreader",
+    "chrome_store_url": "https://chromewebstore.google.com/detail/eimadpbcbfnmbkopoojfekhnkhdbieeh"
+  },
+  {
+    "id": "screenity-extension",
+    "简介": "Screenity（Chrome）｜录制屏幕并添加标注",
+    "分类": "浏览器扩展",
+    "子分类": "截图录屏",
+    "enabled": false,
+    "aliases": [
+      "Screenity",
+      "截图录屏",
+      "自媒体"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://screenity.io/",
+    "run_installer": false,
+    "chrome_source_repo": "alyssaxuu/screenity",
+    "chrome_store_url": "https://chromewebstore.google.com/detail/kbbdabhdfibnancpjfhlkhafgdilcnji"
+  },
+  {
+    "id": "gofullpage-extension",
+    "简介": "GoFullPage（Chrome / Edge）｜截取整页并导出图片或 PDF",
+    "分类": "浏览器扩展",
+    "子分类": "截图录屏",
+    "enabled": false,
+    "aliases": [
+      "GoFullPage",
+      "截图录屏",
+      "自媒体"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://gofullpage.com/",
+    "run_installer": false
+  },
+  {
+    "id": "stylus-extension",
+    "简介": "Stylus（Chrome / Firefox）｜给网站应用自定义 CSS",
+    "分类": "浏览器扩展",
+    "子分类": "设计与样式",
+    "enabled": false,
+    "aliases": [
+      "Stylus",
+      "设计与样式"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://github.com/openstyles/stylus",
+    "run_installer": false,
+    "chrome_source_repo": "openstyles/stylus",
+    "chrome_store_url": "https://chromewebstore.google.com/detail/clngdbkpkpeebahjckkjfobafhncgmne"
+  },
+  {
+    "id": "colorzilla-extension",
+    "简介": "ColorZilla（Chrome / Firefox）｜网页取色、分析调色板",
+    "分类": "浏览器扩展",
+    "子分类": "设计与样式",
+    "enabled": false,
+    "aliases": [
+      "ColorZilla",
+      "设计与样式"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://www.colorzilla.com/",
+    "run_installer": false
+  },
+  {
+    "id": "sider-extension",
+    "简介": "Sider（Chrome）｜在网页侧栏使用 AI 对话、总结和翻译",
+    "分类": "浏览器扩展",
+    "子分类": "AI 助手",
+    "enabled": false,
+    "aliases": [
+      "Sider",
+      "AI 助手"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://chromewebstore.google.com/detail/difoiogjjojoaoomphldepapgpbgkhkb",
+    "run_installer": false
+  },
+  {
+    "id": "bitwarden-extension",
+    "简介": "Bitwarden 浏览器扩展（Chrome / Edge / Firefox）｜管理密码和通行密钥、自动填充",
+    "分类": "浏览器扩展",
+    "子分类": "密码安全",
+    "enabled": false,
+    "aliases": [
+      "Bitwarden 浏览器扩展",
+      "密码安全"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://bitwarden.com/download/#downloads-web-browser",
+    "run_installer": false,
+    "chrome_source_repo": "bitwarden/clients",
+    "chrome_store_url": "https://chromewebstore.google.com/detail/nngceckbapebfimnlniiiahkandclblb"
+  },
+  {
+    "id": "1password-extension",
+    "简介": "1Password 浏览器扩展（Chrome / Edge / Firefox）｜管理密码和通行密钥、自动填充",
+    "分类": "浏览器扩展",
+    "子分类": "密码安全",
+    "enabled": false,
+    "aliases": [
+      "1Password 浏览器扩展",
+      "密码安全"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://1password.com/downloads/browser-extension/",
+    "run_installer": false,
+    "chrome_store_url": "https://chromewebstore.google.com/detail/aeblfdkhhhdcdjpifhhbdiojplfjncoa"
+  },
+  {
+    "id": "obsidian-web-clipper",
+    "简介": "Obsidian Web Clipper（Chrome / Edge / Firefox）｜剪藏网页并按模板生成笔记",
+    "分类": "浏览器扩展",
+    "子分类": "笔记剪藏",
+    "enabled": false,
+    "aliases": [
+      "Obsidian Web Clipper",
+      "笔记剪藏"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://obsidian.md/help/web-clipper",
+    "run_installer": false,
+    "chrome_store_url": "https://chromewebstore.google.com/detail/cnjifjpddelmedmihgijeibhnjfabmlf",
+    "chrome_source_repo": "obsidianmd/obsidian-clipper"
+  },
+  {
+    "id": "notion-web-clipper",
+    "简介": "Notion Web Clipper（Chrome）｜将网页存入 Notion",
+    "分类": "浏览器扩展",
+    "子分类": "笔记剪藏",
+    "enabled": false,
+    "aliases": [
+      "Notion Web Clipper",
+      "笔记剪藏"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://www.notion.com/web-clipper",
+    "run_installer": false,
+    "chrome_store_url": "https://chromewebstore.google.com/detail/knheggckgoiihginacbkhaalnibhilkk"
+  },
+  {
+    "id": "global-speed-extension",
+    "简介": "Global Speed（Chrome / Edge / Firefox）｜调整网页视频和音频的播放速度",
+    "分类": "浏览器扩展",
+    "子分类": "视频增强",
+    "enabled": false,
+    "aliases": [
+      "Global Speed",
+      "视频增强",
+      "自媒体"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://github.com/polywock/globalSpeed",
+    "run_installer": false
+  },
+  {
+    "id": "cat-catch-extension",
+    "简介": "猫抓 Cat Catch（Chrome / Edge / Firefox）｜识别网页加载的媒体资源",
+    "分类": "浏览器扩展",
+    "子分类": "下载与嗅探",
+    "enabled": false,
+    "aliases": [
+      "猫抓 Cat Catch",
+      "下载与嗅探",
+      "自媒体"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://github.com/xifangczy/cat-catch#安装",
+    "run_installer": false,
+    "chrome_source_repo": "xifangczy/cat-catch"
+  },
+  {
+    "id": "idm-integration-extension",
+    "简介": "IDM Integration Module（Chrome）｜接管浏览器下载并交给 Windows 上的 IDM",
+    "分类": "浏览器扩展",
+    "子分类": "下载与嗅探",
+    "enabled": false,
+    "aliases": [
+      "IDM Integration Module",
+      "下载与嗅探",
+      "自媒体"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://www.internetdownloadmanager.com/register/new_faq/chrome_extension.html",
+    "run_installer": false
+  },
+  {
+    "id": "vimium-extension",
+    "简介": "Vimium（Chrome / Firefox）｜使用键盘快捷键导航网页",
+    "分类": "浏览器扩展",
+    "子分类": "效率工具",
+    "enabled": false,
+    "aliases": [
+      "Vimium",
+      "效率工具"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://github.com/philc/vimium",
+    "run_installer": false,
+    "chrome_source_repo": "philc/vimium",
+    "chrome_store_url": "https://chromewebstore.google.com/detail/dbepggeogbaibhgnhhndojpepiihcmeb"
+  },
+  {
+    "id": "violentmonkey-extension",
+    "简介": "Violentmonkey 暴力猴（Firefox / Edge）｜管理用户脚本",
+    "分类": "浏览器扩展",
+    "子分类": "效率工具",
+    "enabled": false,
+    "aliases": [
+      "Violentmonkey 暴力猴",
+      "效率工具"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://violentmonkey.github.io/get-it/",
+    "run_installer": false
+  },
+  {
+    "id": "bonjourr-extension",
+    "简介": "Bonjourr（Chrome / Edge / Firefox）｜自定义简洁的新标签页",
+    "分类": "浏览器扩展",
+    "子分类": "新标签页",
+    "enabled": false,
+    "aliases": [
+      "Bonjourr",
+      "新标签页"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://bonjourr.fr/",
+    "run_installer": false,
+    "chrome_source_repo": "victrme/Bonjourr",
+    "chrome_store_url": "https://chromewebstore.google.com/detail/dlnejlppicbjfcfcedcflplfjajinajd"
+  },
+  {
+    "id": "wetab-extension",
+    "简介": "WeTab（Chrome / Edge）｜使用小组件定制新标签页",
+    "分类": "浏览器扩展",
+    "子分类": "新标签页",
+    "enabled": false,
+    "aliases": [
+      "WeTab",
+      "新标签页"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://www.wetab.link/",
+    "run_installer": false
+  },
+  {
+    "id": "foxyproxy-standard-extension",
+    "简介": "FoxyProxy Standard（Chrome / Firefox）｜按规则切换代理配置",
+    "分类": "浏览器扩展",
+    "子分类": "代理与网络",
+    "enabled": false,
+    "aliases": [
+      "FoxyProxy Standard",
+      "代理与网络"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://getfoxyproxy.org/downloads/",
+    "run_installer": false,
+    "chrome_source_repo": "foxyproxy/browser-extension"
+  },
+  {
+    "id": "singlefile-extension",
+    "简介": "SingleFile（Chrome / Edge / Firefox）｜将整张网页保存为一个 HTML 文件供离线阅读",
+    "分类": "浏览器扩展",
+    "子分类": "阅读研究",
+    "enabled": false,
+    "aliases": [
+      "SingleFile",
+      "阅读研究",
+      "学生"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://github.com/gildas-lormeau/SingleFile#install",
+    "run_installer": false,
+    "chrome_store_url": "https://chromewebstore.google.com/detail/mpiodijhokgodhhofbcjdecpffjipkle",
+    "chrome_source_repo": "gildas-lormeau/SingleFile"
+  },
+  {
+    "id": "webbrain-extension",
+    "简介": "WebBrain（Chrome / Edge / Firefox）｜在浏览器中运行 AI 助手和网页自动化",
+    "分类": "浏览器扩展",
+    "子分类": "AI 助手",
+    "enabled": false,
+    "aliases": [
+      "WebBrain",
+      "AI 助手"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://github.com/webbrain-one/webbrain/releases/latest",
+    "run_installer": false,
+    "chrome_source_repo": "webbrain-one/webbrain"
+  },
+  {
+    "id": "better-deepseek-extension",
+    "简介": "Better DeepSeek（Chrome / Firefox）｜为 DeepSeek 网页增加会话增强与文件生成",
+    "分类": "浏览器扩展",
+    "子分类": "AI 助手",
+    "enabled": false,
+    "aliases": [
+      "Better DeepSeek",
+      "AI 助手"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://github.com/EdgeTypE/Better-DeepSeek/releases/latest",
+    "run_installer": false,
+    "chrome_source_repo": "EdgeTypE/Better-DeepSeek"
+  },
+  {
+    "id": "proton-pass-extension",
+    "简介": "Proton Pass（Chrome / Edge / Firefox）｜保存密码、通行密钥并创建邮箱别名",
+    "分类": "浏览器扩展",
+    "子分类": "密码安全",
+    "enabled": false,
+    "aliases": [
+      "Proton Pass",
+      "密码安全"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://proton.me/pass/download",
+    "run_installer": false,
+    "chrome_source_repo": "ProtonMail/WebClients",
+    "chrome_store_url": "https://chromewebstore.google.com/detail/ghmbeldphafepmbegfdlkpapadhbakde"
+  },
+  {
+    "id": "refined-github-extension",
+    "简介": "Refined GitHub（Chrome / Edge / Firefox）｜改善 GitHub 的代码浏览、PR 和通知界面",
+    "分类": "浏览器扩展",
+    "子分类": "开发调试",
+    "enabled": false,
+    "aliases": [
+      "Refined GitHub",
+      "开发调试"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://github.com/refined-github/refined-github",
+    "run_installer": false,
+    "chrome_source_repo": "refined-github/refined-github"
+  },
+  {
+    "id": "octotree-extension",
+    "简介": "Octotree（Chrome / Firefox）｜以树形目录浏览 GitHub 仓库文件",
+    "分类": "浏览器扩展",
+    "子分类": "开发调试",
+    "enabled": false,
+    "aliases": [
+      "Octotree",
+      "开发调试"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://www.octotree.io/download",
+    "run_installer": false,
+    "chrome_store_url": "https://chromewebstore.google.com/detail/bkhaagjahfmjljalopjnoealnfndnagc"
+  },
+  {
+    "id": "wappalyzer-extension",
+    "简介": "Wappalyzer（Chrome / Firefox）｜识别网页使用的框架与技术栈",
+    "分类": "浏览器扩展",
+    "子分类": "开发调试",
+    "enabled": false,
+    "aliases": [
+      "Wappalyzer",
+      "开发调试"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://www.wappalyzer.com/apps/",
+    "run_installer": false
+  },
+  {
+    "id": "adguard-browser-extension",
+    "简介": "AdGuard Ad Blocker（Chrome / Edge / Firefox / Opera）｜过滤网页广告、跟踪请求和弹窗",
+    "分类": "浏览器扩展",
+    "子分类": "广告拦截",
+    "enabled": false,
+    "aliases": [
+      "AdGuard Ad Blocker",
+      "广告拦截"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://adguard.com/en/adguard-browser-extension/overview.html",
+    "run_installer": false,
+    "chrome_source_repo": "AdguardTeam/AdguardBrowserExtension",
+    "chrome_store_url": "https://chromewebstore.google.com/detail/bgnkhhnnamicmpeenaelnjfhikgbkllg"
+  },
+  {
+    "id": "tampermonkey-extension",
+    "简介": "Tampermonkey（Chrome / Edge / Firefox）｜管理和运行网页用户脚本",
+    "分类": "浏览器扩展",
+    "子分类": "效率工具",
+    "enabled": false,
+    "aliases": [
+      "Tampermonkey",
+      "效率工具"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://www.tampermonkey.net/",
+    "run_installer": false,
+    "chrome_store_url": "https://chromewebstore.google.com/detail/dhdgffkkebhmkfjojejmpbldmpobfkfo"
+  },
+  {
+    "id": "onetab-extension",
+    "简介": "OneTab（Chrome / Firefox）｜将打开的标签页收纳为列表",
+    "分类": "浏览器扩展",
+    "子分类": "效率工具",
+    "enabled": false,
+    "aliases": [
+      "OneTab",
+      "效率工具"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://www.one-tab.com/",
+    "run_installer": false,
+    "chrome_store_url": "https://chromewebstore.google.com/detail/chphlpgkkbolifaimnlloiipkdnihall"
+  },
+  {
+    "id": "languagetool-extension",
+    "简介": "LanguageTool（Chrome / Edge / Firefox）｜检查网页输入的拼写和语法",
+    "分类": "浏览器扩展",
+    "子分类": "办公翻译",
+    "enabled": false,
+    "aliases": [
+      "LanguageTool",
+      "办公翻译"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://languagetool.org/services",
+    "run_installer": false
+  },
+  {
+    "id": "keepassxc-browser-extension",
+    "简介": "KeePassXC-Browser（Chrome / Edge / Firefox）｜连接本机 KeePassXC 密码库并自动填充",
+    "分类": "浏览器扩展",
+    "子分类": "密码安全",
+    "enabled": false,
+    "aliases": [
+      "KeePassXC-Browser",
+      "密码安全"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://keepassxc.org/download/#browser",
+    "run_installer": false,
+    "chrome_source_repo": "keepassxreboot/keepassxc-browser"
+  },
+  {
+    "id": "sponsorblock-extension",
+    "简介": "SponsorBlock（Chrome / Edge / Firefox）｜按社区标注跳过 YouTube 视频中的推广片段",
+    "分类": "浏览器扩展",
+    "子分类": "视频增强",
+    "enabled": false,
+    "aliases": [
+      "SponsorBlock",
+      "视频增强"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://sponsor.ajay.app/",
+    "run_installer": false,
+    "chrome_source_repo": "ajayyy/SponsorBlock",
+    "chrome_store_url": "https://chromewebstore.google.com/detail/mnjggcdmjocbbbhaepdhchncahnbgone"
+  },
+  {
+    "id": "raindrop-extension",
+    "简介": "Raindrop.io 扩展（Chrome / Edge / Firefox）｜保存网页书签并按集合与标签管理",
+    "分类": "浏览器扩展",
+    "子分类": "笔记剪藏",
+    "enabled": false,
+    "aliases": [
+      "Raindrop.io 扩展",
+      "笔记剪藏"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://raindrop.io/download",
+    "run_installer": false
+  },
+  {
+    "id": "firefox-containers-extension",
+    "简介": "Firefox Multi-Account Containers（Firefox）｜隔离不同账号的登录状态",
+    "分类": "浏览器扩展",
+    "子分类": "隐私防护",
+    "enabled": false,
+    "aliases": [
+      "Firefox Multi-Account Containers",
+      "隐私防护"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://github.com/mozilla/multi-account-containers",
+    "run_installer": false
+  },
+  {
+    "id": "ublacklist-extension",
+    "简介": "uBlacklist（Chrome / Firefox）｜按规则过滤搜索结果中的站点",
+    "分类": "浏览器扩展",
+    "子分类": "阅读研究",
+    "enabled": false,
+    "aliases": [
+      "uBlacklist",
+      "阅读研究"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://github.com/iorate/ublacklist",
+    "run_installer": false,
+    "chrome_source_repo": "iorate/ublacklist"
+  },
+  {
+    "id": "axe-devtools-extension",
+    "简介": "axe DevTools（Chrome / Edge / Firefox）｜扫描网页的无障碍问题",
+    "分类": "浏览器扩展",
+    "子分类": "无障碍检查",
+    "enabled": false,
+    "aliases": [
+      "axe DevTools",
+      "无障碍检查"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://www.deque.com/axe/devtools/extension/",
+    "run_installer": false,
+    "chrome_store_url": "https://chromewebstore.google.com/detail/lhdoppojpmngadmnindnejefpokejbdd"
+  },
+  {
+    "id": "wave-extension",
+    "简介": "WAVE（Chrome / Edge / Firefox）｜在页面上标记结构、对比度和无障碍问题",
+    "分类": "浏览器扩展",
+    "子分类": "无障碍检查",
+    "enabled": false,
+    "aliases": [
+      "WAVE",
+      "无障碍检查"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://wave.webaim.org/extension/",
+    "run_installer": false
+  },
+  {
+    "id": "requestly-extension",
+    "简介": "Requestly（Chrome / Edge / Firefox）｜重写请求、模拟接口和修改响应",
+    "分类": "浏览器扩展",
+    "子分类": "网页测试",
+    "enabled": false,
+    "aliases": [
+      "Requestly",
+      "网页测试"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://github.com/requestly/interceptor",
+    "run_installer": false
+  },
+  {
+    "id": "selenium-ide-extension",
+    "简介": "Selenium IDE（Chrome / Firefox）｜录制和回放浏览器测试步骤",
+    "分类": "浏览器扩展",
+    "子分类": "网页测试",
+    "enabled": false,
+    "aliases": [
+      "Selenium IDE",
+      "网页测试"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://www.selenium.dev/selenium-ide/",
+    "run_installer": false,
+    "chrome_source_repo": "SeleniumHQ/selenium-ide"
+  },
+  {
+    "id": "lighthouse-extension",
+    "简介": "Lighthouse（Chrome）｜生成网页性能、无障碍和 SEO 报告",
+    "分类": "浏览器扩展",
+    "子分类": "网页测试",
+    "enabled": false,
+    "aliases": [
+      "Lighthouse",
+      "网页测试"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://chromewebstore.google.com/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk",
+    "run_installer": false,
+    "chrome_source_repo": "GoogleChrome/lighthouse"
+  },
+  {
+    "id": "web-developer-extension",
+    "简介": "Web Developer（Chrome / Firefox）｜从工具栏检查表单、图片和网页结构",
+    "分类": "浏览器扩展",
+    "子分类": "开发调试",
+    "enabled": false,
+    "aliases": [
+      "Web Developer",
+      "开发调试"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://chrispederick.com/work/web-developer/",
+    "run_installer": false,
+    "chrome_source_repo": "chrispederick/web-developer"
+  },
+  {
+    "id": "sidebery-extension",
+    "简介": "Sidebery（Firefox）｜在侧栏用树形结构管理标签页和书签",
+    "分类": "浏览器扩展",
+    "子分类": "标签管理",
+    "enabled": false,
+    "aliases": [
+      "Sidebery",
+      "标签管理"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://github.com/mbnuqw/sidebery",
+    "run_installer": false
+  },
+  {
+    "id": "tab-session-manager-extension",
+    "简介": "Tab Session Manager（Chrome / Edge / Firefox）｜保存和恢复窗口及标签页会话",
+    "分类": "浏览器扩展",
+    "子分类": "标签管理",
+    "enabled": false,
+    "aliases": [
+      "Tab Session Manager",
+      "标签管理"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://github.com/sienori/Tab-Session-Manager",
+    "run_installer": false,
+    "chrome_source_repo": "sienori/Tab-Session-Manager"
+  },
+  {
+    "id": "simple-tab-groups-extension",
+    "简介": "Simple Tab Groups（Firefox）｜按项目整理标签页并切换分组",
+    "分类": "浏览器扩展",
+    "子分类": "标签管理",
+    "enabled": false,
+    "aliases": [
+      "Simple Tab Groups",
+      "标签管理"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://github.com/Drive4ik/simple-tab-groups",
+    "run_installer": false
+  },
+  {
+    "id": "tab-stash-extension",
+    "简介": "Tab Stash（Firefox）｜把标签页保存为可同步的书签分组",
+    "分类": "浏览器扩展",
+    "子分类": "标签管理",
+    "enabled": false,
+    "aliases": [
+      "Tab Stash",
+      "标签管理"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://github.com/josh-berry/tab-stash",
+    "run_installer": false
+  },
+  {
+    "id": "linkwarden-extension",
+    "简介": "Linkwarden 浏览器扩展（Chrome / Firefox）｜保存网页链接到自己的 Linkwarden 实例",
+    "分类": "浏览器扩展",
+    "子分类": "笔记剪藏",
+    "enabled": false,
+    "aliases": [
+      "Linkwarden 浏览器扩展",
+      "笔记剪藏"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://github.com/linkwarden/browser-extension",
+    "run_installer": false,
+    "chrome_source_repo": "linkwarden/browser-extension"
+  },
+  {
+    "id": "markdownload-extension",
+    "简介": "MarkDownload（Chrome / Edge / Firefox）｜把网页正文保存为 Markdown",
+    "分类": "浏览器扩展",
+    "子分类": "笔记剪藏",
+    "enabled": false,
+    "aliases": [
+      "MarkDownload",
+      "笔记剪藏"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://github.com/deathau/markdownload",
+    "run_installer": false,
+    "chrome_source_repo": "deathau/markdownload"
+  },
+  {
+    "id": "wallabagger-extension",
+    "简介": "Wallabagger（Chrome / Firefox）｜保存网页到 wallabag 稍后阅读",
+    "分类": "浏览器扩展",
+    "子分类": "阅读研究",
+    "enabled": false,
+    "aliases": [
+      "Wallabagger",
+      "阅读研究",
+      "学生"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://github.com/wallabag/wallabagger",
+    "run_installer": false,
+    "chrome_source_repo": "wallabag/wallabagger"
+  },
+  {
+    "id": "google-scholar-button-extension",
+    "简介": "Google Scholar Button（Chrome）｜从网页快速查找论文及引用格式",
+    "分类": "浏览器扩展",
+    "子分类": "学习科研",
+    "enabled": false,
+    "aliases": [
+      "Google Scholar Button",
+      "学习科研",
+      "学生"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://chromewebstore.google.com/detail/google-scholar-button/ldipcbpaocekfooobnbcddclnhejkcpn",
+    "run_installer": false
+  },
+  {
+    "id": "unpaywall-extension",
+    "简介": "Unpaywall（Chrome / Firefox）｜查找论文的开放获取版本",
+    "分类": "浏览器扩展",
+    "子分类": "学习科研",
+    "enabled": false,
+    "aliases": [
+      "Unpaywall",
+      "学习科研",
+      "学生"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://unpaywall.org/products/extension",
+    "run_installer": false,
+    "chrome_source_repo": "ourresearch/unpaywall"
+  },
+  {
+    "id": "language-reactor-extension",
+    "简介": "Language Reactor（Chrome）｜用双语字幕和查词功能辅助观看视频",
+    "分类": "浏览器扩展",
+    "子分类": "语言学习",
+    "enabled": false,
+    "aliases": [
+      "Language Reactor",
+      "语言学习",
+      "学生"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://www.languagereactor.com/",
+    "run_installer": false
+  },
+  {
+    "id": "read-aloud-extension",
+    "简介": "Read Aloud（Chrome / Edge / Firefox）｜用语音朗读网页文章",
+    "分类": "浏览器扩展",
+    "子分类": "辅助阅读",
+    "enabled": false,
+    "aliases": [
+      "Read Aloud",
+      "辅助阅读"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://readaloud.app/",
+    "run_installer": false,
+    "chrome_source_repo": "ken107/read-aloud"
+  },
+  {
+    "id": "loom-extension",
+    "简介": "Loom（Chrome）｜录屏并分享链接供团队异步查看",
+    "分类": "浏览器扩展",
+    "子分类": "协作与反馈",
+    "enabled": false,
+    "aliases": [
+      "Loom",
+      "协作与反馈",
+      "自媒体"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://chromewebstore.google.com/detail/liecbddmkiiihnedobmlmillhodjkdmb",
+    "run_installer": false
+  },
+  {
+    "id": "jam-extension",
+    "简介": "Jam（Chrome）｜录制缺陷复现过程并附上浏览器日志",
+    "分类": "浏览器扩展",
+    "子分类": "协作与反馈",
+    "enabled": false,
+    "aliases": [
+      "Jam",
+      "协作与反馈",
+      "自媒体"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://jam.dev/",
+    "run_installer": false
+  },
+  {
+    "id": "fireshot-extension",
+    "简介": "FireShot（Chrome / Edge / Firefox）｜捕获整页或选区并导出图片或 PDF",
+    "分类": "浏览器扩展",
+    "子分类": "截图录屏",
+    "enabled": false,
+    "aliases": [
+      "FireShot",
+      "截图录屏",
+      "自媒体"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://getfireshot.com/",
+    "run_installer": false,
+    "chrome_store_url": "https://chromewebstore.google.com/detail/mcbpblocgmgfnpjjppndjkmgjaogfceg"
+  },
+  {
+    "id": "awesome-screenshot-extension",
+    "简介": "Awesome Screenshot（Chrome）｜网页截图、录屏和标注",
+    "分类": "浏览器扩展",
+    "子分类": "截图录屏",
+    "enabled": false,
+    "aliases": [
+      "Awesome Screenshot",
+      "截图录屏",
+      "自媒体"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://www.awesomescreenshot.com/",
+    "run_installer": false
+  },
+  {
+    "id": "video-downloadhelper-extension",
+    "简介": "Video DownloadHelper（Chrome / Edge / Firefox）｜检测页面媒体并提供下载入口",
+    "分类": "浏览器扩展",
+    "子分类": "下载与嗅探",
+    "enabled": false,
+    "aliases": [
+      "Video DownloadHelper",
+      "下载与嗅探",
+      "自媒体"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://www.downloadhelper.net/",
+    "run_installer": false
+  },
+  {
+    "id": "adnauseam-extension",
+    "简介": "AdNauseam（Firefox）｜过滤广告并干扰广告跟踪",
+    "分类": "浏览器扩展",
+    "子分类": "隐私防护",
+    "enabled": false,
+    "aliases": [
+      "AdNauseam",
+      "隐私防护"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://adnauseam.io/",
+    "run_installer": false
+  },
+  {
+    "id": "clearurls-extension",
+    "简介": "ClearURLs（Firefox）｜移除网址中的常见跟踪参数",
+    "分类": "浏览器扩展",
+    "子分类": "隐私防护",
+    "enabled": false,
+    "aliases": [
+      "ClearURLs",
+      "隐私防护"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://addons.mozilla.org/en-US/firefox/addon/clearurls/",
+    "run_installer": false
+  },
+  {
+    "id": "cookie-autodelete-extension",
+    "简介": "Cookie AutoDelete（Chrome / Firefox）｜关闭标签页后按规则清理 Cookie",
+    "分类": "浏览器扩展",
+    "子分类": "隐私防护",
+    "enabled": false,
+    "aliases": [
+      "Cookie AutoDelete",
+      "隐私防护"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://github.com/Cookie-AutoDelete/Cookie-AutoDelete",
+    "run_installer": false,
+    "chrome_source_repo": "Cookie-AutoDelete/Cookie-AutoDelete"
+  },
+  {
+    "id": "authenticator-extension",
+    "简介": "Authenticator（Chrome / Edge / Firefox）｜在浏览器生成双重验证的一次性验证码",
+    "分类": "浏览器扩展",
+    "子分类": "密码安全",
+    "enabled": false,
+    "aliases": [
+      "Authenticator",
+      "密码安全"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://authenticator.cc/",
+    "run_installer": false,
+    "chrome_source_repo": "Authenticator-Extension/Authenticator"
+  },
+  {
+    "id": "webfont-whatfont-extension",
+    "简介": "WhatFont（Chrome）｜查看网页文字使用的字体和字号",
+    "分类": "浏览器扩展",
+    "子分类": "设计与样式",
+    "enabled": false,
+    "aliases": [
+      "WhatFont",
+      "设计与样式"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://chromewebstore.google.com/detail/whatfont/jabopobgcpjmedljpbcaablpmlmfcogm",
+    "run_installer": false
+  },
+  {
+    "id": "visbug-extension",
+    "简介": "VisBug（Chrome）｜检查页面间距并临时调整网页样式",
+    "分类": "浏览器扩展",
+    "子分类": "设计与样式",
+    "enabled": false,
+    "aliases": [
+      "VisBug",
+      "设计与样式"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://github.com/GoogleChromeLabs/ProjectVisBug",
+    "run_installer": false,
+    "chrome_source_repo": "GoogleChromeLabs/ProjectVisBug"
+  },
+  {
+    "id": "tabliss-extension",
+    "简介": "Tabliss（Chrome / Edge / Firefox）｜用时钟、背景和快捷链接定制新标签页",
+    "分类": "浏览器扩展",
+    "子分类": "新标签页",
+    "enabled": false,
+    "aliases": [
+      "Tabliss",
+      "新标签页"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://tabliss.io/",
+    "run_installer": false,
+    "chrome_source_repo": "joelshepherd/tabliss",
+    "chrome_store_url": "https://chromewebstore.google.com/detail/hipekcciheckooncpjeljhnekcoolahp"
+  },
+  {
+    "id": "return-youtube-dislike-extension",
+    "简介": "Return YouTube Dislike（Chrome / Firefox）｜根据社区数据和历史数据估算不喜欢次数",
+    "分类": "浏览器扩展",
+    "子分类": "视频增强",
+    "enabled": false,
+    "aliases": [
+      "Return YouTube Dislike",
+      "视频增强",
+      "自媒体"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://returnyoutubedislike.com/install",
+    "run_installer": false,
+    "chrome_source_repo": "Anarios/return-youtube-dislike"
+  },
+  {
+    "id": "bilibili-sponsorblock-extension",
+    "简介": "哔哩哔哩空降助手（Chrome / Edge / Firefox）｜按社区标注跳过 B 站视频片段",
+    "分类": "浏览器扩展",
+    "子分类": "视频增强",
+    "enabled": false,
+    "aliases": [
+      "哔哩哔哩空降助手",
+      "视频增强",
+      "自媒体"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://github.com/hanydd/BilibiliSponsorBlock",
+    "run_installer": false,
+    "chrome_source_repo": "hanydd/BilibiliSponsorBlock"
+  },
+  {
+    "id": "downthemall-extension",
+    "简介": "DownThemAll!（Chrome / Firefox）｜筛选并批量下载网页链接",
+    "分类": "浏览器扩展",
+    "子分类": "下载与嗅探",
+    "enabled": false,
+    "aliases": [
+      "DownThemAll!",
+      "下载与嗅探",
+      "自媒体"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://github.com/downthemall/downthemall",
+    "run_installer": false,
+    "chrome_source_repo": "downthemall/downthemall"
+  },
+  {
+    "id": "zenqr-extension",
+    "简介": "ZenQR（Chrome / Firefox）｜离线生成和识别二维码，支持 Wi‑Fi、批量生成及摄像头扫码",
+    "分类": "浏览器扩展",
+    "子分类": "二维码",
+    "enabled": false,
+    "aliases": [
+      "ZenQR",
+      "二维码",
+      "QR Code"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://github.com/zenLoading/ZenQR",
+    "run_installer": false,
+    "chrome_store_url": "https://chromewebstore.google.com/detail/ipdgdnkeedhnmdcffidnnclkchfjplfl",
+    "chrome_source_repo": "zenLoading/ZenQR"
+  },
+  {
+    "id": "qr-lite-extension",
+    "简介": "QR Lite（Firefox）｜离线把网址或选中文字转为二维码，也可识别图片二维码",
+    "分类": "浏览器扩展",
+    "子分类": "二维码",
+    "enabled": false,
+    "aliases": [
+      "QR Lite",
+      "二维码",
+      "QR Code"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://addons.mozilla.org/en-US/firefox/addon/qr-lite/",
+    "run_installer": false
+  },
+  {
+    "id": "offline-qr-code-generator-extension",
+    "简介": "Offline QR Code Generator（Firefox）｜离线将当前网页地址或自定义文字转为二维码",
+    "分类": "浏览器扩展",
+    "子分类": "二维码",
+    "enabled": false,
+    "aliases": [
+      "Offline QR Code Generator",
+      "二维码",
+      "QR Code"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://addons.mozilla.org/en-US/firefox/addon/offline-qr-code-generator/",
+    "run_installer": false
+  },
+  {
+    "id": "opencapture-extension",
+    "简介": "OpenCapture（Chrome / Edge / Firefox）｜在本地截取整页，支持裁剪、标注、模糊和导出 PNG／PDF",
+    "分类": "浏览器扩展",
+    "子分类": "截图录屏",
+    "enabled": false,
+    "aliases": [
+      "OpenCapture",
+      "整页截图",
+      "截图标注",
+      "自媒体"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://github.com/Open-Capture/OpenCapture",
+    "run_installer": false,
+    "chrome_source_repo": "Open-Capture/OpenCapture"
+  },
+  {
+    "id": "consent-o-matic-extension",
+    "简介": "Consent-O-Matic（Chrome / Firefox / Edge）｜按你的偏好自动处理 Cookie 同意弹窗",
+    "分类": "浏览器扩展",
+    "子分类": "隐私防护",
+    "enabled": false,
+    "aliases": [
+      "Consent-O-Matic",
+      "隐私防护"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://github.com/cavi-au/Consent-O-Matic",
+    "chrome_source_repo": "cavi-au/Consent-O-Matic",
+    "run_installer": false,
+    "chrome_store_url": "https://chromewebstore.google.com/detail/mdjildafknihdffpkfmmpnpoiajfjnjd"
+  },
+  {
+    "id": "idcac-extension",
+    "简介": "I still don't care about cookies（Chrome / Firefox）｜过滤常见 Cookie 提示弹窗",
+    "分类": "浏览器扩展",
+    "子分类": "隐私防护",
+    "enabled": false,
+    "aliases": [
+      "I still don't care about cookies",
+      "隐私防护"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://github.com/OhMyGuus/I-Still-Dont-Care-About-Cookies",
+    "chrome_source_repo": "OhMyGuus/I-Still-Dont-Care-About-Cookies",
+    "run_installer": false,
+    "chrome_store_url": "https://chromewebstore.google.com/detail/edibdbjcniadpccecjdfdjjppcpchdlm"
+  },
+  {
+    "id": "simplelogin-extension",
+    "简介": "SimpleLogin（Chrome / Firefox）｜从网页创建和管理邮箱别名",
+    "分类": "浏览器扩展",
+    "子分类": "隐私防护",
+    "enabled": false,
+    "aliases": [
+      "SimpleLogin",
+      "隐私防护"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://github.com/simple-login/browser-extension",
+    "chrome_source_repo": "simple-login/browser-extension",
+    "run_installer": false,
+    "chrome_store_url": "https://chromewebstore.google.com/detail/dphilobhebphkdjbpfohgikllaljmgbn"
+  },
+  {
+    "id": "leechblock-ng-extension",
+    "简介": "LeechBlock NG（Chrome / Firefox）｜按时段和使用时长限制分心网站",
+    "分类": "浏览器扩展",
+    "子分类": "效率工具",
+    "enabled": false,
+    "aliases": [
+      "LeechBlock NG",
+      "效率工具"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://github.com/proginosko/LeechBlockNG",
+    "chrome_source_repo": "proginosko/LeechBlockNG",
+    "run_installer": false,
+    "chrome_store_url": "https://chromewebstore.google.com/detail/blaaajhemilngeeffpbfkdjjoefldkok"
+  },
+  {
+    "id": "json-formatter-extension",
+    "简介": "JSON Formatter（Chrome）｜格式化网页中的 JSON，支持折叠和展开",
+    "分类": "浏览器扩展",
+    "子分类": "开发调试",
+    "enabled": false,
+    "aliases": [
+      "JSON Formatter",
+      "开发调试"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://github.com/callumlocke/json-formatter",
+    "chrome_source_repo": "callumlocke/json-formatter",
+    "run_installer": false,
+    "chrome_store_url": "https://chromewebstore.google.com/detail/bcjindcccaagfpapjjmafapmmgkkhgoa"
+  },
+  {
+    "id": "gitako-extension",
+    "简介": "Gitako（Chrome / Edge / Firefox）｜给 GitHub 仓库增加文件树和文件导航",
+    "分类": "浏览器扩展",
+    "子分类": "开发调试",
+    "enabled": false,
+    "aliases": [
+      "Gitako",
+      "开发调试"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://github.com/EnixCoda/Gitako",
+    "chrome_source_repo": "EnixCoda/Gitako",
+    "run_installer": false,
+    "chrome_store_url": "https://chromewebstore.google.com/detail/giljefjcheohhamkjphiebfjnlphnokk"
+  },
+  {
+    "id": "video-speed-controller-extension",
+    "简介": "Video Speed Controller（Chrome）｜用快捷键控制 HTML5 视频的倍速与进退",
+    "分类": "浏览器扩展",
+    "子分类": "视频增强",
+    "enabled": false,
+    "aliases": [
+      "Video Speed Controller",
+      "视频增强"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://github.com/igrigorik/videospeed",
+    "chrome_source_repo": "igrigorik/videospeed",
+    "run_installer": false,
+    "chrome_store_url": "https://chromewebstore.google.com/detail/nffaoalbilbmmfgbnbgppjihopabppdk"
+  },
+  {
+    "id": "wayback-machine-extension",
+    "简介": "Wayback Machine（Chrome / Firefox）｜查找网页历史快照，或向 Internet Archive 提交保存",
+    "分类": "浏览器扩展",
+    "子分类": "阅读研究",
+    "enabled": false,
+    "aliases": [
+      "Wayback Machine",
+      "阅读研究"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://github.com/internetarchive/wayback-machine-webextension",
+    "chrome_source_repo": "internetarchive/wayback-machine-webextension",
+    "run_installer": false,
+    "chrome_store_url": "https://chromewebstore.google.com/detail/fpnmgdkabkmnadcjpehmlllkndpkmiak"
+  },
+  {
+    "id": "joplin-web-clipper-extension",
+    "简介": "Joplin Web Clipper（Chrome / Firefox）｜将网页或截图剪藏到本机 Joplin，需要开启剪藏服务",
+    "分类": "浏览器扩展",
+    "子分类": "笔记剪藏",
+    "enabled": false,
+    "aliases": [
+      "Joplin Web Clipper",
+      "笔记剪藏"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://github.com/laurent22/joplin",
+    "chrome_source_repo": "laurent22/joplin",
+    "run_installer": false,
+    "chrome_store_url": "https://chromewebstore.google.com/detail/alofnhikmmkdbbbgpnglcpdollgjjfek"
+  },
+  {
+    "id": "tab-manager-plus-extension",
+    "简介": "Tab Manager Plus（Chrome / Firefox）｜搜索并整理跨窗口标签页",
+    "分类": "浏览器扩展",
+    "子分类": "标签管理",
+    "enabled": false,
+    "aliases": [
+      "Tab Manager Plus",
+      "标签管理"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://github.com/stefanXO/Tab-Manager-Plus",
+    "chrome_source_repo": "stefanXO/Tab-Manager-Plus",
+    "run_installer": false,
+    "chrome_store_url": "https://chromewebstore.google.com/detail/cnkdjjdmfiffagllbiiilooaoofcoeff"
+  },
+  {
+    "id": "markdown-viewer-extension",
+    "简介": "Markdown Viewer（Chrome / Edge）｜在浏览器中渲染 Markdown 文件",
+    "分类": "浏览器扩展",
+    "子分类": "开发调试",
+    "enabled": false,
+    "aliases": [
+      "Markdown Viewer",
+      "开发调试"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://github.com/simov/markdown-viewer",
+    "chrome_source_repo": "simov/markdown-viewer",
+    "run_installer": false,
+    "chrome_store_url": "https://chromewebstore.google.com/detail/ckkdlimhmcjmikdlpkmbgfkaikojcbjk"
+  }
+]

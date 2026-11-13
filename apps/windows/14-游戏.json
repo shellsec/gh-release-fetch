@@ -357,32 +357,6 @@
     "url_hint": "warzone"
   },
   {
-    "id": "0ad",
-    "简介": "古代战争 RTS 0 A.D.",
-    "分类": "游戏",
-    "enabled": false,
-    "releases_url": "https://bgithub.xyz/0ad/0ad/releases",
-    "repo_path": "0ad/0ad",
-    "installer_markers": [
-      "0ad-",
-      "win32.exe"
-    ],
-    "href_exclude_substrings": [
-      "linux",
-      "osx",
-      "data"
-    ],
-    "windows_installer": true,
-    "download_names": [
-      "0ad-{ver}-alpha-win32.exe"
-    ],
-    "save_name": "0ad-{ver}-alpha-win32.exe",
-    "process_name": "pyrogenesis.exe",
-    "kill_before_install": true,
-    "run_installer": true,
-    "version_tag_as_on_github": true
-  },
-  {
     "id": "supertuxkart",
     "简介": "SuperTuxKart 赛车",
     "分类": "游戏",
@@ -1007,5 +981,30 @@
     ],
     "releases_url": "https://bgithub.xyz/4ian/GDevelop/releases",
     "repo_path": "4ian/GDevelop"
+  },
+  {
+    "id": "nx2apple",
+    "简介": "NX2Apple（Windows x64 构建器；将自备的 Switch 游戏打包为供 iPhone／iPad 签名安装的 IPA）",
+    "分类": "游戏",
+    "enabled": false,
+    "releases_url": "https://github.com/LNPANDY/NX2Apple/releases/latest",
+    "repo_path": "LNPANDY/NX2Apple",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "NX2Apple-windows-x64.zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_filename_regex": "NX2Apple\\-windows\\-x64\\.zip",
+    "windows_installer": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "aliases": [
+      "NX2Apple",
+      "Switch 游戏移植",
+      "iPhone IPA 构建"
+    ]
   }
 ]

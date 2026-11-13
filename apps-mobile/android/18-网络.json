@@ -241,5 +241,73 @@
     "save_name": "rocketchat.apk",
     "releases_url": "https://bgithub.xyz/RocketChat/Rocket.Chat.ReactNative/releases",
     "repo_path": "RocketChat/Rocket.Chat.ReactNative"
+  },
+  {
+    "id": "whisper_feed",
+    "简介": "Whisper RSS（RSS 阅读器，在设备上按阅读习惯整理订阅）",
+    "分类": "网络",
+    "enabled": false,
+    "aliases": [
+      "Whisper RSS"
+    ],
+    "repo_path": "Nyancat-Labs/whisper_feed",
+    "releases_url": "https://github.com/Nyancat-Labs/whisper_feed/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "run_installer": false,
+    "kill_before_install": false,
+    "use_download_filename": true,
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers": [
+      ".apk"
+    ],
+    "installer_filename_regex": "Whisper_\\d+(?:\\.\\d+){0,3}\\.apk",
+    "使用说明": "GitHub、F-Droid 和 Google Play 版签名不同，更新时保留同一发行渠道。",
+    "_核查": {
+      "日期": "2026-11-09",
+      "来源": "https://github.com/Nyancat-Labs/whisper_feed/releases/tag/v1.0.5",
+      "状态": "release",
+      "发布标签": "v1.0.5"
+    },
+    "download_names": [
+      "Whisper_{ver_plain}.apk"
+    ]
+  },
+  {
+    "id": "feeder",
+    "简介": "Feeder（支持 RSS、Atom 和 JSON Feed 的订阅阅读器）",
+    "分类": "网络",
+    "enabled": false,
+    "aliases": [
+      "Feeder"
+    ],
+    "repo_path": "spacecowboy/Feeder",
+    "releases_url": "https://github.com/spacecowboy/Feeder/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "run_installer": false,
+    "kill_before_install": false,
+    "use_download_filename": true,
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers": [
+      ".apk"
+    ],
+    "installer_filename_regex": "app\\-fdroid\\-release\\.apk",
+    "使用说明": "选作者 GitHub Release 的 F-Droid 构建，更新时核对签名渠道。",
+    "_核查": {
+      "日期": "2026-11-09",
+      "来源": "https://github.com/spacecowboy/Feeder/releases/tag/2.25.0",
+      "状态": "release",
+      "发布标签": "2.25.0"
+    },
+    "download_names": [
+      "app-fdroid-release.apk"
+    ]
   }
 ]

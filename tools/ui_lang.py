@@ -10,6 +10,12 @@ _MISSING = object()
 
 # key, zh-CN, zh-TW, en, ja, ko
 _ROWS = (
+    ("catalog.repository", "仓库与 Chrome 扩展下载", "倉庫與 Chrome 擴充功能下載", "Repository and Chrome extension downloads", "リポジトリと Chrome 拡張機能のダウンロード", "저장소 및 Chrome 확장 프로그램 다운로드"),
+    ("catalog.soft_pages", "软件资讯搜索", "軟體資訊搜尋", "Software articles", "ソフトウェア記事検索", "소프트웨어 소식 검색"),
+    ("catalog.games", "游戏页面搜索", "遊戲頁面搜尋", "Game page search", "ゲームページ検索", "게임 페이지 검색"),
+    ("catalog.browse_hint", "  V  浏览可下载列表", "  V  瀏覽可下載清單", "  V  Browse available downloads", "  V  ダウンロード一覧", "  V  다운로드 목록"),
+    ("catalog.browse_category", "选择分类", "選擇分類", "Choose a category", "カテゴリを選択", "분류 선택"),
+    ("catalog.browse_download", "已选 %d 项，保存到 %s", "已選 %d 項，儲存到 %s", "Selected %d items. Saving to %s", "%d 件を %s に保存", "%d개를 %s에 저장"),
     ("common.cancelled", "已取消。", "已取消。", "Cancelled.", "キャンセルしました。", "취소했습니다."),
     ("common.warn_skip", "[WARN] 跳过 %s: %s", "[WARN] 略過 %s: %s", "[WARN] skipped %s: %s", "[WARN] スキップ %s: %s", "[WARN] 건너뜀 %s: %s"),
     ("common.quit", "已退出。", "已結束。", "Quit.", "終了しました。", "종료했습니다."),

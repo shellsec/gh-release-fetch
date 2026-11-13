@@ -734,5 +734,46 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "hubble_md",
+    "简介": "Hubble.md（本地 Markdown 笔记，支持目录管理和外部编辑后实时刷新；Apple Silicon .dmg）",
+    "分类": "笔记",
+    "enabled": false,
+    "releases_url": "https://github.com/bholmesdev/hubble.md/releases/latest",
+    "repo_path": "bholmesdev/hubble.md",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      ".dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "installer_filename_regex": "Hubble-\\d+(?:\\.\\d+){1,3}-arm64\\.dmg",
+    "windows_installer": false,
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "aliases": [
+      "Hubble.md"
+    ]
+  },
+  {
+    "id": "saber",
+    "简介": "Saber（手写笔记、PDF 批注和同步）",
+    "分类": "笔记",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "saber-notes/saber",
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/cn/app/saber-handwritten-notes/id1671523739",
+    "_核查": {
+      "日期": "2026-11-12",
+      "来源": "https://apps.apple.com/cn/app/saber-handwritten-notes/id1671523739",
+      "状态": "official_page",
+      "上游发布标签": "v1.37.1",
+      "上游发布日期": "2026-10-28"
+    }
   }
 ]

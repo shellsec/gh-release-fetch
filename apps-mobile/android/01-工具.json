@@ -316,5 +316,56 @@
     "save_name": "datamonitor.apk",
     "releases_url": "https://bgithub.xyz/itsdrill/DataMonitor/releases",
     "repo_path": "itsdrill/DataMonitor"
+  },
+  {
+    "id": "geolibre",
+    "简介": "GeoLibre（地图浏览与地理数据工具）",
+    "分类": "工具",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "opengeos/GeoLibre",
+    "releases_url": "https://github.com/opengeos/GeoLibre/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_filename_regex": "geolibre\\-android\\-arm64\\.apk",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "download_names": [
+      "geolibre-android-arm64.apk"
+    ],
+    "save_subdir": "geolibre",
+    "_核查": {
+      "日期": "2026-11-12",
+      "来源": "https://github.com/opengeos/GeoLibre/releases/tag/v3.7.0",
+      "状态": "release",
+      "发布标签": "v3.7.0",
+      "发布日期": "2026-11-08"
+    }
+  },
+  {
+    "id": "repostore",
+    "简介": "RepoStore（浏览并安装 GitHub Releases 中的 Android 应用）",
+    "分类": "工具",
+    "enabled": false,
+    "run_installer": false,
+    "fixed_download_url": "https://f-droid.org/repo/com.samyak.repostore_23.apk",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "windows_installer": false,
+    "use_download_filename": true,
+    "download_names": [
+      "com.samyak.repostore_23.apk"
+    ],
+    "save_subdir": "repostore",
+    "_核查": {
+      "日期": "2026-11-12",
+      "来源": "https://f-droid.org/en/packages/com.samyak.repostore/",
+      "状态": "release",
+      "发布日期": "2026-11-01"
+    }
   }
 ]

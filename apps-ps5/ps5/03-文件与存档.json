@@ -48,5 +48,43 @@
     "open_page_only": true,
     "open_page_url": "https://github.com/bucanero/apollo-ps5",
     "_下载说明": "本次未发现稳定 Release；保留源码页面，不表示已经提供可安装 PS5 包。"
+  },
+  {
+    "id": "ps5save",
+    "简介": "PS5Save（将 PS4、PS5 或模拟器存档定期备份到 USB）",
+    "分类": "文件与存档",
+    "enabled": false,
+    "aliases": [
+      "PS5Save"
+    ],
+    "repo_path": "heni0xyz/ps5save",
+    "releases_url": "https://github.com/heni0xyz/ps5save/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "run_installer": false,
+    "kill_before_install": false,
+    "use_download_filename": true,
+    "installer_extensions": [
+      ".elf"
+    ],
+    "installer_markers": [
+      ".elf"
+    ],
+    "installer_filename_regex": "backup\\.elf",
+    "使用说明": "下载主载荷，启动条件和使用方式见作者发布页。",
+    "_核查": {
+      "日期": "2026-11-09",
+      "来源": "https://github.com/heni0xyz/ps5save/releases/tag/v2",
+      "状态": "release",
+      "发布标签": "v2"
+    },
+    "download_names": [
+      "backup.elf"
+    ],
+    "save_subdir": "ps5save",
+    "save_name": "backup.elf",
+    "运行方式": "ELF/载荷",
+    "固件要求": "需可运行 ELF 载荷的 PS5 及 exFAT USB 存储，配置方法见作者说明。"
   }
 ]

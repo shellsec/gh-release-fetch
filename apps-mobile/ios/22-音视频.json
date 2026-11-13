@@ -203,5 +203,23 @@
     ],
     "releases_url": "https://bgithub.xyz/jub0t/Concat/releases",
     "repo_path": "jub0t/Concat"
+  },
+  {
+    "id": "swiftfin_ios",
+    "简介": "Swiftfin（Jellyfin 原生视频客户端）",
+    "分类": "音视频",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "jellyfin/Swiftfin",
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/cn/app/swiftfin/id1604098728",
+    "使用说明": "需 Jellyfin 服务器。",
+    "_核查": {
+      "日期": "2026-11-12",
+      "来源": "https://apps.apple.com/cn/app/swiftfin/id1604098728",
+      "状态": "official_page",
+      "上游发布标签": "1.7.0",
+      "上游发布日期": "2026-11-11"
+    }
   }
 ]

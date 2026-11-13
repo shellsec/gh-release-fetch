@@ -3,7 +3,7 @@
     "id": "nxthemes-installer",
     "repo_path": "exelix11/SwitchThemeInjector",
     "releases_url": "https://github.com/exelix11/SwitchThemeInjector/releases",
-    "简介": "NXThemes Installer Switch 主题安装器",
+    "简介": "安装或更换 Switch 的 HOME 菜单主题",
     "分类": "主题与显示",
     "enabled": false,
     "aliases": [
@@ -53,7 +53,7 @@
     "id": "fizeau",
     "repo_path": "averne/Fizeau",
     "releases_url": "https://github.com/averne/Fizeau/releases",
-    "简介": "Fizeau 屏幕色温与色彩调节",
+    "简介": "调节屏幕的色温和色彩",
     "分类": "主题与显示",
     "enabled": false,
     "aliases": [
@@ -88,7 +88,7 @@
       "Debug",
       "debug"
     ],
-    "使用说明": "完整保留压缩包中的 SD 卡目录布局，具体依赖与启动方式见项目说明。",
+    "使用说明": "下载 Switch 版压缩包。解压时保留包内目录，依赖见项目说明。",
     "_核查": {
       "日期": "2026-10-19",
       "来源": "https://github.com/averne/Fizeau/releases/tag/v2.8.3",
@@ -101,7 +101,7 @@
     "id": "status-monitor-overlay",
     "repo_path": "masagrator/Status-Monitor-Overlay",
     "releases_url": "https://github.com/masagrator/Status-Monitor-Overlay/releases",
-    "简介": "Status Monitor 性能与硬件状态悬浮窗",
+    "简介": "在游戏中查看帧率、温度和硬件状态",
     "分类": "主题与显示",
     "enabled": false,
     "aliases": [
@@ -152,7 +152,7 @@
     "id": "fpslocker",
     "repo_path": "masagrator/FPSLocker",
     "releases_url": "https://github.com/masagrator/FPSLocker/releases",
-    "简介": "FPSLocker 帧率控制悬浮插件",
+    "简介": "在游戏中调整支持的帧率设置",
     "分类": "主题与显示",
     "enabled": false,
     "aliases": [

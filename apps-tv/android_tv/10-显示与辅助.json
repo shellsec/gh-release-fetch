@@ -1,0 +1,26 @@
+[
+  {
+    "id": "midnightbeam",
+    "简介": "MidnightBeam（适配电视遥控的屏幕调暗与暖色滤镜）",
+    "分类": "显示与辅助",
+    "enabled": false,
+    "run_installer": false,
+    "fixed_download_url": "https://f-droid.org/repo/dev.midnightbeam_35.apk",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "windows_installer": false,
+    "use_download_filename": true,
+    "download_names": [
+      "dev.midnightbeam_35.apk"
+    ],
+    "save_subdir": "midnightbeam",
+    "使用说明": "通过 F-Droid 获取，需 Android 8 或更新版本。",
+    "_核查": {
+      "日期": "2026-11-12",
+      "来源": "https://f-droid.org/en/packages/dev.midnightbeam/",
+      "状态": "release",
+      "发布日期": "2026-11-06"
+    }
+  }
+]

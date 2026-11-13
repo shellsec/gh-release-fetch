@@ -1,0 +1,38 @@
+[
+  {
+    "id": "scratch_everywhere_ps4",
+    "简介": "Scratch Everywhere（在 PS4 运行 Scratch 项目）",
+    "分类": "开发与教育",
+    "enabled": false,
+    "aliases": [
+      "Scratch Everywhere"
+    ],
+    "repo_path": "ScratchEverywhere/ScratchEverywhere",
+    "releases_url": "https://github.com/ScratchEverywhere/ScratchEverywhere/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".pkg"
+    ],
+    "installer_markers": [
+      ".pkg"
+    ],
+    "installer_filename_regex": "scratch\\-ps4\\.pkg",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "使用说明": "需可运行自制 PKG 的 PS4，项目文件自行准备。",
+    "_核查": {
+      "日期": "2026-11-09",
+      "来源": "https://github.com/ScratchEverywhere/ScratchEverywhere/releases/tag/1.3",
+      "状态": "release",
+      "发布标签": "1.3",
+      "发布日期": "2026-11-01"
+    },
+    "download_names": [
+      "scratch-ps4.pkg"
+    ],
+    "save_subdir": "scratch_everywhere_ps4"
+  }
+]

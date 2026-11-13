@@ -402,33 +402,6 @@
     "repo_path": "OpenMW/openmw"
   },
   {
-    "id": "0ad",
-    "简介": "0 A.D.（macOS dmg）",
-    "分类": "游戏",
-    "enabled": false,
-    "prefer_api_assets": true,
-    "version_tag_as_on_github": true,
-    "windows_installer": false,
-    "process_name": "",
-    "kill_before_install": false,
-    "run_installer": false,
-    "installer_markers": [
-      "0ad-",
-      "osx.dmg"
-    ],
-    "href_exclude_substrings": [
-      "win",
-      "linux"
-    ],
-    "installer_extensions": [
-      ".dmg"
-    ],
-    "use_download_filename": true,
-    "save_name": "0ad-macos.dmg",
-    "releases_url": "https://bgithub.xyz/0ad/0ad/releases",
-    "repo_path": "0ad/0ad"
-  },
-  {
     "id": "dosbox_staging",
     "简介": "DOSBox Staging",
     "分类": "游戏",
@@ -787,5 +760,30 @@
     ],
     "releases_url": "https://bgithub.xyz/4ian/GDevelop/releases",
     "repo_path": "4ian/GDevelop"
+  },
+  {
+    "id": "nx2apple",
+    "简介": "NX2Apple（Apple Silicon；运行自备的 Switch 游戏或构建 iPhone／iPad 版本，构建需 Xcode）",
+    "分类": "游戏",
+    "enabled": false,
+    "releases_url": "https://github.com/LNPANDY/NX2Apple/releases/latest",
+    "repo_path": "LNPANDY/NX2Apple",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "NX2Apple-macOS-arm64.zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_filename_regex": "NX2Apple\\-macOS\\-arm64\\.zip",
+    "windows_installer": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "aliases": [
+      "NX2Apple",
+      "Switch 游戏移植",
+      "iPhone IPA 构建"
+    ]
   }
 ]

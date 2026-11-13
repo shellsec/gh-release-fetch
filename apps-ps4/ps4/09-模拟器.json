@@ -1,0 +1,60 @@
+[
+  {
+    "id": "emusuni_ps4",
+    "简介": "EmuSuNi（PS4 模拟器）",
+    "分类": "模拟器",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "arturofuentes1988/EmuSuNi",
+    "releases_url": "https://github.com/arturofuentes1988/EmuSuNi/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".pkg"
+    ],
+    "installer_filename_regex": "EmuSuNi\\-v\\d+(?:\\.\\d+)+\\.pkg",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "download_names": [
+      "EmuSuNi-v00.24.pkg"
+    ],
+    "save_subdir": "emusuni_ps4",
+    "使用说明": "需可运行自制 PKG 的 PS4，自备游戏文件。",
+    "_核查": {
+      "日期": "2026-11-12",
+      "来源": "https://github.com/arturofuentes1988/EmuSuNi/releases/tag/v00.24",
+      "状态": "release",
+      "发布标签": "v00.24",
+      "发布日期": "2026-11-12"
+    }
+  },
+  {
+    "id": "rommps_ps4",
+    "简介": "RommPS（连接 RomM 游戏库的 PS4 客户端）",
+    "分类": "模拟器",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "s0liton/RommPS",
+    "releases_url": "https://github.com/s0liton/RommPS/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".pkg"
+    ],
+    "installer_filename_regex": "romm\\-sync\\-ps4\\.pkg",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "download_names": [
+      "romm-sync-ps4.pkg"
+    ],
+    "save_subdir": "rommps_ps4",
+    "使用说明": "需可运行自制 PKG 的 PS4 和自建 RomM 服务。",
+    "_核查": {
+      "日期": "2026-11-12",
+      "来源": "https://github.com/s0liton/RommPS/releases/tag/v1.4.3",
+      "状态": "release",
+      "发布标签": "v1.4.3",
+      "发布日期": "2026-11-12"
+    }
+  }
+]

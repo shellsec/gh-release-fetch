@@ -1,0 +1,38 @@
+[
+  {
+    "id": "vita_flight_radar",
+    "简介": "VitaFlightRadar（用 Vita 浏览地图、航班和飞行路线）",
+    "分类": "实用工具",
+    "enabled": false,
+    "aliases": [
+      "VitaFlightRadar"
+    ],
+    "repo_path": "1000660928-design/VitaFlightRadar",
+    "releases_url": "https://github.com/1000660928-design/VitaFlightRadar/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".vpk"
+    ],
+    "installer_markers": [
+      ".vpk"
+    ],
+    "installer_filename_regex": "VitaFlightRadar\\-v?\\d+(?:\\.\\d+){0,3}\\.vpk",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "使用说明": "需网络及可安装 VPK 的 Vita 环境。",
+    "_核查": {
+      "日期": "2026-11-09",
+      "来源": "https://github.com/1000660928-design/VitaFlightRadar/releases/tag/v2.5",
+      "状态": "release",
+      "发布标签": "v2.5",
+      "发布日期": "2026-10-11"
+    },
+    "download_url_templates": [
+      "https://github.com/1000660928-design/VitaFlightRadar/releases/download/{ver}/VitaFlightRadar-{ver}.vpk"
+    ],
+    "save_subdir": "vita_flight_radar"
+  }
+]

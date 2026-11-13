@@ -1,4 +1,5 @@
 # PyInstaller: dist/exe/*.exe
+param([switch]$SkipInstall, [switch]$Gui)
 $ErrorActionPreference = "Stop"
 $Root = Split-Path -Parent $PSScriptRoot
 Set-Location $Root
@@ -8,11 +9,13 @@ Write-Host "== GH Release Fetch: build exe ==" -ForegroundColor Cyan
 python --version 2>$null
 if (-not $?) { throw "Python 3 not found." }
 
-pip install -r requirements.txt pyinstaller --quiet
+if (-not $SkipInstall) {
+    python -m pip install -r requirements.txt pyinstaller --quiet
+    if ($LASTEXITCODE -ne 0) { throw "Build dependencies could not be installed." }
+}
 
 $Dist = Join-Path $Root "dist\exe"
 $Work = Join-Path $Root "build\pyinstaller"
-$SoftCheck = Join-Path $Root "tools\soft_page_check"
 New-Item -ItemType Directory -Force -Path $Dist, $Work | Out-Null
 
 $HiddenCore = @(
@@ -20,41 +23,37 @@ $HiddenCore = @(
     "--hidden-import", "tools.ghrf_runtime",
     "--hidden-import", "tools.apply_enabled_snapshot"
 )
+$IconName = "gh-release-fetch-gui.ico"
+$Icon = Join-Path $Root "release\windows\$IconName"
 $Common = @(
     "--noconfirm", "--clean",
     "--distpath", $Dist,
     "--workpath", $Work,
     "--specpath", $Work,
-    "--paths", $Root
+    "--paths", $Root,
+    "--icon", $Icon
 )
 
 function Build-One($Name, $Entry, [string[]]$More = @()) {
     Write-Host ""
     Write-Host ">> $Name" -ForegroundColor Yellow
-    pyinstaller @Common @HiddenCore @More --onefile --name $Name $Entry
+    python -m PyInstaller @Common @HiddenCore @More --onefile --name $Name $Entry
     if ($LASTEXITCODE -ne 0) { throw "pyinstaller failed: $Name" }
 }
 
-Build-One "auto_update" "auto_update.py"
-Build-One "lookup_app" "lookup_app.py" @(
-    "--hidden-import", "tools.custom_catalog",
-    "--hidden-import", "tools.lookup_github_suggest",
-    "--hidden-import", "tools.ui_lang",
-    "--hidden-import", "auto_update"
-)
-Build-One "run_saved_apps" "tools\run_saved_apps.py"
-Build-One "search_soft_pages" "tools\soft_page_check\search_pages.py" @(
-    "--paths", $SoftCheck,
-    "--hidden-import", "list_scopes",
-    "--hidden-import", "gamer520_live_search"
-)
-Build-One "search_games" "tools\soft_page_check\search_games.py" @(
-    "--paths", $SoftCheck,
-    "--hidden-import", "list_scopes",
-    "--hidden-import", "search_pages",
-    "--hidden-import", "gamer520_live_search"
-)
-
-Write-Host ""
-Write-Host "Done: $Dist" -ForegroundColor Green
-Write-Host "Copy to repo root: lookup_app.exe run_saved_apps.exe search_soft_pages.exe search_games.exe auto_update.exe"
+& {
+    $Icons = Join-Path $Root "release\windows\gui-icons"
+    $Data = @("--windowed", "--add-data", "$Icons;gui-icons")
+    foreach ($directory in @("apps", "apps-mobile", "apps-tv", "apps-switch", "apps-ps4", "apps-ps5", "apps-vita", "apps-xbox", "apps-handheld", "VibeCodingToolsDown\dist\vibecoding", "tools\soft_page_check\history", "tools\soft_page_check\list")) {
+        $Data += @("--add-data", "$(Join-Path $Root $directory);$directory")
+    }
+    foreach ($name in @("catalog.html", "tools\soft_page_check\soft_pages_urls.txt", "tools\soft_page_check\watch_tier_a_urls.txt", "tools\soft_page_check\423down_digest_urls.txt")) {
+        if (Test-Path $name) {
+            $parent = Split-Path -Parent $name
+            if (-not $parent) { $parent = "." }
+            $Data += @("--add-data", "$(Join-Path $Root $name);$parent")
+        }
+    }
+    Build-One "GHReleaseFetch" "windows_gui.py" $Data
+    return
+}

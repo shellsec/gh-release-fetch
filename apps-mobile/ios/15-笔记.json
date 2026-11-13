@@ -18,5 +18,39 @@
     "kill_before_install": false,
     "run_installer": false,
     "releases_url": "https://apps.apple.com/app/id450748070"
+  },
+  {
+    "id": "readest_ios",
+    "简介": "Readest（电子书阅读、批注和跨设备同步）",
+    "分类": "笔记",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "readest/readest",
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/cn/app/readest-ebook-reader/id6738622779",
+    "_核查": {
+      "日期": "2026-11-12",
+      "来源": "https://apps.apple.com/cn/app/readest-ebook-reader/id6738622779",
+      "状态": "official_page",
+      "上游发布标签": "v0.12.20",
+      "上游发布日期": "2026-11-05"
+    }
+  },
+  {
+    "id": "saber",
+    "简介": "Saber（手写笔记、PDF 批注和同步）",
+    "分类": "笔记",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "saber-notes/saber",
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/cn/app/saber-handwritten-notes/id1671523739",
+    "_核查": {
+      "日期": "2026-11-12",
+      "来源": "https://apps.apple.com/cn/app/saber-handwritten-notes/id1671523739",
+      "状态": "official_page",
+      "上游发布标签": "v1.37.1",
+      "上游发布日期": "2026-10-28"
+    }
   }
 ]

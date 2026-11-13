@@ -30,5 +30,77 @@
     "windows_installer": false,
     "open_page_only": true,
     "open_page_url": "https://github.com/Team-Resurgent/Pandora/releases"
+  },
+  {
+    "id": "x_files_uwp",
+    "简介": "X-Files UWP（面向 Xbox 开发者模式的文件管理器）",
+    "分类": "系统工具",
+    "enabled": false,
+    "aliases": [
+      "X-Files UWP"
+    ],
+    "repo_path": "marcelofrau/x-files-uwp",
+    "releases_url": "https://github.com/marcelofrau/x-files-uwp/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      ".zip"
+    ],
+    "installer_filename_regex": "xfiles_\\d+(?:\\.\\d+){0,3}_x64\\.zip",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "使用说明": "官方 x64 分发压缩包；Xbox One / Series X|S 需启用 Dev Mode，按作者说明处理包和依赖。",
+    "_核查": {
+      "日期": "2026-11-09",
+      "来源": "https://github.com/marcelofrau/x-files-uwp/releases/tag/v1.8.0.1527",
+      "状态": "release",
+      "发布标签": "v1.8.0.1527",
+      "发布日期": "2026-10-23"
+    },
+    "download_names": [
+      "xfiles_{ver_plain}_x64.zip"
+    ],
+    "save_subdir": "x_files_uwp"
+  },
+  {
+    "id": "xbox_game_vault",
+    "简介": "Game Vault（Xbox Series X|S 开发者模式下的 USB 游戏启动器）",
+    "分类": "系统工具",
+    "enabled": false,
+    "aliases": [
+      "Game Vault"
+    ],
+    "repo_path": "skitzellez/xbox-game-vault",
+    "releases_url": "https://github.com/skitzellez/xbox-game-vault/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      ".zip"
+    ],
+    "installer_filename_regex": "GameVault\\-Setup\\.zip",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "使用说明": "作者提供的完整部署包，需 Xbox Series X|S Dev Mode；在电脑端按作者说明部署。",
+    "_核查": {
+      "日期": "2026-11-09",
+      "来源": "https://github.com/skitzellez/xbox-game-vault/releases/tag/v0.16.1.435",
+      "状态": "release",
+      "发布标签": "v0.16.1.435",
+      "发布日期": "2026-11-08"
+    },
+    "download_names": [
+      "GameVault-Setup.zip"
+    ],
+    "save_subdir": "xbox_game_vault"
   }
 ]

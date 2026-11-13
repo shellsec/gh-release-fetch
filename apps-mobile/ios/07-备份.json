@@ -91,5 +91,29 @@
     "kill_before_install": false,
     "windows_installer": false,
     "process_name": ""
+  },
+  {
+    "id": "proton_drive_ios",
+    "简介": "Proton Drive（加密云端文件存储和备份；App Store 中国区）",
+    "分类": "备份",
+    "enabled": false,
+    "aliases": [
+      "Proton Drive"
+    ],
+    "repo_path": "ProtonDriveApps/ios-drive",
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/cn/app/proton-drive-%E4%BA%91%E7%AB%AF%E7%A1%AC%E7%9B%98/id1509667851",
+    "releases_url": "https://apps.apple.com/cn/app/proton-drive-%E4%BA%91%E7%AB%AF%E7%A1%AC%E7%9B%98/id1509667851",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "使用说明": "已核对 App Store 中国区正式版，要求 iOS 16.0 或更新版本。",
+    "_核查": {
+      "日期": "2026-11-09",
+      "来源": "https://apps.apple.com/cn/app/proton-drive-%E4%BA%91%E7%AB%AF%E7%A1%AC%E7%9B%98/id1509667851",
+      "状态": "app-store",
+      "发布版本": "3.1.2",
+      "发布日期": "2026-10-27"
+    }
   }
 ]

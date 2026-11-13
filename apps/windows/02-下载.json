@@ -741,5 +741,81 @@
     ],
     "releases_url": "https://bgithub.xyz/nilaoda/N_m3u8DL-RE/releases",
     "repo_path": "nilaoda/N_m3u8DL-RE"
+  },
+  {
+    "id": "grabline",
+    "简介": "Grabline（支持多连接、断点续传和任务队列的下载管理器；x64 .exe）",
+    "分类": "下载",
+    "enabled": false,
+    "releases_url": "https://github.com/Gr33nOps/Grabline/releases/latest",
+    "repo_path": "Gr33nOps/Grabline",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      ".exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "installer_filename_regex": "Grabline-Setup-\\d+(?:\\.\\d+){1,3}\\.exe",
+    "windows_installer": true,
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "aliases": [
+      "Grabline"
+    ]
+  },
+  {
+    "id": "firelink",
+    "简介": "Firelink（桌面下载管理器，支持浏览器接力、任务队列和定时下载；x64 .exe）",
+    "分类": "下载",
+    "enabled": false,
+    "releases_url": "https://github.com/nimbold/Firelink/releases/latest",
+    "repo_path": "nimbold/Firelink",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      ".exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "installer_filename_regex": "Firelink_\\d+(?:\\.\\d+){1,3}_Windows-x64-setup\\.exe",
+    "windows_installer": true,
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "aliases": [
+      "Firelink"
+    ]
+  },
+  {
+    "id": "downvid",
+    "简介": "DownVid（桌面视频下载与媒体处理）",
+    "分类": "下载",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "Downvid/DownVid",
+    "releases_url": "https://github.com/Downvid/DownVid/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".exe"
+    ],
+    "installer_filename_regex": "DownVid\\-Wails\\-windows\\-x64\\-\\d+(?:\\.\\d+)+\\-installer\\.exe",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "download_names": [
+      "DownVid-Wails-windows-x64-1.12.0-installer.exe"
+    ],
+    "save_subdir": "downvid",
+    "_核查": {
+      "日期": "2026-11-12",
+      "来源": "https://github.com/Downvid/DownVid/releases/tag/v1.12.0",
+      "状态": "release",
+      "发布标签": "v1.12.0",
+      "发布日期": "2026-11-11"
+    }
   }
 ]

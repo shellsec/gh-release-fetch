@@ -478,5 +478,34 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "ps5upload",
+    "简介": "PS5Upload（PS5 文件上传与传输）",
+    "分类": "远程与协作",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "phantomptr/ps5upload",
+    "releases_url": "https://github.com/phantomptr/ps5upload/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".appimage"
+    ],
+    "installer_filename_regex": "PS5Upload\\-\\d+(?:\\.\\d+)+\\-linux\\-x64\\.AppImage",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "download_names": [
+      "PS5Upload-12.4.12-linux-x64.AppImage"
+    ],
+    "save_subdir": "ps5upload",
+    "使用说明": "主机侧需支持 ELF 载荷，其他平台为配套客户端。",
+    "_核查": {
+      "日期": "2026-11-12",
+      "来源": "https://github.com/phantomptr/ps5upload/releases/tag/v12.4.12",
+      "状态": "release",
+      "发布标签": "v12.4.12",
+      "发布日期": "2026-11-12"
+    }
   }
 ]

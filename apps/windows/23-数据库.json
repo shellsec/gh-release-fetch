@@ -688,5 +688,29 @@
     ],
     "releases_url": "https://bgithub.xyz/qishibo/AnotherRedisDesktopManager/releases",
     "repo_path": "qishibo/AnotherRedisDesktopManager"
+  },
+  {
+    "id": "based",
+    "简介": "based（桌面数据库客户端，可将连接配置和查询整理为适合 Git 管理的文件；x64 .exe）",
+    "分类": "数据库",
+    "enabled": false,
+    "releases_url": "https://github.com/pavi2410/based/releases/latest",
+    "repo_path": "pavi2410/based",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      ".exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "installer_filename_regex": "based_\\d+(?:\\.\\d+){1,3}_x64-setup\\.exe",
+    "windows_installer": true,
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "aliases": [
+      "based"
+    ]
   }
 ]

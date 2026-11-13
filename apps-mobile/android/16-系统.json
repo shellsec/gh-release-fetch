@@ -187,5 +187,28 @@
     "kill_before_install": false,
     "windows_installer": false,
     "process_name": ""
+  },
+  {
+    "id": "betterlauncher",
+    "简介": "BetterLauncher（带小组件与应用使用限制的桌面）",
+    "分类": "系统",
+    "enabled": false,
+    "run_installer": false,
+    "fixed_download_url": "https://f-droid.org/repo/com.pierspad.betterlauncher_141.apk",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "windows_installer": false,
+    "use_download_filename": true,
+    "download_names": [
+      "com.pierspad.betterlauncher_141.apk"
+    ],
+    "save_subdir": "betterlauncher",
+    "_核查": {
+      "日期": "2026-11-12",
+      "来源": "https://f-droid.org/en/packages/com.pierspad.betterlauncher/",
+      "状态": "release",
+      "发布日期": "2026-11-04"
+    }
   }
 ]

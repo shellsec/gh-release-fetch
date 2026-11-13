@@ -1,7 +1,7 @@
 [
   {
     "id": "hwfly-firmware",
-    "简介": "HWFLY 固件与 SDLoader",
+    "简介": "获取对应 HWFLY 芯片的固件和 SDLoader",
     "分类": "芯片固件",
     "enabled": false,
     "aliases": [
@@ -44,7 +44,7 @@
   },
   {
     "id": "picofly-firmwares",
-    "简介": "Picofly 固件与工具箱",
+    "简介": "查找与 Picofly 芯片型号对应的固件",
     "分类": "芯片固件",
     "enabled": false,
     "aliases": [
@@ -68,7 +68,7 @@
   },
   {
     "id": "picofly-usk",
-    "简介": "Picofly USK 固件项目",
+    "简介": "获取 Picofly USK 固件更新文件",
     "分类": "芯片固件",
     "enabled": false,
     "aliases": [

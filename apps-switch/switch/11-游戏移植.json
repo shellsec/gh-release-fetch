@@ -1,7 +1,7 @@
 [
   {
     "id": "touhou-switch",
-    "简介": "东方系列移植（自备游戏文件）",
+    "简介": "在 Switch 上运行东方系列移植版",
     "分类": "游戏移植",
     "enabled": false,
     "aliases": [
@@ -27,7 +27,7 @@
   },
   {
     "id": "sh3-nx",
-    "简介": "寂静岭 3 移植（自备游戏文件）",
+    "简介": "在 Switch 上运行《寂静岭 3》移植版",
     "分类": "游戏移植",
     "enabled": false,
     "aliases": [
@@ -77,7 +77,7 @@
   },
   {
     "id": "zomboid-switch",
-    "简介": "僵尸毁灭工程移植（自备游戏文件）",
+    "简介": "在 Switch 上运行《僵尸毁灭工程》移植版",
     "分类": "游戏移植",
     "enabled": false,
     "aliases": [
@@ -103,7 +103,7 @@
   },
   {
     "id": "sms-switch",
-    "简介": "超级马里奥阳光移植（自备游戏文件）",
+    "简介": "在 Switch 上运行《超级马力欧阳光》移植版",
     "分类": "游戏移植",
     "enabled": false,
     "aliases": [
@@ -153,7 +153,7 @@
   },
   {
     "id": "megamanx-nx",
-    "简介": "洛克人 X 移植（自备游戏文件）",
+    "简介": "在 Switch 上运行《洛克人 X》移植版",
     "分类": "游戏移植",
     "enabled": false,
     "aliases": [
@@ -206,7 +206,7 @@
   },
   {
     "id": "ikemen-nx",
-    "简介": "兼容 MUGEN 的格斗游戏引擎",
+    "简介": "在 Switch 上运行兼容 MUGEN 的格斗引擎",
     "分类": "游戏移植",
     "enabled": false,
     "aliases": [
@@ -257,7 +257,7 @@
   },
   {
     "id": "portnx",
-    "简介": "游戏移植项目浏览工具",
+    "简介": "查找 Switch 游戏移植项目",
     "分类": "游戏移植",
     "enabled": false,
     "aliases": [
@@ -303,6 +303,187 @@
       "状态": "release",
       "发布标签": "v2.2.0",
       "发布时间": "2026-10-12T14:56:58Z"
+    }
+  },
+  {
+    "id": "switchwaker",
+    "简介": "SwitchWaker（GameCube《风之杖》的 Switch 原生移植）",
+    "分类": "游戏移植",
+    "enabled": false,
+    "aliases": [
+      "SwitchWaker"
+    ],
+    "repo_path": "centollOS/SwitchWaker",
+    "releases_url": "https://github.com/centollOS/SwitchWaker/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "run_installer": false,
+    "kill_before_install": false,
+    "use_download_filename": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      ".zip"
+    ],
+    "installer_filename_regex": "SwitchWaker\\-v?\\d+(?:\\.\\d+){0,3}\\-switch\\.zip",
+    "使用说明": "需 Atmosphère 和 hbmenu；此条下载美版构建，需自备 GZLE01 revision 0 镜像；欧版附件见作者发布页。",
+    "_核查": {
+      "日期": "2026-11-09",
+      "来源": "https://github.com/centollOS/SwitchWaker/releases/tag/v1.0.2",
+      "状态": "release",
+      "发布标签": "v1.0.2"
+    },
+    "download_url_templates": [
+      "https://github.com/centollOS/SwitchWaker/releases/download/{ver}/SwitchWaker-{ver}-switch.zip"
+    ],
+    "save_subdir": "switchwaker",
+    "save_name": "SwitchWaker-v1.0.2-switch.zip"
+  },
+  {
+    "id": "oracles_project_nx",
+    "简介": "The Oracles Project NX（塞尔达传说 Oracles 移植）",
+    "分类": "游戏移植",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "toniisound/the-oracles-project-nx",
+    "releases_url": "https://github.com/toniisound/the-oracles-project-nx/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".nro"
+    ],
+    "installer_filename_regex": "the\\-oracles\\-project\\-nx\\.nro",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "download_names": [
+      "the-oracles-project-nx.nro"
+    ],
+    "save_subdir": "oracles_project_nx",
+    "使用说明": "需支持自制应用的 Switch，自备项目要求的美版 ROM。",
+    "_核查": {
+      "日期": "2026-11-12",
+      "来源": "https://github.com/toniisound/the-oracles-project-nx/releases/tag/1.3.0",
+      "状态": "release",
+      "发布标签": "1.3.0",
+      "发布日期": "2026-10-29"
+    }
+  },
+  {
+    "id": "touhou12_switch",
+    "简介": "东方星莲船 Switch 移植（TH12）",
+    "分类": "游戏移植",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "saekaze/th12-switch",
+    "releases_url": "https://github.com/saekaze/th12-switch/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".nro"
+    ],
+    "installer_filename_regex": "touhou12\\.nro",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "download_names": [
+      "touhou12.nro"
+    ],
+    "save_subdir": "touhou12_switch",
+    "使用说明": "需支持自制应用的 Switch，自备原版游戏资源。",
+    "_核查": {
+      "日期": "2026-11-12",
+      "来源": "https://github.com/saekaze/th12-switch/releases/tag/v1.00b-r2",
+      "状态": "release",
+      "发布标签": "v1.00b-r2",
+      "发布日期": "2026-10-25"
+    }
+  },
+  {
+    "id": "openmohaa_nx",
+    "简介": "OpenMoHAA NX（荣誉勋章：联合袭击引擎移植）",
+    "分类": "游戏移植",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "NaGaa95/openmohaa_nx",
+    "releases_url": "https://github.com/NaGaa95/openmohaa_nx/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".nro"
+    ],
+    "installer_filename_regex": "openmohaa\\.nro",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "download_names": [
+      "openmohaa.nro"
+    ],
+    "save_subdir": "openmohaa_nx",
+    "使用说明": "需支持自制应用的 Switch，自备原版游戏数据。",
+    "_核查": {
+      "日期": "2026-11-12",
+      "来源": "https://github.com/NaGaa95/openmohaa_nx/releases/tag/0.83.0.4",
+      "状态": "release",
+      "发布标签": "0.83.0.4",
+      "发布日期": "2026-11-03"
+    }
+  },
+  {
+    "id": "mega_man_w_switch",
+    "简介": "Mega Man W（Switch 同人平台动作游戏）",
+    "分类": "游戏移植",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "Vroccolli/mega-man-w-switch-homebrew",
+    "releases_url": "https://github.com/Vroccolli/mega-man-w-switch-homebrew/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_filename_regex": "Mega\\-Man\\-W\\-Switch\\-Homebrew\\-v\\d+(?:\\.\\d+)+\\-SD\\-card\\.zip",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "download_names": [
+      "Mega-Man-W-Switch-Homebrew-v0.1.0-SD-card.zip"
+    ],
+    "save_subdir": "mega_man_w_switch",
+    "使用说明": "需支持自制应用的 Switch，按发行说明复制到 SD 卡。",
+    "_核查": {
+      "日期": "2026-11-12",
+      "来源": "https://github.com/Vroccolli/mega-man-w-switch-homebrew/releases/tag/v0.1.0",
+      "状态": "release",
+      "发布标签": "v0.1.0",
+      "发布日期": "2026-10-27"
+    }
+  },
+  {
+    "id": "horizon_nx",
+    "简介": "Horizon NX（用 Rust 实现的 Switch 版 Minecraft）",
+    "分类": "游戏移植",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "JohnUzoka/horizon-nx",
+    "releases_url": "https://github.com/JohnUzoka/horizon-nx/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_filename_regex": "horizon\\-switch\\-\\d+(?:\\.\\d+)+\\.zip",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "download_names": [
+      "horizon-switch-0.1.0.zip"
+    ],
+    "save_subdir": "horizon_nx",
+    "使用说明": "需支持自制应用的 Switch。",
+    "_核查": {
+      "日期": "2026-11-12",
+      "来源": "https://github.com/JohnUzoka/horizon-nx/releases/tag/v0.1.0",
+      "状态": "release",
+      "发布标签": "v0.1.0",
+      "发布日期": "2026-11-04"
     }
   }
 ]

@@ -60,6 +60,36 @@ class CustomCatalogTests(unittest.TestCase):
         self.assertTrue(is_app_downloadable(entry))
         self.assertEqual(resolve_open_page_url(entry), entry["fixed_download_url"])
 
+    def test_rate_limited_release_resolves_from_expanded_assets(self):
+        import requests
+        from auto_update import check_latest_version
+
+        app = {
+            "id": "player",
+            "repo_path": "acme/player",
+            "releases_url": "https://github.com/acme/player/releases/latest",
+            "prefer_api_assets": True,
+            "installer_filename_regex": r"player-\d+\.\d+\.\d+-x64\.exe",
+        }
+        limited = requests.Response()
+        limited.status_code = 403
+        limited._content = b"API rate limit exceeded"
+        page = '<a href="/acme/player/releases/tag/v1.2.3">v1.2.3</a>'
+        assets = requests.Response()
+        assets.status_code = 200
+        assets._content = b'''
+            <a href="/acme/other/releases/download/v1.2.3/player-1.2.3-x64.exe">other repo</a>
+            <a href="/acme/player/releases/download/v1.2.3/player-1.2.3-arm64.exe">ARM64</a>
+            <a href="/acme/player/releases/download/v1.2.3/player-1.2.3-x64.exe">x64</a>
+        '''
+        with tempfile.TemporaryDirectory() as td, \
+                patch("auto_update.requests.get", side_effect=[limited, assets]) as get, \
+                patch("auto_update.request_release_page", return_value=(app["releases_url"], page)):
+            version, url = check_latest_version(app, str(Path(td) / "release.html"), cfg={})
+        self.assertEqual(version, "v1.2.3")
+        self.assertEqual(url, "https://github.com/acme/player/releases/download/v1.2.3/player-1.2.3-x64.exe")
+        self.assertEqual(get.call_args.args[0], "https://github.com/acme/player/releases/expanded_assets/v1.2.3")
+
     def test_duplicates_keep_enabled_and_other_owners_are_separate(self):
         m = self.custom()
         asset = m.detect_assets([self.asset("player-v1.2.3-win-x64.exe")])[0]

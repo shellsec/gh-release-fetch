@@ -1,7 +1,7 @@
 [
   {
     "id": "retroarch",
-    "简介": "模拟器前端",
+    "简介": "在 Switch 上管理和启动不同平台的模拟器核心",
     "分类": "游戏与串流",
     "enabled": false,
     "aliases": [
@@ -30,7 +30,7 @@
   },
   {
     "id": "moonlight-switch",
-    "简介": "电脑游戏和画面串流",
+    "简介": "把电脑游戏的画面和声音串流到 Switch",
     "分类": "游戏与串流",
     "enabled": false,
     "aliases": [
@@ -70,7 +70,7 @@
       "debug",
       "Debug"
     ],
-    "使用说明": "仅下载主机端文件；放置路径、资源依赖及启动方式见项目说明。",
+    "使用说明": "下载 Switch 版文件。放置位置和依赖见项目说明。",
     "_核查": {
       "日期": "2026-10-19",
       "来源": "https://github.com/XITRIX/Moonlight-Switch/releases/tag/v1.5.0",
@@ -84,7 +84,7 @@
   },
   {
     "id": "corkdeck",
-    "简介": "实验性 Windows 游戏运行项目",
+    "简介": "尝试在 Switch 上运行部分 Windows 游戏",
     "分类": "游戏与串流",
     "enabled": false,
     "aliases": [
@@ -129,6 +129,70 @@
       "状态": "release",
       "发布标签": "v0.3e",
       "发布时间": "2026-10-11T17:41:14Z"
+    }
+  },
+  {
+    "id": "switch_frame_tap",
+    "简介": "Switch Frame Tap（通过 USB 或网络传送 Switch 画面与声音）",
+    "分类": "游戏与串流",
+    "enabled": false,
+    "aliases": [
+      "Switch Frame Tap"
+    ],
+    "repo_path": "TomasUribe/switch-frame-tap",
+    "releases_url": "https://github.com/TomasUribe/switch-frame-tap/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "run_installer": false,
+    "kill_before_install": false,
+    "use_download_filename": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      ".zip"
+    ],
+    "installer_filename_regex": "switch\\-frame\\-tap\\-\\d+(?:\\.\\d+){0,3}\\-switch\\.zip",
+    "使用说明": "需 Atmosphère 与对应接收端；此处为 Switch 端包。",
+    "_核查": {
+      "日期": "2026-11-09",
+      "来源": "https://github.com/TomasUribe/switch-frame-tap/releases/tag/v0.7.21.1",
+      "状态": "release",
+      "发布标签": "v0.7.21.1"
+    },
+    "download_names": [
+      "switch-frame-tap-{ver_plain}-switch.zip"
+    ],
+    "save_subdir": "switch_frame_tap",
+    "save_name": "switch-frame-tap-0.7.21.1-switch.zip"
+  },
+  {
+    "id": "tico",
+    "简介": "tico（Switch 模拟器前端，集中管理游戏库与模拟器模块）",
+    "分类": "游戏与串流",
+    "enabled": false,
+    "aliases": ["ticoverse", "模拟器前端"],
+    "repo_path": "ticohq/tico",
+    "releases_url": "https://github.com/ticohq/tico/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "run_installer": false,
+    "kill_before_install": false,
+    "use_download_filename": true,
+    "installer_extensions": [".nro"],
+    "installer_markers": ["tico.nro"],
+    "installer_filename_regex": "tico\\.nro",
+    "download_names": ["tico.nro"],
+    "save_subdir": "tico",
+    "使用说明": "需要 Atmosphère 和 Homebrew Menu。下载 tico.nro 后放到 SD 卡的 /switch/tico/。0.8.0 起模拟器模块需在 tico Store 另行安装。升级前按作者说明备份存档。",
+    "_核查": {
+      "日期": "2026-11-10",
+      "来源": "https://github.com/ticohq/tico/releases/tag/0.8.0",
+      "状态": "release",
+      "发布标签": "0.8.0",
+      "发布时间": "2026-10-22T02:29:48Z"
     }
   }
 ]

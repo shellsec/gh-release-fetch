@@ -1,0 +1,138 @@
+[
+  {
+    "id": "heronite",
+    "简介": "Heronite（统一浏览和启动 Steam、Epic、GOG 等游戏，提供手柄优先界面）",
+    "分类": "游戏库与启动器",
+    "enabled": false,
+    "aliases": [
+      "Heronite"
+    ],
+    "repo_path": "RafaelGoulartB/Heronite",
+    "releases_url": "https://github.com/RafaelGoulartB/Heronite/releases/latest",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "使用说明": "作者有 Steam Deck 专门指南；可在桌面模式启动 AppImage 并加入 Steam，在游戏模式使用。",
+    "_核查": {
+      "日期": "2026-11-09",
+      "来源": "https://github.com/RafaelGoulartB/Heronite/releases/tag/v1.5.0",
+      "状态": "release",
+      "发布标签": "v1.5.0",
+      "发布日期": "2026-11-09",
+      "兼容性来源": "https://heronite.app/guides/steam-deck/"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "installer_markers": [
+      ".AppImage"
+    ],
+    "installer_filename_regex": "Heronite\\-x86_64\\.AppImage",
+    "use_download_filename": true,
+    "save_subdir": "heronite",
+    "download_names": [
+      "Heronite-x86_64.AppImage"
+    ]
+  },
+  {
+    "id": "heroic_games_launcher",
+    "简介": "Heroic Games Launcher（在掌机上管理 Epic、GOG 和 Amazon Games 游戏）",
+    "分类": "游戏库与启动器",
+    "enabled": false,
+    "aliases": [
+      "Heroic Games Launcher"
+    ],
+    "repo_path": "Heroic-Games-Launcher/HeroicGamesLauncher",
+    "releases_url": "https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/latest",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "使用说明": "此条提供 x86_64 AppImage；作者在 Steam Deck 上推荐通过 Discover 安装 Flatpak，也提供 AppImage 使用说明。",
+    "_核查": {
+      "日期": "2026-11-09",
+      "来源": "https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/tag/v2.22.4",
+      "状态": "release",
+      "发布标签": "v2.22.4",
+      "发布日期": "2026-10-15",
+      "兼容性来源": "https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/wiki/Steam-Deck"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "installer_markers": [
+      ".AppImage"
+    ],
+    "installer_filename_regex": "Heroic\\-\\d+(?:\\.\\d+){0,3}\\-linux\\-x86_64\\.AppImage",
+    "use_download_filename": true,
+    "save_subdir": "heroic_games_launcher",
+    "download_names": [
+      "Heroic-{ver_plain}-linux-x86_64.AppImage"
+    ]
+  },
+  {
+    "id": "steam_rom_manager",
+    "简介": "Steam ROM Manager（批量把模拟器游戏和封面加入 Steam 游戏库）",
+    "分类": "游戏库与启动器",
+    "enabled": false,
+    "aliases": [
+      "Steam ROM Manager"
+    ],
+    "repo_path": "SteamGridDB/steam-rom-manager",
+    "releases_url": "https://github.com/SteamGridDB/steam-rom-manager/releases/latest",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "使用说明": "选 x86_64 AppImage；作者建议 Steam Deck 用户通过 EmuDeck 统一配置，已有 EmuDeck 可使用其中的入口。",
+    "_核查": {
+      "日期": "2026-11-09",
+      "来源": "https://github.com/SteamGridDB/steam-rom-manager/releases/tag/v2.6.2",
+      "状态": "release",
+      "发布标签": "v2.6.2",
+      "发布日期": "2026-11-02",
+      "兼容性来源": "https://github.com/SteamGridDB/steam-rom-manager"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "installer_markers": [
+      ".AppImage"
+    ],
+    "installer_filename_regex": "Steam\\-ROM\\-Manager\\-\\d+(?:\\.\\d+){0,3}\\.AppImage",
+    "use_download_filename": true,
+    "save_subdir": "steam_rom_manager",
+    "download_names": [
+      "Steam-ROM-Manager-{ver_plain}.AppImage"
+    ]
+  },
+  {
+    "id": "non_steam_launchers",
+    "简介": "NonSteamLaunchers（在 Steam Deck 上配置第三方游戏启动器和 Steam 快捷方式）",
+    "分类": "游戏库与启动器",
+    "enabled": false,
+    "aliases": [
+      "NonSteamLaunchers"
+    ],
+    "repo_path": "moraroy/NonSteamLaunchers-On-Steam-Deck",
+    "releases_url": "https://github.com/moraroy/NonSteamLaunchers-On-Steam-Deck/releases/latest",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "使用说明": "作者提供桌面启动文件与插件部署方式；打开项目说明后按设备架构选择。",
+    "_核查": {
+      "日期": "2026-11-09",
+      "来源": "https://github.com/moraroy/NonSteamLaunchers-On-Steam-Deck/releases/tag/v4.2.94",
+      "状态": "release",
+      "发布标签": "v4.2.94",
+      "发布日期": "2026-10-29",
+      "兼容性来源": "https://github.com/moraroy/NonSteamLaunchers-On-Steam-Deck"
+    },
+    "open_page_only": true,
+    "open_page_url": "https://github.com/moraroy/NonSteamLaunchers-On-Steam-Deck"
+  }
+]

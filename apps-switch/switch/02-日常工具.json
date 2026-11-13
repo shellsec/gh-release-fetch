@@ -1,7 +1,7 @@
 [
   {
     "id": "jksv",
-    "简介": "存档备份和还原",
+    "简介": "把游戏存档备份到 SD 卡，或从备份还原",
     "分类": "日常工具",
     "enabled": false,
     "aliases": [
@@ -41,7 +41,7 @@
       "debug",
       "Debug"
     ],
-    "使用说明": "仅下载主机端文件；放置路径、资源依赖及启动方式见项目说明。",
+    "使用说明": "下载 JKSV.nro。建议在还原前先备份当前存档。",
     "_核查": {
       "日期": "2026-10-19",
       "来源": "https://github.com/J-D-K/JKSV/releases/tag/12/02/2025",
@@ -55,7 +55,7 @@
   },
   {
     "id": "sys-clk",
-    "简介": "频率调节",
+    "简介": "为不同游戏设置 CPU、GPU 和内存频率",
     "分类": "日常工具",
     "enabled": false,
     "aliases": [
@@ -95,7 +95,7 @@
       "debug",
       "Debug"
     ],
-    "使用说明": "完整保留压缩包中的 SD 卡目录布局，具体依赖与启动方式见项目说明。",
+    "使用说明": "下载 Switch 版压缩包。解压时保留包内目录，依赖见项目说明。",
     "_核查": {
       "日期": "2026-10-19",
       "来源": "https://github.com/retronx-team/sys-clk/releases/tag/2.0.1",
@@ -106,7 +106,7 @@
   },
   {
     "id": "missioncontrol",
-    "简介": "第三方手柄连接",
+    "简介": "连接第三方蓝牙手柄",
     "分类": "日常工具",
     "enabled": false,
     "aliases": [
@@ -147,7 +147,7 @@
       "debug",
       "Debug"
     ],
-    "使用说明": "完整保留压缩包中的 SD 卡目录布局，具体依赖与启动方式见项目说明。",
+    "使用说明": "下载 Switch 版压缩包。解压时保留包内目录，依赖见项目说明。",
     "_核查": {
       "日期": "2026-10-19",
       "来源": "https://github.com/ndeadly/MissionControl/releases/tag/v0.16.0",
@@ -158,7 +158,7 @@
   },
   {
     "id": "ftpd",
-    "简介": "FTP 无线传文件",
+    "简介": "用手机或电脑通过 FTP 读写 SD 卡文件",
     "分类": "日常工具",
     "enabled": false,
     "aliases": [
@@ -197,7 +197,7 @@
       "debug",
       "Debug"
     ],
-    "使用说明": "仅下载主机端文件；放置路径、资源依赖及启动方式见项目说明。",
+    "使用说明": "在 Switch 上打开 FTP 服务，再用手机或电脑连接屏幕上显示的地址。",
     "_核查": {
       "日期": "2026-10-19",
       "来源": "https://github.com/mtheall/ftpd/releases/tag/v3.2.1",
@@ -211,7 +211,7 @@
   },
   {
     "id": "tesla-menu",
-    "简介": "游戏内悬浮菜单（配合 nx-ovlloader）",
+    "简介": "在游戏中打开悬浮菜单和插件",
     "分类": "日常工具",
     "enabled": false,
     "aliases": [
@@ -266,7 +266,7 @@
   },
   {
     "id": "nx-ovlloader",
-    "简介": "悬浮菜单加载器（配合 Tesla-Menu）",
+    "简介": "加载 Tesla 等悬浮菜单所需的插件",
     "分类": "日常工具",
     "enabled": false,
     "aliases": [
@@ -319,7 +319,7 @@
   },
   {
     "id": "nx-shell",
-    "简介": "文件管理器",
+    "简介": "在 Switch 上浏览和整理 SD 卡文件",
     "分类": "日常工具",
     "enabled": false,
     "aliases": [
@@ -358,7 +358,7 @@
       "debug",
       "Debug"
     ],
-    "使用说明": "仅下载主机端文件；放置路径、资源依赖及启动方式见项目说明。",
+    "使用说明": "下载独立 NRO。可以在 hbmenu 中打开。",
     "_核查": {
       "日期": "2026-10-19",
       "来源": "https://github.com/joel16/NX-Shell/releases/tag/4.01",
@@ -372,7 +372,7 @@
   },
   {
     "id": "edizon",
-    "简介": "存档编辑与金手指工具",
+    "简介": "备份、还原或编辑游戏存档",
     "分类": "日常工具",
     "enabled": false,
     "aliases": [
@@ -412,7 +412,7 @@
       "debug",
       "Debug"
     ],
-    "使用说明": "仅下载主机端文件；放置路径、资源依赖及启动方式见项目说明。",
+    "使用说明": "下载 Switch 版文件。放置位置和依赖见项目说明。",
     "_核查": {
       "日期": "2026-10-19",
       "来源": "https://github.com/WerWolv/EdiZon/releases/tag/v3.1.0",
@@ -426,7 +426,7 @@
   },
   {
     "id": "homeguard",
-    "简介": "HOME 键控制工具",
+    "简介": "管理 HOME 菜单的保护设置",
     "分类": "日常工具",
     "enabled": false,
     "aliases": [
@@ -479,7 +479,7 @@
     "id": "dbi",
     "repo_path": "rashevskyv/dbi",
     "releases_url": "https://github.com/rashevskyv/dbi/releases",
-    "简介": "DBI 文件管理与 USB/MTP 工具",
+    "简介": "通过 USB 或 MTP 在电脑和 Switch 之间传文件",
     "分类": "日常工具",
     "enabled": false,
     "aliases": [
@@ -514,7 +514,7 @@
       "Debug",
       "debug"
     ],
-    "使用说明": "只下载主机端 DBI.nro；dbi.config 及电脑端后端程序可从同一发布页按需获取。",
+    "使用说明": "此条目只下载 DBI.nro。需要配置文件或电脑端工具时，可从同一发布页获取。",
     "_核查": {
       "日期": "2026-10-19",
       "来源": "https://github.com/rashevskyv/dbi/releases/tag/912ru",
@@ -530,7 +530,7 @@
     "id": "hb-appstore",
     "repo_path": "fortheusers/hb-appstore",
     "releases_url": "https://github.com/fortheusers/hb-appstore/releases",
-    "简介": "Homebrew App Store 自制应用商店",
+    "简介": "在 Switch 上查找、下载和更新自制应用",
     "分类": "日常工具",
     "enabled": false,
     "aliases": [
@@ -581,7 +581,7 @@
     "id": "aio-switch-updater",
     "repo_path": "HamletDuFromage/aio-switch-updater",
     "releases_url": "https://github.com/HamletDuFromage/aio-switch-updater/releases",
-    "简介": "AIO Switch Updater 系统组件更新工具",
+    "简介": "下载自制系统、固件和相关更新包",
     "分类": "日常工具",
     "enabled": false,
     "aliases": [
@@ -615,7 +615,7 @@
       "Debug",
       "debug"
     ],
-    "使用说明": "完整保留压缩包中的 SD 卡目录布局，具体依赖与启动方式见项目说明。",
+    "使用说明": "下载 Switch 版压缩包。解压时保留包内目录，依赖见项目说明。",
     "_核查": {
       "日期": "2026-10-19",
       "来源": "https://github.com/HamletDuFromage/aio-switch-updater/releases/tag/2.23.3",
@@ -631,7 +631,7 @@
     "id": "ultrahand-overlay",
     "repo_path": "ppkantorski/Ultrahand-Overlay",
     "releases_url": "https://github.com/ppkantorski/Ultrahand-Overlay/releases",
-    "简介": "Ultrahand 悬浮菜单与脚本工具",
+    "简介": "在游戏内打开悬浮工具和运行脚本",
     "分类": "日常工具",
     "enabled": false,
     "aliases": [
@@ -682,7 +682,7 @@
     "id": "emuiibo",
     "repo_path": "XorTroll/emuiibo",
     "releases_url": "https://github.com/XorTroll/emuiibo/releases",
-    "简介": "emuiibo 虚拟 amiibo 系统模块",
+    "简介": "用虚拟 amiibo 代替实体 amiibo",
     "分类": "日常工具",
     "enabled": false,
     "aliases": [
@@ -732,7 +732,7 @@
     "id": "sys-con",
     "repo_path": "cathery/sys-con",
     "releases_url": "https://github.com/cathery/sys-con/releases",
-    "简介": "sys-con USB 有线手柄支持模块",
+    "简介": "用 USB 连接兼容的第三方手柄",
     "分类": "日常工具",
     "enabled": false,
     "aliases": [
@@ -779,7 +779,7 @@
     "id": "fastcfwswitch",
     "repo_path": "Hartie95/fastCFWswitch",
     "releases_url": "https://github.com/Hartie95/fastCFWswitch/releases",
-    "简介": "fastCFWswitch 启动载荷切换悬浮插件",
+    "简介": "从悬浮菜单选择载荷并重启",
     "分类": "日常工具",
     "enabled": false,
     "aliases": [
@@ -824,7 +824,7 @@
   },
   {
     "id": "awoo-installer",
-    "简介": "Awoo Installer 主机端安装工具",
+    "简介": "在 Switch 上使用 Awoo 安装工具",
     "分类": "日常工具",
     "enabled": false,
     "aliases": [
@@ -869,7 +869,7 @@
   },
   {
     "id": "ascent-toolbox",
-    "简介": "Ascent Toolbox 系统模块管理",
+    "简介": "查看和切换系统模块",
     "分类": "日常工具",
     "enabled": false,
     "aliases": [
@@ -914,7 +914,7 @@
   },
   {
     "id": "deepsea-toolbox",
-    "简介": "DeepSea Toolbox 深海工具箱",
+    "简介": "管理 DeepSea 环境中的系统模块",
     "分类": "日常工具",
     "enabled": false,
     "aliases": [
@@ -959,7 +959,7 @@
   },
   {
     "id": "edizon-se",
-    "简介": "EdiZon SE 存档与金手指工具",
+    "简介": "在游戏运行时查找和修改数值",
     "分类": "日常工具",
     "enabled": false,
     "aliases": [
@@ -1004,7 +1004,7 @@
   },
   {
     "id": "linkalho",
-    "简介": "Linkalho 离线账号关联工具",
+    "简介": "管理主机上的本地账号关联",
     "分类": "日常工具",
     "enabled": false,
     "aliases": [
@@ -1046,7 +1046,7 @@
   },
   {
     "id": "nx-activity-log-zdm",
-    "简介": "游戏游玩时间记录汉化版",
+    "简介": "用中文查看各游戏的游玩时长",
     "分类": "日常工具",
     "enabled": false,
     "aliases": [
@@ -1091,7 +1091,7 @@
   },
   {
     "id": "sphaira",
-    "简介": "Sphaira 自制菜单与文件管理",
+    "简介": "在一个菜单里启动自制应用、浏览文件和找工具",
     "分类": "日常工具",
     "enabled": false,
     "aliases": [
@@ -1137,7 +1137,7 @@
   },
   {
     "id": "switch-time",
-    "简介": "Switch Time 网络校时工具",
+    "简介": "联网校准 Switch 的系统时间",
     "分类": "日常工具",
     "enabled": false,
     "aliases": [
@@ -1149,7 +1149,7 @@
     "releases_url": "https://github.com/3096/switch-time/releases",
     "run_installer": false,
     "kill_before_install": false,
-    "使用说明": "网络校时 NRO；联网条件与系统设置要求查看 README。",
+    "使用说明": "下载校时 NRO。使用前请确认 Switch 已联网。",
     "_核查": {
       "日期": "2026-10-19",
       "状态": "release",
@@ -1183,7 +1183,7 @@
   },
   {
     "id": "tencent-switcher-gui",
-    "简介": "Tencent Switcher GUI 系统区域切换",
+    "简介": "在 Switch 上切换系统区域",
     "分类": "日常工具",
     "enabled": false,
     "aliases": [
@@ -1195,7 +1195,7 @@
     "releases_url": "https://github.com/CaiMiao/Tencent-switcher-GUI/releases",
     "run_installer": false,
     "kill_before_install": false,
-    "使用说明": "系统区域切换工具；本次 latest 标签为 0.1.1，未将用户参考 0.1.2 写成已核实版本。",
+    "使用说明": "下载当前公开 Release。可切换的区域和使用条件以项目说明为准。",
     "_核查": {
       "日期": "2026-10-19",
       "状态": "release",
@@ -1229,7 +1229,7 @@
   },
   {
     "id": "tinwoo",
-    "简介": "TinWoo 主机端安装工具",
+    "简介": "在 Switch 上使用 TinWoo 安装工具",
     "分类": "日常工具",
     "enabled": false,
     "aliases": [
@@ -1270,5 +1270,41 @@
     "download_names": [
       "Tinwoo-Installer.zip"
     ]
+  },
+  {
+    "id": "saltynx",
+    "简介": "SaltyNX（FPSLocker 等工具使用的 Switch 系统模块）",
+    "分类": "日常工具",
+    "enabled": false,
+    "aliases": [
+      "SaltyNX"
+    ],
+    "repo_path": "masagrator/SaltyNX",
+    "releases_url": "https://github.com/masagrator/SaltyNX/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "run_installer": false,
+    "kill_before_install": false,
+    "use_download_filename": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      ".zip"
+    ],
+    "installer_filename_regex": "SaltyNX\\.zip",
+    "使用说明": "作者要求固件 10.0.0 起及官方 Atmosphère 环境；选标准 ZIP，联机游戏使用前查阅作者限制。",
+    "_核查": {
+      "日期": "2026-11-09",
+      "来源": "https://github.com/masagrator/SaltyNX/releases/tag/2.1.4",
+      "状态": "release",
+      "发布标签": "2.1.4"
+    },
+    "download_names": [
+      "SaltyNX.zip"
+    ],
+    "save_subdir": "saltynx",
+    "save_name": "SaltyNX.zip"
   }
 ]

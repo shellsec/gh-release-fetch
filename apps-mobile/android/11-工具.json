@@ -445,5 +445,70 @@
     "kill_before_install": false,
     "windows_installer": false,
     "process_name": ""
+  },
+  {
+    "id": "fossify_file_manager",
+    "简介": "Fossify File Manager（本地文件浏览、整理和归档）",
+    "分类": "工具",
+    "enabled": false,
+    "aliases": [
+      "Fossify File Manager"
+    ],
+    "repo_path": "FossifyOrg/File-Manager",
+    "releases_url": "https://github.com/FossifyOrg/File-Manager/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "run_installer": false,
+    "kill_before_install": false,
+    "use_download_filename": true,
+    "installer_extensions": [
+      ""
+    ],
+    "installer_markers": [
+      ""
+    ],
+    "installer_filename_regex": "file-manager-\\d+-foss-release\\.apk",
+    "使用说明": "选择项目发布页的 FOSS APK。",
+    "_核查": {
+      "日期": "2026-11-09",
+      "来源": "https://github.com/FossifyOrg/File-Manager/releases/tag/1.6.4",
+      "状态": "release",
+      "发布标签": "1.6.4"
+    }
+  },
+  {
+    "id": "translate_you",
+    "简介": "Translate You（支持多引擎、图片翻译和安卓分享菜单）",
+    "分类": "工具",
+    "enabled": false,
+    "aliases": [
+      "Translate You"
+    ],
+    "repo_path": "you-apps/TranslateYou",
+    "releases_url": "https://github.com/you-apps/TranslateYou/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "run_installer": false,
+    "kill_before_install": false,
+    "use_download_filename": true,
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers": [
+      ".apk"
+    ],
+    "installer_filename_regex": "app\\-release\\.apk",
+    "使用说明": "不同翻译引擎的联网和 API 密钥要求见作者说明。",
+    "_核查": {
+      "日期": "2026-11-09",
+      "来源": "https://github.com/you-apps/TranslateYou/releases/tag/v20.0",
+      "状态": "release",
+      "发布标签": "v20.0"
+    },
+    "download_names": [
+      "app-release.apk"
+    ]
   }
 ]

@@ -1882,6 +1882,184 @@
         }
       ],
       "status": "release"
+    },
+    {
+      "repo": "masagrator/SaltyNX",
+      "release_url": "https://github.com/masagrator/SaltyNX/releases/tag/2.1.4",
+      "tag": "2.1.4",
+      "published_at": "2026-11-03T16:29:39Z",
+      "assets": [
+        {
+          "name": "SaltyNX.zip",
+          "url": "https://github.com/masagrator/SaltyNX/releases/download/2.1.4/SaltyNX.zip"
+        },
+        {
+          "name": "SaltyNX_Debug.zip",
+          "url": "https://github.com/masagrator/SaltyNX/releases/download/2.1.4/SaltyNX_Debug.zip"
+        }
+      ],
+      "status": "release",
+      "checked_on": "2026-11-09"
+    },
+    {
+      "repo": "TomasUribe/switch-frame-tap",
+      "release_url": "https://github.com/TomasUribe/switch-frame-tap/releases/tag/v0.7.21.1",
+      "tag": "v0.7.21.1",
+      "published_at": "2026-11-03T16:41:55Z",
+      "assets": [
+        {
+          "name": "switch-frame-tap-0.7.21.1-android.apk",
+          "url": "https://github.com/TomasUribe/switch-frame-tap/releases/download/v0.7.21.1/switch-frame-tap-0.7.21.1-android.apk"
+        },
+        {
+          "name": "switch-frame-tap-0.7.21.1-linux-x86_64.AppImage",
+          "url": "https://github.com/TomasUribe/switch-frame-tap/releases/download/v0.7.21.1/switch-frame-tap-0.7.21.1-linux-x86_64.AppImage"
+        },
+        {
+          "name": "switch-frame-tap-0.7.21.1-linux.flatpak",
+          "url": "https://github.com/TomasUribe/switch-frame-tap/releases/download/v0.7.21.1/switch-frame-tap-0.7.21.1-linux.flatpak"
+        },
+        {
+          "name": "switch-frame-tap-0.7.21.1-linux.tar.gz",
+          "url": "https://github.com/TomasUribe/switch-frame-tap/releases/download/v0.7.21.1/switch-frame-tap-0.7.21.1-linux.tar.gz"
+        },
+        {
+          "name": "switch-frame-tap-0.7.21.1-macos-arm64.zip",
+          "url": "https://github.com/TomasUribe/switch-frame-tap/releases/download/v0.7.21.1/switch-frame-tap-0.7.21.1-macos-arm64.zip"
+        },
+        {
+          "name": "switch-frame-tap-0.7.21.1-macos-x86_64.zip",
+          "url": "https://github.com/TomasUribe/switch-frame-tap/releases/download/v0.7.21.1/switch-frame-tap-0.7.21.1-macos-x86_64.zip"
+        },
+        {
+          "name": "switch-frame-tap-0.7.21.1-switch.zip",
+          "url": "https://github.com/TomasUribe/switch-frame-tap/releases/download/v0.7.21.1/switch-frame-tap-0.7.21.1-switch.zip"
+        },
+        {
+          "name": "switch-frame-tap-0.7.21.1-windows-viewer.zip",
+          "url": "https://github.com/TomasUribe/switch-frame-tap/releases/download/v0.7.21.1/switch-frame-tap-0.7.21.1-windows-viewer.zip"
+        }
+      ],
+      "status": "release",
+      "checked_on": "2026-11-09"
+    },
+    {
+      "repo": "centollOS/SwitchWaker",
+      "release_url": "https://github.com/centollOS/SwitchWaker/releases/tag/v1.0.2",
+      "tag": "v1.0.2",
+      "published_at": "2026-10-27T15:28:06Z",
+      "assets": [
+        {
+          "name": "SwitchWaker-v1.0.2-switch-eur.zip",
+          "url": "https://github.com/centollOS/SwitchWaker/releases/download/v1.0.2/SwitchWaker-v1.0.2-switch-eur.zip"
+        },
+        {
+          "name": "SwitchWaker-v1.0.2-switch-eur.zip.sha256",
+          "url": "https://github.com/centollOS/SwitchWaker/releases/download/v1.0.2/SwitchWaker-v1.0.2-switch-eur.zip.sha256"
+        },
+        {
+          "name": "SwitchWaker-v1.0.2-switch.zip",
+          "url": "https://github.com/centollOS/SwitchWaker/releases/download/v1.0.2/SwitchWaker-v1.0.2-switch.zip"
+        },
+        {
+          "name": "SwitchWaker-v1.0.2-switch.zip.sha256",
+          "url": "https://github.com/centollOS/SwitchWaker/releases/download/v1.0.2/SwitchWaker-v1.0.2-switch.zip.sha256"
+        },
+        {
+          "name": "SwitchWaker-v1.0.2.zip",
+          "url": "https://github.com/centollOS/SwitchWaker/releases/download/v1.0.2/SwitchWaker-v1.0.2.zip"
+        },
+        {
+          "name": "SwitchWaker-v1.0.2.zip.sha256",
+          "url": "https://github.com/centollOS/SwitchWaker/releases/download/v1.0.2/SwitchWaker-v1.0.2.zip.sha256"
+        }
+      ],
+      "status": "release",
+      "checked_on": "2026-11-09"
+    },
+    {
+      "repo": "ticohq/tico",
+      "release_url": "https://github.com/ticohq/tico/releases/tag/0.8.0",
+      "tag": "0.8.0",
+      "published_at": "2026-10-22T02:29:48Z",
+      "assets": [
+        {
+          "name": "tico.nro",
+          "url": "https://github.com/ticohq/tico/releases/download/0.8.0/tico.nro"
+        }
+      ],
+      "status": "release",
+      "checked_on": "2026-11-10"
+    },
+    {
+      "repo": "toniisound/the-oracles-project-nx",
+      "release_url": "https://github.com/toniisound/the-oracles-project-nx/releases/tag/1.3.0",
+      "tag": "1.3.0",
+      "published_at": "2026-10-29",
+      "checked_on": "2026-11-12",
+      "assets": [
+        {
+          "name": "the-oracles-project-nx.nro",
+          "url": "https://github.com/toniisound/The-Oracles-Project-NX/releases/download/1.3.0/the-oracles-project-nx.nro"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "saekaze/th12-switch",
+      "release_url": "https://github.com/saekaze/th12-switch/releases/tag/v1.00b-r2",
+      "tag": "v1.00b-r2",
+      "published_at": "2026-10-25",
+      "checked_on": "2026-11-12",
+      "assets": [
+        {
+          "name": "touhou12.nro",
+          "url": "https://github.com/saekaze/th12-switch/releases/download/v1.00b-r2/touhou12.nro"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "NaGaa95/openmohaa_nx",
+      "release_url": "https://github.com/NaGaa95/openmohaa_nx/releases/tag/0.83.0.4",
+      "tag": "0.83.0.4",
+      "published_at": "2026-11-03",
+      "checked_on": "2026-11-12",
+      "assets": [
+        {
+          "name": "openmohaa.nro",
+          "url": "https://github.com/NaGaa95/openmohaa_nx/releases/download/0.83.0.4/openmohaa.nro"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "Vroccolli/mega-man-w-switch-homebrew",
+      "release_url": "https://github.com/Vroccolli/mega-man-w-switch-homebrew/releases/tag/v0.1.0",
+      "tag": "v0.1.0",
+      "published_at": "2026-10-27",
+      "checked_on": "2026-11-12",
+      "assets": [
+        {
+          "name": "Mega-Man-W-Switch-Homebrew-v0.1.0-SD-card.zip",
+          "url": "https://github.com/Vroccolli/mega-man-w-switch-homebrew/releases/download/v0.1.0/Mega-Man-W-Switch-Homebrew-v0.1.0-SD-card.zip"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "JohnUzoka/horizon-nx",
+      "release_url": "https://github.com/JohnUzoka/horizon-nx/releases/tag/v0.1.0",
+      "tag": "v0.1.0",
+      "published_at": "2026-11-04",
+      "checked_on": "2026-11-12",
+      "assets": [
+        {
+          "name": "horizon-switch-0.1.0.zip",
+          "url": "https://github.com/JohnUzoka/horizon-nx/releases/download/v0.1.0/horizon-switch-0.1.0.zip"
+        }
+      ],
+      "status": "release"
     }
   ]
 }

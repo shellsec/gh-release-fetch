@@ -19,17 +19,13 @@ if sys.platform == "win32":
         pass
 
 if not getattr(sys, "frozen", False):
-    HERE = Path(__file__).resolve().parent
-    if str(HERE) not in sys.path:
-        sys.path.insert(0, str(HERE))
-
     _REPO = Path(__file__).resolve().parents[2]
     if str(_REPO) not in sys.path:
         sys.path.insert(0, str(_REPO))
 
 from tools.ghrf_runtime import argv_from_prompt  # noqa: E402
 
-import search_pages as sp  # noqa: E402
+from tools.soft_page_check import search_pages as sp  # noqa: E402
 
 GAME_SCOPES = frozenset({"gamer520"})
 DEFAULT_SCOPE = "gamer520"
@@ -45,14 +41,7 @@ USAGE_LINES = [
 ]
 
 
-def _ensure_default_scope(argv: list[str]) -> list[str]:
-    if any(a == "--scope" or a.startswith("--scope=") for a in argv[1:]):
-        return argv
-    return argv[:1] + ["--scope", DEFAULT_SCOPE] + argv[1:]
-
-
 def main() -> int:
-    sys.argv = _ensure_default_scope(sys.argv)
     if not argv_from_prompt(USAGE_LINES, "请输入游戏名（可含 --open 等）: "):
         return 0
     return sp.run_search(

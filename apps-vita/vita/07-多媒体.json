@@ -1,0 +1,31 @@
+[
+  {
+    "id": "switchfin_vita",
+    "简介": "Switchfin（Jellyfin 媒体库客户端）",
+    "分类": "多媒体",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "dragonflylee/switchfin",
+    "releases_url": "https://github.com/dragonflylee/switchfin/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".vpk"
+    ],
+    "installer_filename_regex": "Switchfin\\.vpk",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "download_names": [
+      "Switchfin.vpk"
+    ],
+    "save_subdir": "switchfin_vita",
+    "使用说明": "需能运行自制应用的设备和 Jellyfin 服务器。",
+    "_核查": {
+      "日期": "2026-11-12",
+      "来源": "https://github.com/dragonflylee/switchfin/releases/tag/0.9.5",
+      "状态": "release",
+      "发布标签": "0.9.5",
+      "发布日期": "2026-11-10"
+    }
+  }
+]

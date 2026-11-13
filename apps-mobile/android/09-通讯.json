@@ -105,5 +105,28 @@
     "save_name": "simple_dialer.apk",
     "releases_url": "https://bgithub.xyz/FossifyOrg/Dialer/releases",
     "repo_path": "FossifyOrg/Dialer"
+  },
+  {
+    "id": "virc",
+    "简介": "vIRC（Android IRC 客户端）",
+    "分类": "通讯",
+    "enabled": false,
+    "run_installer": false,
+    "fixed_download_url": "https://f-droid.org/repo/io.github.ketandholakia.virc_23.apk",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "windows_installer": false,
+    "use_download_filename": true,
+    "download_names": [
+      "io.github.ketandholakia.virc_23.apk"
+    ],
+    "save_subdir": "virc",
+    "_核查": {
+      "日期": "2026-11-12",
+      "来源": "https://f-droid.org/en/packages/io.github.ketandholakia.virc/",
+      "状态": "release",
+      "发布日期": "2026-11-09"
+    }
   }
 ]

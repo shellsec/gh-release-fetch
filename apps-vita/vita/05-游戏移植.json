@@ -30,5 +30,70 @@
     "windows_installer": false,
     "open_page_only": true,
     "open_page_url": "https://github.com/fgsfdsfgs/vitaXash3D/releases"
+  },
+  {
+    "id": "vector_vita",
+    "简介": "VectorVita（在 Vita 上运行 Vector 的非官方加载器）",
+    "分类": "游戏移植",
+    "enabled": false,
+    "aliases": [
+      "VectorVita"
+    ],
+    "repo_path": "PKpro4/VectorVita",
+    "releases_url": "https://github.com/PKpro4/VectorVita/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".vpk"
+    ],
+    "installer_markers": [
+      ".vpk"
+    ],
+    "installer_filename_regex": "VectorVita\\.vpk",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "使用说明": "需 HENkaku/Ensō、kubridge、libshacccg.suprx 和自备 Vector APK；作者验证 1.2.1。",
+    "_核查": {
+      "日期": "2026-11-09",
+      "来源": "https://github.com/PKpro4/VectorVita/releases/tag/v1.0.0",
+      "状态": "release",
+      "发布标签": "v1.0.0",
+      "发布日期": "2026-11-05"
+    },
+    "download_names": [
+      "VectorVita.vpk"
+    ],
+    "save_subdir": "vector_vita"
+  },
+  {
+    "id": "umineko_vita",
+    "简介": "Umineko Vita（海猫鸣泣之时移植）",
+    "分类": "游戏移植",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "stoicpingu/umineko-vita",
+    "releases_url": "https://github.com/stoicpingu/umineko-vita/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".vpk"
+    ],
+    "installer_filename_regex": "umineko\\.vpk",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "download_names": [
+      "umineko.vpk"
+    ],
+    "save_subdir": "umineko_vita",
+    "使用说明": "需可运行自制 VPK 的 Vita，自备原作游戏数据。",
+    "_核查": {
+      "日期": "2026-11-12",
+      "来源": "https://github.com/stoicpingu/umineko-vita/releases/tag/v1.4",
+      "状态": "release",
+      "发布标签": "v1.4",
+      "发布日期": "2026-10-23"
+    }
   }
 ]

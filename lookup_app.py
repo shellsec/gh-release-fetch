@@ -35,6 +35,7 @@ import re
 import shlex
 import subprocess
 import sys
+from urllib.parse import unquote
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__)) if not getattr(sys, "frozen", False) else os.path.dirname(os.path.abspath(sys.executable))
 if not getattr(sys, "frozen", False) and SCRIPT_DIR not in sys.path:
@@ -43,7 +44,7 @@ if not getattr(sys, "frozen", False) and SCRIPT_DIR not in sys.path:
 from tools.ghrf_runtime import resolve_auto_update_argv  # noqa: E402
 from tools.ui_lang import t  # noqa: E402
 
-DEFAULT_APPS_DIR = os.path.join(SCRIPT_DIR, "apps")
+DEFAULT_APPS_DIR = os.path.join(os.environ.get("GHRF_CATALOG_BASE", SCRIPT_DIR), "apps")
 DESKTOP_PLATFORMS = ("windows", "darwin", "linux")
 SHARD_RE = re.compile(r"^\d+-(.+)\.json$", re.UNICODE)
 
@@ -145,7 +146,9 @@ def match_score(query: str, app: dict) -> int:
     return best
 
 
-def search_apps(apps_dir: str, query: str, min_score: int = 40) -> list[dict]:
+def search_apps(apps_dir: str, query: str, min_score: int = 40, *, exact_ids=None) -> list[dict]:
+    from tools.chrome_store import extension_id
+
     hits: list[dict] = []
     for platform, abspath in discover_shard_files(apps_dir):
         rel = os.path.relpath(abspath, apps_dir).replace("\\", "/")
@@ -159,10 +162,22 @@ def search_apps(apps_dir: str, query: str, min_score: int = 40) -> list[dict]:
         for app in items:
             if not isinstance(app, dict):
                 continue
-            score = match_score(query, app)
+            if exact_ids is not None:
+                if (platform, (app.get("id") or "").strip()) not in exact_ids:
+                    continue
+                score = 100
+            else:
+                score = match_score(query, app)
             if score < min_score:
                 continue
             cat = (app.get("分类") or "").strip() or shard_cat or "(未填分类)"
+            page = resolve_open_page_url(app)
+            chrome_id = None
+            if cat == "浏览器扩展":
+                try:
+                    chrome_id = extension_id(app.get("chrome_store_url") or page)
+                except ValueError:
+                    pass
             hits.append(
                 {
                     "score": score,
@@ -174,11 +189,14 @@ def search_apps(apps_dir: str, query: str, min_score: int = 40) -> list[dict]:
                     "shard_category": shard_cat,
                     "id": (app.get("id") or "").strip(),
                     "分类": cat,
+                    "子分类": (app.get("子分类") or "").strip(),
                     "enabled": app.get("enabled") is True,
                     "简介": (app.get("简介") or "").strip(),
                     "repo_path": (app.get("repo_path") or "").strip(),
+                    "chrome_source_repo": (app.get("chrome_source_repo") or "").strip(),
                     "downloadable": is_app_downloadable(app),
-                    "open_page_url": resolve_open_page_url(app),
+                    "open_page_url": page,
+                    "chrome_id": chrome_id,
                 }
             )
     hits.sort(key=lambda h: (-h["score"], h["platform"], h["id"]))
@@ -194,7 +212,7 @@ def print_hits(hits: list[dict]) -> None:
         brief = h["简介"]
         if len(brief) > 56:
             brief = brief[:53] + "..."
-        mode = t("hits.downloadable") if h.get("downloadable") else t("hits.page_only")
+        mode = "CRX" if h.get("chrome_id") else t("hits.downloadable") if h.get("downloadable") else t("hits.page_only")
         print("[%d] %s  id=%s  enabled=%s  [%s]" % (i, h["platform"], h["id"], en, mode))
         print(t("hits.shard", h["path"]))
         print(t("hits.category", h["分类"]))
@@ -425,16 +443,27 @@ def run_download_now(
     dry_run: bool,
     *,
     insecure: bool = False,
+    batch_dir: str | None = None,
 ) -> int:
     """按 id 调用 auto_update 下载；不可下载条目改为打开页面。"""
-    page_only = [h for h in chosen if not h.get("downloadable")]
-    downloadable = [h for h in chosen if h.get("downloadable")]
+    chrome_ids = list(dict.fromkeys(h["chrome_id"] for h in chosen if h.get("chrome_id")))
+    page_only = [h for h in chosen if not h.get("downloadable") and not h.get("chrome_id")]
+    downloadable = [h for h in chosen if h.get("downloadable") and not h.get("chrome_id")]
+    exit_code = 0
+    if chrome_ids:
+        from tools.repository_download import run_chrome_batch
+
+        crx_dir = os.path.join(batch_dir, "chrome") if batch_dir else None
+        exit_code = run_chrome_batch(chrome_ids, output=crx_dir, threads=4, dry_run=dry_run,
+                                     interactive=False, base_dir=SCRIPT_DIR)
     if page_only:
         print(t("download.page_only", len(page_only)))
-        run_open_pages(page_only, dry_run)
+        page_result = run_open_pages(page_only, dry_run)
+        if batch_dir and page_result:
+            exit_code = page_result
     if not downloadable:
-        if page_only:
-            return 0
+        if page_only or chrome_ids:
+            return exit_code
         print(t("download.none"))
         return 1
 
@@ -442,24 +471,135 @@ def run_download_now(
     for h in downloadable:
         by_plat.setdefault((h.get("apps_dir", apps_dir), h["platform"]), []).append(h["id"])
 
-    exit_code = 0
     for (source_dir, plat), ids in sorted(by_plat.items()):
         extra = _apps_dir_cli_args(source_dir)
         if insecure:
             extra.append("--insecure")
+        if batch_dir:
+            extra.extend(("--batch-download-dir", batch_dir))
         ids = sorted(set(ids))
         cmd = resolve_auto_update_argv(
-            SCRIPT_DIR, ["--platform", plat, *extra, *ids]
+            SCRIPT_DIR, ["--platform", plat, *extra, *(["--"] if batch_dir else []), *ids]
         )
         print()
         print(t("download.banner", plat, ", ".join(ids)))
         if dry_run:
             print(t("download.dry", " ".join(cmd)))
             continue
-        r = subprocess.run(cmd, cwd=SCRIPT_DIR)
+        hidden = {"creationflags": subprocess.CREATE_NO_WINDOW} if batch_dir and os.name == "nt" else {}
+        r = subprocess.run(cmd, cwd=SCRIPT_DIR, **hidden)
         if r.returncode != 0:
             exit_code = r.returncode
     return exit_code
+
+
+def run_catalog_batch(tokens, *, dry_run, output=None):
+    from tools.catalog_update import active_catalog
+
+    root = active_catalog(os.environ.get("GHRF_CATALOG_PROFILE", SCRIPT_DIR),
+                          os.environ.get("GHRF_CATALOG_BASE", SCRIPT_DIR))
+    roots = {platform: str(root / directory) for _, directory, platform, _ in CATALOGS}
+    groups = {}
+    for token in tokens:
+        platform, separator, item = token.removeprefix("catalog:").partition("/")
+        if not token.startswith("catalog:") or not separator or platform not in roots or not item:
+            raise ValueError(f"无效的目录清单条目：{token}")
+        groups.setdefault(roots[platform], set()).add((platform, unquote(item)))
+
+    chosen = []
+    for root, keys in groups.items():
+        hits = {(h["platform"], h["id"]): h for h in reversed(search_apps(root, "", exact_ids=keys))}
+        missing = keys - hits.keys()
+        if missing:
+            raise ValueError("目录中找不到：" + ", ".join(f"{p}/{i}" for p, i in sorted(missing)))
+        chosen.extend(hits.values())
+    folder = os.path.abspath(os.path.expanduser(output)) if output else os.path.join(SCRIPT_DIR, "catalog_downloads")
+    print(f"目录清单：{len(chosen)} 项，保存到 {folder}")
+    return run_download_now(chosen, DEFAULT_APPS_DIR, dry_run, batch_dir=folder)
+
+
+def browse_platform_catalog(apps_dir, platform, *, dry_run=False, insecure=False):
+    from tools.repository_download import Cancelled, QuitRequested, choose
+
+    categories = {}
+    for hit in search_apps(apps_dir, "", min_score=0):
+        if hit["platform"] == platform and hit["id"] and (
+            hit["downloadable"] or hit["chrome_id"] or hit["open_page_url"]
+        ):
+            categories.setdefault(hit["分类"], {}).setdefault(hit["id"], hit)
+    if not categories:
+        print(t("download.none"))
+        return _BACK
+
+    names = sorted(categories)
+    labels = [f"{name} ({len(categories[name])})" for name in names]
+    while True:
+        try:
+            category = names[choose(t("catalog.browse_category"), labels)]
+        except Cancelled:
+            return _BACK
+        except QuitRequested:
+            return _QUIT
+        hits = list(categories[category].values())
+        print(f"{category} · {len(hits)}")
+        for index, hit in enumerate(hits, 1):
+            mode = "CRX" if hit["chrome_id"] else t("hits.downloadable" if hit["downloadable"] else "hits.page_only")
+            print(f"  {index}  [{mode}] {hit['id']} · {hit['简介']}")
+        selected = prompt_choose_hits(hits)
+        if selected is _QUIT:
+            return _QUIT
+        if selected is _BACK:
+            continue
+        if not selected:
+            return _BACK
+        folder = os.path.join(SCRIPT_DIR, "catalog_downloads")
+        print(t("catalog.browse_download", len(selected), folder))
+        run_download_now(selected, apps_dir, dry_run, insecure=insecure, batch_dir=folder)
+
+
+def browse_repository_catalog():
+    from tools.repository_download import ask, choose
+
+    chrome = choose("浏览 Chrome 扩展", ["GitHub 开源 Chrome 扩展", "Chrome 商店扩展（原版 CRX）"]) == 1
+    categories = {}
+    for row in search_apps(DEFAULT_APPS_DIR, "", min_score=0):
+        if row["分类"] != "浏览器扩展":
+            continue
+        source = row["chrome_id"] if chrome else row["chrome_source_repo"]
+        if not source:
+            continue
+        category = row["子分类"] or row["分类"]
+        label = (row["简介"] or row["id"]) if chrome else f"{source} · {row['简介'] or row['id']}"
+        categories.setdefault(category, {}).setdefault(source.casefold(), (source, label))
+    if not categories:
+        raise ValueError("当前清单没有可浏览的条目")
+
+    names = sorted(categories)
+    category = names[choose("选择分类", [f"{name} ({len(categories[name])})" for name in names])]
+    items = sorted(categories[category].values(), key=lambda item: item[1].casefold())
+    keyword = ask("筛选名称或仓库 [回车显示全部]：").casefold()
+    if keyword:
+        items = [item for item in items if keyword in " ".join(item).casefold()]
+    if not items:
+        raise ValueError("没有匹配的条目")
+
+    page = 0
+    page_size = 15
+    last_page = (len(items) - 1) // page_size
+    while True:
+        visible = items[page * page_size:(page + 1) * page_size]
+        print(f"{category} · 第 {page + 1}/{last_page + 1} 页")
+        for index, (_, label) in enumerate(visible, 1):
+            print(f"  {index}  {label}")
+        selection = ask("选择条目 [回车=1，n=下一页，p=上一页，b=返回，q=退出]：", "1").lower()
+        if selection == "n" and page < last_page:
+            page += 1
+        elif selection == "p" and page:
+            page -= 1
+        elif selection.isdecimal() and len(selection) <= 2 and 1 <= int(selection) <= len(visible):
+            return visible[int(selection) - 1][0], chrome
+        else:
+            print("无效选择或已到页边界。")
 
 
 def run_interactive(
@@ -542,7 +682,10 @@ def prompt_catalog_and_query() -> bool:
     ]
     options.append((t("catalog.custom"), ["--custom"], ("custom", "自定义")))
     options.append((t("catalog.all"), ["--all-catalogs"], ("all", "全部")))
+    options.append((t("catalog.repository"), ["--repository"], ("repo", "repository", "仓库")))
     options.append((t("catalog.saved"), ["--manage-saved"], ("saved",)))
+    options.append((t("catalog.soft_pages"), ["--search-soft-pages"], ("soft-pages",)))
+    options.append((t("catalog.games"), ["--search-games"], ("games",)))
     while True:
         print(t("catalog.which"))
         for index, (label, _, _) in enumerate(options, 1):
@@ -565,10 +708,12 @@ def prompt_catalog_and_query() -> bool:
             continue
         label, extra = selected
         print(t("catalog.chosen", label))
-        if extra in (["--custom"], ["--manage-saved"]):
+        if extra in (["--custom"], ["--manage-saved"], ["--repository"], ["--search-soft-pages"], ["--search-games"]):
             sys.argv[1:] = extra
             return True
         try:
+            if "--platform" in extra:
+                print(t("catalog.browse_hint"))
             text = input(t("catalog.keyword")).strip()
         except (EOFError, KeyboardInterrupt):
             print("\n" + t("common.cancelled"))
@@ -586,11 +731,13 @@ def prompt_catalog_and_query() -> bool:
         return True
 
 
-def _prompt_next_query(menu_mode: bool) -> list[str] | object | None:
+def _prompt_next_query(menu_mode: bool, *, browse=False) -> list[str] | object | None:
     """重新输入关键词。菜单模式下空输入返回 _BACK；否则空输入表示退出。"""
     hint = t("catalog.hint_back") if menu_mode else t("catalog.hint_quit")
     while True:
         print()
+        if browse:
+            print(t("catalog.browse_hint"))
         print(t("catalog.keyword_again", hint))
         try:
             text = input("> ").strip()
@@ -613,7 +760,7 @@ def _stay_in_session(args) -> bool:
 def _resume_query(args, menu_mode: bool) -> int | object | None:
     """再问关键词。None 表示已写回 args.query，调用方继续检索。"""
     print(t("catalog.back_search"))
-    nxt = _prompt_next_query(menu_mode)
+    nxt = _prompt_next_query(menu_mode, browse=True) if menu_mode and args.platform else _prompt_next_query(menu_mode)
     if nxt is _BACK:
         return _BACK
     if not nxt:
@@ -639,13 +786,42 @@ def main(argv: list[str] | None = None) -> int:
 
 
 def _dispatch(argv: list[str] | None = None, *, menu_mode: bool = False) -> int | object:
+    args_list = sys.argv[1:] if argv is None else argv
+    if args_list and args_list[0] == "--run-saved-apps":
+        from tools.run_saved_apps import main as saved_main
+
+        return saved_main(args_list[1:])
+    if args_list and args_list[0] in ("--search-soft-pages", "--search-games"):
+        from tools.soft_page_check import search_games, search_pages
+
+        search = search_games if args_list[0] == "--search-games" else search_pages
+        old_argv = sys.argv
+        try:
+            sys.argv = [sys.argv[0], *args_list[1:]]
+            result = search.main()
+        finally:
+            sys.argv = old_argv
+        return _BACK if menu_mode else result
+
     parser = argparse.ArgumentParser(description="在 apps 配置中模糊查找应用并可开启 enabled")
+    parser.epilog = "其他入口（放在首个参数）：--run-saved-apps / --search-soft-pages / --search-games"
     parser.add_argument("query", nargs="*", help="关键词（如 drawio、v2ray）")
     parser.add_argument("--all-catalogs", action="store_true", help="搜索全部平台清单")
     custom_group = parser.add_mutually_exclusive_group()
     custom_group.add_argument("--custom", action="store_true", help="自定义软件：搜索、添加、管理")
     custom_group.add_argument("--manage-saved", action="store_true", help="查看、移除或批量下载个人更新清单")
     custom_group.add_argument("--custom-add", nargs="?", const="", metavar="SOURCE", help="添加 GitHub 仓库 / Release / 固定下载链接；可省略地址后交互输入")
+    custom_group.add_argument("--repository", nargs="?", const="", metavar="SOURCE", help="仓库／Chrome 扩展下载（菜单 15），接受仓库地址、商店详情链接或扩展 ID")
+    custom_group.add_argument("--serve-catalog", action="store_true", help="打开支持批量下载的本地分类目录")
+    parser.add_argument("--repo-kind", choices=("release", "source", "git"), help="仓库获取方式")
+    parser.add_argument("--ref", default="", help="源码分支、标签、提交或 Release 标签")
+    parser.add_argument("--output", help="目标 ZIP/附件文件或 Git 目录的完整路径")
+    parser.add_argument("--route", default="auto", help="auto 自动测速或 direct 直连或内置线路域名")
+    parser.add_argument("--threads", type=int, choices=(1, 2, 4, 8), default=4, help="单文件下载连接数")
+    parser.add_argument("--shallow", action="store_true", help="Git 浅克隆")
+    parser.add_argument("--submodules", action="store_true", help="Git 递归获取子模块")
+    parser.add_argument("--lfs", action="store_true", help="Git 获取 LFS 实际文件")
+    parser.add_argument("--extract", action="store_true", help="源码 ZIP 下载完成后安全解压")
     parser.add_argument(
         "--apps-dir",
         default=DEFAULT_APPS_DIR,
@@ -709,6 +885,24 @@ def _dispatch(argv: list[str] | None = None, *, menu_mode: bool = False) -> int 
     )
     args = parser.parse_args(argv)
 
+    if args.serve_catalog:
+        from tools.catalog_server import serve
+
+        return serve(SCRIPT_DIR, output=args.output, open_browser=not args.no_prompt)
+
+    if args.repository is not None:
+        from tools.repository_download import MENU_QUIT, run as repository_run
+        result = repository_run(source=args.repository, kind=args.repo_kind, ref=args.ref,
+                                output=args.output, route=args.route, threads=args.threads,
+                                shallow=args.shallow, submodules=args.submodules, lfs=args.lfs,
+                                extract=args.extract, dry_run=args.dry_run,
+                                interactive=not (args.no_prompt or args.yes or args.dry_run),
+                                base_dir=SCRIPT_DIR, catalog_batch=run_catalog_batch,
+                                catalog_browse=browse_repository_catalog)
+        if result is MENU_QUIT:
+            return _QUIT if menu_mode else 0
+        return _BACK if menu_mode else result
+
     if args.manage_saved:
         from tools.run_saved_apps import main as saved_main
 
@@ -763,6 +957,8 @@ def _dispatch(argv: list[str] | None = None, *, menu_mode: bool = False) -> int 
     apps_dir = args.apps_dir
     if not os.path.isabs(apps_dir):
         apps_dir = os.path.normpath(os.path.join(SCRIPT_DIR, apps_dir))
+    if not os.path.isdir(apps_dir) and not os.path.isabs(args.apps_dir):
+        apps_dir = os.path.join(os.environ.get("GHRF_CATALOG_BASE", SCRIPT_DIR), args.apps_dir)
     if not os.path.isdir(apps_dir):
         print(t("catalog.err_dir", apps_dir), file=sys.stderr)
         return 1
@@ -776,12 +972,20 @@ def _dispatch(argv: list[str] | None = None, *, menu_mode: bool = False) -> int 
 
     while True:
         query = " ".join(args.query).strip()
+        if menu_mode and args.platform and query.casefold() in ("v", "l"):
+            if browse_platform_catalog(apps_dir, args.platform, dry_run=args.dry_run,
+                                       insecure=args.insecure) is _QUIT:
+                return _QUIT
+            resumed = _resume_query(args, menu_mode)
+            if resumed is not None:
+                return resumed
+            continue
 
         print(t("catalog.searching", query, t("catalog.all_platforms") if args.all_catalogs else apps_dir))
         if args.all_catalogs:
             hits = []
             for name in (*dict.fromkeys(row[1] for row in CATALOGS), "apps-custom"):
-                source_dir = os.path.join(SCRIPT_DIR, name)
+                source_dir = os.path.join(os.environ.get("GHRF_CATALOG_BASE", SCRIPT_DIR), name)
                 if os.path.isdir(source_dir):
                     hits.extend(search_apps(source_dir, query, min_score=args.min_score))
             hits.sort(key=lambda h: (-h["score"], h["platform"], h["id"]))

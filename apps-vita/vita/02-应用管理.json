@@ -18,5 +18,77 @@
     "windows_installer": false,
     "releases_url": "https://github.com/Rinnegatamante/VitaDB-Downloader/releases",
     "save_subdir": "vitadb_downloader"
+  },
+  {
+    "id": "psvitaalive",
+    "简介": "PSVitaAlive（浏览和管理 Vita 自制应用及更新）",
+    "分类": "应用管理",
+    "enabled": false,
+    "aliases": [
+      "PSVitaAlive"
+    ],
+    "repo_path": "VegettoSan/PSVitaAlive",
+    "releases_url": "https://github.com/VegettoSan/PSVitaAlive/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".vpk"
+    ],
+    "installer_markers": [
+      ".vpk"
+    ],
+    "installer_filename_regex": "PSVitaAlive\\.vpk",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "使用说明": "支持 PS Vita 与 PS TV，需可运行自制应用的环境和 VitaShell。",
+    "_核查": {
+      "日期": "2026-11-09",
+      "来源": "https://github.com/VegettoSan/PSVitaAlive/releases/tag/02.18",
+      "状态": "release",
+      "发布标签": "02.18",
+      "发布日期": "2026-11-08"
+    },
+    "download_names": [
+      "PSVitaAlive.vpk"
+    ],
+    "save_subdir": "psvitaalive"
+  },
+  {
+    "id": "vitaforge",
+    "简介": "VitaForge（可搜索、筛选和更新 Vita 自制应用的目录）",
+    "分类": "应用管理",
+    "enabled": false,
+    "aliases": [
+      "VitaForge"
+    ],
+    "repo_path": "josephinoo/vitaForge",
+    "releases_url": "https://github.com/josephinoo/vitaForge/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".vpk"
+    ],
+    "installer_markers": [
+      ".vpk"
+    ],
+    "installer_filename_regex": "vitaforge\\.vpk",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "使用说明": "需可运行自制应用的 Vita 环境，通过 VitaShell 安装 VPK。",
+    "_核查": {
+      "日期": "2026-11-09",
+      "来源": "https://github.com/josephinoo/vitaForge/releases/tag/v0.1.11",
+      "状态": "release",
+      "发布标签": "v0.1.11",
+      "发布日期": "2026-11-07"
+    },
+    "download_names": [
+      "vitaforge.vpk"
+    ],
+    "save_subdir": "vitaforge"
   }
 ]

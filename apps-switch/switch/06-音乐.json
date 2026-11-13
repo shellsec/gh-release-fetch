@@ -1,7 +1,7 @@
 [
   {
     "id": "switify",
-    "简介": "Spotify 客户端",
+    "简介": "在 Switch 上浏览和播放 Spotify 音乐",
     "分类": "音乐",
     "enabled": false,
     "aliases": [
@@ -41,7 +41,7 @@
       "debug",
       "Debug"
     ],
-    "使用说明": "完整保留压缩包中的 SD 卡目录布局，具体依赖与启动方式见项目说明。",
+    "使用说明": "下载 Switch 版压缩包。解压时保留包内目录，依赖见项目说明。",
     "_核查": {
       "日期": "2026-10-19",
       "来源": "https://github.com/DomazinUS/Switify/releases/tag/v0.7.1",
@@ -52,7 +52,7 @@
   },
   {
     "id": "nasswitch",
-    "简介": "NAS 音乐播放",
+    "简介": "播放 NAS 里保存的音乐",
     "分类": "音乐",
     "enabled": false,
     "aliases": [
@@ -92,7 +92,7 @@
       "debug",
       "Debug"
     ],
-    "使用说明": "完整保留压缩包中的 SD 卡目录布局，具体依赖与启动方式见项目说明。",
+    "使用说明": "下载 Switch 版压缩包。解压时保留包内目录，依赖见项目说明。",
     "_核查": {
       "日期": "2026-10-19",
       "来源": "https://github.com/hlhlhl231/nasswitch/releases/tag/v3.0.0",
@@ -103,7 +103,7 @@
   },
   {
     "id": "bolemusic_switch",
-    "简介": "波乐音乐（switch；平台支持与安装方式见项目说明）",
+    "简介": "在 Switch 上使用波乐音乐",
     "分类": "音乐",
     "enabled": false,
     "repo_path": "shellsec/bolemusic",

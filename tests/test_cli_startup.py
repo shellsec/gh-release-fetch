@@ -13,7 +13,7 @@ from unittest.mock import patch
 from tools import ghrf_runtime as runtime
 
 ROOT = Path(__file__).resolve().parents[1]
-EXES = ("lookup_app", "auto_update", "run_saved_apps", "search_soft_pages", "search_games")
+EXES = ("GHReleaseFetch",)
 BATS = ("lookup_app", "lookup_mobile", "lookup_ios", "lookup_switch", "lookup_ps5", "run_saved_apps", "search_soft_pages", "search_games", "run_update")
 
 
@@ -56,7 +56,7 @@ class CliStartupTests(unittest.TestCase):
     @unittest.skipUnless(os.name == "nt", "Windows console ownership")
     def test_onefile_parent_and_child_are_one_interactive_application(self):
         self.assertTrue(hasattr(runtime, "console_image_paths"), "onefile parent/child ownership detection is missing")
-        executable = str(ROOT / "run_saved_apps.exe")
+        executable = str(ROOT / "lookup_app.exe")
         with patch.object(sys, "frozen", True, create=True), patch.object(sys, "executable", executable), patch.object(sys.stdin, "isatty", return_value=True), patch.object(runtime, "console_image_paths", return_value=[executable, executable]):
             self.assertTrue(runtime.owns_console_window())
         with patch.object(sys, "frozen", True, create=True), patch.object(sys, "executable", executable), patch.object(sys.stdin, "isatty", return_value=True), patch.object(runtime, "console_image_paths", return_value=[executable, executable, "C:\\Windows\\System32\\cmd.exe"]):
@@ -114,35 +114,16 @@ class PortableBatTests(unittest.TestCase):
         for name in ("list_scopes", "gamer520_live_search", "search_pages"):
             (channel / (name + ".py")).write_text("raise RuntimeError('legacy external module loaded')\n", encoding="utf-8")
         try:
-            for name in EXES:
-                with self.subTest(entry=name):
-                    result = subprocess.run([str(self.stage / (name + ".exe")), "--help"], cwd=self.stage, capture_output=True, timeout=20)
+            entries = [("GHReleaseFetch", ["--gui-updater"])]
+            entries.extend(("GHReleaseFetch", ["--gui-lookup", mode])
+                           for mode in ("--run-saved-apps", "--search-soft-pages", "--search-games"))
+            for name, args in entries:
+                with self.subTest(entry=name, args=args):
+                    result = subprocess.run([str(self.stage / (name + ".exe")), *args, "--help"], cwd=self.stage, capture_output=True, timeout=20)
                     self.assertEqual(result.returncode, 0, (name, result.stderr[-1800:]))
                     self.assertIn(b"usage:", result.stdout.lower())
         finally:
             shutil.rmtree(legacy)
-
-    def test_real_onefile_double_click_keeps_configuration_errors_visible(self):
-        (self.stage / "apps").mkdir(exist_ok=True)
-        (self.stage / "apps" / "root.json").write_text('{"platform_keys":["windows"]}', encoding="utf-8")
-        shell = shutil.which("pwsh") or shutil.which("powershell")
-        script = '''
-$probe = Start-Process -FilePath $env:STARTUP_TEST_EXE -WorkingDirectory $env:STARTUP_TEST_DIR -WindowStyle Hidden -PassThru
-try {
-    if ($probe.WaitForExit(5000)) { exit 2 }
-    Write-Output 'ERROR_WINDOW_REMAINS_OPEN'
-} finally {
-    if (-not $probe.HasExited) { $probe.Kill($true); $probe.WaitForExit() }
-}
-'''
-        for name in ("run_saved_apps", "auto_update"):
-            with self.subTest(entry=name):
-                env = dict(os.environ, STARTUP_TEST_EXE=str(self.stage / (name + ".exe")), STARTUP_TEST_DIR=str(self.stage))
-                env.pop("GH_RELEASE_FETCH_NO_PAUSE", None)
-                result = subprocess.run([shell, "-NoProfile", "-Command", script], env=env, capture_output=True, timeout=20)
-                self.assertEqual(result.returncode, 0, (name, result.stderr))
-                self.assertIn(b"ERROR_WINDOW_REMAINS_OPEN", result.stdout)
-
 
 if __name__ == "__main__":
     unittest.main()

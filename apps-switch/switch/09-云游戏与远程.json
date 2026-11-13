@@ -1,7 +1,7 @@
 [
   {
     "id": "uuremote-ns",
-    "简介": "UU 远程客户端",
+    "简介": "用 Switch 连接 UU 远程服务",
     "分类": "云游戏与远程",
     "enabled": false,
     "aliases": [
@@ -52,7 +52,7 @@
   },
   {
     "id": "opennow-switch",
-    "简介": "GeForce NOW 云游戏客户端",
+    "简介": "在 Switch 上连接 GeForce NOW 玩云游戏",
     "分类": "云游戏与远程",
     "enabled": false,
     "aliases": [
@@ -93,7 +93,7 @@
       "debug",
       "Debug"
     ],
-    "使用说明": "完整保留压缩包中的 SD 卡目录布局，具体依赖与启动方式见项目说明。",
+    "使用说明": "下载 Switch 版压缩包。解压时保留包内目录，依赖见项目说明。",
     "_核查": {
       "日期": "2026-10-19",
       "来源": "https://github.com/OpenCloudGaming/OpenNOW-Switch/releases/tag/v0.0.10",
@@ -104,7 +104,7 @@
   },
   {
     "id": "zerodroid",
-    "简介": "Boosteroid 云游戏客户端",
+    "简介": "在 Switch 上连接 Boosteroid 玩云游戏",
     "分类": "云游戏与远程",
     "enabled": false,
     "aliases": [
@@ -144,7 +144,7 @@
       "debug",
       "Debug"
     ],
-    "使用说明": "仅下载主机端文件；放置路径、资源依赖及启动方式见项目说明。",
+    "使用说明": "下载 Switch 版文件。放置位置和依赖见项目说明。",
     "_核查": {
       "日期": "2026-10-19",
       "来源": "https://github.com/elzerdodata/ZERODROID/releases/tag/v1.0.1",
@@ -155,7 +155,7 @@
   },
   {
     "id": "halyard",
-    "简介": "Shadow 云电脑客户端",
+    "简介": "用 Switch 连接 Shadow 云电脑",
     "分类": "云游戏与远程",
     "enabled": false,
     "aliases": [
@@ -195,7 +195,7 @@
       "debug",
       "Debug"
     ],
-    "使用说明": "仅下载主机端文件；放置路径、资源依赖及启动方式见项目说明。",
+    "使用说明": "下载 Switch 版文件。放置位置和依赖见项目说明。",
     "_核查": {
       "日期": "2026-10-19",
       "来源": "https://github.com/Wasabules/Halyard/releases/tag/v0.1.0",
@@ -209,7 +209,7 @@
   },
   {
     "id": "nsteamlink",
-    "简介": "Steam 远程串流",
+    "简介": "把 Steam 游戏从电脑串流到 Switch",
     "分类": "云游戏与远程",
     "enabled": false,
     "aliases": [
@@ -249,7 +249,7 @@
       "debug",
       "Debug"
     ],
-    "使用说明": "仅下载主机端文件；放置路径、资源依赖及启动方式见项目说明。",
+    "使用说明": "下载 Switch 版文件。放置位置和依赖见项目说明。",
     "_核查": {
       "日期": "2026-10-19",
       "来源": "https://github.com/kxn/nsteamlink/releases/tag/v0.5.0",

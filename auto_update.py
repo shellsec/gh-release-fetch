@@ -21,6 +21,7 @@ import subprocess
 import sys
 import time
 import urllib.parse
+from pathlib import Path
 
 import requests
 from bs4 import BeautifulSoup
@@ -44,7 +45,8 @@ APPS_ROOT_FRAGMENT = os.path.join(APPS_DIR, "root.json")
 def _logging_handlers():
     handlers = [logging.StreamHandler()]
     try:
-        handlers.insert(0, logging.FileHandler(os.path.join(SCRIPT_DIR, "update_log.txt"), encoding="utf-8"))
+        log_root = os.environ.get("GHRF_CATALOG_PROFILE", SCRIPT_DIR)
+        handlers.insert(0, logging.FileHandler(os.path.join(log_root, "update_log.txt"), encoding="utf-8"))
     except OSError:
         # A read-only application directory must not prevent --help or startup.
         pass
@@ -173,12 +175,18 @@ def load_config(apps_dir=None, only_platforms=None):
         path = apps_dir
         if not os.path.isabs(path):
             path = os.path.normpath(os.path.join(SCRIPT_DIR, path))
+            if not os.path.isfile(os.path.join(path, "root.json")):
+                base = "GHRF_CATALOG_PROFILE" if apps_dir == "apps-custom" else "GHRF_CATALOG_BASE"
+                path = os.path.join(os.environ.get(base, SCRIPT_DIR), apps_dir)
         root_path = os.path.join(path, "root.json")
         if not os.path.isfile(root_path):
             raise FileNotFoundError("缺少 %s（--apps-dir 须指向含 root.json 的目录）" % root_path)
         return load_config_from_apps_dir(path, only_platforms=only_platforms)
     if os.path.isfile(APPS_ROOT_FRAGMENT):
         return load_config_from_apps_dir(APPS_DIR, only_platforms=only_platforms)
+    embedded = os.path.join(os.environ.get("GHRF_CATALOG_BASE", SCRIPT_DIR), "apps")
+    if os.path.isfile(os.path.join(embedded, "root.json")):
+        return load_config_from_apps_dir(embedded, only_platforms=only_platforms)
     if os.path.isfile(CONFIG_PATH):
         with open(CONFIG_PATH, encoding="utf-8") as f:
             return json.load(f)
@@ -289,6 +297,8 @@ def _load_vibecoding_manifest(url_or_path, verify=True, apps_config_root=None):
                 os.path.normpath(os.path.join(os.path.dirname(apps_config_root), rel))
             )
         candidates.append(os.path.normpath(os.path.join(SCRIPT_DIR, rel)))
+        if getattr(sys, "_MEIPASS", None):
+            candidates.append(os.path.normpath(os.path.join(sys._MEIPASS, rel)))
         path = next((p for p in candidates if os.path.isfile(p)), candidates[0])
     with open(path, encoding="utf-8") as f:
         return json.load(f)
@@ -316,6 +326,8 @@ def _resolve_local_manifest_path(raw: str, apps_config_root=None) -> str | None:
             os.path.normpath(os.path.join(os.path.dirname(apps_config_root), rel))
         )
     candidates.append(os.path.normpath(os.path.join(SCRIPT_DIR, rel)))
+    if getattr(sys, "_MEIPASS", None):
+        candidates.append(os.path.normpath(os.path.join(sys._MEIPASS, rel)))
     for p in candidates:
         if os.path.isfile(p):
             return p
@@ -683,11 +695,13 @@ def resolve_download_root(cfg):
     return path
 
 
-def app_target_dir(root, app):
+def app_target_dir(root, app, *, confined=False):
     sub = (app.get("save_subdir") or "").strip().replace("\\", "/").strip("/")
     if not sub:
         return root
     d = os.path.join(root, *sub.split("/"))
+    if confined and (":" in sub or not Path(d).resolve().is_relative_to(Path(root).resolve())):
+        raise ValueError("附件保存子目录超出平台目录")
     if not os.path.isdir(d):
         os.makedirs(d)
     return d
@@ -928,6 +942,22 @@ def check_latest_version(app, debug_html_path, verify=True, cfg=None, platform_k
                 raise RuntimeError("无法找到版本标签")
 
             version = extract_version_for_app(app, version_tag.text.strip())
+        if not download_url and api_rate_limited:
+            # GitHub loads release attachments separately from the release page.
+            repo = app["repo_path"].strip("/")
+            tag = urllib.parse.quote(version, safe="")
+            asset_page = f"https://github.com/{repo}/releases/expanded_assets/{tag}"
+            try:
+                response = requests.get(asset_page, headers=github_headers(), timeout=15, verify=verify)
+                response.raise_for_status()
+                asset_prefix = f"/{repo}/releases/download/".casefold()
+                for link in BeautifulSoup(response.text, "html.parser").select("a[href]"):
+                    href = link["href"]
+                    if href.casefold().startswith(asset_prefix) and asset_targets_app(link.get_text(strip=True), href, app):
+                        download_url = "https://github.com" + href
+                        break
+            except requests.RequestException as error:
+                logger.warning("[%s] 获取发布附件列表失败: %s", app["id"], error)
         if not download_url:
             try:
                 api_version, api_download_url = fetch_release_via_api(
@@ -1039,7 +1069,8 @@ def describe_download_failure(error):
 
 
 def download_installer(
-    version, parsed_url, app, local_filename, max_retries=3, verify=True, platform_key=None
+    version, parsed_url, app, local_filename, max_retries=3, verify=True, platform_key=None,
+    *, transfer=None,
 ):
     version_plain = version.lstrip("v")
     fallback = build_fallback_urls(version, app)
@@ -1063,7 +1094,7 @@ def download_installer(
         logger.info("开始下载安装程序到: %s [平台: %s]", local_filename, platform_key)
     else:
         logger.info("开始下载安装程序到: %s", local_filename)
-    if os.path.exists(local_filename):
+    if transfer is None and os.path.exists(local_filename):
         try:
             os.remove(local_filename)
             logger.info("已删除旧文件: %s", local_filename)
@@ -1081,6 +1112,41 @@ def download_installer(
         referer = "https://sunlogin.oray.com/download"
     if referer:
         headers["Referer"] = referer
+
+    if transfer is not None:
+        from tools.download_engine import download_url
+
+        def request(url, **kwargs):
+            kwargs["headers"] = {**headers, **kwargs["headers"], "User-Agent": headers["User-Agent"]}
+            return requests.get(url, verify=verify, **kwargs)
+
+        options = dict(transfer)
+        select_target = options.pop("destination", Path)
+        resolved = options.pop("resolved", None)
+        if expected_name in ("", ".", "..") or Path(expected_name).name != expected_name or any(
+            character in expected_name for character in "/\\:"
+        ):
+            raise ValueError("附件文件名无效")
+        destination = select_target(local_filename)
+        work = destination.with_name(destination.name + ".parts")
+        # Try the previously used source first so a retry keeps its partial bytes.
+        try:
+            previous = json.loads((work / "state.json").read_text(encoding="utf-8"))["url"]
+        except (OSError, ValueError, KeyError, TypeError):
+            previous = None
+        sources = [previous] + [url for url in download_urls if url != previous] if previous in download_urls else download_urls
+        failures = []
+        for index, url in enumerate(sources):
+            transfer["report"](f"下载来源：{url}")
+            try:
+                work_dir = work / f"fallback-{index}" if index else work
+                result = download_url(url, destination, request=request, work_dir=work_dir, **options)
+                if resolved:
+                    resolved(parsed_url or url)
+                return str(result)
+            except (requests.RequestException, ValueError) as exc:
+                failures.append(describe_download_failure(exc))
+        raise RuntimeError("下载失败：" + "；".join(dict.fromkeys(failures)))
 
     failure_reasons = []
     for url_index, download_url in enumerate(download_urls):
@@ -1317,7 +1383,8 @@ def select_apps(cfg, only_ids, platform_override=None):
     return picked
 
 
-def update_one(app, download_root, verify=True, platform_key=None, cfg=None, download_only=False):
+def update_one(app, download_root, verify=True, platform_key=None, cfg=None, download_only=False,
+               *, transfer=None):
     cfg = cfg or {}
     aid = app["id"]
     plat = platform_key or detect_platform_key()
@@ -1329,7 +1396,7 @@ def update_one(app, download_root, verify=True, platform_key=None, cfg=None, dow
         if not os.path.isdir(root):
             os.makedirs(root)
 
-    target_dir = app_target_dir(root, app)
+    target_dir = app_target_dir(root, app, confined=transfer is not None)
 
     logger.info("=== [%s] 开始 === [平台: %s] [下载目录: %s]", aid, plat, target_dir)
     version, dl_url = check_latest_version(
@@ -1350,10 +1417,12 @@ def update_one(app, download_root, verify=True, platform_key=None, cfg=None, dow
             local_filename = os.path.join(target_dir, base)
 
     installer_path = download_installer(
-        version, dl_url, app, local_filename, verify=verify, platform_key=plat
+        version, dl_url, app, local_filename, verify=verify, platform_key=plat, transfer=transfer
     )
     logger.info("[%s] 安装包已下载: %s", aid, installer_path)
     if download_only:
+        if transfer is not None:
+            return installer_path
         return 0
 
     ext = os.path.splitext(installer_path)[1].lower()
@@ -1378,7 +1447,7 @@ def update_one(app, download_root, verify=True, platform_key=None, cfg=None, dow
     return 0
 
 
-def main():
+def main(*, resumable=False):
     parser = argparse.ArgumentParser(description="按 apps.json 按需下载/更新应用")
     parser.add_argument(
         "app_id",
@@ -1466,6 +1535,7 @@ def main():
                 platform_key=platform_key,
                 cfg=cfg,
                 download_only=bool(args.batch_download_dir),
+                transfer=dict(threads=4, report=print) if resumable and args.batch_download_dir else None,
             )
         except Exception as e:
             logger.error("[%s] 失败: %s", app.get("id"), e)

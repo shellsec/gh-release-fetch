@@ -1,7 +1,7 @@
 [
   {
     "id": "commonproblemresolver",
-    "简介": "主题与插件启动故障排查载荷",
+    "简介": "通过 Hekate 启动排查工具，处理常见启动问题",
     "分类": "引导与维护载荷",
     "enabled": false,
     "aliases": [
@@ -47,7 +47,7 @@
   },
   {
     "id": "lockpick-rcm",
-    "简介": "Lockpick RCM 主机密钥导出载荷",
+    "简介": "从自己的 Switch 导出主机密钥",
     "分类": "引导与维护载荷",
     "enabled": false,
     "aliases": [
@@ -90,7 +90,7 @@
   },
   {
     "id": "tegraexplorer-ext",
-    "简介": "TegraExplorer Ext 文件管理载荷",
+    "简介": "在系统启动前浏览文件和运行维护脚本",
     "分类": "引导与维护载荷",
     "enabled": false,
     "aliases": [
@@ -133,7 +133,7 @@
   },
   {
     "id": "hwfly-toolbox",
-    "简介": "HWFLY 工具箱载荷",
+    "简介": "使用 HWFLY 芯片的维护工具",
     "分类": "引导与维护载荷",
     "enabled": false,
     "aliases": [
@@ -178,7 +178,7 @@
   },
   {
     "id": "downgradefixer",
-    "简介": "系统降级故障修复载荷",
+    "简介": "尝试修复系统降级后的启动故障",
     "分类": "引导与维护载荷",
     "enabled": false,
     "aliases": [
@@ -221,7 +221,7 @@
   },
   {
     "id": "warmboot-extractor",
-    "简介": "Mariko Warmboot 补丁提取载荷",
+    "简介": "从兼容的 Mariko 主机提取 Warmboot 组件",
     "分类": "引导与维护载荷",
     "enabled": false,
     "aliases": [

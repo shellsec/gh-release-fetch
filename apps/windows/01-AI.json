@@ -636,38 +636,6 @@
     "run_installer": true
   },
   {
-    "id": "immersive_translate",
-    "简介": "沉浸式翻译（浏览器扩展离线包，Chrome zip；解压后开发者模式加载）",
-    "分类": "AI",
-    "enabled": false,
-    "prefer_api_assets": true,
-    "version_tag_as_on_github": true,
-    "releases_url": "https://bgithub.xyz/immersive-translate/immersive-translate/releases",
-    "repo_path": "immersive-translate/immersive-translate",
-    "installer_markers_match_all": true,
-    "installer_markers": [
-      "chrome-immersive-translate-",
-      ".zip"
-    ],
-    "href_exclude_substrings": [
-      "firefox",
-      "user.js",
-      ".crx",
-      "safari"
-    ],
-    "windows_installer": false,
-    "installer_extensions": [
-      ".zip"
-    ],
-    "download_names": [
-      "chrome-immersive-translate-{ver}.zip"
-    ],
-    "save_name": "chrome-immersive-translate-{ver}.zip",
-    "process_name": "",
-    "kill_before_install": false,
-    "run_installer": false
-  },
-  {
     "id": "chatbox",
     "简介": "Chatbox：主仓库 chatboxai/chatbox 的 GitHub Release 多为源码；桌面版请从官网 https://chatboxai.app 或 Microsoft Store 获取。本条仅作定位。",
     "分类": "AI",
@@ -4190,5 +4158,110 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "lokalbot",
+    "简介": "LokalBot（本地会议转写、听写和上下文检索；x64，Alpha .exe）",
+    "分类": "AI",
+    "enabled": false,
+    "releases_url": "https://github.com/stevyhacker/LokalBot/releases/latest",
+    "repo_path": "stevyhacker/LokalBot",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      ".exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "installer_filename_regex": "LokalBot-\\d+(?:\\.\\d+){1,3}-windows-x86_64-setup\\.exe",
+    "windows_installer": true,
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "aliases": [
+      "LokalBot"
+    ]
+  },
+  {
+    "id": "tokei",
+    "简介": "Tokei（查看 Codex、Claude Code 等 AI 工具的用量与费用；Windows x64 安装包）",
+    "分类": "AI",
+    "enabled": false,
+    "releases_url": "https://github.com/cclank/tokei/releases/latest",
+    "repo_path": "cclank/tokei",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      ".exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "installer_filename_regex": "Tokei_\\d+\\.\\d+\\.\\d+_x64-setup\\.exe",
+    "windows_installer": true,
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "aliases": [
+      "AI 用量",
+      "Token 费用"
+    ]
+  },
+  {
+    "id": "pi_desktop",
+    "简介": "PI Desktop（本地运行与管理 Pi 编程代理）",
+    "分类": "AI",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "vastsa/PI-Desktop",
+    "releases_url": "https://github.com/vastsa/PI-Desktop/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_filename_regex": "PI\\-Desktop\\-Portable\\-\\d+(?:\\.\\d+)+\\.zip",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "download_names": [
+      "PI-Desktop-Portable-0.22.0.zip"
+    ],
+    "save_subdir": "pi_desktop",
+    "_核查": {
+      "日期": "2026-11-12",
+      "来源": "https://github.com/vastsa/PI-Desktop/releases/tag/v0.22.0",
+      "状态": "release",
+      "发布标签": "v0.22.0",
+      "发布日期": "2026-11-08"
+    }
+  },
+  {
+    "id": "kelivo",
+    "简介": "Kelivo（支持多个模型服务的 AI 对话客户端）",
+    "分类": "AI",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "Chevey339/kelivo",
+    "releases_url": "https://github.com/Chevey339/kelivo/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_filename_regex": "Kelivo_windows_\\d+(?:\\.\\d+)+\\+\\d+\\.zip",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "download_names": [
+      "Kelivo_windows_1.3.5+85.zip"
+    ],
+    "save_subdir": "kelivo",
+    "_核查": {
+      "日期": "2026-11-12",
+      "来源": "https://github.com/Chevey339/kelivo/releases/tag/v1.3.5",
+      "状态": "release",
+      "发布标签": "v1.3.5",
+      "发布日期": "2026-11-08"
+    }
   }
 ]

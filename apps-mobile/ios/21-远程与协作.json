@@ -146,5 +146,29 @@
     "kill_before_install": false,
     "run_installer": false,
     "releases_url": "https://apps.apple.com/app/id1484048379"
+  },
+  {
+    "id": "kde_connect_ios",
+    "简介": "KDE Connect（在手机和电脑间传文件并远程控制；App Store 中国区）",
+    "分类": "远程与协作",
+    "enabled": false,
+    "aliases": [
+      "KDE Connect"
+    ],
+    "repo_path": "KDE/kdeconnect-ios",
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/cn/app/kde-connect/id1580245991",
+    "releases_url": "https://apps.apple.com/cn/app/kde-connect/id1580245991",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "使用说明": "已核对 App Store 中国区正式版，要求 iOS 15.0 或更新版本。",
+    "_核查": {
+      "日期": "2026-11-09",
+      "来源": "https://apps.apple.com/cn/app/kde-connect/id1580245991",
+      "状态": "app-store",
+      "发布版本": "0.5.7",
+      "发布日期": "2026-10-09"
+    }
   }
 ]

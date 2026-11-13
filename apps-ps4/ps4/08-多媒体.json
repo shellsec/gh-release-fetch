@@ -1,0 +1,219 @@
+[
+  {
+    "id": "jtplay_ps4",
+    "简介": "JTPlay（基于 libmpv 的 PS4 音视频播放器）",
+    "分类": "多媒体",
+    "enabled": false,
+    "aliases": [
+      "JTPlay"
+    ],
+    "repo_path": "ps4-homebrew-dev/jtplay",
+    "releases_url": "https://github.com/ps4-homebrew-dev/jtplay/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".pkg"
+    ],
+    "installer_markers": [
+      ".pkg"
+    ],
+    "installer_filename_regex": "IV0000\\-BREW04327_00\\-JTPLAY0000000000\\.pkg",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "使用说明": "需可运行自制 PKG 的 PS4，选 PS4 包。",
+    "_核查": {
+      "日期": "2026-11-09",
+      "来源": "https://github.com/ps4-homebrew-dev/jtplay/releases/tag/v0.6",
+      "状态": "release",
+      "发布标签": "v0.6",
+      "发布日期": "2026-11-03"
+    },
+    "download_names": [
+      "IV0000-BREW04327_00-JTPLAY0000000000.pkg"
+    ],
+    "save_subdir": "jtplay_ps4"
+  },
+  {
+    "id": "tvhp_ps4",
+    "简介": "TVHP（连接 Tvheadend 服务观看直播和录制内容）",
+    "分类": "多媒体",
+    "enabled": false,
+    "aliases": [
+      "TVHP"
+    ],
+    "repo_path": "ps4-homebrew-dev/tvhp",
+    "releases_url": "https://github.com/ps4-homebrew-dev/tvhp/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".pkg"
+    ],
+    "installer_markers": [
+      ".pkg"
+    ],
+    "installer_filename_regex": "IV0000\\-BREW04328_00\\-TVHP000000000000\\.pkg",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "使用说明": "需可运行自制 PKG 的 PS4 和可连接的 Tvheadend 服务端。",
+    "_核查": {
+      "日期": "2026-11-09",
+      "来源": "https://github.com/ps4-homebrew-dev/tvhp/releases/tag/v0.3",
+      "状态": "release",
+      "发布标签": "v0.3",
+      "发布日期": "2026-11-03"
+    },
+    "download_names": [
+      "IV0000-BREW04328_00-TVHP000000000000.pkg"
+    ],
+    "save_subdir": "tvhp_ps4"
+  },
+  {
+    "id": "playfin_ps4",
+    "简介": "PlayfinPS4（Jellyfin 客户端）",
+    "分类": "多媒体",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "LowganDev/PlayfinPS4",
+    "releases_url": "https://github.com/LowganDev/PlayfinPS4/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".pkg"
+    ],
+    "installer_filename_regex": "IV0001\\-PLFN00000_00\\-PLFN000000100000\\.pkg",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "download_names": [
+      "IV0001-PLFN00000_00-PLFN000000100000.pkg"
+    ],
+    "save_subdir": "playfin_ps4",
+    "使用说明": "需可运行自制 PKG 的 PS4 和 Jellyfin 服务器。",
+    "_核查": {
+      "日期": "2026-11-12",
+      "来源": "https://github.com/LowganDev/PlayfinPS4/releases/tag/2.2.1",
+      "状态": "release",
+      "发布标签": "2.2.1",
+      "发布日期": "2026-11-11"
+    }
+  },
+  {
+    "id": "jellyfin_ps4",
+    "简介": "JellyFin-PS4（Jellyfin 媒体库客户端）",
+    "分类": "多媒体",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "jw-notes/JellyFin-PS4",
+    "releases_url": "https://github.com/jw-notes/JellyFin-PS4/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".pkg"
+    ],
+    "installer_filename_regex": "IV0000\\-JFPS40000_00\\-JELLYFINPS400000\\.pkg",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "download_names": [
+      "IV0000-JFPS40000_00-JELLYFINPS400000.pkg"
+    ],
+    "save_subdir": "jellyfin_ps4",
+    "使用说明": "需可运行自制 PKG 的 PS4 和 Jellyfin 服务器。",
+    "_核查": {
+      "日期": "2026-11-12",
+      "来源": "https://github.com/jw-notes/JellyFin-PS4/releases/tag/v1.16",
+      "状态": "release",
+      "发布标签": "v1.16",
+      "发布日期": "2026-11-10"
+    }
+  },
+  {
+    "id": "switchfin",
+    "简介": "Switchfin（Jellyfin 媒体库客户端）",
+    "分类": "多媒体",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "dragonflylee/switchfin",
+    "releases_url": "https://github.com/dragonflylee/switchfin/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".pkg"
+    ],
+    "installer_filename_regex": "IV0001\\-SFIN00000_00\\-SFIN000000009500\\.pkg",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "download_names": [
+      "IV0001-SFIN00000_00-SFIN000000009500.pkg"
+    ],
+    "save_subdir": "switchfin",
+    "使用说明": "需能运行自制应用的设备和 Jellyfin 服务器。",
+    "_核查": {
+      "日期": "2026-11-12",
+      "来源": "https://github.com/dragonflylee/switchfin/releases/tag/0.9.5",
+      "状态": "release",
+      "发布标签": "0.9.5",
+      "发布日期": "2026-11-10"
+    }
+  },
+  {
+    "id": "iptv_ps4",
+    "简介": "PS4 IPTV（播放自备 IPTV 播放列表）",
+    "分类": "多媒体",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "realityofai32-stack/PS4-IPTV",
+    "releases_url": "https://github.com/realityofai32-stack/PS4-IPTV/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".pkg"
+    ],
+    "installer_filename_regex": "IV0001\\-IPTV00002_00\\-IPTV000020002000\\.pkg",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "download_names": [
+      "IV0001-IPTV00002_00-IPTV000020002000.pkg"
+    ],
+    "save_subdir": "iptv_ps4",
+    "使用说明": "需可运行自制 PKG 的 PS4。",
+    "_核查": {
+      "日期": "2026-11-12",
+      "来源": "https://github.com/realityofai32-stack/PS4-IPTV/releases/tag/v0.4.0",
+      "状态": "release",
+      "发布标签": "v0.4.0",
+      "发布日期": "2026-11-07"
+    }
+  },
+  {
+    "id": "picoplay_ps4",
+    "简介": "PicoPlay（PS4 媒体播放器）",
+    "分类": "多媒体",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "birth1mark/picoplay-ps4",
+    "releases_url": "https://github.com/birth1mark/picoplay-ps4/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".pkg"
+    ],
+    "installer_filename_regex": "picoplay\\-ps4\\.pkg",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "download_names": [
+      "picoplay-ps4.pkg"
+    ],
+    "save_subdir": "picoplay_ps4",
+    "使用说明": "需可运行自制 PKG 的 PS4。",
+    "_核查": {
+      "日期": "2026-11-12",
+      "来源": "https://github.com/birth1mark/picoplay-ps4/releases/tag/v1.01",
+      "状态": "release",
+      "发布标签": "v1.01",
+      "发布日期": "2026-11-02"
+    }
+  }
+]

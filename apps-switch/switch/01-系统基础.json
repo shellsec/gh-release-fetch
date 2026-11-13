@@ -1,7 +1,7 @@
 [
   {
     "id": "atmosphere-stable",
-    "简介": "Atmosphere 大气层稳定整合包",
+    "简介": "获取配好组件的 Atmosphere 整合包",
     "aliases": [
       "大气层",
       "Atmosphere"
@@ -36,7 +36,7 @@
   },
   {
     "id": "nx-firmware",
-    "简介": "Switch 系统离线升级固件",
+    "简介": "下载 Switch 系统离线更新包",
     "aliases": [
       "固件",
       "NX_Firmware",
@@ -73,7 +73,7 @@
   },
   {
     "id": "atmosphere",
-    "简介": "Atmosphere 自定义固件",
+    "简介": "运行 Switch 自制应用和系统模块",
     "分类": "系统基础",
     "enabled": false,
     "aliases": [
@@ -124,7 +124,7 @@
   },
   {
     "id": "hekate",
-    "简介": "Hekate 引导、NAND 备份与 emuMMC",
+    "简介": "选择启动环境、备份 NAND 和管理 emuMMC",
     "分类": "系统基础",
     "enabled": false,
     "aliases": [
@@ -176,7 +176,7 @@
   },
   {
     "id": "nx-hbmenu",
-    "简介": "自制程序菜单",
+    "简介": "浏览并启动 SD 卡上的自制应用",
     "分类": "系统基础",
     "enabled": false,
     "aliases": [
@@ -227,7 +227,7 @@
   },
   {
     "id": "hekate-easyworld",
-    "简介": "Hekate easyworld 汉化版",
+    "简介": "用中文操作 Hekate 启动菜单和 Nyx 工具",
     "分类": "系统基础",
     "enabled": false,
     "aliases": [
@@ -271,7 +271,7 @@
   },
   {
     "id": "hekate-zdm",
-    "简介": "Hekate zdm 汉化版",
+    "简介": "给 Hekate 的 Nyx 界面换上 zdm 中文版",
     "分类": "系统基础",
     "enabled": false,
     "aliases": [
@@ -317,7 +317,7 @@
   },
   {
     "id": "sys-patch",
-    "简介": "sys-patch 系统模块",
+    "简介": "在系统运行时应用 sys-patch 支持的补丁",
     "分类": "系统基础",
     "enabled": false,
     "aliases": [
@@ -360,7 +360,7 @@
   },
   {
     "id": "sigpatch-scripts",
-    "简介": "签名补丁制作脚本与补丁数据库",
+    "简介": "在电脑上生成签名补丁",
     "分类": "系统基础",
     "enabled": false,
     "aliases": [
@@ -383,7 +383,7 @@
   },
   {
     "id": "sigpatch-downloads",
-    "简介": "Sigpatch 签名补丁发布讨论",
+    "简介": "查找与系统版本匹配的签名补丁",
     "分类": "系统基础",
     "enabled": false,
     "aliases": [

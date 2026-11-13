@@ -2,15 +2,34 @@
 
 # GH Release Fetch
 
-Search software by platform, download GitHub Release assets, and keep personal lists for repeat updates. Includes built-in catalogs, custom sources, and separate web-page searches. Interactive prompts follow the system display language (Simplified Chinese, Traditional Chinese, English, Japanese, or Korean), falling back to Simplified Chinese.
+GH Release Fetch is a platform catalog and download manager for GitHub releases, direct links, source repositories, and Chrome extensions. The Windows desktop edition runs from one EXE with its catalogs and runtime bundled.
+
+## Windows desktop app
+
+![GH Release Fetch Windows main window](docs/images/windows-main.png)
+
+- Double-click `GHReleaseFetch.exe`. No separate Python installation is required.
+- Use **Language → English** or **语言 → 简体中文**. The preference is saved. If a task or another window is open, restart the app to apply it.
+- **Platform catalog** supports search, category browsing, and batch selection. **Accelerated downloads** accepts repositories, release assets, direct links, and Chrome Web Store links or IDs. GitHub downloads can test routes automatically, with parallel connections and resume support where the server allows it.
+- **My lists** manages personal and custom entries. **Detect and import** extracts links from pasted text and previews entries before saving. **Download history** can download the original asset again or fetch the latest version when supported.
+- Right-click a completed queue entry to open the downloaded file or its containing folder. Queue clearing, file cleanup, and log clearing are separate actions.
+- Catalog updates run in the background on first launch and at seven-day intervals. You can also select **Update catalog**. Settings, personal lists, queue, history, logs, and cached catalogs are stored under `%LOCALAPPDATA%\GHReleaseFetch`.
+- English applies to the desktop controls and dialogs. Catalog descriptions, upstream messages, and previous log entries keep their original language.
+
+
+## Software directory website
+
+The independent [`website/`](website/README.md) adds platform guides, curated tools, use-case collections, search, official download entry points and static-page SEO. It reuses the existing catalogs and supports GitHub Pages with a custom domain. The initial website content is in Simplified Chinese.
+
+Preview locally: `python -m website.build`, then `python -m http.server 8080 --bind 127.0.0.1 --directory dist/site`.
 
 ## Downloads
 
-Current version: **20261106-update-lists** · [Release notes](https://github.com/shellsec/gh-release-fetch/releases/tag/20261106-update-lists) · [Latest Release](https://github.com/shellsec/gh-release-fetch/releases/latest)
+Windows desktop release **20261113-desktop** · [Release notes](https://github.com/shellsec/gh-release-fetch/releases/tag/20261113-desktop)
 
 | Host platform | Accelerated (gh-proxy.com) | GitHub direct |
 | --- | --- | --- |
-| Windows x64 | [ZIP](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261106-update-lists/gh-release-fetch-windows-20261106-update-lists.zip) | [ZIP](https://github.com/shellsec/gh-release-fetch/releases/download/20261106-update-lists/gh-release-fetch-windows-20261106-update-lists.zip) |
+| Windows x64 | [EXE](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261113-desktop/GHReleaseFetch.exe) · [ZIP](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261113-desktop/gh-release-fetch-windows-20261113-desktop.zip) | [EXE](https://github.com/shellsec/gh-release-fetch/releases/download/20261113-desktop/GHReleaseFetch.exe) · [ZIP](https://github.com/shellsec/gh-release-fetch/releases/download/20261113-desktop/gh-release-fetch-windows-20261113-desktop.zip) · [SHA-256](https://github.com/shellsec/gh-release-fetch/releases/download/20261113-desktop/SHA256SUMS-20261113-desktop.txt) |
 | macOS ARM64 / Apple Silicon | [tar.gz](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-macos-arm64.tar.gz) | [tar.gz](https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-macos-arm64.tar.gz) |
 | Linux x86_64 | [tar.gz](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-linux-x86_64.tar.gz) | [tar.gz](https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-linux-x86_64.tar.gz) |
 | Linux ARM64 | [tar.gz](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-linux-arm64.tar.gz) | [tar.gz](https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-linux-arm64.tar.gz) |
@@ -18,12 +37,10 @@ Current version: **20261106-update-lists** · [Release notes](https://github.com
 
 The macOS and Linux packages use source revision `6bd1991` and bundle their runtime; no separate Python installation is needed. Use the direct link if the accelerator is unavailable. The macOS package is unsigned and not notarized. Linux requires glibc, does not support Alpine/musl, and has not been tested on a Linux machine. See the release notes for validation details.
 
-For upgrades in an existing complete Windows directory, the Release also provides five individual EXE files. For first-time use, download and extract the full ZIP; the EXE files require the catalog and data directories. See the [Windows checksums](https://github.com/shellsec/gh-release-fetch/releases/download/20261106-update-lists/SHA256SUMS).
-
 ## Quick start
 
 1. Download the package for the **computer running this tool**. Extract the complete archive, keeping its catalog and data directories.
-2. On Windows, open `lookup_app.exe` or `lookup_app.bat`. On macOS/Linux, run `./lookup_app` from the extracted directory.
+2. On Windows, open `GHReleaseFetch.exe`. For the legacy CLI in a source checkout, use `lookup_app.bat`. On macOS/Linux, run `./lookup_app` from the extracted directory.
 3. Select the platform to search, then enter a name or keyword. Enter defaults to Windows; the last menu option searches all catalogs.
 4. Select result numbers, then choose an action.
 
@@ -36,6 +53,22 @@ For upgrades in an existing complete Windows directory, the Release also provide
 | 5: Open page | Open the website or GitHub Releases page |
 
 Enter `1,3` for multiple results, `a` for all, or Enter to skip. Some entries open a website, store, or release page instead of downloading an asset. Downloading for another platform does not make that software runnable on your computer.
+
+### Repository downloads (menu 15)
+
+Paste `owner/repo` or a GitHub URL, then choose a release asset, source ZIP, or Git clone. Saved updates move to menu 16. Source downloads resolve branches/tags to a commit, validate ZIP integrity, and optionally extract safely. Release assets use GitHub SHA256 digests when available.
+
+ZIP/assets offer eight candidate routes including direct, bounded target-file speed probes, automatic failover, up to eight connections, and resumption guarded by a strong ETag and matching size. Unsupported ranges fall back to a single stream. Changing routes restarts the data to prevent mixed content. Candidate availability is checked at runtime.
+
+Git uses the official remote and installed Git, with full/shallow history, optional submodules and LFS. ZIP snapshots do not contain Git history, submodule contents or LFS objects. Enter `h` at the repository prompt for history, retries, fresh snapshots and clean-worktree Git updates (`pull --ff-only`). Completed projects can open in a file manager, terminal or detected VS Code/VSCodium; README viewing does not run project code.
+
+```text
+python lookup_app.py --repository owner/repo
+python lookup_app.py --repository owner/repo --repo-kind source --ref main --extract --no-prompt
+python lookup_app.py --repository owner/repo --repo-kind git --shallow --no-prompt
+```
+
+Default output and task history live in `repository_downloads/`. `--output` selects the complete file/directory path; existing targets are never overwritten. Resume with the same version, destination and route. `--route direct`, `--threads 1|2|4|8`, `--submodules`, `--lfs`, and offline `--dry-run` are available. Public GitHub repositories are supported; metadata requests go directly to GitHub.
 
 ### Example session
 
@@ -138,7 +171,7 @@ Each catalog's `root.json` controls the download directory and related settings.
 
 ## Web-page and game-channel searches
 
-Use `search_soft_pages.bat` / `search_soft_pages.exe` for software introduction pages and `search_games.bat` / `search_games.exe` for game-channel pages. On macOS/Linux, use `./search_soft_pages` and `./search_games`.
+Use `search_soft_pages.bat` for software articles and `search_games.bat` for game-channel pages. Both can invoke the CLI in `GHReleaseFetch.exe` and are also available as menu options 17 and 18. On macOS/Linux, use `./search_soft_pages` and `./search_games`.
 
 These separate page indexes primarily open links. They are outside the main menu's all-catalog search. See the [channel tools guide](tools/soft_page_check/README.md) for index refresh and monitoring.
 
@@ -147,7 +180,7 @@ These separate page indexes primarily open links. They are outside the main menu
 | Issue | What to check |
 | --- | --- |
 | Windows reports a `CATALOGS` import error | Replace the old executables with the current release. Bundled modules are isolated from old adjacent `tools/*.py` files. Keep personal catalogs and settings. |
-| Catalogs are missing after copying one executable | Extract the entire package, including adjacent data directories. |
+| Catalogs are missing after copying one executable | Use the current single EXE. Legacy packages with adjacent data folders should be extracted in full. |
 | No saved list or enabled apps | Search with `lookup_app`, then save entries to a list or enable them. |
 | Download fails or no asset matches | Check the upstream release page, network, and asset rules. Some entries only provide a page link. |
 | Slow download or unavailable accelerator | Try the GitHub direct link. Application downloads also try fallback sources according to configuration. |
@@ -180,6 +213,13 @@ python tools/run_saved_apps.py --help
 On Windows, run `pack_windows_release.bat`; output is written to `dist/release/`. See [Windows packaging](release/windows/PACKAGING.md). Current macOS/Linux packages use a portable directory with bundled CPython; keep the runtime directory intact.
 
 See the [configuration and maintenance reference](docs/reference.en.md) for fields, mirrors, download paths, logs, and maintenance scripts. Desktop global settings are in [apps/root.json](apps/root.json). Application IDs must be unique within each platform's JSON shards.
+
+
+## Repository layout
+
+`windows_gui.py` is the desktop entry point. `lookup_app.py` and `auto_update.py` provide the CLI and download workflows. Shared code is in `tools/`, platform catalogs are in `apps*/`, and the static directory site is in `website/`. Tests are in `tests/`; packaging scripts and assets are in `tools/` and `release/windows/`.
+
+On Windows, run `python windows_gui.py` to start the GUI from source. Run `powershell -ExecutionPolicy Bypass -File tools/build_exe.ps1` to build `dist/exe/GHReleaseFetch.exe`. Build output, dependencies, and local logs belong outside version control.
 
 ## Related projects and support
 

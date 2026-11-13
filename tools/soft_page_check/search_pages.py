@@ -41,9 +41,7 @@ HERE = Path(soft_page_check_dir(__file__))
 HISTORY = HERE / "history"
 LIST_DIR = HERE / "list"
 
-if not getattr(sys, "frozen", False):
-    sys.path.insert(0, str(HERE))
-from list_scopes import LIST_SCOPE_DEFS, read_url_list, scope_label  # noqa: E402
+from tools.soft_page_check.list_scopes import LIST_SCOPE_DEFS, read_url_list, scope_label  # noqa: E402
 
 SCOPE_LABELS = {
     "a": "A 类 · 同步软件",
@@ -298,7 +296,7 @@ def _gamer520_live_fallback(
     if index_scopes is not None and "gamer520" not in index_scopes:
         return []
     try:
-        from gamer520_live_search import search_live
+        from tools.soft_page_check.gamer520_live_search import search_live
     except ImportError:
         return []
 

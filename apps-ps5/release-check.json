@@ -372,6 +372,210 @@
       "project_url": "https://github.com/dlaurora/testingps",
       "archived": false,
       "project_exists": true
+    },
+    {
+      "repo": "Marice/ps5-exporter",
+      "release_url": "https://github.com/Marice/ps5-exporter/releases/tag/v0.3.1",
+      "tag": "v0.3.1",
+      "published_at": "2026-10-19T17:10:18Z",
+      "assets": [
+        {
+          "name": "ps5-exporter-grafana-dashboard.json",
+          "url": "https://github.com/Marice/ps5-exporter/releases/download/v0.3.1/ps5-exporter-grafana-dashboard.json"
+        },
+        {
+          "name": "ps5-exporter.elf",
+          "url": "https://github.com/Marice/ps5-exporter/releases/download/v0.3.1/ps5-exporter.elf"
+        },
+        {
+          "name": "SHA256SUMS",
+          "url": "https://github.com/Marice/ps5-exporter/releases/download/v0.3.1/SHA256SUMS"
+        }
+      ],
+      "status": "release",
+      "checked_on": "2026-11-09"
+    },
+    {
+      "repo": "holdmysocks/ps5-tailscale",
+      "release_url": "https://github.com/holdmysocks/ps5-tailscale/releases/tag/v0.7.3",
+      "tag": "v0.7.3",
+      "published_at": "2026-11-04T16:05:32Z",
+      "assets": [
+        {
+          "name": "SHA256SUMS.txt",
+          "url": "https://github.com/holdmysocks/ps5-tailscale/releases/download/v0.7.3/SHA256SUMS.txt"
+        },
+        {
+          "name": "tailscale-0.7.3.elf",
+          "url": "https://github.com/holdmysocks/ps5-tailscale/releases/download/v0.7.3/tailscale-0.7.3.elf"
+        },
+        {
+          "name": "tailscale-0.7.3.elf.sig",
+          "url": "https://github.com/holdmysocks/ps5-tailscale/releases/download/v0.7.3/tailscale-0.7.3.elf.sig"
+        }
+      ],
+      "status": "release",
+      "checked_on": "2026-11-09"
+    },
+    {
+      "repo": "heni0xyz/ps5save",
+      "release_url": "https://github.com/heni0xyz/ps5save/releases/tag/v2",
+      "tag": "v2",
+      "published_at": "2026-10-21T16:59:04Z",
+      "assets": [
+        {
+          "name": "backup.elf",
+          "url": "https://github.com/heni0xyz/PS5Save/releases/download/v2/backup.elf"
+        }
+      ],
+      "status": "release",
+      "checked_on": "2026-11-09"
+    },
+    {
+      "repo": "X1NONs/PrefBar",
+      "release_url": "https://github.com/X1NONs/PrefBar/releases/tag/v0.2.1",
+      "tag": "v0.2.1",
+      "published_at": "2026-11-08T16:15:52Z",
+      "assets": [
+        {
+          "name": "PrefBar-complete_V0.2.1.elf",
+          "url": "https://github.com/X1NONs/PrefBar/releases/download/v0.2.1/PrefBar-complete_V0.2.1.elf"
+        }
+      ],
+      "status": "release",
+      "checked_on": "2026-11-09"
+    },
+    {
+      "repo": "xvvulcanvx/PS5-TabShifter",
+      "release_url": "https://github.com/xvvulcanvx/PS5-TabShifter/releases/tag/v1.3.0",
+      "tag": "v1.3.0",
+      "published_at": "2026-10-24T18:38:30Z",
+      "assets": [
+        {
+          "name": "TabShifter.elf",
+          "url": "https://github.com/xvvulcanvx/PS5-TabShifter/releases/download/v1.3.0/TabShifter.elf"
+        }
+      ],
+      "status": "release",
+      "checked_on": "2026-11-09"
+    },
+    {
+      "repo": "ItsBlurf/PoorDS4",
+      "release_url": "https://github.com/ItsBlurf/PoorDS4/releases/tag/v0.2.0",
+      "tag": "v0.2.0",
+      "published_at": "2026-10-21T02:59:15Z",
+      "assets": [
+        {
+          "name": "PoorDS4-status.elf",
+          "url": "https://github.com/ItsBlurf/PoorDS4/releases/download/v0.2.0/PoorDS4-status.elf"
+        },
+        {
+          "name": "PoorDS4-stop.elf",
+          "url": "https://github.com/ItsBlurf/PoorDS4/releases/download/v0.2.0/PoorDS4-stop.elf"
+        },
+        {
+          "name": "PoorDS4-v0.2.0-source.zip",
+          "url": "https://github.com/ItsBlurf/PoorDS4/releases/download/v0.2.0/PoorDS4-v0.2.0-source.zip"
+        },
+        {
+          "name": "PoorDS4-v0.2.0.zip",
+          "url": "https://github.com/ItsBlurf/PoorDS4/releases/download/v0.2.0/PoorDS4-v0.2.0.zip"
+        },
+        {
+          "name": "PoorDS4.elf",
+          "url": "https://github.com/ItsBlurf/PoorDS4/releases/download/v0.2.0/PoorDS4.elf"
+        },
+        {
+          "name": "SHA256SUMS.txt",
+          "url": "https://github.com/ItsBlurf/PoorDS4/releases/download/v0.2.0/SHA256SUMS.txt"
+        }
+      ],
+      "status": "release",
+      "checked_on": "2026-11-09"
+    },
+    {
+      "repo": "phantomptr/ps5upload",
+      "release_url": "https://github.com/phantomptr/ps5upload/releases/tag/v12.4.12",
+      "tag": "v12.4.12",
+      "published_at": "2026-11-12",
+      "checked_on": "2026-11-12",
+      "assets": [
+        {
+          "name": "ps5upload-12.4.12.elf",
+          "url": "https://github.com/phantomptr/ps5upload/releases/download/v12.4.12/ps5upload-12.4.12.elf"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "ZiZc3/LiveShell",
+      "release_url": "https://github.com/ZiZc3/LiveShell/releases/tag/v1.7.0",
+      "tag": "v1.7.0",
+      "published_at": "2026-11-10",
+      "checked_on": "2026-11-12",
+      "assets": [
+        {
+          "name": "liveshell.elf",
+          "url": "https://github.com/ZiZc3/LiveShell/releases/download/v1.7.0/liveshell.elf"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "elripalda/RecompStore",
+      "release_url": "https://github.com/elripalda/RecompStore/releases/tag/v2.7.4",
+      "tag": "v2.7.4",
+      "published_at": "2026-10-30",
+      "checked_on": "2026-11-12",
+      "assets": [
+        {
+          "name": "PPSA92000.zip",
+          "url": "https://github.com/elripalda/RecompStore/releases/download/v2.7.4/PPSA92000.zip"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "owendswang/ps5-web-file-manager",
+      "release_url": "https://github.com/owendswang/ps5-web-file-manager/releases/tag/v1.14",
+      "tag": "v1.14",
+      "published_at": "2026-11-10",
+      "checked_on": "2026-11-12",
+      "assets": [
+        {
+          "name": "web-file-mgr-v1.14.elf",
+          "url": "https://github.com/owendswang/ps5-web-file-manager/releases/download/v1.14/web-file-mgr-v1.14.elf"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "kauansilvalopes/estante",
+      "release_url": "https://github.com/kauansilvalopes/estante/releases/tag/v0.5.8",
+      "tag": "v0.5.8",
+      "published_at": "2026-11-07",
+      "checked_on": "2026-11-12",
+      "assets": [
+        {
+          "name": "Estante-v0.5.8-PPSA99841.zip",
+          "url": "https://github.com/kauansilvalopes/estante/releases/download/v0.5.8/Estante-v0.5.8-PPSA99841.zip"
+        }
+      ],
+      "status": "release"
+    },
+    {
+      "repo": "griches/PS5_ArtSwap",
+      "release_url": "https://github.com/griches/PS5_ArtSwap/releases/tag/v1.4.0",
+      "tag": "v1.4.0",
+      "published_at": "2026-10-28",
+      "checked_on": "2026-11-12",
+      "assets": [
+        {
+          "name": "PS5_ArtSwap-v1.4.0.zip",
+          "url": "https://github.com/griches/PS5_ArtSwap/releases/download/v1.4.0/PS5_ArtSwap-v1.4.0.zip"
+        }
+      ],
+      "status": "release"
     }
   ]
 }

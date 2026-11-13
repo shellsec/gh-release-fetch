@@ -336,5 +336,95 @@
     ],
     "releases_url": "https://bgithub.xyz/jub0t/Concat/releases",
     "repo_path": "jub0t/Concat"
+  },
+  {
+    "id": "switch_frame_tap",
+    "简介": "Switch Frame Tap（接收 Switch Frame Tap 的画面与声音）",
+    "分类": "音视频",
+    "enabled": false,
+    "aliases": [
+      "Switch Frame Tap"
+    ],
+    "repo_path": "TomasUribe/switch-frame-tap",
+    "releases_url": "https://github.com/TomasUribe/switch-frame-tap/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "run_installer": false,
+    "kill_before_install": false,
+    "use_download_filename": true,
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers": [
+      ".apk"
+    ],
+    "installer_filename_regex": "switch\\-frame\\-tap\\-\\d+(?:\\.\\d+){0,3}\\-android\\.apk",
+    "使用说明": "需 Switch 端安装对应 Atmosphère 模块并按作者说明配对。",
+    "_核查": {
+      "日期": "2026-11-09",
+      "来源": "https://github.com/TomasUribe/switch-frame-tap/releases/tag/v0.7.21.1",
+      "状态": "release",
+      "发布标签": "v0.7.21.1"
+    },
+    "download_names": [
+      "switch-frame-tap-{ver_plain}-android.apk"
+    ]
+  },
+  {
+    "id": "piliplus",
+    "简介": "PiliPlus（第三方哔哩哔哩客户端）",
+    "分类": "音视频",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "bggRGjQaUbCoE/PiliPlus",
+    "releases_url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_filename_regex": "PiliPlus_android_\\d+(?:\\.\\d+)+(?:-[a-f0-9]+)?\\+\\d+_arm64\\-v8a\\.apk",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "download_names": [
+      "PiliPlus_android_2.2.0-d9e9626f1+5598_arm64-v8a.apk"
+    ],
+    "save_subdir": "piliplus",
+    "_核查": {
+      "日期": "2026-11-12",
+      "来源": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.2.0.2",
+      "状态": "release",
+      "发布标签": "2.2.0.2",
+      "发布日期": "2026-11-03"
+    }
+  },
+  {
+    "id": "kazumi",
+    "简介": "Kazumi（自定义规则的番剧浏览与播放工具）",
+    "分类": "音视频",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "Predidit/Kazumi",
+    "releases_url": "https://github.com/Predidit/Kazumi/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_filename_regex": "Kazumi_android_\\d+(?:\\.\\d+)+\\.apk",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "download_names": [
+      "Kazumi_android_2.4.4.apk"
+    ],
+    "save_subdir": "kazumi",
+    "_核查": {
+      "日期": "2026-11-12",
+      "来源": "https://github.com/Predidit/Kazumi/releases/tag/2.4.4",
+      "状态": "release",
+      "发布标签": "2.4.4",
+      "发布日期": "2026-11-12"
+    }
   }
 ]

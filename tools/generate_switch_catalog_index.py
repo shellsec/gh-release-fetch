@@ -37,6 +37,8 @@ def main() -> None:
         f"共 **{len(apps)} 条**：**{downloadable} 条可下载**、"
         f"**{len(apps) - downloadable} 条页面入口**。其中 {pinned} 条为固定 tag 的预发布版本。",
         "",
+        "目录收集自公开网络。条目提供用途和发布入口；作者信息以工具内显示及发布页为准。",
+        "",
         "逐项对照你提供的整合包组件，见 [组件对照表](apps-switch/COMPONENTS.md)。",
         "",
         "## 使用入口",

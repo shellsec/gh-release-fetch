@@ -140,5 +140,81 @@
     "download_names": [
       "websrv-ps5.elf"
     ]
+  },
+  {
+    "id": "ps5_exporter",
+    "简介": "PS5 Exporter（向 Prometheus 暴露温度、运行时间和存储等指标）",
+    "分类": "载荷与网络服务",
+    "enabled": false,
+    "aliases": [
+      "PS5 Exporter"
+    ],
+    "repo_path": "Marice/ps5-exporter",
+    "releases_url": "https://github.com/Marice/ps5-exporter/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "run_installer": false,
+    "kill_before_install": false,
+    "use_download_filename": true,
+    "installer_extensions": [
+      ".elf"
+    ],
+    "installer_markers": [
+      ".elf"
+    ],
+    "installer_filename_regex": "ps5\\-exporter\\.elf",
+    "使用说明": "下载主载荷，启动条件和使用方式见作者发布页。",
+    "_核查": {
+      "日期": "2026-11-09",
+      "来源": "https://github.com/Marice/ps5-exporter/releases/tag/v0.3.1",
+      "状态": "release",
+      "发布标签": "v0.3.1"
+    },
+    "download_names": [
+      "ps5-exporter.elf"
+    ],
+    "save_subdir": "ps5_exporter",
+    "save_name": "ps5-exporter.elf",
+    "运行方式": "ELF/载荷",
+    "固件要求": "作者记录 PS5 Pro 13.60 下验证，需可运行 ELF 载荷的环境。"
+  },
+  {
+    "id": "ps5_tailscale",
+    "简介": "PS5 Tailscale（将 PS5 加入 Tailscale 网络，用于远程访问）",
+    "分类": "载荷与网络服务",
+    "enabled": false,
+    "aliases": [
+      "PS5 Tailscale"
+    ],
+    "repo_path": "holdmysocks/ps5-tailscale",
+    "releases_url": "https://github.com/holdmysocks/ps5-tailscale/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "run_installer": false,
+    "kill_before_install": false,
+    "use_download_filename": true,
+    "installer_extensions": [
+      ".elf"
+    ],
+    "installer_markers": [
+      ".elf"
+    ],
+    "installer_filename_regex": "tailscale\\-\\d+(?:\\.\\d+){0,3}\\.elf",
+    "使用说明": "下载主载荷，启动条件和使用方式见作者发布页。",
+    "_核查": {
+      "日期": "2026-11-09",
+      "来源": "https://github.com/holdmysocks/ps5-tailscale/releases/tag/v0.7.3",
+      "状态": "release",
+      "发布标签": "v0.7.3"
+    },
+    "download_names": [
+      "tailscale-{ver_plain}.elf"
+    ],
+    "save_subdir": "ps5_tailscale",
+    "save_name": "tailscale-0.7.3.elf",
+    "运行方式": "ELF/载荷",
+    "固件要求": "需 ELF 加载器及 Tailscale 账户；作者记录在 13.42 和 elfldr 0.26 下验证。"
   }
 ]

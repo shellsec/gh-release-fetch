@@ -177,5 +177,73 @@
     "save_name": "ankidroid.apk",
     "releases_url": "https://bgithub.xyz/AnkiDroid/Anki-Android/releases",
     "repo_path": "AnkiDroid/Anki-Android"
+  },
+  {
+    "id": "mindwtr",
+    "简介": "Mindwtr（按 GTD 管理任务、项目和收集箱）",
+    "分类": "效率",
+    "enabled": false,
+    "aliases": [
+      "Mindwtr"
+    ],
+    "repo_path": "dongdongbh/Mindwtr",
+    "releases_url": "https://github.com/dongdongbh/Mindwtr/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "run_installer": false,
+    "kill_before_install": false,
+    "use_download_filename": true,
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers": [
+      ".apk"
+    ],
+    "installer_filename_regex": "mindwtr\\-\\d+(?:\\.\\d+){0,3}\\-foss\\.apk",
+    "使用说明": "选作者提供的 FOSS 版 APK，更新时保留同一发行渠道。",
+    "_核查": {
+      "日期": "2026-11-09",
+      "来源": "https://github.com/dongdongbh/Mindwtr/releases/tag/v1.3.8",
+      "状态": "release",
+      "发布标签": "v1.3.8"
+    },
+    "download_names": [
+      "mindwtr-{ver_plain}-foss.apk"
+    ]
+  },
+  {
+    "id": "smartspacer",
+    "简介": "Smartspacer（可扩展的安卓主屏信息卡片与小组件）",
+    "分类": "效率",
+    "enabled": false,
+    "aliases": [
+      "Smartspacer"
+    ],
+    "repo_path": "KieronQuinn/Smartspacer",
+    "releases_url": "https://github.com/KieronQuinn/Smartspacer/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "run_installer": false,
+    "kill_before_install": false,
+    "use_download_filename": true,
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers": [
+      ".apk"
+    ],
+    "installer_filename_regex": "Smartspacer\\-v\\d+(?:\\.\\d+){0,3}\\.apk",
+    "使用说明": "系统集成能力取决于 Android 版本、启动器及所授权限。",
+    "_核查": {
+      "日期": "2026-11-09",
+      "来源": "https://github.com/KieronQuinn/Smartspacer/releases/tag/1.11.5",
+      "状态": "release",
+      "发布标签": "1.11.5"
+    },
+    "download_names": [
+      "Smartspacer-v{ver_plain}.apk"
+    ]
   }
 ]

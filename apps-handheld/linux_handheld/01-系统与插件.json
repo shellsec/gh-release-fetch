@@ -14,5 +14,302 @@
     "windows_installer": false,
     "open_page_only": true,
     "open_page_url": "https://github.com/SteamDeckHomebrew/decky-loader/releases"
+  },
+  {
+    "id": "loadout",
+    "简介": "Loadout（Linux 掌机的游戏内覆盖层和插件平台）",
+    "分类": "系统与插件",
+    "enabled": false,
+    "aliases": [
+      "Loadout"
+    ],
+    "repo_path": "srsholmes/loadout",
+    "releases_url": "https://github.com/srsholmes/loadout/releases/latest",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "使用说明": "作者列出 SteamOS（Steam Deck）、Bazzite 和 CachyOS；完整安装涉及多个组件及系统服务，从作者安装说明进入。",
+    "_核查": {
+      "日期": "2026-11-09",
+      "来源": "https://github.com/srsholmes/loadout/releases/tag/v0.11.2",
+      "状态": "release",
+      "发布标签": "v0.11.2",
+      "发布日期": "2026-11-03",
+      "兼容性来源": "https://github.com/srsholmes/loadout#install"
+    },
+    "open_page_only": true,
+    "open_page_url": "https://github.com/srsholmes/loadout#install"
+  },
+  {
+    "id": "powerdeck",
+    "简介": "PowerDeck（掌机功耗配置与按游戏切换配置的 Decky 插件）",
+    "分类": "系统与插件",
+    "enabled": false,
+    "aliases": [
+      "PowerDeck"
+    ],
+    "repo_path": "fewtarius/PowerDeck",
+    "releases_url": "https://github.com/fewtarius/PowerDeck/releases/latest",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "使用说明": "需 Decky Loader；作者设备表包括 Steam Deck LCD/OLED，调节功能随设备而异。",
+    "_核查": {
+      "日期": "2026-11-09",
+      "来源": "https://github.com/fewtarius/PowerDeck/releases/tag/v1.0.89",
+      "状态": "release",
+      "发布标签": "v1.0.89",
+      "发布日期": "2026-11-02",
+      "兼容性来源": "https://github.com/fewtarius/PowerDeck"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      ".zip"
+    ],
+    "installer_filename_regex": "PowerDeck\\.zip",
+    "use_download_filename": true,
+    "save_subdir": "powerdeck",
+    "download_names": [
+      "PowerDeck.zip"
+    ]
+  },
+  {
+    "id": "decky_xr_gaming",
+    "简介": "XR Gaming（在 Steam Deck 游戏模式为兼容 XR 眼镜提供虚拟屏幕）",
+    "分类": "系统与插件",
+    "enabled": false,
+    "aliases": [
+      "XR Gaming"
+    ],
+    "repo_path": "wheaney/decky-XRGaming",
+    "releases_url": "https://github.com/wheaney/decky-XRGaming/releases/latest",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "使用说明": "需 Decky Loader 和作者列出的 XR 眼镜；此条为 x86_64 ZIP，ARM64 附件单独发布。",
+    "_核查": {
+      "日期": "2026-11-09",
+      "来源": "https://github.com/wheaney/decky-XRGaming/releases/tag/v1.6.2",
+      "状态": "release",
+      "发布标签": "v1.6.2",
+      "发布日期": "2026-11-04",
+      "兼容性来源": "https://github.com/wheaney/decky-XRGaming"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      ".zip"
+    ],
+    "installer_filename_regex": "decky\\-XRGaming\\-v?\\d+(?:\\.\\d+){0,3}\\.zip",
+    "use_download_filename": true,
+    "save_subdir": "decky_xr_gaming",
+    "download_url_templates": [
+      "https://github.com/wheaney/decky-XRGaming/releases/download/{ver}/decky-XRGaming-{ver}.zip"
+    ]
+  },
+  {
+    "id": "achievement_customizer",
+    "简介": "Achievement Customizer（自定义 Steam Deck 游戏模式的成就弹窗）",
+    "分类": "系统与插件",
+    "enabled": false,
+    "aliases": [
+      "Achievement Customizer"
+    ],
+    "repo_path": "Hector2242/decky-plugin",
+    "releases_url": "https://github.com/Hector2242/decky-plugin/releases/latest",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "使用说明": "需 Decky Loader，按作者说明导入插件 ZIP。",
+    "_核查": {
+      "日期": "2026-11-09",
+      "来源": "https://github.com/Hector2242/decky-plugin/releases/tag/v1.1.0",
+      "状态": "release",
+      "发布标签": "v1.1.0",
+      "发布日期": "2026-10-27",
+      "兼容性来源": "https://github.com/Hector2242/decky-plugin"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      ".zip"
+    ],
+    "installer_filename_regex": "achievement\\-customizer\\.zip",
+    "use_download_filename": true,
+    "save_subdir": "achievement_customizer",
+    "download_names": [
+      "achievement-customizer.zip"
+    ]
+  },
+  {
+    "id": "egpu_buddy",
+    "简介": "EGPU Buddy（Linux 掌机游戏模式的外接显卡连接与显示切换工具）",
+    "分类": "系统与插件",
+    "enabled": false,
+    "aliases": [
+      "EGPU Buddy"
+    ],
+    "repo_path": "denver8989/EGPU-Buddy",
+    "releases_url": "https://github.com/denver8989/EGPU-Buddy/releases/latest",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "使用说明": "需 Decky Loader 和支持 eGPU 的掌机；作者列出 Legion Go 系列及 ROG Xbox Ally X 的实测组合。AMD/Intel eGPU 支持仍为测试阶段。",
+    "_核查": {
+      "日期": "2026-11-09",
+      "来源": "https://github.com/denver8989/EGPU-Buddy/releases/tag/v0.7.246",
+      "状态": "release",
+      "发布标签": "v0.7.246",
+      "发布日期": "2026-11-09",
+      "兼容性来源": "https://github.com/denver8989/EGPU-Buddy"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      ".zip"
+    ],
+    "installer_filename_regex": "EGPU\\-Buddy\\-Decky\\-\\d+(?:\\.\\d+){0,3}\\.zip",
+    "use_download_filename": true,
+    "save_subdir": "egpu_buddy",
+    "download_names": [
+      "EGPU-Buddy-Decky-{ver_plain}.zip"
+    ]
+  },
+  {
+    "id": "fsr4_injector",
+    "简介": "FSR4Injector（在支持的 AMD 掌机上为兼容游戏配置 FSR 4 的 Decky 插件）",
+    "分类": "系统与插件",
+    "enabled": false,
+    "aliases": [
+      "FSR4Injector"
+    ],
+    "repo_path": "Rayekkk/FSR4Injector",
+    "releases_url": "https://github.com/Rayekkk/FSR4Injector/releases/latest",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "使用说明": "需 SteamOS 游戏模式、Decky 和 Proton 11 或 Experimental。作者验证 Radeon 880M/890M；Steam Deck 支持仍为测试阶段且未实测。",
+    "_核查": {
+      "日期": "2026-11-09",
+      "来源": "https://github.com/Rayekkk/FSR4Injector/releases/tag/1.2.1",
+      "状态": "release",
+      "发布标签": "1.2.1",
+      "发布日期": "2026-11-06",
+      "兼容性来源": "https://github.com/Rayekkk/FSR4Injector"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_markers": [
+      ".zip"
+    ],
+    "installer_filename_regex": "FSR4Injector\\-\\d+(?:\\.\\d+){0,3}\\.zip",
+    "use_download_filename": true,
+    "save_subdir": "fsr4_injector",
+    "download_names": [
+      "FSR4Injector-{ver_plain}.zip"
+    ]
+  },
+  {
+    "id": "deckyhub_linux_handheld",
+    "简介": "DeckyHub（Steam Deck 游戏模式插件管理）",
+    "分类": "系统与插件",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "mazillka/deckyhub-plugin",
+    "releases_url": "https://github.com/mazillka/deckyhub-plugin/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_filename_regex": "DeckyHub\\.zip",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "download_names": [
+      "DeckyHub.zip"
+    ],
+    "save_subdir": "deckyhub_linux_handheld",
+    "使用说明": "Steam Deck/SteamOS，需 Decky Loader。",
+    "_核查": {
+      "日期": "2026-11-12",
+      "来源": "https://github.com/mazillka/deckyhub-plugin/releases/tag/v3.3.1",
+      "状态": "release",
+      "发布标签": "v3.3.1",
+      "发布日期": "2026-11-11"
+    }
+  },
+  {
+    "id": "magicpods_decky",
+    "简介": "MagicPods（Steam Deck 蓝牙耳机电量与降噪控制）",
+    "分类": "系统与插件",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "steam3d/MagicPodsDecky",
+    "releases_url": "https://github.com/steam3d/MagicPodsDecky/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_filename_regex": "MagicPods_\\d+(?:\\.\\d+)+\\.zip",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "download_names": [
+      "MagicPods_2.0.24.zip"
+    ],
+    "save_subdir": "magicpods_decky",
+    "使用说明": "需 Decky Loader，支持设备见上游说明。",
+    "_核查": {
+      "日期": "2026-11-12",
+      "来源": "https://github.com/steam3d/MagicPodsDecky/releases/tag/2.0.24",
+      "状态": "release",
+      "发布标签": "2.0.24",
+      "发布日期": "2026-11-06"
+    }
+  },
+  {
+    "id": "sdh_ludusavi",
+    "简介": "SDH-Ludusavi（Steam Deck 游戏存档备份与恢复）",
+    "分类": "系统与插件",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "beallio/SDH-Ludusavi",
+    "releases_url": "https://github.com/beallio/SDH-Ludusavi/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_filename_regex": "SDH\\-Ludusavi\\-v\\d+(?:\\.\\d+)+\\.zip",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "download_names": [
+      "SDH-Ludusavi-v0.5.3.zip"
+    ],
+    "save_subdir": "sdh_ludusavi",
+    "使用说明": "需 Decky Loader，按上游说明从本地 ZIP 安装。",
+    "_核查": {
+      "日期": "2026-11-12",
+      "来源": "https://github.com/beallio/SDH-Ludusavi/releases/tag/v0.5.3",
+      "状态": "release",
+      "发布标签": "v0.5.3",
+      "发布日期": "2026-11-04"
+    }
   }
 ]

@@ -1,7 +1,7 @@
 [
   {
     "id": "locals-nx",
-    "简介": "LocalSend 无线传文件",
+    "简介": "用 LocalSend 和同一局域网里的设备互传文件",
     "分类": "文件与存档",
     "enabled": false,
     "aliases": [
@@ -41,7 +41,7 @@
       "debug",
       "Debug"
     ],
-    "使用说明": "完整保留压缩包中的 SD 卡目录布局，具体依赖与启动方式见项目说明。",
+    "使用说明": "下载 Switch 版后，和运行 LocalSend 的手机或电脑连接同一局域网。",
     "_核查": {
       "日期": "2026-10-19",
       "来源": "https://github.com/z3lc/LocalS-NX/releases/tag/v1.0.0",
@@ -55,7 +55,7 @@
   },
   {
     "id": "minfs",
-    "简介": "通过浏览器管理 SD 卡",
+    "简介": "用手机或电脑浏览器访问 Switch 的 SD 卡",
     "分类": "文件与存档",
     "enabled": false,
     "aliases": [
@@ -95,7 +95,7 @@
       "debug",
       "Debug"
     ],
-    "使用说明": "完整保留压缩包中的 SD 卡目录布局，具体依赖与启动方式见项目说明。",
+    "使用说明": "下载 Switch 版压缩包。解压时保留包内目录，依赖见项目说明。",
     "_核查": {
       "日期": "2026-10-19",
       "来源": "https://github.com/minbbb/minFS/releases/tag/v1.0.0",
@@ -106,7 +106,7 @@
   },
   {
     "id": "switchsavesync",
-    "简介": "存档同步到 Google Drive",
+    "简介": "把游戏存档同步到 Google Drive",
     "分类": "文件与存档",
     "enabled": false,
     "aliases": [
@@ -160,7 +160,7 @@
   },
   {
     "id": "pkhex-nx",
-    "简介": "宝可梦存档编辑",
+    "简介": "在 Switch 上编辑宝可梦存档",
     "分类": "文件与存档",
     "enabled": false,
     "aliases": [
@@ -212,7 +212,7 @@
   },
   {
     "id": "nxshare",
-    "简介": "通过网页浏览及下载相册截图和视频",
+    "简介": "用浏览器查看和下载 Switch 相册里的截图与视频",
     "分类": "文件与存档",
     "enabled": false,
     "aliases": [
@@ -253,7 +253,7 @@
       "debug",
       "Debug"
     ],
-    "使用说明": "仅下载主机端文件；放置路径、资源依赖及启动方式见项目说明。",
+    "使用说明": "在 Switch 启动工具后，用手机或电脑打开它显示的地址。",
     "_核查": {
       "日期": "2026-10-19",
       "来源": "https://github.com/musebrot1/NXShare/releases/tag/1.9.0",
@@ -269,7 +269,7 @@
     "id": "checkpoint",
     "repo_path": "BernardoGiordano/Checkpoint",
     "releases_url": "https://github.com/BernardoGiordano/Checkpoint/releases",
-    "简介": "Checkpoint 存档备份与还原",
+    "简介": "备份或还原 Switch 游戏存档",
     "分类": "文件与存档",
     "enabled": false,
     "aliases": [
@@ -303,7 +303,7 @@
       "Debug",
       "debug"
     ],
-    "使用说明": "只选择 Switch 的 Checkpoint.nro，排除 3DS 文件与调试 ELF。",
+    "使用说明": "下载 Switch 版 Checkpoint.nro。已有存档可以先备份，再进行还原。",
     "_核查": {
       "日期": "2026-10-19",
       "来源": "https://github.com/BernardoGiordano/Checkpoint/releases/tag/v5.3.0",
@@ -319,7 +319,7 @@
     "id": "nxdumptool",
     "repo_path": "DarkMatterCore/nxdumptool",
     "releases_url": "https://github.com/DarkMatterCore/nxdumptool/releases",
-    "简介": "NXDumpTool 自有游戏与内容导出",
+    "简介": "导出自己主机上的游戏卡带或已安装内容",
     "分类": "文件与存档",
     "enabled": false,
     "aliases": [
@@ -353,7 +353,7 @@
       "Debug",
       "debug"
     ],
-    "使用说明": "仅下载主机端文件；放置路径、资源依赖及启动方式见项目说明。",
+    "使用说明": "下载 Switch 版文件。放置位置和依赖见项目说明。",
     "_核查": {
       "日期": "2026-10-19",
       "来源": "https://github.com/DarkMatterCore/nxdumptool/releases/tag/v1.1.15",
@@ -369,7 +369,7 @@
     "id": "goldleaf",
     "repo_path": "XorTroll/Goldleaf",
     "releases_url": "https://github.com/XorTroll/Goldleaf/releases",
-    "简介": "Goldleaf 文件与内容管理",
+    "简介": "在 Switch 上浏览文件和管理已安装内容",
     "分类": "文件与存档",
     "enabled": false,
     "aliases": [
@@ -403,7 +403,7 @@
       "Debug",
       "debug"
     ],
-    "使用说明": "仅下载主机端文件；放置路径、资源依赖及启动方式见项目说明。",
+    "使用说明": "下载 Switch 版文件。放置位置和依赖见项目说明。",
     "_核查": {
       "日期": "2026-10-19",
       "来源": "https://github.com/XorTroll/Goldleaf/releases/tag/1.2.1",
@@ -417,7 +417,7 @@
   },
   {
     "id": "dbipatcher",
-    "简介": "DBI 补丁与翻译发行包",
+    "简介": "使用支持外部语言文件的 DBI",
     "分类": "文件与存档",
     "enabled": false,
     "aliases": [
@@ -463,7 +463,7 @@
   },
   {
     "id": "n-xplorer",
-    "简介": "N-Xplorer 文本编辑与文件管理",
+    "简介": "在 Switch 上整理文件并编辑文本",
     "分类": "文件与存档",
     "enabled": false,
     "aliases": [
@@ -511,7 +511,7 @@
   },
   {
     "id": "dbi-translation-zhcn",
-    "简介": "DBI 简体中文翻译文件",
+    "简介": "给兼容版本的 DBI 加上简体中文",
     "分类": "文件与存档",
     "enabled": false,
     "aliases": [
@@ -540,7 +540,7 @@
       "translation_zhcn.bin"
     ],
     "save_subdir": "dbi-translation-zhcn",
-    "使用说明": "下载 translation_zhcn.bin，手动重命名为 translation.bin，与本清单 dbipatcher 的同一发布版本 DBI.nro 放入同一个 SD 卡文件夹；不要混用其他版本的 DBI。",
+    "使用说明": "将 translation_zhcn.bin 改名为 translation.bin，与本目录 dbipatcher 对应的 DBI.nro 放在同一文件夹。",
     "_核查": {
       "日期": "2026-10-19",
       "状态": "release",

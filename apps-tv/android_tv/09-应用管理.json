@@ -1,0 +1,30 @@
+[
+  {
+    "id": "flicky_android_tv",
+    "简介": "Flicky（适合遥控操作的 F-Droid 客户端）",
+    "分类": "应用管理",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "mlm-games/flicky",
+    "releases_url": "https://github.com/mlm-games/flicky/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_filename_regex": "flicky\\-\\d+(?:\\.\\d+)+\\-universal\\.apk",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "download_names": [
+      "flicky-4.6.1-universal.apk"
+    ],
+    "save_subdir": "flicky_android_tv",
+    "_核查": {
+      "日期": "2026-11-12",
+      "来源": "https://github.com/mlm-games/flicky/releases/tag/4.6.1",
+      "状态": "release",
+      "发布标签": "4.6.1",
+      "发布日期": "2026-10-22"
+    }
+  }
+]

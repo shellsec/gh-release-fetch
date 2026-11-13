@@ -1,0 +1,31 @@
+[
+  {
+    "id": "vitarps5_vita",
+    "简介": "VitaRPS5（在 Vita 上串流 PS5）",
+    "分类": "串流",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "mauricio-gg/vitaki-vitarps5",
+    "releases_url": "https://github.com/mauricio-gg/vitaki-vitarps5/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".vpk"
+    ],
+    "installer_filename_regex": "VitaRPS5\\-latest\\.vpk",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "download_names": [
+      "VitaRPS5-latest.vpk"
+    ],
+    "save_subdir": "vitarps5_vita",
+    "使用说明": "需可运行自制 VPK 的 Vita，在 PS5 上开启远程游玩。",
+    "_核查": {
+      "日期": "2026-11-12",
+      "来源": "https://github.com/mauricio-gg/vitaki-vitarps5/releases/tag/v4.2.2",
+      "状态": "release",
+      "发布标签": "v4.2.2",
+      "发布日期": "2026-11-01"
+    }
+  }
+]

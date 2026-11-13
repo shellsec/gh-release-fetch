@@ -46,5 +46,42 @@
       ".AppImage"
     ],
     "save_subdir": "greenlight"
+  },
+  {
+    "id": "chiaki_ng",
+    "简介": "chiaki-ng（在 Steam Deck 上通过 Remote Play 串流 PS4 或 PS5）",
+    "分类": "串流",
+    "enabled": false,
+    "aliases": [
+      "chiaki-ng"
+    ],
+    "repo_path": "chiaki-ng/chiaki-ng",
+    "releases_url": "https://github.com/chiaki-ng/chiaki-ng/releases/latest",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "使用说明": "此条提供 x86_64 AppImage，保留上游文件名；作者还提供 Steam Deck 安装指南和 Flatpak。",
+    "_核查": {
+      "日期": "2026-11-09",
+      "来源": "https://github.com/chiaki-ng/chiaki-ng/releases/tag/v1.10.1",
+      "状态": "release",
+      "发布标签": "v1.10.1",
+      "发布日期": "2026-11-03",
+      "兼容性来源": "https://chiaki-ng.github.io/chiaki-ng/setup/installation/"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".AppImage_x86_64"
+    ],
+    "installer_markers": [
+      ".AppImage_x86_64"
+    ],
+    "installer_filename_regex": "chiaki\\-ng\\.AppImage_x86_64",
+    "use_download_filename": true,
+    "save_subdir": "chiaki_ng",
+    "download_names": [
+      "chiaki-ng.AppImage_x86_64"
+    ]
   }
 ]

@@ -2189,5 +2189,29 @@
     ],
     "releases_url": "https://bgithub.xyz/zenangst/KeyboardCowboy/releases",
     "repo_path": "zenangst/KeyboardCowboy"
+  },
+  {
+    "id": "hop",
+    "简介": "Hop（macOS 菜单栏工具，集成番茄钟、剪贴板历史和截图；Apple Silicon .dmg）",
+    "分类": "效率",
+    "enabled": false,
+    "releases_url": "https://github.com/antonyshakirov/hop/releases/latest",
+    "repo_path": "antonyshakirov/hop",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      ".dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "installer_filename_regex": "Hop\\.dmg",
+    "windows_installer": false,
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "aliases": [
+      "Hop"
+    ]
   }
 ]

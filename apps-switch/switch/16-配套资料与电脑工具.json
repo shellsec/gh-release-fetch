@@ -1,7 +1,7 @@
 [
   {
     "id": "ips-patch-creator",
-    "简介": "IPS Patch Creator 补丁制作工具",
+    "简介": "在电脑上制作 IPS 补丁",
     "分类": "配套资料与电脑工具",
     "enabled": false,
     "aliases": [
@@ -15,7 +15,7 @@
   },
   {
     "id": "sigpatch-database",
-    "简介": "Switch Ghidra 签名补丁数据库",
+    "简介": "查找供 Ghidra 分析使用的签名补丁资料",
     "分类": "配套资料与电脑工具",
     "enabled": false,
     "aliases": [
@@ -29,7 +29,7 @@
   },
   {
     "id": "ns-usbloader",
-    "简介": "NS-USBloader 电脑端传输工具",
+    "简介": "从电脑通过 USB 或网络向 Switch 发送文件",
     "分类": "配套资料与电脑工具",
     "enabled": false,
     "aliases": [
@@ -41,5 +41,20 @@
     "open_page_url": "https://github.com/developersu/ns-usbloader/releases",
     "run_installer": false,
     "使用说明": "电脑端配套 Awoo 等主机应用；在发布页选择本机系统及 Java 版本对应文件，不复制到 Switch 作为 NRO。"
+  },
+  {
+    "id": "sccm-switch-toolbox",
+    "简介": "在 Windows 上备份、恢复和迁移 Switch SD 卡及 emuMMC",
+    "分类": "配套资料与电脑工具",
+    "enabled": false,
+    "aliases": [
+      "SCCM Switch Toolbox",
+      "Switch-Toolbox",
+      "Switch SD 卡备份"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://github.com/SocalConsoleModding/Switch-Toolbox/releases",
+    "run_installer": false,
+    "使用说明": "在官方发布页下载 SCCM_Switch_Toolbox.exe，在 Windows 电脑上运行。"
   }
 ]

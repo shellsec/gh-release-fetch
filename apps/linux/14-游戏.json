@@ -401,33 +401,6 @@
     "repo_path": "OpenMW/openmw"
   },
   {
-    "id": "0ad",
-    "简介": "0 A.D.（即时战略，Linux deb）",
-    "分类": "游戏",
-    "enabled": false,
-    "prefer_api_assets": true,
-    "version_tag_as_on_github": true,
-    "windows_installer": false,
-    "process_name": "",
-    "kill_before_install": false,
-    "run_installer": false,
-    "installer_markers": [
-      "0ad_",
-      "amd64.deb"
-    ],
-    "href_exclude_substrings": [
-      "win",
-      "mac"
-    ],
-    "installer_extensions": [
-      ".deb"
-    ],
-    "use_download_filename": true,
-    "save_name": "0ad-linux.deb",
-    "releases_url": "https://bgithub.xyz/0ad/0ad/releases",
-    "repo_path": "0ad/0ad"
-  },
-  {
     "id": "rpcs3",
     "简介": "RPCS3（PS3 模拟器 AppImage）",
     "分类": "游戏",

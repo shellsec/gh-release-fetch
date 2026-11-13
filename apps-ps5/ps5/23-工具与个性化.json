@@ -1,0 +1,116 @@
+[
+  {
+    "id": "prefbar",
+    "简介": "PrefBar（在 PS5 画面上显示性能信息）",
+    "分类": "工具与个性化",
+    "enabled": false,
+    "aliases": [
+      "PrefBar"
+    ],
+    "repo_path": "X1NONs/PrefBar",
+    "releases_url": "https://github.com/X1NONs/PrefBar/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "run_installer": false,
+    "kill_before_install": false,
+    "use_download_filename": true,
+    "installer_extensions": [
+      ".elf"
+    ],
+    "installer_markers": [
+      ".elf"
+    ],
+    "installer_filename_regex": "PrefBar\\-complete_V\\d+(?:\\.\\d+){0,3}\\.elf",
+    "使用说明": "下载主载荷，启动条件和使用方式见作者发布页。",
+    "_核查": {
+      "日期": "2026-11-09",
+      "来源": "https://github.com/X1NONs/PrefBar/releases/tag/v0.2.1",
+      "状态": "release",
+      "发布标签": "v0.2.1"
+    },
+    "download_names": [
+      "PrefBar-complete_V{ver_plain}.elf"
+    ],
+    "save_subdir": "prefbar",
+    "save_name": "PrefBar-complete_V0.2.1.elf",
+    "运行方式": "ELF/载荷",
+    "固件要求": "需可运行 ELF 载荷的 PS5；固件适用范围以作者发布说明为准。"
+  },
+  {
+    "id": "ps5_tabshifter",
+    "简介": "PS5 TabShifter（整理 PS5 主界面的游戏和媒体标签）",
+    "分类": "工具与个性化",
+    "enabled": false,
+    "aliases": [
+      "PS5 TabShifter"
+    ],
+    "repo_path": "xvvulcanvx/PS5-TabShifter",
+    "releases_url": "https://github.com/xvvulcanvx/PS5-TabShifter/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "run_installer": false,
+    "kill_before_install": false,
+    "use_download_filename": true,
+    "installer_extensions": [
+      ".elf"
+    ],
+    "installer_markers": [
+      ".elf"
+    ],
+    "installer_filename_regex": "TabShifter\\.elf",
+    "使用说明": "下载主载荷，启动条件和使用方式见作者发布页。",
+    "_核查": {
+      "日期": "2026-11-09",
+      "来源": "https://github.com/xvvulcanvx/PS5-TabShifter/releases/tag/v1.3.0",
+      "状态": "release",
+      "发布标签": "v1.3.0"
+    },
+    "download_names": [
+      "TabShifter.elf"
+    ],
+    "save_subdir": "ps5_tabshifter",
+    "save_name": "TabShifter.elf",
+    "运行方式": "ELF/载荷",
+    "固件要求": "作者声明支持 5.00–13.60，需可运行 ELF 载荷的环境。"
+  },
+  {
+    "id": "poords4",
+    "简介": "PoorDS4（让无线 DualShock 4 用于原生 PS5 游戏）",
+    "分类": "工具与个性化",
+    "enabled": false,
+    "aliases": [
+      "PoorDS4"
+    ],
+    "repo_path": "ItsBlurf/PoorDS4",
+    "releases_url": "https://github.com/ItsBlurf/PoorDS4/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "run_installer": false,
+    "kill_before_install": false,
+    "use_download_filename": true,
+    "installer_extensions": [
+      ".elf"
+    ],
+    "installer_markers": [
+      ".elf"
+    ],
+    "installer_filename_regex": "PoorDS4\\.elf",
+    "使用说明": "下载主载荷，启动条件和使用方式见作者发布页。",
+    "_核查": {
+      "日期": "2026-11-09",
+      "来源": "https://github.com/ItsBlurf/PoorDS4/releases/tag/v0.2.0",
+      "状态": "release",
+      "发布标签": "v0.2.0"
+    },
+    "download_names": [
+      "PoorDS4.elf"
+    ],
+    "save_subdir": "poords4",
+    "save_name": "PoorDS4.elf",
+    "运行方式": "ELF/载荷",
+    "固件要求": "作者记录 11.60 下的实测；其他固件按项目兼容表核对。此条为主载荷。"
+  }
+]

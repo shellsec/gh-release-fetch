@@ -96,5 +96,110 @@
       ".apk"
     ],
     "save_subdir": "smarttube"
+  },
+  {
+    "id": "wholphin",
+    "简介": "Wholphin（支持电视遥控器的 Jellyfin 客户端）",
+    "分类": "多媒体",
+    "enabled": false,
+    "aliases": [
+      "Wholphin"
+    ],
+    "repo_path": "damontecres/Wholphin",
+    "releases_url": "https://github.com/damontecres/Wholphin/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers": [
+      ".apk"
+    ],
+    "installer_filename_regex": "Wholphin\\.apk",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "使用说明": "需 Jellyfin 服务端；此条为通用 APK。",
+    "_核查": {
+      "日期": "2026-11-09",
+      "来源": "https://github.com/damontecres/Wholphin/releases/tag/v1.1.1",
+      "状态": "release",
+      "发布标签": "v1.1.1",
+      "发布日期": "2026-11-07"
+    },
+    "download_names": [
+      "Wholphin.apk"
+    ]
+  },
+  {
+    "id": "vega_tv",
+    "简介": "Vega（播放、串流和投放本地或远程媒体）",
+    "分类": "多媒体",
+    "enabled": false,
+    "aliases": [
+      "Vega"
+    ],
+    "repo_path": "vega-org/vega-app",
+    "releases_url": "https://github.com/vega-org/vega-app/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers": [
+      ".apk"
+    ],
+    "installer_filename_regex": "vega\\-v?\\d+(?:\\.\\d+){0,3}\\.apk",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "使用说明": "采用官方安卓与电视通用 APK；媒体来源由用户自行配置。",
+    "_核查": {
+      "日期": "2026-11-09",
+      "来源": "https://github.com/vega-org/vega-app/releases/tag/v5.3.2",
+      "状态": "release",
+      "发布标签": "v5.3.2",
+      "发布日期": "2026-11-01"
+    },
+    "download_url_templates": [
+      "https://github.com/vega-org/vega-app/releases/download/{ver}/vega-{ver}.apk"
+    ]
+  },
+  {
+    "id": "switch_frame_tap_tv",
+    "简介": "Switch Frame Tap（在电视上接收 Switch 的画面与声音）",
+    "分类": "多媒体",
+    "enabled": false,
+    "aliases": [
+      "Switch Frame Tap"
+    ],
+    "repo_path": "TomasUribe/switch-frame-tap",
+    "releases_url": "https://github.com/TomasUribe/switch-frame-tap/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers": [
+      ".apk"
+    ],
+    "installer_filename_regex": "switch\\-frame\\-tap\\-\\d+(?:\\.\\d+){0,3}\\-android\\.apk",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "使用说明": "Android 6+，需要 Switch 端 Atmosphère 模块和网络连接；与手机版共用 APK。",
+    "_核查": {
+      "日期": "2026-11-09",
+      "来源": "https://github.com/TomasUribe/switch-frame-tap/releases/tag/v0.7.21.1",
+      "状态": "release",
+      "发布标签": "v0.7.21.1",
+      "发布日期": "2026-11-04"
+    },
+    "download_names": [
+      "switch-frame-tap-{ver_plain}-android.apk"
+    ]
   }
 ]

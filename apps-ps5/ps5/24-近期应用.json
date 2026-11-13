@@ -1,0 +1,185 @@
+[
+  {
+    "id": "ps5upload",
+    "简介": "PS5Upload（PS5 文件上传与传输）",
+    "分类": "载荷与网络服务",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "phantomptr/ps5upload",
+    "releases_url": "https://github.com/phantomptr/ps5upload/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".elf"
+    ],
+    "installer_filename_regex": "ps5upload\\-\\d+(?:\\.\\d+)+\\.elf",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "download_names": [
+      "ps5upload-12.4.12.elf"
+    ],
+    "save_subdir": "ps5upload",
+    "使用说明": "主机侧需支持 ELF 载荷，其他平台为配套客户端。",
+    "_核查": {
+      "日期": "2026-11-12",
+      "来源": "https://github.com/phantomptr/ps5upload/releases/tag/v12.4.12",
+      "状态": "release",
+      "发布标签": "v12.4.12",
+      "发布日期": "2026-11-12"
+    },
+    "运行方式": "ELF/载荷"
+  },
+  {
+    "id": "liveshell_ps5",
+    "简介": "LiveShell（PS5 远程 shell 载荷）",
+    "分类": "载荷与网络服务",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "ZiZc3/LiveShell",
+    "releases_url": "https://github.com/ZiZc3/LiveShell/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".elf"
+    ],
+    "installer_filename_regex": "liveshell\\.elf",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "download_names": [
+      "liveshell.elf"
+    ],
+    "save_subdir": "liveshell_ps5",
+    "使用说明": "需可运行 ELF 载荷的 PS5。",
+    "_核查": {
+      "日期": "2026-11-12",
+      "来源": "https://github.com/ZiZc3/LiveShell/releases/tag/v1.7.0",
+      "状态": "release",
+      "发布标签": "v1.7.0",
+      "发布日期": "2026-11-10"
+    },
+    "运行方式": "ELF/载荷"
+  },
+  {
+    "id": "recompstore_ps5",
+    "简介": "RecompStore（浏览和安装重编译游戏移植）",
+    "分类": "商店客户端",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "elripalda/RecompStore",
+    "releases_url": "https://github.com/elripalda/RecompStore/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_filename_regex": "PPSA92000\\.zip",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "download_names": [
+      "PPSA92000.zip"
+    ],
+    "save_subdir": "recompstore_ps5",
+    "使用说明": "需能运行自制应用的 PS5。",
+    "_核查": {
+      "日期": "2026-11-12",
+      "来源": "https://github.com/elripalda/RecompStore/releases/tag/v2.7.4",
+      "状态": "release",
+      "发布标签": "v2.7.4",
+      "发布日期": "2026-10-30"
+    },
+    "运行方式": "原生应用",
+    "title_id": "PPSA92000"
+  },
+  {
+    "id": "web_file_manager_ps5",
+    "简介": "PS5 Web File Manager（浏览器文件管理载荷）",
+    "分类": "文件与存档",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "owendswang/ps5-web-file-manager",
+    "releases_url": "https://github.com/owendswang/ps5-web-file-manager/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".elf"
+    ],
+    "installer_filename_regex": "web\\-file\\-mgr\\-v\\d+(?:\\.\\d+)+\\.elf",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "download_names": [
+      "web-file-mgr-v1.14.elf"
+    ],
+    "save_subdir": "web_file_manager_ps5",
+    "使用说明": "需可运行 ELF 载荷的 PS5。",
+    "_核查": {
+      "日期": "2026-11-12",
+      "来源": "https://github.com/owendswang/ps5-web-file-manager/releases/tag/v1.14",
+      "状态": "release",
+      "发布标签": "v1.14",
+      "发布日期": "2026-11-10"
+    },
+    "运行方式": "ELF/载荷"
+  },
+  {
+    "id": "estante_ps5",
+    "简介": "Estante（PS5 游戏库、收藏与模拟器目录管理）",
+    "分类": "工具与个性化",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "kauansilvalopes/estante",
+    "releases_url": "https://github.com/kauansilvalopes/estante/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_filename_regex": "Estante\\-v\\d+(?:\\.\\d+)+\\-PPSA99841\\.zip",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "download_names": [
+      "Estante-v0.5.8-PPSA99841.zip"
+    ],
+    "save_subdir": "estante_ps5",
+    "使用说明": "需 ShadowMountPlus 和 Elf Arsenal。",
+    "_核查": {
+      "日期": "2026-11-12",
+      "来源": "https://github.com/kauansilvalopes/estante/releases/tag/v0.5.8",
+      "状态": "release",
+      "发布标签": "v0.5.8",
+      "发布日期": "2026-11-07"
+    },
+    "运行方式": "原生应用",
+    "title_id": "PPSA99841",
+    "固件要求": "上游仅在 11.60 上测试。"
+  },
+  {
+    "id": "artswap_ps5",
+    "简介": "PS5 ArtSwap（自定义游戏封面和背景）",
+    "分类": "工具与个性化",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "griches/PS5_ArtSwap",
+    "releases_url": "https://github.com/griches/PS5_ArtSwap/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_filename_regex": "PS5_ArtSwap\\-v\\d+(?:\\.\\d+)+\\.zip",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "download_names": [
+      "PS5_ArtSwap-v1.4.0.zip"
+    ],
+    "save_subdir": "artswap_ps5",
+    "使用说明": "需 ShadowMountPlus，按上游说明替换封面和背景。",
+    "_核查": {
+      "日期": "2026-11-12",
+      "来源": "https://github.com/griches/PS5_ArtSwap/releases/tag/v1.4.0",
+      "状态": "release",
+      "发布标签": "v1.4.0",
+      "发布日期": "2026-10-28"
+    },
+    "运行方式": "封面管理工具"
+  }
+]

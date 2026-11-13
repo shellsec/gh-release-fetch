@@ -1,7 +1,7 @@
 [
   {
     "id": "switchfin",
-    "简介": "Jellyfin / Emby 客户端",
+    "简介": "播放 Jellyfin 或 Emby 服务器里的影音",
     "分类": "本地与家庭影音",
     "enabled": false,
     "aliases": [
@@ -42,7 +42,7 @@
       "debug",
       "Debug"
     ],
-    "使用说明": "仅下载主机端文件；放置路径、资源依赖及启动方式见项目说明。",
+    "使用说明": "下载 Switch 版文件。放置位置和依赖见项目说明。",
     "_核查": {
       "日期": "2026-10-19",
       "来源": "https://github.com/dragonflylee/switchfin/releases/tag/0.9.4",
@@ -56,7 +56,7 @@
   },
   {
     "id": "nxmp",
-    "简介": "本地及网络视频播放器",
+    "简介": "播放 SD 卡、本地存储或网络中的影音",
     "分类": "本地与家庭影音",
     "enabled": false,
     "aliases": [
@@ -98,7 +98,7 @@
       "debug",
       "Debug"
     ],
-    "使用说明": "完整保留压缩包中的 SD 卡目录布局，具体依赖与启动方式见项目说明。",
+    "使用说明": "下载 Switch 版压缩包。解压时保留包内目录，依赖见项目说明。",
     "_核查": {
       "日期": "2026-10-19",
       "来源": "https://github.com/proconsule/nxmp/releases/tag/v0.9.3",
@@ -109,7 +109,7 @@
   },
   {
     "id": "nx-cast",
-    "简介": "DLNA / AirPlay 投屏与 IPTV",
+    "简介": "接收手机投屏或播放 IPTV 播放列表",
     "分类": "本地与家庭影音",
     "enabled": false,
     "aliases": [
@@ -151,7 +151,7 @@
       "debug",
       "Debug"
     ],
-    "使用说明": "使用 NX-Cast-sdmc.zip，保留目录结构复制到 SD 根目录；hbmenu 启动，手机和 Switch 连同一局域网，具体投屏能力以 README 为准。",
+    "使用说明": "下载 NX-Cast-sdmc.zip，保留目录结构。投屏时把手机和 Switch 连到同一局域网。",
     "_核查": {
       "日期": "2026-10-19",
       "来源": "https://github.com/Ode1l/NX-Cast/releases/tag/v0.3.2",

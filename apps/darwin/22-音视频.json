@@ -1306,5 +1306,85 @@
     ],
     "releases_url": "https://bgithub.xyz/FreeTubeApp/FreeTube/releases",
     "repo_path": "FreeTubeApp/FreeTube"
+  },
+  {
+    "id": "mediamtx",
+    "简介": "MediaMTX（实时音视频流媒体服务器与代理，支持 RTSP、RTMP、SRT 和 WebRTC；Apple Silicon .tar.gz）",
+    "分类": "音视频",
+    "enabled": false,
+    "releases_url": "https://github.com/bluenviron/mediamtx/releases/latest",
+    "repo_path": "bluenviron/mediamtx",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      ".tar.gz"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "installer_filename_regex": "mediamtx_v\\d+(?:\\.\\d+){1,3}_darwin_arm64\\.tar\\.gz",
+    "windows_installer": false,
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "aliases": [
+      "MediaMTX"
+    ]
+  },
+  {
+    "id": "piliplus",
+    "简介": "PiliPlus（第三方哔哩哔哩客户端）",
+    "分类": "音视频",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "bggRGjQaUbCoE/PiliPlus",
+    "releases_url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "installer_filename_regex": "PiliPlus_macos_\\d+(?:\\.\\d+)+(?:-[a-f0-9]+)?\\+\\d+\\.dmg",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "download_names": [
+      "PiliPlus_macos_2.2.0+5598.dmg"
+    ],
+    "save_subdir": "piliplus",
+    "_核查": {
+      "日期": "2026-11-12",
+      "来源": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.2.0.2",
+      "状态": "release",
+      "发布标签": "2.2.0.2",
+      "发布日期": "2026-11-03"
+    }
+  },
+  {
+    "id": "kazumi",
+    "简介": "Kazumi（自定义规则的番剧浏览与播放工具）",
+    "分类": "音视频",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "Predidit/Kazumi",
+    "releases_url": "https://github.com/Predidit/Kazumi/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "installer_filename_regex": "Kazumi_macos_\\d+(?:\\.\\d+)+\\.dmg",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "download_names": [
+      "Kazumi_macos_2.4.4.dmg"
+    ],
+    "save_subdir": "kazumi",
+    "_核查": {
+      "日期": "2026-11-12",
+      "来源": "https://github.com/Predidit/Kazumi/releases/tag/2.4.4",
+      "状态": "release",
+      "发布标签": "2.4.4",
+      "发布日期": "2026-11-12"
+    }
   }
 ]

@@ -22,5 +22,42 @@
       ".AppImage"
     ],
     "save_subdir": "protonup_qt"
+  },
+  {
+    "id": "ge_proton",
+    "简介": "GE-Proton（供 Steam Deck 等 x86_64 Linux 设备使用的社区 Proton 兼容层）",
+    "分类": "兼容层",
+    "enabled": false,
+    "aliases": [
+      "GE-Proton"
+    ],
+    "repo_path": "GloriousEggroll/proton-ge-custom",
+    "releases_url": "https://github.com/GloriousEggroll/proton-ge-custom/releases/latest",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "使用说明": "下载 x86_64 兼容层压缩包，按作者 Steam 兼容工具说明安装，或通过 ProtonUp-Qt 管理。",
+    "_核查": {
+      "日期": "2026-11-09",
+      "来源": "https://github.com/GloriousEggroll/proton-ge-custom/releases/tag/GE-Proton11-12",
+      "状态": "release",
+      "发布标签": "GE-Proton11-12",
+      "发布日期": "2026-11-03",
+      "兼容性来源": "https://github.com/GloriousEggroll/proton-ge-custom"
+    },
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "installer_markers": [
+      ".tar.gz"
+    ],
+    "installer_filename_regex": "GE-Proton\\d+-\\d+\\-x86_64\\.tar\\.gz",
+    "use_download_filename": true,
+    "save_subdir": "ge_proton",
+    "download_url_templates": [
+      "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/{ver}/{ver}-x86_64.tar.gz"
+    ]
   }
 ]

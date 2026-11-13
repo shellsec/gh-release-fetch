@@ -1,0 +1,118 @@
+[
+  {
+    "id": "flash_gamevault_xbox",
+    "简介": "Flash for GameVault（Xbox Flash 游戏运行工具）",
+    "分类": "模拟器与游戏",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "skitzellez/Flash-GameVault",
+    "releases_url": "https://github.com/skitzellez/Flash-GameVault/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".appx"
+    ],
+    "installer_filename_regex": "FlashForGameVault_\\d+(?:\\.\\d+)+_x64\\.appx",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "download_names": [
+      "FlashForGameVault_0.1.0.9_x64.appx"
+    ],
+    "save_subdir": "flash_gamevault_xbox",
+    "使用说明": "Xbox Series X/S 开发者模式，按上游说明配置 GameVault。",
+    "_核查": {
+      "日期": "2026-11-12",
+      "来源": "https://github.com/skitzellez/Flash-GameVault/releases/tag/gv-0.1.0.9",
+      "状态": "release",
+      "发布标签": "gv-0.1.0.9",
+      "发布日期": "2026-11-01"
+    }
+  },
+  {
+    "id": "openbor_gamevault_xbox",
+    "简介": "OpenBOR for GameVault（横版动作游戏引擎）",
+    "分类": "模拟器与游戏",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "skitzellez/OpenBOR-GameVault",
+    "releases_url": "https://github.com/skitzellez/OpenBOR-GameVault/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".appx"
+    ],
+    "installer_filename_regex": "OpenBORForGameVault_\\d+(?:\\.\\d+)+_x64\\.appx",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "download_names": [
+      "OpenBORForGameVault_0.1.0.15_x64.appx"
+    ],
+    "save_subdir": "openbor_gamevault_xbox",
+    "使用说明": "Xbox Series X/S 开发者模式，自备游戏内容。",
+    "_核查": {
+      "日期": "2026-11-12",
+      "来源": "https://github.com/skitzellez/OpenBOR-GameVault/releases/tag/gv-0.1.0.15",
+      "状态": "release",
+      "发布标签": "gv-0.1.0.15",
+      "发布日期": "2026-11-04"
+    }
+  },
+  {
+    "id": "xbsx2_gamevault_xbox",
+    "简介": "XBSX2 for GameVault（PS2 模拟器）",
+    "分类": "模拟器与游戏",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "skitzellez/XBSX2-GameVault",
+    "releases_url": "https://github.com/skitzellez/XBSX2-GameVault/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".msixbundle"
+    ],
+    "installer_filename_regex": "XBSX2\\-for\\-GameVault_\\d+(?:\\.\\d+)+_AVX2\\.msixbundle",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "download_names": [
+      "XBSX2-for-GameVault_2.0.9.17_AVX2.msixbundle"
+    ],
+    "save_subdir": "xbsx2_gamevault_xbox",
+    "使用说明": "Xbox Series X/S 开发者模式，自备 BIOS 与游戏。",
+    "_核查": {
+      "日期": "2026-11-12",
+      "来源": "https://github.com/skitzellez/XBSX2-GameVault/releases/tag/gv-2.0.9.17",
+      "状态": "release",
+      "发布标签": "gv-2.0.9.17",
+      "发布日期": "2026-10-22"
+    }
+  },
+  {
+    "id": "retroarch_gamevault_xbox",
+    "简介": "RetroArch for GameVault（多系统模拟器前端）",
+    "分类": "模拟器与游戏",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "skitzellez/RetroArch-GameVault",
+    "releases_url": "https://github.com/skitzellez/RetroArch-GameVault/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".appx"
+    ],
+    "installer_filename_regex": "RetroArch\\-for\\-GameVault_\\d+(?:\\.\\d+)+_x64\\.appx",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "download_names": [
+      "RetroArch-for-GameVault_1.22.2.95_x64.appx"
+    ],
+    "save_subdir": "retroarch_gamevault_xbox",
+    "使用说明": "Xbox Series X/S 开发者模式，自备游戏及所需 BIOS。",
+    "_核查": {
+      "日期": "2026-11-12",
+      "来源": "https://github.com/skitzellez/RetroArch-GameVault/releases/tag/gv-1.22.2.95",
+      "状态": "release",
+      "发布标签": "gv-1.22.2.95",
+      "发布日期": "2026-11-06"
+    }
+  }
+]

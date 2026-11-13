@@ -2,7 +2,7 @@
 
 > 自动生成：`python tools/generate_ps5_catalog_index.py`。
 
-共 **137 项**：**128 项有已核查下载附件**，**9 项为页面入口**。仅登记名称的 12 个项目未计入应用清单。
+共 **149 项**：**140 项有已核查下载附件**，**9 项为页面入口**。仅登记名称的 12 个项目未计入应用清单。
 
 ## 搜索与下载
 
@@ -36,16 +36,16 @@ Windows 可直接打开根目录 lookup_app.exe 选择 PS5；搜索、下载和�
 | 分类 | 项目数 |
 |---|---|
 | 系统环境 | 4 |
-| 载荷与网络服务 | 3 |
-| 文件与存档 | 2 |
+| 载荷与网络服务 | 7 |
+| 文件与存档 | 4 |
 | 开发与Linux | 4 |
 | 补充模拟器与应用 | 4 |
-| 商店客户端 | 2 |
+| 商店客户端 | 3 |
 | 模拟器 | 15 |
 | 影音与直播 | 15 |
 | 音乐 | 6 |
 | 串流与云游戏 | 6 |
-| 工具与个性化 | 11 |
+| 工具与个性化 | 16 |
 | AI | 3 |
 | 游戏移植 | 30 |
 | 自制游戏 | 1 |
@@ -79,6 +79,10 @@ Windows 可直接打开根目录 lookup_app.exe 选择 PS5；搜索、下载和�
 | `elfldr` — [ELF Loader PS5 载荷加载器](https://github.com/ps5-payload-dev/elfldr/releases) | ELF/载荷；.elf | 选择 PS5 ELF 加载器，供其他载荷使用。 固件：按项目 README 与当前发布说明核对。 |
 | `ftpsrv` — [PS5 FTP 文件传输服务](https://github.com/ps5-payload-dev/ftpsrv/releases) | ELF/载荷；.elf | 选择常规 ftpsrv-ps5.elf；同页 PS4 与 install 变体不混用。 固件：按项目 README 与当前发布说明核对。 |
 | `websrv` — [PS5 网页服务与 Homebrew Launcher](https://github.com/ps5-payload-dev/websrv/releases) | ELF/载荷；.elf | websrv ZIP 应用需要此类环境；不要将 websrv 包、原生标题和 PS4 PKG 视为同一种包。 固件：按项目 README 与当前发布说明核对。 |
+| `ps5_exporter` — [PS5 Exporter（向 Prometheus 暴露温度、运行时间和存储等指标）](https://github.com/Marice/ps5-exporter/releases/latest) | ELF/载荷；.elf | 下载主载荷，启动条件和使用方式见作者发布页。 固件：作者记录 PS5 Pro 13.60 下验证，需可运行 ELF 载荷的环境。 |
+| `ps5_tailscale` — [PS5 Tailscale（将 PS5 加入 Tailscale 网络，用于远程访问）](https://github.com/holdmysocks/ps5-tailscale/releases/latest) | ELF/载荷；.elf | 下载主载荷，启动条件和使用方式见作者发布页。 固件：需 ELF 加载器及 Tailscale 账户；作者记录在 13.42 和 elfldr 0.26 下验证。 |
+| `ps5upload` — [PS5Upload（PS5 文件上传与传输）](https://github.com/phantomptr/ps5upload/releases/latest) | ELF/载荷；.elf | 主机侧需支持 ELF 载荷，其他平台为配套客户端。 固件：查看作者说明。 |
+| `liveshell_ps5` — [LiveShell（PS5 远程 shell 载荷）](https://github.com/ZiZc3/LiveShell/releases/latest) | ELF/载荷；.elf | 需可运行 ELF 载荷的 PS5。 固件：查看作者说明。 |
 
 ## 文件与存档
 
@@ -86,6 +90,8 @@ Windows 可直接打开根目录 lookup_app.exe 选择 PS5；搜索、下载和�
 |---|---|---|
 | `itemzflow` — [Itemzflow 应用管理](https://github.com/LightningMods/Itemzflow) | 应用/外部分发；页面入口 | 本次最新 Release 未提供附件；仓库包含 PS4/PS5 相关内容，保留作者页面并按其说明选择 PS5 分发。 固件：按项目 README 与当前发布说明核对。 |
 | `apollo-ps5` — [Apollo PS5 存档工具项目](https://github.com/bucanero/apollo-ps5) | 源码项目；页面入口 | 本次未发现稳定 Release；保留源码页面，不表示已经提供可安装 PS5 包。 固件：按项目 README 与当前发布说明核对。 |
+| `ps5save` — [PS5Save（将 PS4、PS5 或模拟器存档定期备份到 USB）](https://github.com/heni0xyz/ps5save/releases/latest) | ELF/载荷；.elf | 下载主载荷，启动条件和使用方式见作者发布页。 固件：需可运行 ELF 载荷的 PS5 及 exFAT USB 存储，配置方法见作者说明。 |
+| `web_file_manager_ps5` — [PS5 Web File Manager（浏览器文件管理载荷）](https://github.com/owendswang/ps5-web-file-manager/releases/latest) | ELF/载荷；.elf | 需可运行 ELF 载荷的 PS5。 固件：查看作者说明。 |
 
 ## 开发与Linux
 
@@ -111,6 +117,7 @@ Windows 可直接打开根目录 lookup_app.exe 选择 PS5；搜索、下载和�
 |---|---|---|
 | `overdrive` — [Overdrive 原发布仓库客户端](https://github.com/overdriveps5/overdrive-releases/releases) | 商店客户端 / exFAT 标题；.zip | 当前发布仓库 README 指定的 exFAT ZIP 包；客户端与服务可用性分别确认，部署依赖按仓库说明核对。 固件：按对应分支 README 核对入口、自制运行环境和镜像加载支持，不沿用其他商店的要求。 |
 | `overdrive-community` — [Overdrive MyLuxy 社区重建客户端](https://github.com/MyLuxy/overdrive/releases) | 商店客户端 / exFAT 标题；.exfat | 第三方重建分支；裸 exFAT 镜像，不是 ZIP，勿更改扩展名。ShadowMount+ 等前置环境查看该分支 README。与原发布版使用同一 Title ID，是替代版本。 固件：按对应分支 README 核对入口、自制运行环境和镜像加载支持，不沿用其他商店的要求。 |
+| `recompstore_ps5` — [RecompStore（浏览和安装重编译游戏移植）](https://github.com/elripalda/RecompStore/releases/latest) | 原生应用；.zip | 需能运行自制应用的 PS5。 固件：查看作者说明。 |
 
 ## 模拟器
 
@@ -189,6 +196,11 @@ Windows 可直接打开根目录 lookup_app.exe 选择 PS5；搜索、下载和�
 | `native-ppsa99773` — [PShare（PS5 工具与个性化）](https://github.com/StonedModder/PShare/releases/tag/1.0) | 原生标题；.zip；固定 1.0 | 原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。 固件：按作者 README 与发布说明核对，未统一核定。 |
 | `native-ppsa99930` — [Forwarder Manager（PS5 工具与个性化）](https://github.com/heydemoura/ps5-forwarder-manager/releases/tag/00.001.004) | 原生标题；.zip；固定 00.001.004 | 原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。 固件：按作者 README 与发布说明核对，未统一核定。 |
 | `native-ppsa99995` — [Prospero Win（PS5 工具与个性化）](https://github.com/mpereiraesaa/prospero-win/releases/tag/v0.2.0) | 原生标题；.zip；固定 v0.2.0 | 原生 PS5 标题；具体固件、启动器与权限要求查看作者 README。 固件：按作者 README 与发布说明核对，未统一核定。 |
+| `prefbar` — [PrefBar（在 PS5 画面上显示性能信息）](https://github.com/X1NONs/PrefBar/releases/latest) | ELF/载荷；.elf | 下载主载荷，启动条件和使用方式见作者发布页。 固件：需可运行 ELF 载荷的 PS5；固件适用范围以作者发布说明为准。 |
+| `ps5_tabshifter` — [PS5 TabShifter（整理 PS5 主界面的游戏和媒体标签）](https://github.com/xvvulcanvx/PS5-TabShifter/releases/latest) | ELF/载荷；.elf | 下载主载荷，启动条件和使用方式见作者发布页。 固件：作者声明支持 5.00–13.60，需可运行 ELF 载荷的环境。 |
+| `poords4` — [PoorDS4（让无线 DualShock 4 用于原生 PS5 游戏）](https://github.com/ItsBlurf/PoorDS4/releases/latest) | ELF/载荷；.elf | 下载主载荷，启动条件和使用方式见作者发布页。 固件：作者记录 11.60 下的实测；其他固件按项目兼容表核对。此条为主载荷。 |
+| `estante_ps5` — [Estante（PS5 游戏库、收藏与模拟器目录管理）](https://github.com/kauansilvalopes/estante/releases/latest) | 原生应用；.zip | 需 ShadowMountPlus 和 Elf Arsenal。 固件：上游仅在 11.60 上测试。 |
+| `artswap_ps5` — [PS5 ArtSwap（自定义游戏封面和背景）](https://github.com/griches/PS5_ArtSwap/releases/latest) | 封面管理工具；.zip | 需 ShadowMountPlus，按上游说明替换封面和背景。 固件：查看作者说明。 |
 
 ## AI
 

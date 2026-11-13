@@ -102,5 +102,33 @@
     "save_name": "standard_notes.apk",
     "releases_url": "https://bgithub.xyz/standardnotes/mobile/releases",
     "repo_path": "standardnotes/mobile"
+  },
+  {
+    "id": "saber",
+    "简介": "Saber（手写笔记、PDF 批注和同步）",
+    "分类": "笔记",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "saber-notes/saber",
+    "releases_url": "https://github.com/saber-notes/saber/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_filename_regex": "Saber_FOSS_v\\d+(?:\\.\\d+)+\\.apk",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "download_names": [
+      "Saber_FOSS_v1.37.1.apk"
+    ],
+    "save_subdir": "saber",
+    "_核查": {
+      "日期": "2026-11-12",
+      "来源": "https://github.com/saber-notes/saber/releases/tag/v1.37.1",
+      "状态": "release",
+      "发布标签": "v1.37.1",
+      "发布日期": "2026-10-28"
+    }
   }
 ]

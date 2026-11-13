@@ -1,7 +1,7 @@
 [
   {
     "id": "wiliwili",
-    "简介": "B 站客户端",
+    "简介": "在 Switch 上浏览和播放哔哩哔哩视频",
     "分类": "在线视频",
     "enabled": false,
     "aliases": [
@@ -41,7 +41,7 @@
       "debug",
       "Debug"
     ],
-    "使用说明": "完整保留压缩包中的 SD 卡目录布局，具体依赖与启动方式见项目说明。",
+    "使用说明": "下载 Switch 版压缩包，按项目说明保留包内目录。",
     "_核查": {
       "日期": "2026-10-19",
       "来源": "https://github.com/xfangfang/wiliwili/releases/tag/v1.6.0",
@@ -55,7 +55,7 @@
   },
   {
     "id": "switch-newpipe",
-    "简介": "YouTube 客户端",
+    "简介": "在 Switch 上浏览和播放 YouTube 视频",
     "分类": "在线视频",
     "enabled": false,
     "aliases": [
@@ -95,7 +95,7 @@
       "debug",
       "Debug"
     ],
-    "使用说明": "仅下载主机端文件；放置路径、资源依赖及启动方式见项目说明。",
+    "使用说明": "下载 Switch 版文件。放置位置和依赖见项目说明。",
     "_核查": {
       "日期": "2026-10-19",
       "来源": "https://github.com/mirusu400/switch-newpipe/releases/tag/v0.0.5",
@@ -109,7 +109,7 @@
   },
   {
     "id": "switch-hongguo",
-    "简介": "红果短剧客户端",
+    "简介": "在 Switch 上浏览红果短剧",
     "分类": "在线视频",
     "enabled": false,
     "aliases": [
@@ -149,7 +149,7 @@
       "debug",
       "Debug"
     ],
-    "使用说明": "仅下载主机端文件；放置路径、资源依赖及启动方式见项目说明。",
+    "使用说明": "下载 Switch 版文件。放置位置和依赖见项目说明。",
     "_核查": {
       "日期": "2026-10-19",
       "来源": "https://github.com/ZYP-INre/switch-hongguo/releases/tag/v0.3.0",
@@ -163,7 +163,7 @@
   },
   {
     "id": "switchtvbox",
-    "简介": "影视客户端",
+    "简介": "在 Switch 上浏览和播放影视内容",
     "分类": "在线视频",
     "enabled": false,
     "aliases": [
@@ -203,7 +203,7 @@
       "debug",
       "Debug"
     ],
-    "使用说明": "完整保留压缩包中的 SD 卡目录布局，具体依赖与启动方式见项目说明。",
+    "使用说明": "下载 Switch 版压缩包。解压时保留包内目录，依赖见项目说明。",
     "_核查": {
       "日期": "2026-10-19",
       "来源": "https://github.com/lGuann/SwitchTVBox/releases/tag/v0.4.52",
@@ -214,7 +214,7 @@
   },
   {
     "id": "tikzen",
-    "简介": "视频客户端",
+    "简介": "在 Switch 上浏览短视频",
     "分类": "在线视频",
     "enabled": false,
     "aliases": [
@@ -253,7 +253,7 @@
       "debug",
       "Debug"
     ],
-    "使用说明": "完整保留压缩包中的 SD 卡目录布局，具体依赖与启动方式见项目说明。",
+    "使用说明": "下载 Switch 版压缩包。解压时保留包内目录，依赖见项目说明。",
     "_核查": {
       "日期": "2026-10-19",
       "来源": "https://github.com/lGuann/Tikzen/releases/tag/tikzen-v1.0.5",
@@ -264,7 +264,7 @@
   },
   {
     "id": "hongguo-switch",
-    "简介": "红果短剧客户端",
+    "简介": "用另一款 Switch 客户端浏览红果短剧",
     "分类": "在线视频",
     "enabled": false,
     "aliases": [
@@ -304,7 +304,7 @@
       "debug",
       "Debug"
     ],
-    "使用说明": "仅下载主机端文件；放置路径、资源依赖及启动方式见项目说明。",
+    "使用说明": "下载 Switch 版文件。放置位置和依赖见项目说明。",
     "_核查": {
       "日期": "2026-10-19",
       "来源": "https://github.com/dongrez1990-cloud/hongguo-switch/releases/tag/v1.1.0",
@@ -315,7 +315,7 @@
   },
   {
     "id": "streamfin",
-    "简介": "流媒体客户端",
+    "简介": "在 Switch 上浏览和播放网络媒体",
     "分类": "在线视频",
     "enabled": false,
     "aliases": [
@@ -354,7 +354,7 @@
       "debug",
       "Debug"
     ],
-    "使用说明": "仅下载主机端文件；放置路径、资源依赖及启动方式见项目说明。",
+    "使用说明": "下载 Switch 版文件。放置位置和依赖见项目说明。",
     "_核查": {
       "日期": "2026-10-19",
       "来源": "https://github.com/scamNscoot/StreamFin/releases/tag/v0.3.0",
@@ -368,7 +368,7 @@
   },
   {
     "id": "stremnx",
-    "简介": "流媒体客户端",
+    "简介": "在 Switch 上使用 Stremio 观看网络媒体",
     "分类": "在线视频",
     "enabled": false,
     "aliases": [
@@ -407,7 +407,7 @@
       "debug",
       "Debug"
     ],
-    "使用说明": "仅下载主机端文件；放置路径、资源依赖及启动方式见项目说明。",
+    "使用说明": "下载 Switch 版文件。放置位置和依赖见项目说明。",
     "_核查": {
       "日期": "2026-10-19",
       "来源": "https://github.com/denpingus/StremNX/releases/tag/v0.3.0-beta",
@@ -421,7 +421,7 @@
   },
   {
     "id": "twinx",
-    "简介": "Twitch 直播客户端",
+    "简介": "在 Switch 上观看 Twitch 直播",
     "分类": "在线视频",
     "enabled": false,
     "aliases": [
@@ -461,7 +461,7 @@
       "debug",
       "Debug"
     ],
-    "使用说明": "完整保留压缩包中的 SD 卡目录布局，具体依赖与启动方式见项目说明。",
+    "使用说明": "下载 Switch 版压缩包。解压时保留包内目录，依赖见项目说明。",
     "_核查": {
       "日期": "2026-10-19",
       "来源": "https://github.com/DomazinUS/twiNX/releases/tag/v0.9.1",
@@ -472,7 +472,7 @@
   },
   {
     "id": "ytb-player",
-    "简介": "YouTube 客户端",
+    "简介": "用自制播放器观看 YouTube 视频",
     "分类": "在线视频",
     "enabled": false,
     "aliases": [
@@ -512,7 +512,7 @@
       "debug",
       "Debug"
     ],
-    "使用说明": "仅下载主机端文件；放置路径、资源依赖及启动方式见项目说明。",
+    "使用说明": "下载 Switch 版文件。放置位置和依赖见项目说明。",
     "_核查": {
       "日期": "2026-10-19",
       "来源": "https://github.com/murat303/ytb-player/releases/tag/v1.1.0",
@@ -526,7 +526,7 @@
   },
   {
     "id": "nxtube",
-    "简介": "NxTube：YouTube App 补丁介绍",
+    "简介": "给 Switch 官方 YouTube 应用加上网页增强功能",
     "分类": "在线视频",
     "enabled": false,
     "open_page_only": true,
@@ -539,7 +539,7 @@
   },
   {
     "id": "youtube-switch",
-    "简介": "YouTube 官方 Switch App",
+    "简介": "使用任天堂商店分发的 YouTube 应用",
     "分类": "在线视频",
     "enabled": false,
     "open_page_only": true,

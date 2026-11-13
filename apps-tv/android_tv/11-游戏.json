@@ -1,0 +1,25 @@
+[
+  {
+    "id": "blockstv",
+    "简介": "BlocksTV（用电视遥控器玩的方块益智游戏）",
+    "分类": "游戏",
+    "enabled": false,
+    "run_installer": false,
+    "fixed_download_url": "https://f-droid.org/repo/com.alexcantini.blockstv_11.apk",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "windows_installer": false,
+    "use_download_filename": true,
+    "download_names": [
+      "com.alexcantini.blockstv_11.apk"
+    ],
+    "save_subdir": "blockstv",
+    "_核查": {
+      "日期": "2026-11-12",
+      "来源": "https://f-droid.org/en/packages/com.alexcantini.blockstv/",
+      "状态": "release",
+      "发布日期": "2026-11-09"
+    }
+  }
+]

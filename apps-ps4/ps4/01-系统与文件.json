@@ -46,5 +46,135 @@
       ".elf"
     ],
     "save_subdir": "ftpsrv_ps4"
+  },
+  {
+    "id": "ps_mtp_explorer",
+    "简介": "PS MTP Explorer（用 USB 浏览并传输安卓设备上的文件）",
+    "分类": "系统与文件",
+    "enabled": false,
+    "aliases": [
+      "PS MTP Explorer"
+    ],
+    "repo_path": "nueex/ps-mtp-explorer",
+    "releases_url": "https://github.com/nueex/ps-mtp-explorer/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".pkg"
+    ],
+    "installer_markers": [
+      ".pkg"
+    ],
+    "installer_filename_regex": "PS\\-MTP\\-Explorer\\-\\d+(?:\\.\\d+){0,3}\\.pkg",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "使用说明": "需可运行自制 PKG 的 PS4 及支持标准 MTP 的安卓设备。",
+    "_核查": {
+      "日期": "2026-11-09",
+      "来源": "https://github.com/nueex/ps-mtp-explorer/releases/tag/v2.0.0",
+      "状态": "release",
+      "发布标签": "v2.0.0",
+      "发布日期": "2026-11-01"
+    },
+    "download_names": [
+      "PS-MTP-Explorer-{ver_plain}.pkg"
+    ],
+    "save_subdir": "ps_mtp_explorer"
+  },
+  {
+    "id": "apollo_ps4",
+    "简介": "Apollo Save Tool（在 PS4 管理和备份游戏存档）",
+    "分类": "系统与文件",
+    "enabled": false,
+    "aliases": [
+      "Apollo Save Tool"
+    ],
+    "repo_path": "bucanero/apollo-ps4",
+    "releases_url": "https://github.com/bucanero/apollo-ps4/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".pkg"
+    ],
+    "installer_markers": [
+      ".pkg"
+    ],
+    "installer_filename_regex": "IV0000\\-APOL00004_00\\-APOLLO0000000PS4\\.pkg",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "使用说明": "需可运行自制 PKG 的 PS4，选 PS4 专用发布包。",
+    "_核查": {
+      "日期": "2026-11-09",
+      "来源": "https://github.com/bucanero/apollo-ps4/releases/tag/v2.4.0",
+      "状态": "release",
+      "发布标签": "v2.4.0",
+      "发布日期": "2026-10-17"
+    },
+    "download_names": [
+      "IV0000-APOL00004_00-APOLLO0000000PS4.pkg"
+    ],
+    "save_subdir": "apollo_ps4"
+  },
+  {
+    "id": "ezremote_client_ps4",
+    "简介": "ezRemote Client（PS4 远程文件客户端）",
+    "分类": "系统与文件",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "cy33hc/ps4-ezremote-client",
+    "releases_url": "https://github.com/cy33hc/ps4-ezremote-client/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".pkg"
+    ],
+    "installer_filename_regex": "ezremote_client\\.pkg",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "download_names": [
+      "ezremote_client.pkg"
+    ],
+    "save_subdir": "ezremote_client_ps4",
+    "使用说明": "需可运行自制 PKG 的 PS4。",
+    "_核查": {
+      "日期": "2026-11-12",
+      "来源": "https://github.com/cy33hc/ps4-ezremote-client/releases/tag/2.09",
+      "状态": "release",
+      "发布标签": "2.09",
+      "发布日期": "2026-11-12"
+    }
+  },
+  {
+    "id": "remote_pkg_installer_nextgen_ps4",
+    "简介": "Remote PKG Installer NextGen（远程传输并安装 PKG）",
+    "分类": "系统与文件",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "AldySan/ps4_remote_pkg_installer_nextgen",
+    "releases_url": "https://github.com/AldySan/ps4_remote_pkg_installer_nextgen/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".pkg"
+    ],
+    "installer_filename_regex": "RemotePkgInstallerNextGen\\-\\d+(?:\\.\\d+)+\\.pkg",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "download_names": [
+      "RemotePkgInstallerNextGen-0.0.9.pkg"
+    ],
+    "save_subdir": "remote_pkg_installer_nextgen_ps4",
+    "使用说明": "需可运行自制 PKG 的 PS4。",
+    "_核查": {
+      "日期": "2026-11-12",
+      "来源": "https://github.com/AldySan/ps4_remote_pkg_installer_nextgen/releases/tag/v0.0.9",
+      "状态": "release",
+      "发布标签": "v0.0.9",
+      "发布日期": "2026-11-10"
+    }
   }
 ]

@@ -21,7 +21,7 @@ import tempfile
 from datetime import datetime
 
 if getattr(sys, "frozen", False):
-    SCRIPT_DIR = os.path.dirname(os.path.abspath(sys.executable))
+    SCRIPT_DIR = os.environ.get("GHRF_CATALOG_PROFILE", os.path.dirname(os.path.abspath(sys.executable)))
 else:
     SCRIPT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -266,7 +266,9 @@ def run_list(list_path: str, args: argparse.Namespace, default_plat: str, batch_
         if not source:
             # Saved paths include the catalog root, e.g. apps-tv/android_tv/08-....json.
             prefix = (row.get("path") or "").replace("\\", "/").split("/", 1)[0]
-            if prefix and os.path.isfile(os.path.join(SCRIPT_DIR, prefix, "root.json")):
+            if prefix in {row[1] for row in CATALOGS} or prefix == "apps-custom" or (
+                prefix and os.path.isfile(os.path.join(SCRIPT_DIR, prefix, "root.json"))
+            ):
                 source = prefix
         row_platform = args.platform or row.get("platform") or platform
         groups.setdefault((source, row_platform), set()).add(row["id"].strip())

@@ -116,6 +116,9 @@ def repo_root(from_file: str | None = None) -> str:
 
 
 def soft_page_check_dir(from_file: str | None = None) -> str:
+    embedded = getattr(sys, "_MEIPASS", "")
+    if embedded and os.path.isdir(os.path.join(embedded, "tools", "soft_page_check")):
+        return os.path.join(embedded, "tools", "soft_page_check")
     return os.path.join(repo_root(from_file), "tools", "soft_page_check")
 
 
@@ -164,6 +167,10 @@ def resolve_auto_update_argv(root: str, extra: list[str] | None = None) -> list[
     extra = extra or []
     py = os.path.join(root, "auto_update.py")
     exe = os.path.join(root, "auto_update.exe")
+    if is_frozen() and os.path.basename(sys.executable).casefold() == "ghreleasefetch.exe":
+        return [sys.executable, "--gui-updater", *extra]
+    if not is_frozen() and os.path.basename(sys.argv[0]).casefold() == "windows_gui.py":
+        return [sys.executable, os.path.join(root, "windows_gui.py"), "--gui-updater", *extra]
     if (not is_frozen()) and os.path.isfile(py):
         return [sys.executable, py, *extra]
     if os.path.isfile(exe):
