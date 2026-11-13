@@ -11,6 +11,7 @@ from urllib.parse import unquote
 from uuid import uuid4
 
 from tools import app_list, custom_catalog
+from tools import page_index_update
 from tools.download_engine import atomic_json
 from tools.gui_tasks import extract_links
 from tools.gui_language import tr
@@ -625,7 +626,8 @@ class Library:
             status.set(tr("搜索中…"))
             scopes = frozenset({"gamer520"}) if games else None
             def work():
-                hits = pages.search(pages.build_index(scopes), queries, scope_filter)
+                index = page_index_update.read(self.root, games)
+                hits = pages.search(index if index is not None else pages.build_index(scopes), queries, scope_filter)
                 return hits[:100] or pages._gamer520_live_fallback(queries, scope_filter, scopes, 40)
             self.background(work, render)
 

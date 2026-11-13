@@ -57,15 +57,22 @@ def mark_checked(root):
 
 def active_catalog(root, fallback=None):
     root = Path(root)
+    snapshot = current_snapshot(root / "catalog-updates", "catalog.html")
+    if snapshot != root / "catalog-updates":
+        return snapshot
+    return Path(fallback) if fallback is not None else root
+
+
+def current_snapshot(cache, marker):
     try:
-        digest = json.loads((root / "catalog-updates/current.json").read_text(encoding="utf-8"))["sha256"]
+        digest = json.loads((cache / "current.json").read_text(encoding="utf-8"))["sha256"]
         if re.fullmatch("[0-9a-f]{64}", digest):
-            candidate = root / "catalog-updates" / digest
-            if (candidate / "catalog.html").is_file():
+            candidate = cache / digest
+            if (candidate / marker).is_file():
                 return candidate
     except (OSError, ValueError, KeyError, TypeError):
         pass
-    return Path(fallback) if fallback is not None else root
+    return cache
 
 
 def allowed(name):
@@ -123,15 +130,21 @@ def fetch(url, limit):
 
 
 def update(root, report, *, release=RELEASE, fetch_bytes=fetch, routes=ranked_routes):
-    sha = fetch_bytes(release + ASSET + ".sha256", 4096).decode("ascii").strip()
-    match = re.fullmatch(r"([0-9a-fA-F]{64})[ \t]+\*?" + re.escape(ASSET), sha)
+    return update_bundle(root, report, ASSET, unpack, release=release, fetch_bytes=fetch, routes=routes)
+
+
+def update_bundle(root, report, asset, unpack_bundle, *, release=RELEASE, fetch_bytes=fetch,
+                  routes=ranked_routes, cache_name="catalog-updates", marker="catalog.html"):
+    sha = fetch_bytes(release + asset + ".sha256", 4096).decode("ascii").strip()
+    match = re.fullmatch(r"([0-9a-fA-F]{64})[ \t]+\*?" + re.escape(asset), sha)
     if not match:
         raise ValueError("GitHub 校验文件格式不正确")
     digest = match[1].lower()
     root = Path(root)
-    if active_catalog(root).name == digest:
+    cache = root / cache_name
+    if current_snapshot(cache, marker).name == digest:
         return False
-    url = release + ASSET
+    url = release + asset
     for name, target in routes(url, "auto", lambda _: None):
         report(f"正在下载目录 · {name}")
         try:
@@ -143,7 +156,6 @@ def update(root, report, *, release=RELEASE, fetch_bytes=fetch, routes=ranked_ro
         break
     else:
         raise ValueError("各线路均未返回通过校验的目录包")
-    cache = root / "catalog-updates"
     cache.mkdir(exist_ok=True)
     snapshot = cache / digest
     if not snapshot.exists():
@@ -151,7 +163,7 @@ def update(root, report, *, release=RELEASE, fetch_bytes=fetch, routes=ranked_ro
             stage = Path(staging)
             (stage / "bundle.zip").write_bytes(data)
             (stage / "content").mkdir()
-            unpack(stage / "bundle.zip", stage / "content")
+            unpack_bundle(stage / "bundle.zip", stage / "content")
             os.replace(stage / "content", snapshot)
     atomic_json(cache / "current.json", {"sha256": digest})
     return True

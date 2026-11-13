@@ -20,7 +20,7 @@ from lookup_app import discover_shard_files, load_apps_array, match_score, shard
 from tools.app_download import is_app_downloadable, resolve_open_page_url
 from tools.app_list import CATALOGS
 from tools.chrome_store import extension_id, store_url
-from tools import catalog_update
+from tools import catalog_update, page_index_update
 from tools.download_engine import DownloadPaused, ROUTES, atomic_json
 from tools.ghrf_runtime import repo_root
 from tools.repository_download import parse_repository
@@ -186,8 +186,16 @@ class App:
         def worker():
             try:
                 changed = catalog_update.update(PROFILE, lambda value: self.events.put(("catalog-status", None, value)))
+                try:
+                    pages_changed = page_index_update.update(
+                        PROFILE, lambda value: self.events.put(("catalog-status", None, value))
+                    )
+                except Exception as exc:
+                    self.events.put(("catalog-finished", None, changed))
+                    self.events.put(("catalog-status", None, tr("资讯与游戏更新失败 · {error}").format(error=exc)))
+                    return
                 catalog_update.mark_checked(PROFILE)
-                self.events.put(("catalog-finished", None, changed))
+                self.events.put(("catalog-finished", None, changed or pages_changed))
             except Exception as exc:
                 self.events.put(("catalog-finished", None, tr("清单检查失败 · {error}").format(error=exc)))
 
