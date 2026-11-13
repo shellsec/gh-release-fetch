@@ -1,8 +1,9 @@
 # PyInstaller: dist/exe/*.exe
-param([switch]$SkipInstall, [switch]$Gui)
+param([switch]$SkipInstall, [switch]$Gui, [string]$Version = "20261114.2")
 $ErrorActionPreference = "Stop"
 $Root = Split-Path -Parent $PSScriptRoot
 Set-Location $Root
+if ($Version -cnotmatch '^[0-9]{8}\.[0-9]{1,6}$') { throw "Version must use YYYYMMDD.N format." }
 
 Write-Host "== GH Release Fetch: build exe ==" -ForegroundColor Cyan
 
@@ -17,6 +18,8 @@ if (-not $SkipInstall) {
 $Dist = Join-Path $Root "dist\exe"
 $Work = Join-Path $Root "build\pyinstaller"
 New-Item -ItemType Directory -Force -Path $Dist, $Work | Out-Null
+$VersionFile = Join-Path $Work "ghrf-version.txt"
+Set-Content -LiteralPath $VersionFile -Value $Version -Encoding ascii
 
 $HiddenCore = @(
     "--hidden-import", "tools.app_list",
@@ -43,7 +46,7 @@ function Build-One($Name, $Entry, [string[]]$More = @()) {
 
 & {
     $Icons = Join-Path $Root "release\windows\gui-icons"
-    $Data = @("--windowed", "--add-data", "$Icons;gui-icons")
+    $Data = @("--windowed", "--add-data", "$Icons;gui-icons", "--add-data", "$VersionFile;.")
     foreach ($directory in @("apps", "apps-mobile", "apps-tv", "apps-switch", "apps-ps4", "apps-ps5", "apps-vita", "apps-xbox", "apps-handheld", "VibeCodingToolsDown\dist\vibecoding", "tools\soft_page_check\history", "tools\soft_page_check\list")) {
         $Data += @("--add-data", "$(Join-Path $Root $directory);$directory")
     }
@@ -55,5 +58,7 @@ function Build-One($Name, $Entry, [string[]]$More = @()) {
         }
     }
     Build-One "GHReleaseFetch" "windows_gui.py" $Data
+    $Hash = (Get-FileHash -LiteralPath (Join-Path $Dist "GHReleaseFetch.exe")).Hash
+    @{version=$Version; sha256=$Hash} | ConvertTo-Json | Set-Content -LiteralPath (Join-Path $Work "desktop-build.json") -Encoding ascii
     return
 }

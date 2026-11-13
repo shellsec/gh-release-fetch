@@ -258,4 +258,13 @@ ENGLISH = {
     '桌面队列暂时无响应': 'The desktop queue is not responding',
     '任务记录格式错误': 'Invalid task history format',
     '无法读取下载队列': 'Could not read download queue',
+    '全部下载完成后关机': 'Shut down when downloads finish',
+    '请先添加下载任务。': 'Add a download task first.',
+    '{seconds} 秒后关机，取消勾选可停止': 'Shutting down in {seconds}s. Uncheck to cancel.',
+    '无法自动关机': 'Could not shut down',
+    '检查程序更新': 'Check for app updates',
+    '请从 GitHub Releases 获取新版。': 'Get the new version from GitHub Releases.',
+    '更新已校验，将在下载队列空闲后安装。': 'Update verified. It will install when the queue is idle.',
+    '当前已是最新程序版本。': 'You are running the latest app version.',
+    '发现新版 {version}，下载并更新？': 'Version {version} is available. Download and install it?',
 }

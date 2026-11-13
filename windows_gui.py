@@ -5,11 +5,14 @@ from contextlib import redirect_stderr, redirect_stdout
 from datetime import datetime
 from io import TextIOBase
 import json
+import math
 import os
+import subprocess
 from pathlib import Path
 from queue import Empty, Queue
 import sys
 from threading import Event, Thread
+import time
 import tkinter as tk
 from tkinter import filedialog, messagebox, ttk
 from urllib.parse import urlsplit
@@ -20,7 +23,7 @@ from lookup_app import discover_shard_files, load_apps_array, match_score, shard
 from tools.app_download import is_app_downloadable, resolve_open_page_url
 from tools.app_list import CATALOGS
 from tools.chrome_store import extension_id, store_url
-from tools import catalog_update, page_index_update
+from tools import catalog_update, page_index_update, program_update
 from tools.download_engine import DownloadPaused, ROUTES, atomic_json
 from tools.ghrf_runtime import repo_root
 from tools.repository_download import parse_repository
@@ -137,6 +140,10 @@ class App:
         self.state_path = PROFILE / "catalog_downloads" / "queue.json"
         self.log_path = self.state_path.with_name("download.log")
         self.tasks = self.load_tasks()
+        self.shutdown_enabled = tk.BooleanVar(value=False)
+        self.shutdown_deadline = None
+        self.program_update_busy = False
+        self.pending_program_update = None
         self.load_catalog()
         assets = Path(getattr(sys, "_MEIPASS", ROOT / "release" / "windows"))
         self.icons = {key: tk.PhotoImage(data=(assets / "gui-icons" / f"{key}.png").read_bytes(), format="png")
@@ -170,6 +177,8 @@ class App:
         window.protocol("WM_DELETE_WINDOW", self.close)
         window.after(80, self.poll)
         window.after(250, lambda: self.check_catalog(automatic=True))
+        if os.name == "nt" and getattr(sys, "frozen", False):
+            window.after(2500, lambda: self.check_program_update(automatic=True))
 
     def load_catalog(self):
         self.entries = {}
@@ -311,6 +320,7 @@ class App:
         menu.add_command(label="GitHub", command=lambda: webbrowser.open(
             "https://github.com/shellsec/gh-release-fetch"
         ))
+        menu.add_command(label=tr("检查程序更新"), command=self.check_program_update)
         self.window.configure(menu=menu)
         filters = ttk.Frame(browse)
         filters.pack(fill="x", pady=(0, 8))
@@ -350,6 +360,13 @@ class App:
         self.query.trace_add("write", self.filter_changed)
         self.external_panel(external)
         queue_frame = ttk.LabelFrame(root, text=tr("下载队列"), padding=8)
+        if os.name == "nt":
+            self.shutdown_label = tk.StringVar(value=tr("全部下载完成后关机"))
+            queue_heading = ttk.Frame(root)
+            ttk.Label(queue_heading, text=tr("下载队列")).pack(side="left")
+            ttk.Checkbutton(queue_heading, textvariable=self.shutdown_label,
+                            variable=self.shutdown_enabled, command=self.toggle_shutdown).pack(side="left", padx=8)
+            queue_frame.configure(labelwidget=queue_heading)
         queue_frame.pack(fill="x", pady=(10, 0))
         self.queue_table = self.tree(queue_frame, (("state", tr("状态"), 88), ("message", tr("进度 / 详情"), 550)), tr("任务"), height=6)
         self.queue_table.column("#0", width=325)
@@ -1014,6 +1031,8 @@ class App:
         self.save()
 
     def remove_tasks(self):
+        if self.selected_tasks():
+            self.cancel_shutdown()
         for task in self.selected_tasks():
             if task is not self.active:
                 self.tasks.remove(task)
@@ -1031,6 +1050,7 @@ class App:
             parent=self.window,
         ):
             return
+        self.cancel_shutdown()
         for task in self.tasks[:]:
             if task is not active:
                 self.tasks.remove(task)
@@ -1167,6 +1187,109 @@ class App:
         except Exception as exc:
             self.events.put(("finished", task, ("failed", str(exc))))
 
+    def check_program_update(self, automatic=False):
+        title = tr("检查程序更新")
+        if self.closing or self.program_update_busy or self.pending_program_update:
+            return
+        if os.name != "nt" or not getattr(sys, "frozen", False):
+            messagebox.showinfo(title, tr("请从 GitHub Releases 获取新版。"), parent=self.window)
+            return
+        self.program_update_busy = True
+        executable = Path(sys.executable).resolve()
+
+        def work(operation, callback, quiet=False):
+            def run():
+                try:
+                    value = operation()
+                except Exception as exc:
+                    value = exc
+                self.events.put(("library", lambda result: finish(callback, result, quiet), value))
+            Thread(target=run, daemon=True).start()
+
+        def finish(callback, value, quiet):
+            self.program_update_busy = False
+            if isinstance(value, Exception):
+                if not quiet:
+                    messagebox.showerror(title, str(value), parent=self.window)
+            else:
+                callback(value)
+
+        def ready(folder):
+            self.pending_program_update = (folder, executable)
+            self.cancel_shutdown()
+            if not self.program_update_idle():
+                messagebox.showinfo(title, tr("更新已校验，将在下载队列空闲后安装。"), parent=self.window)
+
+        def offer(result):
+            if result is None:
+                if not automatic:
+                    messagebox.showinfo(title, tr("当前已是最新程序版本。"), parent=self.window)
+                return
+            tag, notes = result
+            prompt = tr("发现新版 {version}，下载并更新？").format(version=tag)
+            if messagebox.askyesno(title, f"{prompt}\n\n{notes}", default="no", parent=self.window):
+                self.program_update_busy = True
+                work(lambda: program_update.prepare(tag, executable), ready)
+
+        work(program_update.check, offer, quiet=automatic)
+
+    def program_update_idle(self):
+        return (self.active is None and not self.resolver_busy and not self.catalog_check_running
+                and not any(task["state"] == "waiting" for task in self.tasks))
+
+    def install_pending_program_update(self):
+        if self.closing or not self.pending_program_update or not self.program_update_idle():
+            return False
+        folder, executable = self.pending_program_update
+        self.pending_program_update = None
+        try:
+            self.save()
+            self.save_settings()
+            program_update.launch(folder, executable)
+        except OSError as exc:
+            messagebox.showerror(tr("检查程序更新"), str(exc), parent=self.window)
+            return False
+        self.window.destroy()
+        return True
+
+    def cancel_shutdown(self):
+        self.shutdown_enabled.set(False)
+        self.shutdown_deadline = None
+        if os.name == "nt":
+            self.shutdown_label.set(tr("全部下载完成后关机"))
+
+    def toggle_shutdown(self):
+        if not self.shutdown_enabled.get():
+            self.cancel_shutdown()
+        elif not any(task["state"] in ("waiting", "active", "paused", "failed") for task in self.tasks):
+            self.cancel_shutdown()
+            messagebox.showinfo(tr("全部下载完成后关机"), tr("请先添加下载任务。"), parent=self.window)
+
+    def check_shutdown(self):
+        if not self.shutdown_enabled.get():
+            return
+        if (self.active or self.resolver_busy or self.catalog_check_running or self.program_update_busy or not self.tasks
+                or any(task["state"] != "done" for task in self.tasks)):
+            if self.shutdown_deadline is not None:
+                self.cancel_shutdown()
+            return
+        now = time.monotonic()
+        if self.shutdown_deadline is None:
+            self.shutdown_deadline = now + 60
+        remaining = math.ceil(self.shutdown_deadline - now)
+        if remaining > 0:
+            self.shutdown_label.set(tr("{seconds} 秒后关机，取消勾选可停止").format(seconds=remaining))
+            return
+        self.cancel_shutdown()
+        try:
+            self.save()
+            self.save_settings()
+            shutdown = Path(os.environ.get("SystemRoot", r"C:\Windows")) / "System32" / "shutdown.exe"
+            subprocess.run([str(shutdown), "/s", "/t", "0"], check=True,
+                           creationflags=subprocess.CREATE_NO_WINDOW)
+        except (OSError, subprocess.CalledProcessError) as exc:
+            messagebox.showerror(tr("无法自动关机"), str(exc), parent=self.window)
+
     def poll(self):
         while True:
             try:
@@ -1263,12 +1386,16 @@ class App:
                 self.save()
                 self.stop.clear()
                 Thread(target=self.worker, args=(self.active,), daemon=True).start()
+        if self.install_pending_program_update():
+            return
+        self.check_shutdown()
         self.window.after(80, self.poll)
 
     def close(self):
         if self.closing:
             return
         self.closing = True
+        self.cancel_shutdown()
         self.pause_tasks_on_close()
         try:
             self.save()

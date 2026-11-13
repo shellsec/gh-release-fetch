@@ -6,6 +6,8 @@ GH Release Fetch is a platform catalog and download manager for GitHub releases,
 
 ## Windows desktop app
 
+Use **Check for app updates** to check the installed EXE. A newer build is installed only after approval and when the download queue is idle.
+
 ![GH Release Fetch Windows main window](docs/images/windows-main.png)
 
 - Double-click `GHReleaseFetch.exe`. No separate Python installation is required.
@@ -25,11 +27,11 @@ Preview locally: `python -m website.build`, then `python -m http.server 8080 --b
 
 ## Downloads
 
-Windows desktop release **20261113-desktop** · [Release notes](https://github.com/shellsec/gh-release-fetch/releases/tag/20261113-desktop)
+Windows desktop release **20261114.2** · [Release notes](https://github.com/shellsec/gh-release-fetch/releases/tag/20261114.2)
 
 | Host platform | Accelerated (gh-proxy.com) | GitHub direct |
 | --- | --- | --- |
-| Windows x64 | [EXE](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261113-desktop/GHReleaseFetch.exe) · [ZIP](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261113-desktop/gh-release-fetch-windows-20261113-desktop.zip) | [EXE](https://github.com/shellsec/gh-release-fetch/releases/download/20261113-desktop/GHReleaseFetch.exe) · [ZIP](https://github.com/shellsec/gh-release-fetch/releases/download/20261113-desktop/gh-release-fetch-windows-20261113-desktop.zip) · [SHA-256](https://github.com/shellsec/gh-release-fetch/releases/download/20261113-desktop/SHA256SUMS-20261113-desktop.txt) |
+| Windows x64 | [EXE](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261114.2/GHReleaseFetch.exe) · [ZIP](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261114.2/gh-release-fetch-windows-20261114.2.zip) | [EXE](https://github.com/shellsec/gh-release-fetch/releases/download/20261114.2/GHReleaseFetch.exe) · [ZIP](https://github.com/shellsec/gh-release-fetch/releases/download/20261114.2/gh-release-fetch-windows-20261114.2.zip) · [SHA-256](https://github.com/shellsec/gh-release-fetch/releases/download/20261114.2/SHA256SUMS-20261114.2.txt) |
 | macOS ARM64 / Apple Silicon | [tar.gz](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-macos-arm64.tar.gz) | [tar.gz](https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-macos-arm64.tar.gz) |
 | Linux x86_64 | [tar.gz](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-linux-x86_64.tar.gz) | [tar.gz](https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-linux-x86_64.tar.gz) |
 | Linux ARM64 | [tar.gz](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-linux-arm64.tar.gz) | [tar.gz](https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-linux-arm64.tar.gz) |
