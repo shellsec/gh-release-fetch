@@ -1,5 +1,5 @@
 # PyInstaller: dist/exe/*.exe
-param([switch]$SkipInstall, [switch]$Gui, [string]$Version = "20261114.2")
+param([switch]$SkipInstall, [switch]$Gui, [string]$Version = "20261114.3")
 $ErrorActionPreference = "Stop"
 $Root = Split-Path -Parent $PSScriptRoot
 Set-Location $Root

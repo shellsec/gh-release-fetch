@@ -27,11 +27,11 @@ Preview locally: `python -m website.build`, then `python -m http.server 8080 --b
 
 ## Downloads
 
-Windows desktop release **20261114.2** · [Release notes](https://github.com/shellsec/gh-release-fetch/releases/tag/20261114.2)
+Windows desktop release **20261114.3** · [Release notes](https://github.com/shellsec/gh-release-fetch/releases/tag/20261114.3)
 
 | Host platform | Accelerated (gh-proxy.com) | GitHub direct |
 | --- | --- | --- |
-| Windows x64 | [EXE](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261114.2/GHReleaseFetch.exe) · [ZIP](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261114.2/gh-release-fetch-windows-20261114.2.zip) | [EXE](https://github.com/shellsec/gh-release-fetch/releases/download/20261114.2/GHReleaseFetch.exe) · [ZIP](https://github.com/shellsec/gh-release-fetch/releases/download/20261114.2/gh-release-fetch-windows-20261114.2.zip) · [SHA-256](https://github.com/shellsec/gh-release-fetch/releases/download/20261114.2/SHA256SUMS-20261114.2.txt) |
+| Windows x64 | [EXE](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261114.3/GHReleaseFetch.exe) · [ZIP](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261114.3/gh-release-fetch-windows-20261114.3.zip) | [EXE](https://github.com/shellsec/gh-release-fetch/releases/download/20261114.3/GHReleaseFetch.exe) · [ZIP](https://github.com/shellsec/gh-release-fetch/releases/download/20261114.3/gh-release-fetch-windows-20261114.3.zip) · [SHA-256](https://github.com/shellsec/gh-release-fetch/releases/download/20261114.3/SHA256SUMS-20261114.3.txt) |
 | macOS ARM64 / Apple Silicon | [tar.gz](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-macos-arm64.tar.gz) | [tar.gz](https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-macos-arm64.tar.gz) |
 | Linux x86_64 | [tar.gz](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-linux-x86_64.tar.gz) | [tar.gz](https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-linux-x86_64.tar.gz) |
 | Linux ARM64 | [tar.gz](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-linux-arm64.tar.gz) | [tar.gz](https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-linux-arm64.tar.gz) |

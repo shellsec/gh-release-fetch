@@ -25,6 +25,7 @@ from pathlib import Path
 
 import requests
 from bs4 import BeautifulSoup
+from tools.download_engine import ROUTES
 
 try:
     import urllib3
@@ -67,9 +68,7 @@ DEFAULT_RELEASE_PAGE_MIRRORS = [
 DEFAULT_NETWORK_PROBE_URLS = [
     "https://github.com",
     "https://api.github.com",
-    "https://gh-proxy.com",
-    "https://ghp.ci",
-    "https://mirror.ghproxy.com",
+    *(prefix.rstrip("/") for _, prefix in ROUTES if prefix),
 ]
 
 
@@ -1021,13 +1020,10 @@ def normalize_download_url_list(parsed_url, fallback_urls):
             return []
         if "release-assets.githubusercontent.com" in url:
             return [url]
-        if "github.com" in url and "gh-proxy" not in url and "release-assets" not in url:
-            return [
-                f"https://gh-proxy.com/{url}",
-                f"https://ghp.ci/{url}",
-                f"https://mirror.ghproxy.com/{url}",
-                url,
-            ]
+        address = urllib.parse.urlsplit(url)
+        if (address.scheme == "https" and address.netloc.lower() == "github.com"
+                and not address.query and "/releases/download/" in address.path):
+            return [prefix + url for _, prefix in ROUTES if prefix] + [url]
         # downloads.cursor.com / cursor-cdn.com 等厂商 CDN 不要套 gh-proxy
         # （反代只代理 GitHub，套上去会 60s 超时后再试官方）
         return [url]

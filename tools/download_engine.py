@@ -16,12 +16,18 @@ import requests
 # Candidate services, not a promise of availability. Direct is always included.
 ROUTES = (
     ("direct", ""), ("gh-proxy.com", "https://gh-proxy.com/"),
-    ("ghfast.top", "https://ghfast.top/"), ("ghproxy.net", "https://ghproxy.net/"),
-    ("gh.llkk.cc", "https://gh.llkk.cc/"),
-    ("gh.api.99988866.xyz", "https://gh.api.99988866.xyz/"),
+    ("ghfast.top", "https://ghfast.top/"),
     ("cors.isteed.cc", "https://cors.isteed.cc/"),
-    ("mirror.ghproxy.com", "https://mirror.ghproxy.com/"),
+    ("gh.monlor.com", "https://gh.monlor.com/"),
+    ("tvv.tw", "https://tvv.tw/"),
+    ("gh.acmsz.top", "https://gh.acmsz.top/"),
+    ("github.tbap.top", "https://github.tbap.top/"),
 )
+RETIRED_ROUTES = {"ghproxy.net", "gh.llkk.cc", "gh.api.99988866.xyz", "mirror.ghproxy.com"}
+
+
+def normalize_route(route):
+    return "auto" if route in RETIRED_ROUTES else route
 HEADERS = {"User-Agent": "GH-Release-Fetch", "Accept-Encoding": "identity"}
 _route_cache = {}
 _route_lock = threading.Lock()
@@ -76,6 +82,7 @@ def probe(url):
 
 
 def ranked_routes(url, route="auto", report=print):
+    route = normalize_route(route)
     address = urlsplit(url)
     if address.query or address.username is not None:
         return [("direct", url)]
@@ -256,6 +263,7 @@ def download_url(url, destination, *, threads=4, digest=None, validator=None, re
 
 def download(url, destination, *, route="auto", threads=4, digest=None, validator=None, report=print,
              cancelled=None):
+    route = normalize_route(route)
     failures = []
     destination = Path(destination)
     primary = destination.with_name(destination.name + ".parts")

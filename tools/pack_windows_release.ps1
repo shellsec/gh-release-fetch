@@ -1,12 +1,12 @@
 # 打包 Windows Release：dist/release/gh-release-fetch-windows-<版本>.zip
 # 用法:
 #   powershell -ExecutionPolicy Bypass -File tools\pack_windows_release.ps1
-#   powershell -ExecutionPolicy Bypass -File tools\pack_windows_release.ps1 -Version 20261114.2
+#   powershell -ExecutionPolicy Bypass -File tools\pack_windows_release.ps1 -Version 20261114.3
 #   powershell -ExecutionPolicy Bypass -File tools\pack_windows_release.ps1 -SkipBuild
 param(
     [switch]$SkipBuild,
     [switch]$Gui,
-    [string]$Version = "20261114.2"
+    [string]$Version = "20261114.3"
 )
 
 $ErrorActionPreference = "Stop"

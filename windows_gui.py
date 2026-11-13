@@ -24,7 +24,7 @@ from tools.app_download import is_app_downloadable, resolve_open_page_url
 from tools.app_list import CATALOGS
 from tools.chrome_store import extension_id, store_url
 from tools import catalog_update, page_index_update, program_update
-from tools.download_engine import DownloadPaused, ROUTES, atomic_json
+from tools.download_engine import DownloadPaused, ROUTES, atomic_json, normalize_route
 from tools.ghrf_runtime import repo_root
 from tools.repository_download import parse_repository
 
@@ -253,7 +253,8 @@ class App:
             settings = json.loads(self.settings_path.read_text(encoding="utf-8"))
             self.output.set(settings["output"])
             self.threads.set(settings["threads"])
-            self.route.set("自动测速" if settings["route"] == "auto" else settings["route"])
+            route = normalize_route(settings["route"])
+            self.route.set("自动测速" if route == "auto" else route)
             if settings.get("language") in ("zh-CN", "en"):
                 self.language = settings["language"]
         except (OSError, ValueError, KeyError, TypeError):
