@@ -4263,5 +4263,43 @@
       "发布标签": "v1.3.5",
       "发布日期": "2026-11-08"
     }
+  },
+  {
+    "id": "lemonade",
+    "简介": "Lemonade（本地 AI 推理服务） · Windows x64",
+    "分类": "AI",
+    "子分类": "本地模型",
+    "enabled": false,
+    "repo_path": "lemonade-sdk/lemonade",
+    "releases_url": "https://github.com/lemonade-sdk/lemonade/releases",
+    "prefer_api_assets": true,
+    "installer_markers": [
+      ".msi"
+    ],
+    "installer_extensions": [
+      ".msi"
+    ],
+    "installer_filename_regex": "^lemonade\\.msi$",
+    "use_download_filename": true,
+    "run_installer": false
+  },
+  {
+    "id": "textgen",
+    "简介": "TextGen（本地模型对话与 API） · Windows x64",
+    "分类": "AI",
+    "子分类": "本地模型",
+    "enabled": false,
+    "repo_path": "oobabooga/textgen",
+    "releases_url": "https://github.com/oobabooga/textgen/releases",
+    "prefer_api_assets": true,
+    "installer_markers": [
+      ".zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_filename_regex": "^textgen-portable-[\\d.]+-windows-cpu\\.zip$",
+    "use_download_filename": true,
+    "run_installer": false
   }
 ]

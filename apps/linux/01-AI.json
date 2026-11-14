@@ -3979,5 +3979,62 @@
       "发布标签": "v1.3.5",
       "发布日期": "2026-11-08"
     }
+  },
+  {
+    "id": "codexbar",
+    "简介": "CodexBar（AI 编程工具用量监控） · Linux x86_64",
+    "分类": "AI",
+    "子分类": "用量监控",
+    "enabled": false,
+    "repo_path": "steipete/CodexBar",
+    "releases_url": "https://github.com/steipete/CodexBar/releases",
+    "prefer_api_assets": true,
+    "installer_markers": [
+      ".tar.gz"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "installer_filename_regex": "^CodexBarDesktop-v[\\d.]+-linux-x86_64\\.tar\\.gz$",
+    "use_download_filename": true,
+    "run_installer": false
+  },
+  {
+    "id": "lemonade",
+    "简介": "Lemonade（本地 AI 推理服务） · Debian 13 x64",
+    "分类": "AI",
+    "子分类": "本地模型",
+    "enabled": false,
+    "repo_path": "lemonade-sdk/lemonade",
+    "releases_url": "https://github.com/lemonade-sdk/lemonade/releases",
+    "prefer_api_assets": true,
+    "installer_markers": [
+      ".deb"
+    ],
+    "installer_extensions": [
+      ".deb"
+    ],
+    "installer_filename_regex": "^lemonade-server_[\\d.]+-debian13_amd64\\.deb$",
+    "use_download_filename": true,
+    "run_installer": false
+  },
+  {
+    "id": "textgen",
+    "简介": "TextGen（本地模型对话与 API） · Linux x86_64",
+    "分类": "AI",
+    "子分类": "本地模型",
+    "enabled": false,
+    "repo_path": "oobabooga/textgen",
+    "releases_url": "https://github.com/oobabooga/textgen/releases",
+    "prefer_api_assets": true,
+    "installer_markers": [
+      ".tar.gz"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "installer_filename_regex": "^textgen-portable-[\\d.]+-linux-cpu\\.tar\\.gz$",
+    "use_download_filename": true,
+    "run_installer": false
   }
 ]
