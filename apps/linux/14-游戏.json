@@ -772,5 +772,24 @@
     ],
     "releases_url": "https://bgithub.xyz/4ian/GDevelop/releases",
     "repo_path": "4ian/GDevelop"
+  },
+  {
+    "id": "nx2navi",
+    "简介": "NX2navi（《时之笛 RE》静态重编译；linux x64；需自备游戏导出文件）",
+    "分类": "游戏",
+    "子分类": "静态重编译",
+    "enabled": false,
+    "repo_path": "tangerineturtle1/NX2navi",
+    "releases_url": "https://github.com/tangerineturtle1/NX2navi/releases",
+    "prefer_api_assets": true,
+    "installer_markers": [
+      ".AppImage"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "installer_filename_regex": "^NX2navi-Linux-[0-9.]+-x86_64\\.AppImage$",
+    "use_download_filename": true,
+    "run_installer": false
   }
 ]
