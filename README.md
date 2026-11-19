@@ -10,6 +10,8 @@ GH Release Fetch 是按平台浏览和下载软件的工具，支持 GitHub Rele
 
 ![GH Release Fetch Windows 主界面](docs/images/windows-main.png)
 
+![加速链接转换与二维码识别](docs/images/windows-link-tools.png)
+
 - 双击 `GHReleaseFetch.exe` 即可使用，无需另装 Python。
 - 在菜单选择 **语言 → 简体中文** 或 **Language → English**。偏好会保存。下载或后台任务进行中、或有其他窗口打开时，重启后生效。
 - **平台目录**支持分类浏览、搜索和勾选批量下载。**链接加速下载**支持 GitHub 仓库、发布附件、直链和 Chrome 商店链接或 ID。GitHub 下载可自动测速选线路，服务器支持时可使用多线程和断点续传。
@@ -27,11 +29,11 @@ GH Release Fetch 是按平台浏览和下载软件的工具，支持 GitHub Rele
 
 ## 下载与加速下载
 
-Windows 桌面版 **20261114.3** · [版本说明](https://github.com/shellsec/gh-release-fetch/releases/tag/20261114.3)
+Windows 桌面版 **20261119.6** · [版本说明](https://github.com/shellsec/gh-release-fetch/releases/tag/20261119.6)
 
 | 运行平台 | 加速下载（gh-proxy.com） | GitHub 原始下载 |
 | --- | --- | --- |
-| Windows x64 | [EXE](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261114.3/GHReleaseFetch.exe) · [ZIP](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261114.3/gh-release-fetch-windows-20261114.3.zip) | [EXE](https://github.com/shellsec/gh-release-fetch/releases/download/20261114.3/GHReleaseFetch.exe) · [ZIP](https://github.com/shellsec/gh-release-fetch/releases/download/20261114.3/gh-release-fetch-windows-20261114.3.zip) · [SHA-256](https://github.com/shellsec/gh-release-fetch/releases/download/20261114.3/SHA256SUMS-20261114.3.txt) |
+| Windows x64 | [EXE](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261119.6/GHReleaseFetch.exe) · [ZIP](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261119.6/gh-release-fetch-windows-20261119.6.zip) | [EXE](https://github.com/shellsec/gh-release-fetch/releases/download/20261119.6/GHReleaseFetch.exe) · [ZIP](https://github.com/shellsec/gh-release-fetch/releases/download/20261119.6/gh-release-fetch-windows-20261119.6.zip) · [SHA-256](https://github.com/shellsec/gh-release-fetch/releases/download/20261119.6/SHA256SUMS-20261119.6.txt) |
 | macOS ARM64 / Apple Silicon | [tar.gz](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-macos-arm64.tar.gz) | [tar.gz](https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-macos-arm64.tar.gz) |
 | Linux x86_64 | [tar.gz](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-linux-x86_64.tar.gz) | [tar.gz](https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-linux-x86_64.tar.gz) |
 | Linux ARM64 | [tar.gz](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-linux-arm64.tar.gz) | [tar.gz](https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-linux-arm64.tar.gz) |
