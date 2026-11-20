@@ -1,2 +1,5 @@
 requests>=2.25.0
 beautifulsoup4>=4.9.0
+segno>=1.6.6,<2
+Pillow>=10,<13
+zxing-cpp>=3,<4

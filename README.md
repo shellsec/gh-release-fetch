@@ -10,12 +10,15 @@ GH Release Fetch 是按平台浏览和下载软件的工具，支持 GitHub Rele
 
 ![GH Release Fetch Windows 主界面](docs/images/windows-main.png)
 
+![加速链接转换与二维码识别](docs/images/windows-link-tools.png)
+
 - 双击 `GHReleaseFetch.exe` 即可使用，无需另装 Python。
 - 在菜单选择 **语言 → 简体中文** 或 **Language → English**。偏好会保存。下载或后台任务进行中、或有其他窗口打开时，重启后生效。
 - **平台目录**支持分类浏览、搜索和勾选批量下载。**链接加速下载**支持 GitHub 仓库、发布附件、直链和 Chrome 商店链接或 ID。GitHub 下载可自动测速选线路，服务器支持时可使用多线程和断点续传。
 - **我的清单**管理个人和自定义条目。「一键识别导入」可从粘贴的文字提取链接，预览后入库。**下载历史**支持重下原附件或获取最新版，具体取决于来源。
 - 下载完成后可在队列右键直接打开文件或打开所在目录。清空队列、清理下载文件和清空日志各有独立入口。
 - 首次启动和之后每隔七天后台检查目录更新，也可点「在线更新清单」。设置、个人清单、队列、历史、日志和目录缓存保存在 `%LOCALAPPDATA%\GHReleaseFetch`。
+- 发布在线清单时，`python tools/pack_catalog_update.py` 从 BoleSync 同步独立 NRO 的条目和分类，按上游仓库合并并保留已有 ID。Switch 的多文件整包、系统组件和固件由本项目维护。构建离线时可用 `--bolesync-snapshot` 指定已保存的目录快照。
 - 英文适用于桌面控件和对话框。软件目录简介、上游报错和已有日志保留原文。
 
 
@@ -27,11 +30,11 @@ GH Release Fetch 是按平台浏览和下载软件的工具，支持 GitHub Rele
 
 ## 下载与加速下载
 
-Windows 桌面版 **20261114.3** · [版本说明](https://github.com/shellsec/gh-release-fetch/releases/tag/20261114.3)
+Windows 桌面版 **20261119.6** · [版本说明](https://github.com/shellsec/gh-release-fetch/releases/tag/20261119.6)
 
 | 运行平台 | 加速下载（gh-proxy.com） | GitHub 原始下载 |
 | --- | --- | --- |
-| Windows x64 | [EXE](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261114.3/GHReleaseFetch.exe) · [ZIP](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261114.3/gh-release-fetch-windows-20261114.3.zip) | [EXE](https://github.com/shellsec/gh-release-fetch/releases/download/20261114.3/GHReleaseFetch.exe) · [ZIP](https://github.com/shellsec/gh-release-fetch/releases/download/20261114.3/gh-release-fetch-windows-20261114.3.zip) · [SHA-256](https://github.com/shellsec/gh-release-fetch/releases/download/20261114.3/SHA256SUMS-20261114.3.txt) |
+| Windows x64 | [EXE](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261119.6/GHReleaseFetch.exe) · [ZIP](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261119.6/gh-release-fetch-windows-20261119.6.zip) | [EXE](https://github.com/shellsec/gh-release-fetch/releases/download/20261119.6/GHReleaseFetch.exe) · [ZIP](https://github.com/shellsec/gh-release-fetch/releases/download/20261119.6/gh-release-fetch-windows-20261119.6.zip) · [SHA-256](https://github.com/shellsec/gh-release-fetch/releases/download/20261119.6/SHA256SUMS-20261119.6.txt) |
 | macOS ARM64 / Apple Silicon | [tar.gz](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-macos-arm64.tar.gz) | [tar.gz](https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-macos-arm64.tar.gz) |
 | Linux x86_64 | [tar.gz](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-linux-x86_64.tar.gz) | [tar.gz](https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-linux-x86_64.tar.gz) |
 | Linux ARM64 | [tar.gz](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-linux-arm64.tar.gz) | [tar.gz](https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-linux-arm64.tar.gz) |
@@ -241,6 +244,8 @@ python tools/run_saved_apps.py --help
 ```
 
 Windows 打包运行 `pack_windows_release.bat`，输出位于 `dist/release/`。详见 [Windows 打包说明](release/windows/PACKAGING.md)。macOS/Linux 当前发布包采用自带 CPython 的便携目录格式，需完整保留运行时目录。
+
+如果要在 Mac 上编译桌面版，使用带 Tk 的 Python 3.10 或更新版本，在仓库根目录运行 `bash tools/build_macos.sh`。构建架构跟随 Python 解释器，产物位于 `dist/macos-arm64/GHReleaseFetch.app` 或 `dist/macos-x86_64/GHReleaseFetch.app`。双击打开时无需另装 Python。设置和下载记录保存在 `~/Library/Application Support/GHReleaseFetch`。此脚本用于本机编译，不包含 Developer ID 签名或 Apple 公证，程序自更新和下载完关机目前是 Windows 功能。
 
 配置字段、镜像回退、下载目录、日志及维护脚本见 [配置与维护参考](docs/reference.zh-CN.md)。桌面全局配置见 [apps/root.json](apps/root.json)，同平台各 JSON 分片的应用 `id` 不可重复。
 

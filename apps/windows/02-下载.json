@@ -817,5 +817,94 @@
       "发布标签": "v1.12.0",
       "发布日期": "2026-11-11"
     }
+  },
+  {
+    "id": "gh-release-fetch",
+    "简介": "GH Release Fetch（Windows x64 单文件 · GitHub 下载加速与批量下载）",
+    "分类": "下载",
+    "enabled": false,
+    "repo_path": "shellsec/gh-release-fetch",
+    "releases_url": "https://github.com/shellsec/gh-release-fetch/releases/latest",
+    "aliases": [
+      "GH Release Fetch",
+      "gh-release-fetch",
+      "GitHub 发布下载"
+    ],
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".exe"
+    ],
+    "installer_filename_regex": "^GHReleaseFetch\\.exe$",
+    "use_download_filename": true,
+    "windows_installer": false,
+    "run_installer": false
+  },
+  {
+    "id": "yunx-desktop-portable",
+    "简介": "云析 YunX Desktop（网盘分享链接解析与视频下载 · Windows x64 便携版）",
+    "分类": "下载",
+    "enabled": false,
+    "repo_path": "tidain/YunX-Desktop",
+    "releases_url": "https://github.com/tidain/YunX-Desktop/releases/latest",
+    "aliases": [
+      "YunX-Desktop"
+    ],
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_filename_regex": "^YunX\\-Desktop\\-v\\d+(?:\\.\\d+)+\\-win64\\-portable\\.zip$",
+    "use_download_filename": true,
+    "windows_installer": false,
+    "run_installer": false
+  },
+  {
+    "id": "yunx-desktop-setup",
+    "简介": "云析 YunX Desktop（网盘分享链接解析与视频下载 · Windows 安装版）",
+    "分类": "下载",
+    "enabled": false,
+    "repo_path": "tidain/YunX-Desktop",
+    "releases_url": "https://github.com/tidain/YunX-Desktop/releases/latest",
+    "aliases": [
+      "YunX-Desktop"
+    ],
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".exe"
+    ],
+    "installer_filename_regex": "^YunX\\-Desktop\\-setup\\-\\d+(?:\\.\\d+)+\\.exe$",
+    "use_download_filename": true,
+    "windows_installer": false,
+    "run_installer": false
+  },
+  {
+    "id": "linkswift",
+    "简介": "LinkSwift（网盘链接获取 · 用户脚本，需脚本管理器）",
+    "分类": "下载",
+    "enabled": false,
+    "run_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/hmjz100/LinkSwift",
+    "releases_url": "https://github.com/hmjz100/LinkSwift"
+  },
+  {
+    "id": "videdown",
+    "简介": "Videdown",
+    "分类": "下载",
+    "enabled": false,
+    "repo_path": "cshuangyy/videdown",
+    "releases_url": "https://github.com/cshuangyy/videdown/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".exe"
+    ],
+    "installer_filename_regex": "^Videdown\\.Setup\\d+(?:\\.\\d+)+\\.exe$",
+    "use_download_filename": true,
+    "windows_installer": false,
+    "run_installer": false
   }
 ]

@@ -54,7 +54,7 @@
   {
     "id": "retroarch",
     "简介": "RetroArch 模拟器前端",
-    "分类": "游戏",
+    "分类": "模拟器",
     "enabled": false,
     "releases_url": "https://bgithub.xyz/libretro/RetroArch/releases",
     "repo_path": "libretro/RetroArch",
@@ -81,7 +81,7 @@
   {
     "id": "cemu",
     "简介": "Wii U 模拟器 Cemu",
-    "分类": "游戏",
+    "分类": "模拟器",
     "enabled": false,
     "releases_url": "https://bgithub.xyz/cemu-project/Cemu/releases",
     "repo_path": "cemu-project/Cemu",
@@ -106,7 +106,7 @@
   {
     "id": "duckstation",
     "简介": "DuckStation（Windows x64 installer.exe）",
-    "分类": "游戏",
+    "分类": "模拟器",
     "enabled": false,
     "releases_url": "https://bgithub.xyz/stenzek/duckstation/releases",
     "repo_path": "stenzek/duckstation",
@@ -138,7 +138,7 @@
   {
     "id": "pcsx2",
     "简介": "PS2 模拟器 PCSX2",
-    "分类": "游戏",
+    "分类": "模拟器",
     "enabled": false,
     "releases_url": "https://bgithub.xyz/PCSX2/pcsx2/releases",
     "repo_path": "PCSX2/pcsx2",
@@ -164,7 +164,7 @@
   {
     "id": "rpcs3",
     "简介": "PS3 模拟器（实验性）",
-    "分类": "游戏",
+    "分类": "模拟器",
     "enabled": false,
     "releases_url": "https://bgithub.xyz/RPCS3/rpcs3/releases",
     "repo_path": "RPCS3/rpcs3",
@@ -189,7 +189,7 @@
   {
     "id": "xemu",
     "简介": "xemu（Windows x86_64 release zip）",
-    "分类": "游戏",
+    "分类": "模拟器",
     "enabled": false,
     "releases_url": "https://bgithub.xyz/mborgerson/xemu/releases",
     "repo_path": "mborgerson/xemu",
@@ -577,40 +577,21 @@
   },
   {
     "id": "ryujinx",
-    "简介": "Ryujinx（Nintendo Switch 模拟器，Windows x64 便携 zip）",
-    "分类": "游戏",
+    "简介": "Ryujinx（Ryubing 分支 · Nintendo Switch 模拟器 · 打开官方发布页）",
+    "分类": "模拟器",
     "enabled": false,
-    "prefer_api_assets": true,
-    "version_tag_as_on_github": true,
-    "releases_url": "https://bgithub.xyz/Ryubing/Ryujinx/releases",
-    "repo_path": "Ryubing/Ryujinx",
-    "installer_markers_match_all": true,
-    "installer_markers": [
-      "ryujinx-",
-      "win-x64.zip"
-    ],
-    "href_exclude_substrings": [
-      "linux",
-      "osx",
-      "arm64",
-      "publish"
-    ],
-    "windows_installer": false,
-    "installer_extensions": [
-      ".zip"
-    ],
-    "download_names": [
-      "ryujinx-{ver}-win-x64.zip"
-    ],
-    "save_name": "ryujinx-{ver}-win-x64.zip",
-    "process_name": "",
-    "kill_before_install": false,
-    "run_installer": false
+    "run_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://git.ryujinx.app/projects/Ryubing/releases",
+    "aliases": [
+      "Ryubing",
+      "ryujinx_2"
+    ]
   },
   {
     "id": "dosbox_x",
     "简介": "经典 DOSBox 项目开源模拟器 DOSBox-X  2026.06.02 中文版（来源：dayanzai）",
-    "分类": "游戏",
+    "分类": "模拟器",
     "enabled": false,
     "prefer_api_assets": true,
     "version_tag_as_on_github": true,
@@ -629,7 +610,7 @@
   {
     "id": "ruffle",
     "简介": "开源 Flash Player 模拟器 Ruffle Nightly 2026-05-11 免费下载（来源：dayanzai）",
-    "分类": "游戏",
+    "分类": "模拟器",
     "enabled": false,
     "prefer_api_assets": true,
     "version_tag_as_on_github": true,
@@ -667,7 +648,7 @@
   {
     "id": "visualboyadvance_m",
     "简介": "开源免费 GBA 模拟器 VisualBoyAdvance-M 2.2.3 轻松畅玩 GBA 怀旧游戏（来源：dayanzai）",
-    "分类": "游戏",
+    "分类": "模拟器",
     "enabled": false,
     "prefer_api_assets": true,
     "version_tag_as_on_github": true,
@@ -684,28 +665,9 @@
     "url_hint": "visualboyadvance_m"
   },
   {
-    "id": "ryujinx_2",
-    "简介": "开源免费 Switch 模拟器 Ryujinx 1.1.1403 中文多语免费版（来源：dayanzai）",
-    "分类": "游戏",
-    "enabled": false,
-    "prefer_api_assets": true,
-    "version_tag_as_on_github": true,
-    "releases_url": "https://bgithub.xyz/Ryujinx/Ryujinx/releases",
-    "repo_path": "Ryujinx/Ryujinx",
-    "windows_installer": true,
-    "installer_extensions": [
-      ".exe",
-      ".msi"
-    ],
-    "process_name": "",
-    "kill_before_install": false,
-    "run_installer": false,
-    "url_hint": "ryujinx_2"
-  },
-  {
     "id": "punes",
     "简介": "开源跨平台 NES 模拟器 puNES 0.111 中文多语免费版（来源：dayanzai）",
-    "分类": "游戏",
+    "分类": "模拟器",
     "enabled": false,
     "prefer_api_assets": true,
     "version_tag_as_on_github": true,
@@ -724,7 +686,7 @@
   {
     "id": "my_nes",
     "简介": "开源 NES 游戏模拟器 My Nes 7.13.8155.38062 中文绿色版（来源：dayanzai）",
-    "分类": "游戏",
+    "分类": "模拟器",
     "enabled": false,
     "prefer_api_assets": true,
     "version_tag_as_on_github": true,
@@ -1025,5 +987,493 @@
     "installer_filename_regex": "^NX2navi-Setup-[0-9.]+\\.exe$",
     "use_download_filename": true,
     "run_installer": false
+  },
+  {
+    "id": "ppsspp",
+    "简介": "PPSSPP（PSP 模拟器）",
+    "分类": "模拟器",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "repo_path": "hrydgard/ppsspp",
+    "releases_url": "https://github.com/hrydgard/ppsspp/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_filename_regex": "^PPSSPP-v\\d+(?:\\.\\d+)+-Windows-x64\\.zip$"
+  },
+  {
+    "id": "vita3k",
+    "简介": "Vita3K（PS Vita 模拟器 · 持续构建）",
+    "分类": "模拟器",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "repo_path": "Vita3K/Vita3K",
+    "releases_url": "https://github.com/Vita3K/Vita3K/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_filename_regex": "^windows-latest\\.zip$"
+  },
+  {
+    "id": "shadps4",
+    "简介": "shadPS4（PS4 模拟器 · SDL 核心，启动器见官网）",
+    "分类": "模拟器",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "repo_path": "shadps4-emu/shadPS4",
+    "releases_url": "https://github.com/shadps4-emu/shadPS4/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_filename_regex": "^shadps4-win64-sdl-\\d+(?:\\.\\d+)+\\.zip$"
+  },
+  {
+    "id": "snes9x",
+    "简介": "Snes9x（SNES / SFC 模拟器）",
+    "分类": "模拟器",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "repo_path": "snes9xgit/snes9x",
+    "releases_url": "https://github.com/snes9xgit/snes9x/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_filename_regex": "^snes9x-\\d+(?:\\.\\d+)+-win32-x64\\.zip$"
+  },
+  {
+    "id": "melonds",
+    "简介": "melonDS（Nintendo DS 模拟器）",
+    "分类": "模拟器",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "repo_path": "melonDS-emu/melonDS",
+    "releases_url": "https://github.com/melonDS-emu/melonDS/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_filename_regex": "^melonDS-\\d+(?:\\.\\d+)+-windows-x86_64\\.zip$"
+  },
+  {
+    "id": "azahar",
+    "简介": "Azahar（Nintendo 3DS 模拟器）",
+    "分类": "模拟器",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "repo_path": "azahar-emu/azahar",
+    "releases_url": "https://github.com/azahar-emu/azahar/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_filename_regex": "^azahar-windows-msvc-\\d+(?:\\.\\d+)+\\.zip$"
+  },
+  {
+    "id": "xenia",
+    "简介": "Xenia Canary（Xbox 360 模拟器 · Canary 构建）",
+    "分类": "模拟器",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "repo_path": "xenia-canary/xenia-canary-releases",
+    "releases_url": "https://github.com/xenia-canary/xenia-canary-releases/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_filename_regex": "^xenia_canary_windows_\\.zip$"
+  },
+  {
+    "id": "flycast",
+    "简介": "Flycast（Dreamcast / NAOMI / Atomiswave 模拟器）",
+    "分类": "模拟器",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "repo_path": "flyinghead/flycast",
+    "releases_url": "https://github.com/flyinghead/flycast/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_filename_regex": "^flycast-win64-\\d+(?:\\.\\d+)+\\.zip$"
+  },
+  {
+    "id": "mame",
+    "简介": "MAME（街机及经典系统模拟器）",
+    "分类": "模拟器",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "repo_path": "mamedev/mame",
+    "releases_url": "https://github.com/mamedev/mame/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".exe"
+    ],
+    "installer_filename_regex": "^mame\\d+b_x64\\.exe$"
+  },
+  {
+    "id": "mgba",
+    "简介": "mGBA（Game Boy / Color / Advance 模拟器）",
+    "分类": "模拟器",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "repo_path": "mgba-emu/mgba",
+    "releases_url": "https://github.com/mgba-emu/mgba/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".7z"
+    ],
+    "installer_filename_regex": "^mGBA-\\d+(?:\\.\\d+)+-win64\\.7z$"
+  },
+  {
+    "id": "dolphin",
+    "简介": "Dolphin（GameCube / Wii 模拟器 · Windows x64）",
+    "分类": "模拟器",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "releases_url": "https://dolphin-emu.org/download/",
+    "fixed_download_url": "https://dl.dolphin-emu.org/releases/2609b/dolphin-2609b-x64.7z",
+    "save_name": "dolphin-2609b-x64.7z"
+  },
+  {
+    "id": "project64",
+    "简介": "Project64（Nintendo 64 模拟器）",
+    "分类": "模拟器",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "open_page_only": true,
+    "open_page_url": "https://www.pj64-emu.com/download/project64-3-0-1-installer"
+  },
+  {
+    "id": "lolping",
+    "简介": "lolPing（英雄联盟风格的桌面信号轮盘）",
+    "分类": "游戏",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "darrenprx/lolPing",
+    "releases_url": "https://github.com/darrenprx/lolPing/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".exe"
+    ],
+    "installer_filename_regex": "^lolPing\\-Setup\\-\\d+(?:\\.\\d+)+\\.exe$",
+    "use_download_filename": true,
+    "windows_installer": false
+  },
+  {
+    "id": "s2arm-setup",
+    "简介": "S2Arm（Windows x64 安装版 · 为 iPhone / iPad 构建游戏）",
+    "分类": "游戏",
+    "子分类": "静态重编译",
+    "enabled": false,
+    "run_installer": false,
+    "aliases": [
+      "S2Arm",
+      "Switch 重编译"
+    ],
+    "repo_path": "jhaizhou-ops/S2Arm",
+    "使用说明": "需自备游戏和密钥。iPhone / iPad 版按上游说明通过电脑构建、签名和安装。",
+    "releases_url": "https://github.com/jhaizhou-ops/S2Arm/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".exe"
+    ],
+    "installer_filename_regex": "^S2Arm\\-windows\\-x64\\-setup\\.exe$",
+    "use_download_filename": true,
+    "windows_installer": false
+  },
+  {
+    "id": "s2arm-portable",
+    "简介": "S2Arm（Windows x64 便携版 · 为 iPhone / iPad 构建游戏）",
+    "分类": "游戏",
+    "子分类": "静态重编译",
+    "enabled": false,
+    "run_installer": false,
+    "aliases": [
+      "S2Arm",
+      "Switch 重编译"
+    ],
+    "repo_path": "jhaizhou-ops/S2Arm",
+    "使用说明": "需自备游戏和密钥。iPhone / iPad 版按上游说明通过电脑构建、签名和安装。",
+    "releases_url": "https://github.com/jhaizhou-ops/S2Arm/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_filename_regex": "^S2Arm\\-windows\\-x64\\.zip$",
+    "use_download_filename": true,
+    "windows_installer": false
+  },
+  {
+    "id": "pavise-game",
+    "简介": "Pavise Game（Windows 游戏资源与性能管理）",
+    "分类": "游戏",
+    "子分类": "性能优化",
+    "enabled": false,
+    "run_installer": false,
+    "aliases": [
+      "Pavise",
+      "Pavise Game",
+      "游戏性能优化"
+    ],
+    "repo_path": "dulaiduwang003/Pavise-Game",
+    "releases_url": "https://github.com/dulaiduwang003/Pavise-Game/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_filename_regex": "^Pavise-\\d+(?:\\.\\d+)+\\.zip$",
+    "use_download_filename": true,
+    "windows_installer": false
+  },
+  {
+    "id": "endless-sky",
+    "简介": "Endless Sky（太空探索、贸易与战斗）",
+    "分类": "游戏",
+    "enabled": false,
+    "repo_path": "endless-sky/endless-sky",
+    "run_installer": false,
+    "子分类": "探索与冒险",
+    "releases_url": "https://github.com/endless-sky/endless-sky/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".exe"
+    ],
+    "installer_filename_regex": "^EndlessSky\\-v\\d+(?:[.-]\\d+)*\\-win64\\-setup\\.exe$",
+    "use_download_filename": true,
+    "windows_installer": false
+  },
+  {
+    "id": "pioneer",
+    "简介": "Pioneer（太空飞行与探索）",
+    "分类": "游戏",
+    "enabled": false,
+    "repo_path": "pioneerspacesim/pioneer",
+    "run_installer": false,
+    "子分类": "探索与冒险",
+    "releases_url": "https://github.com/pioneerspacesim/pioneer/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".exe"
+    ],
+    "installer_filename_regex": "^pioneer\\-\\d+(?:[.-]\\d+)*\\-win\\.exe$",
+    "use_download_filename": true,
+    "windows_installer": false
+  },
+  {
+    "id": "corsixth",
+    "简介": "CorsixTH（主题医院重实现，需原版数据）",
+    "分类": "游戏",
+    "enabled": false,
+    "repo_path": "CorsixTH/CorsixTH",
+    "run_installer": false,
+    "子分类": "经营与建造",
+    "releases_url": "https://github.com/CorsixTH/CorsixTH/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_filename_regex": "^CorsixTH\\-v\\d+(?:[.-]\\d+)*\\-Windows\\-x64\\.zip$",
+    "use_download_filename": true,
+    "windows_installer": false
+  },
+  {
+    "id": "openloco",
+    "简介": "OpenLoco（运输经营，需 Locomotion 原版数据）",
+    "分类": "游戏",
+    "enabled": false,
+    "repo_path": "OpenLoco/OpenLoco",
+    "run_installer": false,
+    "子分类": "经营与建造",
+    "releases_url": "https://github.com/OpenLoco/OpenLoco/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_filename_regex": "^OpenLoco\\-v\\d+(?:[.-]\\d+)*\\-windows\\-portable\\-x64\\.zip$",
+    "use_download_filename": true,
+    "windows_installer": false
+  },
+  {
+    "id": "julius",
+    "简介": "Julius（凯撒大帝 III 重实现，需原版数据）",
+    "分类": "游戏",
+    "enabled": false,
+    "repo_path": "bvschaik/julius",
+    "run_installer": false,
+    "子分类": "经营与建造",
+    "releases_url": "https://github.com/bvschaik/julius/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_filename_regex": "^julius\\-\\d+(?:[.-]\\d+)*\\-windows\\.zip$",
+    "use_download_filename": true,
+    "windows_installer": false
+  },
+  {
+    "id": "widelands",
+    "简介": "Widelands（开源即时战略）",
+    "分类": "游戏",
+    "enabled": false,
+    "repo_path": "widelands/widelands",
+    "run_installer": false,
+    "子分类": "策略",
+    "releases_url": "https://github.com/widelands/widelands/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".exe"
+    ],
+    "installer_filename_regex": "^Widelands\\-\\d+(?:[.-]\\d+)*\\-x64\\.exe$",
+    "use_download_filename": true,
+    "windows_installer": false
+  },
+  {
+    "id": "unciv",
+    "简介": "Unciv（回合制文明建设）",
+    "分类": "游戏",
+    "enabled": false,
+    "repo_path": "yairm210/Unciv",
+    "run_installer": false,
+    "子分类": "策略",
+    "releases_url": "https://github.com/yairm210/Unciv/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_filename_regex": "^Unciv\\-Windows64\\.zip$",
+    "use_download_filename": true,
+    "windows_installer": false
+  },
+  {
+    "id": "cataclysm-dda",
+    "简介": "Cataclysm DDA（回合制生存，图形版）",
+    "分类": "游戏",
+    "enabled": false,
+    "repo_path": "CleverRaven/Cataclysm-DDA",
+    "run_installer": false,
+    "子分类": "生存",
+    "releases_url": "https://github.com/CleverRaven/Cataclysm-DDA/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_filename_regex": "^cdda\\-windows\\-with\\-graphics\\-x64\\-\\d+(?:[.-]\\d+)*\\.zip$",
+    "use_download_filename": true,
+    "windows_installer": false
+  },
+  {
+    "id": "mindustry",
+    "简介": "Mindustry（自动化生产与塔防，桌面 JAR 需要 Java）",
+    "分类": "游戏",
+    "enabled": false,
+    "repo_path": "Anuken/Mindustry",
+    "run_installer": false,
+    "子分类": "策略",
+    "releases_url": "https://github.com/Anuken/Mindustry/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".jar"
+    ],
+    "installer_filename_regex": "^Mindustry\\.jar$",
+    "use_download_filename": true,
+    "windows_installer": false
+  },
+  {
+    "id": "raze",
+    "简介": "Raze（Build 游戏引擎移植，需兼容原版数据）",
+    "分类": "游戏",
+    "enabled": false,
+    "repo_path": "ZDoom/Raze",
+    "run_installer": false,
+    "子分类": "源码移植",
+    "releases_url": "https://github.com/ZDoom/Raze/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_filename_regex": "^Raze\\-\\d+(?:[.-]\\d+)*b\\-windows\\.zip$",
+    "use_download_filename": true,
+    "windows_installer": false
+  },
+  {
+    "id": "dhewm3",
+    "简介": "dhewm3（Doom 3 引擎移植，需原版数据）",
+    "分类": "游戏",
+    "enabled": false,
+    "repo_path": "dhewm/dhewm3",
+    "run_installer": false,
+    "子分类": "源码移植",
+    "releases_url": "https://github.com/dhewm/dhewm3/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_filename_regex": "^dhewm3\\-\\d+(?:[.-]\\d+)*_win32\\.zip$",
+    "use_download_filename": true,
+    "windows_installer": false
+  },
+  {
+    "id": "hypersomnia",
+    "简介": "Hypersomnia（竞技俯视射击，官方网页入口）",
+    "分类": "游戏",
+    "enabled": false,
+    "repo_path": "TeamHypersomnia/Hypersomnia",
+    "run_installer": false,
+    "子分类": "经典游戏",
+    "open_page_only": true,
+    "open_page_url": "https://hypersomnia.io/"
   }
 ]

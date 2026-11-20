@@ -26,5 +26,39 @@
       "发布标签": "4.6.1",
       "发布日期": "2026-10-22"
     }
+  },
+  {
+    "id": "pushtv-arm64",
+    "简介": "PushTV（ARM64）",
+    "分类": "应用管理",
+    "enabled": false,
+    "repo_path": "ZhhHugoChang/PushTV",
+    "releases_url": "https://github.com/ZhhHugoChang/PushTV/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_filename_regex": "^PushTV_v\\d+(?:\\.\\d+)+_release_arm64\\-v8a\\.apk$",
+    "use_download_filename": true,
+    "windows_installer": false,
+    "run_installer": false
+  },
+  {
+    "id": "pushtv-armv7",
+    "简介": "PushTV（ARMv7）",
+    "分类": "应用管理",
+    "enabled": false,
+    "repo_path": "ZhhHugoChang/PushTV",
+    "releases_url": "https://github.com/ZhhHugoChang/PushTV/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_filename_regex": "^PushTV_v\\d+(?:\\.\\d+)+_release_armeabi\\-v7a\\.apk$",
+    "use_download_filename": true,
+    "windows_installer": false,
+    "run_installer": false
   }
 ]

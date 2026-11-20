@@ -96,27 +96,14 @@
   },
   {
     "id": "rustdesk_server",
-    "简介": "RustDesk Server（hbbs/hbbr）",
+    "repo_path": "rustdesk/rustdesk-server",
+    "简介": "RustDesk Server（官方服务端，无原生 macOS 发行包）",
     "分类": "远程与协作",
+    "子分类": "远程桌面服务端",
     "enabled": false,
-    "prefer_api_assets": true,
-    "version_tag_as_on_github": true,
-    "windows_installer": false,
-    "process_name": "",
-    "kill_before_install": false,
     "run_installer": false,
-    "use_download_filename": true,
-    "href_exclude_substrings": [
-      "client",
-      "android",
-      "ios"
-    ],
-    "installer_markers_match_all": true,
-    "installer_markers": [
-      "rustdesk-server"
-    ],
-    "releases_url": "https://bgithub.xyz/rustdesk/rustdesk-server/releases",
-    "repo_path": "rustdesk/rustdesk-server"
+    "open_page_only": true,
+    "open_page_url": "https://github.com/rustdesk/rustdesk-server#readme"
   },
   {
     "id": "sunlogin",
@@ -574,5 +561,31 @@
       "发布标签": "v12.4.12",
       "发布日期": "2026-11-12"
     }
+  },
+  {
+    "id": "netease-uu-remote",
+    "简介": "网易 UU 远程（官方 · macOS）",
+    "分类": "远程与协作",
+    "enabled": false,
+    "run_installer": false,
+    "aliases": [
+      "UU远程",
+      "UU 远程",
+      "UU Remote"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://uuyc.163.com/download/",
+    "releases_url": "https://uuyc.163.com/download/"
+  },
+  {
+    "id": "rustdesk-api-lejianwen",
+    "repo_path": "lejianwen/rustdesk-api",
+    "简介": "RustDesk API（社区 Web 管理端，查看容器部署）",
+    "分类": "远程与协作",
+    "子分类": "远程桌面服务端",
+    "enabled": false,
+    "run_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/lejianwen/rustdesk-api#readme"
   }
 ]

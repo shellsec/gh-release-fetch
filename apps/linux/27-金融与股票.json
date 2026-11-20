@@ -416,5 +416,16 @@
     ],
     "releases_url": "https://bgithub.xyz/1zilc/fishing-funds/releases",
     "repo_path": "1zilc/fishing-funds"
+  },
+  {
+    "id": "daily-stock-analysis",
+    "简介": "Daily Stock Analysis（行情聚合与研究报告）",
+    "分类": "金融与股票",
+    "enabled": false,
+    "repo_path": "ZhuLinsen/daily_stock_analysis",
+    "run_installer": false,
+    "子分类": "行情与研究",
+    "open_page_only": true,
+    "open_page_url": "https://github.com/ZhuLinsen/daily_stock_analysis#readme"
   }
 ]

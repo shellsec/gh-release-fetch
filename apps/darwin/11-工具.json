@@ -1331,5 +1331,224 @@
     "aliases": [
       "Kensaku"
     ]
+  },
+  {
+    "id": "filee-arm64",
+    "简介": "Filee（文件转换 · Apple Silicon）",
+    "分类": "工具",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "KnifeLemon/Filee",
+    "releases_url": "https://github.com/KnifeLemon/Filee/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "installer_filename_regex": "^Filee\\-\\d+(?:\\.\\d+)+\\-osx\\-arm64\\.dmg$",
+    "use_download_filename": true,
+    "windows_installer": false
+  },
+  {
+    "id": "filee-x64",
+    "简介": "Filee（文件转换 · Intel Mac）",
+    "分类": "工具",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "KnifeLemon/Filee",
+    "releases_url": "https://github.com/KnifeLemon/Filee/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "installer_filename_regex": "^Filee\\-\\d+(?:\\.\\d+)+\\-osx\\-x64\\.dmg$",
+    "use_download_filename": true,
+    "windows_installer": false
+  },
+  {
+    "id": "ouch-arm64",
+    "简介": "Ouch（压缩与解压命令行工具 · Rust） · arm64",
+    "分类": "工具",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "repo_path": "ouch-org/ouch",
+    "releases_url": "https://github.com/ouch-org/ouch/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "installer_filename_regex": "^ouch\\-aarch64\\-apple\\-darwin\\.tar\\.gz$",
+    "use_download_filename": true,
+    "aliases": [
+      "ouch",
+      "Rust",
+      "ouch"
+    ],
+    "_核查": {
+      "日期": "2026-11-18",
+      "来源": "https://github.com/ouch-org/ouch/releases/tag/0.8.3",
+      "发布标签": "0.8.3",
+      "发布日期": "2026-09-13",
+      "附件": "ouch-aarch64-apple-darwin.tar.gz"
+    },
+    "使用说明": "命令行工具，解压后在终端使用，具体参数见上游文档。"
+  },
+  {
+    "id": "ouch-x64",
+    "简介": "Ouch（压缩与解压命令行工具 · Rust） · x64",
+    "分类": "工具",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "repo_path": "ouch-org/ouch",
+    "releases_url": "https://github.com/ouch-org/ouch/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "installer_filename_regex": "^ouch\\-x86_64\\-apple\\-darwin\\.tar\\.gz$",
+    "use_download_filename": true,
+    "aliases": [
+      "ouch",
+      "Rust",
+      "ouch"
+    ],
+    "_核查": {
+      "日期": "2026-11-18",
+      "来源": "https://github.com/ouch-org/ouch/releases/tag/0.8.3",
+      "发布标签": "0.8.3",
+      "发布日期": "2026-09-13",
+      "附件": "ouch-x86_64-apple-darwin.tar.gz"
+    },
+    "使用说明": "命令行工具，解压后在终端使用，具体参数见上游文档。"
+  },
+  {
+    "id": "keel-arm64",
+    "简介": "Keel（图形文件管理器 · Rust） · arm64",
+    "分类": "工具",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "repo_path": "Runitupshawty/keel",
+    "releases_url": "https://github.com/Runitupshawty/keel/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "installer_filename_regex": "^keel\\-v\\d+(?:\\.\\d+)+\\-macos\\-arm64\\.tar\\.gz$",
+    "use_download_filename": true,
+    "aliases": [
+      "keel",
+      "Rust",
+      "keel"
+    ],
+    "_核查": {
+      "日期": "2026-11-18",
+      "来源": "https://github.com/Runitupshawty/keel/releases/tag/v0.22.1",
+      "发布标签": "v0.22.1",
+      "发布日期": "2026-10-12",
+      "附件": "keel-v0.22.1-macos-arm64.tar.gz"
+    }
+  },
+  {
+    "id": "keel-x64",
+    "简介": "Keel（图形文件管理器 · Rust） · x64",
+    "分类": "工具",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "repo_path": "Runitupshawty/keel",
+    "releases_url": "https://github.com/Runitupshawty/keel/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "installer_filename_regex": "^keel\\-v\\d+(?:\\.\\d+)+\\-macos\\-x64\\.tar\\.gz$",
+    "use_download_filename": true,
+    "aliases": [
+      "keel",
+      "Rust",
+      "keel"
+    ],
+    "_核查": {
+      "日期": "2026-11-18",
+      "来源": "https://github.com/Runitupshawty/keel/releases/tag/v0.22.1",
+      "发布标签": "v0.22.1",
+      "发布日期": "2026-10-12",
+      "附件": "keel-v0.22.1-macos-x64.tar.gz"
+    }
+  },
+  {
+    "id": "mdldm-maitian",
+    "简介": "麦田（多平台内容分发、数据复盘与飞书通知；macOS，需要 Node.js 22.5+ 和 Chrome）",
+    "分类": "工具",
+    "enabled": false,
+    "repo_path": "CzzzzzzJ/mdldm-maitian",
+    "open_page_only": true,
+    "open_page_url": "https://github.com/CzzzzzzJ/mdldm-maitian#一行装好",
+    "run_installer": false,
+    "aliases": [
+      "麦当",
+      "麦田",
+      "自媒体",
+      "视频分发",
+      "运营复盘"
+    ]
+  },
+  {
+    "id": "wx-cli",
+    "简介": "wx-cli（微信本地聊天记录查询 CLI，附 Agent Skill · Apple Silicon）",
+    "分类": "工具",
+    "enabled": false,
+    "repo_path": "pandorafuture/wx-cli",
+    "open_page_only": true,
+    "open_page_url": "https://github.com/pandorafuture/wx-cli",
+    "run_installer": false,
+    "aliases": [
+      "wx-cli",
+      "微信聊天记录",
+      "微信消息搜索",
+      "WeChat CLI",
+      "微信 Agent Skill"
+    ]
+  },
+  {
+    "id": "qiuchenly-app-store",
+    "简介": "QiuChenly App Store（第三方 Mac 应用目录文档）",
+    "分类": "工具",
+    "enabled": false,
+    "open_page_url": "https://qiuchenlyopensource.github.io/Documentaions/",
+    "run_installer": false,
+    "aliases": [
+      "QiuChenly",
+      "Mac 应用管理"
+    ],
+    "open_page_only": true
+  },
+  {
+    "id": "openmtp",
+    "简介": "OpenMTP（Mac 与 Android USB 文件互传 · Apple Silicon DMG）",
+    "分类": "工具",
+    "repo_path": "ganeshrvel/openmtp",
+    "releases_url": "https://github.com/ganeshrvel/openmtp/releases",
+    "prefer_api_assets": true,
+    "use_download_filename": true,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "installer_filename_regex": "^openmtp-\\d+(?:\\.\\d+)+-mac-arm64\\.dmg$",
+    "aliases": [
+      "OpenMTP",
+      "MTP",
+      "USB 互传",
+      "安卓传文件"
+    ],
+    "run_installer": false
   }
 ]

@@ -328,5 +328,36 @@
     "save_name": "ente-photos.dmg",
     "releases_url": "https://bgithub.xyz/ente-io/photos-desktop/releases",
     "repo_path": "ente-io/photos-desktop"
+  },
+  {
+    "id": "final2x",
+    "简介": "Final2x（Apple-Silicon）",
+    "分类": "多媒体与设计",
+    "enabled": false,
+    "repo_path": "Tohrusky/Final2x",
+    "releases_url": "https://github.com/Tohrusky/Final2x/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "installer_filename_regex": "^Final2x\\-macos\\-arm64\\-dmg\\.dmg$",
+    "use_download_filename": true,
+    "windows_installer": false,
+    "run_installer": false
+  },
+  {
+    "id": "cleanshot-x",
+    "简介": "CleanShot X（截图、标注与录屏）",
+    "分类": "多媒体与设计",
+    "enabled": false,
+    "open_page_url": "https://cleanshot.com/",
+    "run_installer": false,
+    "aliases": [
+      "CleanShot",
+      "长截图",
+      "录屏"
+    ],
+    "open_page_only": true
   }
 ]

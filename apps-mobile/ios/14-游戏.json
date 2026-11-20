@@ -34,5 +34,22 @@
     "kill_before_install": false,
     "windows_installer": false,
     "process_name": ""
+  },
+  {
+    "id": "s2arm",
+    "简介": "S2Arm（iOS / iPadOS 18+ · 通过电脑构建与安装）",
+    "分类": "游戏",
+    "子分类": "静态重编译",
+    "enabled": false,
+    "run_installer": false,
+    "aliases": [
+      "S2Arm",
+      "Switch 重编译"
+    ],
+    "repo_path": "jhaizhou-ops/S2Arm",
+    "使用说明": "需自备游戏和密钥。iPhone / iPad 版按上游说明通过电脑构建、签名和安装。",
+    "open_page_only": true,
+    "open_page_url": "https://github.com/jhaizhou-ops/S2Arm",
+    "releases_url": "https://github.com/jhaizhou-ops/S2Arm"
   }
 ]

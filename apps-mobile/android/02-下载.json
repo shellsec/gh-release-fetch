@@ -155,5 +155,29 @@
     "kill_before_install": false,
     "windows_installer": false,
     "process_name": ""
+  },
+  {
+    "id": "yunx-android",
+    "简介": "云析 YunX（网盘分享链接解析与视频下载 · Android）",
+    "分类": "下载",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "CYQawa/YunX",
+    "aliases": [
+      "云析",
+      "Android 云析",
+      "YunX",
+      "网盘解析"
+    ],
+    "releases_url": "https://github.com/CYQawa/YunX/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_filename_regex": "^YunX_release_\\d+(?:\\.\\d+)+\\.apk$",
+    "use_download_filename": true,
+    "windows_installer": false,
+    "使用说明": "支持夸克、UC、迅雷、百度、139、123 云盘等分享链接。支持 WebView 登录、剪贴板链接识别、分片并发下载和断点续传。"
   }
 ]

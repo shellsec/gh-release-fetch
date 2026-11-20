@@ -1,0 +1,76 @@
+[
+  {
+    "id": "gearboy",
+    "简介": "Gearboy（Game Boy / Game Boy Color）",
+    "分类": "模拟器",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "repo_path": "drhelius/Gearboy",
+    "releases_url": "https://github.com/drhelius/Gearboy/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_filename_regex": "^Gearboy\\-\\d+(?:\\.\\d+)+\\-desktop\\-windows\\-x64\\.zip$"
+  },
+  {
+    "id": "gearsystem",
+    "简介": "Gearsystem（Master System / Game Gear / SG-1000）",
+    "分类": "模拟器",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "repo_path": "drhelius/Gearsystem",
+    "releases_url": "https://github.com/drhelius/Gearsystem/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_filename_regex": "^Gearsystem\\-\\d+(?:\\.\\d+)+\\-desktop\\-windows\\-x64\\.zip$"
+  },
+  {
+    "id": "apkstart-portable",
+    "简介": "ApkStart（安卓应用运行器 · Windows x64 轻量便携版 · 首次需部署运行时）",
+    "分类": "模拟器",
+    "enabled": false,
+    "repo_path": "RoutineMiku/apkstart",
+    "releases_url": "https://github.com/RoutineMiku/apkstart/releases/latest",
+    "aliases": [
+      "apkstart"
+    ],
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_filename_regex": "^ApkStart\\-v\\d+(?:\\.\\d+)+\\-win64\\-portable\\.zip$",
+    "use_download_filename": true,
+    "windows_installer": false,
+    "run_installer": false
+  },
+  {
+    "id": "apkstart-setup",
+    "简介": "ApkStart（安卓应用运行器 · Windows 安装版）",
+    "分类": "模拟器",
+    "enabled": false,
+    "repo_path": "RoutineMiku/apkstart",
+    "releases_url": "https://github.com/RoutineMiku/apkstart/releases/latest",
+    "aliases": [
+      "apkstart"
+    ],
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".exe"
+    ],
+    "installer_filename_regex": "^ApkStart\\-\\d+(?:\\.\\d+)+\\-Setup\\.exe$",
+    "use_download_filename": true,
+    "windows_installer": false,
+    "run_installer": false
+  }
+]

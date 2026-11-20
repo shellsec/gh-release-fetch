@@ -212,7 +212,15 @@
     "kill_before_install": true,
     "run_installer": true,
     "version_tag_as_on_github": true,
-    "url_hint": "vlc"
+    "url_hint": "vlc",
+    "aliases": [
+      "IPTV",
+      "M3U",
+      "M3U8",
+      "直播播放器"
+    ],
+    "子分类": "IPTV 播放工具",
+    "使用说明": "播放 IPTV 时需自行导入直播源或播放列表。"
   },
   {
     "id": "audacity",
@@ -1439,5 +1447,51 @@
     ],
     "releases_url": "https://bgithub.xyz/qier222/YesPlayMusic/releases",
     "repo_path": "qier222/YesPlayMusic"
+  },
+  {
+    "id": "moneyprinterturbo",
+    "分类": "多媒体",
+    "子分类": "AI 视频",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "harry0703/MoneyPrinterTurbo",
+    "aliases": [
+      "MoneyPrinterTurbo",
+      "AI 短视频",
+      "视频生成",
+      "自媒体"
+    ],
+    "简介": "MoneyPrinterTurbo（AI 短视频生成、配音和字幕 · Windows 便携包）",
+    "releases_url": "https://github.com/harry0703/MoneyPrinterTurbo/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".7z"
+    ],
+    "installer_filename_regex": "^MoneyPrinterTurbo-Portable-Windows-\\d+(?:\\.\\d+)+\\.7z$",
+    "use_download_filename": true,
+    "windows_installer": false
+  },
+  {
+    "id": "boxplayer-x64",
+    "简介": "BoxPlayer（网盘与媒体服务器播放器 · x64）",
+    "分类": "多媒体",
+    "enabled": false,
+    "repo_path": "gaozhangmin/boxplayer",
+    "run_installer": false,
+    "releases_url": "https://github.com/gaozhangmin/boxplayer/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".exe"
+    ],
+    "installer_filename_regex": "^boxplayer-\\d+(?:\\.\\d+)+-win-x64\\.exe$",
+    "use_download_filename": true,
+    "windows_installer": false,
+    "aliases": [
+      "BoxPlayer",
+      "媒体播放器",
+      "网盘播放器"
+    ]
   }
 ]

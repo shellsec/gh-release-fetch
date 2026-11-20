@@ -310,7 +310,7 @@
   },
   {
     "id": "copyparty",
-    "简介": "copyparty（文件共享 Web UI）",
+    "简介": "copyparty（文件共享 Web UI · Windows x64 EXE）",
     "分类": "局域网文件共享",
     "enabled": false,
     "prefer_api_assets": true,
@@ -334,8 +334,13 @@
       ".md",
       "checksum"
     ],
-    "releases_url": "https://bgithub.xyz/9001/copyparty/releases",
-    "repo_path": "9001/copyparty"
+    "releases_url": "https://github.com/9001/copyparty/releases/latest",
+    "repo_path": "9001/copyparty",
+    "fixed_download_url": "https://github.com/9001/copyparty/releases/latest/download/copyparty.exe",
+    "installer_extensions": [
+      ".exe"
+    ],
+    "installer_filename_regex": "^copyparty\\.exe$"
   },
   {
     "id": "hfs",
@@ -556,5 +561,20 @@
       "localsend",
       "局域网传文件"
     ]
+  },
+  {
+    "id": "pairdrop",
+    "简介": "PairDrop（浏览器跨设备文件互传）",
+    "分类": "局域网文件共享",
+    "enabled": false,
+    "repo_path": "schlagmichdoch/PairDrop",
+    "open_page_only": true,
+    "open_page_url": "https://pairdrop.net/",
+    "aliases": [
+      "PairDrop",
+      "网页互传",
+      "局域网传文件"
+    ],
+    "run_installer": false
   }
 ]

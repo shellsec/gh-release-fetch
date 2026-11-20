@@ -877,10 +877,16 @@
     "aliases": [
       "iina",
       "IINA",
-      "播放器"
+      "播放器",
+      "IPTV",
+      "M3U",
+      "M3U8",
+      "直播播放器"
     ],
     "releases_url": "https://bgithub.xyz/iina/iina/releases",
-    "repo_path": "iina/iina"
+    "repo_path": "iina/iina",
+    "子分类": "IPTV 播放工具",
+    "使用说明": "播放 IPTV 时需自行导入直播源或播放列表。"
   },
   {
     "id": "navidrome",
@@ -1386,5 +1392,144 @@
       "发布标签": "2.4.4",
       "发布日期": "2026-11-12"
     }
+  },
+  {
+    "id": "riplay",
+    "简介": "RiPlay（开源音乐播放器 · Apple Silicon）",
+    "repo_path": "fast4x/RiPlay",
+    "releases_url": "https://github.com/fast4x/RiPlay/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "installer_filename_regex": "^RiPlay\\-v\\d+(?:\\.\\d+)+\\-macOS\\-arm64\\.dmg$",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "save_subdir": "riplay",
+    "_核查": {
+      "日期": "2026-11-14",
+      "来源": "https://github.com/fast4x/RiPlay/releases/tag/v0.8.6",
+      "状态": "release"
+    },
+    "分类": "音视频",
+    "enabled": false,
+    "run_installer": false
+  },
+  {
+    "id": "folia-major-arm64",
+    "简介": "Folia Major（佛里音乐播放器 · arm64）",
+    "分类": "音视频",
+    "enabled": false,
+    "repo_path": "chthollyphile/folia-major",
+    "releases_url": "https://github.com/chthollyphile/folia-major/releases/latest",
+    "aliases": [
+      "佛里",
+      "Folia",
+      "Folia Major",
+      "folia-majar"
+    ],
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "installer_filename_regex": "^Folia\\-\\d+(?:\\.\\d+)+\\-arm64\\.dmg$",
+    "use_download_filename": true,
+    "windows_installer": false,
+    "run_installer": false
+  },
+  {
+    "id": "folia-major-x64",
+    "简介": "Folia Major（佛里音乐播放器 · x64）",
+    "分类": "音视频",
+    "enabled": false,
+    "repo_path": "chthollyphile/folia-major",
+    "releases_url": "https://github.com/chthollyphile/folia-major/releases/latest",
+    "aliases": [
+      "佛里",
+      "Folia",
+      "Folia Major",
+      "folia-majar"
+    ],
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "installer_filename_regex": "^Folia\\-\\d+(?:\\.\\d+)+\\-x64\\.dmg$",
+    "use_download_filename": true,
+    "windows_installer": false,
+    "run_installer": false
+  },
+  {
+    "id": "tinyplay-arm64",
+    "简介": "TinyPlay（Apple-Silicon）",
+    "分类": "音视频",
+    "enabled": false,
+    "repo_path": "YangHanqing/tinyplay",
+    "releases_url": "https://github.com/YangHanqing/tinyplay/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "installer_filename_regex": "^TinyPlay\\-macos\\-arm64\\.dmg$",
+    "use_download_filename": true,
+    "windows_installer": false,
+    "run_installer": false
+  },
+  {
+    "id": "tinyplay-intel",
+    "简介": "TinyPlay（Intel）",
+    "分类": "音视频",
+    "enabled": false,
+    "repo_path": "YangHanqing/tinyplay",
+    "releases_url": "https://github.com/YangHanqing/tinyplay/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "installer_filename_regex": "^TinyPlay\\-macos\\-intel\\.dmg$",
+    "use_download_filename": true,
+    "windows_installer": false,
+    "run_installer": false
+  },
+  {
+    "id": "kodi",
+    "简介": "Kodi（媒体库与 IPTV · macOS）",
+    "分类": "音视频",
+    "子分类": "IPTV 播放工具",
+    "aliases": [
+      "IPTV",
+      "M3U",
+      "M3U8",
+      "直播播放器"
+    ],
+    "enabled": false,
+    "run_installer": false,
+    "使用说明": "播放 IPTV 时需自行导入直播源或播放列表。",
+    "open_page_only": true,
+    "open_page_url": "https://kodi.tv/download/macos/",
+    "releases_url": "https://kodi.tv/download/macos/"
+  },
+  {
+    "id": "aptv",
+    "简介": "APTV（IPTV 播放器 · Mac App Store）",
+    "分类": "音视频",
+    "子分类": "IPTV 播放工具",
+    "aliases": [
+      "IPTV",
+      "M3U",
+      "M3U8",
+      "直播播放器"
+    ],
+    "enabled": false,
+    "run_installer": false,
+    "使用说明": "播放 IPTV 时需自行导入直播源或播放列表。",
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/cn/app/id1630403500?platform=mac",
+    "releases_url": "https://apps.apple.com/cn/app/id1630403500?platform=mac"
   }
 ]

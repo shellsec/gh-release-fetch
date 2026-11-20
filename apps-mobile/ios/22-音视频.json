@@ -221,5 +221,164 @@
       "上游发布标签": "1.7.0",
       "上游发布日期": "2026-11-11"
     }
+  },
+  {
+    "id": "streamyfin_ios",
+    "简介": "Streamyfin（Jellyfin 客户端 · iOS App Store）",
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id6593660679",
+    "releases_url": "https://apps.apple.com/app/id6593660679",
+    "aliases": [
+      "Streamyfin",
+      "Jellyfin"
+    ],
+    "分类": "音视频",
+    "enabled": false,
+    "run_installer": false
+  },
+  {
+    "id": "kodi",
+    "简介": "Kodi（媒体库与 IPTV · iOS）",
+    "分类": "音视频",
+    "子分类": "IPTV 播放工具",
+    "aliases": [
+      "IPTV",
+      "M3U",
+      "M3U8",
+      "直播播放器"
+    ],
+    "enabled": false,
+    "run_installer": false,
+    "使用说明": "播放 IPTV 时需自行导入直播源或播放列表。",
+    "open_page_only": true,
+    "open_page_url": "https://kodi.tv/download/ios/",
+    "releases_url": "https://kodi.tv/download/ios/"
+  },
+  {
+    "id": "vlc_ios",
+    "简介": "VLC（iPhone / iPad / Apple TV）",
+    "分类": "音视频",
+    "子分类": "IPTV 播放工具",
+    "aliases": [
+      "IPTV",
+      "M3U",
+      "M3U8",
+      "直播播放器"
+    ],
+    "enabled": false,
+    "run_installer": false,
+    "使用说明": "播放 IPTV 时需自行导入直播源或播放列表。",
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/cn/app/id650377962",
+    "releases_url": "https://apps.apple.com/cn/app/id650377962"
+  },
+  {
+    "id": "aptv",
+    "简介": "APTV（iPhone / iPad / Apple TV / Apple Watch）",
+    "分类": "音视频",
+    "子分类": "IPTV 播放工具",
+    "aliases": [
+      "IPTV",
+      "M3U",
+      "M3U8",
+      "直播播放器"
+    ],
+    "enabled": false,
+    "run_installer": false,
+    "使用说明": "播放 IPTV 时需自行导入直播源或播放列表。",
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/cn/app/id1630403500",
+    "releases_url": "https://apps.apple.com/cn/app/id1630403500"
+  },
+  {
+    "id": "ntplayer",
+    "简介": "ntPlayer（IPTV · iPhone / iPad）",
+    "分类": "音视频",
+    "子分类": "IPTV 播放工具",
+    "aliases": [
+      "IPTV",
+      "M3U",
+      "M3U8",
+      "直播播放器"
+    ],
+    "enabled": false,
+    "run_installer": false,
+    "使用说明": "播放 IPTV 时需自行导入直播源或播放列表。",
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/cn/app/id1613758141",
+    "releases_url": "https://apps.apple.com/cn/app/id1613758141"
+  },
+  {
+    "id": "nplayer",
+    "简介": "nPlayer（付费播放器 · iPhone / iPad）",
+    "分类": "音视频",
+    "子分类": "IPTV 播放工具",
+    "aliases": [
+      "IPTV",
+      "M3U",
+      "M3U8",
+      "直播播放器"
+    ],
+    "enabled": false,
+    "run_installer": false,
+    "使用说明": "播放 IPTV 时需自行导入直播源或播放列表。",
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/cn/app/id1116905928",
+    "releases_url": "https://apps.apple.com/cn/app/id1116905928"
+  },
+  {
+    "id": "cloud-stream-iptv",
+    "简介": "Cloud Stream IPTV Player（iPhone / iPad / Apple TV）",
+    "分类": "音视频",
+    "子分类": "IPTV 播放工具",
+    "aliases": [
+      "IPTV",
+      "M3U",
+      "M3U8",
+      "直播播放器"
+    ],
+    "enabled": false,
+    "run_installer": false,
+    "使用说明": "播放 IPTV 时需自行导入直播源或播放列表。",
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/cn/app/id1138002135",
+    "releases_url": "https://apps.apple.com/cn/app/id1138002135"
+  },
+  {
+    "id": "gotv-iptv",
+    "简介": "GoTV（M3U IPTV 播放器）",
+    "分类": "音视频",
+    "子分类": "IPTV 播放工具",
+    "aliases": [
+      "IPTV",
+      "M3U",
+      "M3U8",
+      "直播播放器"
+    ],
+    "enabled": false,
+    "run_installer": false,
+    "使用说明": "播放 IPTV 时需自行导入直播源或播放列表。",
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/cn/app/id1271283728",
+    "releases_url": "https://apps.apple.com/cn/app/id1271283728"
+  },
+  {
+    "id": "subcast-mobile",
+    "简介": "Subcast Mobile（海外播客与 YouTube 双语字幕、精读和 AI 问答 · 源码）",
+    "分类": "音视频",
+    "enabled": false,
+    "repo_path": "joeseesun/subcast-mobile",
+    "open_page_only": true,
+    "open_page_url": "https://github.com/joeseesun/subcast-mobile",
+    "run_installer": false,
+    "aliases": [
+      "Subcast",
+      "Subcast Mobile",
+      "双语字幕",
+      "海外播客",
+      "播客精读",
+      "YouTube 字幕",
+      "AI 问答"
+    ]
   }
 ]

@@ -257,5 +257,22 @@
     "kill_before_install": false,
     "windows_installer": false,
     "process_name": ""
+  },
+  {
+    "id": "qzone-restore-archive",
+    "简介": "QQ 空间恢复与归档（Android APK）",
+    "分类": "备份",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "xiaosu19/QQ-Zone-Restore-Archive",
+    "releases_url": "https://github.com/xiaosu19/QQ-Zone-Restore-Archive/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_filename_regex": "^app\\-universal\\-release\\.apk$",
+    "use_download_filename": true,
+    "windows_installer": false
   }
 ]

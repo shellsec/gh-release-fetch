@@ -39,8 +39,8 @@
     "enabled": false,
     "prefer_api_assets": true,
     "version_tag_as_on_github": true,
-    "releases_url": "https://bgithub.xyz/sst/opencode/releases",
-    "repo_path": "sst/opencode",
+    "releases_url": "https://github.com/anomalyco/opencode/releases/latest",
+    "repo_path": "anomalyco/opencode",
     "installer_markers_match_all": true,
     "installer_markers": [
       "opencode-desktop-linux-x86_64",
@@ -67,7 +67,8 @@
     "save_name": "opencode-desktop-linux-x86_64.AppImage",
     "process_name": "",
     "kill_before_install": false,
-    "run_installer": false
+    "run_installer": false,
+    "installer_filename_regex": "^opencode\\-desktop\\-linux\\-x86_64\\.AppImage$"
   },
   {
     "id": "goose_ai",
@@ -4036,5 +4037,299 @@
     "installer_filename_regex": "^textgen-portable-[\\d.]+-linux-cpu\\.tar\\.gz$",
     "use_download_filename": true,
     "run_installer": false
+  },
+  {
+    "id": "cosyvoice",
+    "简介": "CosyVoice（文本转语音与多语种配音）",
+    "分类": "AI",
+    "enabled": false,
+    "repo_path": "QwenAudio/CosyVoice",
+    "run_installer": false,
+    "子分类": "语音与音频",
+    "open_page_only": true,
+    "open_page_url": "https://github.com/QwenAudio/CosyVoice#readme"
+  },
+  {
+    "id": "librosa",
+    "简介": "librosa（Python 音频、节拍和频谱分析）",
+    "分类": "AI",
+    "enabled": false,
+    "repo_path": "librosa/librosa",
+    "run_installer": false,
+    "子分类": "语音与音频",
+    "open_page_only": true,
+    "open_page_url": "https://github.com/librosa/librosa#readme"
+  },
+  {
+    "id": "whisperx",
+    "简介": "WhisperX（语音转写、词级对齐与说话人分离）",
+    "分类": "AI",
+    "enabled": false,
+    "repo_path": "m-bain/whisperX",
+    "run_installer": false,
+    "子分类": "语音与音频",
+    "open_page_only": true,
+    "open_page_url": "https://github.com/m-bain/whisperX#readme"
+  },
+  {
+    "id": "micrograd",
+    "简介": "micrograd（标量自动微分与神经网络入门）",
+    "分类": "AI",
+    "enabled": false,
+    "repo_path": "karpathy/micrograd",
+    "run_installer": false,
+    "子分类": "AI 学习",
+    "open_page_only": true,
+    "open_page_url": "https://github.com/karpathy/micrograd#readme"
+  },
+  {
+    "id": "nn-zero-to-hero",
+    "简介": "Neural Networks Zero to Hero（神经网络课程与笔记本）",
+    "分类": "AI",
+    "enabled": false,
+    "repo_path": "karpathy/nn-zero-to-hero",
+    "run_installer": false,
+    "子分类": "AI 学习",
+    "open_page_only": true,
+    "open_page_url": "https://github.com/karpathy/nn-zero-to-hero#readme"
+  },
+  {
+    "id": "minbpe",
+    "简介": "minbpe（字节级 BPE 分词教学）",
+    "分类": "AI",
+    "enabled": false,
+    "repo_path": "karpathy/minbpe",
+    "run_installer": false,
+    "子分类": "AI 学习",
+    "open_page_only": true,
+    "open_page_url": "https://github.com/karpathy/minbpe#readme"
+  },
+  {
+    "id": "nanogpt",
+    "简介": "nanoGPT（小型 GPT 训练代码）",
+    "分类": "AI",
+    "enabled": false,
+    "repo_path": "karpathy/nanoGPT",
+    "run_installer": false,
+    "子分类": "AI 学习",
+    "open_page_only": true,
+    "open_page_url": "https://github.com/karpathy/nanoGPT#readme"
+  },
+  {
+    "id": "llm-c",
+    "简介": "llm.c（C 与 CUDA 语言模型训练实现）",
+    "分类": "AI",
+    "enabled": false,
+    "repo_path": "karpathy/llm.c",
+    "run_installer": false,
+    "子分类": "AI 学习",
+    "open_page_only": true,
+    "open_page_url": "https://github.com/karpathy/llm.c#readme"
+  },
+  {
+    "id": "nanochat",
+    "简介": "nanochat（分词、训练、评估和推理的学习项目）",
+    "分类": "AI",
+    "enabled": false,
+    "repo_path": "karpathy/nanochat",
+    "run_installer": false,
+    "子分类": "AI 学习",
+    "open_page_only": true,
+    "open_page_url": "https://github.com/karpathy/nanochat#readme"
+  },
+  {
+    "id": "autoresearch",
+    "简介": "autoresearch（单 GPU nanochat 训练实验框架）",
+    "分类": "AI",
+    "enabled": false,
+    "repo_path": "karpathy/autoresearch",
+    "run_installer": false,
+    "子分类": "AI 学习",
+    "open_page_only": true,
+    "open_page_url": "https://github.com/karpathy/autoresearch#readme"
+  },
+  {
+    "id": "openmausbot",
+    "简介": "OpenMausBot（本地多 Agent 对话工作台）",
+    "分类": "AI",
+    "enabled": false,
+    "repo_path": "milind-soni/OpenMausBot",
+    "run_installer": false,
+    "子分类": "Agent 客户端",
+    "releases_url": "https://github.com/milind-soni/OpenMausBot/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "installer_filename_regex": "^OpenMausBot\\-\\d+(?:[.-]\\d+)*\\-x86_64\\.AppImage$",
+    "use_download_filename": true,
+    "windows_installer": false
+  },
+  {
+    "id": "locmodel-linux-x64-appimage",
+    "简介": "LocModel 3.3.0（本地模型、GGUF 与图像视频生成 · Linux x64 AppImage）",
+    "分类": "AI",
+    "子分类": "本地模型",
+    "enabled": false,
+    "fixed_download_url": "https://locmodel.com/LocModel_3.3.0_amd64.AppImage",
+    "open_page_url": "https://locmodel.com/",
+    "run_installer": false,
+    "use_download_filename": true,
+    "aliases": [
+      "LocModel",
+      "本地大模型",
+      "GGUF"
+    ]
+  },
+  {
+    "id": "locmodel-linux-arm64-appimage",
+    "简介": "LocModel 3.3.0（本地模型、GGUF 与图像视频生成 · Linux ARM64 AppImage）",
+    "分类": "AI",
+    "子分类": "本地模型",
+    "enabled": false,
+    "fixed_download_url": "https://locmodel.com/LocModel_3.3.0_aarch64.AppImage",
+    "open_page_url": "https://locmodel.com/",
+    "run_installer": false,
+    "use_download_filename": true,
+    "aliases": [
+      "LocModel",
+      "本地大模型",
+      "GGUF"
+    ]
+  },
+  {
+    "id": "locmodel-linux-x64-deb",
+    "简介": "LocModel 3.3.0（本地模型、GGUF 与图像视频生成 · Linux x64 DEB）",
+    "分类": "AI",
+    "子分类": "本地模型",
+    "enabled": false,
+    "fixed_download_url": "https://locmodel.com/LocModel_3.3.0_amd64.deb",
+    "open_page_url": "https://locmodel.com/",
+    "run_installer": false,
+    "use_download_filename": true,
+    "aliases": [
+      "LocModel",
+      "本地大模型",
+      "GGUF"
+    ]
+  },
+  {
+    "id": "locmodel-linux-arm64-deb",
+    "简介": "LocModel 3.3.0（本地模型、GGUF 与图像视频生成 · Linux ARM64 DEB）",
+    "分类": "AI",
+    "子分类": "本地模型",
+    "enabled": false,
+    "fixed_download_url": "https://locmodel.com/LocModel_3.3.0_arm64.deb",
+    "open_page_url": "https://locmodel.com/",
+    "run_installer": false,
+    "use_download_filename": true,
+    "aliases": [
+      "LocModel",
+      "本地大模型",
+      "GGUF"
+    ]
+  },
+  {
+    "id": "craft-anything",
+    "简介": "Craft Anything（Rust AI 软件分析与开发工作台 · linux-x86_64.AppImage）",
+    "分类": "AI",
+    "repo_path": "storytold/craft-anything",
+    "releases_url": "https://github.com/storytold/craft-anything/releases",
+    "prefer_api_assets": true,
+    "use_download_filename": true,
+    "run_installer": false,
+    "installer_extensions": [
+      ".appimage"
+    ],
+    "installer_filename_regex": "^craft-anything-\\d+(?:\\.\\d+)+-linux\\-x86_64\\.AppImage$",
+    "aliases": [
+      "Craft Anything",
+      "CraftAnything",
+      "Rust",
+      "软件分析",
+      "AI 开发"
+    ]
+  },
+  {
+    "id": "minimax-speech",
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.minimax.io/audio",
+    "run_installer": false,
+    "aliases": [
+      "MiniMax Audio",
+      "语音合成",
+      "有声书",
+      "TTS"
+    ],
+    "简介": "MiniMax Speech（在线语音合成与配音）",
+    "分类": "AI"
+  },
+  {
+    "id": "qwen3-tts",
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/QwenLM/Qwen3-TTS",
+    "run_installer": false,
+    "aliases": [
+      "通义语音",
+      "音色设计",
+      "语音合成",
+      "声音克隆",
+      "TTS"
+    ],
+    "简介": "Qwen3-TTS（多语言语音合成与音色设计模型）",
+    "分类": "AI",
+    "repo_path": "QwenLM/Qwen3-TTS"
+  },
+  {
+    "id": "elevenlabs",
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://elevenlabs.io/",
+    "run_installer": false,
+    "aliases": [
+      "AI 配音",
+      "有声书",
+      "语音合成",
+      "TTS"
+    ],
+    "简介": "ElevenLabs（在线语音合成与旁白配音）",
+    "分类": "AI"
+  },
+  {
+    "id": "fish-speech",
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/fishaudio/fish-speech",
+    "run_installer": false,
+    "aliases": [
+      "Fish Audio",
+      "Fish Speech",
+      "声音克隆",
+      "流式语音",
+      "TTS"
+    ],
+    "简介": "Fish Audio / Fish Speech（多语言语音合成与流式生成）",
+    "分类": "AI",
+    "repo_path": "fishaudio/fish-speech"
+  },
+  {
+    "id": "vibevoice",
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/microsoft/VibeVoice",
+    "run_installer": false,
+    "aliases": [
+      "VibeVoice",
+      "微软语音",
+      "实时 TTS",
+      "ASR",
+      "长音频转写"
+    ],
+    "简介": "Microsoft VibeVoice（实时语音合成与长音频转写）",
+    "分类": "AI",
+    "repo_path": "microsoft/VibeVoice"
   }
 ]

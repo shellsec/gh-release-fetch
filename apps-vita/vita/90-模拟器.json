@@ -1,0 +1,66 @@
+[
+  {
+    "id": "mgba",
+    "简介": "mgba（GB / GBC / GBA）",
+    "分类": "模拟器",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "repo_path": "mgba-emu/mgba",
+    "releases_url": "https://github.com/mgba-emu/mgba/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".7z"
+    ],
+    "installer_filename_regex": "^mGBA\\-\\d+(?:\\.\\d+)+\\-vita\\.7z$"
+  },
+  {
+    "id": "adrenaline",
+    "简介": "Adrenaline（PSP / PS1 · Vita 自制应用）",
+    "分类": "模拟器",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "repo_path": "TheOfficialFloW/Adrenaline",
+    "releases_url": "https://github.com/TheOfficialFloW/Adrenaline/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".vpk"
+    ],
+    "installer_filename_regex": "^Adrenaline\\.vpk$"
+  },
+  {
+    "id": "daedalusx64",
+    "简介": "DaedalusX64-vitaGL（Nintendo 64 · Nightly）",
+    "分类": "模拟器",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "repo_path": "Rinnegatamante/DaedalusX64-vitaGL",
+    "releases_url": "https://github.com/Rinnegatamante/DaedalusX64-vitaGL/releases/tag/Nightly",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".vpk"
+    ],
+    "installer_filename_regex": "^DaedalusX64\\.vpk$",
+    "pinned_release_tag": "Nightly"
+  },
+  {
+    "id": "retroarch-vita",
+    "简介": "RetroArch（多机种 · Vita 需要 VPK 和数据包）",
+    "分类": "模拟器",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "open_page_only": true,
+    "open_page_url": "https://docs.libretro.com/guides/install-psv/",
+    "releases_url": "https://docs.libretro.com/guides/install-psv/"
+  }
+]

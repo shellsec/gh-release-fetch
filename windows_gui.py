@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 from contextlib import redirect_stderr, redirect_stdout
+import re
 from datetime import datetime
 from io import TextIOBase
 import json
@@ -30,14 +31,17 @@ from tools.repository_download import parse_repository
 
 ROOT = Path(repo_root(__file__))
 BASE = Path(getattr(sys, "_MEIPASS", ROOT))
-PROFILE = Path(os.environ.get("LOCALAPPDATA", Path.home() / ".local" / "share")) / "GHReleaseFetch"
+if sys.platform == "darwin":
+    PROFILE = Path.home() / "Library" / "Application Support" / "GHReleaseFetch"
+else:
+    PROFILE = Path(os.environ.get("LOCALAPPDATA", Path.home() / ".local" / "share")) / "GHReleaseFetch"
 CUSTOM = PROFILE / "apps-custom"
 if __name__ == "__main__":
     os.environ["GHRF_CATALOG_PROFILE"] = str(PROFILE)
     os.environ["GHRF_CATALOG_BASE"] = str(BASE)
     PROFILE.mkdir(parents=True, exist_ok=True)
 
-from tools.gui_tasks import execute, extract_links, release_assets
+from tools.gui_tasks import catalog_assets, execute, extract_links, release_assets
 from tools.gui_language import set_language, tr
 LABELS = {platform: label for label, _, platform, _ in CATALOGS}
 LABELS["linux_handheld"] = "Linux 掌机"
@@ -48,6 +52,9 @@ CATEGORY_ICONS = {
     "写作": "writing", "办公": "office", "办公与设计": "design", "设计": "design",
     "加密货币": "finance", "金融与股票": "finance", "可观测": "monitor",
     "网络": "network", "网络与通讯": "network", "浏览器扩展": "chrome",
+    "开发与测试": "tools", "办公与知识管理": "office", "调研与数据分析": "monitor",
+    "写作与视觉创作": "design", "视频与自媒体": "writing",
+    "增长与运营": "finance", "发现技能": "cloud",
 }
 KINDS = {"按链接识别": "", "发布附件": "release", "源码 ZIP": "source", "Git 克隆": "git"}
 STATES = {"waiting": "等待", "active": "下载中", "paused": "已暂停", "done": "完成", "failed": "失败"}
@@ -90,8 +97,17 @@ class QueueStream(TextIOBase):
         return len(value)
 
 
-def catalog():
-    official = catalog_update.active_catalog(PROFILE, BASE)
+def sidebar_groups(official):
+    try:
+        config = json.loads((official / "apps/root.json").read_text(encoding="utf-8-sig"))
+        names = catalog_update.independent_categories(config)
+    except (OSError, ValueError, AttributeError):
+        names = catalog_update.independent_categories({})
+    return {f"independent-{name}": name for name in names}
+
+
+def catalog(official, independent):
+    groups_by_category = {name: key for key, name in independent.items()}
     directories = dict.fromkeys([directory for _, directory, _, _ in CATALOGS] + ["apps-custom"])
     for directory in directories:
         source = PROFILE if directory == "apps-custom" else official
@@ -112,9 +128,13 @@ def catalog():
                         pass
                 if not (chrome or page or is_app_downloadable(app)):
                     continue
-                yield dict(platform=platform, group="custom" if directory == "apps-custom" else platform,
+                category = app.get("分类") or shard_label_from_filename(Path(path).name)
+                group = "custom" if directory == "apps-custom" else platform
+                if directory != "apps-custom":
+                    group = groups_by_category.get(category, group)
+                yield dict(platform=platform, group=group,
                            directory=directory, catalog_root=str(source), app=app, url=page, chrome=chrome,
-                           category=app.get("分类") or shard_label_from_filename(Path(path).name),
+                           category=category,
                            subcategory=app.get("子分类") or "")
                 if directory == "apps" and platform == "windows" and (chrome or app.get("chrome_source_repo")):
                     yield dict(platform=platform, group="chrome", directory=directory, app=app,
@@ -163,6 +183,7 @@ class App:
         self.downloadable_only = tk.BooleanVar()
         self.checked_only = tk.BooleanVar()
         self.catalog_status = tk.StringVar()
+        self.program_update_status = tk.StringVar()
         self.settings_path = self.state_path.with_name("settings.json")
         self.language = "zh-CN"
         self.reload_language = False
@@ -181,8 +202,10 @@ class App:
             window.after(2500, lambda: self.check_program_update(automatic=True))
 
     def load_catalog(self):
+        official = catalog_update.active_catalog(PROFILE, BASE)
+        self.independent = sidebar_groups(official)
         self.entries = {}
-        for row in catalog():
+        for row in catalog(official, self.independent):
             key = (row["group"], row["platform"], row["directory"], row["app"]["id"])
             self.entries.setdefault(key, row)
 
@@ -299,6 +322,7 @@ class App:
         ttk.Label(settings, text=tr("连接数")).pack(side="left", padx=(14, 4))
         ttk.Combobox(settings, textvariable=self.threads, values=("1", "2", "4", "8"), state="readonly", width=4).pack(side="left")
         tabs = ttk.Notebook(root)
+        ttk.Label(root, textvariable=self.program_update_status).pack(side="bottom", anchor="w")
         self.tabs = tabs
         tabs.pack(fill="both", expand=True)
         browse = ttk.Frame(tabs, padding=10)
@@ -352,7 +376,8 @@ class App:
         actions = ttk.Frame(browse)
         actions.pack(fill="x", pady=(8, 0))
         ttk.Label(actions, textvariable=self.status).pack(side="left")
-        for label, callback in ((tr("批量下载"), self.enqueue_checked), (tr("导入清单"), self.import_saved_list),
+        for label, callback in ((tr("批量下载"), self.enqueue_checked), (tr("预览附件"), self.preview_selected_asset),
+                                (tr("导入清单"), self.import_saved_list),
                                 (tr("获取仓库"), self.open_repository),
                                 (tr("打开官网 / 商店"), self.open_selected),
                                 (tr("清空勾选"), self.clear_checks), (tr("勾选当前结果"), self.check_visible)):
@@ -390,16 +415,25 @@ class App:
         tree = self.categories
         selected = (tree.selection() or ("windows",))[0]
         group = selected.partition(":")[0]
-        category = tree.item(selected, "text") if ":" in selected else ""
-        opened = {key for key in LABELS if tree.exists(key) and tree.item(key, "open")}
+        category = getattr(self, "category_names", {}).get(selected)
+        self.category_names = {}
+        labels = {**LABELS}
+        custom_label = labels.pop("custom")
+        labels.update(self.independent)
+        labels["custom"] = custom_label
+        opened = {key for key in labels if tree.exists(key) and tree.item(key, "open")}
         tree.delete(*tree.get_children())
         tree.insert("", "end", iid="all", text=tr("所有平台"), image=self.icons["all"])
-        target = group
-        for key, label in LABELS.items():
-            tree.insert("", "end", iid=key, text=tr(label), image=self.icons[key], open=key in opened)
-            categories = sorted({row["category"] for row in self.entries.values() if row["group"] == key})
+        target = group if group in labels or group == "all" else "all"
+        for key, label in labels.items():
+            icon = self.icons.get(key, self.icons[CATEGORY_ICONS.get(label, "ai" if label == "Agent Skills" else "tools")])
+            tree.insert("", "end", iid=key, text=tr(label), image=icon, open=key in opened)
+            field = "subcategory" if key in self.independent else "category"
+            categories = sorted({row[field] for row in self.entries.values()
+                                 if row["group"] == key and row[field]})
             for index, name in enumerate(categories):
                 iid = f"{key}:{index}"
+                self.category_names[iid] = name
                 icon = self.icons[CATEGORY_ICONS.get(name, "tools")]
                 tree.insert(key, "end", iid=iid, text=tr(name), image=icon)
                 if key == group and name == category:
@@ -469,11 +503,13 @@ class App:
     def render(self):
         selected = self.categories.selection()
         group, _, _ = (selected[0] if selected else "all").partition(":")
-        category = self.categories.item(selected[0], "text") if selected and ":" in selected[0] else None
+        category = self.category_names.get(selected[0]) if selected else None
+        field = "subcategory" if group in self.independent else "category"
         query = self.query.get().strip()
         self.table.delete(*self.table.get_children())
         self.visible.clear()
         rows = []
+        seen_independent = set()
         for key, row in self.entries.items():
             if self.checked_only.get() and key not in self.checked:
                 continue
@@ -481,17 +517,25 @@ class App:
                 continue
             if group != "all" and row["group"] != group or group == "all" and row["group"] == "chrome":
                 continue
-            if category and row["category"] != category:
+            if category and row[field] != category:
                 continue
             score = match_score(query, row["app"]) if query else 0
             if query and score < 40:
                 continue
+            if row["group"] in self.independent:
+                # Shared page entries are identical across desktop shards.
+                # Downloadable rows retain their platform and asset selection.
+                identity = (row["platform"] if is_app_downloadable(row["app"]) else "",
+                            json.dumps(row["app"], sort_keys=True, ensure_ascii=False))
+                if identity in seen_independent:
+                    continue
+                seen_independent.add(identity)
             rows.append((score, key, row))
         for _, key, row in sorted(rows, key=lambda item: (-item[0], item[1][-1].casefold())):
             app = row["app"]
             mode = tr("原版 CRX") if row["chrome"] else tr("Chrome 源码") if row["group"] == "chrome" else tr("下载附件") if is_app_downloadable(app) else tr("官方页面")
             iid = self.table.insert("", "end", text=self.row_title(key, row),
-                                    values=(tr(LABELS[row["platform"]]), tr(row["category"]),
+                                    values=(tr(LABELS[row["platform"]]), tr(row[field] or row["category"]),
                                             app.get("repo_path") or app["id"], mode))
             self.visible[iid] = key
         self.update_count()
@@ -579,7 +623,83 @@ class App:
                    (tr("保存到个人清单并下载"), lambda: self.library.save_rows([row], download=True))]
         if row["chrome"] or row["group"] == "chrome" or is_app_downloadable(row["app"]):
             actions.insert(0, (tr("立即下载"), lambda: self.enqueue_rows([row], priority=True)))
+        if row["group"] != "chrome" and not row["chrome"] and is_app_downloadable(row["app"]):
+            actions.insert(1, (tr("预览附件"), lambda: self.preview_catalog_asset(row)))
         return self.popup(event, actions)
+
+    def preview_selected_asset(self):
+        selected = self.table.selection()
+        if len(selected) != 1:
+            messagebox.showinfo(tr("预览附件"), tr("请单击选中一条软件记录。"), parent=self.window)
+            return
+        self.preview_catalog_asset(self.entries[self.visible[selected[0]]])
+
+    def preview_catalog_asset(self, row):
+        title = tr("预览附件")
+        if row["group"] == "chrome" or row["chrome"] or not is_app_downloadable(row["app"]):
+            messagebox.showinfo(title, tr("该条目没有可预览的软件附件。"), parent=self.window)
+            return
+        try:
+            task = self.tasks_for_rows([row])[0]
+        except (OSError, ValueError) as exc:
+            messagebox.showerror(title, str(exc), parent=self.window)
+            return
+        dialog = tk.Toplevel(self.window)
+        dialog.title(f"{title} · {task['title']}")
+        dialog.geometry("790x365")
+        dialog.transient(self.window)
+        status = ttk.Label(dialog, text=tr("正在读取发布附件…"), wraplength=740)
+        status.pack(anchor="w", padx=12, pady=10)
+
+        def load():
+            try:
+                value = catalog_assets(row["app"], row["platform"])
+            except Exception as exc:
+                value = exc
+            self.events.put(("library", ready, value))
+
+        def ready(value):
+            if not dialog.winfo_exists():
+                return
+            if isinstance(value, Exception):
+                status.config(text=str(value))
+                return
+            version, assets, default_url = value
+            status.config(text=tr("版本 {version} · {status}").format(
+                version=version, status=tr("已选中目录默认附件") if default_url else tr("没有匹配的默认附件，请手动选择。")))
+            listing = ttk.Treeview(dialog, show="headings", selectmode="browse",
+                                   columns=("name", "architecture", "type", "size"))
+            for column, label, width in (("name", "附件文件名", 410), ("architecture", "架构", 110),
+                                         ("type", "包类型", 90),
+                                         ("size", "大小", 100)):
+                listing.heading(column, text=tr(label))
+                listing.column(column, width=width, stretch=column == "name")
+            listing.pack(fill="both", expand=True, padx=12)
+            for i, asset in enumerate(assets):
+                name = asset["name"]
+                architecture = re.search(r"(?i)(?<![a-z0-9])(x86[-_]?64|amd64|x64|arm64(?:-v8a)?|aarch64|universal(?:2)?|x86|armv7|i686)(?![a-z0-9])", name)
+                package = re.search(r"(?i)\.(tar\.[^.]+|[^.]+)$", name)
+                size = asset.get("size")
+                listing.insert("", "end", iid=str(i), values=(
+                    name, architecture[0] if architecture else "—", package[1] if package else "—",
+                    f"{size / 1048576:.1f} MiB" if isinstance(size, int) else "—"))
+                if asset["browser_download_url"] == default_url:
+                    listing.selection_set(str(i))
+                    listing.see(str(i))
+
+            def confirm():
+                selection = listing.selection()
+                if selection:
+                    asset = assets[int(selection[0])]
+                    task["catalog_asset"] = dict(version=version, name=asset["name"],
+                                                 url=asset["browser_download_url"], digest=asset.get("digest"))
+                    if self.enqueue([task]):
+                        dialog.destroy()
+
+            ttk.Button(dialog, text=tr("加入下载队列"), command=confirm).pack(pady=9)
+            listing.bind("<Return>", lambda _: confirm())
+
+        Thread(target=load, daemon=True).start()
 
     def queue_menu(self, event):
         iid = self.queue_table.identify_row(event.y)
@@ -759,7 +879,8 @@ class App:
     @staticmethod
     def task_key(task):
         return tuple(task.get(field) for field in ("kind", "source", "platform", "directory", "catalog", "output",
-                                                    "target", "ref", "extract", "shallow", "submodules", "lfs"))
+                                                    "target", "ref", "extract", "shallow", "submodules", "lfs")) + (
+            (task.get("catalog_asset") or {}).get("url"),)
 
     def enqueue(self, tasks, *, priority=False):
         existing = {self.task_key(task): task for task in self.tasks if task["state"] != "done"}
@@ -1211,6 +1332,7 @@ class App:
             self.program_update_busy = False
             if isinstance(value, Exception):
                 if not quiet:
+                    self.program_update_status.set(tr("程序更新失败"))
                     messagebox.showerror(title, str(value), parent=self.window)
             else:
                 callback(value)
@@ -1218,20 +1340,44 @@ class App:
         def ready(folder):
             self.pending_program_update = (folder, executable)
             self.cancel_shutdown()
+            self.program_update_status.set(tr("更新已校验，等待空闲后重启…"))
             if not self.program_update_idle():
                 messagebox.showinfo(title, tr("更新已校验，将在下载队列空闲后安装。"), parent=self.window)
 
         def offer(result):
+            self.program_update_status.set("")
             if result is None:
                 if not automatic:
                     messagebox.showinfo(title, tr("当前已是最新程序版本。"), parent=self.window)
                 return
-            tag, notes = result
+            tag, notes, digest = result
             prompt = tr("发现新版 {version}，下载并更新？").format(version=tag)
             if messagebox.askyesno(title, f"{prompt}\n\n{notes}", default="no", parent=self.window):
                 self.program_update_busy = True
-                work(lambda: program_update.prepare(tag, executable), ready)
+                self.program_update_status.set(tr("正在准备下载新版…"))
+                work(lambda: program_update.prepare(tag, executable, digest, on_status=report), ready)
 
+        route = ""
+
+        def report(stage, *args):
+            nonlocal route
+            if stage == "route":
+                route = args[0]
+                status = tr("正在连接 · {route}").format(route=route)
+            elif stage == "progress":
+                done, total, speed = args
+                amount = f"{done / 1048576:.2f} MiB"
+                if total:
+                    amount += f" / {total / 1048576:.2f} MiB ({done / total:.0%})"
+                status = f"{route} · {amount} · {speed:.2f} MiB/s"
+            elif stage == "verify":
+                status = tr("正在校验新版 SHA-256…")
+            else:
+                status = tr("正在测速选择下载线路…")
+            self.events.put(("library", self.program_update_status.set, status))
+
+        if not automatic:
+            self.program_update_status.set(tr("正在检查程序更新…"))
         work(program_update.check, offer, quiet=automatic)
 
     def program_update_idle(self):
@@ -1246,8 +1392,11 @@ class App:
         try:
             self.save()
             self.save_settings()
+            self.program_update_status.set(tr("正在替换程序并重启…"))
+            self.window.update_idletasks()
             program_update.launch(folder, executable)
         except OSError as exc:
+            self.program_update_status.set(tr("程序更新失败"))
             messagebox.showerror(tr("检查程序更新"), str(exc), parent=self.window)
             return False
         self.window.destroy()
@@ -1489,6 +1638,9 @@ if __name__ == "__main__":
                 inherited.reconfigure(encoding="utf-8")
                 continue
             if getattr(sys, name) is None:
+                if os.name != "nt":
+                    setattr(sys, name, io.StringIO())
+                    continue
                 try:
                     import ctypes
                     import msvcrt

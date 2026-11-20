@@ -35,5 +35,20 @@
     "kill_before_install": false,
     "windows_installer": false,
     "process_name": ""
+  },
+  {
+    "id": "boxplayer",
+    "简介": "BoxPlayer（网盘与媒体服务器播放器 · iPhone、iPad 与 Apple TV）",
+    "分类": "多媒体",
+    "enabled": false,
+    "repo_path": "gaozhangmin/boxplayer",
+    "run_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/cn/app/boxplayer/id6739804060",
+    "aliases": [
+      "BoxPlayer",
+      "媒体播放器",
+      "网盘播放器"
+    ]
   }
 ]

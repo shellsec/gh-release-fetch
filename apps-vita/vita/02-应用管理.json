@@ -90,5 +90,28 @@
       "vitaforge.vpk"
     ],
     "save_subdir": "vitaforge"
+  },
+  {
+    "id": "vitaos",
+    "简介": "VitaOS（PS Vita 自制应用启动器）",
+    "分类": "应用管理",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "hotdog-face/VitaOS",
+    "releases_url": "https://github.com/hotdog-face/VitaOS/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".vpk"
+    ],
+    "installer_filename_regex": "^VitaOS\\.vpk$",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "save_subdir": "vitaos",
+    "_核查": {
+      "日期": "2026-11-14",
+      "来源": "https://github.com/hotdog-face/VitaOS/releases/tag/v1.9.2",
+      "状态": "release"
+    }
   }
 ]

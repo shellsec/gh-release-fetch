@@ -1506,5 +1506,41 @@
     "chrome_source_repo": "simov/markdown-viewer",
     "run_installer": false,
     "chrome_store_url": "https://chromewebstore.google.com/detail/ckkdlimhmcjmikdlpkmbgfkaikojcbjk"
+  },
+  {
+    "id": "page-assist",
+    "简介": "Page Assist（Chrome 本地 AI 助手 · 支持 Ollama 与兼容接口）",
+    "子分类": "AI 助手",
+    "aliases": [
+      "Page Assist",
+      "Ollama",
+      "本地 AI"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://github.com/n4ze3m/page-assist",
+    "chrome_source_repo": "n4ze3m/page-assist",
+    "chrome_store_url": "https://chromewebstore.google.com/detail/jfgfiigpkhlkbnfnbobbkinehhfdhndo",
+    "分类": "浏览器扩展",
+    "enabled": false,
+    "run_installer": false
+  },
+  {
+    "id": "m3u-player-pro",
+    "简介": "M3U Player Pro（IPTV / HLS 播放扩展）",
+    "分类": "浏览器扩展",
+    "子分类": "IPTV 播放工具",
+    "aliases": [
+      "IPTV",
+      "M3U",
+      "M3U8",
+      "直播播放器"
+    ],
+    "enabled": false,
+    "run_installer": false,
+    "使用说明": "播放 IPTV 时需自行导入直播源或播放列表。",
+    "open_page_only": true,
+    "open_page_url": "https://chromewebstore.google.com/detail/oaggfjaenlnbopklnglmcdfkmecchfcl",
+    "releases_url": "https://chromewebstore.google.com/detail/oaggfjaenlnbopklnglmcdfkmecchfcl",
+    "chrome_store_url": "https://chromewebstore.google.com/detail/oaggfjaenlnbopklnglmcdfkmecchfcl"
   }
 ]

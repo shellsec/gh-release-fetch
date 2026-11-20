@@ -1,0 +1,17 @@
+[
+  {
+    "id": "netease-uu-remote",
+    "简介": "网易 UU 远程（官方 · Android TV）",
+    "分类": "远程与协作",
+    "enabled": false,
+    "run_installer": false,
+    "aliases": [
+      "UU远程",
+      "UU 远程",
+      "UU Remote"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://uuyc.163.com/download/",
+    "releases_url": "https://uuyc.163.com/download/"
+  }
+]

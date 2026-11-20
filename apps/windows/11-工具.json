@@ -1353,6 +1353,22 @@
     "repo_path": "daimiaopeng/coolapk-desktop"
   },
   {
+    "id": "coolapk-desktop-shellsec",
+    "简介": "酷安桌面版（shellsec 分支 · Windows EXE）",
+    "分类": "工具",
+    "aliases": [
+      "酷安桌面版",
+      "CoolAPK Desktop",
+      "coolapk_desktop",
+      "shellsec/coolapk-desktop"
+    ],
+    "repo_path": "shellsec/coolapk-desktop",
+    "releases_url": "https://github.com/shellsec/coolapk-desktop/releases",
+    "use_download_filename": true,
+    "run_installer": false,
+    "fixed_download_url": "https://github.com/shellsec/coolapk-desktop/releases/latest/download/coolapk_desktop.exe"
+  },
+  {
     "id": "oldalmanac",
     "简介": "老黄历 · 纸上光阴（静态网页；仓库无 GitHub Release 二进制，lookup 打开仓库，本地用浏览器打开 index.html）",
     "分类": "工具",
@@ -1447,6 +1463,195 @@
     "use_download_filename": true,
     "aliases": [
       "Kensaku"
+    ]
+  },
+  {
+    "id": "filee",
+    "简介": "Filee（拖拽文件转换格式 · Windows x64）",
+    "分类": "工具",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "KnifeLemon/Filee",
+    "releases_url": "https://github.com/KnifeLemon/Filee/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".exe"
+    ],
+    "installer_filename_regex": "^Filee\\-\\d+(?:\\.\\d+)+\\-win\\-Setup\\.exe$",
+    "use_download_filename": true,
+    "windows_installer": false
+  },
+  {
+    "id": "filee-arm64",
+    "简介": "Filee（拖拽文件转换格式 · Windows ARM64）",
+    "分类": "工具",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "KnifeLemon/Filee",
+    "releases_url": "https://github.com/KnifeLemon/Filee/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".exe"
+    ],
+    "installer_filename_regex": "^Filee\\-\\d+(?:\\.\\d+)+\\-win\\-arm64\\-Setup\\.exe$",
+    "use_download_filename": true,
+    "windows_installer": false
+  },
+  {
+    "id": "toolknit-desktop",
+    "简介": "ToolKnit（本地离线工具箱 · Windows x64）",
+    "分类": "工具",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "ZihangDong/toolknit-desktop",
+    "releases_url": "https://github.com/ZihangDong/toolknit-desktop/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".exe"
+    ],
+    "installer_filename_regex": "^toolknit\\-desktop_\\d+(?:\\.\\d+)+_x64\\-setup\\.exe$",
+    "use_download_filename": true,
+    "windows_installer": false
+  },
+  {
+    "id": "tbtool",
+    "简介": "图吧工具箱（硬件检测与验机）",
+    "分类": "工具",
+    "enabled": false,
+    "run_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.tbtool.cn/",
+    "releases_url": "https://www.tbtool.cn/"
+  },
+  {
+    "id": "windows-batch-script-manager",
+    "简介": "WindowsBatchScriptManager（Windows 批处理脚本管理器 · x64）",
+    "分类": "工具",
+    "enabled": false,
+    "run_installer": false,
+    "aliases": [
+      "WindowsBatchScriptManager",
+      "批处理脚本管理器",
+      "批处理脚本"
+    ],
+    "repo_path": "shellsec/WindowsBatchScriptManager",
+    "releases_url": "https://github.com/shellsec/WindowsBatchScriptManager/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_filename_regex": "^WindowsBatchScriptManager-\\d+(?:\\.\\d+)+-windows-x64\\.zip$",
+    "use_download_filename": true,
+    "windows_installer": false
+  },
+  {
+    "id": "ouch-x64",
+    "简介": "Ouch（压缩与解压命令行工具 · Rust） · x64",
+    "分类": "工具",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "repo_path": "ouch-org/ouch",
+    "releases_url": "https://github.com/ouch-org/ouch/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_filename_regex": "^ouch\\-x86_64\\-pc\\-windows\\-msvc\\.zip$",
+    "use_download_filename": true,
+    "aliases": [
+      "ouch",
+      "Rust",
+      "ouch"
+    ],
+    "_核查": {
+      "日期": "2026-11-18",
+      "来源": "https://github.com/ouch-org/ouch/releases/tag/0.8.3",
+      "发布标签": "0.8.3",
+      "发布日期": "2026-09-13",
+      "附件": "ouch-x86_64-pc-windows-msvc.zip"
+    },
+    "使用说明": "命令行工具，解压后在终端使用，具体参数见上游文档。"
+  },
+  {
+    "id": "ouch-arm64",
+    "简介": "Ouch（压缩与解压命令行工具 · Rust） · arm64",
+    "分类": "工具",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "repo_path": "ouch-org/ouch",
+    "releases_url": "https://github.com/ouch-org/ouch/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_filename_regex": "^ouch\\-aarch64\\-pc\\-windows\\-msvc\\.zip$",
+    "use_download_filename": true,
+    "aliases": [
+      "ouch",
+      "Rust",
+      "ouch"
+    ],
+    "_核查": {
+      "日期": "2026-11-18",
+      "来源": "https://github.com/ouch-org/ouch/releases/tag/0.8.3",
+      "发布标签": "0.8.3",
+      "发布日期": "2026-09-13",
+      "附件": "ouch-aarch64-pc-windows-msvc.zip"
+    },
+    "使用说明": "命令行工具，解压后在终端使用，具体参数见上游文档。"
+  },
+  {
+    "id": "keel-x64",
+    "简介": "Keel（图形文件管理器 · Rust） · x64",
+    "分类": "工具",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "repo_path": "Runitupshawty/keel",
+    "releases_url": "https://github.com/Runitupshawty/keel/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_filename_regex": "^keel\\-v\\d+(?:\\.\\d+)+\\-win64\\.zip$",
+    "use_download_filename": true,
+    "aliases": [
+      "keel",
+      "Rust",
+      "keel"
+    ],
+    "_核查": {
+      "日期": "2026-11-18",
+      "来源": "https://github.com/Runitupshawty/keel/releases/tag/v0.22.1",
+      "发布标签": "v0.22.1",
+      "发布日期": "2026-10-12",
+      "附件": "keel-v0.22.1-win64.zip"
+    }
+  },
+  {
+    "id": "mdldm-maitian",
+    "简介": "麦田（多平台内容分发、数据复盘与飞书通知；Windows 社区适配，需要 Node.js 22.5+ 和 Chrome）",
+    "分类": "工具",
+    "enabled": false,
+    "repo_path": "CzzzzzzJ/mdldm-maitian",
+    "open_page_only": true,
+    "open_page_url": "https://github.com/CzzzzzzJ/mdldm-maitian#一行装好",
+    "run_installer": false,
+    "aliases": [
+      "麦当",
+      "麦田",
+      "自媒体",
+      "视频分发",
+      "运营复盘"
     ]
   }
 ]

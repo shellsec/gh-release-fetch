@@ -311,5 +311,28 @@
       "发布标签": "v0.5.3",
       "发布日期": "2026-11-04"
     }
+  },
+  {
+    "id": "themedeck",
+    "简介": "ThemeDeck（Steam Deck 游戏页面主题音乐 · 需 Decky Loader）",
+    "repo_path": "BrenticusMaximus/ThemeDeck",
+    "releases_url": "https://github.com/BrenticusMaximus/ThemeDeck/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_filename_regex": "^ThemeDeck\\-v\\d+(?:\\.\\d+)+\\.zip$",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "save_subdir": "themedeck",
+    "_核查": {
+      "日期": "2026-11-14",
+      "来源": "https://github.com/BrenticusMaximus/ThemeDeck/releases/tag/v4.0.0",
+      "状态": "release"
+    },
+    "分类": "系统与插件",
+    "enabled": false,
+    "run_installer": false
   }
 ]

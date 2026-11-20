@@ -125,7 +125,7 @@ def _range_info(response, start, end=None, total=None):
 
 def download_url(url, destination, *, threads=4, digest=None, validator=None, report=print,
                  request=None, min_parallel_size=4 * 1048576, cancelled=None, _stream=False,
-                 work_dir=None):
+                 work_dir=None, on_status=None):
     """Resume only against the same URL, size and strong ETag; never mix routes."""
     check_pause(cancelled)
     request = request or requests.get
@@ -211,6 +211,8 @@ def download_url(url, destination, *, threads=4, digest=None, validator=None, re
                                     size = f" / {total / 1048576:.2f}" if total else ""
                                     speed = max(0, done - resumed_bytes / 1048576) / max(now - started, .01)
                                     report(f"下载进度：{done:.2f}{size} MiB，{speed:.2f} MiB/s")
+                                    if on_status:
+                                        on_status("progress", sum(progress["parts"]), total, speed)
                                     progress["last"] = now
                 if total and part.stat().st_size != length:
                     raise requests.ConnectionError("文件长度不完整")
@@ -227,7 +229,9 @@ def download_url(url, destination, *, threads=4, digest=None, validator=None, re
         return download_url(url, destination, threads=1, digest=digest,
                             validator=validator, report=report, request=request,
                             min_parallel_size=min_parallel_size, cancelled=cancelled, _stream=True,
-                            work_dir=work)
+                            work_dir=work, on_status=on_status)
+    if on_status:
+        on_status("verify")
     assembled = work / "assembled"
     sha = hashlib.sha256()
     with assembled.open("wb") as output:
@@ -262,7 +266,7 @@ def download_url(url, destination, *, threads=4, digest=None, validator=None, re
 
 
 def download(url, destination, *, route="auto", threads=4, digest=None, validator=None, report=print,
-             cancelled=None):
+             cancelled=None, on_status=None):
     route = normalize_route(route)
     failures = []
     destination = Path(destination)
@@ -280,6 +284,8 @@ def download(url, destination, *, route="auto", threads=4, digest=None, validato
         if preferred:
             yield preferred
         check_pause(cancelled)
+        if on_status:
+            on_status("probe")
         yield from (item for item in ranked_routes(url, route, report) if item != preferred)
 
     if route != "auto" and route not in dict(ROUTES):
@@ -287,10 +293,12 @@ def download(url, destination, *, route="auto", threads=4, digest=None, validato
     for name, target in candidates():
         check_pause(cancelled)
         report(f"使用线路：{name}")
+        if on_status:
+            on_status("route", name)
         try:
             work = primary if not previous or target == previous else primary / ("route-" + name)
             result = download_url(target, destination, threads=threads, digest=digest, validator=validator,
-                                  report=report, cancelled=cancelled, work_dir=work)
+                                  report=report, cancelled=cancelled, work_dir=work, on_status=on_status)
             return result
         except (requests.RequestException, ValueError) as exc:
             if (primary / "state.json").exists():

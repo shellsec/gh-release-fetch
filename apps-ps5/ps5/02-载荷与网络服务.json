@@ -216,5 +216,28 @@
     "save_name": "tailscale-0.7.3.elf",
     "运行方式": "ELF/载荷",
     "固件要求": "需 ELF 加载器及 Tailscale 账户；作者记录在 13.42 和 elfldr 0.26 下验证。"
+  },
+  {
+    "id": "etahen-13.60",
+    "简介": "etaHEN（仅 PS5 固件 13.60 · ELF 载荷）",
+    "repo_path": "mushidani/etaHEN-13.60",
+    "releases_url": "https://github.com/mushidani/etaHEN-13.60/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".elf"
+    ],
+    "installer_filename_regex": "^etaHEN\\-13\\.60\\.elf$",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "save_subdir": "etahen-13.60",
+    "_核查": {
+      "日期": "2026-11-14",
+      "来源": "https://github.com/mushidani/etaHEN-13.60/releases/latest",
+      "状态": "release"
+    },
+    "分类": "载荷与网络服务",
+    "enabled": false,
+    "run_installer": false
   }
 ]

@@ -510,5 +510,23 @@
     "download_names": [
       "app-release.apk"
     ]
+  },
+  {
+    "id": "diplay",
+    "简介": "DiPlay（Android 车机 CarPlay · 公开预览版）",
+    "分类": "工具",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "shihabal3amri/DiPlay",
+    "releases_url": "https://github.com/shihabal3amri/DiPlay/releases/tag/v0.2.22",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_filename_regex": "^DiPlay\\-0\\.2\\.22\\.apk$",
+    "use_download_filename": true,
+    "windows_installer": false,
+    "pinned_release_tag": "v0.2.22"
   }
 ]

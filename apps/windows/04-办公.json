@@ -479,5 +479,36 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "ocs-desktop",
+    "简介": "OCS 网课助手（桌面端 · Windows x64）",
+    "分类": "办公",
+    "enabled": false,
+    "repo_path": "ocsjs/ocs-desktop",
+    "releases_url": "https://github.com/ocsjs/ocs-desktop/releases/latest",
+    "aliases": [
+      "ocs-desktop"
+    ],
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".exe"
+    ],
+    "installer_filename_regex": "^ocs\\-\\d+(?:\\.\\d+)+\\-setup\\-win\\-x64\\.exe$",
+    "use_download_filename": true,
+    "windows_installer": false,
+    "run_installer": false
+  },
+  {
+    "id": "xianyu-auto-reply-fix",
+    "简介": "闲鱼智能客服（自托管 Web 后台与回复管理）",
+    "分类": "办公",
+    "enabled": false,
+    "repo_path": "GuDong2003/xianyu-auto-reply-fix",
+    "run_installer": false,
+    "子分类": "电商客服",
+    "open_page_only": true,
+    "open_page_url": "https://github.com/GuDong2003/xianyu-auto-reply-fix#readme"
   }
 ]

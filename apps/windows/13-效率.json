@@ -1830,5 +1830,32 @@
       "Dawn Launcher",
       "DawnLauncher"
     ]
+  },
+  {
+    "id": "ztools",
+    "简介": "ZTools（效率启动器 · Windows x64）",
+    "分类": "效率",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "ZToolsCenter/ZTools",
+    "releases_url": "https://github.com/ZToolsCenter/ZTools/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".exe"
+    ],
+    "installer_filename_regex": "^ZTools\\-\\d+(?:\\.\\d+)+\\-win\\-x64\\-setup\\.exe$",
+    "use_download_filename": true,
+    "windows_installer": false
+  },
+  {
+    "id": "tiez",
+    "简介": "贴汁 TieZ（剪贴板管理）",
+    "分类": "效率",
+    "enabled": false,
+    "run_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://tiez.name666.top/zh/",
+    "releases_url": "https://tiez.name666.top/zh/"
   }
 ]

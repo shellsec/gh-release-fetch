@@ -9,7 +9,8 @@ from tempfile import mkdtemp
 
 import requests
 
-from tools.download_engine import download_url
+from tools.catalog_update import fetch
+from tools.download_engine import download
 
 VERSION = (Path(sys._MEIPASS) / "ghrf-version.txt").read_text(encoding="ascii").strip() if getattr(sys, "frozen", False) else "0.0"
 REPOSITORY = "shellsec/gh-release-fetch"
@@ -18,32 +19,49 @@ RELEASE = f"https://github.com/{REPOSITORY}/releases/download/"
 
 
 def check():
-    with requests.get(f"https://api.github.com/repos/{REPOSITORY}/releases/latest", timeout=(5, 10)) as response:
-        response.raise_for_status()
-        data = response.json()
+    url = f"https://api.github.com/repos/{REPOSITORY}/releases/latest"
+    for timeout in ((5, 8), (5, 15)):
+        try:
+            with requests.get(url, timeout=timeout) as response:
+                response.raise_for_status()
+                data = response.json()
+            break
+        except (requests.ConnectionError, requests.Timeout):
+            continue
+    else:
+        raise ValueError("暂时无法连接 GitHub 检查程序更新，请稍后重试")
     tag = data.get("tag_name", "")
     if not re.fullmatch(r"\d{8}\.\d{1,6}", tag):
         return None
     if tuple(map(int, tag.split("."))) <= tuple(map(int, VERSION.split("."))):
         return None
-    names = {item["name"] for item in data.get("assets", [])}
-    if not {EXE, f"SHA256SUMS-{tag}.txt"} <= names:
+    assets = {item["name"]: item for item in data.get("assets", [])}
+    if not {EXE, f"SHA256SUMS-{tag}.txt"} <= assets.keys():
         raise ValueError("Release is missing the executable or checksum")
-    return tag, (data.get("body") or "")[:1400]
+    digest = re.fullmatch(r"sha256:([a-f0-9]{64})", assets[EXE].get("digest") or "")
+    return tag, (data.get("body") or "")[:1400], digest[1] if digest else None
 
 
-def prepare(tag, executable):
+def executable_checksum(tag, official_digest=None):
+    if official_digest and re.fullmatch(r"[a-f0-9]{64}", official_digest):
+        return official_digest
+    url = f"{RELEASE}{tag}/SHA256SUMS-{tag}.txt"
+    try:
+        content = fetch(url, 8192).decode("ascii")
+    except (requests.RequestException, ValueError) as exc:
+        raise ValueError("无法从 GitHub 获取可信的程序校验值，请稍后重试") from exc
+    matches = re.findall(r"(?mi)^([a-f0-9]{64})[ \t]+\*?GHReleaseFetch\.exe\r?$", content)
+    if len(matches) != 1:
+        raise ValueError("Missing or ambiguous executable checksum")
+    return matches[0].lower()
+
+
+def prepare(tag, executable, official_digest=None, *, on_status=None):
     folder = Path(mkdtemp(prefix=".ghrf-update-", dir=Path(executable).parent))
     try:
-        with requests.get(f"{RELEASE}{tag}/SHA256SUMS-{tag}.txt", timeout=(5, 15), stream=True) as response:
-            response.raise_for_status()
-            content = response.raw.read(8193)
-        if len(content) > 8192:
-            raise ValueError("Checksum file exceeds size limit")
-        matches = re.findall(r"(?mi)^([a-f0-9]{64})[ \t]+\*?GHReleaseFetch\.exe\r?$", content.decode("ascii"))
-        if len(matches) != 1:
-            raise ValueError("Missing or ambiguous executable checksum")
-        download_url(f"{RELEASE}{tag}/{EXE}", folder / EXE, digest=matches[0].lower(), report=lambda _: None)
+        digest = executable_checksum(tag, official_digest)
+        download(f"{RELEASE}{tag}/{EXE}", folder / EXE, digest=digest,
+                 report=lambda _: None, on_status=on_status)
         return folder
     except Exception:
         from shutil import rmtree

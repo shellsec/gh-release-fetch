@@ -426,5 +426,189 @@
       "发布标签": "2.4.4",
       "发布日期": "2026-11-12"
     }
+  },
+  {
+    "id": "riplay",
+    "简介": "RiPlay（开源音乐播放器 · FOSS APK）",
+    "repo_path": "fast4x/RiPlay",
+    "releases_url": "https://github.com/fast4x/RiPlay/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_filename_regex": "^RiPlay\\-v\\d+(?:\\.\\d+)+\\-Android\\-foss\\.apk$",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "save_subdir": "riplay",
+    "_核查": {
+      "日期": "2026-11-14",
+      "来源": "https://github.com/fast4x/RiPlay/releases/tag/v0.8.6",
+      "状态": "release"
+    },
+    "分类": "音视频",
+    "enabled": false,
+    "run_installer": false
+  },
+  {
+    "id": "streamyfin",
+    "简介": "Streamyfin（Jellyfin 客户端 · 手机 APK）",
+    "repo_path": "streamyfin/streamyfin",
+    "releases_url": "https://github.com/streamyfin/streamyfin/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_filename_regex": "^streamyfin\\-android\\-phone\\-apk\\.apk$",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "save_subdir": "streamyfin",
+    "_核查": {
+      "日期": "2026-11-14",
+      "来源": "https://github.com/streamyfin/streamyfin/releases/tag/v0.55.2",
+      "状态": "release"
+    },
+    "分类": "音视频",
+    "enabled": false,
+    "run_installer": false
+  },
+  {
+    "id": "folia-android",
+    "简介": "Folia Android（佛里音乐播放器 · 非官方安卓移植）",
+    "分类": "音视频",
+    "enabled": false,
+    "repo_path": "whycfawa/folia-android",
+    "releases_url": "https://github.com/whycfawa/folia-android/releases/latest",
+    "aliases": [
+      "佛里",
+      "Folia",
+      "Folia Major",
+      "folia-majar",
+      "佛里安卓"
+    ],
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_filename_regex": "^Folia\\-Android\\-\\d+(?:\\.\\d+)+\\-android\\.\\d+\\.apk$",
+    "use_download_filename": true,
+    "windows_installer": false,
+    "run_installer": false
+  },
+  {
+    "id": "bilimiao",
+    "简介": "哔哩喵",
+    "分类": "音视频",
+    "enabled": false,
+    "repo_path": "10miaomiao/bilimiao2",
+    "releases_url": "https://github.com/10miaomiao/bilimiao2/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_filename_regex": "^bilimiao\\-foss\\-\\d+(?:\\.\\d+)+\\.apk$",
+    "use_download_filename": true,
+    "windows_installer": false,
+    "run_installer": false
+  },
+  {
+    "id": "lx-music-mobile",
+    "简介": "洛雪音乐助手（上游通用版）",
+    "分类": "音视频",
+    "enabled": false,
+    "repo_path": "lyswhut/lx-music-mobile",
+    "releases_url": "https://github.com/lyswhut/lx-music-mobile/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_filename_regex": "^lx\\-music\\-mobile\\-v\\d+(?:\\.\\d+)+\\-universal\\.apk$",
+    "use_download_filename": true,
+    "windows_installer": false,
+    "run_installer": false
+  },
+  {
+    "id": "kodi",
+    "简介": "Kodi（媒体库与 IPTV · Android）",
+    "分类": "音视频",
+    "子分类": "IPTV 播放工具",
+    "aliases": [
+      "IPTV",
+      "M3U",
+      "M3U8",
+      "直播播放器"
+    ],
+    "enabled": false,
+    "run_installer": false,
+    "使用说明": "播放 IPTV 时需自行导入直播源或播放列表。",
+    "open_page_only": true,
+    "open_page_url": "https://kodi.tv/download/android/",
+    "releases_url": "https://kodi.tv/download/android/"
+  },
+  {
+    "id": "iptv-pro",
+    "简介": "IPTV Pro（付费 IPTV 播放器 · Google Play）",
+    "分类": "音视频",
+    "子分类": "IPTV 播放工具",
+    "aliases": [
+      "IPTV",
+      "M3U",
+      "M3U8",
+      "直播播放器"
+    ],
+    "enabled": false,
+    "run_installer": false,
+    "使用说明": "播放 IPTV 时需自行导入直播源或播放列表。",
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=ru.iptvremote.android.iptv.pro",
+    "releases_url": "https://play.google.com/store/apps/details?id=ru.iptvremote.android.iptv.pro"
+  },
+  {
+    "id": "tvboxosc",
+    "简介": "TVBoxOSC（Q 版 Java APK · 需自行配置接口）",
+    "分类": "音视频",
+    "子分类": "IPTV 播放工具",
+    "aliases": [
+      "IPTV",
+      "M3U",
+      "M3U8",
+      "直播播放器"
+    ],
+    "enabled": false,
+    "run_installer": false,
+    "使用说明": "播放 IPTV 时需自行导入直播源或播放列表。",
+    "repo_path": "j4Uq/TVBoxOSC",
+    "releases_url": "https://github.com/j4Uq/TVBoxOSC/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_filename_regex": "^TVBox_q215613905_\\d{8}-\\d{4}-java\\.apk$",
+    "use_download_filename": true,
+    "windows_installer": false
+  },
+  {
+    "id": "subcast-mobile",
+    "简介": "Subcast Mobile（海外播客与 YouTube 双语字幕、精读和 AI 问答 · 源码）",
+    "分类": "音视频",
+    "enabled": false,
+    "repo_path": "joeseesun/subcast-mobile",
+    "open_page_only": true,
+    "open_page_url": "https://github.com/joeseesun/subcast-mobile",
+    "run_installer": false,
+    "aliases": [
+      "Subcast",
+      "Subcast Mobile",
+      "双语字幕",
+      "海外播客",
+      "播客精读",
+      "YouTube 字幕",
+      "AI 问答"
+    ]
   }
 ]

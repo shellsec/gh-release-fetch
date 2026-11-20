@@ -1206,5 +1206,364 @@
     ],
     "releases_url": "https://bgithub.xyz/mountain-loop/yaak/releases",
     "repo_path": "mountain-loop/yaak"
+  },
+  {
+    "id": "prek-x64",
+    "简介": "prek（pre-commit 的 Rust 重写实现） · x64",
+    "分类": "开发",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "repo_path": "j178/prek",
+    "releases_url": "https://github.com/j178/prek/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "installer_filename_regex": "^prek\\-x86_64\\-unknown\\-linux\\-gnu\\.tar\\.gz$",
+    "use_download_filename": true,
+    "aliases": [
+      "prek",
+      "Rust",
+      "prek"
+    ],
+    "_核查": {
+      "日期": "2026-11-18",
+      "来源": "https://github.com/j178/prek/releases/tag/v0.5.11",
+      "发布标签": "v0.5.11",
+      "发布日期": "2026-11-16",
+      "附件": "prek-x86_64-unknown-linux-gnu.tar.gz"
+    },
+    "使用说明": "命令行工具，解压后在终端使用，具体参数见上游文档。"
+  },
+  {
+    "id": "prek-arm64",
+    "简介": "prek（pre-commit 的 Rust 重写实现） · arm64",
+    "分类": "开发",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "repo_path": "j178/prek",
+    "releases_url": "https://github.com/j178/prek/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "installer_filename_regex": "^prek\\-aarch64\\-unknown\\-linux\\-gnu\\.tar\\.gz$",
+    "use_download_filename": true,
+    "aliases": [
+      "prek",
+      "Rust",
+      "prek"
+    ],
+    "_核查": {
+      "日期": "2026-11-18",
+      "来源": "https://github.com/j178/prek/releases/tag/v0.5.11",
+      "发布标签": "v0.5.11",
+      "发布日期": "2026-11-16",
+      "附件": "prek-aarch64-unknown-linux-gnu.tar.gz"
+    },
+    "使用说明": "命令行工具，解压后在终端使用，具体参数见上游文档。"
+  },
+  {
+    "id": "gitoxide-x64",
+    "简介": "gitoxide（Git 工具与基础设施 · Rust） · x64",
+    "分类": "开发",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "repo_path": "GitoxideLabs/gitoxide",
+    "releases_url": "https://github.com/GitoxideLabs/gitoxide/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "installer_filename_regex": "^gitoxide\\-max\\-pure\\-v\\d+(?:\\.\\d+)+\\-x86_64\\-unknown\\-linux\\-gnu\\.tar\\.gz$",
+    "use_download_filename": true,
+    "aliases": [
+      "gitoxide",
+      "Rust",
+      "gitoxide"
+    ],
+    "_核查": {
+      "日期": "2026-11-18",
+      "来源": "https://github.com/GitoxideLabs/gitoxide/releases/tag/v0.61.0",
+      "发布标签": "v0.61.0",
+      "发布日期": "2026-10-22",
+      "附件": "gitoxide-max-pure-v0.61.0-x86_64-unknown-linux-gnu.tar.gz"
+    },
+    "使用说明": "命令行工具，解压后在终端使用，具体参数见上游文档。"
+  },
+  {
+    "id": "gitoxide-arm64",
+    "简介": "gitoxide（Git 工具与基础设施 · Rust） · arm64",
+    "分类": "开发",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "repo_path": "GitoxideLabs/gitoxide",
+    "releases_url": "https://github.com/GitoxideLabs/gitoxide/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "installer_filename_regex": "^gitoxide\\-max\\-pure\\-v\\d+(?:\\.\\d+)+\\-aarch64\\-unknown\\-linux\\-gnu\\.tar\\.gz$",
+    "use_download_filename": true,
+    "aliases": [
+      "gitoxide",
+      "Rust",
+      "gitoxide"
+    ],
+    "_核查": {
+      "日期": "2026-11-18",
+      "来源": "https://github.com/GitoxideLabs/gitoxide/releases/tag/v0.61.0",
+      "发布标签": "v0.61.0",
+      "发布日期": "2026-10-22",
+      "附件": "gitoxide-max-pure-v0.61.0-aarch64-unknown-linux-gnu.tar.gz"
+    },
+    "使用说明": "命令行工具，解压后在终端使用，具体参数见上游文档。"
+  },
+  {
+    "id": "gitui-x64",
+    "简介": "GitUI（终端 Git 客户端 · Rust） · x64",
+    "分类": "开发",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "repo_path": "extrawurst/gitui",
+    "releases_url": "https://github.com/extrawurst/gitui/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "installer_filename_regex": "^gitui\\-linux\\-x86_64\\.tar\\.gz$",
+    "use_download_filename": true,
+    "aliases": [
+      "gitui",
+      "Rust",
+      "gitui"
+    ],
+    "_核查": {
+      "日期": "2026-11-18",
+      "来源": "https://github.com/extrawurst/gitui/releases/tag/v0.28.1",
+      "发布标签": "v0.28.1",
+      "发布日期": "2026-03-24",
+      "附件": "gitui-linux-x86_64.tar.gz"
+    },
+    "使用说明": "命令行工具，解压后在终端使用，具体参数见上游文档。"
+  },
+  {
+    "id": "gitui-arm64",
+    "简介": "GitUI（终端 Git 客户端 · Rust） · arm64",
+    "分类": "开发",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "repo_path": "extrawurst/gitui",
+    "releases_url": "https://github.com/extrawurst/gitui/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "installer_filename_regex": "^gitui\\-linux\\-aarch64\\.tar\\.gz$",
+    "use_download_filename": true,
+    "aliases": [
+      "gitui",
+      "Rust",
+      "gitui"
+    ],
+    "_核查": {
+      "日期": "2026-11-18",
+      "来源": "https://github.com/extrawurst/gitui/releases/tag/v0.28.1",
+      "发布标签": "v0.28.1",
+      "发布日期": "2026-03-24",
+      "附件": "gitui-linux-aarch64.tar.gz"
+    },
+    "使用说明": "命令行工具，解压后在终端使用，具体参数见上游文档。"
+  },
+  {
+    "id": "astryx",
+    "简介": "Astryx（React 与 StyleX 设计系统，Beta）",
+    "分类": "开发",
+    "enabled": false,
+    "repo_path": "meta/astryx",
+    "run_installer": false,
+    "子分类": "动画与 3D",
+    "open_page_only": true,
+    "open_page_url": "https://github.com/meta/astryx#readme"
+  },
+  {
+    "id": "remotion",
+    "简介": "Remotion（React 程序化视频框架）",
+    "分类": "开发",
+    "enabled": false,
+    "repo_path": "remotion-dev/remotion",
+    "run_installer": false,
+    "子分类": "动画与 3D",
+    "open_page_only": true,
+    "open_page_url": "https://github.com/remotion-dev/remotion#readme"
+  },
+  {
+    "id": "anime",
+    "简介": "Anime.js（JavaScript 时间线与网页动画）",
+    "分类": "开发",
+    "enabled": false,
+    "repo_path": "juliangarnier/anime",
+    "run_installer": false,
+    "子分类": "动画与 3D",
+    "open_page_only": true,
+    "open_page_url": "https://github.com/juliangarnier/anime#readme"
+  },
+  {
+    "id": "motion",
+    "简介": "Motion（手势、弹簧与布局动效）",
+    "分类": "开发",
+    "enabled": false,
+    "repo_path": "motiondivision/motion",
+    "run_installer": false,
+    "子分类": "动画与 3D",
+    "open_page_only": true,
+    "open_page_url": "https://github.com/motiondivision/motion#readme"
+  },
+  {
+    "id": "manim",
+    "简介": "Manim Community（Python 数学动画）",
+    "分类": "开发",
+    "enabled": false,
+    "repo_path": "ManimCommunity/manim",
+    "run_installer": false,
+    "子分类": "动画与 3D",
+    "open_page_only": true,
+    "open_page_url": "https://github.com/ManimCommunity/manim#readme"
+  },
+  {
+    "id": "lottie-web",
+    "简介": "Lottie Web（播放 Lottie 矢量动画）",
+    "分类": "开发",
+    "enabled": false,
+    "repo_path": "airbnb/lottie-web",
+    "run_installer": false,
+    "子分类": "动画与 3D",
+    "open_page_only": true,
+    "open_page_url": "https://github.com/airbnb/lottie-web#readme"
+  },
+  {
+    "id": "three-js",
+    "简介": "Three.js（Web 3D 开发库）",
+    "分类": "开发",
+    "enabled": false,
+    "repo_path": "mrdoob/three.js",
+    "run_installer": false,
+    "子分类": "动画与 3D",
+    "open_page_only": true,
+    "open_page_url": "https://github.com/mrdoob/three.js#readme"
+  },
+  {
+    "id": "three-gpu-pathtracer",
+    "简介": "Three GPU Pathtracer（Three.js 路径追踪）",
+    "分类": "开发",
+    "enabled": false,
+    "repo_path": "gkjohnson/three-gpu-pathtracer",
+    "run_installer": false,
+    "子分类": "动画与 3D",
+    "open_page_only": true,
+    "open_page_url": "https://github.com/gkjohnson/three-gpu-pathtracer#readme"
+  },
+  {
+    "id": "joltphysics",
+    "简介": "Jolt Physics（C++ 刚体物理与碰撞）",
+    "分类": "开发",
+    "enabled": false,
+    "repo_path": "jrouwe/JoltPhysics",
+    "run_installer": false,
+    "子分类": "动画与 3D",
+    "open_page_only": true,
+    "open_page_url": "https://github.com/jrouwe/JoltPhysics#readme"
+  },
+  {
+    "id": "postprocessing",
+    "简介": "Postprocessing（Three.js 后处理效果）",
+    "分类": "开发",
+    "enabled": false,
+    "repo_path": "pmndrs/postprocessing",
+    "run_installer": false,
+    "子分类": "动画与 3D",
+    "open_page_only": true,
+    "open_page_url": "https://github.com/pmndrs/postprocessing#readme"
+  },
+  {
+    "id": "three-quarks",
+    "简介": "Three.quarks（Three.js 粒子与特效）",
+    "分类": "开发",
+    "enabled": false,
+    "repo_path": "Alchemist0823/three.quarks",
+    "run_installer": false,
+    "子分类": "动画与 3D",
+    "open_page_only": true,
+    "open_page_url": "https://github.com/Alchemist0823/three.quarks#readme"
+  },
+  {
+    "id": "tweakpane",
+    "简介": "Tweakpane（交互式参数调节面板）",
+    "分类": "开发",
+    "enabled": false,
+    "repo_path": "cocopon/tweakpane",
+    "run_installer": false,
+    "子分类": "动画与 3D",
+    "open_page_only": true,
+    "open_page_url": "https://github.com/cocopon/tweakpane#readme"
+  },
+  {
+    "id": "claude-quickstarts",
+    "简介": "Claude Quickstarts（Claude API 示例与应用模板）",
+    "分类": "开发",
+    "enabled": false,
+    "repo_path": "anthropics/claude-quickstarts",
+    "run_installer": false,
+    "子分类": "AI API 示例",
+    "open_page_only": true,
+    "open_page_url": "https://github.com/anthropics/claude-quickstarts#readme"
+  },
+  {
+    "id": "mujoco",
+    "简介": "MuJoCo（物理仿真器与开发库）",
+    "分类": "开发",
+    "enabled": false,
+    "repo_path": "google-deepmind/mujoco",
+    "run_installer": false,
+    "子分类": "物理仿真",
+    "releases_url": "https://github.com/google-deepmind/mujoco/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "installer_filename_regex": "^mujoco\\-\\d+(?:[.-]\\d+)*\\-linux\\-x86_64\\.tar\\.gz$",
+    "use_download_filename": true,
+    "windows_installer": false
+  },
+  {
+    "id": "mujoco-arm64",
+    "简介": "MuJoCo（物理仿真器 · ARM64）",
+    "分类": "开发",
+    "enabled": false,
+    "repo_path": "google-deepmind/mujoco",
+    "run_installer": false,
+    "子分类": "物理仿真",
+    "releases_url": "https://github.com/google-deepmind/mujoco/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "installer_filename_regex": "^mujoco\\-\\d+(?:[.-]\\d+)*\\-linux\\-aarch64\\.tar\\.gz$",
+    "use_download_filename": true,
+    "windows_installer": false
   }
 ]
