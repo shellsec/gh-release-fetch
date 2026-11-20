@@ -7,6 +7,7 @@ if [[ "$(uname -s)" != Darwin ]]; then
 fi
 
 cd "$(dirname "$0")/.."
+root="$PWD"
 python="${PYTHON:-python3}"
 arch="$("$python" -c 'import platform; print(platform.machine())')"
 case "$arch" in
@@ -25,15 +26,15 @@ fi
 "$python" -m pip install -r requirements.txt 'pyinstaller>=6.11,<7'
 
 printf '%s\n' "0.0" > "$work/ghrf-version.txt"
-data=(--add-data "$work/ghrf-version.txt:.")
+data=(--add-data "$root/$work/ghrf-version.txt:.")
 for directory in apps apps-mobile apps-tv apps-switch apps-ps4 apps-ps5 apps-vita apps-xbox apps-handheld \
     VibeCodingToolsDown/dist/vibecoding tools/soft_page_check/history tools/soft_page_check/list; do
-    data+=(--add-data "$directory:$directory")
+    data+=(--add-data "$root/$directory:$directory")
 done
-data+=(--add-data "catalog.html:." --add-data "release/windows/gui-icons:gui-icons")
+data+=(--add-data "$root/catalog.html:." --add-data "$root/release/windows/gui-icons:gui-icons")
 for name in tools/soft_page_check/{soft_pages_urls,watch_tier_a_urls,423down_digest_urls}.txt; do
     if [[ -f "$name" ]]; then
-        data+=(--add-data "$name:${name%/*}")
+        data+=(--add-data "$root/$name:${name%/*}")
     fi
 done
 
