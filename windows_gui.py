@@ -696,8 +696,16 @@ class App:
                     if self.enqueue([task]):
                         dialog.destroy()
 
+            def download_clicked_asset(event):
+                iid = listing.identify_row(event.y)
+                if iid and listing.identify_region(event.x, event.y) == "cell":
+                    listing.selection_set(iid)
+                    confirm()
+                return "break"
+
             ttk.Button(dialog, text=tr("加入下载队列"), command=confirm).pack(pady=9)
             listing.bind("<Return>", lambda _: confirm())
+            listing.bind("<Double-Button-1>", download_clicked_asset)
 
         Thread(target=load, daemon=True).start()
 
