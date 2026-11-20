@@ -1,0 +1,19 @@
+[
+  {
+    "id": "np2kai-ps4",
+    "简介": "np2kai-ps4（PC-98 · 需 GoldHEN 与自备 BIOS）",
+    "分类": "模拟器",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "repo_path": "EmiiBytee/np2kai-ps4",
+    "releases_url": "https://github.com/EmiiBytee/np2kai-ps4/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".pkg"
+    ],
+    "installer_filename_regex": "^IV0000\\-BREW00984_00\\-NP2KAIBOOTSTRAP0\\.pkg$"
+  }
+]

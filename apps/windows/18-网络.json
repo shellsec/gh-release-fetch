@@ -1061,5 +1061,65 @@
       "狐径",
       "FoxPath"
     ]
+  },
+  {
+    "id": "trippy-x64",
+    "简介": "Trippy（网络路由跟踪与诊断 · Rust） · x64",
+    "分类": "网络",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "repo_path": "fujiapple852/trippy",
+    "releases_url": "https://github.com/fujiapple852/trippy/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_filename_regex": "^trippy\\-\\d+(?:\\.\\d+)+\\-x86_64\\-pc\\-windows\\-msvc\\.zip$",
+    "use_download_filename": true,
+    "aliases": [
+      "trippy",
+      "Rust",
+      "trippy"
+    ],
+    "_核查": {
+      "日期": "2026-11-18",
+      "来源": "https://github.com/fujiapple852/trippy/releases/tag/0.13.0",
+      "发布标签": "0.13.0",
+      "发布日期": "2025-05-05",
+      "附件": "trippy-0.13.0-x86_64-pc-windows-msvc.zip"
+    },
+    "使用说明": "命令行工具，解压后在终端使用，具体参数见上游文档。"
+  },
+  {
+    "id": "trippy-arm64",
+    "简介": "Trippy（网络路由跟踪与诊断 · Rust） · arm64",
+    "分类": "网络",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "repo_path": "fujiapple852/trippy",
+    "releases_url": "https://github.com/fujiapple852/trippy/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_filename_regex": "^trippy\\-\\d+(?:\\.\\d+)+\\-aarch64\\-pc\\-windows\\-msvc\\.zip$",
+    "use_download_filename": true,
+    "aliases": [
+      "trippy",
+      "Rust",
+      "trippy"
+    ],
+    "_核查": {
+      "日期": "2026-11-18",
+      "来源": "https://github.com/fujiapple852/trippy/releases/tag/0.13.0",
+      "发布标签": "0.13.0",
+      "发布日期": "2025-05-05",
+      "附件": "trippy-0.13.0-aarch64-pc-windows-msvc.zip"
+    },
+    "使用说明": "命令行工具，解压后在终端使用，具体参数见上游文档。"
   }
 ]

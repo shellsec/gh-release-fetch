@@ -1,5 +1,5 @@
 # PyInstaller: dist/exe/*.exe
-param([switch]$SkipInstall, [switch]$Gui, [string]$Version = "20261114.3")
+param([switch]$SkipInstall, [switch]$Gui, [string]$Version = "20261114.3", [string]$ExeDirectory = "dist\exe")
 $ErrorActionPreference = "Stop"
 $Root = Split-Path -Parent $PSScriptRoot
 Set-Location $Root
@@ -15,7 +15,7 @@ if (-not $SkipInstall) {
     if ($LASTEXITCODE -ne 0) { throw "Build dependencies could not be installed." }
 }
 
-$Dist = Join-Path $Root "dist\exe"
+$Dist = Join-Path $Root $ExeDirectory
 $Work = Join-Path $Root "build\pyinstaller"
 New-Item -ItemType Directory -Force -Path $Dist, $Work | Out-Null
 $VersionFile = Join-Path $Work "ghrf-version.txt"

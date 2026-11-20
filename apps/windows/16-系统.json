@@ -1542,8 +1542,8 @@
     "installer_extensions": [
       ".exe"
     ],
-    "releases_url": "https://bgithub.xyz/Klocman/Bulk-Crap-Uninstaller/releases",
-    "repo_path": "Klocman/Bulk-Crap-Uninstaller"
+    "releases_url": "https://github.com/BCUninstaller/Bulk-Crap-Uninstaller/releases/latest",
+    "repo_path": "BCUninstaller/Bulk-Crap-Uninstaller"
   },
   {
     "id": "wsl",
@@ -2104,5 +2104,35 @@
     ],
     "releases_url": "https://bgithub.xyz/harry0703/MangoDisk/releases",
     "repo_path": "harry0703/MangoDisk"
+  },
+  {
+    "id": "topgrade-x64",
+    "简介": "Topgrade（软件更新任务管理 · Rust） · x64",
+    "分类": "系统",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "repo_path": "topgrade-rs/topgrade",
+    "releases_url": "https://github.com/topgrade-rs/topgrade/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_filename_regex": "^topgrade\\-v\\d+(?:\\.\\d+)+\\-x86_64\\-pc\\-windows\\-msvc\\.zip$",
+    "use_download_filename": true,
+    "aliases": [
+      "topgrade",
+      "Rust",
+      "topgrade"
+    ],
+    "_核查": {
+      "日期": "2026-11-18",
+      "来源": "https://github.com/topgrade-rs/topgrade/releases/tag/v17.17.0",
+      "发布标签": "v17.17.0",
+      "发布日期": "2026-11-17",
+      "附件": "topgrade-v17.17.0-x86_64-pc-windows-msvc.zip"
+    },
+    "使用说明": "命令行工具，解压后在终端使用，具体参数见上游文档。"
   }
 ]

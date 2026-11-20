@@ -321,5 +321,36 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "qzone-restore-archive",
+    "简介": "QQ 空间恢复与归档（Windows x64）",
+    "分类": "备份",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "xiaosu19/QQ-Zone-Restore-Archive",
+    "releases_url": "https://github.com/xiaosu19/QQ-Zone-Restore-Archive/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".exe"
+    ],
+    "installer_filename_regex": "^QQ\\.Zone\\.Restore\\.Archive_\\d+(?:\\.\\d+)+_x64\\-setup\\.exe$",
+    "use_download_filename": true,
+    "windows_installer": false
+  },
+  {
+    "id": "freefilesync",
+    "简介": "FreeFileSync（文件夹比较、同步与备份）",
+    "分类": "备份",
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://freefilesync.org/download.php",
+    "aliases": [
+      "FreeFileSync",
+      "文件同步",
+      "目录备份"
+    ],
+    "run_installer": false
   }
 ]

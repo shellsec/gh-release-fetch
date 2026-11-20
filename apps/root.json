@@ -1,5 +1,7 @@
 {
+  "independent_categories": ["Agent Skills"],
   "_说明": {
+    "independent_categories": "桌面左侧独立入口，按数组顺序显示；名称须与官方条目的「分类」完全相同。空数组表示不配置独立入口。",
     "简介": "本文件供 auto_update.py 读取；除 platforms 内条目外，以下划线开头的键仅作说明，脚本不使用。",
     "运行": "默认处理当前系统对应平台列表里 enabled 为 true 的项。命令行：python auto_update.py [应用id ...]；可选 --platform windows|darwin|linux 强制读取某平台块。若镜像 HTTPS 证书过期，可加 --insecure，或根级 ssl_verify 设为 false（有中间人风险，证书修复后建议改回）。",
     "platforms": "windows / darwin / linux 三套列表互不影响；在对应数组里增删应用即可。每条下的「简介」「分类」为可选中文，仅阅读用，脚本不读取。",

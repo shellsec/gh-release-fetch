@@ -201,5 +201,247 @@
     "download_names": [
       "switch-frame-tap-{ver_plain}-android.apk"
     ]
+  },
+  {
+    "id": "cinema-tv",
+    "简介": "Cinema TV（Android TV 影音客户端）",
+    "repo_path": "pluviotech/cinema-tv",
+    "releases_url": "https://github.com/pluviotech/cinema-tv/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_filename_regex": "^Cinema\\-TV\\.apk$",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "save_subdir": "cinema-tv",
+    "_核查": {
+      "日期": "2026-11-14",
+      "来源": "https://github.com/pluviotech/cinema-tv/releases/tag/android-1.2.9",
+      "状态": "release"
+    },
+    "分类": "多媒体",
+    "enabled": false,
+    "run_installer": false
+  },
+  {
+    "id": "streamyfin",
+    "简介": "Streamyfin（Jellyfin 客户端 · Android TV）",
+    "repo_path": "streamyfin/streamyfin",
+    "releases_url": "https://github.com/streamyfin/streamyfin/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_filename_regex": "^streamyfin\\-android\\-tv\\-apk\\.apk$",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "save_subdir": "streamyfin",
+    "_核查": {
+      "日期": "2026-11-14",
+      "来源": "https://github.com/streamyfin/streamyfin/releases/tag/v0.55.2",
+      "状态": "release"
+    },
+    "分类": "多媒体",
+    "enabled": false,
+    "run_installer": false
+  },
+  {
+    "id": "mydv",
+    "简介": "myDV",
+    "分类": "多媒体",
+    "enabled": false,
+    "repo_path": "mytv-android/myDV",
+    "releases_url": "https://github.com/mytv-android/myDV/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_filename_regex": "^myDV\\-\\d+(?:\\.\\d+)+\\.apk$",
+    "use_download_filename": true,
+    "windows_installer": false,
+    "run_installer": false
+  },
+  {
+    "id": "hgtv",
+    "简介": "HGTV",
+    "分类": "多媒体",
+    "enabled": false,
+    "repo_path": "pan8664716/HGTV",
+    "releases_url": "https://github.com/pan8664716/HGTV/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_filename_regex": "^HGTV_\\d+(?:\\.\\d+)+\\.apk$",
+    "use_download_filename": true,
+    "windows_installer": false,
+    "run_installer": false
+  },
+  {
+    "id": "nativewasmtv",
+    "简介": "NativeWasmTv",
+    "分类": "多媒体",
+    "enabled": false,
+    "repo_path": "buhanzhe/NativeWasmTv",
+    "releases_url": "https://github.com/buhanzhe/NativeWasmTv/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_filename_regex": "^nTv\\.apk$",
+    "use_download_filename": true,
+    "windows_installer": false,
+    "run_installer": false
+  },
+  {
+    "id": "nativewasmtv-arm64",
+    "简介": "NativeWasmTv（ARM64）",
+    "分类": "多媒体",
+    "enabled": false,
+    "repo_path": "buhanzhe/NativeWasmTv",
+    "releases_url": "https://github.com/buhanzhe/NativeWasmTv/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_filename_regex": "^nTv64\\.apk$",
+    "use_download_filename": true,
+    "windows_installer": false,
+    "run_installer": false
+  },
+  {
+    "id": "ghosten-player-arm64",
+    "简介": "GhostenPlayer（ARM64）",
+    "分类": "多媒体",
+    "enabled": false,
+    "repo_path": "GhostenEditor/Ghosten-Player",
+    "releases_url": "https://github.com/GhostenEditor/Ghosten-Player/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_filename_regex": "^app\\-arm64\\-v8a\\-tv\\-release\\.apk$",
+    "use_download_filename": true,
+    "windows_installer": false,
+    "run_installer": false
+  },
+  {
+    "id": "ghosten-player-armv7",
+    "简介": "GhostenPlayer（ARMv7）",
+    "分类": "多媒体",
+    "enabled": false,
+    "repo_path": "GhostenEditor/Ghosten-Player",
+    "releases_url": "https://github.com/GhostenEditor/Ghosten-Player/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_filename_regex": "^app\\-armeabi\\-v7a\\-tv\\-release\\.apk$",
+    "use_download_filename": true,
+    "windows_installer": false,
+    "run_installer": false
+  },
+  {
+    "id": "kodi",
+    "简介": "Kodi（媒体库与 IPTV · Android TV）",
+    "分类": "多媒体",
+    "子分类": "IPTV 播放工具",
+    "aliases": [
+      "IPTV",
+      "M3U",
+      "M3U8",
+      "直播播放器"
+    ],
+    "enabled": false,
+    "run_installer": false,
+    "使用说明": "播放 IPTV 时需自行导入直播源或播放列表。",
+    "open_page_only": true,
+    "open_page_url": "https://kodi.tv/download/android/",
+    "releases_url": "https://kodi.tv/download/android/"
+  },
+  {
+    "id": "tivimate",
+    "简介": "TiviMate（Android TV IPTV 播放器）",
+    "分类": "多媒体",
+    "子分类": "IPTV 播放工具",
+    "aliases": [
+      "IPTV",
+      "M3U",
+      "M3U8",
+      "直播播放器"
+    ],
+    "enabled": false,
+    "run_installer": false,
+    "使用说明": "播放 IPTV 时需自行导入直播源或播放列表。",
+    "open_page_only": true,
+    "open_page_url": "https://tivimate.com/",
+    "releases_url": "https://tivimate.com/"
+  },
+  {
+    "id": "vlc_android_tv",
+    "简介": "VLC（Android TV 媒体播放器）",
+    "分类": "多媒体",
+    "子分类": "IPTV 播放工具",
+    "aliases": [
+      "IPTV",
+      "M3U",
+      "M3U8",
+      "直播播放器"
+    ],
+    "enabled": false,
+    "run_installer": false,
+    "使用说明": "播放 IPTV 时需自行导入直播源或播放列表。",
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=org.videolan.vlc",
+    "releases_url": "https://play.google.com/store/apps/details?id=org.videolan.vlc"
+  },
+  {
+    "id": "tvboxosc",
+    "简介": "TVBoxOSC（Q 版 Java APK · 需自行配置接口）",
+    "分类": "多媒体",
+    "子分类": "IPTV 播放工具",
+    "aliases": [
+      "IPTV",
+      "M3U",
+      "M3U8",
+      "直播播放器"
+    ],
+    "enabled": false,
+    "run_installer": false,
+    "使用说明": "播放 IPTV 时需自行导入直播源或播放列表。",
+    "repo_path": "j4Uq/TVBoxOSC",
+    "releases_url": "https://github.com/j4Uq/TVBoxOSC/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_filename_regex": "^TVBox_q215613905_\\d{8}-\\d{4}-java\\.apk$",
+    "use_download_filename": true,
+    "windows_installer": false
+  },
+  {
+    "id": "boxplayer",
+    "简介": "BoxPlayer（网盘与媒体服务器播放器 · Android TV 官方 APK 下载页）",
+    "分类": "多媒体",
+    "enabled": false,
+    "repo_path": "gaozhangmin/boxplayer",
+    "run_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://xbyvideohub.com/",
+    "aliases": [
+      "BoxPlayer",
+      "媒体播放器",
+      "网盘播放器"
+    ]
   }
 ]

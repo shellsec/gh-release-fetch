@@ -136,27 +136,21 @@
   },
   {
     "id": "rustdesk_server",
-    "简介": "RustDesk Server（hbbs/hbbr）",
+    "repo_path": "rustdesk/rustdesk-server",
+    "简介": "RustDesk Server（官方中继与 ID 服务 · x64 · 未签名）",
     "分类": "远程与协作",
+    "子分类": "远程桌面服务端",
     "enabled": false,
+    "run_installer": false,
+    "releases_url": "https://github.com/rustdesk/rustdesk-server/releases/latest",
     "prefer_api_assets": true,
     "version_tag_as_on_github": true,
-    "windows_installer": false,
-    "process_name": "",
-    "kill_before_install": false,
-    "run_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_filename_regex": "^rustdesk\\-server\\-windows\\-x86_64\\-unsigned\\.zip$",
     "use_download_filename": true,
-    "href_exclude_substrings": [
-      "client",
-      "android",
-      "ios"
-    ],
-    "installer_markers_match_all": true,
-    "installer_markers": [
-      "rustdesk-server"
-    ],
-    "releases_url": "https://bgithub.xyz/rustdesk/rustdesk-server/releases",
-    "repo_path": "rustdesk/rustdesk-server"
+    "windows_installer": false
   },
   {
     "id": "mstsc_manager",
@@ -750,5 +744,56 @@
       "发布标签": "v12.4.12",
       "发布日期": "2026-11-12"
     }
+  },
+  {
+    "id": "netease-uu-remote",
+    "简介": "网易 UU 远程（官方 · Windows）",
+    "分类": "远程与协作",
+    "enabled": false,
+    "run_installer": false,
+    "aliases": [
+      "UU远程",
+      "UU 远程",
+      "UU Remote"
+    ],
+    "open_page_only": true,
+    "open_page_url": "https://uuyc.163.com/download/",
+    "releases_url": "https://uuyc.163.com/download/"
+  },
+  {
+    "id": "rustdesk-api-lejianwen-x64",
+    "repo_path": "lejianwen/rustdesk-api",
+    "简介": "RustDesk API（社区 Web 管理端 · x64）",
+    "分类": "远程与协作",
+    "子分类": "远程桌面服务端",
+    "enabled": false,
+    "run_installer": false,
+    "releases_url": "https://github.com/lejianwen/rustdesk-api/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_filename_regex": "^windows\\-amd64\\.zip$",
+    "use_download_filename": true,
+    "windows_installer": false
+  },
+  {
+    "id": "rustdesk-server-lejianwen-x64",
+    "repo_path": "lejianwen/rustdesk-server",
+    "简介": "RustDesk Server（lejianwen API 兼容分支 · x64 · 未签名）",
+    "分类": "远程与协作",
+    "子分类": "远程桌面服务端",
+    "enabled": false,
+    "run_installer": false,
+    "releases_url": "https://github.com/lejianwen/rustdesk-server/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_filename_regex": "^rustdesk\\-server\\-windows\\-x86_64\\-unsigned\\.zip$",
+    "use_download_filename": true,
+    "windows_installer": false
   }
 ]

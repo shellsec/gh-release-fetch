@@ -138,5 +138,39 @@
     "download_url_templates": [
       "https://github.com/CVasilakis/luncher/releases/download/{ver}/luncher-{ver}.apk"
     ]
+  },
+  {
+    "id": "gentv",
+    "简介": "GenTV",
+    "分类": "桌面与启动器",
+    "enabled": false,
+    "repo_path": "Elaine-Lynn/GenTV",
+    "releases_url": "https://github.com/Elaine-Lynn/GenTV/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_filename_regex": "^gentv\\-tv\\-\\d+(?:\\.\\d+)+\\.apk$",
+    "use_download_filename": true,
+    "windows_installer": false,
+    "run_installer": false
+  },
+  {
+    "id": "tigris",
+    "简介": "Tigris",
+    "分类": "桌面与启动器",
+    "enabled": false,
+    "repo_path": "lesnolie/Tigris",
+    "releases_url": "https://github.com/lesnolie/Tigris/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_filename_regex": "^Tigris\\-v\\d+(?:\\.\\d+)+\\.apk$",
+    "use_download_filename": true,
+    "windows_installer": false,
+    "run_installer": false
   }
 ]

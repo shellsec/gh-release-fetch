@@ -110,17 +110,6 @@
     "url_hint": "tailscale"
   },
   {
-    "id": "vlc_ios",
-    "简介": "VLC（iOS · App Store；无 GitHub 安装包，勿启用 auto_update）",
-    "分类": "多媒体",
-    "enabled": false,
-    "prefer_api_assets": false,
-    "releases_url": "https://apps.apple.com/app/vlc-for-mobile/id650377962",
-    "repo_path": "videolan/vlc",
-    "run_installer": false,
-    "url_hint": "vlc"
-  },
-  {
     "id": "protonmail_ios",
     "简介": "Proton Mail（iOS · App Store；无 GitHub 安装包，勿启用 auto_update）",
     "分类": "安全",
@@ -493,17 +482,6 @@
     "repo_path": "2dust/v2rayNG",
     "run_installer": false,
     "url_hint": "shadowrocket"
-  },
-  {
-    "id": "ppsspp_ios",
-    "简介": "PPSSPP（iOS · App Store；勿启用 auto_update）",
-    "分类": "游戏",
-    "enabled": false,
-    "prefer_api_assets": false,
-    "releases_url": "https://apps.apple.com/app/ppsspp-psp-emulator/id407294374",
-    "repo_path": "hrydgard/ppsspp",
-    "run_installer": false,
-    "url_hint": "ppsspp"
   },
   {
     "id": "hop_to_desk_ios",

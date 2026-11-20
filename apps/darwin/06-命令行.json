@@ -457,5 +457,125 @@
     ],
     "releases_url": "https://bgithub.xyz/gokcehan/lf/releases",
     "repo_path": "gokcehan/lf"
+  },
+  {
+    "id": "television-arm64",
+    "简介": "Television（终端模糊搜索工具 · Rust） · arm64",
+    "分类": "命令行",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "repo_path": "alexpasmantier/television",
+    "releases_url": "https://github.com/alexpasmantier/television/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "installer_filename_regex": "^tv\\-\\d+(?:\\.\\d+)+\\-aarch64\\-apple\\-darwin\\.tar\\.gz$",
+    "use_download_filename": true,
+    "aliases": [
+      "television",
+      "Rust",
+      "television"
+    ],
+    "_核查": {
+      "日期": "2026-11-18",
+      "来源": "https://github.com/alexpasmantier/television/releases/tag/0.15.9",
+      "发布标签": "0.15.9",
+      "发布日期": "2026-06-14",
+      "附件": "tv-0.15.9-aarch64-apple-darwin.tar.gz"
+    },
+    "使用说明": "命令行工具，解压后在终端使用，具体参数见上游文档。"
+  },
+  {
+    "id": "television-x64",
+    "简介": "Television（终端模糊搜索工具 · Rust） · x64",
+    "分类": "命令行",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "repo_path": "alexpasmantier/television",
+    "releases_url": "https://github.com/alexpasmantier/television/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "installer_filename_regex": "^tv\\-\\d+(?:\\.\\d+)+\\-x86_64\\-apple\\-darwin\\.tar\\.gz$",
+    "use_download_filename": true,
+    "aliases": [
+      "television",
+      "Rust",
+      "television"
+    ],
+    "_核查": {
+      "日期": "2026-11-18",
+      "来源": "https://github.com/alexpasmantier/television/releases/tag/0.15.9",
+      "发布标签": "0.15.9",
+      "发布日期": "2026-06-14",
+      "附件": "tv-0.15.9-x86_64-apple-darwin.tar.gz"
+    },
+    "使用说明": "命令行工具，解压后在终端使用，具体参数见上游文档。"
+  },
+  {
+    "id": "uutils-coreutils-arm64",
+    "简介": "uutils coreutils（GNU coreutils 工具集的 Rust 重写实现） · arm64",
+    "分类": "命令行",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "repo_path": "uutils/coreutils",
+    "releases_url": "https://github.com/uutils/coreutils/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "installer_filename_regex": "^coreutils\\-\\d+(?:\\.\\d+)+\\-aarch64\\-apple\\-darwin\\.tar\\.gz$",
+    "use_download_filename": true,
+    "aliases": [
+      "uutils-coreutils",
+      "Rust",
+      "coreutils"
+    ],
+    "_核查": {
+      "日期": "2026-11-18",
+      "来源": "https://github.com/uutils/coreutils/releases/tag/0.12.0",
+      "发布标签": "0.12.0",
+      "发布日期": "2026-09-17",
+      "附件": "coreutils-0.12.0-aarch64-apple-darwin.tar.gz"
+    },
+    "使用说明": "命令行工具，解压后在终端使用，具体参数见上游文档。"
+  },
+  {
+    "id": "uutils-coreutils-x64",
+    "简介": "uutils coreutils（GNU coreutils 工具集的 Rust 重写实现） · x64",
+    "分类": "命令行",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "repo_path": "uutils/coreutils",
+    "releases_url": "https://github.com/uutils/coreutils/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "installer_filename_regex": "^coreutils\\-\\d+(?:\\.\\d+)+\\-x86_64\\-apple\\-darwin\\.tar\\.gz$",
+    "use_download_filename": true,
+    "aliases": [
+      "uutils-coreutils",
+      "Rust",
+      "coreutils"
+    ],
+    "_核查": {
+      "日期": "2026-11-18",
+      "来源": "https://github.com/uutils/coreutils/releases/tag/0.12.0",
+      "发布标签": "0.12.0",
+      "发布日期": "2026-09-17",
+      "附件": "coreutils-0.12.0-x86_64-apple-darwin.tar.gz"
+    },
+    "使用说明": "命令行工具，解压后在终端使用，具体参数见上游文档。"
   }
 ]

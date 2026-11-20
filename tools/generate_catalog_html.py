@@ -20,19 +20,23 @@ SHARD_RE = re.compile(r"^(\d+)-(.+)\.json$", re.UNICODE)
 CHROME_DETAIL_RE = re.compile(r"https://chromewebstore\.google\.com/detail/(?:[^/?#]+/)?([a-p]{32})/?(?:[?#].*)?")
 
 
-def collect() -> dict[str, list[dict]]:
+def collect(switch_shards=None) -> dict[str, list[dict]]:
     out: dict[str, list[dict]] = {p: [] for p in PLATFORMS}
     for _, directory, plat, _ in CATALOGS:
         plat_dir = os.path.join(ROOT, directory, plat)
         if not os.path.isdir(plat_dir):
             continue
-        for name in sorted(os.listdir(plat_dir)):
+        shards = switch_shards if plat == "switch" else None
+        for name in sorted(shards if shards is not None else os.listdir(plat_dir)):
             if not name.endswith(".json") or name.startswith("99-"):
                 continue
             m = SHARD_RE.match(name)
             shard_cat = m.group(2) if m else name.replace(".json", "")
-            with open(os.path.join(plat_dir, name), encoding="utf-8") as f:
-                data = json.load(f)
+            if shards is None:
+                with open(os.path.join(plat_dir, name), encoding="utf-8") as f:
+                    data = json.load(f)
+            else:
+                data = shards[name]
             if not isinstance(data, list):
                 continue
             for app in data:
@@ -359,16 +363,19 @@ render();
 """
 
 
-def main() -> None:
-    data = collect()
+def render(data):
     now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     payload = json.dumps(data, ensure_ascii=False, separators=(",", ":")).replace(
         "</", "<\\/"
     )
     platforms = json.dumps([(plat, label) for label, _, plat, _ in CATALOGS], ensure_ascii=False)
-    html = HTML_TMPL.replace("__DATE__", now).replace("__PLATFORMS__", platforms).replace("__DATA__", payload)
+    return HTML_TMPL.replace("__DATE__", now).replace("__PLATFORMS__", platforms).replace("__DATA__", payload)
+
+
+def main() -> None:
+    data = collect()
     with open(OUT, "w", encoding="utf-8") as f:
-        f.write(html)
+        f.write(render(data))
     counts = ", ".join("%s %d" % (p, len(data[p])) for p in PLATFORMS)
     print("Wrote", OUT, "(" + counts + ")")
 

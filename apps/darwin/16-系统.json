@@ -1757,59 +1757,208 @@
     "releases_url": "https://bgithub.xyz/sveinbjornt/Sloth/releases",
     "repo_path": "sveinbjornt/Sloth"
   },
-  {
-    "id": "mangodisk",
-    "简介": "MangoDisk（磁盘清理、空间分析与隐私清理；macOS dmg）",
-    "分类": "系统",
-    "enabled": false,
-    "prefer_api_assets": true,
-    "version_tag_as_on_github": true,
-    "windows_installer": false,
-    "process_name": "",
-    "kill_before_install": false,
-    "run_installer": false,
-    "use_download_filename": true,
-    "href_exclude_substrings": [
-      "source",
-      "src.",
-      "-src",
-      "symbols",
-      "debug",
-      "pdb",
-      "sha256",
-      ".sig",
-      ".asc",
-      ".json",
-      ".txt",
-      ".md",
-      "checksum",
-      ".yml",
-      ".blockmap",
-      ".minisig",
-      ".apk",
-      "-windows",
-      "-linux",
-      "-macos-cli",
-      ".exe",
-      ".AppImage",
-      ".deb",
-      ".tar.gz",
-      "arm64"
-    ],
-    "installer_markers_match_all": true,
-    "installer_markers": [
-      "MangoDisk-",
-      "-macos.dmg"
-    ],
-    "installer_extensions": [
-      ".dmg"
-    ],
-    "aliases": [
-      "mangodisk",
-      "MangoDisk",
-      "芒果磁盘"
-    ],
-    "releases_url": "https://bgithub.xyz/harry0703/MangoDisk/releases",
-    "repo_path": "harry0703/MangoDisk"
+  {
+    "id": "mangodisk",
+    "简介": "MangoDisk（磁盘清理、空间分析与隐私清理；macOS dmg）",
+    "分类": "系统",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "-windows",
+      "-linux",
+      "-macos-cli",
+      ".exe",
+      ".AppImage",
+      ".deb",
+      ".tar.gz",
+      "arm64"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "MangoDisk-",
+      "-macos.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "mangodisk",
+      "MangoDisk",
+      "芒果磁盘"
+    ],
+    "releases_url": "https://bgithub.xyz/harry0703/MangoDisk/releases",
+    "repo_path": "harry0703/MangoDisk"
+  },
+  {
+    "id": "topgrade-arm64",
+    "简介": "Topgrade（软件更新任务管理 · Rust） · arm64",
+    "分类": "系统",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "repo_path": "topgrade-rs/topgrade",
+    "releases_url": "https://github.com/topgrade-rs/topgrade/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "installer_filename_regex": "^topgrade\\-v\\d+(?:\\.\\d+)+\\-aarch64\\-apple\\-darwin\\.tar\\.gz$",
+    "use_download_filename": true,
+    "aliases": [
+      "topgrade",
+      "Rust",
+      "topgrade"
+    ],
+    "_核查": {
+      "日期": "2026-11-18",
+      "来源": "https://github.com/topgrade-rs/topgrade/releases/tag/v17.17.0",
+      "发布标签": "v17.17.0",
+      "发布日期": "2026-11-17",
+      "附件": "topgrade-v17.17.0-aarch64-apple-darwin.tar.gz"
+    },
+    "使用说明": "命令行工具，解压后在终端使用，具体参数见上游文档。"
+  },
+  {
+    "id": "topgrade-x64",
+    "简介": "Topgrade（软件更新任务管理 · Rust） · x64",
+    "分类": "系统",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "repo_path": "topgrade-rs/topgrade",
+    "releases_url": "https://github.com/topgrade-rs/topgrade/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "installer_filename_regex": "^topgrade\\-v\\d+(?:\\.\\d+)+\\-x86_64\\-apple\\-darwin\\.tar\\.gz$",
+    "use_download_filename": true,
+    "aliases": [
+      "topgrade",
+      "Rust",
+      "topgrade"
+    ],
+    "_核查": {
+      "日期": "2026-11-18",
+      "来源": "https://github.com/topgrade-rs/topgrade/releases/tag/v17.17.0",
+      "发布标签": "v17.17.0",
+      "发布日期": "2026-11-17",
+      "附件": "topgrade-v17.17.0-x86_64-apple-darwin.tar.gz"
+    },
+    "使用说明": "命令行工具，解压后在终端使用，具体参数见上游文档。"
+  },
+  {
+    "id": "homebrew",
+    "简介": "Homebrew（macOS 软件包管理器）",
+    "分类": "系统",
+    "enabled": false,
+    "open_page_url": "https://brew.sh/",
+    "run_installer": false,
+    "aliases": [
+      "brew",
+      "软件包管理"
+    ],
+    "repo_path": "Homebrew/brew",
+    "releases_url": "https://github.com/Homebrew/brew/releases",
+    "prefer_api_assets": true,
+    "use_download_filename": true,
+    "installer_extensions": [
+      ".pkg"
+    ],
+    "installer_filename_regex": "^Homebrew\\.pkg$"
+  },
+  {
+    "id": "ice-menu-bar",
+    "简介": "Ice（菜单栏图标管理）",
+    "分类": "系统",
+    "enabled": false,
+    "open_page_url": "https://github.com/jordanbaird/Ice",
+    "run_installer": false,
+    "aliases": [
+      "Ice",
+      "菜单栏"
+    ],
+    "repo_path": "jordanbaird/Ice",
+    "releases_url": "https://github.com/jordanbaird/Ice/releases",
+    "prefer_api_assets": true,
+    "use_download_filename": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_filename_regex": "^Ice\\.zip$"
+  },
+  {
+    "id": "mole",
+    "简介": "Mole（磁盘空间分析与应用清理）",
+    "分类": "系统",
+    "enabled": false,
+    "open_page_url": "https://github.com/tw93/Mole#readme",
+    "run_installer": false,
+    "aliases": [
+      "Mole",
+      "磁盘清理",
+      "卸载残留"
+    ],
+    "repo_path": "tw93/Mole",
+    "open_page_only": true
+  },
+  {
+    "id": "parallels-desktop",
+    "简介": "Parallels Desktop（商业虚拟机）",
+    "分类": "系统",
+    "enabled": false,
+    "open_page_url": "https://www.parallels.com/products/desktop/download/",
+    "run_installer": false,
+    "aliases": [
+      "Parallels",
+      "Windows 虚拟机"
+    ],
+    "open_page_only": true
+  },
+  {
+    "id": "betterdisplay",
+    "简介": "BetterDisplay（显示器缩放、亮度与虚拟屏幕）",
+    "分类": "系统",
+    "enabled": false,
+    "open_page_url": "https://betterdisplay.app/",
+    "run_installer": false,
+    "aliases": [
+      "BetterDisplay",
+      "HiDPI",
+      "外接显示器"
+    ],
+    "repo_path": "waydabber/BetterDisplay",
+    "releases_url": "https://github.com/waydabber/BetterDisplay/releases",
+    "prefer_api_assets": true,
+    "use_download_filename": true,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "installer_filename_regex": "^BetterDisplay-v\\d+(?:\\.\\d+)+\\.dmg$"
   }
 ]

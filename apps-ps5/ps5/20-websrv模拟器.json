@@ -386,7 +386,7 @@
   {
     "id": "websrv-retroarch",
     "简介": "RetroArch（websrv 包）",
-    "分类": "websrv模拟器",
+    "分类": "模拟器",
     "aliases": [
       "RetroArch",
       "模拟器"

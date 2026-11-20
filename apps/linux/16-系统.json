@@ -1153,5 +1153,65 @@
     ],
     "releases_url": "https://bgithub.xyz/harry0703/MangoDisk/releases",
     "repo_path": "harry0703/MangoDisk"
+  },
+  {
+    "id": "topgrade-x64",
+    "简介": "Topgrade（软件更新任务管理 · Rust） · x64",
+    "分类": "系统",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "repo_path": "topgrade-rs/topgrade",
+    "releases_url": "https://github.com/topgrade-rs/topgrade/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "installer_filename_regex": "^topgrade\\-v\\d+(?:\\.\\d+)+\\-x86_64\\-unknown\\-linux\\-gnu\\.tar\\.gz$",
+    "use_download_filename": true,
+    "aliases": [
+      "topgrade",
+      "Rust",
+      "topgrade"
+    ],
+    "_核查": {
+      "日期": "2026-11-18",
+      "来源": "https://github.com/topgrade-rs/topgrade/releases/tag/v17.17.0",
+      "发布标签": "v17.17.0",
+      "发布日期": "2026-11-17",
+      "附件": "topgrade-v17.17.0-x86_64-unknown-linux-gnu.tar.gz"
+    },
+    "使用说明": "命令行工具，解压后在终端使用，具体参数见上游文档。"
+  },
+  {
+    "id": "topgrade-arm64",
+    "简介": "Topgrade（软件更新任务管理 · Rust） · arm64",
+    "分类": "系统",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "repo_path": "topgrade-rs/topgrade",
+    "releases_url": "https://github.com/topgrade-rs/topgrade/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "installer_filename_regex": "^topgrade\\-v\\d+(?:\\.\\d+)+\\-aarch64\\-unknown\\-linux\\-gnu\\.tar\\.gz$",
+    "use_download_filename": true,
+    "aliases": [
+      "topgrade",
+      "Rust",
+      "topgrade"
+    ],
+    "_核查": {
+      "日期": "2026-11-18",
+      "来源": "https://github.com/topgrade-rs/topgrade/releases/tag/v17.17.0",
+      "发布标签": "v17.17.0",
+      "发布日期": "2026-11-17",
+      "附件": "topgrade-v17.17.0-aarch64-unknown-linux-gnu.tar.gz"
+    },
+    "使用说明": "命令行工具，解压后在终端使用，具体参数见上游文档。"
   }
 ]

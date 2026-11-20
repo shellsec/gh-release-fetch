@@ -39,7 +39,7 @@
   {
     "id": "ppsspp",
     "简介": "PPSSPP（PSP 模拟器）",
-    "分类": "游戏",
+    "分类": "模拟器",
     "enabled": false,
     "prefer_api_assets": true,
     "version_tag_as_on_github": true,
@@ -76,7 +76,7 @@
   {
     "id": "dolphin",
     "简介": "Dolphin Emulator（GameCube/Wii 模拟器）",
-    "分类": "游戏",
+    "分类": "模拟器",
     "enabled": false,
     "prefer_api_assets": true,
     "version_tag_as_on_github": true,
@@ -113,7 +113,7 @@
   {
     "id": "retroarch_android",
     "简介": "RetroArch（模拟器前端，Android）",
-    "分类": "游戏",
+    "分类": "模拟器",
     "enabled": false,
     "prefer_api_assets": true,
     "version_tag_as_on_github": true,
@@ -151,7 +151,7 @@
   {
     "id": "lemuroid",
     "简介": "Lemuroid（模拟器前端）",
-    "分类": "游戏",
+    "分类": "模拟器",
     "enabled": false,
     "prefer_api_assets": true,
     "version_tag_as_on_github": true,
@@ -253,5 +253,56 @@
     "kill_before_install": false,
     "windows_installer": false,
     "process_name": ""
+  },
+  {
+    "id": "julius",
+    "简介": "Julius（Android，需凯撒大帝 III 原版数据）",
+    "分类": "游戏",
+    "enabled": false,
+    "repo_path": "bvschaik/julius",
+    "run_installer": false,
+    "releases_url": "https://github.com/bvschaik/julius/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_filename_regex": "^julius\\-\\d+(?:[.-]\\d+)*\\-android\\.apk$",
+    "use_download_filename": true,
+    "windows_installer": false
+  },
+  {
+    "id": "unciv",
+    "简介": "Unciv（Android 官方 APK）",
+    "分类": "游戏",
+    "enabled": false,
+    "repo_path": "yairm210/Unciv",
+    "run_installer": false,
+    "releases_url": "https://github.com/yairm210/Unciv/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_filename_regex": "^Unciv\\-signed\\.apk$",
+    "use_download_filename": true,
+    "windows_installer": false
+  },
+  {
+    "id": "cataclysm-dda",
+    "简介": "Cataclysm DDA（Android x64 APK）",
+    "分类": "游戏",
+    "enabled": false,
+    "repo_path": "CleverRaven/Cataclysm-DDA",
+    "run_installer": false,
+    "releases_url": "https://github.com/CleverRaven/Cataclysm-DDA/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_filename_regex": "^cdda\\-android\\-x64\\-\\d+(?:[.-]\\d+)*\\.apk$",
+    "use_download_filename": true,
+    "windows_installer": false
   }
 ]

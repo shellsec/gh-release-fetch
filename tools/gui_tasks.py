@@ -1,5 +1,6 @@
 """Task dispatch for the Windows download queue."""
 from pathlib import Path
+from tempfile import TemporaryDirectory
 import re
 import sys
 from urllib.parse import quote, unquote, urlsplit
@@ -52,6 +53,29 @@ def release_assets(source, ref):
     release = repository.api(parsed["repo"] + "/releases/" + ("tags/" + quote(tag, safe="") if tag else "latest"))
     assets = [asset for asset in release.get("assets", []) if not parsed["asset"] or asset["name"] == parsed["asset"]]
     return [(a["name"], a["browser_download_url"]) for a in assets]
+
+
+def catalog_assets(app, platform):
+    """Return the catalog default and selectable files without downloading them."""
+    repo = app.get("repo_path")
+    special = (app.get("fixed_download_url") or auto_update.uses_github_pages_manifest(app)
+               or auto_update.uses_go_dev_json(app) or auto_update.uses_docker_desktop(app))
+    if repo and not special:
+        tag = auto_update.pinned_release_tag(app)
+        release = repository.api(repo + "/releases/" + ("tags/" + quote(tag, safe="") if tag else "latest"))
+        version = release["tag_name"]
+        files = [asset for asset in release.get("assets", []) if asset.get("name") and asset.get("browser_download_url")]
+        defaults = [a for a in files if auto_update.asset_targets_app(a["name"], a["browser_download_url"], app)]
+        extensions = (".exe", ".msi", ".msix", ".dmg", ".pkg", ".apk", ".ipa", ".appimage",
+                      ".deb", ".rpm", ".zip", ".7z", ".tar.gz", ".tar.xz", ".nro")
+        choices = [a for a in files if a in defaults or a["name"].lower().endswith(extensions)]
+        return version, choices, defaults[0]["browser_download_url"] if defaults else None
+    with TemporaryDirectory() as folder:
+        version, url = auto_update.check_latest_version(app, str(Path(folder) / "release.html"), platform_key=platform)
+    if not url:
+        return version, [], None
+    name = unquote(urlsplit(url).path.rsplit("/", 1)[-1])
+    return version, [{"name": name, "browser_download_url": url}], url
 
 
 def execute(task, root, report, cancelled, resolved=lambda _: None, save_target=lambda _: None):
@@ -108,10 +132,12 @@ def execute(task, root, report, cancelled, resolved=lambda _: None, save_target=
         if len(apps) != 1:
             raise ValueError("目录中找不到该条目")
         cfg = dict(cfg, download_subdir_by_platform=True)
+        selected = task.get("catalog_asset")
         return auto_update.update_one(
             apps[0], str(output), verify=auto_update.resolve_tls_verify(cfg, False),
             platform_key=platform, cfg=cfg, download_only=True,
             transfer=dict(transfer, threads=threads, resolved=resolved, destination=destination),
+            selected_asset=selected,
         )
     source = task["source"]
     if kind == "release-latest":

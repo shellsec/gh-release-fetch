@@ -485,5 +485,22 @@
       "发布标签": "v0.1.0",
       "发布日期": "2026-11-04"
     }
+  },
+  {
+    "id": "julius",
+    "简介": "Julius（Switch，需凯撒大帝 III 原版数据）",
+    "分类": "游戏移植",
+    "enabled": false,
+    "repo_path": "bvschaik/julius",
+    "run_installer": false,
+    "releases_url": "https://github.com/bvschaik/julius/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_filename_regex": "^julius\\-\\d+(?:[.-]\\d+)*\\-switch\\.zip$",
+    "use_download_filename": true,
+    "windows_installer": false
   }
 ]

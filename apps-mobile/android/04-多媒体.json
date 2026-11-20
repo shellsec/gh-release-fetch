@@ -66,7 +66,15 @@
     "use_download_filename": true,
     "save_name": "vlc_android.apk",
     "releases_url": "https://bgithub.xyz/videolan/vlc-android/releases",
-    "repo_path": "videolan/vlc-android"
+    "repo_path": "videolan/vlc-android",
+    "aliases": [
+      "IPTV",
+      "M3U",
+      "M3U8",
+      "直播播放器"
+    ],
+    "子分类": "IPTV 播放工具",
+    "使用说明": "播放 IPTV 时需自行导入直播源或播放列表。"
   },
   {
     "id": "osmand",

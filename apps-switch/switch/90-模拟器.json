@@ -1,0 +1,36 @@
+[
+  {
+    "id": "flycast",
+    "简介": "flycast（Dreamcast / NAOMI）",
+    "分类": "模拟器",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "repo_path": "flyinghead/flycast",
+    "releases_url": "https://github.com/flyinghead/flycast/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".nro"
+    ],
+    "installer_filename_regex": "^flycast\\-\\d+(?:\\.\\d+)+\\.nro$"
+  },
+  {
+    "id": "mgba",
+    "简介": "mgba（GB / GBC / GBA）",
+    "分类": "模拟器",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "repo_path": "mgba-emu/mgba",
+    "releases_url": "https://github.com/mgba-emu/mgba/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".7z"
+    ],
+    "installer_filename_regex": "^mGBA\\-\\d+(?:\\.\\d+)+\\-switch\\.7z$"
+  }
+]

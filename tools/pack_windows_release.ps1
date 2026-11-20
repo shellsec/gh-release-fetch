@@ -6,7 +6,8 @@
 param(
     [switch]$SkipBuild,
     [switch]$Gui,
-    [string]$Version = "20261114.3"
+    [string]$Version = "20261114.3",
+    [string]$ExeDirectory = "dist\exe"
 )
 
 $ErrorActionPreference = "Stop"
@@ -23,10 +24,10 @@ $ZipPath = Join-Path $OutDir "$StageName.zip"
 Write-Host "== Pack Windows release: $StageName ==" -ForegroundColor Cyan
 
 if (-not $SkipBuild) {
-    & (Join-Path $Root "tools\build_exe.ps1") -Gui:$Gui -Version $ver
+    & (Join-Path $Root "tools\build_exe.ps1") -Gui:$Gui -Version $ver -ExeDirectory $ExeDirectory
 }
 
-$ExeDir = Join-Path $Root "dist\exe"
+$ExeDir = Join-Path $Root $ExeDirectory
 $exes = @("GHReleaseFetch.exe")
 foreach ($name in $exes) {
     $p = Join-Path $ExeDir $name

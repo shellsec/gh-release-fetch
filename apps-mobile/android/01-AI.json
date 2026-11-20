@@ -413,5 +413,25 @@
       "发布标签": "v1.3.5",
       "发布日期": "2026-11-08"
     }
+  },
+  {
+    "id": "mika",
+    "简介": "Mika（Android 手机操作 AI 助手 · ARM64）",
+    "分类": "AI",
+    "repo_path": "wangzan101/Mika",
+    "releases_url": "https://github.com/wangzan101/Mika/releases",
+    "prefer_api_assets": true,
+    "use_download_filename": true,
+    "run_installer": false,
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_filename_regex": "^Mika-v\\d+(?:\\.\\d+)+-arm64\\.apk$",
+    "aliases": [
+      "Mika",
+      "手机智能体",
+      "Android AI Agent",
+      "手机操作助手"
+    ]
   }
 ]

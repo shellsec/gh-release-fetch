@@ -176,5 +176,28 @@
       "发布标签": "v0.0.9",
       "发布日期": "2026-11-10"
     }
+  },
+  {
+    "id": "ps4-games-installer",
+    "简介": "PS4 Games Installer（PS4 本地与远程 PKG 管理）",
+    "分类": "系统与文件",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "e1z0/PS4-Games-Installer",
+    "releases_url": "https://github.com/e1z0/PS4-Games-Installer/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".pkg"
+    ],
+    "installer_filename_regex": "^PS4Game_installer-r\\d+\\.pkg$",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "save_subdir": "ps4-games-installer",
+    "_核查": {
+      "日期": "2026-11-14",
+      "来源": "https://github.com/e1z0/PS4-Games-Installer/releases/tag/r40",
+      "状态": "release"
+    }
   }
 ]

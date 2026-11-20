@@ -1,0 +1,36 @@
+[
+  {
+    "id": "playtendoh",
+    "简介": "PlayTendoh（多机种套件 · 需支持自制应用的 PS5）",
+    "分类": "模拟器",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "repo_path": "premohq/PlayTendoh",
+    "releases_url": "https://github.com/premohq/PlayTendoh/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_filename_regex": "^PS5\\-ECAM\\-v\\d+(?:\\.\\d+)+\\.zip$"
+  },
+  {
+    "id": "emuc0re",
+    "简介": "EmuC0re（NES 等 · 实验性 · 需 LuaC0re）",
+    "分类": "模拟器",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "repo_path": "egycnq/EmuC0re",
+    "releases_url": "https://github.com/egycnq/EmuC0re/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_filename_regex": "^EmuC0re_\\d+(?:\\.\\d+)+\\.zip$"
+  }
+]

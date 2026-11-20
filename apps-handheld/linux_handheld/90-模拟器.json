@@ -1,0 +1,14 @@
+[
+  {
+    "id": "retrodeck",
+    "简介": "RetroDECK（Steam Deck / Linux 掌机 · Flatpak）",
+    "分类": "模拟器",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "open_page_only": true,
+    "open_page_url": "https://flathub.org/apps/net.retrodeck.retrodeck",
+    "releases_url": "https://flathub.org/apps/net.retrodeck.retrodeck"
+  }
+]

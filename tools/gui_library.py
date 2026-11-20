@@ -15,6 +15,8 @@ from tools import page_index_update
 from tools.download_engine import atomic_json
 from tools.gui_tasks import extract_links
 from tools.gui_language import tr
+from tools.gui_link_converter import LinkConverter
+from tools.gui_qr_reader import QRReader
 from tools.repository_download import finish_action, parse_repository
 
 
@@ -35,8 +37,10 @@ class Library:
         self.history = self.read_history()
         lists = ttk.Frame(tabs, padding=8)
         history = ttk.Frame(tabs, padding=8)
+        link_tools = ttk.Frame(tabs, padding=8)
         tabs.add(lists, text=tr("我的清单"))
         tabs.add(history, text=tr("下载历史"))
+        tabs.add(link_tools, text=tr("加速链接转换"))
         subtabs = ttk.Notebook(lists)
         subtabs.pack(fill="both", expand=True)
         personal = ttk.Frame(subtabs, padding=6)
@@ -56,6 +60,15 @@ class Library:
             (tr("下载所选"), self.download_custom), (tr("导入"), self.import_custom), (tr("导出"), self.export_custom),
             (tr("撤销"), self.undo_custom), (tr("偏好"), self.preferences),
         ])
+        converter = LinkConverter(link_tools, app)
+        converter.pack(side="left", anchor="n")
+
+        def convert_qr_link(url):
+            converter.route.set(converter.auto)
+            converter.input.set(url)
+            converter.convert_now()
+
+        QRReader(link_tools, app, convert_qr_link).pack(side="left", fill="both", expand=True, padx=(12, 0))
         self.history_table = self.panel(history, [
             (tr("批量重新下载"), lambda: self.replay(False)),
             (tr("批量获取最新版"), lambda: self.replay(True)),
@@ -445,6 +458,8 @@ class Library:
             for field in ("result", "resolved_url", "reserved_target"):
                 task.pop(field, None)
             kind = task["kind"]
+            if latest:
+                task.pop("catalog_asset", None)
             if not latest and old.get("resolved_url"):
                 task.update(kind="direct", source=old["resolved_url"], target=str(Path(output) / (task.get("platform") or "repository") / Path(old.get("result") or "download").name))
                 if kind in ("release", "release-latest"):

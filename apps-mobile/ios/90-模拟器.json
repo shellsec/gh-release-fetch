@@ -1,0 +1,38 @@
+[
+  {
+    "id": "delta_ios",
+    "简介": "Delta（NES / SNES / N64 / GB / GBA / DS · App Store）",
+    "分类": "模拟器",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id1048524688",
+    "releases_url": "https://apps.apple.com/app/id1048524688"
+  },
+  {
+    "id": "retroarch_ios",
+    "简介": "RetroArch（多机种 · App Store）",
+    "分类": "模拟器",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id6499539433",
+    "releases_url": "https://apps.apple.com/app/id6499539433"
+  },
+  {
+    "id": "ppsspp_ios",
+    "简介": "PPSSPP（PSP · App Store）",
+    "分类": "模拟器",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id6496972903",
+    "releases_url": "https://apps.apple.com/app/id6496972903"
+  }
+]

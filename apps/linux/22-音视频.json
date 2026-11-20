@@ -1118,5 +1118,194 @@
       "发布标签": "2.4.4",
       "发布日期": "2026-11-12"
     }
+  },
+  {
+    "id": "riplay",
+    "简介": "RiPlay（开源音乐播放器 · x86_64 AppImage）",
+    "repo_path": "fast4x/RiPlay",
+    "releases_url": "https://github.com/fast4x/RiPlay/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".appimage"
+    ],
+    "installer_filename_regex": "^RiPlay\\-v\\d+(?:\\.\\d+)+\\-Linux\\-x86_64\\.AppImage$",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "save_subdir": "riplay",
+    "_核查": {
+      "日期": "2026-11-14",
+      "来源": "https://github.com/fast4x/RiPlay/releases/tag/v0.8.6",
+      "状态": "release"
+    },
+    "分类": "音视频",
+    "enabled": false,
+    "run_installer": false
+  },
+  {
+    "id": "folia-major-amd64-deb",
+    "简介": "Folia Major（佛里音乐播放器 · amd64-deb）",
+    "分类": "音视频",
+    "enabled": false,
+    "repo_path": "chthollyphile/folia-major",
+    "releases_url": "https://github.com/chthollyphile/folia-major/releases/latest",
+    "aliases": [
+      "佛里",
+      "Folia",
+      "Folia Major",
+      "folia-majar"
+    ],
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".deb"
+    ],
+    "installer_filename_regex": "^folia\\-major\\-\\d+(?:\\.\\d+)+\\-linux\\-amd64\\.deb$",
+    "use_download_filename": true,
+    "windows_installer": false,
+    "run_installer": false
+  },
+  {
+    "id": "folia-major-arm64-deb",
+    "简介": "Folia Major（佛里音乐播放器 · arm64-deb）",
+    "分类": "音视频",
+    "enabled": false,
+    "repo_path": "chthollyphile/folia-major",
+    "releases_url": "https://github.com/chthollyphile/folia-major/releases/latest",
+    "aliases": [
+      "佛里",
+      "Folia",
+      "Folia Major",
+      "folia-majar"
+    ],
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".deb"
+    ],
+    "installer_filename_regex": "^folia\\-major\\-\\d+(?:\\.\\d+)+\\-linux\\-arm64\\.deb$",
+    "use_download_filename": true,
+    "windows_installer": false,
+    "run_installer": false
+  },
+  {
+    "id": "folia-major-x86_64-rpm",
+    "简介": "Folia Major（佛里音乐播放器 · x86_64-rpm）",
+    "分类": "音视频",
+    "enabled": false,
+    "repo_path": "chthollyphile/folia-major",
+    "releases_url": "https://github.com/chthollyphile/folia-major/releases/latest",
+    "aliases": [
+      "佛里",
+      "Folia",
+      "Folia Major",
+      "folia-majar"
+    ],
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".rpm"
+    ],
+    "installer_filename_regex": "^folia\\-major\\-\\d+(?:\\.\\d+)+\\-linux\\-x86_64\\.rpm$",
+    "use_download_filename": true,
+    "windows_installer": false,
+    "run_installer": false
+  },
+  {
+    "id": "folia-major-aarch64-rpm",
+    "简介": "Folia Major（佛里音乐播放器 · aarch64-rpm）",
+    "分类": "音视频",
+    "enabled": false,
+    "repo_path": "chthollyphile/folia-major",
+    "releases_url": "https://github.com/chthollyphile/folia-major/releases/latest",
+    "aliases": [
+      "佛里",
+      "Folia",
+      "Folia Major",
+      "folia-majar"
+    ],
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".rpm"
+    ],
+    "installer_filename_regex": "^folia\\-major\\-\\d+(?:\\.\\d+)+\\-linux\\-aarch64\\.rpm$",
+    "use_download_filename": true,
+    "windows_installer": false,
+    "run_installer": false
+  },
+  {
+    "id": "folia-major-x64-tar",
+    "简介": "Folia Major（佛里音乐播放器 · x64-tar）",
+    "分类": "音视频",
+    "enabled": false,
+    "repo_path": "chthollyphile/folia-major",
+    "releases_url": "https://github.com/chthollyphile/folia-major/releases/latest",
+    "aliases": [
+      "佛里",
+      "Folia",
+      "Folia Major",
+      "folia-majar"
+    ],
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "installer_filename_regex": "^folia\\-major\\-\\d+(?:\\.\\d+)+\\-linux\\-x64\\.tar\\.gz$",
+    "use_download_filename": true,
+    "windows_installer": false,
+    "run_installer": false
+  },
+  {
+    "id": "folia-major-arm64-tar",
+    "简介": "Folia Major（佛里音乐播放器 · arm64-tar）",
+    "分类": "音视频",
+    "enabled": false,
+    "repo_path": "chthollyphile/folia-major",
+    "releases_url": "https://github.com/chthollyphile/folia-major/releases/latest",
+    "aliases": [
+      "佛里",
+      "Folia",
+      "Folia Major",
+      "folia-majar"
+    ],
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "installer_filename_regex": "^folia\\-major\\-\\d+(?:\\.\\d+)+\\-linux\\-arm64\\.tar\\.gz$",
+    "use_download_filename": true,
+    "windows_installer": false,
+    "run_installer": false
+  },
+  {
+    "id": "libretv",
+    "简介": "LibreTV（自托管影视搜索工具 · 部署说明）",
+    "分类": "音视频",
+    "enabled": false,
+    "run_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/LibreSpark/LibreTV",
+    "releases_url": "https://github.com/LibreSpark/LibreTV"
+  },
+  {
+    "id": "kodi",
+    "简介": "Kodi（媒体库与 IPTV · Linux）",
+    "分类": "音视频",
+    "子分类": "IPTV 播放工具",
+    "aliases": [
+      "IPTV",
+      "M3U",
+      "M3U8",
+      "直播播放器"
+    ],
+    "enabled": false,
+    "run_installer": false,
+    "使用说明": "播放 IPTV 时需自行导入直播源或播放列表。",
+    "open_page_only": true,
+    "open_page_url": "https://kodi.tv/download/linux/",
+    "releases_url": "https://kodi.tv/download/linux/"
   }
 ]

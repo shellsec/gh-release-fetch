@@ -2,7 +2,7 @@
   {
     "id": "psp5",
     "简介": "PSP5 原生 PSP 模拟器",
-    "分类": "补充模拟器与应用",
+    "分类": "模拟器",
     "aliases": [
       "PSP",
       "PPSSPP",
@@ -52,7 +52,7 @@
   {
     "id": "retroarch-websrv-engine",
     "简介": "RetroArch websrv 前端与资源",
-    "分类": "补充模拟器与应用",
+    "分类": "模拟器",
     "aliases": [
       "RetroArch",
       "模拟器",
@@ -101,7 +101,7 @@
   {
     "id": "retroarch-websrv-cores",
     "简介": "RetroArch websrv 模拟器核心",
-    "分类": "补充模拟器与应用",
+    "分类": "模拟器",
     "aliases": [
       "RetroArch",
       "核心",

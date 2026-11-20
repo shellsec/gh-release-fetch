@@ -1,0 +1,151 @@
+[
+  {
+    "id": "ppsspp",
+    "简介": "ppsspp（PSP）",
+    "分类": "模拟器",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "repo_path": "hrydgard/ppsspp",
+    "releases_url": "https://github.com/hrydgard/ppsspp/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".appimage"
+    ],
+    "installer_filename_regex": "^PPSSPP\\-v\\d+(?:\\.\\d+)+\\-anylinux\\-x86_64\\.AppImage$"
+  },
+  {
+    "id": "vita3k",
+    "简介": "Vita3K（PS Vita · 持续构建）",
+    "分类": "模拟器",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "repo_path": "Vita3K/Vita3K",
+    "releases_url": "https://github.com/Vita3K/Vita3K/releases/tag/continuous",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".appimage"
+    ],
+    "installer_filename_regex": "^Vita3K\\-x86_64\\.AppImage$",
+    "pinned_release_tag": "continuous"
+  },
+  {
+    "id": "shadps4",
+    "简介": "shadPS4（PS4 · SDL 核心）",
+    "分类": "模拟器",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "repo_path": "shadps4-emu/shadPS4",
+    "releases_url": "https://github.com/shadps4-emu/shadPS4/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_filename_regex": "^shadps4\\-linux\\-sdl\\-\\d+(?:\\.\\d+)+\\.zip$"
+  },
+  {
+    "id": "melonds",
+    "简介": "melonDS（Nintendo DS）",
+    "分类": "模拟器",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "repo_path": "melonDS-emu/melonDS",
+    "releases_url": "https://github.com/melonDS-emu/melonDS/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_filename_regex": "^melonDS\\-\\d+(?:\\.\\d+)+\\-appimage\\-x86_64\\.zip$"
+  },
+  {
+    "id": "azahar",
+    "简介": "azahar（Nintendo 3DS）",
+    "分类": "模拟器",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "repo_path": "azahar-emu/azahar",
+    "releases_url": "https://github.com/azahar-emu/azahar/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".appimage"
+    ],
+    "installer_filename_regex": "^azahar\\.AppImage$"
+  },
+  {
+    "id": "flycast",
+    "简介": "flycast（Dreamcast / NAOMI）",
+    "分类": "模拟器",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "repo_path": "flyinghead/flycast",
+    "releases_url": "https://github.com/flyinghead/flycast/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".appimage"
+    ],
+    "installer_filename_regex": "^flycast\\-x86_64\\-\\d+(?:\\.\\d+)+\\.AppImage$"
+  },
+  {
+    "id": "mgba",
+    "简介": "mgba（GB / GBC / GBA）",
+    "分类": "模拟器",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "repo_path": "mgba-emu/mgba",
+    "releases_url": "https://github.com/mgba-emu/mgba/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".appimage"
+    ],
+    "installer_filename_regex": "^mGBA\\-\\d+(?:\\.\\d+)+\\-appimage\\-x64\\.appimage$"
+  },
+  {
+    "id": "xenia",
+    "简介": "xenia-canary-releases（Xbox 360 · Canary）",
+    "分类": "模拟器",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "repo_path": "xenia-canary/xenia-canary-releases",
+    "releases_url": "https://github.com/xenia-canary/xenia-canary-releases/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".xz"
+    ],
+    "installer_filename_regex": "^xenia_canary_linux\\.tar_\\.xz$"
+  },
+  {
+    "id": "dolphin",
+    "简介": "Dolphin（GameCube / Wii）",
+    "分类": "模拟器",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "open_page_only": true,
+    "open_page_url": "https://dolphin-emu.org/download/",
+    "releases_url": "https://dolphin-emu.org/download/"
+  }
+]

@@ -85,6 +85,18 @@ def allowed(name):
     )
 
 
+def independent_categories(config):
+    """Read ordered sidebar category names; older catalogs keep Agent Skills."""
+    names = config.get("independent_categories", ["Agent Skills"])
+    if (not isinstance(names, list) or len(names) > 32
+            or any(not isinstance(name, str) or not 1 <= len(name) <= 48
+                   or name != name.strip() or ":" in name or not name.isprintable()
+                   for name in names)
+            or len({name.casefold() for name in names}) != len(names)):
+        raise ValueError("独立分类配置格式错误")
+    return names
+
+
 def unpack(source, destination):
     with zipfile.ZipFile(source) as archive:
         seen = set()
@@ -105,6 +117,8 @@ def unpack(source, destination):
                     for row in parsed
                 ):
                     raise ValueError(f"目录数据格式错误：{name}")
+                if name == "apps/root.json":
+                    independent_categories(parsed)
             elif '<meta name="catalog-session" content="">' not in content.decode("utf-8"):
                 raise ValueError("网页目录格式不兼容")
             path = destination / name
@@ -130,24 +144,48 @@ def fetch(url, limit):
 
 
 def update(root, report, *, release=RELEASE, fetch_bytes=fetch, routes=ranked_routes):
-    return update_bundle(root, report, ASSET, unpack, release=release, fetch_bytes=fetch, routes=routes)
+    return update_bundle(root, report, ASSET, unpack, release=release, fetch_bytes=fetch_bytes, routes=routes)
 
 
 def update_bundle(root, report, asset, unpack_bundle, *, release=RELEASE, fetch_bytes=fetch,
                   routes=ranked_routes, cache_name="catalog-updates", marker="catalog.html"):
-    sha = fetch_bytes(release + asset + ".sha256", 4096).decode("ascii").strip()
-    match = re.fullmatch(r"([0-9a-fA-F]{64})[ \t]+\*?" + re.escape(asset), sha)
-    if not match:
-        raise ValueError("GitHub 校验文件格式不正确")
-    digest = match[1].lower()
     root = Path(root)
     cache = root / cache_name
-    if current_snapshot(cache, marker).name == digest:
-        return False
+    current = current_snapshot(cache, marker).name
     url = release + asset
-    for name, target in routes(url, "auto", lambda _: None):
-        report(f"正在下载目录 · {name}")
+    attempts = 0
+    cached_copy_seen = False
+
+    def read_digest(target):
+        sha = fetch_bytes(target + ".sha256", 4096).decode("ascii").strip()
+        match = re.fullmatch(r"([0-9a-fA-F]{64})[ \t]+\*?" + re.escape(asset), sha)
+        if not match:
+            raise ValueError("校验文件格式不正确")
+        return match[1].lower()
+
+    def candidates():
+        yield "direct", url
+        yield from ((name, target) for name, target in routes(url, "auto", lambda _: None)
+                    if target != url)
+
+    official_digest = None
+    for name, target in candidates():
+        attempts += 1
         try:
+            if official_digest is None:
+                report(f"正在检查目录 · {name}")
+                digest = read_digest(target)
+                if target == url:
+                    official_digest = digest
+            else:
+                digest = official_digest
+            if current == digest:
+                if target == url or official_digest is not None:
+                    return False
+                # An acceleration service can still have an older cached pair.
+                cached_copy_seen = True
+                continue
+            report(f"正在下载目录 · {name}")
             data = fetch_bytes(target, LIMIT)
             if hashlib.sha256(data).hexdigest() != digest:
                 raise ValueError("SHA-256 不匹配")
@@ -155,7 +193,9 @@ def update_bundle(root, report, asset, unpack_bundle, *, release=RELEASE, fetch_
             continue
         break
     else:
-        raise ValueError("各线路均未返回通过校验的目录包")
+        if cached_copy_seen:
+            raise ValueError("加速线路返回了与本地相同的目录，暂时无法确认最新版本，继续使用现有清单")
+        raise ValueError(f"各线路均未返回通过校验的目录包（继续使用现有清单，已尝试 {attempts} 条线路）")
     cache.mkdir(exist_ok=True)
     snapshot = cache / digest
     if not snapshot.exists():

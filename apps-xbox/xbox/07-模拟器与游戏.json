@@ -60,7 +60,7 @@
   {
     "id": "xbsx2_gamevault_xbox",
     "简介": "XBSX2 for GameVault（PS2 模拟器）",
-    "分类": "模拟器与游戏",
+    "分类": "模拟器",
     "enabled": false,
     "run_installer": false,
     "repo_path": "skitzellez/XBSX2-GameVault",
@@ -89,7 +89,7 @@
   {
     "id": "retroarch_gamevault_xbox",
     "简介": "RetroArch for GameVault（多系统模拟器前端）",
-    "分类": "模拟器与游戏",
+    "分类": "模拟器",
     "enabled": false,
     "run_installer": false,
     "repo_path": "skitzellez/RetroArch-GameVault",
@@ -114,5 +114,51 @@
       "发布标签": "gv-1.22.2.95",
       "发布日期": "2026-11-06"
     }
+  },
+  {
+    "id": "xbsx2-series",
+    "简介": "XBSX2（PS2 模拟器 · Xbox Series X/S · Dev Mode）",
+    "repo_path": "XboxEmulationHub/XBSX2",
+    "releases_url": "https://github.com/XboxEmulationHub/XBSX2/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".msixbundle"
+    ],
+    "installer_filename_regex": "^XBSX2_\\d+(?:\\.\\d+)+_AVX2\\.msixbundle$",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "save_subdir": "xbsx2-series",
+    "_核查": {
+      "日期": "2026-11-14",
+      "来源": "https://github.com/XboxEmulationHub/XBSX2/releases/tag/v2.0.9.2",
+      "状态": "release"
+    },
+    "分类": "模拟器",
+    "enabled": false,
+    "run_installer": false
+  },
+  {
+    "id": "xbsx2-one",
+    "简介": "XBSX2（PS2 模拟器 · Xbox One · Dev Mode）",
+    "repo_path": "XboxEmulationHub/XBSX2",
+    "releases_url": "https://github.com/XboxEmulationHub/XBSX2/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".msixbundle"
+    ],
+    "installer_filename_regex": "^XBSX2_\\d+(?:\\.\\d+)+_SSE4\\.msixbundle$",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "save_subdir": "xbsx2-one",
+    "_核查": {
+      "日期": "2026-11-14",
+      "来源": "https://github.com/XboxEmulationHub/XBSX2/releases/tag/v2.0.9.2",
+      "状态": "release"
+    },
+    "分类": "模拟器",
+    "enabled": false,
+    "run_installer": false
   }
 ]

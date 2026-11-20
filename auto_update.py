@@ -1066,11 +1066,15 @@ def describe_download_failure(error):
 
 def download_installer(
     version, parsed_url, app, local_filename, max_retries=3, verify=True, platform_key=None,
-    *, transfer=None,
+    *, transfer=None, exact_asset=False,
 ):
     version_plain = version.lstrip("v")
-    fallback = build_fallback_urls(version, app)
+    fallback = [] if exact_asset else build_fallback_urls(version, app)
+    if app.get("installer_filename_regex"):
+        fallback = [url for url in fallback if href_allowed_for_app(url, app)]
     download_urls = normalize_download_url_list(parsed_url, fallback)
+    if not download_urls:
+        raise ValueError("该版本没有匹配的下载附件，请打开发布页检查或手动选择附件。")
 
     if app.get("use_download_filename") and parsed_url:
         parsed = urllib.parse.urlparse(parsed_url)
@@ -1380,11 +1384,12 @@ def select_apps(cfg, only_ids, platform_override=None):
 
 
 def update_one(app, download_root, verify=True, platform_key=None, cfg=None, download_only=False,
-               *, transfer=None):
+               *, transfer=None, selected_asset=None):
     cfg = cfg or {}
     aid = app["id"]
     plat = platform_key or detect_platform_key()
-    debug_html = os.path.join(SCRIPT_DIR, f"github_page_{plat}_{aid}.html")
+    debug_root = os.environ.get("GHRF_CATALOG_PROFILE", SCRIPT_DIR)
+    debug_html = os.path.join(debug_root, f"github_page_{plat}_{aid}.html")
 
     root = download_root
     if cfg.get("download_subdir_by_platform"):
@@ -1395,9 +1400,19 @@ def update_one(app, download_root, verify=True, platform_key=None, cfg=None, dow
     target_dir = app_target_dir(root, app, confined=transfer is not None)
 
     logger.info("=== [%s] 开始 === [平台: %s] [下载目录: %s]", aid, plat, target_dir)
-    version, dl_url = check_latest_version(
-        app, debug_html, verify=verify, cfg=cfg, platform_key=plat
-    )
+    if selected_asset is not None:
+        if not download_only or transfer is None:
+            raise ValueError("手选附件仅支持下载。")
+        version, dl_url = selected_asset["version"], selected_asset["url"]
+        address = urllib.parse.urlsplit(dl_url)
+        if address.scheme not in ("http", "https") or not address.hostname or address.username is not None:
+            raise ValueError("附件下载地址无效。")
+        app = dict(app, use_download_filename=False, save_name=selected_asset["name"])
+        transfer = dict(transfer, digest=selected_asset.get("digest"))
+    else:
+        version, dl_url = check_latest_version(
+            app, debug_html, verify=verify, cfg=cfg, platform_key=plat
+        )
     version_plain = version.lstrip("v")
     if version_plain.lower().startswith("release-"):
         version_plain = version_plain[8:]
@@ -1413,7 +1428,8 @@ def update_one(app, download_root, verify=True, platform_key=None, cfg=None, dow
             local_filename = os.path.join(target_dir, base)
 
     installer_path = download_installer(
-        version, dl_url, app, local_filename, verify=verify, platform_key=plat, transfer=transfer
+        version, dl_url, app, local_filename, verify=verify, platform_key=plat, transfer=transfer,
+        exact_asset=selected_asset is not None,
     )
     logger.info("[%s] 安装包已下载: %s", aid, installer_path)
     if download_only:

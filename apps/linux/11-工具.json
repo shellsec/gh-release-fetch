@@ -726,5 +726,128 @@
     "aliases": [
       "Kensaku"
     ]
+  },
+  {
+    "id": "filee-x64",
+    "简介": "Filee（文件转换 · Linux x64）",
+    "分类": "工具",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "KnifeLemon/Filee",
+    "releases_url": "https://github.com/KnifeLemon/Filee/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "installer_filename_regex": "^Filee\\-\\d+(?:\\.\\d+)+\\-linux\\-x64\\.tar\\.gz$",
+    "use_download_filename": true,
+    "windows_installer": false
+  },
+  {
+    "id": "filee-arm64",
+    "简介": "Filee（文件转换 · Linux ARM64）",
+    "分类": "工具",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "KnifeLemon/Filee",
+    "releases_url": "https://github.com/KnifeLemon/Filee/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "installer_filename_regex": "^Filee\\-\\d+(?:\\.\\d+)+\\-linux\\-arm64\\.tar\\.gz$",
+    "use_download_filename": true,
+    "windows_installer": false
+  },
+  {
+    "id": "ouch-x64",
+    "简介": "Ouch（压缩与解压命令行工具 · Rust） · x64",
+    "分类": "工具",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "repo_path": "ouch-org/ouch",
+    "releases_url": "https://github.com/ouch-org/ouch/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "installer_filename_regex": "^ouch\\-x86_64\\-unknown\\-linux\\-gnu\\.tar\\.gz$",
+    "use_download_filename": true,
+    "aliases": [
+      "ouch",
+      "Rust",
+      "ouch"
+    ],
+    "_核查": {
+      "日期": "2026-11-18",
+      "来源": "https://github.com/ouch-org/ouch/releases/tag/0.8.3",
+      "发布标签": "0.8.3",
+      "发布日期": "2026-09-13",
+      "附件": "ouch-x86_64-unknown-linux-gnu.tar.gz"
+    },
+    "使用说明": "命令行工具，解压后在终端使用，具体参数见上游文档。"
+  },
+  {
+    "id": "ouch-arm64",
+    "简介": "Ouch（压缩与解压命令行工具 · Rust） · arm64",
+    "分类": "工具",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "repo_path": "ouch-org/ouch",
+    "releases_url": "https://github.com/ouch-org/ouch/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "installer_filename_regex": "^ouch\\-aarch64\\-unknown\\-linux\\-gnu\\.tar\\.gz$",
+    "use_download_filename": true,
+    "aliases": [
+      "ouch",
+      "Rust",
+      "ouch"
+    ],
+    "_核查": {
+      "日期": "2026-11-18",
+      "来源": "https://github.com/ouch-org/ouch/releases/tag/0.8.3",
+      "发布标签": "0.8.3",
+      "发布日期": "2026-09-13",
+      "附件": "ouch-aarch64-unknown-linux-gnu.tar.gz"
+    },
+    "使用说明": "命令行工具，解压后在终端使用，具体参数见上游文档。"
+  },
+  {
+    "id": "keel-x64",
+    "简介": "Keel（图形文件管理器 · Rust） · x64",
+    "分类": "工具",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "repo_path": "Runitupshawty/keel",
+    "releases_url": "https://github.com/Runitupshawty/keel/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "installer_filename_regex": "^keel\\-v\\d+(?:\\.\\d+)+\\-linux\\-x64\\.tar\\.gz$",
+    "use_download_filename": true,
+    "aliases": [
+      "keel",
+      "Rust",
+      "keel"
+    ],
+    "_核查": {
+      "日期": "2026-11-18",
+      "来源": "https://github.com/Runitupshawty/keel/releases/tag/v0.22.1",
+      "发布标签": "v0.22.1",
+      "发布日期": "2026-10-12",
+      "附件": "keel-v0.22.1-linux-x64.tar.gz"
+    }
   }
 ]

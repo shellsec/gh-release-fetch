@@ -22,5 +22,22 @@
       "状态": "release",
       "发布日期": "2026-11-06"
     }
+  },
+  {
+    "id": "pohw",
+    "简介": "答题守护",
+    "分类": "显示与辅助",
+    "enabled": false,
+    "repo_path": "jagerzhang/PoHW",
+    "releases_url": "https://github.com/jagerzhang/PoHW/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_filename_regex": "^PoHW\\-v\\d+(?:\\.\\d+)+\\.apk$",
+    "use_download_filename": true,
+    "windows_installer": false,
+    "run_installer": false
   }
 ]

@@ -952,5 +952,39 @@
     ],
     "releases_url": "https://bgithub.xyz/objective-see/LuLu/releases",
     "repo_path": "objective-see/LuLu"
+  },
+  {
+    "id": "trafficeye",
+    "简介": "TrafficEye（网络流量与 Web 攻击检测 · Python 工具包）",
+    "分类": "安全",
+    "enabled": false,
+    "aliases": [
+      "TrafficEye",
+      "流量分析",
+      "蓝队"
+    ],
+    "repo_path": "CuriousLearnerDev/TrafficEye",
+    "releases_url": "https://github.com/CuriousLearnerDev/TrafficEye/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "installer_filename_regex": "^TrafficEye_\\d+(?:\\.\\d+)+\\.zip$",
+    "use_download_filename": true,
+    "windows_installer": false,
+    "run_installer": false,
+    "使用说明": "解压后按上游 README 配置 Python 3.10+ 和依赖。Linux 的额外配置见 README。"
+  },
+  {
+    "id": "sherlock",
+    "简介": "Sherlock（按用户名查询公开账号的 Python CLI）",
+    "分类": "安全",
+    "enabled": false,
+    "repo_path": "sherlock-project/sherlock",
+    "run_installer": false,
+    "子分类": "公开信息检索",
+    "open_page_only": true,
+    "open_page_url": "https://github.com/sherlock-project/sherlock#readme"
   }
 ]

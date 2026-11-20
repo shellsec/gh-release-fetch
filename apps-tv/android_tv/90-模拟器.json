@@ -1,0 +1,26 @@
+[
+  {
+    "id": "ppsspp-tv",
+    "简介": "PPSSPP（PSP · Android TV 官方说明）",
+    "分类": "模拟器",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "open_page_only": true,
+    "open_page_url": "https://www.ppsspp.org/docs/reference/legacy-edition/",
+    "releases_url": "https://www.ppsspp.org/docs/reference/legacy-edition/"
+  },
+  {
+    "id": "retroarch-tv",
+    "简介": "RetroArch（多机种 · Android TV APK 安装说明）",
+    "分类": "模拟器",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "open_page_only": true,
+    "open_page_url": "https://docs.libretro.com/guides/install-android/",
+    "releases_url": "https://docs.libretro.com/guides/install-android/"
+  }
+]

@@ -349,5 +349,56 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "ocs-desktop-deb",
+    "简介": "OCS 网课助手（桌面端 · Linux x64 DEB）",
+    "分类": "办公",
+    "enabled": false,
+    "repo_path": "ocsjs/ocs-desktop",
+    "releases_url": "https://github.com/ocsjs/ocs-desktop/releases/latest",
+    "aliases": [
+      "ocs-desktop"
+    ],
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".deb"
+    ],
+    "installer_filename_regex": "^ocs\\-\\d+(?:\\.\\d+)+\\-setup\\-linux\\-amd64\\.deb$",
+    "use_download_filename": true,
+    "windows_installer": false,
+    "run_installer": false
+  },
+  {
+    "id": "ocs-desktop-appimage",
+    "简介": "OCS 网课助手（桌面端 · Linux x64 AppImage）",
+    "分类": "办公",
+    "enabled": false,
+    "repo_path": "ocsjs/ocs-desktop",
+    "releases_url": "https://github.com/ocsjs/ocs-desktop/releases/latest",
+    "aliases": [
+      "ocs-desktop"
+    ],
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".appimage"
+    ],
+    "installer_filename_regex": "^ocs\\-\\d+(?:\\.\\d+)+\\-setup\\-linux\\-x86_64\\.AppImage$",
+    "use_download_filename": true,
+    "windows_installer": false,
+    "run_installer": false
+  },
+  {
+    "id": "xianyu-auto-reply-fix",
+    "简介": "闲鱼智能客服（自托管 Web 后台与回复管理）",
+    "分类": "办公",
+    "enabled": false,
+    "repo_path": "GuDong2003/xianyu-auto-reply-fix",
+    "run_installer": false,
+    "子分类": "电商客服",
+    "open_page_only": true,
+    "open_page_url": "https://github.com/GuDong2003/xianyu-auto-reply-fix#readme"
   }
 ]

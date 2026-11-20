@@ -2,7 +2,7 @@
   {
     "id": "retroarch",
     "简介": "在 Switch 上管理和启动不同平台的模拟器核心",
-    "分类": "游戏与串流",
+    "分类": "模拟器",
     "enabled": false,
     "aliases": [
       "RetroArch",
@@ -170,9 +170,12 @@
   {
     "id": "tico",
     "简介": "tico（Switch 模拟器前端，集中管理游戏库与模拟器模块）",
-    "分类": "游戏与串流",
+    "分类": "模拟器",
     "enabled": false,
-    "aliases": ["ticoverse", "模拟器前端"],
+    "aliases": [
+      "ticoverse",
+      "模拟器前端"
+    ],
     "repo_path": "ticohq/tico",
     "releases_url": "https://github.com/ticohq/tico/releases/latest",
     "prefer_api_assets": true,
@@ -181,10 +184,16 @@
     "run_installer": false,
     "kill_before_install": false,
     "use_download_filename": true,
-    "installer_extensions": [".nro"],
-    "installer_markers": ["tico.nro"],
+    "installer_extensions": [
+      ".nro"
+    ],
+    "installer_markers": [
+      "tico.nro"
+    ],
     "installer_filename_regex": "tico\\.nro",
-    "download_names": ["tico.nro"],
+    "download_names": [
+      "tico.nro"
+    ],
     "save_subdir": "tico",
     "使用说明": "需要 Atmosphère 和 Homebrew Menu。下载 tico.nro 后放到 SD 卡的 /switch/tico/。0.8.0 起模拟器模块需在 tico Store 另行安装。升级前按作者说明备份存档。",
     "_核查": {
@@ -194,5 +203,51 @@
       "发布标签": "0.8.0",
       "发布时间": "2026-10-22T02:29:48Z"
     }
+  },
+  {
+    "id": "vita3k-nx",
+    "简介": "Vita3K-nx（Switch 上的 PS Vita 模拟器）",
+    "repo_path": "NaGaa95/Vita3K-nx",
+    "releases_url": "https://github.com/NaGaa95/Vita3K-nx/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".nro"
+    ],
+    "installer_filename_regex": "^Vita3K\\.nro$",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "save_subdir": "vita3k-nx",
+    "_核查": {
+      "日期": "2026-11-14",
+      "来源": "https://github.com/NaGaa95/Vita3K-nx/releases/tag/1.4.1",
+      "状态": "release"
+    },
+    "分类": "模拟器",
+    "enabled": false,
+    "run_installer": false
+  },
+  {
+    "id": "dsmile-nx",
+    "简介": "D.Smile NX（Switch 上的 V.Smile 模拟器）",
+    "repo_path": "1timewire1/D.Smile_nx",
+    "releases_url": "https://github.com/1timewire1/D.Smile_nx/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".nro"
+    ],
+    "installer_filename_regex": "^dsmile_switch\\.nro$",
+    "windows_installer": false,
+    "use_download_filename": true,
+    "save_subdir": "dsmile-nx",
+    "_核查": {
+      "日期": "2026-11-14",
+      "来源": "https://github.com/1timewire1/D.Smile_nx/releases/tag/1.2.0",
+      "状态": "release"
+    },
+    "分类": "模拟器",
+    "enabled": false,
+    "run_installer": false
   }
 ]

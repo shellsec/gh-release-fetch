@@ -2213,5 +2213,62 @@
     "aliases": [
       "Hop"
     ]
+  },
+  {
+    "id": "ztools-arm64",
+    "简介": "ZTools（效率启动器 · Apple Silicon）",
+    "分类": "效率",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "ZToolsCenter/ZTools",
+    "releases_url": "https://github.com/ZToolsCenter/ZTools/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "installer_filename_regex": "^ZTools\\-\\d+(?:\\.\\d+)+\\-mac\\-arm64\\.dmg$",
+    "use_download_filename": true,
+    "windows_installer": false
+  },
+  {
+    "id": "ztools-x64",
+    "简介": "ZTools（效率启动器 · Intel Mac）",
+    "分类": "效率",
+    "enabled": false,
+    "run_installer": false,
+    "repo_path": "ZToolsCenter/ZTools",
+    "releases_url": "https://github.com/ZToolsCenter/ZTools/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "installer_filename_regex": "^ZTools\\-\\d+(?:\\.\\d+)+\\-mac\\-x64\\.dmg$",
+    "use_download_filename": true,
+    "windows_installer": false
+  },
+  {
+    "id": "tiez",
+    "简介": "贴汁 TieZ（剪贴板管理）",
+    "分类": "效率",
+    "enabled": false,
+    "run_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://tiez.name666.top/zh/",
+    "releases_url": "https://tiez.name666.top/zh/"
+  },
+  {
+    "id": "raycast",
+    "简介": "Raycast（启动器、快捷命令与剪贴板）",
+    "分类": "效率",
+    "enabled": false,
+    "open_page_url": "https://www.raycast.com/",
+    "run_installer": false,
+    "aliases": [
+      "应用启动器",
+      "剪贴板"
+    ],
+    "open_page_only": true
   }
 ]

@@ -431,5 +431,22 @@
     "aliases": [
       "PhotoDemon"
     ]
+  },
+  {
+    "id": "final2x",
+    "简介": "Final2x",
+    "分类": "多媒体与设计",
+    "enabled": false,
+    "repo_path": "Tohrusky/Final2x",
+    "releases_url": "https://github.com/Tohrusky/Final2x/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".7z"
+    ],
+    "installer_filename_regex": "^Final2x\\-windows\\-x64\\-unpacked\\.7z$",
+    "use_download_filename": true,
+    "windows_installer": false,
+    "run_installer": false
   }
 ]

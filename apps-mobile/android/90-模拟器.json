@@ -1,0 +1,54 @@
+[
+  {
+    "id": "vita3k",
+    "简介": "Vita3K（PS Vita · 持续构建）",
+    "分类": "模拟器",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "repo_path": "Vita3K/Vita3K",
+    "releases_url": "https://github.com/Vita3K/Vita3K/releases/tag/continuous",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_filename_regex": "^android\\-latest\\.apk$",
+    "pinned_release_tag": "continuous"
+  },
+  {
+    "id": "azahar",
+    "简介": "azahar（Nintendo 3DS）",
+    "分类": "模拟器",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "repo_path": "azahar-emu/azahar",
+    "releases_url": "https://github.com/azahar-emu/azahar/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_filename_regex": "^azahar\\-android\\-vanilla\\-\\d+(?:\\.\\d+)+\\.apk$"
+  },
+  {
+    "id": "flycast",
+    "简介": "flycast（Dreamcast / NAOMI）",
+    "分类": "模拟器",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "repo_path": "flyinghead/flycast",
+    "releases_url": "https://github.com/flyinghead/flycast/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_filename_regex": "^flycast\\-\\d+(?:\\.\\d+)+\\.apk$"
+  }
+]

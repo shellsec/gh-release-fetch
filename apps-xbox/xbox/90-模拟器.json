@@ -1,0 +1,65 @@
+[
+  {
+    "id": "dolphin-uwp",
+    "简介": "Dolphin（GameCube / Wii · Series X/S Dev Mode）",
+    "分类": "模拟器",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "repo_path": "XboxEmulationHub/Dolphin",
+    "releases_url": "https://github.com/XboxEmulationHub/Dolphin/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".msix"
+    ],
+    "installer_filename_regex": "^DolphinWinRT_\\d+(?:\\.\\d+)+_x64\\.msix$"
+  },
+  {
+    "id": "retroarch-series",
+    "简介": "RetroArch（Xbox Series X/S · Dev Mode）",
+    "分类": "模拟器",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "repo_path": "XboxEmulationHub/RetroArch",
+    "releases_url": "https://github.com/XboxEmulationHub/RetroArch/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".appx"
+    ],
+    "installer_filename_regex": "^RetroArch\\-SeriesConsoles\\.appx$"
+  },
+  {
+    "id": "retroarch-one",
+    "简介": "RetroArch（Xbox One · Dev Mode）",
+    "分类": "模拟器",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "repo_path": "XboxEmulationHub/RetroArch",
+    "releases_url": "https://github.com/XboxEmulationHub/RetroArch/releases/latest",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".appx"
+    ],
+    "installer_filename_regex": "^RetroArch\\-XboxOne\\.appx$"
+  },
+  {
+    "id": "ppsspp-uwp",
+    "简介": "PPSSPP（PSP · Xbox Dev Mode 安装指南）",
+    "分类": "模拟器",
+    "enabled": false,
+    "run_installer": false,
+    "windows_installer": false,
+    "use_download_filename": true,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/XboxEmulationHub/devmodewiki/blob/master/docs/emulation/ppsspp-guide.mdx",
+    "releases_url": "https://github.com/XboxEmulationHub/devmodewiki/blob/master/docs/emulation/ppsspp-guide.mdx"
+  }
+]
