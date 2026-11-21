@@ -257,9 +257,8 @@ def build(output, site_url='', *, refresh_downloads=False, catalog_root=ROOT):
             1,
         )
         content = content.replace(
-            '<div class="modes" id="modes"></div>',
-            '<div class="modes" id="modes"></div>'
-            '<div class="modes"><button type="button" id="skillsShortcut" '
+            '<div class="plats" id="plats"></div>',
+            '<div class="plats" id="plats"><button type="button" id="skillsShortcut" '
             'aria-pressed="false">Agent Skills</button></div>',
             1,
         )
@@ -270,6 +269,12 @@ def build(output, site_url='', *, refresh_downloads=False, catalog_root=ROOT):
             '  skills.disabled = !all.some(row => row.cat === "Agent Skills");\n'
             '  skills.classList.toggle("on", cat === "Agent Skills");\n'
             '  skills.setAttribute("aria-pressed", String(cat === "Agent Skills"));',
+            1,
+        )
+        content = content.replace(
+            '  document.getElementById("modes").innerHTML',
+            '  document.getElementById("plats").prepend(skills);\n'
+            '  document.getElementById("modes").innerHTML',
             1,
         )
         content = content.replace(
