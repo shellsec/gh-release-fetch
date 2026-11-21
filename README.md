@@ -30,6 +30,8 @@ GH Release Fetch 是按平台浏览和下载软件的工具，支持 GitHub Rele
 
 ## 下载与加速下载
 
+**[在线目录](https://shellsec.com/gh-release-fetch/catalog.html)** 支持按平台、分类和别名搜索，与客户端共用远程清单。
+
 Windows 桌面版 **20261120.3** · [版本说明](https://github.com/shellsec/gh-release-fetch/releases/tag/20261120.3)
 
 | 运行平台 | 加速下载（gh-proxy.com） | GitHub 原始下载 |

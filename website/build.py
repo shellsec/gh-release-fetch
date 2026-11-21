@@ -126,6 +126,8 @@ class Site:
         body += self.section('你想完成什么？', '把工具放进真实任务里，选择更简单。', self.collections())
         body += f'''<section class="section"><a class="collection" href="{self.link('tools/brand-motion/')}"><span aria-hidden="true">▷</span><div><h3>品牌动图工作台</h3><p>准备 Images 2.6 分镜提示词，把品牌分镜图预览并导出为循环 GIF。</p></div></a></section>'''
         body += self.section('按分类慢慢逛', '从日常办公到专业创作，每类都有清晰的用途介绍。', self.category_tiles())+'</div>'
+        if (self.out / 'catalog.html').is_file():
+            body = '<p><a class="button" href="' + self.link('catalog.html') + '">浏览与客户端同步的目录</a></p>' + body
         self.page('', '多平台常用软件推荐与工具下载导航', '发现 Windows、macOS、Linux、Android 和 iPhone 常用工具。按分类与场景搜索软件，查看用途介绍和官方获取入口。', body)
         for platform,(name,intro,_) in PLATFORMS.items():
             picks = [self.by_id[id] for id in PLATFORM_PICKS.get(platform,[]) if platform in self.by_id[id]['platforms']]
@@ -229,7 +231,7 @@ class Site:
         (self.out/'assets/catalog.json').write_text(json.dumps(payload,ensure_ascii=False,separators=(',',':')),encoding='utf-8')
 
 
-def build(output, site_url='', *, refresh_downloads=False):
+def build(output, site_url='', *, refresh_downloads=False, catalog_root=ROOT):
     if site_url:
         parsed = urlsplit(site_url)
         if not safe_url(site_url) or parsed.query or parsed.fragment or re.search(r'[^a-zA-Z0-9/_:.-]', site_url):
@@ -238,7 +240,7 @@ def build(output, site_url='', *, refresh_downloads=False):
     # No recursive deletion: rebuilding only replaces generated files.
     output.mkdir(parents=True,exist_ok=True)
     shutil.copytree(HERE/'assets',output/'assets',dirs_exist_ok=True)
-    products = collect()
+    products = collect(catalog_root)
     cache_path = output/'downloads.json'
     records = json.loads(cache_path.read_text(encoding='utf-8')) if cache_path.exists() else {}
     if refresh_downloads:
@@ -246,6 +248,16 @@ def build(output, site_url='', *, refresh_downloads=False):
         for error in errors:
             print('Official-page fallback:',error)
     site = Site(output,site_url,products,records)
+    if catalog_root != ROOT:
+        catalog = Path(catalog_root) / 'catalog.html'
+        content = catalog.read_text(encoding='utf-8')
+        content = content.replace(
+            '通过 open_catalog.bat 打开可使用网页批量下载',
+            '与客户端共用远程清单 · 批量下载请使用本地客户端',
+            1,
+        )
+        content = content.replace('</head>', '<meta name="robots" content="noindex,follow"></head>', 1)
+        (output / 'catalog.html').write_text(content, encoding='utf-8')
     site.listings()
     site.details()
     site.supporting()
@@ -262,8 +274,9 @@ def main():
     parser.add_argument('--output',type=Path,default=ROOT/'dist/site')
     parser.add_argument('--site-url',default='')
     parser.add_argument('--refresh-downloads',action='store_true')
+    parser.add_argument('--catalog-root', type=Path, default=ROOT)
     args = parser.parse_args()
-    build(args.output,args.site_url,refresh_downloads=args.refresh_downloads)
+    build(args.output,args.site_url,refresh_downloads=args.refresh_downloads, catalog_root=args.catalog_root)
 
 
 if __name__ == '__main__':

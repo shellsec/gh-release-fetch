@@ -2,6 +2,8 @@ name: Software directory website
 
 on:
   workflow_dispatch:
+  release:
+    types: [published, edited]
   push:
     branches: [master]
     paths:
@@ -18,7 +20,7 @@ on:
       - 'tests/test_website.py'
       - '.github/workflows/website.yml'
   schedule:
-    - cron: '23 */6 * * *'
+    - cron: '13,43 * * * *'
 
 permissions:
   contents: read
@@ -29,6 +31,7 @@ concurrency:
 
 jobs:
   build:
+    if: github.event_name != 'release' || github.event.release.tag_name == 'catalog-data'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -42,11 +45,25 @@ jobs:
       - name: Configure Pages
         id: pages
         uses: actions/configure-pages@v5
-      - name: Build website and resolve stable downloads
+      - name: Download and verify the client catalog
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python -m pip install requests
+          mkdir -p build/pages-catalog/snapshot
+          gh release download catalog-data --repo "$GITHUB_REPOSITORY" \
+            --pattern 'gh-release-fetch-catalog.zip*' --dir build/pages-catalog
+          cd build/pages-catalog
+          sha256sum --check gh-release-fetch-catalog.zip.sha256
+          cd ../..
+          python -c 'from pathlib import Path; from tools.catalog_update import unpack; p = Path("build/pages-catalog"); unpack(p / "gh-release-fetch-catalog.zip", p / "snapshot")'
+      - name: Build website from verified catalog
         env:
           GITHUB_TOKEN: ${{ github.token }}
-          SITE_URL: ${{ vars.WEBSITE_SITE_URL || steps.pages.outputs.base_url }}
-        run: python -m website.build --site-url "$SITE_URL" --refresh-downloads
+          SITE_URL: ${{ vars.WEBSITE_SITE_URL || 'https://shellsec.com/gh-release-fetch' }}
+        run: |
+          python -m website.build --site-url "$SITE_URL" --catalog-root build/pages-catalog/snapshot --refresh-downloads
+          cp build/pages-catalog/gh-release-fetch-catalog.zip.sha256 dist/site/catalog.sha256
       - uses: actions/upload-pages-artifact@v4
         with:
           path: dist/site
