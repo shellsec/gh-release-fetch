@@ -256,6 +256,31 @@ def build(output, site_url='', *, refresh_downloads=False, catalog_root=ROOT):
             '与客户端共用远程清单 · 批量下载请使用本地客户端',
             1,
         )
+        content = content.replace(
+            '<div class="modes" id="modes"></div>',
+            '<div class="modes" id="modes"></div>'
+            '<div class="modes"><button type="button" id="skillsShortcut" '
+            'aria-pressed="false">Agent Skills</button></div>',
+            1,
+        )
+        content = content.replace(
+            '  const filtered = rows();',
+            '  const filtered = rows();\n'
+            '  const skills = document.getElementById("skillsShortcut");\n'
+            '  skills.disabled = !all.some(row => row.cat === "Agent Skills");\n'
+            '  skills.classList.toggle("on", cat === "Agent Skills");\n'
+            '  skills.setAttribute("aria-pressed", String(cat === "Agent Skills"));',
+            1,
+        )
+        content = content.replace(
+            'document.getElementById("plats").addEventListener',
+            'document.getElementById("skillsShortcut").addEventListener("click", () => {\n'
+            '  cat = cat === "Agent Skills" ? "" : "Agent Skills";\n'
+            '  subcategory = ""; mode = "all"; render();\n'
+            '});\n'
+            'document.getElementById("plats").addEventListener',
+            1,
+        )
         content = content.replace('</head>', '<meta name="robots" content="noindex,follow"></head>', 1)
         (output / 'catalog.html').write_text(content, encoding='utf-8')
     site.listings()
