@@ -28,6 +28,7 @@ from tools import catalog_update, page_index_update, program_update
 from tools.download_engine import DownloadPaused, ROUTES, atomic_json, normalize_route
 from tools.ghrf_runtime import repo_root
 from tools.repository_download import parse_repository
+from tools.skill_filters import filter_options, matches_filter
 
 ROOT = Path(repo_root(__file__))
 BASE = Path(getattr(sys, "_MEIPASS", ROOT))
@@ -188,6 +189,9 @@ class App:
         self.language = "zh-CN"
         self.reload_language = False
         self.load_settings()
+        from tools.gui_mcp import DesktopMCP
+
+        self.mcp = DesktopMCP(self, PROFILE)
         set_language(self.language)
         self.kinds = {tr(label): key for label, key in KINDS.items()}
         self.route.set(tr(self.route.get()))
@@ -197,6 +201,7 @@ class App:
             self.update_task(task)
         window.protocol("WM_DELETE_WINDOW", self.close)
         window.after(80, self.poll)
+        self.mcp.start()
         window.after(250, lambda: self.check_catalog(automatic=True))
         if os.name == "nt" and getattr(sys, "frozen", False):
             window.after(2500, lambda: self.check_program_update(automatic=True))
@@ -338,6 +343,14 @@ class App:
         search_menu.add_command(label=tr("软件资讯搜索"), command=lambda: self.library.search_pages(False))
         search_menu.add_command(label=tr("游戏搜索"), command=lambda: self.library.search_pages(True))
         menu.add_cascade(label=tr("资讯与游戏"), menu=search_menu)
+        self.disk_cleanup = None
+        tools_menu = tk.Menu(menu, tearoff=False)
+        tools_menu.add_command(label=tr("本地 MCP"), command=self.mcp.settings)
+        if os.name == "nt":
+            from tools.gui_disk_cleanup import DiskCleanup
+
+            self.disk_cleanup = DiskCleanup(self, tools_menu, PROFILE)
+        menu.add_cascade(label=tr("工具"), menu=tools_menu)
         language_menu = tk.Menu(menu, tearoff=False)
         language_menu.add_command(label="简体中文", command=lambda: self.change_language("zh-CN"))
         language_menu.add_command(label="English", command=lambda: self.change_language("en"))
@@ -363,6 +376,13 @@ class App:
         right = ttk.Frame(split)
         split.add(left, weight=0)
         split.add(right, weight=1)
+        self.skill_filter_category = None
+        self.skill_filter_bar = ttk.Frame(right)
+        self.skill_filter_label = ttk.Label(self.skill_filter_bar)
+        self.skill_filter_label.pack(side="left", padx=(0, 6))
+        self.skill_filter = ttk.Combobox(self.skill_filter_bar, state="readonly")
+        self.skill_filter.pack(side="left")
+        self.skill_filter.bind("<<ComboboxSelected>>", lambda _: self.render())
         self.categories = self.tree(left, (), tr("平台与分类"))
         self.populate_categories()
         self.categories.bind("<<TreeviewSelect>>", lambda _: self.render())
@@ -375,6 +395,9 @@ class App:
         self.table.bind("<Button-3>", self.catalog_menu)
         actions = ttk.Frame(browse)
         actions.pack(fill="x", pady=(8, 0))
+        self.skill_instruction_button = ttk.Button(actions, text=tr("复制安装指令"),
+                                                   command=self.copy_skill_instructions)
+        self.skill_instruction_button.pack(side="right", padx=(4, 0))
         ttk.Label(actions, textvariable=self.status).pack(side="left")
         for label, callback in ((tr("批量下载"), self.enqueue_checked), (tr("预览附件"), self.preview_selected_asset),
                                 (tr("导入清单"), self.import_saved_list),
@@ -505,6 +528,21 @@ class App:
         group, _, _ = (selected[0] if selected else "all").partition(":")
         category = self.category_names.get(selected[0]) if selected else None
         field = "subcategory" if group in self.independent else "category"
+        skill_category = category if self.independent.get(group) == "Agent Skills" else None
+        options = tuple(filter_options(skill_category))
+        video_category = skill_category == "视频与自媒体"
+        if options:
+            if self.skill_filter_category != skill_category:
+                self.skill_filter_label.configure(text=tr("制作环节" if video_category else "用途"))
+                self.skill_filter.configure(values=[tr("全部环节" if video_category else "全部用途"),
+                                                    *(tr(option) for option in options)])
+                self.skill_filter.current(0)
+                self.skill_filter_bar.pack(before=self.table.master, anchor="w", pady=(0, 5))
+        else:
+            self.skill_filter_bar.pack_forget()
+        self.skill_filter_category = skill_category
+        index = self.skill_filter.current() if options else 0
+        purpose = options[index - 1] if index > 0 else None
         query = self.query.get().strip()
         self.table.delete(*self.table.get_children())
         self.visible.clear()
@@ -515,14 +553,20 @@ class App:
                 continue
             if self.downloadable_only.get() and not (row["chrome"] or row["group"] == "chrome" or is_app_downloadable(row["app"])):
                 continue
-            if group != "all" and row["group"] != group or group == "all" and row["group"] == "chrome":
-                continue
-            if category and row[field] != category:
+            if video_category and purpose:
+                if row["platform"] not in ("windows", "darwin", "linux") or row["group"] in ("chrome", "custom"):
+                    continue
+            else:
+                if group != "all" and row["group"] != group or group == "all" and row["group"] == "chrome":
+                    continue
+                if category and row[field] != category:
+                    continue
+            if purpose and not matches_filter(skill_category, purpose, row["app"]):
                 continue
             score = match_score(query, row["app"]) if query else 0
             if query and score < 40:
                 continue
-            if row["group"] in self.independent:
+            if purpose or row["group"] in self.independent:
                 # Shared page entries are identical across desktop shards.
                 # Downloadable rows retain their platform and asset selection.
                 identity = (row["platform"] if is_app_downloadable(row["app"]) else "",
@@ -535,7 +579,9 @@ class App:
             app = row["app"]
             mode = tr("原版 CRX") if row["chrome"] else tr("Chrome 源码") if row["group"] == "chrome" else tr("下载附件") if is_app_downloadable(app) else tr("官方页面")
             iid = self.table.insert("", "end", text=self.row_title(key, row),
-                                    values=(tr(LABELS[row["platform"]]), tr(row[field] or row["category"]),
+                                    values=(tr(LABELS[row["platform"]]), tr(
+                                        row["subcategory"] if row["group"] in self.independent else row["category"]
+                                    ) or tr(row["category"]),
                                             app.get("repo_path") or app["id"], mode))
             self.visible[iid] = key
         self.update_count()
@@ -590,6 +636,35 @@ class App:
         return [self.entries[key] for key in sorted(self.checked)] or [
             self.entries[self.visible[iid]] for iid in self.table.selection()
         ]
+
+    def copy_skill_instructions(self):
+        rows = [self.entries[key] for key in sorted(self.checked)
+                if self.entries[key]["category"] == "Agent Skills"]
+        if not rows:
+            rows = [self.entries[self.visible[iid]] for iid in self.table.selection() if iid in self.visible]
+        repositories = {}
+        for row in rows:
+            if row["category"] != "Agent Skills":
+                continue
+            try:
+                repo = parse_repository(row["app"].get("repo_path") or row["url"] or "")["repo"]
+            except ValueError:
+                continue
+            repositories.setdefault(repo.casefold(), repo)
+        if not repositories:
+            messagebox.showinfo(tr("复制安装指令"), tr("请选中或勾选带有 GitHub 仓库的 Skill。"), parent=self.window)
+            return
+        sources = list(repositories.values())
+        if len(sources) == 1:
+            instruction = tr("帮我从 GitHub 安装 {repo} 这个 Skill 的最新版本。").format(repo=sources[0])
+        else:
+            instruction = tr("帮我从 GitHub 安装这些 Skill 的最新版本。") + "\n" + "\n".join(
+                f"- {repo}" for repo in sources
+            )
+        instruction += "\n" + tr("如果同一仓库里有多个 Skill，请先列出可安装项让我确认。")
+        self.window.clipboard_clear()
+        self.window.clipboard_append(instruction)
+        messagebox.showinfo(tr("复制安装指令"), tr("安装指令已复制。"), parent=self.window)
 
     def open_selected(self):
         self.open_rows(self.current_rows())
@@ -980,6 +1055,40 @@ class App:
         except (OSError, ValueError) as exc:
             messagebox.showerror(tr("无法加入下载队列"), str(exc))
 
+    def converter_download(self, url, route):
+        address = urlsplit(url)
+        # Keep signed URLs intact and never send their query to a mirror.
+        parts = address.path.strip("/").split("/")
+        resource = parts[2:]
+        release_asset = (
+            len(resource) >= 4 and resource[:2] == ["releases", "download"]
+            or len(resource) == 4 and resource[:3] == ["releases", "latest", "download"]
+        )
+        is_file = (
+            address.hostname in {"codeload.github.com", "raw.githubusercontent.com",
+                                 "objects.githubusercontent.com", "release-assets.githubusercontent.com"}
+            or address.hostname == "github.com"
+            and (release_asset or len(resource) >= 2 and resource[0] in ("archive", "raw"))
+        )
+        if is_file:
+            title = address.path.rsplit("/", 1)[-1] or url
+            self.enqueue([self.make_task(title, "direct", url, route=route,
+                                         release_asset=release_asset)])
+            return tr("已加入下载队列")
+
+        if self.resolver_busy:
+            raise ValueError(tr("正在读取其他仓库的发布附件，请稍后再试。"))
+        repository_url = address._replace(query="", fragment="").geturl()
+        parsed = parse_repository(repository_url)
+        if parsed["kind"] == "source":
+            raise ValueError(tr("请使用仓库首页、发布页或附件直链。"))
+        self.pending_releases = [
+            self.make_task(parsed["repo"], "release", repository_url, ref=parsed["ref"],
+                           route=route, target=None, require_asset_choice=True)
+        ]
+        self.next_release()
+        return tr("正在读取 {title} 的发布附件…").format(title=parsed["repo"])
+
     def extract_sources(self):
         links = extract_links(self.source.get("1.0", "end-1c"))
         if not links:
@@ -1013,7 +1122,7 @@ class App:
                 self.enqueue([dict(task, kind="source")])
             self.next_release()
             return
-        if len(assets) == 1:
+        if len(assets) == 1 and not task.get("require_asset_choice"):
             self.enqueue_assets(task, assets)
             self.next_release()
             return
@@ -1041,6 +1150,7 @@ class App:
         dialog.protocol("WM_DELETE_WINDOW", close_dialog)
         ttk.Button(dialog, text=tr("加入下载队列"), command=confirm).pack(pady=10)
         listing.bind("<Return>", lambda _: confirm())
+        listing.bind("<Double-1>", lambda _: confirm())
 
     def enqueue_assets(self, task, assets):
         try:
@@ -1133,8 +1243,10 @@ class App:
         clear_button.pack(anchor="e", padx=8, pady=(0, 8))
 
     def pause_tasks(self):
-        selected = self.selected_tasks() or self.tasks
-        for task in selected:
+        self.pause_rows(self.selected_tasks() or self.tasks)
+
+    def pause_rows(self, rows):
+        for task in rows:
             if task["state"] == "waiting":
                 task.update(state="paused", message=tr("已暂停"))
                 self.update_task(task)
@@ -1310,7 +1422,8 @@ class App:
             stream = QueueStream(report)
             with redirect_stdout(stream), redirect_stderr(stream):
                 result = execute(task, PROFILE, report, self.stop.is_set,
-                                 lambda url: self.events.put(("resolved", task, url)), reserve)
+                                 lambda url: self.events.put(("resolved", task, url)), reserve,
+                                 lambda *status: self.events.put(("transfer-status", task, status)))
             self.events.put(("finished", task, ("done", str(result or ""))))
         except DownloadPaused as exc:
             self.events.put(("finished", task, ("paused", str(exc))))
@@ -1454,6 +1567,15 @@ class App:
                 event, task, value = self.events.get_nowait()
             except Empty:
                 break
+            if event == "mcp":
+                if task.set_running_or_notify_cancel():
+                    try:
+                        if self.closing:
+                            raise RuntimeError("GH Release Fetch is closing.")
+                        task.set_result(self.mcp.on_gui(*value))
+                    except Exception as exc:
+                        task.set_exception(exc)
+                continue
             if event == "assets":
                 if not self.closing:
                     self.choose_assets(task, value)
@@ -1510,6 +1632,13 @@ class App:
             if event == "resolved":
                 task["resolved_commit" if task["kind"] == "git" else "resolved_url"] = value
                 continue
+            if event == "transfer-status":
+                stage, *details = value
+                if stage == "route":
+                    task.update(transfer_route=details[0], downloaded_bytes=None, total_bytes=None, speed_mib_s=None)
+                elif stage == "progress":
+                    task["downloaded_bytes"], task["total_bytes"], task["speed_mib_s"] = details
+                continue
             if event == "progress":
                 task["message"] = value
                 if not value.startswith("下载进度"):
@@ -1519,6 +1648,8 @@ class App:
                 task.update(state=state, message=message or tr("已打开官方页面"))
                 if state == "done" and message:
                     task["result"] = message
+                    if task.get("mcp") and task.get("total_bytes"):
+                        task["downloaded_bytes"] = task["total_bytes"]
                     self.library.record(task)
                 self.write_log(task, f"{STATES[state]} · {task['message']}")
                 self.active = None
@@ -1532,10 +1663,11 @@ class App:
                 self.save()
             self.update_task(task)
         self.show_queue_detail()
-        if self.closing and self.active is None:
+        cleaning = self.disk_cleanup is not None and self.disk_cleanup.busy
+        if self.closing and self.active is None and not cleaning:
             self.window.destroy()
             return
-        if not self.closing and self.active is None:
+        if not self.closing and self.active is None and not cleaning:
             self.active = next((task for task in self.tasks if task["state"] == "waiting"), None)
             if self.active:
                 self.active.update(state="active", message=tr("正在解析下载地址…"))
@@ -1544,15 +1676,17 @@ class App:
                 self.save()
                 self.stop.clear()
                 Thread(target=self.worker, args=(self.active,), daemon=True).start()
-        if self.install_pending_program_update():
-            return
-        self.check_shutdown()
+        if not cleaning:
+            if self.install_pending_program_update():
+                return
+            self.check_shutdown()
         self.window.after(80, self.poll)
 
     def close(self):
         if self.closing:
             return
         self.closing = True
+        self.mcp.stop()
         self.cancel_shutdown()
         self.pause_tasks_on_close()
         try:
@@ -1629,7 +1763,7 @@ def run_window(window):
 
 if __name__ == "__main__":
     mode = sys.argv[1] if len(sys.argv) > 1 else ""
-    if mode in ("--gui-updater", "--gui-lookup"):
+    if mode in ("--gui-updater", "--gui-lookup", "--mcp-stdio"):
         import io
 
 
@@ -1665,6 +1799,10 @@ if __name__ == "__main__":
                     stream = io.StringIO()
                 setattr(sys, name, stream)
         sys.argv.pop(1)
+        if mode == "--mcp-stdio":
+            from tools.mcp_pipe import run_stdio
+
+            sys.exit(run_stdio(PROFILE, sys.stdin, sys.stdout))
         if mode == "--gui-updater":
             from auto_update import main as updater
             sys.exit(updater(resumable=True))

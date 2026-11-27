@@ -46,7 +46,10 @@ function Build-One($Name, $Entry, [string[]]$More = @()) {
 
 & {
     $Icons = Join-Path $Root "release\windows\gui-icons"
-    $Data = @("--windowed", "--add-data", "$Icons;gui-icons", "--add-data", "$VersionFile;.")
+    $Data = @("--windowed", "--exclude-module", "numpy", "--add-data", "$Icons;gui-icons", "--add-data", "$VersionFile;.")
+    $Data += @("--add-data", "$(Join-Path $Root 'LICENSE');.")
+    $Data += @("--add-data", "$(Join-Path $Root 'NOTICE');.")
+    $Data += @("--collect-data", "tkinterdnd2")
     foreach ($directory in @("apps", "apps-mobile", "apps-tv", "apps-switch", "apps-ps4", "apps-ps5", "apps-vita", "apps-xbox", "apps-handheld", "VibeCodingToolsDown\dist\vibecoding", "tools\soft_page_check\history", "tools\soft_page_check\list")) {
         $Data += @("--add-data", "$(Join-Path $Root $directory);$directory")
     }

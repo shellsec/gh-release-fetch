@@ -25,13 +25,32 @@ The independent [`website/`](website/README.md) adds platform guides, curated to
 
 Preview locally: `python -m website.build`, then `python -m http.server 8080 --bind 127.0.0.1 --directory dist/site`.
 
+## Agent Skills for one-person companies (OPCs)
+
+Open **Agent Skills** in the desktop catalog or online software directory to browse by use case. You can also search by repository name, individual skill name, or alias. Pick skills for the work at hand, such as validating a product idea, running a content channel, or documenting a repeatable client delivery process.
+
+| Stage | Categories and common tasks |
+| --- | --- |
+| Find a direction | **Research and data analysis** · Interview users, research competitors, and validate demand |
+| Build the product | **Development and testing** · Define requirements, prototype, implement, test, and launch |
+| Create content | **Writing and visual creation**, **Video and media** · Write copy, design visuals, edit video, and prepare launch assets |
+| Grow | **Growth and operations** · Work on SEO / GEO / AEO, channels, presales, conversion, and retention |
+| Deliver | **Office and knowledge management** · Onboard customers, verify deliverables, provide support, and document SOPs |
+| Review | **Growth and operations**, **Research and data analysis** · Review attribution, funnels, and experiments to decide what to improve next |
+
+For example, a solo developer can research competitors, build a prototype, and prepare a launch video and search content. Once customers arrive, the developer can create onboarding and acceptance checklists, turn common support questions into knowledge base articles, and use channel and funnel data to prioritize the next iteration. Use **Skill discovery** at any stage to find individual skills or collections. See each project’s documentation for installation, dependencies, and supported agents.
+
+## Local MCP
+
+Open **Tools → Local MCP**. For a client on the same Windows computer, copy the setup instruction to register the current executable with `--mcp-stdio`. To connect from another computer, enable LAN access, apply it, and select the LAN address before copying the HTTP setup instruction. The instruction includes a token. Keep it private.
+
 ## Downloads
 
-Windows desktop release **20261114.3** · [Release notes](https://github.com/shellsec/gh-release-fetch/releases/tag/20261114.3)
+Windows desktop release **20261127.13** · [Release notes](https://github.com/shellsec/gh-release-fetch/releases/tag/20261127.13)
 
 | Host platform | Accelerated (gh-proxy.com) | GitHub direct |
 | --- | --- | --- |
-| Windows x64 | [EXE](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261114.3/GHReleaseFetch.exe) · [ZIP](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261114.3/gh-release-fetch-windows-20261114.3.zip) | [EXE](https://github.com/shellsec/gh-release-fetch/releases/download/20261114.3/GHReleaseFetch.exe) · [ZIP](https://github.com/shellsec/gh-release-fetch/releases/download/20261114.3/gh-release-fetch-windows-20261114.3.zip) · [SHA-256](https://github.com/shellsec/gh-release-fetch/releases/download/20261114.3/SHA256SUMS-20261114.3.txt) |
+| Windows x64 | [EXE](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261127.13/GHReleaseFetch.exe) · [ZIP](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261127.13/gh-release-fetch-windows-20261127.13.zip) | [EXE](https://github.com/shellsec/gh-release-fetch/releases/download/20261127.13/GHReleaseFetch.exe) · [ZIP](https://github.com/shellsec/gh-release-fetch/releases/download/20261127.13/gh-release-fetch-windows-20261127.13.zip) · [SHA-256](https://github.com/shellsec/gh-release-fetch/releases/download/20261127.13/SHA256SUMS-20261127.13.txt) |
 | macOS ARM64 / Apple Silicon | [tar.gz](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-macos-arm64.tar.gz) | [tar.gz](https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-macos-arm64.tar.gz) |
 | Linux x86_64 | [tar.gz](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-linux-x86_64.tar.gz) | [tar.gz](https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-linux-x86_64.tar.gz) |
 | Linux ARM64 | [tar.gz](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-linux-arm64.tar.gz) | [tar.gz](https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-linux-arm64.tar.gz) |
@@ -222,6 +241,10 @@ See the [configuration and maintenance reference](docs/reference.en.md) for fiel
 `windows_gui.py` is the desktop entry point. `lookup_app.py` and `auto_update.py` provide the CLI and download workflows. Shared code is in `tools/`, platform catalogs are in `apps*/`, and the static directory site is in `website/`. Tests are in `tests/`; packaging scripts and assets are in `tools/` and `release/windows/`.
 
 On Windows, run `python windows_gui.py` to start the GUI from source. Run `powershell -ExecutionPolicy Bypass -File tools/build_exe.ps1` to build `dist/exe/GHReleaseFetch.exe`. Build output, dependencies, and local logs belong outside version control.
+
+## License
+
+GH Release Fetch uses [GNU AGPLv3](LICENSE). The MCP handshake links to the source for the corresponding release. See [NOTICE](NOTICE) for third-party notices.
 
 ## Related projects and support
 

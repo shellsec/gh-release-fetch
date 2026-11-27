@@ -1402,9 +1402,9 @@
     "分类": "Agent Skills",
     "子分类": "视频与自媒体",
     "enabled": false,
-    "repo_path": "calesthio/OpenMontage",
+    "repo_path": "OpenMontageInc/OpenMontage",
     "open_page_only": true,
-    "open_page_url": "https://github.com/calesthio/OpenMontage#readme",
+    "open_page_url": "https://github.com/OpenMontageInc/OpenMontage#readme",
     "run_installer": false,
     "aliases": [
       "ai-video-gen",
@@ -2116,6 +2116,882 @@
       "火柴人短视频",
       "分镜",
       "视频配音"
+    ]
+  },
+  {
+    "id": "agent-skill-opc-skills",
+    "简介": "OPC Skills（一人公司技能合集：域名调研、品牌素材、产品发现与 SEO/GEO）",
+    "分类": "Agent Skills",
+    "子分类": "增长与运营",
+    "enabled": false,
+    "repo_path": "ReScienceLab/opc-skills",
+    "open_page_only": true,
+    "open_page_url": "https://github.com/ReScienceLab/opc-skills",
+    "run_installer": false,
+    "aliases": [
+      "OPC Skills",
+      "一人公司",
+      "独立创业",
+      "archive",
+      "banner-creator",
+      "domain-hunter",
+      "logo-creator",
+      "nanobanana",
+      "producthunt",
+      "reddit",
+      "requesthunt",
+      "seo-geo",
+      "twitter"
+    ]
+  },
+  {
+    "id": "agent-skill-luobo-ppt",
+    "简介": "萝卜 PPT（生成和美化可编辑的原生 PPTX）",
+    "分类": "Agent Skills",
+    "子分类": "写作与视觉创作",
+    "enabled": false,
+    "repo_path": "zhouwei713/luobo-ppt",
+    "open_page_only": true,
+    "open_page_url": "https://github.com/zhouwei713/luobo-ppt",
+    "run_installer": false,
+    "aliases": [
+      "luobo-ppt",
+      "萝卜PPT",
+      "PPT 美化",
+      "可编辑 PPT",
+      "PPTX",
+      "幻灯片设计"
+    ]
+  },
+  {
+    "id": "agent-skill-game-copycat",
+    "简介": "Game Copycat（休闲游戏规则分析、原创原型与浏览器验收）",
+    "分类": "Agent Skills",
+    "子分类": "游戏开发",
+    "enabled": false,
+    "repo_path": "hellokaton/game-copycat",
+    "open_page_only": true,
+    "open_page_url": "https://github.com/hellokaton/game-copycat",
+    "run_installer": false,
+    "aliases": [
+      "game-copycat",
+      "游戏开发",
+      "规则分析",
+      "浏览器测试"
+    ]
+  },
+  {
+    "id": "agent-skill-ref2game",
+    "简介": "Ref2Game（参考图到可玩 2D 网页游戏）",
+    "分类": "Agent Skills",
+    "子分类": "游戏开发",
+    "enabled": false,
+    "repo_path": "studioigor/ref2game",
+    "open_page_only": true,
+    "open_page_url": "https://github.com/studioigor/ref2game",
+    "run_installer": false,
+    "aliases": [
+      "ref2game",
+      "截图做游戏",
+      "2D 网页游戏"
+    ]
+  },
+  {
+    "id": "agent-skill-guizang-game-skill",
+    "简介": "归藏 Game Skill（浏览器 3D 动作游戏开发工作流）",
+    "分类": "Agent Skills",
+    "子分类": "游戏开发",
+    "enabled": false,
+    "repo_path": "op7418/guizang-game-skill",
+    "open_page_only": true,
+    "open_page_url": "https://github.com/op7418/guizang-game-skill",
+    "run_installer": false,
+    "aliases": [
+      "guizang-game-skill",
+      "归藏",
+      "歸藏",
+      "Three.js",
+      "单 HTML"
+    ]
+  },
+  {
+    "id": "agent-skill-hallmark",
+    "简介": "Hallmark（网页视觉设计与界面审美检查）",
+    "分类": "Agent Skills",
+    "子分类": "写作与视觉创作",
+    "repo_path": "Nutlope/hallmark",
+    "aliases": [
+      "hallmark",
+      "写作与视觉创作"
+    ],
+    "run_installer": false,
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/Nutlope/hallmark"
+  },
+  {
+    "id": "agent-skill-cloudflare-security-audit",
+    "简介": "Cloudflare Security Audit（代码安全审查与结构化发现）",
+    "分类": "Agent Skills",
+    "子分类": "开发与测试",
+    "repo_path": "cloudflare/security-audit-skill",
+    "aliases": [
+      "security-audit-skill",
+      "开发与测试"
+    ],
+    "run_installer": false,
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/cloudflare/security-audit-skill"
+  },
+  {
+    "id": "agent-skill-rea-video",
+    "简介": "REA Video（视频镜头拆解与 VIDEO.md 输出）",
+    "分类": "Agent Skills",
+    "子分类": "视频与自媒体",
+    "repo_path": "JuneYaooo/rea-video",
+    "aliases": [
+      "rea-video",
+      "视频拆解",
+      "镜头分析",
+      "VIDEO.md"
+    ],
+    "run_installer": false,
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/JuneYaooo/rea-video"
+  },
+  {
+    "id": "agent-skill-rea-toon",
+    "简介": "REA Toon（短剧剧本和镜头分析）",
+    "分类": "Agent Skills",
+    "子分类": "视频与自媒体",
+    "repo_path": "JuneYaooo/rea-toon",
+    "aliases": [
+      "rea-toon",
+      "短剧拆解",
+      "分镜"
+    ],
+    "run_installer": false,
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/JuneYaooo/rea-toon"
+  },
+  {
+    "id": "agent-skill-lemo-animi",
+    "简介": "Lemo Animi（面向 Codex 的定格动画工作流）",
+    "分类": "Agent Skills",
+    "子分类": "视频与自媒体",
+    "repo_path": "lemomo-ai/lemo-animi",
+    "aliases": [
+      "lemo-animi",
+      "定格动画",
+      "短片"
+    ],
+    "run_installer": false,
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/lemomo-ai/lemo-animi"
+  },
+  {
+    "id": "agent-skill-lemo-opuscar",
+    "简介": "Lemo Opuscar（面向 Claude Code 的代码短片风格工具箱）",
+    "分类": "Agent Skills",
+    "子分类": "视频与自媒体",
+    "repo_path": "lemomo-ai/lemo-opuscar",
+    "aliases": [
+      "lemo-opuscar",
+      "代码短片",
+      "Claude Code"
+    ],
+    "run_installer": false,
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/lemomo-ai/lemo-opuscar"
+  },
+  {
+    "id": "agent-skill-pixelfx",
+    "简介": "PixelFX（像素风动效示例与创作技能）",
+    "分类": "Agent Skills",
+    "子分类": "写作与视觉创作",
+    "repo_path": "patch-gg/pixelfx",
+    "aliases": [
+      "pixelfx",
+      "像素特效",
+      "像素动效"
+    ],
+    "run_installer": false,
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/patch-gg/pixelfx"
+  },
+  {
+    "id": "agent-skill-pixel-splats",
+    "简介": "Pixel Splats（像素风 3D 场景示例与创作技能）",
+    "分类": "Agent Skills",
+    "子分类": "写作与视觉创作",
+    "repo_path": "patch-gg/pixel-splats",
+    "aliases": [
+      "pixel-splats",
+      "像素风 3D",
+      "WebGL2"
+    ],
+    "run_installer": false,
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/patch-gg/pixel-splats"
+  },
+  {
+    "id": "agent-reach",
+    "简介": "Agent Reach（跨平台检索公开内容，辅助找热点和选题）",
+    "分类": "Agent Skills",
+    "子分类": "调研与数据分析",
+    "repo_path": "Panniantong/Agent-Reach",
+    "enabled": false,
+    "run_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/Panniantong/Agent-Reach",
+    "aliases": [
+      "热点调研",
+      "选题",
+      "对标分析"
+    ]
+  },
+  {
+    "id": "social-auto-upload",
+    "简介": "social-auto-upload（将准备好的视频上传到抖音、小红书等平台）",
+    "分类": "Agent Skills",
+    "子分类": "视频与自媒体",
+    "repo_path": "dreammis/social-auto-upload",
+    "enabled": false,
+    "run_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/dreammis/social-auto-upload",
+    "aliases": [
+      "抖音发布",
+      "视频上传",
+      "多平台发布"
+    ]
+  },
+  {
+    "id": "openai-plugins",
+    "简介": "OpenAI Plugins（OpenAI 官方 Codex 插件库）",
+    "分类": "Agent Skills",
+    "子分类": "发现技能",
+    "repo_path": "openai/plugins",
+    "enabled": false,
+    "run_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/openai/plugins",
+    "aliases": [
+      "Codex 插件",
+      "官方插件库",
+      "OpenAI Plugins"
+    ]
+  },
+  {
+    "id": "manju-laoli-skill",
+    "简介": "漫剧老李（AI 漫剧与短剧创作技能包，覆盖立项、剧本、资产、分镜、视频提示词和质检）",
+    "分类": "Agent Skills",
+    "子分类": "视频与自媒体",
+    "repo_path": "lixiaoxiao9888-create/manju-laoli-skill",
+    "enabled": false,
+    "run_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/lixiaoxiao9888-create/manju-laoli-skill",
+    "aliases": [
+      "AI 漫剧",
+      "短剧导演",
+      "Short-Drama Director Suite",
+      "short-drama-director",
+      "sd-script-engine",
+      "sd-storyboard-engine",
+      "sd-recon-engine",
+      "sd-xuanhuan-engine"
+    ]
+  },
+  {
+    "id": "modern-web-guidance-src",
+    "简介": "Modern Web Guidance（Chrome 团队的现代 Web 开发指南）",
+    "分类": "Agent Skills",
+    "子分类": "开发与测试",
+    "enabled": false,
+    "repo_path": "GoogleChrome/modern-web-guidance-src",
+    "open_page_only": true,
+    "open_page_url": "https://github.com/GoogleChrome/modern-web-guidance-src",
+    "run_installer": false
+  },
+  {
+    "id": "stitch-skills",
+    "简介": "Stitch Skills（配合 Stitch MCP 生成和迭代界面原型）",
+    "分类": "Agent Skills",
+    "子分类": "开发与测试",
+    "enabled": false,
+    "repo_path": "google-labs-code/stitch-skills",
+    "open_page_only": true,
+    "open_page_url": "https://github.com/google-labs-code/stitch-skills",
+    "run_installer": false
+  },
+  {
+    "id": "qiaomu-goal-meta-skill",
+    "简介": "乔木 Goal Meta Skill（整理 Codex 任务约束与验收标准）",
+    "分类": "Agent Skills",
+    "子分类": "开发与测试",
+    "enabled": false,
+    "repo_path": "joeseesun/qiaomu-goal-meta-skill",
+    "open_page_only": true,
+    "open_page_url": "https://github.com/joeseesun/qiaomu-goal-meta-skill",
+    "run_installer": false
+  },
+  {
+    "id": "qiaomu-anything-to-notebooklm",
+    "简介": "Anything to NotebookLM（整理网页与文档来源到 NotebookLM）",
+    "分类": "Agent Skills",
+    "子分类": "办公与知识管理",
+    "enabled": false,
+    "repo_path": "joeseesun/qiaomu-anything-to-notebooklm",
+    "open_page_only": true,
+    "open_page_url": "https://github.com/joeseesun/qiaomu-anything-to-notebooklm",
+    "run_installer": false
+  },
+  {
+    "id": "qiaomu-bento-ppt",
+    "简介": "乔木 Bento PPT（生成 HTML 演示文稿）",
+    "分类": "Agent Skills",
+    "子分类": "办公与知识管理",
+    "enabled": false,
+    "repo_path": "joeseesun/qiaomu-bento-ppt",
+    "open_page_only": true,
+    "open_page_url": "https://github.com/joeseesun/qiaomu-bento-ppt",
+    "run_installer": false
+  },
+  {
+    "id": "qiaomu-cut-skill",
+    "简介": "乔木 Cut Skill（视频素材整理、双语字幕与渲染）",
+    "分类": "Agent Skills",
+    "子分类": "视频与自媒体",
+    "enabled": false,
+    "repo_path": "joeseesun/qiaomu-cut-skill",
+    "open_page_only": true,
+    "open_page_url": "https://github.com/joeseesun/qiaomu-cut-skill",
+    "run_installer": false
+  },
+  {
+    "id": "qiaomu-codex-imagegen",
+    "简介": "乔木 Codex ImageGen（辅助用 Codex 生成封面与海报）",
+    "分类": "Agent Skills",
+    "子分类": "视频与自媒体",
+    "enabled": false,
+    "repo_path": "joeseesun/qiaomu-codex-imagegen",
+    "open_page_only": true,
+    "open_page_url": "https://github.com/joeseesun/qiaomu-codex-imagegen",
+    "run_installer": false
+  },
+  {
+    "id": "agent-skill-drama-skills",
+    "简介": "drama-skills（AI 短剧与漫剧的剧本、分镜及生成提示词）",
+    "分类": "Agent Skills",
+    "子分类": "视频与自媒体",
+    "repo_path": "zenstory-ai/drama-skills",
+    "enabled": false,
+    "run_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/zenstory-ai/drama-skills",
+    "aliases": [
+      "drama-skills"
+    ]
+  },
+  {
+    "id": "agent-skill-anything2explainer",
+    "简介": "anything2explainer（用 Remotion 制作带旁白和字幕的知识解说视频）",
+    "分类": "Agent Skills",
+    "子分类": "视频与自媒体",
+    "repo_path": "Vincentwei1021/anything2explainer",
+    "enabled": false,
+    "run_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/Vincentwei1021/anything2explainer",
+    "aliases": [
+      "anything2explainer"
+    ]
+  },
+  {
+    "id": "agent-skill-chengfeng-videocut-skills",
+    "简介": "乘风视频剪辑技能（口播剪辑、去除废话与重复内容）",
+    "分类": "Agent Skills",
+    "子分类": "视频与自媒体",
+    "repo_path": "Agentchengfeng/chengfeng-videocut-skills",
+    "enabled": false,
+    "run_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/Agentchengfeng/chengfeng-videocut-skills",
+    "aliases": [
+      "chengfeng-videocut-skills"
+    ]
+  },
+  {
+    "id": "agent-skill-openchatcut",
+    "简介": "OpenChatCut（以自然语言编辑本地视频项目）",
+    "分类": "Agent Skills",
+    "子分类": "视频与自媒体",
+    "repo_path": "0xsline/OpenChatCut",
+    "enabled": false,
+    "run_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/0xsline/OpenChatCut",
+    "aliases": [
+      "OpenChatCut"
+    ]
+  },
+  {
+    "id": "agent-skill-herk-edit-kit",
+    "简介": "herk-edit-kit（竖屏短视频的剪辑与动效工作流）",
+    "分类": "Agent Skills",
+    "子分类": "视频与自媒体",
+    "repo_path": "nateherkai/herk-edit-kit",
+    "enabled": false,
+    "run_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/nateherkai/herk-edit-kit",
+    "aliases": [
+      "herk-edit-kit"
+    ]
+  },
+  {
+    "id": "agent-skill-openfilm",
+    "简介": "OpenFilm（将视频写成网页，用本地 Studio 编辑并渲染为 MP4，需 Node.js 22.2+ 和 FFmpeg）",
+    "分类": "Agent Skills",
+    "子分类": "视频与自媒体",
+    "repo_path": "openfilm/openfilm",
+    "enabled": false,
+    "run_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/openfilm/openfilm",
+    "aliases": [
+      "OpenFilm",
+      "视频 Agent",
+      "网页转视频"
+    ]
+  },
+  {
+    "id": "video-workflow-fredtalk",
+    "简介": "FredTalk（公开口播视频 Skill、Remotion 动效与审片流程）",
+    "分类": "Agent Skills",
+    "子分类": "视频与自媒体",
+    "repo_path": "njrhts2kvv-star/FredTalk",
+    "enabled": false,
+    "run_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/njrhts2kvv-star/FredTalk",
+    "aliases": [
+      "FredTalk 2.5",
+      "口播剪辑",
+      "审片",
+      "fred-remotion-output",
+      "audio-subtitle-roughcut"
+    ]
+  },
+  {
+    "id": "video-workflow-qiaomu-mondo-poster-design",
+    "简介": "乔木 Mondo 海报设计（生成封面与社媒海报的 Skill）",
+    "分类": "Agent Skills",
+    "子分类": "视频与自媒体",
+    "repo_path": "joeseesun/qiaomu-mondo-poster-design",
+    "enabled": false,
+    "run_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/joeseesun/qiaomu-mondo-poster-design",
+    "aliases": [
+      "视频封面",
+      "海报设计",
+      "Mondo"
+    ]
+  },
+  {
+    "id": "workflow-agentskills-agentskills",
+    "简介": "Agent Skills 规范与开发文档",
+    "分类": "Agent Skills",
+    "子分类": "发现技能",
+    "repo_path": "agentskills/agentskills",
+    "enabled": false,
+    "run_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/agentskills/agentskills",
+    "aliases": [
+      "agentskills",
+      "官方技能库"
+    ],
+    "用途标签": [
+      "官方技能库"
+    ]
+  },
+  {
+    "id": "workflow-hesreallyhim-awesome-claude-code",
+    "简介": "Awesome Claude Code（精选技能、插件和开发工具）",
+    "分类": "Agent Skills",
+    "子分类": "发现技能",
+    "repo_path": "hesreallyhim/awesome-claude-code",
+    "enabled": false,
+    "run_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/hesreallyhim/awesome-claude-code",
+    "aliases": [
+      "awesome-claude-code",
+      "精选合集"
+    ],
+    "用途标签": [
+      "精选合集"
+    ]
+  },
+  {
+    "id": "workflow-prisma-skills",
+    "简介": "Prisma Skills（ORM 查询、迁移与升级）",
+    "分类": "Agent Skills",
+    "子分类": "开发与测试",
+    "repo_path": "prisma/skills",
+    "enabled": false,
+    "run_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/prisma/skills",
+    "aliases": [
+      "skills",
+      "开发工作流"
+    ],
+    "用途标签": [
+      "开发工作流"
+    ]
+  },
+  {
+    "id": "workflow-cloudflare-skills",
+    "简介": "Cloudflare Skills（Workers、部署和平台开发）",
+    "分类": "Agent Skills",
+    "子分类": "开发与测试",
+    "repo_path": "cloudflare/skills",
+    "enabled": false,
+    "run_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/cloudflare/skills",
+    "aliases": [
+      "skills",
+      "开发工作流",
+      "前端与界面"
+    ],
+    "用途标签": [
+      "开发工作流",
+      "前端与界面"
+    ]
+  },
+  {
+    "id": "workflow-joeseesun-qiaomu-info-card-designer",
+    "简介": "乔木信息卡设计（生成杂志式 HTML 卡片和图片）",
+    "分类": "Agent Skills",
+    "子分类": "写作与视觉创作",
+    "repo_path": "joeseesun/qiaomu-info-card-designer",
+    "enabled": false,
+    "run_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/joeseesun/qiaomu-info-card-designer",
+    "aliases": [
+      "qiaomu-info-card-designer",
+      "海报与排版"
+    ],
+    "用途标签": [
+      "海报与排版"
+    ]
+  },
+  {
+    "id": "workflow-joeseesun-qiaomu-novel-generator",
+    "简介": "乔木短篇小说生成（中文故事构思与写作）",
+    "分类": "Agent Skills",
+    "子分类": "写作与视觉创作",
+    "repo_path": "joeseesun/qiaomu-novel-generator",
+    "enabled": false,
+    "run_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/joeseesun/qiaomu-novel-generator",
+    "aliases": [
+      "qiaomu-novel-generator",
+      "写作与改稿"
+    ],
+    "用途标签": [
+      "写作与改稿"
+    ]
+  },
+  {
+    "id": "workflow-joeseesun-qiaomu-seo",
+    "简介": "乔木 SEO（技术审计和 AI 搜索优化）",
+    "分类": "Agent Skills",
+    "子分类": "增长与运营",
+    "repo_path": "joeseesun/qiaomu-seo",
+    "enabled": false,
+    "run_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/joeseesun/qiaomu-seo",
+    "aliases": [
+      "qiaomu-seo",
+      "SEO",
+      "GEO",
+      "AEO",
+      "技术 SEO",
+      "AI 搜索优化"
+    ],
+    "用途标签": [
+      "SEO",
+      "GEO",
+      "AEO",
+      "技术 SEO",
+      "AI 搜索优化"
+    ]
+  },
+  {
+    "id": "workflow-mulosbron-seo-skills",
+    "简介": "SEO Skills（技术 SEO、结构化数据与生成式搜索可见性）",
+    "分类": "Agent Skills",
+    "子分类": "增长与运营",
+    "repo_path": "mulosbron/seo-skills",
+    "enabled": false,
+    "run_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/mulosbron/seo-skills",
+    "aliases": [
+      "seo-skills",
+      "SEO",
+      "GEO",
+      "AEO",
+      "Schema",
+      "AI Overviews"
+    ],
+    "用途标签": [
+      "SEO",
+      "GEO",
+      "AEO",
+      "Schema",
+      "AI Overviews"
+    ]
+  },
+  {
+    "id": "growth-social-media-skills-skills",
+    "简介": "Social Media Skills（受众调研、内容日历和社媒复盘）",
+    "分类": "Agent Skills",
+    "子分类": "增长与运营",
+    "repo_path": "social-media-skills/skills",
+    "enabled": false,
+    "run_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/social-media-skills/skills",
+    "aliases": [
+      "audience-research",
+      "competitor-analysis",
+      "content-calendar",
+      "social-strategy",
+      "analytics-and-reporting",
+      "竞品分析",
+      "内容日历"
+    ],
+    "用途标签": [
+      "调研与定位",
+      "内容与渠道运营",
+      "数据与复盘"
+    ]
+  },
+  {
+    "id": "growth-coupler-io-skills",
+    "简介": "Coupler.io Skills（渠道分析、广告和搜索增长，实时数据需配置 Coupler.io）",
+    "分类": "Agent Skills",
+    "子分类": "增长与运营",
+    "repo_path": "coupler-io/skills",
+    "enabled": false,
+    "run_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/coupler-io/skills",
+    "aliases": [
+      "marketing-analytics",
+      "branded-vs-non-branded-search-traffic",
+      "SEO",
+      "GEO",
+      "GA4",
+      "Search-Console",
+      "渠道分析"
+    ],
+    "用途标签": [
+      "搜索增长（SEO / GEO / AEO）",
+      "数据与复盘"
+    ]
+  },
+  {
+    "id": "growth-clamp-sh-analytics-skills",
+    "简介": "Analytics Skills（流量、漏斗与 A/B 测试解读，需接入分析数据）",
+    "分类": "Agent Skills",
+    "子分类": "增长与运营",
+    "repo_path": "clamp-sh/analytics-skills",
+    "enabled": false,
+    "run_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/clamp-sh/analytics-skills",
+    "aliases": [
+      "GA4",
+      "Mixpanel",
+      "Amplitude",
+      "PostHog",
+      "A/B测试",
+      "漏斗分析"
+    ],
+    "用途标签": [
+      "转化与留存",
+      "数据与复盘"
+    ]
+  },
+  {
+    "id": "growth-accoil-product-tracking-skills",
+    "简介": "Product Tracking Skills（扫描代码并设计产品埋点方案）",
+    "分类": "Agent Skills",
+    "子分类": "增长与运营",
+    "repo_path": "Accoil/product-tracking-skills",
+    "enabled": false,
+    "run_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/Accoil/product-tracking-skills",
+    "aliases": [
+      "product-tracking",
+      "tracking-plan",
+      "埋点",
+      "事件追踪",
+      "Segment"
+    ],
+    "用途标签": [
+      "数据与复盘"
+    ]
+  },
+  {
+    "id": "growth-posthog-community-skills",
+    "简介": "PostHog Community Skills（网站流量异常排查，需连接 PostHog MCP）",
+    "分类": "Agent Skills",
+    "子分类": "增长与运营",
+    "repo_path": "PostHog/community-skills",
+    "enabled": false,
+    "run_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/PostHog/community-skills",
+    "aliases": [
+      "example-web-analytics-triage",
+      "PostHog",
+      "网站流量",
+      "异常排查"
+    ],
+    "用途标签": [
+      "数据与复盘"
+    ]
+  },
+  {
+    "id": "delivery-astdeniss-business-skills",
+    "简介": "Business Skills（客户接入、启动会与销售交接）",
+    "分类": "Agent Skills",
+    "子分类": "办公与知识管理",
+    "repo_path": "astDeniss/business-skills",
+    "enabled": false,
+    "run_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/astDeniss/business-skills",
+    "aliases": [
+      "customer-onboarding",
+      "客户接入",
+      "客户启动会",
+      "销售交接"
+    ],
+    "用途标签": [
+      "客户与交付"
+    ]
+  },
+  {
+    "id": "delivery-yuusakuri-agent-skills",
+    "简介": "Product Delivery Skills（编写可测试的验收标准与交付检查项）",
+    "分类": "Agent Skills",
+    "子分类": "办公与知识管理",
+    "repo_path": "yuusakuri/agent-skills",
+    "enabled": false,
+    "run_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/yuusakuri/agent-skills",
+    "aliases": [
+      "deliver-acceptance-criteria",
+      "deliver-edge-cases",
+      "交付验收",
+      "验收标准",
+      "UAT"
+    ],
+    "用途标签": [
+      "客户与交付"
+    ]
+  },
+  {
+    "id": "delivery-anthropics-knowledge-work-plugins",
+    "简介": "Anthropic Knowledge Work Plugins（含客户支持插件，面向 Cowork 和 Claude Code）",
+    "分类": "Agent Skills",
+    "子分类": "办公与知识管理",
+    "repo_path": "anthropics/knowledge-work-plugins",
+    "enabled": false,
+    "run_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/anthropics/knowledge-work-plugins",
+    "aliases": [
+      "customer-support",
+      "ticket-triage",
+      "response-drafting",
+      "escalation",
+      "knowledge-management",
+      "工单分流",
+      "售后支持",
+      "知识库"
+    ],
+    "用途标签": [
+      "客户与交付"
+    ]
+  },
+  {
+    "id": "delivery-fullrefit-claude-agent-skills",
+    "简介": "Claude Agent Skills（含 SOP 生成，将会议纪要或录屏转写整理成标准流程）",
+    "分类": "Agent Skills",
+    "子分类": "办公与知识管理",
+    "repo_path": "fullREFIT/claude-agent-skills",
+    "enabled": false,
+    "run_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/fullREFIT/claude-agent-skills",
+    "aliases": [
+      "sop-generator",
+      "SOP",
+      "标准作业流程",
+      "流程沉淀"
+    ],
+    "用途标签": [
+      "客户与交付"
+    ]
+  },
+  {
+    "id": "gamedev-gamedev-skills-awesome-gamedev-agent-skills",
+    "简介": "Awesome Gamedev Agent Skills（Godot、Unity、Unreal 和 Web 游戏开发技能合集）",
+    "分类": "Agent Skills",
+    "子分类": "开发与测试",
+    "repo_path": "gamedev-skills/awesome-gamedev-agent-skills",
+    "enabled": false,
+    "run_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills",
+    "aliases": [
+      "awesome-gamedev-agent-skills",
+      "gamedev",
+      "游戏开发",
+      "Godot",
+      "Unity",
+      "Unreal",
+      "Roblox",
+      "Three.js",
+      "Phaser",
+      "Ebitengine",
+      "游戏AI"
+    ],
+    "用途标签": [
+      "开发工作流"
     ]
   }
 ]

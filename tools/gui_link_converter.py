@@ -1,6 +1,7 @@
 """Manual GitHub link conversion and local QR generation."""
 from concurrent.futures import ThreadPoolExecutor
 from io import BytesIO
+import os
 from threading import Thread
 import time
 import tkinter as tk
@@ -110,10 +111,15 @@ class LinkConverter(ttk.LabelFrame):
         self.generation = 0
         self.running = False
         self.pending = None
+        self.copy_request = None
         self.qr_visible = False
 
         ttk.Label(self, text=tr("原链接")).grid(row=0, column=0, sticky="w")
-        ttk.Button(self, text=tr("粘贴"), command=self.paste).grid(row=0, column=1, sticky="e")
+        paste_bar = ttk.Frame(self)
+        paste_bar.grid(row=0, column=1, sticky="e")
+        ttk.Button(paste_bar, text=tr("粘贴"), command=self.paste).pack(side="left")
+        ttk.Button(paste_bar, text=tr("粘贴并复制加速链接"),
+                   command=lambda: self.paste(copy=True)).pack(side="left", padx=(4, 0))
         self.input_box = ttk.Entry(self, textvariable=self.input, width=66)
         self.input_box.grid(row=1, column=0, columnspan=2, sticky="ew", pady=(2, 4))
         self.link_actions(2, self.original)
@@ -140,25 +146,70 @@ class LinkConverter(ttk.LabelFrame):
         self.input.trace_add("write", self.changed)
         self.route.trace_add("write", self.changed)
         self.input_box.bind("<Return>", lambda _: self.convert_now())
+        if self.register_drop():
+            self.status.set(tr("可从浏览器拖入 GitHub 链接"))
+
+    def register_drop(self):
+        if os.name != "nt":
+            return False
+        try:
+            from tkinterdnd2 import DND_TEXT, TkinterDnD
+
+            TkinterDnD._require(self.winfo_toplevel())
+            self.input_box.drop_target_register("DND_URL", DND_TEXT)
+            self.input_box.dnd_bind("<<Drop>>", self.drop_link)
+        except (ImportError, RuntimeError, tk.TclError):
+            return False
+        return True
+
+    def drop_link(self, event):
+        # The browser URL format can include a title after the first line.
+        value = event.data.rstrip("\0").strip()
+        candidate = value.splitlines()[0] if value else ""
+        try:
+            url = original_url(candidate)
+        except ValueError as exc:
+            self.status.set(str(exc))
+            return "refuse_drop"
+        self.input.set(url)
+        self.convert_now()
+        return "copy"
 
     def link_actions(self, row, source):
         bar = ttk.Frame(self)
         bar.grid(row=row, column=0, sticky="w")
         ttk.Button(bar, text=tr("打开"), width=7, command=lambda: self.act(source, False)).pack(side="left")
         ttk.Button(bar, text=tr("复制"), width=7, command=lambda: self.act(source, True)).pack(side="left", padx=(4, 0))
+        if source is self.result:
+            ttk.Button(bar, text=tr("下载"), width=7, command=self.download_link).pack(side="left", padx=(4, 0))
 
-    def paste(self):
+    def download_link(self):
+        try:
+            url = original_url(self.input.get())
+            selected = self.route.get()
+            route = "auto" if selected == self.auto else "direct" if selected == self.direct else selected
+            if selected == self.auto and self.result.get():
+                route = next((name for name, prefix in ROUTES if prefix and self.result.get() == prefix + url),
+                             "direct")
+            self.status.set(self.app.converter_download(url, "direct" if direct_only(url) else route))
+        except (OSError, ValueError) as exc:
+            self.status.set(str(exc))
+
+    def paste(self, *, copy=False):
         try:
             value = self.clipboard_get()
         except tk.TclError:
             self.status.set(tr("剪贴板没有文本。"))
             return
         self.input.set(value.strip())
+        if copy:
+            self.copy_request = value
         self.convert_now()
 
     def changed(self, *_):
         self.generation += 1
         self.pending = None
+        self.copy_request = None
         self.result.set("")
         self.original.set("")
         self.status.set("")
@@ -219,6 +270,21 @@ class LinkConverter(ttk.LabelFrame):
     def complete(self, name, url, message=""):
         self.result.set(url)
         self.status.set(message or tr("当前线路：{route}").format(route=self.direct if name == "direct" else name))
+        clipboard = self.copy_request
+        self.copy_request = None
+        if clipboard is not None:
+            if name == "direct":
+                self.status.set(self.status.get() + " " + tr("剪贴板保留原链接。"))
+            else:
+                try:
+                    unchanged = self.clipboard_get() == clipboard
+                except tk.TclError:
+                    unchanged = False
+                if unchanged:
+                    self.act(self.result, True)
+                    self.status.set(self.status.get() + " " + tr("已复制加速链接。"))
+                else:
+                    self.status.set(self.status.get() + " " + tr("剪贴板已变化，请手动复制结果。"))
         self.render_qr()
 
     def act(self, source, copy):

@@ -13,6 +13,150 @@ def tr(text):
 
 
 ENGLISH = {
+    '全部用途': 'All uses',
+    '开发工作流': 'Development workflows',
+    '调研与定位': 'Research and positioning',
+    '客户与交付': 'Customers and delivery',
+    '本地 MCP': 'Local MCP',
+    '随程序启动 MCP': 'Start MCP with the app',
+    '允许局域网访问': 'Allow LAN access',
+    '允许 MCP 提交与管理下载': 'Allow MCP to submit and manage downloads',
+    '局域网使用 HTTP，仅在可信网络开启，请勿映射到公网。': 'LAN access uses HTTP. Enable it on trusted networks only and do not expose the port publicly.',
+    'MCP 已关闭': 'MCP is off',
+    '待应用 · {address}': 'Pending · {address}',
+    '待应用 · MCP 将关闭': 'Pending · MCP will stop',
+    '复制 Codex 配置': 'Copy Codex configuration',
+    '连接 AI 客户端': 'Connect AI client',
+    '更多': 'More',
+    '复制安装指令': 'Copy setup instruction',
+    '安装指令已复制。': 'Setup instruction copied.',
+    '请选中或勾选带有 GitHub 仓库的 Skill。': 'Select or check a skill with a GitHub repository.',
+    '帮我从 GitHub 安装 {repo} 这个 Skill 的最新版本。': 'Install the latest version of the {repo} skill from GitHub.',
+    '帮我从 GitHub 安装这些 Skill 的最新版本。': 'Install the latest versions of these skills from GitHub.',
+    '如果同一仓库里有多个 Skill，请先列出可安装项让我确认。': 'If a repository contains multiple skills, list the available ones for me to confirm first.',
+    (
+        '请把 GH Release Fetch 添加为当前客户端的本机 MCP。使用 stdio，服务器名 gh_release_fetch。\n'
+        '可执行文件：{command}\n启动参数：{args}\n'
+        '保留其他 MCP 设置。配置后请调用 catalog_search 查询 Superpowers，确认连接可用。'
+    ): (
+        'Add GH Release Fetch as a local MCP server for this client. Use stdio and name it gh_release_fetch.\n'
+        'Executable: {command}\nArguments: {args}\n'
+        'Preserve other MCP settings. Then call catalog_search for Superpowers to verify the connection.'
+    ),
+    (
+        '请把 GH Release Fetch 添加为当前客户端的 MCP。使用 Streamable HTTP，服务器名 gh_release_fetch。\n'
+        '连接地址：{url}\n请求头：Authorization: Bearer {token}\n'
+        '保留其他 MCP 设置，勿在回复中显示令牌。配置后请调用 catalog_search 查询 Superpowers，确认连接可用。'
+    ): (
+        'Add GH Release Fetch as an MCP server for this client. Use Streamable HTTP and name it gh_release_fetch.\n'
+        'URL: {url}\nHeader: Authorization: Bearer {token}\n'
+        'Preserve other MCP settings and keep the token out of your reply. Then call catalog_search for Superpowers to verify the connection.'
+    ),
+    '一键配置': 'Configure client',
+    '配置失败。请检查客户端配置格式和写入权限。': 'Configuration failed. Check the client config format and write permissions.',
+    '已配置 {client}。请重新打开客户端以加载 MCP。': '{client} is configured. Reopen the client to load MCP.',
+    '复制访问令牌': 'Copy access token',
+    '重新生成令牌': 'Rotate access token',
+    '令牌已更新，完整 Codex 配置已复制。也可通过「连接 AI 客户端」写入新令牌。': 'Token rotated and complete Codex configuration copied. You can also use Connect AI client to register the new token.',
+    '已复制完整配置，包含访问令牌。请粘贴到 Codex 的 config.toml。': 'Copied the complete configuration with the access token. Paste it into the Codex config.toml file.',
+    '搜索增长（SEO / GEO / AEO）': 'Search growth (SEO / GEO / AEO)',
+    '内容与渠道运营': 'Content and channel operations',
+    '转化与留存': 'Conversion and retention',
+    '数据与复盘': 'Analytics and review',
+    '前端与界面': 'Frontend and UI',
+    '测试与调试': 'Testing and debugging',
+    '代码与安全审查': 'Code and security review',
+    '官方技能库': 'Official skill libraries',
+    '搜索与目录': 'Search and directories',
+    '精选合集': 'Curated collections',
+    '写作与改稿': 'Writing and revision',
+    '插画与生图': 'Illustration and image generation',
+    '海报与排版': 'Posters and layout',
+    '制作环节': 'Production stage',
+    '全部环节': 'All stages',
+    '选题与调研': 'Topics and research',
+    '脚本与分镜': 'Scripts and storyboards',
+    '素材准备': 'Asset preparation',
+    '录音与配音': 'Recording and voice-over',
+    '粗剪': 'Rough cut',
+    '字幕与精剪': 'Subtitles and fine cut',
+    '审片与导出': 'Review and export',
+    '封面与发布': 'Covers and publishing',
+    '粘贴并复制加速链接': 'Paste and copy accelerated link',
+    '可从浏览器拖入 GitHub 链接': 'Drop a GitHub link from your browser here',
+    '剪贴板保留原链接。': 'The original clipboard link was kept.',
+    '已复制加速链接。': 'Accelerated link copied.',
+    '剪贴板已变化，请手动复制结果。': 'The clipboard changed. Copy the result manually.',
+    '正在读取其他仓库的发布附件，请稍后再试。': 'Another repository is loading. Try again shortly.',
+    '请使用仓库首页、发布页或附件直链。': 'Use a repository page, release page, or direct asset URL.',
+    '复制关闭休眠命令': 'Copy disable-hibernation command',
+    '关闭休眠': 'Disable hibernation',
+    '完整命令已复制。': 'The complete command was copied.',
+    '右键选择「复制关闭休眠命令」。': 'Right-click and select Copy disable-hibernation command.',
+    (
+        '在开始菜单搜索 Windows PowerShell，右键选择「以管理员身份运行」，'
+        '并在用户账户控制提示中选择「是」。确认窗口标题为「管理员：Windows PowerShell」，'
+        '在 PS 提示符后粘贴整段命令，按回车执行。'
+    ): (
+        'Search for Windows PowerShell in Start, right-click it, and select Run as administrator. '
+        'Select Yes in the User Account Control prompt. Confirm the window title says '
+        'Administrator: Windows PowerShell, then paste the entire block at the PS prompt and press Enter.'
+    ),
+    '查看文件信息': 'View file information',
+    '打开所在盘': 'Open containing drive',
+    '复制完整路径': 'Copy full path',
+    '文件不存在。': 'The file does not exist.',
+    '文件存在。': 'The file exists.',
+    '无法确认文件状态。': 'Unable to determine file status.',
+    '大小 {size:,} 字节': 'Size {size:,} bytes',
+    '属性 {attributes}': 'Attributes {attributes}',
+    '隐藏': 'Hidden',
+    '系统': 'System',
+    '只读': 'Read-only',
+    '存档': 'Archive',
+    '重解析点': 'Reparse point',
+    (
+        '命令会先关闭休眠和快速启动，成功后才删除残留的休眠文件。'
+        '最后提示找不到路径，表示休眠文件已移除。'
+        '如果仍显示文件，请运行 powercfg.exe /a 查看休眠状态。'
+    ): (
+        'The script disables hibernation and Fast Startup before removing any remaining hibernation file. If the final check reports that the path '
+        'does not exist, the file was removed. If the file remains, run powercfg.exe /a to check hibernation status.'
+    ),
+    '此文件或目录已不存在。': 'This file or folder no longer exists.',
+    '定位文件或目录': 'Show file or folder',
+    '复制路径': 'Copy path',
+    '休眠文件是受保护的隐藏系统文件。如需查看，请在资源管理器的文件夹选项 → 查看中启用显示隐藏文件，并取消隐藏受保护的操作系统文件。': (
+        'The hibernation file is a hidden, protected system file. To show it, open File Explorer '
+        'Folder Options → View, enable hidden files, and clear Hide protected operating system files.'
+    ),
+    '磁盘清理': 'Disk cleanup',
+    '磁盘清理预览…': 'Disk cleanup preview…',
+    '一键清理 C 盘': 'Clean C: drive now',
+    '查看磁盘清理日志': 'Open disk cleanup log',
+    '查看磁盘清理日志？': 'Open the disk cleanup log?',
+    '正在扫描已知位置…': 'Scanning known locations…',
+    '勾选': 'Check',
+    '项目': 'Item',
+    '大小 (MiB)': 'Size (MiB)',
+    '路径': 'Path',
+    '清理影响': 'Impact',
+    '已清理 {removed} 项，共 {size:,.2f} MiB。跳过 {skipped} 项。': 'Removed {removed} items ({size:,.2f} MiB). Skipped {skipped} items.',
+    'C 盘净可用空间变化：{change:+,.2f} MiB': 'Net change in free space on C: {change:+,.2f} MiB',
+    '确认永久清理勾选的项目？': 'Permanently clean the checked items?',
+    '删除还原点会失去对应的恢复机会。关闭休眠也会关闭快速启动。所选系统操作需要管理员权限。': 'Deleting restore points removes those recovery options. Turning off hibernation also turns off Fast Startup. The selected system operations require administrator permission.',
+    '正在清理…': 'Cleaning…',
+    '清理勾选项目': 'Clean checked items',
+    '失去下载任务日志': 'Removes download task logs',
+    '失去崩溃排查资料': 'Removes crash troubleshooting data',
+    '下次启动可能变慢，受系统权限限制': 'The next launch may be slower. Subject to system permissions.',
+    '失去对应的恢复机会，需要管理员权限': 'Removes this recovery option. Requires administrator permission.',
+    '关闭休眠和快速启动，需要管理员权限': 'Disables hibernation and Fast Startup. Requires administrator permission.',
+    '扫描受限，请检查系统权限': 'Scan limited by system permissions',
+    '缓存可重新生成': 'Cache can be rebuilt',
+    '任务正在使用日志或日志无法访问': 'The log is in use or inaccessible',
+    '扫描完成。双击项目或按空格勾选。': 'Scan complete. Double-click or press Space to check items.',
+    '没有可显示的清理项目。': 'No cleanup items found.',
     '加速链接转换': 'Accelerated link converter',
     '识别二维码': 'Read QR code',
     '粘贴截图': 'Paste screenshot',

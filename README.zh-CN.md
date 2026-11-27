@@ -25,13 +25,32 @@ GH Release Fetch 是按平台浏览和下载软件的工具，支持 GitHub Rele
 
 本地预览：`python -m website.build`，再运行 `python -m http.server 8080 --bind 127.0.0.1 --directory dist/site`。
 
+## Agent Skills 与一人公司（OPC）
+
+在桌面端「平台目录」或在线软件导航中打开 **Agent Skills**，可以按工作场景浏览，也可以搜索仓库名、子技能名和中文别名。适合按手头任务选用技能，例如验证一个产品点子、运营内容渠道，或把一次客户交付沉淀成可复用流程。
+
+| 工作环节 | 分类与典型任务 |
+| --- | --- |
+| 找方向 | **调研与数据分析** · 做用户访谈、竞品调研，验证需求 |
+| 做产品 | **开发与测试** · 梳理需求、做原型、实现功能、测试和上线 |
+| 做内容 | **写作与视觉创作**、**视频与自媒体** · 写文案、做配图、剪视频、准备发布素材 |
+| 做增长 | **增长与运营** · 做 SEO / GEO / AEO、渠道运营、售前咨询、转化和留存 |
+| 做交付 | **办公与知识管理** · 客户接入、交付验收、售后客服、知识库和 SOP |
+| 做复盘 | **增长与运营**、**调研与数据分析** · 看渠道归因、漏斗和实验结果，决定下一轮优先事项 |
+
+例如，独立开发者可以先调研竞品，做出可用原型，再准备发布视频和搜索内容。拿到客户后，整理接入与验收清单，把常见售后问题写进知识库，最后用渠道和漏斗数据决定下一轮改什么。**发现技能**可在任一环节用来查找技能或合集。安装方式、依赖以及支持的 Agent 以项目说明为准。
+
+## 本地 MCP
+
+在「工具 → 本地 MCP」点「复制安装指令」。同机连接使用当前单 EXE 和 `--mcp-stdio`。另一台电脑连接时，开启局域网访问并应用，再选局域网 IP 复制 HTTP 指令。指令包含令牌，请妥善保管。
+
 ## 下载与加速下载
 
-Windows 桌面版 **20261114.3** · [版本说明](https://github.com/shellsec/gh-release-fetch/releases/tag/20261114.3)
+Windows 桌面版 **20261127.13** · [版本说明](https://github.com/shellsec/gh-release-fetch/releases/tag/20261127.13)
 
 | 运行平台 | 加速下载（gh-proxy.com） | GitHub 原始下载 |
 | --- | --- | --- |
-| Windows x64 | [EXE](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261114.3/GHReleaseFetch.exe) · [ZIP](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261114.3/gh-release-fetch-windows-20261114.3.zip) | [EXE](https://github.com/shellsec/gh-release-fetch/releases/download/20261114.3/GHReleaseFetch.exe) · [ZIP](https://github.com/shellsec/gh-release-fetch/releases/download/20261114.3/gh-release-fetch-windows-20261114.3.zip) · [SHA-256](https://github.com/shellsec/gh-release-fetch/releases/download/20261114.3/SHA256SUMS-20261114.3.txt) |
+| Windows x64 | [EXE](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261127.13/GHReleaseFetch.exe) · [ZIP](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261127.13/gh-release-fetch-windows-20261127.13.zip) | [EXE](https://github.com/shellsec/gh-release-fetch/releases/download/20261127.13/GHReleaseFetch.exe) · [ZIP](https://github.com/shellsec/gh-release-fetch/releases/download/20261127.13/gh-release-fetch-windows-20261127.13.zip) · [SHA-256](https://github.com/shellsec/gh-release-fetch/releases/download/20261127.13/SHA256SUMS-20261127.13.txt) |
 | macOS ARM64 / Apple Silicon | [tar.gz](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-macos-arm64.tar.gz) | [tar.gz](https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-macos-arm64.tar.gz) |
 | Linux x86_64 | [tar.gz](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-linux-x86_64.tar.gz) | [tar.gz](https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-linux-x86_64.tar.gz) |
 | Linux ARM64 | [tar.gz](https://gh-proxy.com/https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-linux-arm64.tar.gz) | [tar.gz](https://github.com/shellsec/gh-release-fetch/releases/download/20261028/gh-release-fetch-6bd1991-linux-arm64.tar.gz) |
@@ -250,6 +269,10 @@ Windows 打包运行 `pack_windows_release.bat`，输出位于 `dist/release/`�
 `windows_gui.py` 是桌面入口，`lookup_app.py` 和 `auto_update.py` 提供命令行查询和下载流程。共用模块在 `tools/`，平台清单在 `apps*/`，静态导航网站在 `website/`。测试在 `tests/`，打包脚本和资源分别在 `tools/` 和 `release/windows/`。
 
 在 Windows 上运行 `python windows_gui.py` 可从源码启动桌面版。运行 `powershell -ExecutionPolicy Bypass -File tools/build_exe.ps1` 生成 `dist/exe/GHReleaseFetch.exe`。构建产物、打包依赖和本机日志不纳入源码版本管理。
+
+## 开源许可证
+
+GH Release Fetch 以 [GNU AGPLv3](LICENSE) 发布。MCP 握手提供对应版本源码入口。第三方组件声明见 [NOTICE](NOTICE)。
 
 ## 相关项目与支持
 

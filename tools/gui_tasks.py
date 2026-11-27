@@ -78,7 +78,8 @@ def catalog_assets(app, platform):
     return version, [{"name": name, "browser_download_url": url}], url
 
 
-def execute(task, root, report, cancelled, resolved=lambda _: None, save_target=lambda _: None):
+def execute(task, root, report, cancelled, resolved=lambda _: None, save_target=lambda _: None,
+            on_status=None):
     check_pause(cancelled)
     output = Path(task["output"])
     threads = task["threads"]
@@ -94,6 +95,7 @@ def execute(task, root, report, cancelled, resolved=lambda _: None, save_target=
         return candidate
 
     if kind == "direct":
+        transfer["on_status"] = on_status
         url = task["source"]
         parsed = urlsplit(url)
         if parsed.scheme not in ("http", "https") or not parsed.hostname or parsed.username is not None:
@@ -105,6 +107,8 @@ def execute(task, root, report, cancelled, resolved=lambda _: None, save_target=
         ):
             result = download(url, target, route=task.get("route", "auto"), threads=threads, **transfer)
         else:
+            if on_status:
+                on_status("route", "direct")
             result = download_url(url, target, threads=threads, **transfer)
         return repository.extract_zip(result) if task.get("extract") else result
     if kind == "page":
