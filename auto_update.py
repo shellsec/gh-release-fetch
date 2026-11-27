@@ -1114,7 +1114,7 @@ def download_installer(
         headers["Referer"] = referer
 
     if transfer is not None:
-        from tools.download_engine import download_url
+        from tools.download_engine import download_url, failure_details
 
         def request(url, **kwargs):
             kwargs["headers"] = {**headers, **kwargs["headers"], "User-Agent": headers["User-Agent"]}
@@ -1123,6 +1123,8 @@ def download_installer(
         options = dict(transfer)
         select_target = options.pop("destination", Path)
         resolved = options.pop("resolved", None)
+        history = options.pop("history", None)
+        on_status = options.get("on_status")
         if expected_name in ("", ".", "..") or Path(expected_name).name != expected_name or any(
             character in expected_name for character in "/\\:"
         ):
@@ -1135,17 +1137,34 @@ def download_installer(
         except (OSError, ValueError, KeyError, TypeError):
             previous = None
         sources = [previous] + [url for url in download_urls if url != previous] if previous in download_urls else download_urls
+        source = parsed_url or download_urls[0]
+        hosts = {url: urllib.parse.urlsplit(url).hostname or "direct" for url in sources}
+        source_host = urllib.parse.urlsplit(source).hostname
+        hosts = {url: "direct" if host == source_host else host for url, host in hosts.items()}
+        learn = history and not urllib.parse.urlsplit(source).query and all(
+            not urllib.parse.urlsplit(url).query and urllib.parse.urlsplit(url).username is None for url in sources)
+        if learn and previous not in download_urls:
+            remembered = history.preferred(source, hosts.values())
+            if remembered:
+                sources = sorted(sources, key=lambda url: hosts[url] != remembered)
         failures = []
-        for index, url in enumerate(sources):
+        for url in sources:
+            index = download_urls.index(url)
+            if on_status:
+                on_status("route", hosts[url])
             transfer["report"](f"下载来源：{url}")
             try:
                 work_dir = work / f"fallback-{index}" if index else work
                 result = download_url(url, destination, request=request, work_dir=work_dir, **options)
+                if learn:
+                    history.record(source, hosts[url])
                 if resolved:
                     resolved(parsed_url or url)
                 return str(result)
             except (requests.RequestException, ValueError) as exc:
                 failures.append(describe_download_failure(exc))
+                if on_status:
+                    on_status("route-error", failure_details(exc))
         raise RuntimeError("下载失败：" + "；".join(dict.fromkeys(failures)))
 
     failure_reasons = []

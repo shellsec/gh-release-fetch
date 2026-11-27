@@ -80,9 +80,20 @@ class LocalPipe:
         self.listener.close()
 
 
-def run_stdio(profile, stdin, stdout):
+def request_pipe(profile, request, timeout=100):
     settings = profile / "mcp.json"
     address = pipe_address(profile)
+    config = json.loads(settings.read_text(encoding="utf-8"))
+    if not config["enabled"]:
+        raise ValueError("MCP disabled")
+    with Client(address, family="AF_PIPE", authkey=config["token"].encode()) as connection:
+        connection.send_bytes(json.dumps(request, ensure_ascii=False).encode())
+        if not connection.poll(timeout):
+            raise TimeoutError("Desktop MCP did not reply")
+        return json.loads(connection.recv_bytes(RESPONSE_LIMIT))
+
+
+def run_stdio(profile, stdin, stdout):
     for line in iter(lambda: stdin.readline(REQUEST_LIMIT + 1), ""):
         request = None
         try:
@@ -96,14 +107,7 @@ def run_stdio(profile, stdin, stdout):
             if isinstance(request, dict) and "id" not in request:
                 continue
             try:
-                config = json.loads(settings.read_text(encoding="utf-8"))
-                if not config["enabled"]:
-                    raise ValueError("MCP disabled")
-                with Client(address, family="AF_PIPE", authkey=config["token"].encode()) as connection:
-                    connection.send_bytes(line.encode())
-                    if not connection.poll(100):
-                        raise TimeoutError("Desktop MCP did not reply")
-                    response = json.loads(connection.recv_bytes(RESPONSE_LIMIT))
+                response = request_pipe(profile, request)
             except (OSError, EOFError, ValueError, KeyError, AuthenticationError):
                 response = error_response(request, "Open GH Release Fetch and enable its local MCP service.")
         if response is not None:

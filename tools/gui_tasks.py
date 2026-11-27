@@ -8,7 +8,7 @@ import webbrowser
 
 import auto_update
 from tools import chrome_store, repository_download as repository
-from tools.download_engine import available_target, check_pause, download, download_url
+from tools.download_engine import RouteHistory, available_target, check_pause, download, download_url
 
 
 def extract_links(text):
@@ -83,7 +83,8 @@ def execute(task, root, report, cancelled, resolved=lambda _: None, save_target=
     check_pause(cancelled)
     output = Path(task["output"])
     threads = task["threads"]
-    transfer = dict(report=report, cancelled=cancelled)
+    transfer = dict(report=report, cancelled=cancelled, on_status=on_status)
+    history = RouteHistory(root / "catalog_downloads" / "route-history.json")
     kind = task["kind"]
 
     def destination(path):
@@ -95,7 +96,6 @@ def execute(task, root, report, cancelled, resolved=lambda _: None, save_target=
         return candidate
 
     if kind == "direct":
-        transfer["on_status"] = on_status
         url = task["source"]
         parsed = urlsplit(url)
         if parsed.scheme not in ("http", "https") or not parsed.hostname or parsed.username is not None:
@@ -105,7 +105,7 @@ def execute(task, root, report, cancelled, resolved=lambda _: None, save_target=
         if parsed.scheme == "https" and not parsed.query and parsed.netloc.lower() in (
             "github.com", "codeload.github.com", "raw.githubusercontent.com"
         ):
-            result = download(url, target, route=task.get("route", "auto"), threads=threads, **transfer)
+            result = download(url, target, route=task.get("route", "auto"), threads=threads, history=history, **transfer)
         else:
             if on_status:
                 on_status("route", "direct")
@@ -140,7 +140,7 @@ def execute(task, root, report, cancelled, resolved=lambda _: None, save_target=
         return auto_update.update_one(
             apps[0], str(output), verify=auto_update.resolve_tls_verify(cfg, False),
             platform_key=platform, cfg=cfg, download_only=True,
-            transfer=dict(transfer, threads=threads, resolved=resolved, destination=destination),
+            transfer=dict(transfer, threads=threads, resolved=resolved, destination=destination, history=history),
             selected_asset=selected,
         )
     source = task["source"]
@@ -162,6 +162,6 @@ def execute(task, root, report, cancelled, resolved=lambda _: None, save_target=
         output=task.get("target"), route=task.get("route", "auto"), threads=threads,
         shallow=task.get("shallow", False), submodules=task.get("submodules", False),
         lfs=task.get("lfs", False), extract=task.get("extract", False),
-        interactive=False, base_dir=root, transfer=dict(transfer, resolved=resolved, destination=destination),
+        interactive=False, base_dir=root, transfer=dict(transfer, resolved=resolved, destination=destination, history=history),
         download_dir=output / "repository",
     )

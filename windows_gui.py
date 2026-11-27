@@ -25,7 +25,7 @@ from tools.app_download import is_app_downloadable, resolve_open_page_url
 from tools.app_list import CATALOGS
 from tools.chrome_store import extension_id, store_url
 from tools import catalog_update, page_index_update, program_update
-from tools.download_engine import DownloadPaused, ROUTES, atomic_json, normalize_route
+from tools.download_engine import DownloadPaused, ROUTES, atomic_json, failure_details, normalize_route
 from tools.ghrf_runtime import repo_root
 from tools.repository_download import parse_repository
 from tools.skill_filters import filter_options, matches_filter
@@ -795,6 +795,8 @@ class App:
                                   (tr("暂停"), self.pause_tasks), (tr("移除任务"), self.remove_tasks),
                                   (tr("全部清空"), self.clear_queue)]
         task = next((task for task in self.tasks if task["id"] == iid), None)
+        if task:
+            actions.insert(0, (tr("任务诊断"), lambda: self.task_diagnostics(task)))
         if task and task["state"] == "done" and task.get("result"):
             actions.insert(0, (tr("直接打开"), lambda: self.open_result(task)))
         return self.popup(event, actions)
@@ -1179,6 +1181,64 @@ class App:
         task = selected[0] if selected else {}
         self.detail.set(task.get("result") or task.get("target") or task.get("output", ""))
 
+    def task_diagnostics(self, task):
+        dialog = tk.Toplevel(self.window)
+        dialog.title(tr("任务诊断"))
+        panel = ttk.Frame(dialog, padding=12)
+        panel.pack(fill="both", expand=True)
+        body = tk.Text(panel, width=72, height=14, wrap="word")
+        body.pack(fill="both", expand=True)
+        detail = {
+            "state": task["state"],
+            "phase": task.get("transfer_phase"),
+            "downloaded_bytes": task.get("downloaded_bytes"),
+            "total_bytes": task.get("total_bytes"),
+            "speed_mib_s": task.get("speed_mib_s"),
+            "attempts": task.get("transfer_attempts", []),
+            "error": task.get("transfer_error"),
+        }
+        export = json.dumps(detail, ensure_ascii=False, indent=2)
+        reasons = {"http": tr("HTTP 错误"), "timeout": tr("连接或读取超时"), "tls": tr("TLS 验证失败"),
+                   "dns": tr("域名解析失败"), "connection": tr("连接中断"), "validation": tr("响应或文件校验失败"),
+                   "storage": tr("本地文件操作失败"), "other": tr("其他错误")}
+
+        def error_text(error):
+            result = reasons.get(error.get("reason"), "")
+            if error.get("http_status"):
+                result += f" {error['http_status']}"
+            if error.get("retry_after"):
+                result += " · " + tr("重试等待 {value}").format(value=error["retry_after"])
+            return result
+
+        summary = [tr(STATES.get(task["state"], task["state"]))]
+        for attempt in detail["attempts"]:
+            line = attempt["route"]
+            if attempt.get("resumed_bytes"):
+                line += " · " + tr("已复用 {bytes:,} 字节").format(bytes=attempt["resumed_bytes"])
+            if attempt.get("error"):
+                line += " · " + error_text(attempt["error"])
+            summary.append(line)
+        if detail["error"]:
+            summary.append(error_text(detail["error"]))
+        if detail["total_bytes"] and detail["downloaded_bytes"] is not None:
+            summary.append(f'{detail["downloaded_bytes"]:,} / {detail["total_bytes"]:,} B')
+        body.insert("1.0", "\n".join(summary))
+        body.configure(state="disabled")
+
+        def copy():
+            self.window.clipboard_clear()
+            self.window.clipboard_append(export)
+
+        def retry():
+            self.resume_rows([task])
+            dialog.destroy()
+
+        actions = ttk.Frame(panel)
+        actions.pack(fill="x", pady=(8, 0))
+        ttk.Button(actions, text=tr("复制诊断"), command=copy).pack(side="left")
+        ttk.Button(actions, text=tr("继续 / 重试"), command=retry,
+                   state="normal" if task["state"] in ("paused", "failed") else "disabled").pack(side="right")
+
     def copy_path(self):
         selected = self.selected_tasks()
         if selected:
@@ -1428,6 +1488,7 @@ class App:
         except DownloadPaused as exc:
             self.events.put(("finished", task, ("paused", str(exc))))
         except Exception as exc:
+            self.events.put(("transfer-status", task, ("error", failure_details(exc))))
             self.events.put(("finished", task, ("failed", str(exc))))
 
     def check_program_update(self, automatic=False):
@@ -1636,8 +1697,19 @@ class App:
                 stage, *details = value
                 if stage == "route":
                     task.update(transfer_route=details[0], downloaded_bytes=None, total_bytes=None, speed_mib_s=None)
+                    attempts = task.setdefault("transfer_attempts", [])
+                    attempts.append({"route": details[0]})
+                    del attempts[:-32]
                 elif stage == "progress":
                     task["downloaded_bytes"], task["total_bytes"], task["speed_mib_s"] = details
+                elif stage in ("resume", "route-error") and task.get("transfer_attempts"):
+                    key = "resumed_bytes" if stage == "resume" else "error"
+                    task["transfer_attempts"][-1][key] = details[0]
+                elif stage == "error":
+                    attempts = task.get("transfer_attempts", [])
+                    task["transfer_error"] = (attempts[-1].get("error", details[0])
+                                              if attempts and details[0]["reason"] == "other" else details[0])
+                task["transfer_phase"] = stage
                 continue
             if event == "progress":
                 task["message"] = value
@@ -1648,7 +1720,7 @@ class App:
                 task.update(state=state, message=message or tr("已打开官方页面"))
                 if state == "done" and message:
                     task["result"] = message
-                    if task.get("mcp") and task.get("total_bytes"):
+                    if task.get("total_bytes"):
                         task["downloaded_bytes"] = task["total_bytes"]
                     self.library.record(task)
                 self.write_log(task, f"{STATES[state]} · {task['message']}")
@@ -1670,6 +1742,7 @@ class App:
         if not self.closing and self.active is None and not cleaning:
             self.active = next((task for task in self.tasks if task["state"] == "waiting"), None)
             if self.active:
+                self.active.pop("transfer_error", None)
                 self.active.update(state="active", message=tr("正在解析下载地址…"))
                 self.write_log(self.active, tr("开始任务"))
                 self.update_task(self.active)

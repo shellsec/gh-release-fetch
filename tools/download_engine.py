@@ -31,6 +31,63 @@ def normalize_route(route):
 HEADERS = {"User-Agent": "GH-Release-Fetch", "Accept-Encoding": "identity"}
 _route_cache = {}
 _route_lock = threading.Lock()
+_history_lock = threading.Lock()
+
+
+class RouteHistory:
+    """Remember recent successful transfers without persisting URLs or credentials."""
+
+    def __init__(self, path):
+        self.path = Path(path)
+
+    def read(self):
+        try:
+            data = json.loads(self.path.read_text(encoding="utf-8"))
+            return data if isinstance(data, dict) else {}
+        except (OSError, ValueError):
+            return {}
+
+    def preferred(self, source, candidates):
+        with _history_lock:
+            saved = self.read().get(urlsplit(source).hostname)
+        if not isinstance(saved, dict) or not isinstance(saved.get("at"), (int, float)):
+            return None
+        return saved.get("route") if 0 <= time.time() - saved["at"] < 86400 and saved.get("route") in candidates else None
+
+    def record(self, source, route):
+        host = urlsplit(source).hostname
+        if not host:
+            return
+        with _history_lock:
+            data = self.read()
+            data.pop(host, None)
+            data[host] = {"route": route, "at": time.time()}
+            try:
+                self.path.parent.mkdir(parents=True, exist_ok=True)
+                atomic_json(self.path, dict(list(data.items())[-128:]))
+            except OSError:
+                pass
+
+
+def failure_details(exc):
+    response = getattr(exc, "response", None)
+    if response is not None:
+        retry_after = response.headers.get("Retry-After", "")
+        return {"reason": "http", "http_status": response.status_code,
+                "retry_after": retry_after if retry_after.isascii() and
+                re.fullmatch(r"[A-Za-z0-9 ,:\-]{1,40}", retry_after) else None}
+    if isinstance(exc, (requests.Timeout, TimeoutError)):
+        return {"reason": "timeout"}
+    if isinstance(exc, requests.exceptions.SSLError):
+        return {"reason": "tls"}
+    if isinstance(exc, requests.ConnectionError):
+        return {"reason": "dns" if re.search(r"NameResolutionError|Failed to resolve|getaddrinfo", str(exc), re.I)
+                else "connection"}
+    if isinstance(exc, ValueError):
+        return {"reason": "validation"}
+    if isinstance(exc, OSError):
+        return {"reason": "storage"}
+    return {"reason": "other"}
 
 
 class RangeUnavailable(ValueError):
@@ -164,6 +221,8 @@ def download_url(url, destination, *, threads=4, digest=None, validator=None, re
             progress["parts"][index] = part.stat().st_size if part.exists() else 0
     started = time.monotonic()
     resumed_bytes = sum(progress["parts"])
+    if on_status:
+        on_status("resume", resumed_bytes)
 
     def transfer(index):
         start = total * index // count
@@ -266,7 +325,7 @@ def download_url(url, destination, *, threads=4, digest=None, validator=None, re
 
 
 def download(url, destination, *, route="auto", threads=4, digest=None, validator=None, report=print,
-             cancelled=None, on_status=None):
+             cancelled=None, on_status=None, history=None):
     route = normalize_route(route)
     failures = []
     destination = Path(destination)
@@ -279,14 +338,22 @@ def download(url, destination, *, route="auto", threads=4, digest=None, validato
         except (OSError, ValueError, KeyError, TypeError):
             previous = None
     preferred = next(((name, previous) for name, prefix in ROUTES if prefix + url == previous), None)
+    learn = route == "auto" and history is not None and not urlsplit(url).query and urlsplit(url).username is None
 
     def candidates():
+        tried = set()
         if preferred:
+            tried.add(preferred[0])
             yield preferred
+        if learn:
+            remembered = history.preferred(url, dict(ROUTES))
+            if remembered and remembered not in tried:
+                tried.add(remembered)
+                yield remembered, dict(ROUTES)[remembered] + url
         check_pause(cancelled)
         if on_status:
             on_status("probe")
-        yield from (item for item in ranked_routes(url, route, report) if item != preferred)
+        yield from (item for item in ranked_routes(url, route, report) if item[0] not in tried)
 
     if route != "auto" and route not in dict(ROUTES):
         raise ValueError("未知线路")
@@ -299,10 +366,14 @@ def download(url, destination, *, route="auto", threads=4, digest=None, validato
             work = primary if not previous or target == previous else primary / ("route-" + name)
             result = download_url(target, destination, threads=threads, digest=digest, validator=validator,
                                   report=report, cancelled=cancelled, work_dir=work, on_status=on_status)
+            if learn:
+                history.record(url, name)
             return result
         except (requests.RequestException, ValueError) as exc:
             if (primary / "state.json").exists():
                 previous = previous or target
             failures.append(f"{name}: {exc}")
+            if on_status:
+                on_status("route-error", failure_details(exc))
             report(f"线路失败，保留任务：{exc}")
     raise RuntimeError("所有线路下载失败；可重新执行继续。\n" + "\n".join(failures))

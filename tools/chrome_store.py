@@ -84,12 +84,14 @@ def validate_crx(path):
         raise ValueError("CRX3 扩展内容损坏") from exc
 
 
-def download_crx(item, target, *, threads=4, report=print, cancelled=None):
+def download_crx(item, target, *, threads=4, report=print, cancelled=None, on_status=None):
     target = Path(target)
     if target.suffix.lower() != ".crx":
         raise ValueError("请使用 .crx 文件名")
     if target.exists():
         raise ValueError(f"目标已存在，请换一个路径：{target}")
-    return download_url(update_url(item), target, threads=threads, validator=validate_crx,
+    if on_status:
+        on_status("route", "Google")
+    return download_url(update_url(item), target, threads=threads, validator=validate_crx, on_status=on_status,
                         report=report, cancelled=cancelled,
                         request=google_get, min_parallel_size=256 * 1024)

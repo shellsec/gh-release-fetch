@@ -2,6 +2,7 @@
 
 from concurrent.futures import Future
 from functools import lru_cache
+from http.client import HTTPConnection
 import json
 from ipaddress import IPv4Address
 from pathlib import Path
@@ -11,6 +12,7 @@ import socket
 import sys
 import tkinter as tk
 from time import monotonic
+from threading import Thread
 from tkinter import messagebox, ttk
 from urllib.parse import quote, unquote, urlsplit
 
@@ -25,10 +27,27 @@ from tools.gui_link_converter import choose_route, original_url
 from tools.gui_tasks import extract_links
 from tools.local_mcp import PRIVATE, Server
 from tools.mcp_client_config import CLIENTS, configure_client
-from tools.mcp_pipe import LocalPipe
+from tools.mcp_pipe import LocalPipe, request_pipe
 from tools.repository_download import api, parse_repository
 
 PORT = 18765
+
+
+def check_connection(exchange):
+    began = monotonic()
+    initialized = exchange(dict(jsonrpc="2.0", id=1, method="initialize",
+                                params={"protocolVersion": "2025-06-18"}))
+    if initialized.get("result", {}).get("serverInfo", {}).get("name") != "GH Release Fetch":
+        raise ValueError("initialize")
+    reply = exchange(dict(jsonrpc="2.0", id=2, method="tools/call",
+                          params={"name": "catalog_search", "arguments": {"query": "Superpowers"}}))
+    result = reply.get("result", {})
+    if result.get("isError") or not result.get("content"):
+        raise ValueError("catalog_search")
+    matches = json.loads(result["content"][0]["text"])
+    if not isinstance(matches, list):
+        raise ValueError("catalog_search")
+    return len(matches), round((monotonic() - began) * 1000)
 
 
 def lan_addresses():
@@ -216,6 +235,9 @@ class DesktopMCP:
         address_row.pack(fill="x", pady=8)
         address_box = ttk.Combobox(address_row, textvariable=address, state="readonly")
         address_box.pack(side="left", fill="x", expand=True)
+        checking = False
+        check_status = tk.StringVar(dialog)
+        ttk.Label(panel, textvariable=check_status, wraplength=440).pack(anchor="w")
 
         def endpoint():
             return f"http://{address.get()}:{PORT}/mcp"
@@ -235,6 +257,8 @@ class DesktopMCP:
             can_connect = self.config["enabled"] and (self.pipe or self.server) and not pending
             instruction_button.configure(state="normal" if (use_local_pipe() or self.server) and self.config["enabled"]
                                          and not pending else "disabled")
+            check_button.configure(state="normal" if (use_local_pipe() or self.server) and self.config["enabled"]
+                                   and not pending and not checking else "disabled")
             more_menu.entryconfigure(0, state=ready)
             more_menu.entryconfigure(2, state="disabled" if pending else "normal")
             more_menu.entryconfigure(3, state="normal" if can_connect else "disabled")
@@ -247,7 +271,11 @@ class DesktopMCP:
                 address.set(addresses[0])
             show_status()
 
-        address_box.bind("<<ComboboxSelected>>", show_status)
+        def selection_changed(_event=None):
+            check_status.set("")
+            show_status()
+
+        address_box.bind("<<ComboboxSelected>>", selection_changed)
 
         def apply(rotate=False):
             previous = self.config.copy()
@@ -278,6 +306,46 @@ class DesktopMCP:
         def copy_token():
             self.app.window.clipboard_clear()
             self.app.window.clipboard_append(self.config["token"])
+
+        def self_check():
+            nonlocal checking
+            local, host, token = use_local_pipe(), address.get(), self.config["token"]
+            checking = True
+            check_status.set(tr("正在检查 MCP…"))
+            show_status()
+
+            def exchange(payload):
+                if local:
+                    return request_pipe(self.path.parent, payload, timeout=5)
+                connection = HTTPConnection(host, PORT, timeout=5)
+                try:
+                    connection.request("POST", "/mcp", json.dumps(payload),
+                                       {"Authorization": "Bearer " + token, "Content-Type": "application/json"})
+                    response = connection.getresponse()
+                    if response.status != 200:
+                        raise OSError(f"HTTP {response.status}")
+                    return json.loads(response.read(1_048_576))
+                finally:
+                    connection.close()
+
+            def complete(result):
+                nonlocal checking
+                checking = False
+                if dialog.winfo_exists():
+                    check_status.set(result if host == address.get() and token == self.config["token"] else "")
+                    show_status()
+
+            def worker():
+                try:
+                    count, elapsed = check_connection(exchange)
+                    result = tr("MCP 自检通过 · {count} 条结果 · {ms} ms").format(count=count, ms=elapsed)
+                except Exception as exc:
+                    result = tr("MCP 自检失败 · {reason}").format(reason=str(exc) or type(exc).__name__)
+                if not local:
+                    result += " · " + tr("本机 HTTP 测试")
+                self.app.events.put(("library", complete, result))
+
+            Thread(target=worker, daemon=True).start()
 
         def local_command():
             if getattr(sys, "frozen", False):
@@ -334,6 +402,8 @@ class DesktopMCP:
         apply_button.pack(side="left", padx=(8, 0))
         instruction_button = ttk.Button(actions, text=tr("复制安装指令"), command=copy_instruction)
         instruction_button.pack(side="left")
+        check_button = ttk.Button(actions, text=tr("MCP 自检"), command=self_check)
+        check_button.pack(side="left", padx=(8, 0))
         more_button = ttk.Menubutton(actions, text=tr("更多"))
         more_menu = tk.Menu(more_button, tearoff=False)
         more_menu.add_command(label=tr("复制 Codex 配置"), command=copy)
